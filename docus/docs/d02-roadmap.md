@@ -3,11 +3,11 @@ id: d02-roadmap
 title: Roadmap
 ---
 
-The COVID-19 Dashboard Vision is a “living” website reliant on collaboration and contribution from
+The COVID-19 Impact Project is a “living” website reliant on collaboration and contribution from
 many sources and is therefore a continuous work-in-progress.
 
-The COVID-19 Dashboard Vision has an open source github repository at  
-https://github.com/EP-Visual-Design/covid19-dashboard  
+The COVID-19 Impact Project has an open source github repository at  
+https://github.com/EP-Visual-Design/COVID-19-Impact-Project.git  
 which invites developers to enhance the source code and help fulfil the technical vision for the project
 
 The [COVID-19 Impact Dashboard](https://epvisual.com/COVID-19-Impact/Dashboard/) currently displays country-level statistics. The first step in assessing

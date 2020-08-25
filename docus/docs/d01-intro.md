@@ -10,7 +10,7 @@ memorialize loved ones, and examine statistics related to our collective COVID-1
 
 ## How?
 
-The COVID-19 Dashboard Vision includes an open source database featuring at-a-glance data that makes
+The COVID-19 Impact Dashboard includes an open source database featuring at-a-glance data that makes
 it easy to trace the progression of the pandemic. In addition, we will gather human-centered soft
 data contributions in the form of personalized memorials and community voices to influence
 political action. By developing a local rendering of the impact of the pandemic over time, we will
