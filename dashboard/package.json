@@ -1,0 +1,75 @@
+{
+  "name": "covid19-dashboard",
+  "version": "0.0.32",
+  "private": true,
+  "author": {
+    "name": "John Henry Thompson",
+    "url": "http://johnhenrythompson.com"
+  },
+  "homepage": "/COVID-19-Impact/Dashboard/a0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "array-move": "^2.2.1",
+    "axios": "^0.19.0",
+    "country-list": "^2.2.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.19",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-flag-icon-css": "^1.0.25",
+    "react-ga": "^2.7.0",
+    "react-loader-spinner": "^3.1.4",
+    "react-number-format": "^4.4.1",
+    "react-p5": "^1.3.2",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.0",
+    "react-scripts": "^3.4.3",
+    "react-sortable-hoc": "^1.11.0",
+    "react-sortable-tree": "^2.7.1",
+    "redux": "^4.0.4",
+    "redux-form": "^8.2.6",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.88.1",
+    "slug": "^2.1.1",
+    "styled-components": "^4.4.0",
+    "styled-normalize": "^8.0.7",
+    "uuid": "^3.4.0",
+    "victory": "~0.26.0"
+  },
+  "scripts": {
+    "start": "BROWSER='Firefox Nightly' react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "importSort": {
+    ".js, .jsx": {
+      "style": "module-compact"
+    }
+  }
+}

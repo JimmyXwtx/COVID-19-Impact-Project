@@ -1,0 +1,26 @@
+{
+  "name": "covid19-express",
+  "version": "0.0.0",
+  "description": "Server API",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": {
+    "name": "John Henry Thompson",
+    "url": "http://johnhenrythompson.com"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "csv-parse": "^4.8.9",
+    "fs-extra": "^8.1.0",
+    "yargs": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
