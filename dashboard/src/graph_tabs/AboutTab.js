@@ -80,11 +80,11 @@ const AboutTab = () => {
         <ul>
           <li>
             <a
-              href="https://epvisual.com/covid19-document/"
+              href="https://epvisual.com/COVID-19-Impact/Project/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Why and How this site is built: Covid19 Document
+              COVID-19 Impact Project
             </a>
           </li>
         </ul>
