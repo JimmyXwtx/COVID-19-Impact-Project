@@ -32,12 +32,9 @@ Visualization of COVID-19 statistics from
 
 - ./docus : Docusaurus based documentation
 
-- ./express/parse : nodejs code to convert CSV to JSON
+- ./parse : nodejs code to convert CSV to JSON
 
 - ./COVID-19-JHU : source git repo https://github.com/CSSEGISandData/COVID-19
-
-- ./express : express server to deliver JSON data dynamically
-  Not used yet in the COVID-19 Public edition
 
 ## Other visualization sites:
 
