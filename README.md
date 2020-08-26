@@ -8,10 +8,10 @@ Visualization of COVID-19 statistics from
 ## Links
 
 - site:
-  https://epvisual.com/covid19-dashboard
+  https://epvisual.com/COVID-19-Impact/Dashboard/
 
-- documentation:
-  https://epvisual.com/covid19-document
+- project documentation:
+  https://epvisual.com/COVID-19-Impact/Project/
 
 - demo video:
   https://www.youtube.com/watch?v=pRV5CIoGmLE
