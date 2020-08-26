@@ -4,7 +4,7 @@ title: New York City
 sidebar_label: NYC
 ---
 
-Covid19 stats from New York City.
+COVID-19 stats from New York City.
 
 Source:  
 https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-cases.html
