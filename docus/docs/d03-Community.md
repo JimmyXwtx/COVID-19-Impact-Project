@@ -12,7 +12,8 @@ The COVID-19 Dashboard is a data driven, crowdsourced website/app
 that seeks to memorialize victims of COVID-19
 from marginalized communities and advocate
 for economic justice for essential workers
-particularly from the black community.
+particularly from the black, latino and indigenous communities
+that have been disproportionately affected by COVID-19.
 
 ## Proposal
 
@@ -22,8 +23,8 @@ evolving impact of the virus locally and internationally and correlate it with s
 including local and national government response and other socioeconomic factors that inform the
 impact of the virus on communities in the United States. The project will begin with a global
 overview and then hone in on a hyperlocal view of the emotional, psychological, and economic impact
-on essential workers and frontline workers in the Philadelphia area in which people of color are
-disproportionately represented among the COVID dead.
+on essential workers and frontline workers and in particular communities of color
+which have borne the brunt of the devastation from COVID-19.
 
 ### Open Sourced
 
