@@ -26,6 +26,7 @@ The purpose of this project is to provide a “living” platform of crowdsource
 - Assess the impact on the families and communities of the deceased
 - Build enduring institutions to mitigate the suffering caused by the pandemic and address systemic inequalities exposed by the pandemic
 
+
 ## Contact Us
 
 [Contact us to provide your feedback and to stay informed of updates](https://jhtid.typeform.com/to/RxahXQJX)
@@ -33,6 +34,15 @@ The purpose of this project is to provide a “living” platform of crowdsource
 [COVID-19 Impact Dashboard](https://epvisual.com/COVID-19-Impact/Dashboard/)
 
 [COVID-19 Impact Project on github](https://github.com/EP-Visual-Design/COVID-19-Impact-Project.git)
+
+
+## Sponsored by:
+
+Ep Visual Design, Inc.
+
+## Additional funding:
+
+EPV Foundation, Inc.
 
 <!--
 ## Dev notes
