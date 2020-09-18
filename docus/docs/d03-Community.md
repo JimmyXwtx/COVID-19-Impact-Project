@@ -3,7 +3,7 @@ id: d03-Community
 title: Community Voices
 ---
 
-A possible vision for memorializing essential workers of the COVID-19 pandemic Covid pandemic.  
+A possible vision for memorializing essential workers of the COVID-19 pandemic.  
 by Shindy Johnson.
 
 ## Summary

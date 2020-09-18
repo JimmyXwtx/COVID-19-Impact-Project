@@ -37,8 +37,8 @@ function Home() {
       href: docs_ref,
       description: (
         <>
-          How can we mourn and memorialize the thousands dying everyday from the
-          COVID-19 pandemic?
+          How can we begin to mourn and memorialize who we have lost in the
+          midst of this pandemic?
         </>
       ),
     },
@@ -48,8 +48,8 @@ function Home() {
       href: docs_ref,
       description: (
         <>
-          How can we assess the impact on the families and communities of the
-          deceased?
+          How can we assess the pandemic’s impact on families and the
+          communities of the deceased?
         </>
       ),
     },
@@ -59,8 +59,8 @@ function Home() {
       href: docs_ref,
       description: (
         <>
-          How can we work to build enduring institutions to mitigate the
-          suffering of these families and address systemic inequalities?
+          How can we create effective and lasting institutions which work with
+          and for all of us equally?
         </>
       ),
     },
