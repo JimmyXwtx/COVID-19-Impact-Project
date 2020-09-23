@@ -26,7 +26,6 @@ The purpose of this project is to provide a “living” platform of crowdsource
 - Assess the impact on the families and communities of the deceased
 - Build enduring institutions to mitigate the suffering caused by the pandemic and address systemic inequalities exposed by the pandemic
 
-
 ## Contact Us
 
 [Contact us to provide your feedback and to stay informed of updates](https://jhtid.typeform.com/to/RxahXQJX)
@@ -35,24 +34,33 @@ The purpose of this project is to provide a “living” platform of crowdsource
 
 [COVID-19 Impact Project on github](https://github.com/EP-Visual-Design/COVID-19-Impact-Project.git)
 
-
 ## Sponsored by:
 
-Ep Visual Design, Inc.
+[EP Visual Design, Inc.](http://epvisual.com)
 
 ## Additional funding:
 
-EPV Foundation, Inc.
+[EPV Foundation, Inc.]()
+
+## Special Thanks
+
+A special thanks to the team at EP Visual Design.
+
+- Phil Sinatra
+- Jervis Thompson
+- Bridget
+- Kaelyn
+- Eric
 
 <!--
 ## Dev notes
-
 ```
 # Double failure!
 [2020-08-18-neg-failure](/img/2020-08-18-neg-failure.png)
-
 ```
-
 Not obvious how to link to image in blog
+
+# Disable credits page in docus/sidebars.js
+- // 'd07-credits',
 
 -->

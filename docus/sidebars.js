@@ -10,6 +10,7 @@ module.exports = {
       'brooklyn',
       'NYC',
       'd06-code',
+      // 'd07-credits',
       'd99-style',
     ],
     // FeaturesX: ['mdx'],
