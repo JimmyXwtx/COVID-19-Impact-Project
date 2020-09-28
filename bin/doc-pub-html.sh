@@ -16,6 +16,7 @@ rpath="${siteroot}/${homepage}"
 
 rdest=$host:${rpath}
 
+echo ssh $host mkdir -p $rpath
 ssh $host mkdir -p $rpath
 
 source=../docus/build
