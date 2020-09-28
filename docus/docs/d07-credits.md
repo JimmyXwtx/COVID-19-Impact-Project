@@ -9,9 +9,9 @@ A special thank you to the team at EP Visual Design.
 
 - Phil Sinatra
 - Jervis Thompson
-- Bridget
-- Kaelyn
-- Eric
+- Eric Horst
+- Bridget Musolino
+- Kaelyn Douville
 
 ## Sponsored by:
 
