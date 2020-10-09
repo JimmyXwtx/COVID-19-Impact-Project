@@ -780,6 +780,18 @@
     }
   },
   {
+    "Country_Region": "Kosovo",
+    "totals": {
+      "Cases": 14446,
+      "Deaths": 581,
+      "Recovered": 11033
+    },
+    "daily": {
+      "Cases": 69,
+      "Deaths": 7
+    }
+  },
+  {
     "Country_Region": "Yemen",
     "totals": {
       "Cases": 2003,
@@ -804,18 +816,6 @@
     }
   },
   {
-    "Country_Region": "Kuwait",
-    "totals": {
-      "Cases": 92822,
-      "Deaths": 556,
-      "Recovered": 83040
-    },
-    "daily": {
-      "Cases": 740,
-      "Deaths": 4
-    }
-  },
-  {
     "Country_Region": "Azerbaijan",
     "totals": {
       "Cases": 37874,
@@ -828,15 +828,15 @@
     }
   },
   {
-    "Country_Region": "Kosovo",
+    "Country_Region": "Kuwait",
     "totals": {
-      "Cases": 12683,
-      "Deaths": 488,
-      "Recovered": 8788
+      "Cases": 92822,
+      "Deaths": 556,
+      "Recovered": 83040
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
+      "Cases": 740,
+      "Deaths": 4
     }
   },
   {
@@ -1080,18 +1080,6 @@
     }
   },
   {
-    "Country_Region": "Croatia",
-    "totals": {
-      "Cases": 12917,
-      "Deaths": 208,
-      "Recovered": 10142
-    },
-    "daily": {
-      "Cases": 291,
-      "Deaths": 2
-    }
-  },
-  {
     "Country_Region": "Madagascar",
     "totals": {
       "Cases": 15624,
@@ -1100,6 +1088,18 @@
     },
     "daily": {
       "Cases": 104,
+      "Deaths": 2
+    }
+  },
+  {
+    "Country_Region": "Croatia",
+    "totals": {
+      "Cases": 12917,
+      "Deaths": 208,
+      "Recovered": 10142
+    },
+    "daily": {
+      "Cases": 291,
       "Deaths": 2
     }
   },

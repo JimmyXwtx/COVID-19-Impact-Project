@@ -612,18 +612,6 @@
     }
   },
   {
-    "Country_Region": "Oman",
-    "totals": {
-      "Cases": 101270,
-      "Deaths": 977,
-      "Recovered": 90296
-    },
-    "daily": {
-      "Cases": 2685,
-      "Deaths": 42
-    }
-  },
-  {
     "Country_Region": "Armenia",
     "totals": {
       "Cases": 52496,
@@ -633,6 +621,18 @@
     "daily": {
       "Cases": 571,
       "Deaths": 5
+    }
+  },
+  {
+    "Country_Region": "Oman",
+    "totals": {
+      "Cases": 101270,
+      "Deaths": 977,
+      "Recovered": 90296
+    },
+    "daily": {
+      "Cases": 2685,
+      "Deaths": 42
     }
   },
   {
@@ -828,6 +828,18 @@
     }
   },
   {
+    "Country_Region": "Kosovo",
+    "totals": {
+      "Cases": 15814,
+      "Deaths": 630,
+      "Recovered": 13856
+    },
+    "daily": {
+      "Cases": 14236,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "Kuwait",
     "totals": {
       "Cases": 107025,
@@ -885,18 +897,6 @@
     "daily": {
       "Cases": 2253,
       "Deaths": 7
-    }
-  },
-  {
-    "Country_Region": "Kosovo",
-    "totals": {
-      "Cases": 12683,
-      "Deaths": 488,
-      "Recovered": 8788
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
     }
   },
   {
@@ -1476,18 +1476,6 @@
     }
   },
   {
-    "Country_Region": "Trinidad and Tobago",
-    "totals": {
-      "Cases": 4763,
-      "Deaths": 81,
-      "Recovered": 2843
-    },
-    "daily": {
-      "Cases": 48,
-      "Deaths": 2
-    }
-  },
-  {
     "Country_Region": "Uganda",
     "totals": {
       "Cases": 8808,
@@ -1496,6 +1484,18 @@
     },
     "daily": {
       "Cases": 146,
+      "Deaths": 2
+    }
+  },
+  {
+    "Country_Region": "Trinidad and Tobago",
+    "totals": {
+      "Cases": 4763,
+      "Deaths": 81,
+      "Recovered": 2843
+    },
+    "daily": {
+      "Cases": 48,
       "Deaths": 2
     }
   },

@@ -804,6 +804,18 @@
     }
   },
   {
+    "Country_Region": "Kosovo",
+    "totals": {
+      "Cases": 15520,
+      "Deaths": 625,
+      "Recovered": 13420
+    },
+    "daily": {
+      "Cases": 48,
+      "Deaths": 3
+    }
+  },
+  {
     "Country_Region": "Czechia",
     "totals": {
       "Cases": 65883,
@@ -873,18 +885,6 @@
     "daily": {
       "Cases": 849,
       "Deaths": 7
-    }
-  },
-  {
-    "Country_Region": "Kosovo",
-    "totals": {
-      "Cases": 12683,
-      "Deaths": 488,
-      "Recovered": 8788
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
     }
   },
   {
@@ -1140,18 +1140,6 @@
     }
   },
   {
-    "Country_Region": "Qatar",
-    "totals": {
-      "Cases": 125311,
-      "Deaths": 214,
-      "Recovered": 122209
-    },
-    "daily": {
-      "Cases": 227,
-      "Deaths": 0
-    }
-  },
-  {
     "Country_Region": "Tunisia",
     "totals": {
       "Cases": 16114,
@@ -1160,6 +1148,18 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Qatar",
+    "totals": {
+      "Cases": 125311,
+      "Deaths": 214,
+      "Recovered": 122209
+    },
+    "daily": {
+      "Cases": 227,
       "Deaths": 0
     }
   },
@@ -1392,11 +1392,11 @@
     }
   },
   {
-    "Country_Region": "Bahamas",
+    "Country_Region": "Congo (Brazzaville)",
     "totals": {
-      "Cases": 3838,
+      "Cases": 5008,
       "Deaths": 89,
-      "Recovered": 2005
+      "Recovered": 3887
     },
     "daily": {
       "Cases": 0,
@@ -1404,11 +1404,11 @@
     }
   },
   {
-    "Country_Region": "Congo (Brazzaville)",
+    "Country_Region": "Bahamas",
     "totals": {
-      "Cases": 5008,
+      "Cases": 3838,
       "Deaths": 89,
-      "Recovered": 3887
+      "Recovered": 2005
     },
     "daily": {
       "Cases": 0,
