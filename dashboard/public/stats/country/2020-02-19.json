@@ -72,11 +72,47 @@
     }
   },
   {
-    "Country_Region": "Sweden",
+    "Country_Region": "Others",
     "totals": {
-      "Cases": 1,
+      "Cases": 621,
       "Deaths": 0,
-      "Recovered": 0
+      "Recovered": 1
+    },
+    "daily": {
+      "Cases": 79,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Singapore",
+    "totals": {
+      "Cases": 84,
+      "Deaths": 0,
+      "Recovered": 34
+    },
+    "daily": {
+      "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Thailand",
+    "totals": {
+      "Cases": 35,
+      "Deaths": 0,
+      "Recovered": 15
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Korea, South",
+    "totals": {
+      "Cases": 31,
+      "Deaths": 0,
+      "Recovered": 12
     },
     "daily": {
       "Cases": 0,
@@ -116,18 +152,6 @@
     },
     "daily": {
       "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Singapore",
-    "totals": {
-      "Cases": 84,
-      "Deaths": 0,
-      "Recovered": 34
-    },
-    "daily": {
-      "Cases": 3,
       "Deaths": 0
     }
   },
@@ -180,14 +204,14 @@
     }
   },
   {
-    "Country_Region": "Others",
+    "Country_Region": "Canada",
     "totals": {
-      "Cases": 621,
+      "Cases": 8,
       "Deaths": 0,
       "Recovered": 1
     },
     "daily": {
-      "Cases": 79,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -209,30 +233,6 @@
       "Cases": 3,
       "Deaths": 0,
       "Recovered": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Thailand",
-    "totals": {
-      "Cases": 35,
-      "Deaths": 0,
-      "Recovered": 15
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Korea, South",
-    "totals": {
-      "Cases": 31,
-      "Deaths": 0,
-      "Recovered": 12
     },
     "daily": {
       "Cases": 0,
@@ -348,11 +348,11 @@
     }
   },
   {
-    "Country_Region": "Canada",
+    "Country_Region": "Sweden",
     "totals": {
-      "Cases": 8,
+      "Cases": 1,
       "Deaths": 0,
-      "Recovered": 1
+      "Recovered": 0
     },
     "daily": {
       "Cases": 0,

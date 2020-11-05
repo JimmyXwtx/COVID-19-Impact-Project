@@ -108,6 +108,30 @@
     }
   },
   {
+    "Country_Region": "Singapore",
+    "totals": {
+      "Cases": 93,
+      "Deaths": 0,
+      "Recovered": 62
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Germany",
+    "totals": {
+      "Cases": 48,
+      "Deaths": 0,
+      "Recovered": 16
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "Kuwait",
     "totals": {
       "Cases": 45,
@@ -152,18 +176,6 @@
     },
     "daily": {
       "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Singapore",
-    "totals": {
-      "Cases": 93,
-      "Deaths": 0,
-      "Recovered": 62
-    },
-    "daily": {
-      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -360,11 +372,11 @@
     }
   },
   {
-    "Country_Region": "Sri Lanka",
+    "Country_Region": "Austria",
     "totals": {
-      "Cases": 1,
+      "Cases": 3,
       "Deaths": 0,
-      "Recovered": 1
+      "Recovered": 0
     },
     "daily": {
       "Cases": 0,
@@ -380,18 +392,6 @@
     },
     "daily": {
       "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Germany",
-    "totals": {
-      "Cases": 48,
-      "Deaths": 0,
-      "Recovered": 16
-    },
-    "daily": {
-      "Cases": 2,
       "Deaths": 0
     }
   },
@@ -708,11 +708,11 @@
     }
   },
   {
-    "Country_Region": "Austria",
+    "Country_Region": "Sri Lanka",
     "totals": {
-      "Cases": 3,
+      "Cases": 1,
       "Deaths": 0,
-      "Recovered": 0
+      "Recovered": 1
     },
     "daily": {
       "Cases": 0,

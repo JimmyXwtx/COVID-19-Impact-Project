@@ -120,6 +120,30 @@
     }
   },
   {
+    "Country_Region": "United States",
+    "totals": {
+      "Cases": 53,
+      "Deaths": 0,
+      "Recovered": 5
+    },
+    "daily": {
+      "Cases": 18,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Thailand",
+    "totals": {
+      "Cases": 35,
+      "Deaths": 0,
+      "Recovered": 21
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "Malaysia",
     "totals": {
       "Cases": 22,
@@ -180,18 +204,6 @@
     }
   },
   {
-    "Country_Region": "Sweden",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Country_Region": "Macau",
     "totals": {
       "Cases": 10,
@@ -216,14 +228,14 @@
     }
   },
   {
-    "Country_Region": "United States",
+    "Country_Region": "Canada",
     "totals": {
-      "Cases": 53,
+      "Cases": 10,
       "Deaths": 0,
-      "Recovered": 5
+      "Recovered": 3
     },
     "daily": {
-      "Cases": 18,
+      "Cases": 1,
       "Deaths": 0
     }
   },
@@ -233,18 +245,6 @@
       "Cases": 3,
       "Deaths": 0,
       "Recovered": 3
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Thailand",
-    "totals": {
-      "Cases": 35,
-      "Deaths": 0,
-      "Recovered": 21
     },
     "daily": {
       "Cases": 0,
@@ -432,14 +432,14 @@
     }
   },
   {
-    "Country_Region": "Canada",
+    "Country_Region": "Sweden",
     "totals": {
-      "Cases": 10,
+      "Cases": 1,
       "Deaths": 0,
-      "Recovered": 3
+      "Recovered": 0
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 0,
       "Deaths": 0
     }
   }

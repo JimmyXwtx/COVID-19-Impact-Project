@@ -120,18 +120,6 @@
     }
   },
   {
-    "Country_Region": "Spain",
-    "totals": {
-      "Cases": 45,
-      "Deaths": 0,
-      "Recovered": 2
-    },
-    "daily": {
-      "Cases": 13,
-      "Deaths": 0
-    }
-  },
-  {
     "Country_Region": "Singapore",
     "totals": {
       "Cases": 102,
@@ -140,6 +128,42 @@
     },
     "daily": {
       "Cases": 9,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Germany",
+    "totals": {
+      "Cases": 79,
+      "Deaths": 0,
+      "Recovered": 16
+    },
+    "daily": {
+      "Cases": 31,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Kuwait",
+    "totals": {
+      "Cases": 45,
+      "Deaths": 0,
+      "Recovered": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Spain",
+    "totals": {
+      "Cases": 45,
+      "Deaths": 0,
+      "Recovered": 2
+    },
+    "daily": {
+      "Cases": 13,
       "Deaths": 0
     }
   },
@@ -164,18 +188,6 @@
     },
     "daily": {
       "Cases": 5,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Sri Lanka",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0,
-      "Recovered": 1
-    },
-    "daily": {
-      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -372,14 +384,14 @@
     }
   },
   {
-    "Country_Region": "Germany",
+    "Country_Region": "Greece",
     "totals": {
-      "Cases": 79,
+      "Cases": 4,
       "Deaths": 0,
-      "Recovered": 16
+      "Recovered": 0
     },
     "daily": {
-      "Cases": 31,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -449,18 +461,6 @@
       "Cases": 3,
       "Deaths": 0,
       "Recovered": 3
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Kuwait",
-    "totals": {
-      "Cases": 45,
-      "Deaths": 0,
-      "Recovered": 0
     },
     "daily": {
       "Cases": 0,
@@ -732,11 +732,11 @@
     }
   },
   {
-    "Country_Region": "Greece",
+    "Country_Region": "Sri Lanka",
     "totals": {
-      "Cases": 4,
+      "Cases": 1,
       "Deaths": 0,
-      "Recovered": 0
+      "Recovered": 1
     },
     "daily": {
       "Cases": 0,

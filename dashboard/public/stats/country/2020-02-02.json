@@ -24,6 +24,18 @@
     }
   },
   {
+    "Country_Region": "Japan",
+    "totals": {
+      "Cases": 20,
+      "Deaths": 0,
+      "Recovered": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "Thailand",
     "totals": {
       "Cases": 19,
@@ -156,11 +168,11 @@
     }
   },
   {
-    "Country_Region": "Japan",
+    "Country_Region": "Canada",
     "totals": {
-      "Cases": 20,
+      "Cases": 4,
       "Deaths": 0,
-      "Recovered": 1
+      "Recovered": 0
     },
     "daily": {
       "Cases": 0,
@@ -183,18 +195,6 @@
     "Country_Region": "Italy",
     "totals": {
       "Cases": 2,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Sweden",
-    "totals": {
-      "Cases": 1,
       "Deaths": 0,
       "Recovered": 0
     },
@@ -300,9 +300,9 @@
     }
   },
   {
-    "Country_Region": "Canada",
+    "Country_Region": "Sweden",
     "totals": {
-      "Cases": 4,
+      "Cases": 1,
       "Deaths": 0,
       "Recovered": 0
     },

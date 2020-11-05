@@ -24,6 +24,18 @@
     }
   },
   {
+    "Country_Region": "Singapore",
+    "totals": {
+      "Cases": 28,
+      "Deaths": 0,
+      "Recovered": 0
+    },
+    "daily": {
+      "Cases": 4,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "Thailand",
     "totals": {
       "Cases": 25,
@@ -156,14 +168,14 @@
     }
   },
   {
-    "Country_Region": "Singapore",
+    "Country_Region": "India",
     "totals": {
-      "Cases": 28,
+      "Cases": 3,
       "Deaths": 0,
       "Recovered": 0
     },
     "daily": {
-      "Cases": 4,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -183,18 +195,6 @@
     "Country_Region": "Italy",
     "totals": {
       "Cases": 2,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Sweden",
-    "totals": {
-      "Cases": 1,
       "Deaths": 0,
       "Recovered": 0
     },
@@ -312,9 +312,9 @@
     }
   },
   {
-    "Country_Region": "India",
+    "Country_Region": "Sweden",
     "totals": {
-      "Cases": 3,
+      "Cases": 1,
       "Deaths": 0,
       "Recovered": 0
     },

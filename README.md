@@ -2,7 +2,8 @@
 
 Visualization of COVID-19 statistics from
 
-- "2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE"
+- "JHU CSSE COVID-19 Data"
+- "COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University"
 - https://github.com/CSSEGISandData/COVID-19
 
 ## Links

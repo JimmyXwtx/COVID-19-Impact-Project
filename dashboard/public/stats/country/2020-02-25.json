@@ -24,18 +24,6 @@
     }
   },
   {
-    "Country_Region": "Italy",
-    "totals": {
-      "Cases": 322,
-      "Deaths": 10,
-      "Recovered": 1
-    },
-    "daily": {
-      "Cases": 93,
-      "Deaths": 3
-    }
-  },
-  {
     "Country_Region": "Korea, South",
     "totals": {
       "Cases": 977,
@@ -45,6 +33,18 @@
     "daily": {
       "Cases": 144,
       "Deaths": 2
+    }
+  },
+  {
+    "Country_Region": "Italy",
+    "totals": {
+      "Cases": 322,
+      "Deaths": 10,
+      "Recovered": 1
+    },
+    "daily": {
+      "Cases": 93,
+      "Deaths": 3
     }
   },
   {
@@ -108,14 +108,38 @@
     }
   },
   {
-    "Country_Region": "Switzerland",
+    "Country_Region": "Singapore",
     "totals": {
-      "Cases": 1,
+      "Cases": 91,
       "Deaths": 0,
-      "Recovered": 0
+      "Recovered": 53
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Thailand",
+    "totals": {
+      "Cases": 37,
+      "Deaths": 0,
+      "Recovered": 22
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "United States",
+    "totals": {
+      "Cases": 53,
+      "Deaths": 0,
+      "Recovered": 6
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -164,18 +188,6 @@
     },
     "daily": {
       "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Singapore",
-    "totals": {
-      "Cases": 91,
-      "Deaths": 0,
-      "Recovered": 53
-    },
-    "daily": {
-      "Cases": 2,
       "Deaths": 0
     }
   },
@@ -240,14 +252,14 @@
     }
   },
   {
-    "Country_Region": "Thailand",
+    "Country_Region": "Canada",
     "totals": {
-      "Cases": 37,
+      "Cases": 11,
       "Deaths": 0,
-      "Recovered": 22
+      "Recovered": 3
     },
     "daily": {
-      "Cases": 2,
+      "Cases": 1,
       "Deaths": 0
     }
   },
@@ -269,18 +281,6 @@
       "Cases": 3,
       "Deaths": 0,
       "Recovered": 3
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "United States",
-    "totals": {
-      "Cases": 53,
-      "Deaths": 0,
-      "Recovered": 6
     },
     "daily": {
       "Cases": 0,
@@ -480,11 +480,11 @@
     }
   },
   {
-    "Country_Region": "Canada",
+    "Country_Region": "Switzerland",
     "totals": {
-      "Cases": 11,
+      "Cases": 1,
       "Deaths": 0,
-      "Recovered": 3
+      "Recovered": 0
     },
     "daily": {
       "Cases": 1,

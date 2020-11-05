@@ -24,6 +24,18 @@
     }
   },
   {
+    "Country_Region": "Others",
+    "totals": {
+      "Cases": 135,
+      "Deaths": 0,
+      "Recovered": 0
+    },
+    "daily": {
+      "Cases": 71,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "Singapore",
     "totals": {
       "Cases": 45,
@@ -168,14 +180,14 @@
     }
   },
   {
-    "Country_Region": "Others",
+    "Country_Region": "Australia",
     "totals": {
-      "Cases": 135,
+      "Cases": 15,
       "Deaths": 0,
-      "Recovered": 0
+      "Recovered": 2
     },
     "daily": {
-      "Cases": 71,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -207,18 +219,6 @@
     "Country_Region": "Italy",
     "totals": {
       "Cases": 3,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Sweden",
-    "totals": {
-      "Cases": 1,
       "Deaths": 0,
       "Recovered": 0
     },
@@ -324,11 +324,11 @@
     }
   },
   {
-    "Country_Region": "Australia",
+    "Country_Region": "Sweden",
     "totals": {
-      "Cases": 15,
+      "Cases": 1,
       "Deaths": 0,
-      "Recovered": 2
+      "Recovered": 0
     },
     "daily": {
       "Cases": 0,

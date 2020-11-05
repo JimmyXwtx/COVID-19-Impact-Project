@@ -24,6 +24,18 @@
     }
   },
   {
+    "Country_Region": "Others",
+    "totals": {
+      "Cases": 634,
+      "Deaths": 2,
+      "Recovered": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "Korea, South",
     "totals": {
       "Cases": 433,
@@ -45,18 +57,6 @@
     "daily": {
       "Cases": 42,
       "Deaths": 1
-    }
-  },
-  {
-    "Country_Region": "Others",
-    "totals": {
-      "Cases": 634,
-      "Deaths": 2,
-      "Recovered": 1
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
     }
   },
   {
@@ -101,6 +101,30 @@
       "Cases": 3,
       "Deaths": 1,
       "Recovered": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Singapore",
+    "totals": {
+      "Cases": 85,
+      "Deaths": 0,
+      "Recovered": 37
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Thailand",
+    "totals": {
+      "Cases": 35,
+      "Deaths": 0,
+      "Recovered": 17
     },
     "daily": {
       "Cases": 0,
@@ -156,18 +180,6 @@
     }
   },
   {
-    "Country_Region": "Thailand",
-    "totals": {
-      "Cases": 35,
-      "Deaths": 0,
-      "Recovered": 17
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Country_Region": "United States",
     "totals": {
       "Cases": 35,
@@ -192,11 +204,11 @@
     }
   },
   {
-    "Country_Region": "Singapore",
+    "Country_Region": "United Kingdom",
     "totals": {
-      "Cases": 85,
+      "Cases": 9,
       "Deaths": 0,
-      "Recovered": 37
+      "Recovered": 8
     },
     "daily": {
       "Cases": 0,
@@ -233,18 +245,6 @@
       "Cases": 3,
       "Deaths": 0,
       "Recovered": 3
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Sweden",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0,
-      "Recovered": 0
     },
     "daily": {
       "Cases": 0,
@@ -372,11 +372,11 @@
     }
   },
   {
-    "Country_Region": "United Kingdom",
+    "Country_Region": "Sweden",
     "totals": {
-      "Cases": 9,
+      "Cases": 1,
       "Deaths": 0,
-      "Recovered": 8
+      "Recovered": 0
     },
     "daily": {
       "Cases": 0,

@@ -72,18 +72,6 @@
     }
   },
   {
-    "Country_Region": "Japan",
-    "totals": {
-      "Cases": 420,
-      "Deaths": 6,
-      "Recovered": 46
-    },
-    "daily": {
-      "Cases": 60,
-      "Deaths": 0
-    }
-  },
-  {
     "Country_Region": "Others",
     "totals": {
       "Cases": 696,
@@ -92,6 +80,18 @@
     },
     "daily": {
       "Cases": -10,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Japan",
+    "totals": {
+      "Cases": 420,
+      "Deaths": 6,
+      "Recovered": 46
+    },
+    "daily": {
+      "Cases": 60,
       "Deaths": 0
     }
   },
@@ -120,18 +120,6 @@
     }
   },
   {
-    "Country_Region": "Australia",
-    "totals": {
-      "Cases": 60,
-      "Deaths": 2,
-      "Recovered": 21
-    },
-    "daily": {
-      "Cases": 5,
-      "Deaths": 0
-    }
-  },
-  {
     "Country_Region": "United Kingdom",
     "totals": {
       "Cases": 163,
@@ -144,14 +132,14 @@
     }
   },
   {
-    "Country_Region": "Taiwan*",
+    "Country_Region": "Australia",
     "totals": {
-      "Cases": 45,
-      "Deaths": 1,
-      "Recovered": 12
+      "Cases": 60,
+      "Deaths": 2,
+      "Recovered": 21
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 5,
       "Deaths": 0
     }
   },
@@ -168,14 +156,38 @@
     }
   },
   {
-    "Country_Region": "Philippines",
+    "Country_Region": "Netherlands",
     "totals": {
-      "Cases": 5,
+      "Cases": 128,
       "Deaths": 1,
-      "Recovered": 1
+      "Recovered": 0
     },
     "daily": {
-      "Cases": 2,
+      "Cases": 46,
+      "Deaths": 1
+    }
+  },
+  {
+    "Country_Region": "Thailand",
+    "totals": {
+      "Cases": 48,
+      "Deaths": 1,
+      "Recovered": 31
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Taiwan*",
+    "totals": {
+      "Cases": 45,
+      "Deaths": 1,
+      "Recovered": 12
+    },
+    "daily": {
+      "Cases": 1,
       "Deaths": 0
     }
   },
@@ -192,86 +204,14 @@
     }
   },
   {
-    "Country_Region": "Thailand",
+    "Country_Region": "Philippines",
     "totals": {
-      "Cases": 48,
+      "Cases": 5,
       "Deaths": 1,
-      "Recovered": 31
+      "Recovered": 1
     },
     "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Netherlands",
-    "totals": {
-      "Cases": 128,
-      "Deaths": 1,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 46,
-      "Deaths": 1
-    }
-  },
-  {
-    "Country_Region": "Kuwait",
-    "totals": {
-      "Cases": 58,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Vatican City",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Austria",
-    "totals": {
-      "Cases": 55,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 14,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Singapore",
-    "totals": {
-      "Cases": 130,
-      "Deaths": 0,
-      "Recovered": 78
-    },
-    "daily": {
-      "Cases": 13,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Greece",
-    "totals": {
-      "Cases": 45,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 14,
+      "Cases": 2,
       "Deaths": 0
     }
   },
@@ -288,14 +228,14 @@
     }
   },
   {
-    "Country_Region": "Iceland",
+    "Country_Region": "Singapore",
     "totals": {
-      "Cases": 43,
+      "Cases": 130,
       "Deaths": 0,
-      "Recovered": 0
+      "Recovered": 78
     },
     "daily": {
-      "Cases": 9,
+      "Cases": 13,
       "Deaths": 0
     }
   },
@@ -308,6 +248,102 @@
     },
     "daily": {
       "Cases": 59,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Norway",
+    "totals": {
+      "Cases": 108,
+      "Deaths": 0,
+      "Recovered": 0
+    },
+    "daily": {
+      "Cases": 21,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Sweden",
+    "totals": {
+      "Cases": 101,
+      "Deaths": 0,
+      "Recovered": 0
+    },
+    "daily": {
+      "Cases": 7,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Malaysia",
+    "totals": {
+      "Cases": 83,
+      "Deaths": 0,
+      "Recovered": 22
+    },
+    "daily": {
+      "Cases": 33,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Bahrain",
+    "totals": {
+      "Cases": 60,
+      "Deaths": 0,
+      "Recovered": 4
+    },
+    "daily": {
+      "Cases": 5,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Kuwait",
+    "totals": {
+      "Cases": 58,
+      "Deaths": 0,
+      "Recovered": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Austria",
+    "totals": {
+      "Cases": 55,
+      "Deaths": 0,
+      "Recovered": 0
+    },
+    "daily": {
+      "Cases": 14,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Greece",
+    "totals": {
+      "Cases": 45,
+      "Deaths": 0,
+      "Recovered": 0
+    },
+    "daily": {
+      "Cases": 14,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Iceland",
+    "totals": {
+      "Cases": 43,
+      "Deaths": 0,
+      "Recovered": 0
+    },
+    "daily": {
+      "Cases": 9,
       "Deaths": 0
     }
   },
@@ -332,18 +368,6 @@
     },
     "daily": {
       "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Norway",
-    "totals": {
-      "Cases": 108,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 21,
       "Deaths": 0
     }
   },
@@ -392,18 +416,6 @@
     },
     "daily": {
       "Cases": 5,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Sweden",
-    "totals": {
-      "Cases": 101,
-      "Deaths": 0,
-      "Recovered": 0
-    },
-    "daily": {
-      "Cases": 7,
       "Deaths": 0
     }
   },
@@ -588,14 +600,14 @@
     }
   },
   {
-    "Country_Region": "Malaysia",
+    "Country_Region": "Romania",
     "totals": {
-      "Cases": 83,
+      "Cases": 9,
       "Deaths": 0,
-      "Recovered": 22
+      "Recovered": 1
     },
     "daily": {
-      "Cases": 33,
+      "Cases": 3,
       "Deaths": 0
     }
   },
@@ -668,18 +680,6 @@
     },
     "daily": {
       "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Bahrain",
-    "totals": {
-      "Cases": 60,
-      "Deaths": 0,
-      "Recovered": 4
-    },
-    "daily": {
-      "Cases": 5,
       "Deaths": 0
     }
   },
@@ -1164,14 +1164,14 @@
     }
   },
   {
-    "Country_Region": "Romania",
+    "Country_Region": "Vatican City",
     "totals": {
-      "Cases": 9,
+      "Cases": 1,
       "Deaths": 0,
-      "Recovered": 1
+      "Recovered": 0
     },
     "daily": {
-      "Cases": 3,
+      "Cases": 1,
       "Deaths": 0
     }
   }

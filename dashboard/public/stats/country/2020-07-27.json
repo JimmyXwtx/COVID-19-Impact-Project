@@ -2,7 +2,7 @@
   {
     "Country_Region": "United States",
     "totals": {
-      "Cases": 4290337,
+      "Cases": 4290355,
       "Deaths": 148012,
       "Recovered": 1325804
     },
@@ -1368,18 +1368,6 @@
     }
   },
   {
-    "Country_Region": "Lebanon",
-    "totals": {
-      "Cases": 3882,
-      "Deaths": 51,
-      "Recovered": 1709
-    },
-    "daily": {
-      "Cases": 132,
-      "Deaths": 0
-    }
-  },
-  {
     "Country_Region": "Equatorial Guinea",
     "totals": {
       "Cases": 3071,
@@ -1388,6 +1376,18 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Lebanon",
+    "totals": {
+      "Cases": 3882,
+      "Deaths": 51,
+      "Recovered": 1709
+    },
+    "daily": {
+      "Cases": 132,
       "Deaths": 0
     }
   },
@@ -1752,26 +1752,14 @@
     }
   },
   {
-    "Country_Region": "Sri Lanka",
+    "Country_Region": "Bahamas",
     "totals": {
-      "Cases": 2805,
+      "Cases": 382,
       "Deaths": 11,
-      "Recovered": 2121
+      "Recovered": 91
     },
     "daily": {
-      "Cases": 23,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Mozambique",
-    "totals": {
-      "Cases": 1701,
-      "Deaths": 11,
-      "Recovered": 596
-    },
-    "daily": {
-      "Cases": 32,
+      "Cases": 40,
       "Deaths": 0
     }
   },
@@ -1788,26 +1776,26 @@
     }
   },
   {
-    "Country_Region": "Bahamas",
+    "Country_Region": "Mozambique",
     "totals": {
-      "Cases": 382,
+      "Cases": 1701,
       "Deaths": 11,
-      "Recovered": 91
+      "Recovered": 596
     },
     "daily": {
-      "Cases": 40,
+      "Cases": 32,
       "Deaths": 0
     }
   },
   {
-    "Country_Region": "Mauritius",
+    "Country_Region": "Sri Lanka",
     "totals": {
-      "Cases": 344,
-      "Deaths": 10,
-      "Recovered": 332
+      "Cases": 2805,
+      "Deaths": 11,
+      "Recovered": 2121
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 23,
       "Deaths": 0
     }
   },
@@ -1836,6 +1824,18 @@
     }
   },
   {
+    "Country_Region": "Mauritius",
+    "totals": {
+      "Cases": 344,
+      "Deaths": 10,
+      "Recovered": 332
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "Malta",
     "totals": {
       "Cases": 701,
@@ -1844,30 +1844,6 @@
     },
     "daily": {
       "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Trinidad and Tobago",
-    "totals": {
-      "Cases": 148,
-      "Deaths": 8,
-      "Recovered": 128
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Namibia",
-    "totals": {
-      "Cases": 1843,
-      "Deaths": 8,
-      "Recovered": 101
-    },
-    "daily": {
-      "Cases": 68,
       "Deaths": 0
     }
   },
@@ -1884,14 +1860,26 @@
     }
   },
   {
-    "Country_Region": "Taiwan*",
+    "Country_Region": "Namibia",
     "totals": {
-      "Cases": 462,
-      "Deaths": 7,
-      "Recovered": 440
+      "Cases": 1843,
+      "Deaths": 8,
+      "Recovered": 101
     },
     "daily": {
-      "Cases": 4,
+      "Cases": 68,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Trinidad and Tobago",
+    "totals": {
+      "Cases": 148,
+      "Deaths": 8,
+      "Recovered": 128
+    },
+    "daily": {
+      "Cases": 1,
       "Deaths": 0
     }
   },
@@ -1916,6 +1904,18 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Taiwan*",
+    "totals": {
+      "Cases": 462,
+      "Deaths": 7,
+      "Recovered": 440
+    },
+    "daily": {
+      "Cases": 4,
       "Deaths": 0
     }
   },
@@ -1956,6 +1956,18 @@
     }
   },
   {
+    "Country_Region": "Antigua and Barbuda",
+    "totals": {
+      "Cases": 86,
+      "Deaths": 3,
+      "Recovered": 65
+    },
+    "daily": {
+      "Cases": 4,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "Brunei",
     "totals": {
       "Cases": 141,
@@ -1968,14 +1980,14 @@
     }
   },
   {
-    "Country_Region": "Antigua and Barbuda",
+    "Country_Region": "Belize",
     "totals": {
-      "Cases": 86,
-      "Deaths": 3,
-      "Recovered": 65
+      "Cases": 48,
+      "Deaths": 2,
+      "Recovered": 26
     },
     "daily": {
-      "Cases": 4,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -2004,18 +2016,6 @@
     }
   },
   {
-    "Country_Region": "Belize",
-    "totals": {
-      "Cases": 48,
-      "Deaths": 2,
-      "Recovered": 26
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Country_Region": "Uganda",
     "totals": {
       "Cases": 1128,
@@ -2024,6 +2024,18 @@
     },
     "daily": {
       "Cases": 13,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Burundi",
+    "totals": {
+      "Cases": 378,
+      "Deaths": 1,
+      "Recovered": 301
+    },
+    "daily": {
+      "Cases": 17,
       "Deaths": 0
     }
   },
@@ -2052,26 +2064,26 @@
     }
   },
   {
-    "Country_Region": "Burundi",
+    "Country_Region": "Bhutan",
     "totals": {
-      "Cases": 378,
-      "Deaths": 1,
-      "Recovered": 301
+      "Cases": 99,
+      "Deaths": 0,
+      "Recovered": 86
     },
     "daily": {
-      "Cases": 17,
+      "Cases": 4,
       "Deaths": 0
     }
   },
   {
-    "Country_Region": "Timor-Leste",
+    "Country_Region": "Cambodia",
     "totals": {
-      "Cases": 24,
+      "Cases": 226,
       "Deaths": 0,
-      "Recovered": 24
+      "Recovered": 147
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 1,
       "Deaths": 0
     }
   },
@@ -2079,6 +2091,30 @@
     "Country_Region": "Dominica",
     "totals": {
       "Cases": 18,
+      "Deaths": 0,
+      "Recovered": 18
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Eritrea",
+    "totals": {
+      "Cases": 265,
+      "Deaths": 0,
+      "Recovered": 191
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Fiji",
+    "totals": {
+      "Cases": 27,
       "Deaths": 0,
       "Recovered": 18
     },
@@ -2112,18 +2148,6 @@
     }
   },
   {
-    "Country_Region": "Mongolia",
-    "totals": {
-      "Cases": 289,
-      "Deaths": 0,
-      "Recovered": 222
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
     "Country_Region": "Laos",
     "totals": {
       "Cases": 20,
@@ -2136,62 +2160,14 @@
     }
   },
   {
-    "Country_Region": "Fiji",
+    "Country_Region": "Mongolia",
     "totals": {
-      "Cases": 27,
+      "Cases": 289,
       "Deaths": 0,
-      "Recovered": 18
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Cambodia",
-    "totals": {
-      "Cases": 226,
-      "Deaths": 0,
-      "Recovered": 147
+      "Recovered": 222
     },
     "daily": {
       "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Bhutan",
-    "totals": {
-      "Cases": 99,
-      "Deaths": 0,
-      "Recovered": 86
-    },
-    "daily": {
-      "Cases": 4,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Seychelles",
-    "totals": {
-      "Cases": 114,
-      "Deaths": 0,
-      "Recovered": 39
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Vietnam",
-    "totals": {
-      "Cases": 431,
-      "Deaths": 0,
-      "Recovered": 365
-    },
-    "daily": {
-      "Cases": 11,
       "Deaths": 0
     }
   },
@@ -2244,14 +2220,38 @@
     }
   },
   {
-    "Country_Region": "Eritrea",
+    "Country_Region": "Seychelles",
     "totals": {
-      "Cases": 265,
+      "Cases": 114,
       "Deaths": 0,
-      "Recovered": 191
+      "Recovered": 39
     },
     "daily": {
-      "Cases": 2,
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Timor-Leste",
+    "totals": {
+      "Cases": 24,
+      "Deaths": 0,
+      "Recovered": 24
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Vietnam",
+    "totals": {
+      "Cases": 431,
+      "Deaths": 0,
+      "Recovered": 365
+    },
+    "daily": {
+      "Cases": 11,
       "Deaths": 0
     }
   }
