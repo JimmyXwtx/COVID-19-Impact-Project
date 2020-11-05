@@ -18,8 +18,8 @@ const { rename_item } = require('./country');
 const daily_dir =
   '../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
 const store_dir = '../dashboard/public/stats/';
-const store_path_country = path.resolve(store_dir, 'country');
-const store_path_detail = path.resolve(store_dir, 'detail');
+const store_path_country = path.resolve(store_dir, 'cdaily');
+const store_path_detail = path.resolve(store_dir, 'uregion');
 const stats_init = { Cases: 0, Deaths: 0, Recovered: 0 };
 let fromDate;
 let toDate;
@@ -125,7 +125,7 @@ function calc(sums, item) {
 
 function write_summary() {
   const dates = [];
-  const npath = path.resolve(store_dir, 'country');
+  const npath = path.resolve(store_dir, 'cdaily');
   const summaryDict = {};
   if (fs.existsSync(npath)) {
     let cdict = {};
@@ -175,11 +175,11 @@ function write_summary() {
     console.log('write_summary missing npath=' + npath);
   }
 
-  const outpath_dates = path.resolve(store_dir, 'dates.json');
+  const outpath_dates = path.resolve(store_dir, 'cdates.json');
   fs.writeJsonSync(outpath_dates, dates, { spaces: 2 });
 
   const ckeys = Object.keys(summaryDict).sort();
   const csum = ckeys.map(uname => summaryDict[uname]);
-  const outpath_names = path.resolve(store_dir, 'summary.json');
+  const outpath_names = path.resolve(store_dir, 'cfirst.json');
   fs.writeJsonSync(outpath_names, csum, { spaces: 2 });
 }
