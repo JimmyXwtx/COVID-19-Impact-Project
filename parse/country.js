@@ -4,9 +4,22 @@
 //
 const prop_renames = {
   'Province/State': 'Province_State',
+  '﻿Province/State': 'Province_State',
   'Country/Region': 'Country_Region',
   Confirmed: 'Cases',
 };
+// item {
+//   '﻿Province/State': 'Shandong',
+//   'Country/Region': 'Mainland China',
+//   'Last Update': '1/26/20 16:00',
+//   Confirmed: '46',
+//   Deaths: '',
+//   Recovered: '',
+//   Country_Region: 'China',
+//   Cases: '46',
+//   source_index: 8
+// }
+// '﻿Province/State': 'Taiwan',
 
 const Country_Region_renames = {
   'Mainland China': 'China',
@@ -26,6 +39,19 @@ const Country_Region_renames = {
   'Viet Nam': 'Vietnam',
   'West Bank and Gaza': 'occupied Palestinian territory',
 };
+
+function rename_item(item) {
+  for (let prop in prop_renames) {
+    const nprop = prop_renames[prop];
+    const val = item[prop];
+    if (val) item[nprop] = val;
+  }
+  const cname = Country_Region_renames[item.Country_Region];
+  if (cname) item.Country_Region = cname;
+}
+
+// ----------------------------------------------------------------------------
+// -- NOT USED --
 
 // const pop = require('./world-population/pop2018.json');
 // const pop_by_country = {};
@@ -78,15 +104,6 @@ const Country_Region_to_country_name = {
 // './COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/03-21-2020.csv';
 // './COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/01-22-2020.csv';
 
-function rename_item(item) {
-  for (let prop in prop_renames) {
-    const nprop = prop_renames[prop];
-    const val = item[prop];
-    if (val) item[nprop] = val;
-  }
-  const cname = Country_Region_renames[item.Country_Region];
-  if (cname) item.Country_Region = cname;
-}
 
 function find_population(item, silent) {
   let cname = Country_Region_to_country_name[item.Country_Region];
@@ -125,6 +142,8 @@ function find_population(item, silent) {
 // Recovered: '0',
 // Active: '22',
 // Combined_Key: 'Essex, New York, US' }
+
+// ----------------------------------------------------------------------------
 
 module.exports = {
   rename_item,
