@@ -86,7 +86,7 @@ const stateFixes = {
   'Lackland, TX (From Diamond Princess)': 'Texas',
 };
 
-// ??     "Province_State": "Wuhan Evacuee",
+// !!@     "Province_State": "Wuhan Evacuee",
 // "first_date": {
 //   "Cases": "2020-03-22"
 

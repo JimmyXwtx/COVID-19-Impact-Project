@@ -226,6 +226,7 @@ function write_summary(root_path, key) {
           Deaths -= cprior.totals.Deaths;
         }
         citem.daily = { Cases, Deaths };
+        ent.last_date = date;
       });
       // Write out updated daily
       fs.writeJsonSync(fpath, fitem, { spaces: 2 });
@@ -238,7 +239,13 @@ function write_summary(root_path, key) {
   fs.writeJsonSync(outpath_dates, dates, { spaces: 2 });
 
   const ckeys = Object.keys(summaryDict).sort();
-  const csum = ckeys.map(uname => summaryDict[uname]);
+  const csummary = ckeys.map(uname => {
+    const ent = summaryDict[uname];
+    if (ent.last_date === toDate) {
+      delete ent.last_date;
+    }
+    return ent;
+  });
   const outpath_names = path.resolve(root_path, 'cfirst.json');
-  fs.writeJsonSync(outpath_names, csum, { spaces: 2 });
+  fs.writeJsonSync(outpath_names, csummary, { spaces: 2 });
 }
