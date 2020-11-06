@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
 import {
   Button,
   Container,
@@ -8,21 +10,18 @@ import {
   Menu,
   Select,
 } from 'semantic-ui-react';
-import React, { useEffect, useState } from 'react';
-
-import AboutTab from '../graph_tabs/AboutTab';
+import styled from 'styled-components';
 import CountryDataTable from '../components/CountryDataTable';
 import DateSlider from '../components/DateSlider';
-import FocusTab from '../graph_tabs/FocusTab';
-import ReactGA from 'react-ga';
-import ReferencesTab from '../graph_tabs/ReferencesTab';
-import SoftBodyTab from '../graph_tabs/SoftBodyTab';
 import World from '../graph/World';
 import extract_slices from '../graph/extract_slices';
-import fetchData from '../js/fetchData';
-import styled from 'styled-components';
+import AboutTab from '../graph_tabs/AboutTab';
+import FocusTab from '../graph_tabs/FocusTab';
+import ReferencesTab from '../graph_tabs/ReferencesTab';
+import SoftBodyTab from '../graph_tabs/SoftBodyTab';
 import useInterval from '../hooks/useInterval';
 import useLocalStorage from '../hooks/useLocalStorage';
+import fetchData from '../js/fetchData';
 
 const nslice = 8;
 const top_label = 'World';
@@ -84,7 +83,7 @@ const Graph = () => {
 
   useEffect(() => {
     // console.log('useEffect dates.json');
-    fetchData('./stats/cdates.json', (data) => {
+    fetchData('./cdata/cdates.json', (data) => {
       const list = data.map((uname) => ui_key(uname));
       setDateList(list);
     });
@@ -92,7 +91,7 @@ const Graph = () => {
 
   useEffect(() => {
     // console.log('useEffect summary.json');
-    fetchData('./stats/cfirst.json', (data) => {
+    fetchData('./cdata/cfirst.json', (data) => {
       const dict = {};
       const list = data.map((item) => {
         const uname = item.Country_Region;
@@ -117,7 +116,7 @@ const Graph = () => {
       if (dateFocus && dateStats.date !== dateFocus) {
         // setDateStats({ date: dateFocus, items: [] });
         dateStats.isLoading = true;
-        fetchData('./stats/cdaily/' + dateFocus + '.json', (items) => {
+        fetchData('./cdata/cdays/' + dateFocus + '.json', (items) => {
           if (!items) items = [];
           setDateStats({ date: dateFocus, items });
         });

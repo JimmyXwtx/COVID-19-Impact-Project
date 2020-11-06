@@ -19,15 +19,12 @@ const { rename_item } = require('./country');
 
 const daily_dir =
   '../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
-const store_dir = '../dashboard/public/stats/';
-// const store_path_cdaily = path.resolve(store_dir, 'cdaily');
-// const store_path_uregion = path.resolve(store_dir, 'cstate');
-// const stats_init = { Cases: 0, Deaths: 0, Recovered: 0 };
+const store_dir = '../dashboard/public/cdata/';
 const stats_init = { Cases: 0, Deaths: 0 };
 let fromDate;
 let toDate;
 
-// fs.ensureDirSync(store_path_cdaily);
+// fs.ensureDirSync(store_path_cdays);
 // if (argv_detail) fs.ensureDirSync(store_path_uregion);
 const start_time = Date.now();
 
@@ -55,7 +52,7 @@ function process_summary() {
 
   write_summary(store_dir);
 
-  const npath = path.resolve(store_dir, 'cstate');
+  const npath = path.resolve(store_dir, 'cstates');
   const dfiles = fs.readdirSync(npath);
   for (let dname of dfiles) {
     const fpath = path.resolve(npath, dname);
@@ -145,14 +142,14 @@ function process_cvs(cvs_inpath, file_date) {
     const ent = country_dict[country];
     // console.log('file_date', file_date, 'country', country, 'ent', ent);
     const ncountry = country.replace(/ /g, '_').replace(/,/g, '');
-    let cpath = path.resolve(store_dir, 'cstate', ncountry);
+    let cpath = path.resolve(store_dir, 'cstates', ncountry);
     // fs.ensureDirSync(cpath);
     write_daily(ent, file_date, cpath);
   }
   // const sums = Object.values(sums_country);
   // sums.sort((item1, item2) => item2.totals.Deaths - item1.totals.Deaths);
   // const fname = file_date + '.json';
-  // const outpath_country = path.resolve(store_path_cdaily, fname);
+  // const outpath_country = path.resolve(store_path_cdays, fname);
   // // const outpath_detail = path.resolve(store_path_uregion, fname);
   // if (!silent) dump(records, sums_total, sums, cvs_inpath, outpath_country)
   // fs.writeJsonSync(outpath_country, sums, { spaces: 2 });
@@ -165,7 +162,7 @@ function write_daily(sums_country, file_date, path_root) {
     // console.log('write_daily empty', file_date, path_root);
     return;
   }
-  let cpath = path.resolve(path_root, 'cdaily');
+  let cpath = path.resolve(path_root, 'cdays');
   fs.ensureDirSync(cpath);
   const fname = file_date + '.json';
   cpath = path.resolve(cpath, fname);
@@ -186,7 +183,7 @@ function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
 
 function write_summary(root_path) {
   const dates = [];
-  const npath = path.resolve(root_path, 'cdaily');
+  const npath = path.resolve(root_path, 'cdays');
   const summaryDict = {};
   if (!fs.existsSync(npath)) {
     console.log('write_summary missing npath', npath);
