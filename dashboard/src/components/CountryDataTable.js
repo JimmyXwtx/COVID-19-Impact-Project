@@ -22,7 +22,7 @@ function percentFormat(num) {
 }
 
 const Rows = (props) => {
-  const { items, nslices } = props;
+  const { items, nslices, selectCountry } = props;
   const rows = items.map((country, index) => {
     const { Country_Region, propValue, propPercent } = country;
     const slugKey = `tr-${slug(Country_Region).toLowerCase()}`;
@@ -38,6 +38,7 @@ const Rows = (props) => {
           <button
             onClick={() => {
               console.log('CountryDataTable index', index, 'country', country);
+              if (selectCountry) selectCountry(country);
             }}
           >
             {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
@@ -64,7 +65,7 @@ const Rows = (props) => {
 };
 
 const CountryDataTable = (props) => {
-  const { items, propTitle, pie_data } = props;
+  const { items, propTitle, pie_data, selectCountry } = props;
   const pieslices = pie_data[0].slices;
   console.log('pieslices.length', pieslices.length);
   // const { items } = props;
@@ -80,7 +81,11 @@ const CountryDataTable = (props) => {
         </tr>
       </thead>
       <tbody>
-        <Rows items={items} nslices={pieslices.length} />
+        <Rows
+          items={items}
+          nslices={pieslices.length}
+          selectCountry={selectCountry}
+        />
       </tbody>
     </StyledCountryDataTable>
   );

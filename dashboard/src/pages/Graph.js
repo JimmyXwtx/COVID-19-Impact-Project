@@ -67,6 +67,7 @@ const Graph = () => {
   // const [bottomTab, setBottomTab] = useState('places');
   const [dateIndex, setDateIndex] = useLocalStorage('key-dataIndex', 0);
   const [sortedItems, setSortedItems] = useState([]);
+  const [countrySelected, setCuntrySelected] = useState('');
 
   // dateStats = { date, items }
   // items [{
@@ -81,13 +82,20 @@ const Graph = () => {
   //   "Country_Region": "US"
   // },]
 
+  const dataPrefix = (countrySelected) => {
+    let prefix = countrySelected.replace(/ /g, '_').replace(/,/g, '');
+    prefix = prefix ? 'cstates/' + prefix + '/' : '';
+    return prefix;
+  };
+
   useEffect(() => {
     // console.log('useEffect dates.json');
-    fetchData('./cdata/cdates.json', (data) => {
+    const prefix = dataPrefix(countrySelected);
+    fetchData('./cdata/' + prefix + 'cdates.json', (data) => {
       const list = data.map((uname) => ui_key(uname));
       setDateList(list);
     });
-  }, []);
+  }, [countrySelected]);
 
   useEffect(() => {
     // console.log('useEffect summary.json');
@@ -113,16 +121,31 @@ const Graph = () => {
     //   dateStats
     // );
     if (!dateStats.isLoading) {
-      if (dateFocus && dateStats.date !== dateFocus) {
+      if (
+        dateFocus &&
+        !(
+          dateStats.date === dateFocus &&
+          dateStats.countrySelected === countrySelected
+        )
+      ) {
         // setDateStats({ date: dateFocus, items: [] });
         dateStats.isLoading = true;
-        fetchData('./cdata/cdays/' + dateFocus + '.json', (items) => {
-          if (!items) items = [];
-          setDateStats({ date: dateFocus, items });
-        });
+        const prefix = dataPrefix(countrySelected);
+        fetchData(
+          './cdata/' + prefix + 'cdays/' + dateFocus + '.json',
+          (items) => {
+            if (!items) items = [];
+            if (countrySelected) {
+              items.forEach((item) => {
+                item.Country_Region = item.Province_State;
+              });
+            }
+            setDateStats({ date: dateFocus, items, countrySelected });
+          }
+        );
       }
     }
-  }, [dateFocus, dateStats]);
+  }, [dateFocus, dateStats, countrySelected]);
 
   useEffect(() => {
     // console.log('useEffect dateStats.items', dateStats.items);
@@ -379,6 +402,7 @@ const Graph = () => {
   const to_active = sumFocus === 'totals';
   const da_active = sumFocus === 'daily';
   const uisum = sumFocus === 'totals' ? 'Total' : 'Daily';
+  const upto_on = sumFocus === 'totals' ? 'up to' : 'on';
 
   const updateSlider = (key) => {
     // console.log('updateSlider key', key);
@@ -389,6 +413,16 @@ const Graph = () => {
 
   const dateFocusShort = dateFocus && dateFocus.substring(5);
 
+  const selectCountry = (country) => {
+    setCuntrySelected(country.Country_Region);
+  };
+
+  const ui_top = countrySelected ? countrySelected : 'WorldWide';
+
+  const selectWorldwide = () => {
+    setCuntrySelected('');
+  };
+
   return (
     <>
       <Container style={{ marginTop: '1rem' }}>
@@ -396,14 +430,19 @@ const Graph = () => {
           <Loader>Loading</Loader>
         </Dimmer> */}
         <Loader active={loaderActive} inline></Loader>
+        {/* <Header as="h3">{countrySelected}</Header> */}
         {/* <Header as="h3">
           Worldwide {uisum} {uiprop_s}: {pieData[0].stats_total} on{' '}
           {dateFocusShort}
         </Header> */}
+        <Header as="h3">
+          {ui_top} {pieData[0].stats_total} {uiprop_s} {upto_on}{' '}
+          {dateFocusShort}
+        </Header>
         {/* {bottomTab !== 'softbody' && <World pie_data={pieData}></World>} */}
         <World pie_data={pieData} opacity={graphOpacity} />
         <Header as="h3">
-          Worldwide {uisum} {uiprop_s}: {pieData[0].stats_total} on{' '}
+          {ui_top} {pieData[0].stats_total} {uiprop_s} {upto_on}{' '}
           {dateFocusShort}
         </Header>
         <Grid>
@@ -420,14 +459,13 @@ const Graph = () => {
           </Grid.Row>
           <Grid.Row>
             <StyledControlRow>
-              <Button.Group>
-                <Button size="mini" onClick={selectTotals} active={to_active}>
-                  Total
-                </Button>
-                <Button size="mini" onClick={selectDaily} active={da_active}>
-                  Daily
-                </Button>
-              </Button.Group>
+              {countrySelected && (
+                <Button.Group>
+                  <Button size="mini" onClick={selectWorldwide}>
+                    Worldwide
+                  </Button>
+                </Button.Group>
+              )}
               <Button.Group>
                 <Button
                   size="mini"
@@ -442,6 +480,14 @@ const Graph = () => {
                   active={dactive}
                 >
                   Deaths
+                </Button>
+              </Button.Group>
+              <Button.Group>
+                <Button size="mini" onClick={selectTotals} active={to_active}>
+                  up to
+                </Button>
+                <Button size="mini" onClick={selectDaily} active={da_active}>
+                  on
                 </Button>
               </Button.Group>
               <div>
@@ -500,6 +546,7 @@ const Graph = () => {
             items={sortedItems}
             propTitle={uisum + ' ' + uiprop_s}
             pie_data={pieData}
+            selectCountry={selectCountry}
           />
         )}
         {bottomTab === 'purpose' && <AboutTab />}

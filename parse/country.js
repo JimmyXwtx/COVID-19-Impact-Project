@@ -73,6 +73,10 @@ function rename_item(item) {
         console.log(item);
       }
     }
+  } else {
+    // if (!item.Province_State) {
+    //   item.Province_State = 'Other';
+    // }
   }
 }
 

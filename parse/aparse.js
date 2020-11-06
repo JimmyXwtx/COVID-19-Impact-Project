@@ -141,10 +141,14 @@ function process_cvs(cvs_inpath, file_date) {
   for (let country in country_dict) {
     const ent = country_dict[country];
     // console.log('file_date', file_date, 'country', country, 'ent', ent);
-    const ncountry = country.replace(/ /g, '_').replace(/,/g, '');
+    const ncountry = fileNameFromCountryName(country);
     let cpath = path.resolve(store_dir, 'cstates', ncountry);
     write_daily(ent, file_date, cpath);
   }
+}
+
+function fileNameFromCountryName(country) {
+  return country.replace(/ /g, '_').replace(/,/g, '');
 }
 
 function write_daily(sums_country, file_date, path_root) {
