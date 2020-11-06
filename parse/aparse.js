@@ -55,10 +55,9 @@ function process_summary() {
   const npath = path.resolve(store_dir, 'cstates');
   const dfiles = fs.readdirSync(npath);
   for (let dname of dfiles) {
+    if (dname.substr(0, 1) === '.') continue;
     const fpath = path.resolve(npath, dname);
-
     // console.log('process_summary fpath', fpath);
-
     write_summary(fpath, 'Province_State');
   }
 
