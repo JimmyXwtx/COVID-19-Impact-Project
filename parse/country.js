@@ -75,7 +75,8 @@ function rename_item(item) {
     }
   } else if (item.Country_Region == 'France') {
     if (!item.Province_State) {
-      item.Province_State = item.Country_Region;
+      // console.log('France', item);
+      item.Province_State = 'France Mainland';
     }
   }
 }
