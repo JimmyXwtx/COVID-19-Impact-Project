@@ -48,7 +48,50 @@ function rename_item(item) {
   }
   const cname = Country_Region_renames[item.Country_Region];
   if (cname) item.Country_Region = cname;
+  if (item.Country_Region == 'United States') {
+    if (!item.Province_State) {
+      if (item['Country/Region'] === 'Puerto Rico') {
+        item.Province_State = 'Puerto Rico';
+      } else {
+        console.log('rename_item !!@ not Province_State', item);
+        return;
+      }
+    }
+    const stateFix = stateFixes[item.Province_State];
+    if (stateFix) {
+      item.Province_State = stateFix;
+      return;
+    }
+    const parts = item.Province_State.split(',');
+    if (parts.length >= 2) {
+      const stateCode = parts[1].trim();
+      const stateName = stateCodeMaps[stateCode];
+      if (stateName) {
+        item.Province_State = stateName;
+      } else {
+        console.log('rename_item !!@ item.Province_State', item.Province_State);
+        console.log(item);
+      }
+    }
+  }
 }
+
+const stateFixes = {
+  'Washington, D.C.': 'District Of Columbia',
+  'United States Virgin Islands': 'Virgin Islands',
+  'Unassigned Location (From Diamond Princess)': '',
+  'Virgin Islands, U.S.': 'Virgin Islands',
+  'Omaha, NE (From Diamond Princess)': 'Nebraska',
+  'Travis, CA (From Diamond Princess)': 'California',
+  'Lackland, TX (From Diamond Princess)': 'Texas',
+};
+
+// ??     "Province_State": "Wuhan Evacuee",
+// "first_date": {
+//   "Cases": "2020-03-22"
+
+// // https://gist.github.com/mshafrir/2646763#file-states_hash-json
+const stateCodeMaps = require('./states_hash.json');
 
 // ----------------------------------------------------------------------------
 // -- NOT USED --

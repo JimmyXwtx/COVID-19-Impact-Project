@@ -1,34 +1,23 @@
 [
   {
-    "Province_State": "King County, WA",
+    "Province_State": "Washington",
     "totals": {
-      "Cases": 58,
-      "Deaths": 12
+      "Cases": 83,
+      "Deaths": 13
     },
     "daily": {
-      "Cases": 7,
+      "Cases": 13,
       "Deaths": 2
     }
   },
   {
-    "Province_State": "Snohomish County, WA",
+    "Province_State": "California",
     "totals": {
-      "Cases": 19,
+      "Cases": 59,
       "Deaths": 1
     },
     "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Placer County, CA",
-    "totals": {
-      "Cases": 5,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 3,
+      "Cases": 8,
       "Deaths": 0
     }
   },
@@ -44,51 +33,18 @@
     }
   },
   {
-    "Province_State": "Santa Clara, CA",
+    "Province_State": "New York",
     "totals": {
-      "Cases": 20,
+      "Cases": 36,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Westchester County, NY",
-    "totals": {
-      "Cases": 19,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "New York County, NY",
-    "totals": {
-      "Cases": 16,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 16,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Los Angeles, CA",
-    "totals": {
       "Cases": 13,
       "Deaths": 0
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
     }
   },
   {
-    "Province_State": "Cook County, IL",
+    "Province_State": "Illinois",
     "totals": {
       "Cases": 5,
       "Deaths": 0
@@ -99,29 +55,95 @@
     }
   },
   {
-    "Province_State": "Unassigned Location, WA",
+    "Province_State": "Texas",
     "totals": {
       "Cases": 5,
       "Deaths": 0
     },
     "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Maryland",
+    "totals": {
+      "Cases": 3,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Massachusetts",
+    "totals": {
+      "Cases": 7,
+      "Deaths": 0
+    },
+    "daily": {
       "Cases": 5,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Contra Costa County, CA",
+    "Province_State": "New Jersey",
+    "totals": {
+      "Cases": 2,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Colorado",
+    "totals": {
+      "Cases": 4,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 4,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Georgia",
     "totals": {
       "Cases": 3,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 2,
+      "Cases": 1,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Harris County, TX",
+    "Province_State": "New Hampshire",
+    "totals": {
+      "Cases": 2,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Florida",
+    "totals": {
+      "Cases": 4,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Arizona",
     "totals": {
       "Cases": 3,
       "Deaths": 0
@@ -132,20 +154,9 @@
     }
   },
   {
-    "Province_State": "Montgomery County, MD",
+    "Province_State": "Rhode Island",
     "totals": {
-      "Cases": 3,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Orange County, CA",
-    "totals": {
-      "Cases": 3,
+      "Cases": 2,
       "Deaths": 0
     },
     "daily": {
@@ -154,7 +165,7 @@
     }
   },
   {
-    "Province_State": "San Diego County, CA",
+    "Province_State": "Oregon",
     "totals": {
       "Cases": 3,
       "Deaths": 0
@@ -165,18 +176,7 @@
     }
   },
   {
-    "Province_State": "Suffolk County, MA",
-    "totals": {
-      "Cases": 3,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": " Norfolk County, MA",
+    "Province_State": "North Carolina",
     "totals": {
       "Cases": 2,
       "Deaths": 0
@@ -187,62 +187,7 @@
     }
   },
   {
-    "Province_State": "Bergen County, NJ",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Denver County, CO",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Fulton County, GA",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Grafton County, NH",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Hillsborough, FL",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Maricopa County, AZ",
+    "Province_State": "Nevada",
     "totals": {
       "Cases": 2,
       "Deaths": 0
@@ -253,62 +198,7 @@
     }
   },
   {
-    "Province_State": "Providence, RI",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sacramento County, CA",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "San Benito, CA",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "San Francisco County, CA",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "San Mateo, CA",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Summit County, CO",
+    "Province_State": "Pennsylvania",
     "totals": {
       "Cases": 2,
       "Deaths": 0
@@ -319,29 +209,7 @@
     }
   },
   {
-    "Province_State": "Washington County, OR",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Berkeley, CA",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Chatham County, NC",
+    "Province_State": "Nebraska",
     "totals": {
       "Cases": 1,
       "Deaths": 0
@@ -352,7 +220,18 @@
     }
   },
   {
-    "Province_State": "Clark County, NV",
+    "Province_State": "Kentucky",
+    "totals": {
+      "Cases": 1,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Wisconsin",
     "totals": {
       "Cases": 1,
       "Deaths": 0
@@ -363,7 +242,7 @@
     }
   },
   {
-    "Province_State": "Delaware County, PA",
+    "Province_State": "Indiana",
     "totals": {
       "Cases": 1,
       "Deaths": 0
@@ -374,7 +253,7 @@
     }
   },
   {
-    "Province_State": "Douglas County, NE",
+    "Province_State": "Minnesota",
     "totals": {
       "Cases": 1,
       "Deaths": 0
@@ -385,244 +264,13 @@
     }
   },
   {
-    "Province_State": "Fayette County, KY",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Floyd County, GA",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Fort Bend County, TX",
+    "Province_State": "Tennessee",
     "totals": {
       "Cases": 1,
       "Deaths": 0
     },
     "daily": {
       "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Grant County, WA",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Humboldt County, CA",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Madison, WI",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Marion County, IN",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Middlesex County, MA",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Nassau County, NY",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Norwell County, MA",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ramsey County, MN",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "San Antonio, TX",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Santa Rosa County, FL",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sarasota, FL",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sonoma County, CA",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tempe, AZ",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Umatilla, OR",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Wake County, NC",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Washoe County, NV",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Wayne County, PA",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Williamson County, TN",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Yolo County, CA",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
       "Deaths": 0
     }
   },
