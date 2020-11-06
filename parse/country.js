@@ -104,7 +104,6 @@ const Country_Region_to_country_name = {
 // './COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/03-21-2020.csv';
 // './COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/01-22-2020.csv';
 
-
 function find_population(item, silent) {
   let cname = Country_Region_to_country_name[item.Country_Region];
   if (!cname) cname = item.Country_Region;

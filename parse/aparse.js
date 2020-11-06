@@ -51,7 +51,7 @@ function process_dir() {
 function process_summary() {
   console.log('Parsed fromDate=' + fromDate + ' toDate=' + toDate);
   const parse_time = Date.now() - start_time;
-  console.log('parse sec', parse_time/1000);
+  console.log('parse sec', parse_time / 1000);
 
   write_summary(store_dir);
 
@@ -59,14 +59,14 @@ function process_summary() {
   const dfiles = fs.readdirSync(npath);
   for (let dname of dfiles) {
     const fpath = path.resolve(npath, dname);
-    
+
     // console.log('process_summary fpath', fpath);
 
     write_summary(fpath);
   }
- 
+
   const lapse_time = Date.now() - start_time;
-  console.log('lapse sec', lapse_time/1000);
+  console.log('lapse sec', lapse_time / 1000);
 }
 
 function process_cvs(cvs_inpath, file_date) {
@@ -105,12 +105,12 @@ function process_cvs(cvs_inpath, file_date) {
       sums_country[Country_Region] = ent;
       // console.log('process_item silent', silent);
       // stats.population = find_population(item, silent);
-    } 
+    }
     calc(ent.totals, item);
     calc(sums_total, item);
 
     let states = country_dict[Country_Region];
-    if (! states) {
+    if (!states) {
       states = {};
       country_dict[Country_Region] = states;
     }
@@ -118,17 +118,18 @@ function process_cvs(cvs_inpath, file_date) {
     // if (! Province_State) Province_State = Country_Region;
     // console.log('item', item);
     // console.log('Province_State', Province_State);
-    
-    if (Province_State 
-      && Province_State !== 'Recovered' 
-      && Province_State !== Country_Region ) 
-      {
+
+    if (
+      Province_State &&
+      Province_State !== 'Recovered' &&
+      Province_State !== Country_Region
+    ) {
       ent = states[Province_State];
-      if (! ent) {
+      if (!ent) {
         const totals = Object.assign({}, stats_init);
         ent = { Province_State, totals };
         states[Province_State] = ent;
-      }  
+      }
       calc(ent.totals, item);
     }
   }
@@ -139,14 +140,14 @@ function process_cvs(cvs_inpath, file_date) {
       sums[prop] += parseInt(val);
     }
   }
-  write_daily(sums_country, file_date, store_dir)
+  write_daily(sums_country, file_date, store_dir);
   for (let country in country_dict) {
     const ent = country_dict[country];
     // console.log('file_date', file_date, 'country', country, 'ent', ent);
-    const ncountry = country.replace(/ /g, '_').replace(/,/g,'');
+    const ncountry = country.replace(/ /g, '_').replace(/,/g, '');
     let cpath = path.resolve(store_dir, 'cstate', ncountry);
     // fs.ensureDirSync(cpath);
-    write_daily(ent, file_date, cpath)
+    write_daily(ent, file_date, cpath);
   }
   // const sums = Object.values(sums_country);
   // sums.sort((item1, item2) => item2.totals.Deaths - item1.totals.Deaths);
@@ -164,7 +165,7 @@ function write_daily(sums_country, file_date, path_root) {
     // console.log('write_daily empty', file_date, path_root);
     return;
   }
-  let cpath = path.resolve(path_root, 'cdaily')
+  let cpath = path.resolve(path_root, 'cdaily');
   fs.ensureDirSync(cpath);
   const fname = file_date + '.json';
   cpath = path.resolve(cpath, fname);
@@ -187,7 +188,7 @@ function write_summary(root_path) {
   const dates = [];
   const npath = path.resolve(root_path, 'cdaily');
   const summaryDict = {};
-  if (! fs.existsSync(npath)) {
+  if (!fs.existsSync(npath)) {
     console.log('write_summary missing npath', npath);
     return;
   }

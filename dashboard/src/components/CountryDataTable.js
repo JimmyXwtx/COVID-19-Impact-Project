@@ -1,11 +1,11 @@
-import React from 'react';
-import NumberFormat from 'react-number-format';
-import slug from 'slug';
-import styled from 'styled-components';
 import FlagIcon from '../components/FlagIcon';
+import NumberFormat from 'react-number-format';
+import React from 'react';
+import StyledCountryDataTable from '../styles/StyledCountryDataTable';
 import { colorfor } from '../graph/colors';
 import getCountryCode from '../js/getCountryCode';
-import StyledCountryDataTable from '../styles/StyledCountryDataTable';
+import slug from 'slug';
+import styled from 'styled-components';
 
 function percentFormat(num) {
   // num = Math.round((val / stats_total) * 1000) / 10;
@@ -34,7 +34,12 @@ const Rows = (props) => {
 
     return (
       <tr key={slugKey}>
-        <td className="region">
+        <td
+          className="region"
+          onClick={() => {
+            console.log('CountryDataTable index', index, 'country', country);
+          }}
+        >
           {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
           {Country_Region}
         </td>
