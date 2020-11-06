@@ -207,8 +207,9 @@ function write_summary(root_path, key) {
         cdict[kvalue] = citem;
         let ent = summaryDict[kvalue];
         if (!ent) {
-          ent = { first_date: {} };
+          ent = {};
           ent[key] = kvalue;
+          ent.first_date = {};
           summaryDict[kvalue] = ent;
         }
         let { Cases, Deaths } = citem.totals;
