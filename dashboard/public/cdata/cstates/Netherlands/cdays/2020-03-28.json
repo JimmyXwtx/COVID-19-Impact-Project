@@ -1,16 +1,5 @@
 [
   {
-    "Province_State": "Curacao",
-    "totals": {
-      "Cases": 8,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Aruba",
     "totals": {
       "Cases": 46,
@@ -18,6 +7,17 @@
     },
     "daily": {
       "Cases": 13,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Curacao",
+    "totals": {
+      "Cases": 8,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },

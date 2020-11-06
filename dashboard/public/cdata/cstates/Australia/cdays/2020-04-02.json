@@ -1,60 +1,5 @@
 [
   {
-    "Province_State": "New South Wales",
-    "totals": {
-      "Cases": 2298,
-      "Deaths": 10
-    },
-    "daily": {
-      "Cases": 116,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Victoria",
-    "totals": {
-      "Cases": 1036,
-      "Deaths": 5
-    },
-    "daily": {
-      "Cases": 68,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Queensland",
-    "totals": {
-      "Cases": 835,
-      "Deaths": 4
-    },
-    "daily": {
-      "Cases": 54,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Tasmania",
-    "totals": {
-      "Cases": 72,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Western Australia",
-    "totals": {
-      "Cases": 400,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 8,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Australian Capital Territory",
     "totals": {
       "Cases": 87,
@@ -63,6 +8,17 @@
     "daily": {
       "Cases": 3,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "New South Wales",
+    "totals": {
+      "Cases": 2298,
+      "Deaths": 10
+    },
+    "daily": {
+      "Cases": 116,
+      "Deaths": 1
     }
   },
   {
@@ -77,6 +33,17 @@
     }
   },
   {
+    "Province_State": "Queensland",
+    "totals": {
+      "Cases": 835,
+      "Deaths": 4
+    },
+    "daily": {
+      "Cases": 54,
+      "Deaths": 2
+    }
+  },
+  {
     "Province_State": "South Australia",
     "totals": {
       "Cases": 367,
@@ -84,6 +51,39 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tasmania",
+    "totals": {
+      "Cases": 72,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Victoria",
+    "totals": {
+      "Cases": 1036,
+      "Deaths": 5
+    },
+    "daily": {
+      "Cases": 68,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Western Australia",
+    "totals": {
+      "Cases": 400,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 8,
       "Deaths": 0
     }
   }

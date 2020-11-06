@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "New South Wales",
-    "totals": {
-      "Cases": 818,
-      "Deaths": 7
-    },
-    "daily": {
-      "Cases": 149,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Western Australia",
-    "totals": {
-      "Cases": 175,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 35,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Australian Capital Territory",
     "totals": {
       "Cases": 39,
@@ -30,6 +8,17 @@
     "daily": {
       "Cases": 7,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "New South Wales",
+    "totals": {
+      "Cases": 818,
+      "Deaths": 7
+    },
+    "daily": {
+      "Cases": 149,
+      "Deaths": 1
     }
   },
   {
@@ -84,6 +73,17 @@
     },
     "daily": {
       "Cases": 56,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Western Australia",
+    "totals": {
+      "Cases": 175,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 35,
       "Deaths": 0
     }
   }

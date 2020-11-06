@@ -1,45 +1,12 @@
 [
   {
-    "Province_State": "Hubei",
+    "Province_State": "Anhui",
     "totals": {
-      "Cases": 67773,
-      "Deaths": 3046
+      "Cases": 990,
+      "Deaths": 6
     },
     "daily": {
-      "Cases": 13,
-      "Deaths": 22
-    }
-  },
-  {
-    "Province_State": "Henan",
-    "totals": {
-      "Cases": 1273,
-      "Deaths": 22
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Heilongjiang",
-    "totals": {
-      "Cases": 482,
-      "Deaths": 13
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Guangdong",
-    "totals": {
-      "Cases": 1356,
-      "Deaths": 8
-    },
-    "daily": {
-      "Cases": 3,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -55,28 +22,6 @@
     }
   },
   {
-    "Province_State": "Anhui",
-    "totals": {
-      "Cases": 990,
-      "Deaths": 6
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Shandong",
-    "totals": {
-      "Cases": 760,
-      "Deaths": 6
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Chongqing",
     "totals": {
       "Cases": 576,
@@ -88,10 +33,10 @@
     }
   },
   {
-    "Province_State": "Hebei",
+    "Province_State": "Fujian",
     "totals": {
-      "Cases": 318,
-      "Deaths": 6
+      "Cases": 296,
+      "Deaths": 1
     },
     "daily": {
       "Cases": 0,
@@ -99,79 +44,24 @@
     }
   },
   {
-    "Province_State": "Hainan",
+    "Province_State": "Gansu",
     "totals": {
-      "Cases": 168,
-      "Deaths": 6
+      "Cases": 127,
+      "Deaths": 2
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 2,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Hunan",
+    "Province_State": "Guangdong",
     "totals": {
-      "Cases": 1018,
-      "Deaths": 4
+      "Cases": 1356,
+      "Deaths": 8
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sichuan",
-    "totals": {
-      "Cases": 539,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Shanghai",
-    "totals": {
-      "Cases": 344,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tianjin",
-    "totals": {
-      "Cases": 136,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Hong Kong",
-    "totals": {
-      "Cases": 126,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 126,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Xinjiang",
-    "totals": {
-      "Cases": 76,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 0,
+      "Cases": 3,
       "Deaths": 0
     }
   },
@@ -179,17 +69,6 @@
     "Province_State": "Guangxi",
     "totals": {
       "Cases": 252,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Yunnan",
-    "totals": {
-      "Cases": 174,
       "Deaths": 2
     },
     "daily": {
@@ -209,21 +88,10 @@
     }
   },
   {
-    "Province_State": "Gansu",
+    "Province_State": "Hainan",
     "totals": {
-      "Cases": 127,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Zhejiang",
-    "totals": {
-      "Cases": 1215,
-      "Deaths": 1
+      "Cases": 168,
+      "Deaths": 6
     },
     "daily": {
       "Cases": 0,
@@ -231,10 +99,10 @@
     }
   },
   {
-    "Province_State": "Jiangxi",
+    "Province_State": "Hebei",
     "totals": {
-      "Cases": 935,
-      "Deaths": 1
+      "Cases": 318,
+      "Deaths": 6
     },
     "daily": {
       "Cases": 0,
@@ -242,43 +110,54 @@
     }
   },
   {
-    "Province_State": "Fujian",
+    "Province_State": "Heilongjiang",
     "totals": {
-      "Cases": 296,
-      "Deaths": 1
+      "Cases": 482,
+      "Deaths": 13
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 1,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Shaanxi",
+    "Province_State": "Henan",
     "totals": {
-      "Cases": 245,
-      "Deaths": 1
+      "Cases": 1273,
+      "Deaths": 22
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 1,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Liaoning",
+    "Province_State": "Hong Kong",
     "totals": {
-      "Cases": 125,
-      "Deaths": 1
+      "Cases": 126,
+      "Deaths": 3
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
+      "Cases": 126,
+      "Deaths": 3
     }
   },
   {
-    "Province_State": "Jilin",
+    "Province_State": "Hubei",
     "totals": {
-      "Cases": 93,
-      "Deaths": 1
+      "Cases": 67773,
+      "Deaths": 3046
+    },
+    "daily": {
+      "Cases": 13,
+      "Deaths": 22
+    }
+  },
+  {
+    "Province_State": "Hunan",
+    "totals": {
+      "Cases": 1018,
+      "Deaths": 4
     },
     "daily": {
       "Cases": 0,
@@ -308,13 +187,46 @@
     }
   },
   {
-    "Province_State": "Shanxi",
+    "Province_State": "Jiangxi",
     "totals": {
-      "Cases": 133,
-      "Deaths": 0
+      "Cases": 935,
+      "Deaths": 1
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Jilin",
+    "totals": {
+      "Cases": 93,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Liaoning",
+    "totals": {
+      "Cases": 125,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Macau",
+    "totals": {
+      "Cases": 10,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 10,
       "Deaths": 0
     }
   },
@@ -341,13 +253,68 @@
     }
   },
   {
-    "Province_State": "Macau",
+    "Province_State": "Shaanxi",
     "totals": {
-      "Cases": 10,
+      "Cases": 245,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Shandong",
+    "totals": {
+      "Cases": 760,
+      "Deaths": 6
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Shanghai",
+    "totals": {
+      "Cases": 344,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Shanxi",
+    "totals": {
+      "Cases": 133,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 10,
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sichuan",
+    "totals": {
+      "Cases": 539,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tianjin",
+    "totals": {
+      "Cases": 136,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -356,6 +323,39 @@
     "totals": {
       "Cases": 1,
       "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Xinjiang",
+    "totals": {
+      "Cases": 76,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Yunnan",
+    "totals": {
+      "Cases": 174,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Zhejiang",
+    "totals": {
+      "Cases": 1215,
+      "Deaths": 1
     },
     "daily": {
       "Cases": 0,

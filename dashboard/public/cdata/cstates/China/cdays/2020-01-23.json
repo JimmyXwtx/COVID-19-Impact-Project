@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Hubei",
-    "totals": {
-      "Cases": 444,
-      "Deaths": 17
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Hebei",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 1
-    }
-  },
-  {
     "Province_State": "Anhui",
     "totals": {
       "Cases": 9,
@@ -121,6 +99,17 @@
     }
   },
   {
+    "Province_State": "Hebei",
+    "totals": {
+      "Cases": 1,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 1
+    }
+  },
+  {
     "Province_State": "Heilongjiang",
     "totals": {
       "Cases": 2,
@@ -150,6 +139,17 @@
     },
     "daily": {
       "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Hubei",
+    "totals": {
+      "Cases": 444,
+      "Deaths": 17
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },

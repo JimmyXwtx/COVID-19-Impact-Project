@@ -1,38 +1,5 @@
 [
   {
-    "Province_State": "Quebec",
-    "totals": {
-      "Cases": 47420,
-      "Deaths": 3985
-    },
-    "daily": {
-      "Cases": 573,
-      "Deaths": 44
-    }
-  },
-  {
-    "Province_State": "Ontario",
-    "totals": {
-      "Cases": 26897,
-      "Deaths": 2181
-    },
-    "daily": {
-      "Cases": 337,
-      "Deaths": 24
-    }
-  },
-  {
-    "Province_State": "British Columbia",
-    "totals": {
-      "Cases": 2517,
-      "Deaths": 157
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Alberta",
     "totals": {
       "Cases": 6860,
@@ -44,43 +11,10 @@
     }
   },
   {
-    "Province_State": "Nova Scotia",
+    "Province_State": "British Columbia",
     "totals": {
-      "Cases": 1050,
-      "Deaths": 58
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Manitoba",
-    "totals": {
-      "Cases": 292,
-      "Deaths": 7
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Saskatchewan",
-    "totals": {
-      "Cases": 632,
-      "Deaths": 7
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Newfoundland and Labrador",
-    "totals": {
-      "Cases": 260,
-      "Deaths": 3
+      "Cases": 2517,
+      "Deaths": 157
     },
     "daily": {
       "Cases": 0,
@@ -110,10 +44,32 @@
     }
   },
   {
+    "Province_State": "Manitoba",
+    "totals": {
+      "Cases": 292,
+      "Deaths": 7
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "New Brunswick",
     "totals": {
       "Cases": 121,
       "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Newfoundland and Labrador",
+    "totals": {
+      "Cases": 260,
+      "Deaths": 3
     },
     "daily": {
       "Cases": 0,
@@ -132,6 +88,28 @@
     }
   },
   {
+    "Province_State": "Nova Scotia",
+    "totals": {
+      "Cases": 1050,
+      "Deaths": 58
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ontario",
+    "totals": {
+      "Cases": 26897,
+      "Deaths": 2181
+    },
+    "daily": {
+      "Cases": 337,
+      "Deaths": 24
+    }
+  },
+  {
     "Province_State": "Prince Edward Island",
     "totals": {
       "Cases": 27,
@@ -139,6 +117,28 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Quebec",
+    "totals": {
+      "Cases": 47420,
+      "Deaths": 3985
+    },
+    "daily": {
+      "Cases": 573,
+      "Deaths": 44
+    }
+  },
+  {
+    "Province_State": "Saskatchewan",
+    "totals": {
+      "Cases": 632,
+      "Deaths": 7
+    },
+    "daily": {
+      "Cases": 2,
       "Deaths": 0
     }
   },

@@ -1,46 +1,13 @@
 [
   {
-    "Province_State": "Ciudad de Mexico",
+    "Province_State": "Aguascalientes",
     "totals": {
-      "Cases": 157255,
-      "Deaths": 14920
+      "Cases": 9299,
+      "Deaths": 834
     },
     "daily": {
-      "Cases": 1356,
-      "Deaths": 83
-    }
-  },
-  {
-    "Province_State": "Veracruz",
-    "totals": {
-      "Cases": 36746,
-      "Deaths": 4734
-    },
-    "daily": {
-      "Cases": 37,
-      "Deaths": 20
-    }
-  },
-  {
-    "Province_State": "Puebla",
-    "totals": {
-      "Cases": 35047,
-      "Deaths": 4688
-    },
-    "daily": {
-      "Cases": 127,
-      "Deaths": 35
-    }
-  },
-  {
-    "Province_State": "Jalisco",
-    "totals": {
-      "Cases": 33339,
-      "Deaths": 3967
-    },
-    "daily": {
-      "Cases": 175,
-      "Deaths": 46
+      "Cases": 178,
+      "Deaths": 22
     }
   },
   {
@@ -55,25 +22,91 @@
     }
   },
   {
-    "Province_State": "Nuevo Leon",
+    "Province_State": "Baja California Sur",
     "totals": {
-      "Cases": 51785,
-      "Deaths": 3795
+      "Cases": 12300,
+      "Deaths": 590
     },
     "daily": {
-      "Cases": 462,
-      "Deaths": 56
+      "Cases": 43,
+      "Deaths": 6
     }
   },
   {
-    "Province_State": "Sinaloa",
+    "Province_State": "Campeche",
     "totals": {
-      "Cases": 21591,
-      "Deaths": 3556
+      "Cases": 6437,
+      "Deaths": 859
     },
     "daily": {
-      "Cases": 127,
-      "Deaths": 14
+      "Cases": 9,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Chiapas",
+    "totals": {
+      "Cases": 7498,
+      "Deaths": 1067
+    },
+    "daily": {
+      "Cases": 18,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Chihuahua",
+    "totals": {
+      "Cases": 16928,
+      "Deaths": 1805
+    },
+    "daily": {
+      "Cases": 521,
+      "Deaths": 33
+    }
+  },
+  {
+    "Province_State": "Ciudad de Mexico",
+    "totals": {
+      "Cases": 157255,
+      "Deaths": 14920
+    },
+    "daily": {
+      "Cases": 1356,
+      "Deaths": 83
+    }
+  },
+  {
+    "Province_State": "Coahuila",
+    "totals": {
+      "Cases": 32490,
+      "Deaths": 2299
+    },
+    "daily": {
+      "Cases": 193,
+      "Deaths": 51
+    }
+  },
+  {
+    "Province_State": "Colima",
+    "totals": {
+      "Cases": 6451,
+      "Deaths": 728
+    },
+    "daily": {
+      "Cases": 34,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Durango",
+    "totals": {
+      "Cases": 13034,
+      "Deaths": 762
+    },
+    "daily": {
+      "Cases": 362,
+      "Deaths": 17
     }
   },
   {
@@ -85,6 +118,149 @@
     "daily": {
       "Cases": 435,
       "Deaths": 49
+    }
+  },
+  {
+    "Province_State": "Guerrero",
+    "totals": {
+      "Cases": 21960,
+      "Deaths": 2127
+    },
+    "daily": {
+      "Cases": 43,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Hidalgo",
+    "totals": {
+      "Cases": 15358,
+      "Deaths": 2237
+    },
+    "daily": {
+      "Cases": 98,
+      "Deaths": 14
+    }
+  },
+  {
+    "Province_State": "Jalisco",
+    "totals": {
+      "Cases": 33339,
+      "Deaths": 3967
+    },
+    "daily": {
+      "Cases": 175,
+      "Deaths": 46
+    }
+  },
+  {
+    "Province_State": "Michoacan",
+    "totals": {
+      "Cases": 24509,
+      "Deaths": 1956
+    },
+    "daily": {
+      "Cases": 72,
+      "Deaths": 17
+    }
+  },
+  {
+    "Province_State": "Morelos",
+    "totals": {
+      "Cases": 6778,
+      "Deaths": 1181
+    },
+    "daily": {
+      "Cases": 19,
+      "Deaths": 4
+    }
+  },
+  {
+    "Province_State": "Nayarit",
+    "totals": {
+      "Cases": 6655,
+      "Deaths": 849
+    },
+    "daily": {
+      "Cases": 8,
+      "Deaths": 9
+    }
+  },
+  {
+    "Province_State": "Nuevo Leon",
+    "totals": {
+      "Cases": 51785,
+      "Deaths": 3795
+    },
+    "daily": {
+      "Cases": 462,
+      "Deaths": 56
+    }
+  },
+  {
+    "Province_State": "Oaxaca",
+    "totals": {
+      "Cases": 20720,
+      "Deaths": 1624
+    },
+    "daily": {
+      "Cases": 133,
+      "Deaths": 7
+    }
+  },
+  {
+    "Province_State": "Puebla",
+    "totals": {
+      "Cases": 35047,
+      "Deaths": 4688
+    },
+    "daily": {
+      "Cases": 127,
+      "Deaths": 35
+    }
+  },
+  {
+    "Province_State": "Queretaro",
+    "totals": {
+      "Cases": 13135,
+      "Deaths": 1173
+    },
+    "daily": {
+      "Cases": 209,
+      "Deaths": 7
+    }
+  },
+  {
+    "Province_State": "Quintana Roo",
+    "totals": {
+      "Cases": 13339,
+      "Deaths": 1817
+    },
+    "daily": {
+      "Cases": 32,
+      "Deaths": 7
+    }
+  },
+  {
+    "Province_State": "San Luis Potosi",
+    "totals": {
+      "Cases": 28033,
+      "Deaths": 1944
+    },
+    "daily": {
+      "Cases": 206,
+      "Deaths": 16
+    }
+  },
+  {
+    "Province_State": "Sinaloa",
+    "totals": {
+      "Cases": 21591,
+      "Deaths": 3556
+    },
+    "daily": {
+      "Cases": 127,
+      "Deaths": 14
     }
   },
   {
@@ -121,80 +297,25 @@
     }
   },
   {
-    "Province_State": "Coahuila",
+    "Province_State": "Tlaxcala",
     "totals": {
-      "Cases": 32490,
-      "Deaths": 2299
+      "Cases": 8371,
+      "Deaths": 1132
     },
     "daily": {
-      "Cases": 193,
-      "Deaths": 51
+      "Cases": 10,
+      "Deaths": 10
     }
   },
   {
-    "Province_State": "Hidalgo",
+    "Province_State": "Veracruz",
     "totals": {
-      "Cases": 15358,
-      "Deaths": 2237
+      "Cases": 36746,
+      "Deaths": 4734
     },
     "daily": {
-      "Cases": 98,
-      "Deaths": 14
-    }
-  },
-  {
-    "Province_State": "Guerrero",
-    "totals": {
-      "Cases": 21960,
-      "Deaths": 2127
-    },
-    "daily": {
-      "Cases": 43,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Michoacan",
-    "totals": {
-      "Cases": 24509,
-      "Deaths": 1956
-    },
-    "daily": {
-      "Cases": 72,
-      "Deaths": 17
-    }
-  },
-  {
-    "Province_State": "San Luis Potosi",
-    "totals": {
-      "Cases": 28033,
-      "Deaths": 1944
-    },
-    "daily": {
-      "Cases": 206,
-      "Deaths": 16
-    }
-  },
-  {
-    "Province_State": "Quintana Roo",
-    "totals": {
-      "Cases": 13339,
-      "Deaths": 1817
-    },
-    "daily": {
-      "Cases": 32,
-      "Deaths": 7
-    }
-  },
-  {
-    "Province_State": "Chihuahua",
-    "totals": {
-      "Cases": 16928,
-      "Deaths": 1805
-    },
-    "daily": {
-      "Cases": 521,
-      "Deaths": 33
+      "Cases": 37,
+      "Deaths": 20
     }
   },
   {
@@ -209,61 +330,6 @@
     }
   },
   {
-    "Province_State": "Oaxaca",
-    "totals": {
-      "Cases": 20720,
-      "Deaths": 1624
-    },
-    "daily": {
-      "Cases": 133,
-      "Deaths": 7
-    }
-  },
-  {
-    "Province_State": "Morelos",
-    "totals": {
-      "Cases": 6778,
-      "Deaths": 1181
-    },
-    "daily": {
-      "Cases": 19,
-      "Deaths": 4
-    }
-  },
-  {
-    "Province_State": "Queretaro",
-    "totals": {
-      "Cases": 13135,
-      "Deaths": 1173
-    },
-    "daily": {
-      "Cases": 209,
-      "Deaths": 7
-    }
-  },
-  {
-    "Province_State": "Tlaxcala",
-    "totals": {
-      "Cases": 8371,
-      "Deaths": 1132
-    },
-    "daily": {
-      "Cases": 10,
-      "Deaths": 10
-    }
-  },
-  {
-    "Province_State": "Chiapas",
-    "totals": {
-      "Cases": 7498,
-      "Deaths": 1067
-    },
-    "daily": {
-      "Cases": 18,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Zacatecas",
     "totals": {
       "Cases": 10526,
@@ -272,72 +338,6 @@
     "daily": {
       "Cases": 105,
       "Deaths": 12
-    }
-  },
-  {
-    "Province_State": "Campeche",
-    "totals": {
-      "Cases": 6437,
-      "Deaths": 859
-    },
-    "daily": {
-      "Cases": 9,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Nayarit",
-    "totals": {
-      "Cases": 6655,
-      "Deaths": 849
-    },
-    "daily": {
-      "Cases": 8,
-      "Deaths": 9
-    }
-  },
-  {
-    "Province_State": "Aguascalientes",
-    "totals": {
-      "Cases": 9299,
-      "Deaths": 834
-    },
-    "daily": {
-      "Cases": 178,
-      "Deaths": 22
-    }
-  },
-  {
-    "Province_State": "Durango",
-    "totals": {
-      "Cases": 13034,
-      "Deaths": 762
-    },
-    "daily": {
-      "Cases": 362,
-      "Deaths": 17
-    }
-  },
-  {
-    "Province_State": "Colima",
-    "totals": {
-      "Cases": 6451,
-      "Deaths": 728
-    },
-    "daily": {
-      "Cases": 34,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Baja California Sur",
-    "totals": {
-      "Cases": 12300,
-      "Deaths": 590
-    },
-    "daily": {
-      "Cases": 43,
-      "Deaths": 6
     }
   }
 ]

@@ -1,23 +1,45 @@
 [
   {
-    "Province_State": "Sindh",
+    "Province_State": "Azad Jammu and Kashmir",
     "totals": {
-      "Cases": 125632,
-      "Deaths": 2313
+      "Cases": 2179,
+      "Deaths": 60
     },
     "daily": {
-      "Cases": 343,
-      "Deaths": 6
+      "Cases": 12,
+      "Deaths": 1
     }
   },
   {
-    "Province_State": "Punjab",
+    "Province_State": "Balochistan",
     "totals": {
-      "Cases": 95203,
-      "Deaths": 2180
+      "Cases": 12144,
+      "Deaths": 138
     },
     "daily": {
-      "Cases": 210,
+      "Cases": 82,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Gilgit-Baltistan",
+    "totals": {
+      "Cases": 2452,
+      "Deaths": 60
+    },
+    "daily": {
+      "Cases": 26,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Islamabad",
+    "totals": {
+      "Cases": 15346,
+      "Deaths": 173
+    },
+    "daily": {
+      "Cases": 4,
       "Deaths": 0
     }
   },
@@ -33,47 +55,25 @@
     }
   },
   {
-    "Province_State": "Islamabad",
+    "Province_State": "Punjab",
     "totals": {
-      "Cases": 15346,
-      "Deaths": 173
+      "Cases": 95203,
+      "Deaths": 2180
     },
     "daily": {
-      "Cases": 4,
+      "Cases": 210,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Balochistan",
+    "Province_State": "Sindh",
     "totals": {
-      "Cases": 12144,
-      "Deaths": 138
+      "Cases": 125632,
+      "Deaths": 2313
     },
     "daily": {
-      "Cases": 82,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Azad Jammu and Kashmir",
-    "totals": {
-      "Cases": 2179,
-      "Deaths": 60
-    },
-    "daily": {
-      "Cases": 12,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Gilgit-Baltistan",
-    "totals": {
-      "Cases": 2452,
-      "Deaths": 60
-    },
-    "daily": {
-      "Cases": 26,
-      "Deaths": 0
+      "Cases": 343,
+      "Deaths": 6
     }
   }
 ]

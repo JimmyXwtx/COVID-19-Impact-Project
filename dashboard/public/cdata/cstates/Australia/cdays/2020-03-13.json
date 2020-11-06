@@ -1,5 +1,27 @@
 [
   {
+    "Province_State": "Australian Capital Territory",
+    "totals": {
+      "Cases": 1,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "From Diamond Princess",
+    "totals": {
+      "Cases": 0,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "New South Wales",
     "totals": {
       "Cases": 92,
@@ -11,35 +33,13 @@
     }
   },
   {
-    "Province_State": "Western Australia",
+    "Province_State": "Northern Territory",
     "totals": {
-      "Cases": 14,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 5,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tasmania",
-    "totals": {
-      "Cases": 5,
+      "Cases": 1,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Victoria",
-    "totals": {
-      "Cases": 36,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 15,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -66,35 +66,35 @@
     }
   },
   {
-    "Province_State": "Australian Capital Territory",
+    "Province_State": "Tasmania",
     "totals": {
-      "Cases": 1,
+      "Cases": 5,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 2,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "From Diamond Princess",
+    "Province_State": "Victoria",
     "totals": {
-      "Cases": 0,
+      "Cases": 36,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 15,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Northern Territory",
+    "Province_State": "Western Australia",
     "totals": {
-      "Cases": 1,
-      "Deaths": 0
+      "Cases": 14,
+      "Deaths": 1
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 5,
       "Deaths": 0
     }
   }

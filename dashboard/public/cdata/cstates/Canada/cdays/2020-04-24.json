@@ -1,24 +1,13 @@
 [
   {
-    "Province_State": "Quebec",
+    "Province_State": "Alberta",
     "totals": {
-      "Cases": 22616,
-      "Deaths": 1340
+      "Cases": 4017,
+      "Deaths": 72
     },
     "daily": {
-      "Cases": 778,
-      "Deaths": 97
-    }
-  },
-  {
-    "Province_State": "Ontario",
-    "totals": {
-      "Cases": 14550,
-      "Deaths": 862
-    },
-    "daily": {
-      "Cases": 482,
-      "Deaths": 56
+      "Cases": 297,
+      "Deaths": 4
     }
   },
   {
@@ -33,14 +22,14 @@
     }
   },
   {
-    "Province_State": "Alberta",
+    "Province_State": "Diamond Princess",
     "totals": {
-      "Cases": 4017,
-      "Deaths": 72
+      "Cases": 0,
+      "Deaths": 1
     },
     "daily": {
-      "Cases": 297,
-      "Deaths": 4
+      "Cases": 0,
+      "Deaths": 0
     }
   },
   {
@@ -55,13 +44,13 @@
     }
   },
   {
-    "Province_State": "Saskatchewan",
+    "Province_State": "New Brunswick",
     "totals": {
-      "Cases": 341,
-      "Deaths": 4
+      "Cases": 118,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 10,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -70,28 +59,6 @@
     "totals": {
       "Cases": 256,
       "Deaths": 3
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Diamond Princess",
-    "totals": {
-      "Cases": 0,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "New Brunswick",
-    "totals": {
-      "Cases": 118,
-      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
@@ -110,6 +77,17 @@
     }
   },
   {
+    "Province_State": "Ontario",
+    "totals": {
+      "Cases": 14550,
+      "Deaths": 862
+    },
+    "daily": {
+      "Cases": 482,
+      "Deaths": 56
+    }
+  },
+  {
     "Province_State": "Prince Edward Island",
     "totals": {
       "Cases": 26,
@@ -117,6 +95,28 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Quebec",
+    "totals": {
+      "Cases": 22616,
+      "Deaths": 1340
+    },
+    "daily": {
+      "Cases": 778,
+      "Deaths": 97
+    }
+  },
+  {
+    "Province_State": "Saskatchewan",
+    "totals": {
+      "Cases": 341,
+      "Deaths": 4
+    },
+    "daily": {
+      "Cases": 10,
       "Deaths": 0
     }
   },

@@ -1,24 +1,13 @@
 [
   {
-    "Province_State": "Quebec",
+    "Province_State": "Alberta",
     "totals": {
-      "Cases": 57616,
-      "Deaths": 5657
+      "Cases": 9587,
+      "Deaths": 170
     },
     "daily": {
-      "Cases": 150,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Ontario",
-    "totals": {
-      "Cases": 39553,
-      "Deaths": 2795
-    },
-    "daily": {
-      "Cases": 119,
-      "Deaths": 1
+      "Cases": 368,
+      "Deaths": 3
     }
   },
   {
@@ -33,21 +22,10 @@
     }
   },
   {
-    "Province_State": "Alberta",
+    "Province_State": "Diamond Princess",
     "totals": {
-      "Cases": 9587,
-      "Deaths": 170
-    },
-    "daily": {
-      "Cases": 368,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Nova Scotia",
-    "totals": {
-      "Cases": 1067,
-      "Deaths": 63
+      "Cases": 0,
+      "Deaths": 1
     },
     "daily": {
       "Cases": 0,
@@ -55,13 +33,13 @@
     }
   },
   {
-    "Province_State": "Saskatchewan",
+    "Province_State": "Grand Princess",
     "totals": {
-      "Cases": 962,
-      "Deaths": 15
+      "Cases": 13,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 19,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -77,17 +55,6 @@
     }
   },
   {
-    "Province_State": "Newfoundland and Labrador",
-    "totals": {
-      "Cases": 262,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "New Brunswick",
     "totals": {
       "Cases": 170,
@@ -99,10 +66,10 @@
     }
   },
   {
-    "Province_State": "Diamond Princess",
+    "Province_State": "Newfoundland and Labrador",
     "totals": {
-      "Cases": 0,
-      "Deaths": 1
+      "Cases": 262,
+      "Deaths": 3
     },
     "daily": {
       "Cases": 0,
@@ -121,6 +88,28 @@
     }
   },
   {
+    "Province_State": "Nova Scotia",
+    "totals": {
+      "Cases": 1067,
+      "Deaths": 63
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ontario",
+    "totals": {
+      "Cases": 39553,
+      "Deaths": 2795
+    },
+    "daily": {
+      "Cases": 119,
+      "Deaths": 1
+    }
+  },
+  {
     "Province_State": "Prince Edward Island",
     "totals": {
       "Cases": 36,
@@ -132,18 +121,29 @@
     }
   },
   {
-    "Province_State": "Yukon",
+    "Province_State": "Quebec",
     "totals": {
-      "Cases": 13,
-      "Deaths": 0
+      "Cases": 57616,
+      "Deaths": 5657
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 150,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Saskatchewan",
+    "totals": {
+      "Cases": 962,
+      "Deaths": 15
+    },
+    "daily": {
+      "Cases": 19,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Grand Princess",
+    "Province_State": "Yukon",
     "totals": {
       "Cases": 13,
       "Deaths": 0

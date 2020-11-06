@@ -1,353 +1,12 @@
 [
   {
-    "Province_State": "Moscow",
+    "Province_State": "Adygea Republic",
     "totals": {
-      "Cases": 233545,
-      "Deaths": 4299
-    },
-    "daily": {
-      "Cases": 591,
-      "Deaths": 14
-    }
-  },
-  {
-    "Province_State": "Saint Petersburg",
-    "totals": {
-      "Cases": 29346,
-      "Deaths": 1781
-    },
-    "daily": {
-      "Cases": 202,
-      "Deaths": 26
-    }
-  },
-  {
-    "Province_State": "Moscow Oblast",
-    "totals": {
-      "Cases": 61743,
-      "Deaths": 1058
-    },
-    "daily": {
-      "Cases": 171,
-      "Deaths": 10
-    }
-  },
-  {
-    "Province_State": "Dagestan Republic",
-    "totals": {
-      "Cases": 8778,
-      "Deaths": 426
-    },
-    "daily": {
-      "Cases": 43,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Nizhny Novgorod Oblast",
-    "totals": {
-      "Cases": 21623,
-      "Deaths": 336
-    },
-    "daily": {
-      "Cases": 218,
-      "Deaths": 6
-    }
-  },
-  {
-    "Province_State": "Krasnoyarsk Krai",
-    "totals": {
-      "Cases": 11403,
-      "Deaths": 260
-    },
-    "daily": {
-      "Cases": 127,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Sverdlovsk Oblast",
-    "totals": {
-      "Cases": 17789,
-      "Deaths": 193
-    },
-    "daily": {
-      "Cases": 245,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Rostov Oblast",
-    "totals": {
-      "Cases": 11419,
-      "Deaths": 183
-    },
-    "daily": {
-      "Cases": 103,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tula Oblast",
-    "totals": {
-      "Cases": 7890,
-      "Deaths": 182
-    },
-    "daily": {
-      "Cases": 45,
-      "Deaths": 4
-    }
-  },
-  {
-    "Province_State": "Novosibirsk Oblast",
-    "totals": {
-      "Cases": 8077,
-      "Deaths": 168
-    },
-    "daily": {
-      "Cases": 118,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Arkhangelsk Oblast",
-    "totals": {
-      "Cases": 7819,
-      "Deaths": 129
-    },
-    "daily": {
-      "Cases": 107,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Stavropol Krai",
-    "totals": {
-      "Cases": 6889,
-      "Deaths": 128
-    },
-    "daily": {
-      "Cases": 123,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Irkutsk Oblast",
-    "totals": {
-      "Cases": 11447,
-      "Deaths": 120
-    },
-    "daily": {
-      "Cases": 185,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tver Oblast",
-    "totals": {
-      "Cases": 4263,
-      "Deaths": 116
-    },
-    "daily": {
-      "Cases": 26,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Vladimir Oblast",
-    "totals": {
-      "Cases": 5218,
-      "Deaths": 108
-    },
-    "daily": {
-      "Cases": 41,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Perm Krai",
-    "totals": {
-      "Cases": 4982,
-      "Deaths": 107
-    },
-    "daily": {
-      "Cases": 89,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Khanty-Mansi Autonomous Okrug",
-    "totals": {
-      "Cases": 13978,
-      "Deaths": 103
-    },
-    "daily": {
-      "Cases": 237,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Krasnodar Krai",
-    "totals": {
-      "Cases": 7190,
-      "Deaths": 96
-    },
-    "daily": {
-      "Cases": 75,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Chelyabinsk Oblast",
-    "totals": {
-      "Cases": 9682,
-      "Deaths": 88
-    },
-    "daily": {
-      "Cases": 130,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Smolensk Oblast",
-    "totals": {
-      "Cases": 5381,
-      "Deaths": 87
-    },
-    "daily": {
-      "Cases": 32,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Orel Oblast",
-    "totals": {
-      "Cases": 5318,
-      "Deaths": 77
-    },
-    "daily": {
-      "Cases": 38,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Voronezh Oblast",
-    "totals": {
-      "Cases": 10065,
-      "Deaths": 77
-    },
-    "daily": {
-      "Cases": 105,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Samara Oblast",
-    "totals": {
-      "Cases": 6320,
-      "Deaths": 73
-    },
-    "daily": {
-      "Cases": 61,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Penza Oblast",
-    "totals": {
-      "Cases": 5991,
-      "Deaths": 72
-    },
-    "daily": {
-      "Cases": 37,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Ingushetia Republic",
-    "totals": {
-      "Cases": 3438,
-      "Deaths": 71
-    },
-    "daily": {
-      "Cases": 19,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "North Ossetia - Alania Republic",
-    "totals": {
-      "Cases": 4353,
-      "Deaths": 67
-    },
-    "daily": {
-      "Cases": 16,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ivanovo Oblast",
-    "totals": {
-      "Cases": 5938,
-      "Deaths": 64
-    },
-    "daily": {
-      "Cases": 62,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Kabardino-Balkarian Republic",
-    "totals": {
-      "Cases": 5791,
-      "Deaths": 64
+      "Cases": 2364,
+      "Deaths": 16
     },
     "daily": {
       "Cases": 20,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Novgorod Oblast",
-    "totals": {
-      "Cases": 3530,
-      "Deaths": 64
-    },
-    "daily": {
-      "Cases": 20,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Primorsky Krai",
-    "totals": {
-      "Cases": 5548,
-      "Deaths": 63
-    },
-    "daily": {
-      "Cases": 88,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Yamalo-Nenets Autonomous Okrug",
-    "totals": {
-      "Cases": 9323,
-      "Deaths": 60
-    },
-    "daily": {
-      "Cases": 176,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ulyanovsk Oblast",
-    "totals": {
-      "Cases": 7818,
-      "Deaths": 59
-    },
-    "daily": {
-      "Cases": 112,
       "Deaths": 0
     }
   },
@@ -363,244 +22,13 @@
     }
   },
   {
-    "Province_State": "Kaluga Oblast",
+    "Province_State": "Altai Republic",
     "totals": {
-      "Cases": 6889,
-      "Deaths": 54
-    },
-    "daily": {
-      "Cases": 35,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Volgograd Oblast",
-    "totals": {
-      "Cases": 8056,
-      "Deaths": 53
-    },
-    "daily": {
-      "Cases": 88,
+      "Cases": 1239,
       "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Kirov Oblast",
-    "totals": {
-      "Cases": 4142,
-      "Deaths": 52
     },
     "daily": {
-      "Cases": 51,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Saratov Oblast",
-    "totals": {
-      "Cases": 8256,
-      "Deaths": 51
-    },
-    "daily": {
-      "Cases": 97,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Omsk Oblast",
-    "totals": {
-      "Cases": 5395,
-      "Deaths": 50
-    },
-    "daily": {
-      "Cases": 109,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Chuvashia Republic",
-    "totals": {
-      "Cases": 6216,
-      "Deaths": 49
-    },
-    "daily": {
-      "Cases": 52,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Khabarovsk Krai",
-    "totals": {
-      "Cases": 6088,
-      "Deaths": 49
-    },
-    "daily": {
-      "Cases": 102,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Kursk Oblast",
-    "totals": {
-      "Cases": 5861,
-      "Deaths": 49
-    },
-    "daily": {
-      "Cases": 33,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Murmansk Oblast",
-    "totals": {
-      "Cases": 8272,
-      "Deaths": 49
-    },
-    "daily": {
-      "Cases": 167,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Zabaykalsky Krai",
-    "totals": {
-      "Cases": 3897,
-      "Deaths": 47
-    },
-    "daily": {
-      "Cases": 30,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Leningrad Oblast",
-    "totals": {
-      "Cases": 5360,
-      "Deaths": 46
-    },
-    "daily": {
-      "Cases": 45,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Pskov Oblast",
-    "totals": {
-      "Cases": 3402,
-      "Deaths": 45
-    },
-    "daily": {
-      "Cases": 30,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Tyva Republic",
-    "totals": {
-      "Cases": 5692,
-      "Deaths": 45
-    },
-    "daily": {
-      "Cases": 40,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Belgorod Oblast",
-    "totals": {
-      "Cases": 5441,
-      "Deaths": 43
-    },
-    "daily": {
-      "Cases": 43,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Kaliningrad Oblast",
-    "totals": {
-      "Cases": 2705,
-      "Deaths": 43
-    },
-    "daily": {
-      "Cases": 14,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Kamchatka Krai",
-    "totals": {
-      "Cases": 2982,
-      "Deaths": 42
-    },
-    "daily": {
-      "Cases": 37,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Komi Republic",
-    "totals": {
-      "Cases": 4680,
-      "Deaths": 40
-    },
-    "daily": {
-      "Cases": 70,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sakha (Yakutiya) Republic",
-    "totals": {
-      "Cases": 5193,
-      "Deaths": 40
-    },
-    "daily": {
-      "Cases": 51,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Astrakhan Oblast",
-    "totals": {
-      "Cases": 4176,
-      "Deaths": 39
-    },
-    "daily": {
-      "Cases": 32,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Bryansk Oblast",
-    "totals": {
-      "Cases": 7038,
-      "Deaths": 35
-    },
-    "daily": {
-      "Cases": 30,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Kalmykia Republic",
-    "totals": {
-      "Cases": 2363,
-      "Deaths": 34
-    },
-    "daily": {
-      "Cases": 17,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Orenburg Oblast",
-    "totals": {
-      "Cases": 5586,
-      "Deaths": 34
-    },
-    "daily": {
-      "Cases": 116,
+      "Cases": 22,
       "Deaths": 0
     }
   },
@@ -616,109 +44,10 @@
     }
   },
   {
-    "Province_State": "Buryatia Republic",
+    "Province_State": "Arkhangelsk Oblast",
     "totals": {
-      "Cases": 3651,
-      "Deaths": 32
-    },
-    "daily": {
-      "Cases": 43,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Mordovia Republic",
-    "totals": {
-      "Cases": 4086,
-      "Deaths": 32
-    },
-    "daily": {
-      "Cases": 35,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Mari El Republic",
-    "totals": {
-      "Cases": 3493,
-      "Deaths": 31
-    },
-    "daily": {
-      "Cases": 29,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tambov Oblast",
-    "totals": {
-      "Cases": 5524,
-      "Deaths": 30
-    },
-    "daily": {
-      "Cases": 40,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Chechen Republic",
-    "totals": {
-      "Cases": 1919,
-      "Deaths": 29
-    },
-    "daily": {
-      "Cases": 11,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tomsk Oblast",
-    "totals": {
-      "Cases": 3435,
-      "Deaths": 26
-    },
-    "daily": {
-      "Cases": 60,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Khakassia Republic",
-    "totals": {
-      "Cases": 2595,
-      "Deaths": 25
-    },
-    "daily": {
-      "Cases": 37,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Kostroma Oblast",
-    "totals": {
-      "Cases": 1963,
-      "Deaths": 24
-    },
-    "daily": {
-      "Cases": 17,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ryazan Oblast",
-    "totals": {
-      "Cases": 5921,
-      "Deaths": 24
-    },
-    "daily": {
-      "Cases": 38,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Tyumen Oblast",
-    "totals": {
-      "Cases": 4667,
-      "Deaths": 22
+      "Cases": 7819,
+      "Deaths": 129
     },
     "daily": {
       "Cases": 107,
@@ -726,13 +55,13 @@
     }
   },
   {
-    "Province_State": "Yaroslavl Oblast",
+    "Province_State": "Astrakhan Oblast",
     "totals": {
-      "Cases": 5560,
-      "Deaths": 22
+      "Cases": 4176,
+      "Deaths": 39
     },
     "daily": {
-      "Cases": 41,
+      "Cases": 32,
       "Deaths": 0
     }
   },
@@ -748,134 +77,57 @@
     }
   },
   {
-    "Province_State": "Karachay-Cherkess Republic",
+    "Province_State": "Belgorod Oblast",
     "totals": {
-      "Cases": 4212,
-      "Deaths": 20
+      "Cases": 5441,
+      "Deaths": 43
     },
     "daily": {
-      "Cases": 27,
+      "Cases": 43,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Lipetsk Oblast",
+    "Province_State": "Bryansk Oblast",
     "totals": {
-      "Cases": 4395,
-      "Deaths": 20
+      "Cases": 7038,
+      "Deaths": 35
     },
     "daily": {
-      "Cases": 21,
+      "Cases": 30,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Tatarstan Republic",
+    "Province_State": "Buryatia Republic",
     "totals": {
-      "Cases": 5215,
-      "Deaths": 19
+      "Cases": 3651,
+      "Deaths": 32
     },
     "daily": {
-      "Cases": 29,
+      "Cases": 43,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Udmurt Republic",
+    "Province_State": "Chechen Republic",
     "totals": {
-      "Cases": 2044,
-      "Deaths": 19
+      "Cases": 1919,
+      "Deaths": 29
     },
     "daily": {
-      "Cases": 38,
+      "Cases": 11,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Vologda Oblast",
+    "Province_State": "Chelyabinsk Oblast",
     "totals": {
-      "Cases": 2088,
-      "Deaths": 19
+      "Cases": 9682,
+      "Deaths": 88
     },
     "daily": {
-      "Cases": 27,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Adygea Republic",
-    "totals": {
-      "Cases": 2364,
-      "Deaths": 16
-    },
-    "daily": {
-      "Cases": 20,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Kemerovo Oblast",
-    "totals": {
-      "Cases": 2740,
-      "Deaths": 15
-    },
-    "daily": {
-      "Cases": 45,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Jewish Autonomous Okrug",
-    "totals": {
-      "Cases": 506,
-      "Deaths": 7
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Magadan Oblast",
-    "totals": {
-      "Cases": 1144,
-      "Deaths": 6
-    },
-    "daily": {
-      "Cases": 12,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Karelia Republic",
-    "totals": {
-      "Cases": 1921,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 39,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Kurgan Oblast",
-    "totals": {
-      "Cases": 1752,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 49,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Altai Republic",
-    "totals": {
-      "Cases": 1239,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 22,
+      "Cases": 130,
       "Deaths": 0
     }
   },
@@ -891,6 +143,358 @@
     }
   },
   {
+    "Province_State": "Chuvashia Republic",
+    "totals": {
+      "Cases": 6216,
+      "Deaths": 49
+    },
+    "daily": {
+      "Cases": 52,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Dagestan Republic",
+    "totals": {
+      "Cases": 8778,
+      "Deaths": 426
+    },
+    "daily": {
+      "Cases": 43,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Ingushetia Republic",
+    "totals": {
+      "Cases": 3438,
+      "Deaths": 71
+    },
+    "daily": {
+      "Cases": 19,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Irkutsk Oblast",
+    "totals": {
+      "Cases": 11447,
+      "Deaths": 120
+    },
+    "daily": {
+      "Cases": 185,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ivanovo Oblast",
+    "totals": {
+      "Cases": 5938,
+      "Deaths": 64
+    },
+    "daily": {
+      "Cases": 62,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Jewish Autonomous Okrug",
+    "totals": {
+      "Cases": 506,
+      "Deaths": 7
+    },
+    "daily": {
+      "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kabardino-Balkarian Republic",
+    "totals": {
+      "Cases": 5791,
+      "Deaths": 64
+    },
+    "daily": {
+      "Cases": 20,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Kaliningrad Oblast",
+    "totals": {
+      "Cases": 2705,
+      "Deaths": 43
+    },
+    "daily": {
+      "Cases": 14,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kalmykia Republic",
+    "totals": {
+      "Cases": 2363,
+      "Deaths": 34
+    },
+    "daily": {
+      "Cases": 17,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Kaluga Oblast",
+    "totals": {
+      "Cases": 6889,
+      "Deaths": 54
+    },
+    "daily": {
+      "Cases": 35,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kamchatka Krai",
+    "totals": {
+      "Cases": 2982,
+      "Deaths": 42
+    },
+    "daily": {
+      "Cases": 37,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Karachay-Cherkess Republic",
+    "totals": {
+      "Cases": 4212,
+      "Deaths": 20
+    },
+    "daily": {
+      "Cases": 27,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Karelia Republic",
+    "totals": {
+      "Cases": 1921,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 39,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kemerovo Oblast",
+    "totals": {
+      "Cases": 2740,
+      "Deaths": 15
+    },
+    "daily": {
+      "Cases": 45,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Khabarovsk Krai",
+    "totals": {
+      "Cases": 6088,
+      "Deaths": 49
+    },
+    "daily": {
+      "Cases": 102,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Khakassia Republic",
+    "totals": {
+      "Cases": 2595,
+      "Deaths": 25
+    },
+    "daily": {
+      "Cases": 37,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Khanty-Mansi Autonomous Okrug",
+    "totals": {
+      "Cases": 13978,
+      "Deaths": 103
+    },
+    "daily": {
+      "Cases": 237,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Kirov Oblast",
+    "totals": {
+      "Cases": 4142,
+      "Deaths": 52
+    },
+    "daily": {
+      "Cases": 51,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Komi Republic",
+    "totals": {
+      "Cases": 4680,
+      "Deaths": 40
+    },
+    "daily": {
+      "Cases": 70,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kostroma Oblast",
+    "totals": {
+      "Cases": 1963,
+      "Deaths": 24
+    },
+    "daily": {
+      "Cases": 17,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Krasnodar Krai",
+    "totals": {
+      "Cases": 7190,
+      "Deaths": 96
+    },
+    "daily": {
+      "Cases": 75,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Krasnoyarsk Krai",
+    "totals": {
+      "Cases": 11403,
+      "Deaths": 260
+    },
+    "daily": {
+      "Cases": 127,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Kurgan Oblast",
+    "totals": {
+      "Cases": 1752,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 49,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kursk Oblast",
+    "totals": {
+      "Cases": 5861,
+      "Deaths": 49
+    },
+    "daily": {
+      "Cases": 33,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Leningrad Oblast",
+    "totals": {
+      "Cases": 5360,
+      "Deaths": 46
+    },
+    "daily": {
+      "Cases": 45,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Lipetsk Oblast",
+    "totals": {
+      "Cases": 4395,
+      "Deaths": 20
+    },
+    "daily": {
+      "Cases": 21,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Magadan Oblast",
+    "totals": {
+      "Cases": 1144,
+      "Deaths": 6
+    },
+    "daily": {
+      "Cases": 12,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Mari El Republic",
+    "totals": {
+      "Cases": 3493,
+      "Deaths": 31
+    },
+    "daily": {
+      "Cases": 29,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Mordovia Republic",
+    "totals": {
+      "Cases": 4086,
+      "Deaths": 32
+    },
+    "daily": {
+      "Cases": 35,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Moscow",
+    "totals": {
+      "Cases": 233545,
+      "Deaths": 4299
+    },
+    "daily": {
+      "Cases": 591,
+      "Deaths": 14
+    }
+  },
+  {
+    "Province_State": "Moscow Oblast",
+    "totals": {
+      "Cases": 61743,
+      "Deaths": 1058
+    },
+    "daily": {
+      "Cases": 171,
+      "Deaths": 10
+    }
+  },
+  {
+    "Province_State": "Murmansk Oblast",
+    "totals": {
+      "Cases": 8272,
+      "Deaths": 49
+    },
+    "daily": {
+      "Cases": 167,
+      "Deaths": 2
+    }
+  },
+  {
     "Province_State": "Nenets Autonomous Okrug",
     "totals": {
       "Cases": 258,
@@ -902,6 +506,171 @@
     }
   },
   {
+    "Province_State": "Nizhny Novgorod Oblast",
+    "totals": {
+      "Cases": 21623,
+      "Deaths": 336
+    },
+    "daily": {
+      "Cases": 218,
+      "Deaths": 6
+    }
+  },
+  {
+    "Province_State": "North Ossetia - Alania Republic",
+    "totals": {
+      "Cases": 4353,
+      "Deaths": 67
+    },
+    "daily": {
+      "Cases": 16,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Novgorod Oblast",
+    "totals": {
+      "Cases": 3530,
+      "Deaths": 64
+    },
+    "daily": {
+      "Cases": 20,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Novosibirsk Oblast",
+    "totals": {
+      "Cases": 8077,
+      "Deaths": 168
+    },
+    "daily": {
+      "Cases": 118,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Omsk Oblast",
+    "totals": {
+      "Cases": 5395,
+      "Deaths": 50
+    },
+    "daily": {
+      "Cases": 109,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Orel Oblast",
+    "totals": {
+      "Cases": 5318,
+      "Deaths": 77
+    },
+    "daily": {
+      "Cases": 38,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Orenburg Oblast",
+    "totals": {
+      "Cases": 5586,
+      "Deaths": 34
+    },
+    "daily": {
+      "Cases": 116,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Penza Oblast",
+    "totals": {
+      "Cases": 5991,
+      "Deaths": 72
+    },
+    "daily": {
+      "Cases": 37,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Perm Krai",
+    "totals": {
+      "Cases": 4982,
+      "Deaths": 107
+    },
+    "daily": {
+      "Cases": 89,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Primorsky Krai",
+    "totals": {
+      "Cases": 5548,
+      "Deaths": 63
+    },
+    "daily": {
+      "Cases": 88,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Pskov Oblast",
+    "totals": {
+      "Cases": 3402,
+      "Deaths": 45
+    },
+    "daily": {
+      "Cases": 30,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Rostov Oblast",
+    "totals": {
+      "Cases": 11419,
+      "Deaths": 183
+    },
+    "daily": {
+      "Cases": 103,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ryazan Oblast",
+    "totals": {
+      "Cases": 5921,
+      "Deaths": 24
+    },
+    "daily": {
+      "Cases": 38,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Saint Petersburg",
+    "totals": {
+      "Cases": 29346,
+      "Deaths": 1781
+    },
+    "daily": {
+      "Cases": 202,
+      "Deaths": 26
+    }
+  },
+  {
+    "Province_State": "Sakha (Yakutiya) Republic",
+    "totals": {
+      "Cases": 5193,
+      "Deaths": 40
+    },
+    "daily": {
+      "Cases": 51,
+      "Deaths": 1
+    }
+  },
+  {
     "Province_State": "Sakhalin Oblast",
     "totals": {
       "Cases": 1806,
@@ -909,6 +678,237 @@
     },
     "daily": {
       "Cases": 59,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Samara Oblast",
+    "totals": {
+      "Cases": 6320,
+      "Deaths": 73
+    },
+    "daily": {
+      "Cases": 61,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Saratov Oblast",
+    "totals": {
+      "Cases": 8256,
+      "Deaths": 51
+    },
+    "daily": {
+      "Cases": 97,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Smolensk Oblast",
+    "totals": {
+      "Cases": 5381,
+      "Deaths": 87
+    },
+    "daily": {
+      "Cases": 32,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Stavropol Krai",
+    "totals": {
+      "Cases": 6889,
+      "Deaths": 128
+    },
+    "daily": {
+      "Cases": 123,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sverdlovsk Oblast",
+    "totals": {
+      "Cases": 17789,
+      "Deaths": 193
+    },
+    "daily": {
+      "Cases": 245,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tambov Oblast",
+    "totals": {
+      "Cases": 5524,
+      "Deaths": 30
+    },
+    "daily": {
+      "Cases": 40,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tatarstan Republic",
+    "totals": {
+      "Cases": 5215,
+      "Deaths": 19
+    },
+    "daily": {
+      "Cases": 29,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tomsk Oblast",
+    "totals": {
+      "Cases": 3435,
+      "Deaths": 26
+    },
+    "daily": {
+      "Cases": 60,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tula Oblast",
+    "totals": {
+      "Cases": 7890,
+      "Deaths": 182
+    },
+    "daily": {
+      "Cases": 45,
+      "Deaths": 4
+    }
+  },
+  {
+    "Province_State": "Tver Oblast",
+    "totals": {
+      "Cases": 4263,
+      "Deaths": 116
+    },
+    "daily": {
+      "Cases": 26,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Tyumen Oblast",
+    "totals": {
+      "Cases": 4667,
+      "Deaths": 22
+    },
+    "daily": {
+      "Cases": 107,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tyva Republic",
+    "totals": {
+      "Cases": 5692,
+      "Deaths": 45
+    },
+    "daily": {
+      "Cases": 40,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Udmurt Republic",
+    "totals": {
+      "Cases": 2044,
+      "Deaths": 19
+    },
+    "daily": {
+      "Cases": 38,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ulyanovsk Oblast",
+    "totals": {
+      "Cases": 7818,
+      "Deaths": 59
+    },
+    "daily": {
+      "Cases": 112,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Vladimir Oblast",
+    "totals": {
+      "Cases": 5218,
+      "Deaths": 108
+    },
+    "daily": {
+      "Cases": 41,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Volgograd Oblast",
+    "totals": {
+      "Cases": 8056,
+      "Deaths": 53
+    },
+    "daily": {
+      "Cases": 88,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Vologda Oblast",
+    "totals": {
+      "Cases": 2088,
+      "Deaths": 19
+    },
+    "daily": {
+      "Cases": 27,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Voronezh Oblast",
+    "totals": {
+      "Cases": 10065,
+      "Deaths": 77
+    },
+    "daily": {
+      "Cases": 105,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Yamalo-Nenets Autonomous Okrug",
+    "totals": {
+      "Cases": 9323,
+      "Deaths": 60
+    },
+    "daily": {
+      "Cases": 176,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Yaroslavl Oblast",
+    "totals": {
+      "Cases": 5560,
+      "Deaths": 22
+    },
+    "daily": {
+      "Cases": 41,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Zabaykalsky Krai",
+    "totals": {
+      "Cases": 3897,
+      "Deaths": 47
+    },
+    "daily": {
+      "Cases": 30,
       "Deaths": 0
     }
   }

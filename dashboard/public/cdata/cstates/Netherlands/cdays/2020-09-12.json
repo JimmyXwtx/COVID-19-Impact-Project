@@ -1,148 +1,5 @@
 [
   {
-    "Province_State": "Noord-Brabant",
-    "totals": {
-      "Cases": 13238,
-      "Deaths": 1551
-    },
-    "daily": {
-      "Cases": 112,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Zuid-Holland",
-    "totals": {
-      "Cases": 22980,
-      "Deaths": 1354
-    },
-    "daily": {
-      "Cases": 435,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Noord-Holland",
-    "totals": {
-      "Cases": 15114,
-      "Deaths": 832
-    },
-    "daily": {
-      "Cases": 312,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Limburg",
-    "totals": {
-      "Cases": 5722,
-      "Deaths": 758
-    },
-    "daily": {
-      "Cases": 37,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Gelderland",
-    "totals": {
-      "Cases": 8229,
-      "Deaths": 692
-    },
-    "daily": {
-      "Cases": 109,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Utrecht",
-    "totals": {
-      "Cases": 6372,
-      "Deaths": 437
-    },
-    "daily": {
-      "Cases": 110,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Overijssel",
-    "totals": {
-      "Cases": 3718,
-      "Deaths": 314
-    },
-    "daily": {
-      "Cases": 17,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Flevoland",
-    "totals": {
-      "Cases": 1538,
-      "Deaths": 96
-    },
-    "daily": {
-      "Cases": 22,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Zeeland",
-    "totals": {
-      "Cases": 1125,
-      "Deaths": 72
-    },
-    "daily": {
-      "Cases": 10,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Friesland",
-    "totals": {
-      "Cases": 880,
-      "Deaths": 69
-    },
-    "daily": {
-      "Cases": 5,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Drenthe",
-    "totals": {
-      "Cases": 642,
-      "Deaths": 41
-    },
-    "daily": {
-      "Cases": 5,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Groningen",
-    "totals": {
-      "Cases": 753,
-      "Deaths": 19
-    },
-    "daily": {
-      "Cases": 34,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sint Maarten",
-    "totals": {
-      "Cases": 533,
-      "Deaths": 19
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Aruba",
     "totals": {
       "Cases": 2994,
@@ -154,13 +11,13 @@
     }
   },
   {
-    "Province_State": "Unknown",
+    "Province_State": "Bonaire, Sint Eustatius and Saba",
     "totals": {
-      "Cases": 701,
-      "Deaths": 18
+      "Cases": 25,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 23,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -176,13 +33,156 @@
     }
   },
   {
-    "Province_State": "Bonaire, Sint Eustatius and Saba",
+    "Province_State": "Drenthe",
     "totals": {
-      "Cases": 25,
-      "Deaths": 0
+      "Cases": 642,
+      "Deaths": 41
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 5,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Flevoland",
+    "totals": {
+      "Cases": 1538,
+      "Deaths": 96
+    },
+    "daily": {
+      "Cases": 22,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Friesland",
+    "totals": {
+      "Cases": 880,
+      "Deaths": 69
+    },
+    "daily": {
+      "Cases": 5,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Gelderland",
+    "totals": {
+      "Cases": 8229,
+      "Deaths": 692
+    },
+    "daily": {
+      "Cases": 109,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Groningen",
+    "totals": {
+      "Cases": 753,
+      "Deaths": 19
+    },
+    "daily": {
+      "Cases": 34,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Limburg",
+    "totals": {
+      "Cases": 5722,
+      "Deaths": 758
+    },
+    "daily": {
+      "Cases": 37,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Noord-Brabant",
+    "totals": {
+      "Cases": 13238,
+      "Deaths": 1551
+    },
+    "daily": {
+      "Cases": 112,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Noord-Holland",
+    "totals": {
+      "Cases": 15114,
+      "Deaths": 832
+    },
+    "daily": {
+      "Cases": 312,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Overijssel",
+    "totals": {
+      "Cases": 3718,
+      "Deaths": 314
+    },
+    "daily": {
+      "Cases": 17,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sint Maarten",
+    "totals": {
+      "Cases": 533,
+      "Deaths": 19
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Unknown",
+    "totals": {
+      "Cases": 701,
+      "Deaths": 18
+    },
+    "daily": {
+      "Cases": 23,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Utrecht",
+    "totals": {
+      "Cases": 6372,
+      "Deaths": 437
+    },
+    "daily": {
+      "Cases": 110,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Zeeland",
+    "totals": {
+      "Cases": 1125,
+      "Deaths": 72
+    },
+    "daily": {
+      "Cases": 10,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Zuid-Holland",
+    "totals": {
+      "Cases": 22980,
+      "Deaths": 1354
+    },
+    "daily": {
+      "Cases": 435,
       "Deaths": 0
     }
   }

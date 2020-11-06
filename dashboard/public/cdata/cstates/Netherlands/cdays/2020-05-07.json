@@ -1,16 +1,5 @@
 [
   {
-    "Province_State": "Sint Maarten",
-    "totals": {
-      "Cases": 76,
-      "Deaths": 14
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Aruba",
     "totals": {
       "Cases": 101,
@@ -19,6 +8,17 @@
     "daily": {
       "Cases": 0,
       "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Bonaire, Sint Eustatius and Saba",
+    "totals": {
+      "Cases": 6,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
     }
   },
   {
@@ -33,10 +33,10 @@
     }
   },
   {
-    "Province_State": "Bonaire, Sint Eustatius and Saba",
+    "Province_State": "Sint Maarten",
     "totals": {
-      "Cases": 6,
-      "Deaths": 0
+      "Cases": 76,
+      "Deaths": 14
     },
     "daily": {
       "Cases": 0,

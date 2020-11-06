@@ -1,5 +1,27 @@
 [
   {
+    "Province_State": "French Guiana",
+    "totals": {
+      "Cases": 10070,
+      "Deaths": 69
+    },
+    "daily": {
+      "Cases": 13,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "French Polynesia",
+    "totals": {
+      "Cases": 2228,
+      "Deaths": 9
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Guadeloupe",
     "totals": {
       "Cases": 6319,
@@ -11,13 +33,13 @@
     }
   },
   {
-    "Province_State": "French Guiana",
+    "Province_State": "Martinique",
     "totals": {
-      "Cases": 10070,
-      "Deaths": 69
+      "Cases": 1851,
+      "Deaths": 22
     },
     "daily": {
-      "Cases": 13,
+      "Cases": 308,
       "Deaths": 1
     }
   },
@@ -33,14 +55,14 @@
     }
   },
   {
-    "Province_State": "Martinique",
+    "Province_State": "New Caledonia",
     "totals": {
-      "Cases": 1851,
-      "Deaths": 22
+      "Cases": 27,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 308,
-      "Deaths": 1
+      "Cases": 0,
+      "Deaths": 0
     }
   },
   {
@@ -48,39 +70,6 @@
     "totals": {
       "Cases": 4328,
       "Deaths": 16
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "French Polynesia",
-    "totals": {
-      "Cases": 2228,
-      "Deaths": 9
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "St Martin",
-    "totals": {
-      "Cases": 412,
-      "Deaths": 8
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "New Caledonia",
-    "totals": {
-      "Cases": 27,
-      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
@@ -103,6 +92,17 @@
     "totals": {
       "Cases": 16,
       "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "St Martin",
+    "totals": {
+      "Cases": 412,
+      "Deaths": 8
     },
     "daily": {
       "Cases": 0,

@@ -11,10 +11,10 @@
     }
   },
   {
-    "Province_State": "Mayotte",
+    "Province_State": "French Polynesia",
     "totals": {
-      "Cases": 3374,
-      "Deaths": 40
+      "Cases": 694,
+      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
@@ -44,32 +44,10 @@
     }
   },
   {
-    "Province_State": "Reunion",
+    "Province_State": "Mayotte",
     "totals": {
-      "Cases": 2222,
-      "Deaths": 13
-    },
-    "daily": {
-      "Cases": 107,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "St Martin",
-    "totals": {
-      "Cases": 239,
-      "Deaths": 6
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "French Polynesia",
-    "totals": {
-      "Cases": 694,
-      "Deaths": 0
+      "Cases": 3374,
+      "Deaths": 40
     },
     "daily": {
       "Cases": 0,
@@ -85,6 +63,17 @@
     "daily": {
       "Cases": 0,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Reunion",
+    "totals": {
+      "Cases": 2222,
+      "Deaths": 13
+    },
+    "daily": {
+      "Cases": 107,
+      "Deaths": 2
     }
   },
   {
@@ -106,6 +95,17 @@
     },
     "daily": {
       "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "St Martin",
+    "totals": {
+      "Cases": 239,
+      "Deaths": 6
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   }

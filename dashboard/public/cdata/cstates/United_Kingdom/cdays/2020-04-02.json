@@ -1,38 +1,5 @@
 [
   {
-    "Province_State": "Channel Islands",
-    "totals": {
-      "Cases": 193,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 21,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Cayman Islands",
-    "totals": {
-      "Cases": 28,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 6,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Isle of Man",
-    "totals": {
-      "Cases": 95,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 27,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Anguilla",
     "totals": {
       "Cases": 3,
@@ -66,6 +33,28 @@
     }
   },
   {
+    "Province_State": "Cayman Islands",
+    "totals": {
+      "Cases": 28,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 6,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Channel Islands",
+    "totals": {
+      "Cases": 193,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 21,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Gibraltar",
     "totals": {
       "Cases": 88,
@@ -73,6 +62,17 @@
     },
     "daily": {
       "Cases": 7,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Isle of Man",
+    "totals": {
+      "Cases": 95,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 27,
       "Deaths": 0
     }
   },

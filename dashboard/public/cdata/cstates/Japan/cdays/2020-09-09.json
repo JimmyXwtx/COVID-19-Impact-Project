@@ -1,60 +1,5 @@
 [
   {
-    "Province_State": "Tokyo",
-    "totals": {
-      "Cases": 22178,
-      "Deaths": 379
-    },
-    "daily": {
-      "Cases": 149,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Osaka",
-    "totals": {
-      "Cases": 9234,
-      "Deaths": 171
-    },
-    "daily": {
-      "Cases": 63,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Kanagawa",
-    "totals": {
-      "Cases": 5632,
-      "Deaths": 126
-    },
-    "daily": {
-      "Cases": 106,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Hokkaido",
-    "totals": {
-      "Cases": 1838,
-      "Deaths": 105
-    },
-    "daily": {
-      "Cases": 4,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Saitama",
-    "totals": {
-      "Cases": 4178,
-      "Deaths": 97
-    },
-    "daily": {
-      "Cases": 25,
-      "Deaths": 2
-    }
-  },
-  {
     "Province_State": "Aichi",
     "totals": {
       "Cases": 4758,
@@ -66,13 +11,24 @@
     }
   },
   {
-    "Province_State": "Fukuoka",
+    "Province_State": "Akita",
     "totals": {
-      "Cases": 4873,
-      "Deaths": 73
+      "Cases": 50,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 26,
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Aomori",
+    "totals": {
+      "Cases": 35,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -88,101 +44,13 @@
     }
   },
   {
-    "Province_State": "Hyogo",
+    "Province_State": "Ehime",
     "totals": {
-      "Cases": 2409,
-      "Deaths": 54
+      "Cases": 114,
+      "Deaths": 6
     },
     "daily": {
-      "Cases": 22,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Okinawa",
-    "totals": {
-      "Cases": 2298,
-      "Deaths": 41
-    },
-    "daily": {
-      "Cases": 41,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Ishikawa",
-    "totals": {
-      "Cases": 718,
-      "Deaths": 40
-    },
-    "daily": {
-      "Cases": 6,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Kyoto",
-    "totals": {
-      "Cases": 1600,
-      "Deaths": 25
-    },
-    "daily": {
-      "Cases": 6,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Toyama",
-    "totals": {
-      "Cases": 409,
-      "Deaths": 25
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Gunma",
-    "totals": {
-      "Cases": 502,
-      "Deaths": 19
-    },
-    "daily": {
-      "Cases": 5,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ibaraki",
-    "totals": {
-      "Cases": 589,
-      "Deaths": 14
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Kagoshima",
-    "totals": {
-      "Cases": 372,
-      "Deaths": 11
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Gifu",
-    "totals": {
-      "Cases": 568,
-      "Deaths": 10
-    },
-    "daily": {
-      "Cases": 2,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -198,90 +66,46 @@
     }
   },
   {
-    "Province_State": "Kumamoto",
+    "Province_State": "Fukuoka",
     "totals": {
-      "Cases": 553,
-      "Deaths": 8
+      "Cases": 4873,
+      "Deaths": 73
     },
     "daily": {
-      "Cases": 3,
+      "Cases": 26,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Nara",
+    "Province_State": "Fukushima",
     "totals": {
-      "Cases": 540,
-      "Deaths": 8
-    },
-    "daily": {
-      "Cases": 1,
+      "Cases": 186,
       "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tokushima",
-    "totals": {
-      "Cases": 146,
-      "Deaths": 8
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Shiga",
-    "totals": {
-      "Cases": 466,
-      "Deaths": 7
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ehime",
-    "totals": {
-      "Cases": 114,
-      "Deaths": 6
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Wakayama",
-    "totals": {
-      "Cases": 235,
-      "Deaths": 5
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Yamanashi",
-    "totals": {
-      "Cases": 182,
-      "Deaths": 5
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Mie",
-    "totals": {
-      "Cases": 444,
-      "Deaths": 4
     },
     "daily": {
       "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Gifu",
+    "totals": {
+      "Cases": 568,
+      "Deaths": 10
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Gunma",
+    "totals": {
+      "Cases": 502,
+      "Deaths": 19
+    },
+    "daily": {
+      "Cases": 5,
       "Deaths": 0
     }
   },
@@ -297,21 +121,54 @@
     }
   },
   {
-    "Province_State": "Kochi",
+    "Province_State": "Hokkaido",
     "totals": {
-      "Cases": 133,
-      "Deaths": 3
+      "Cases": 1838,
+      "Deaths": 105
     },
     "daily": {
-      "Cases": -1,
+      "Cases": 4,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Nagasaki",
+    "Province_State": "Hyogo",
     "totals": {
-      "Cases": 234,
-      "Deaths": 3
+      "Cases": 2409,
+      "Deaths": 54
+    },
+    "daily": {
+      "Cases": 22,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ibaraki",
+    "totals": {
+      "Cases": 589,
+      "Deaths": 14
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ishikawa",
+    "totals": {
+      "Cases": 718,
+      "Deaths": 40
+    },
+    "daily": {
+      "Cases": 6,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Iwate",
+    "totals": {
+      "Cases": 23,
+      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
@@ -330,21 +187,10 @@
     }
   },
   {
-    "Province_State": "Miyagi",
+    "Province_State": "Kagoshima",
     "totals": {
-      "Cases": 267,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 11,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Oita",
-    "totals": {
-      "Cases": 158,
-      "Deaths": 2
+      "Cases": 372,
+      "Deaths": 11
     },
     "daily": {
       "Cases": 1,
@@ -352,13 +198,68 @@
     }
   },
   {
-    "Province_State": "Aomori",
+    "Province_State": "Kanagawa",
     "totals": {
-      "Cases": 35,
-      "Deaths": 1
+      "Cases": 5632,
+      "Deaths": 126
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 106,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kochi",
+    "totals": {
+      "Cases": 133,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": -1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kumamoto",
+    "totals": {
+      "Cases": 553,
+      "Deaths": 8
+    },
+    "daily": {
+      "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kyoto",
+    "totals": {
+      "Cases": 1600,
+      "Deaths": 25
+    },
+    "daily": {
+      "Cases": 6,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Mie",
+    "totals": {
+      "Cases": 444,
+      "Deaths": 4
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Miyagi",
+    "totals": {
+      "Cases": 267,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 11,
       "Deaths": 0
     }
   },
@@ -385,6 +286,50 @@
     }
   },
   {
+    "Province_State": "Nagasaki",
+    "totals": {
+      "Cases": 234,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Nara",
+    "totals": {
+      "Cases": 540,
+      "Deaths": 8
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Niigata",
+    "totals": {
+      "Cases": 148,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Oita",
+    "totals": {
+      "Cases": 158,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Okayama",
     "totals": {
       "Cases": 146,
@@ -396,6 +341,28 @@
     }
   },
   {
+    "Province_State": "Okinawa",
+    "totals": {
+      "Cases": 2298,
+      "Deaths": 41
+    },
+    "daily": {
+      "Cases": 41,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Osaka",
+    "totals": {
+      "Cases": 9234,
+      "Deaths": 171
+    },
+    "daily": {
+      "Cases": 63,
+      "Deaths": 3
+    }
+  },
+  {
     "Province_State": "Port Quarantine",
     "totals": {
       "Cases": 832,
@@ -403,6 +370,50 @@
     },
     "daily": {
       "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Saga",
+    "totals": {
+      "Cases": 240,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Saitama",
+    "totals": {
+      "Cases": 4178,
+      "Deaths": 97
+    },
+    "daily": {
+      "Cases": 25,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Shiga",
+    "totals": {
+      "Cases": 466,
+      "Deaths": 7
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Shimane",
+    "totals": {
+      "Cases": 137,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -429,6 +440,72 @@
     }
   },
   {
+    "Province_State": "Tokushima",
+    "totals": {
+      "Cases": 146,
+      "Deaths": 8
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Tokyo",
+    "totals": {
+      "Cases": 22178,
+      "Deaths": 379
+    },
+    "daily": {
+      "Cases": 149,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Tottori",
+    "totals": {
+      "Cases": 22,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Toyama",
+    "totals": {
+      "Cases": 409,
+      "Deaths": 25
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Unknown",
+    "totals": {
+      "Cases": 8,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Wakayama",
+    "totals": {
+      "Cases": 235,
+      "Deaths": 5
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Yamagata",
     "totals": {
       "Cases": 78,
@@ -451,87 +528,10 @@
     }
   },
   {
-    "Province_State": "Akita",
+    "Province_State": "Yamanashi",
     "totals": {
-      "Cases": 50,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Fukushima",
-    "totals": {
-      "Cases": 186,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Iwate",
-    "totals": {
-      "Cases": 23,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Niigata",
-    "totals": {
-      "Cases": 148,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Saga",
-    "totals": {
-      "Cases": 240,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Shimane",
-    "totals": {
-      "Cases": 137,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tottori",
-    "totals": {
-      "Cases": 22,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Unknown",
-    "totals": {
-      "Cases": 8,
-      "Deaths": 0
+      "Cases": 182,
+      "Deaths": 5
     },
     "daily": {
       "Cases": 0,

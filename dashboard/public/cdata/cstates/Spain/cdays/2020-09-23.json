@@ -1,60 +1,5 @@
 [
   {
-    "Province_State": "Madrid",
-    "totals": {
-      "Cases": 206418,
-      "Deaths": 9161
-    },
-    "daily": {
-      "Cases": 3730,
-      "Deaths": 32
-    }
-  },
-  {
-    "Province_State": "Catalonia",
-    "totals": {
-      "Cases": 133751,
-      "Deaths": 5823
-    },
-    "daily": {
-      "Cases": 1051,
-      "Deaths": 15
-    }
-  },
-  {
-    "Province_State": "Castilla - La Mancha",
-    "totals": {
-      "Cases": 38035,
-      "Deaths": 3080
-    },
-    "daily": {
-      "Cases": 873,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Castilla y Leon",
-    "totals": {
-      "Cases": 42378,
-      "Deaths": 2970
-    },
-    "daily": {
-      "Cases": 635,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Pais Vasco",
-    "totals": {
-      "Cases": 41531,
-      "Deaths": 1825
-    },
-    "daily": {
-      "Cases": 398,
-      "Deaths": 1
-    }
-  },
-  {
     "Province_State": "Andalusia",
     "totals": {
       "Cases": 53725,
@@ -66,17 +11,6 @@
     }
   },
   {
-    "Province_State": "C. Valenciana",
-    "totals": {
-      "Cases": 36796,
-      "Deaths": 1566
-    },
-    "daily": {
-      "Cases": 657,
-      "Deaths": 13
-    }
-  },
-  {
     "Province_State": "Aragon",
     "totals": {
       "Cases": 34005,
@@ -85,50 +19,6 @@
     "daily": {
       "Cases": 263,
       "Deaths": 25
-    }
-  },
-  {
-    "Province_State": "Galicia",
-    "totals": {
-      "Cases": 19930,
-      "Deaths": 721
-    },
-    "daily": {
-      "Cases": 309,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Navarra",
-    "totals": {
-      "Cases": 15884,
-      "Deaths": 562
-    },
-    "daily": {
-      "Cases": 431,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Extremadura",
-    "totals": {
-      "Cases": 9370,
-      "Deaths": 557
-    },
-    "daily": {
-      "Cases": 221,
-      "Deaths": 7
-    }
-  },
-  {
-    "Province_State": "La Rioja",
-    "totals": {
-      "Cases": 7851,
-      "Deaths": 407
-    },
-    "daily": {
-      "Cases": 89,
-      "Deaths": 3
     }
   },
   {
@@ -154,14 +44,14 @@
     }
   },
   {
-    "Province_State": "Cantabria",
+    "Province_State": "C. Valenciana",
     "totals": {
-      "Cases": 6433,
-      "Deaths": 232
+      "Cases": 36796,
+      "Deaths": 1566
     },
     "daily": {
-      "Cases": 67,
-      "Deaths": 0
+      "Cases": 657,
+      "Deaths": 13
     }
   },
   {
@@ -176,14 +66,47 @@
     }
   },
   {
-    "Province_State": "Murcia",
+    "Province_State": "Cantabria",
     "totals": {
-      "Cases": 16040,
-      "Deaths": 197
+      "Cases": 6433,
+      "Deaths": 232
     },
     "daily": {
-      "Cases": 583,
-      "Deaths": 2
+      "Cases": 67,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Castilla - La Mancha",
+    "totals": {
+      "Cases": 38035,
+      "Deaths": 3080
+    },
+    "daily": {
+      "Cases": 873,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Castilla y Leon",
+    "totals": {
+      "Cases": 42378,
+      "Deaths": 2970
+    },
+    "daily": {
+      "Cases": 635,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Catalonia",
+    "totals": {
+      "Cases": 133751,
+      "Deaths": 5823
+    },
+    "daily": {
+      "Cases": 1051,
+      "Deaths": 15
     }
   },
   {
@@ -198,6 +121,50 @@
     }
   },
   {
+    "Province_State": "Extremadura",
+    "totals": {
+      "Cases": 9370,
+      "Deaths": 557
+    },
+    "daily": {
+      "Cases": 221,
+      "Deaths": 7
+    }
+  },
+  {
+    "Province_State": "Galicia",
+    "totals": {
+      "Cases": 19930,
+      "Deaths": 721
+    },
+    "daily": {
+      "Cases": 309,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "La Rioja",
+    "totals": {
+      "Cases": 7851,
+      "Deaths": 407
+    },
+    "daily": {
+      "Cases": 89,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Madrid",
+    "totals": {
+      "Cases": 206418,
+      "Deaths": 9161
+    },
+    "daily": {
+      "Cases": 3730,
+      "Deaths": 32
+    }
+  },
+  {
     "Province_State": "Melilla",
     "totals": {
       "Cases": 795,
@@ -206,6 +173,39 @@
     "daily": {
       "Cases": 37,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Murcia",
+    "totals": {
+      "Cases": 16040,
+      "Deaths": 197
+    },
+    "daily": {
+      "Cases": 583,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Navarra",
+    "totals": {
+      "Cases": 15884,
+      "Deaths": 562
+    },
+    "daily": {
+      "Cases": 431,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Pais Vasco",
+    "totals": {
+      "Cases": 41531,
+      "Deaths": 1825
+    },
+    "daily": {
+      "Cases": 398,
+      "Deaths": 1
     }
   },
   {

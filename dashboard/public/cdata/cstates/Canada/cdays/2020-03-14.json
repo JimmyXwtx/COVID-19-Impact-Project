@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "British Columbia",
-    "totals": {
-      "Cases": 64,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ontario",
-    "totals": {
-      "Cases": 79,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 5,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Alberta",
     "totals": {
       "Cases": 29,
@@ -33,10 +11,10 @@
     }
   },
   {
-    "Province_State": "Quebec",
+    "Province_State": "British Columbia",
     "totals": {
-      "Cases": 17,
-      "Deaths": 0
+      "Cases": 64,
+      "Deaths": 1
     },
     "daily": {
       "Cases": 0,
@@ -55,9 +33,9 @@
     }
   },
   {
-    "Province_State": "Saskatchewan",
+    "Province_State": "New Brunswick",
     "totals": {
-      "Cases": 2,
+      "Cases": 1,
       "Deaths": 0
     },
     "daily": {
@@ -66,9 +44,31 @@
     }
   },
   {
-    "Province_State": "New Brunswick",
+    "Province_State": "Ontario",
     "totals": {
-      "Cases": 1,
+      "Cases": 79,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 5,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Quebec",
+    "totals": {
+      "Cases": 17,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Saskatchewan",
+    "totals": {
+      "Cases": 2,
       "Deaths": 0
     },
     "daily": {

@@ -1,35 +1,13 @@
 [
   {
-    "Province_State": "Maharashtra",
+    "Province_State": "Andaman and Nicobar Islands",
     "totals": {
-      "Cases": 1060308,
-      "Deaths": 29531
+      "Cases": 3546,
+      "Deaths": 51
     },
     "daily": {
-      "Cases": 22543,
-      "Deaths": 416
-    }
-  },
-  {
-    "Province_State": "Tamil Nadu",
-    "totals": {
-      "Cases": 502759,
-      "Deaths": 8381
-    },
-    "daily": {
-      "Cases": 5693,
-      "Deaths": 74
-    }
-  },
-  {
-    "Province_State": "Karnataka",
-    "totals": {
-      "Cases": 459445,
-      "Deaths": 7265
-    },
-    "daily": {
-      "Cases": 9894,
-      "Deaths": 104
+      "Cases": 25,
+      "Deaths": 0
     }
   },
   {
@@ -44,6 +22,72 @@
     }
   },
   {
+    "Province_State": "Arunachal Pradesh",
+    "totals": {
+      "Cases": 6121,
+      "Deaths": 10
+    },
+    "daily": {
+      "Cases": 146,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Assam",
+    "totals": {
+      "Cases": 141763,
+      "Deaths": 469
+    },
+    "daily": {
+      "Cases": 1292,
+      "Deaths": 16
+    }
+  },
+  {
+    "Province_State": "Bihar",
+    "totals": {
+      "Cases": 158285,
+      "Deaths": 822
+    },
+    "daily": {
+      "Cases": 1582,
+      "Deaths": 14
+    }
+  },
+  {
+    "Province_State": "Chandigarh",
+    "totals": {
+      "Cases": 7991,
+      "Deaths": 93
+    },
+    "daily": {
+      "Cases": 449,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Chhattisgarh",
+    "totals": {
+      "Cases": 63991,
+      "Deaths": 555
+    },
+    "daily": {
+      "Cases": 2228,
+      "Deaths": 16
+    }
+  },
+  {
+    "Province_State": "Dadra and Nagar Haveli and Daman and Diu",
+    "totals": {
+      "Cases": 2745,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 20,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Delhi",
     "totals": {
       "Cases": 218304,
@@ -55,25 +99,14 @@
     }
   },
   {
-    "Province_State": "Uttar Pradesh",
+    "Province_State": "Goa",
     "totals": {
-      "Cases": 312036,
-      "Deaths": 4429
+      "Cases": 24592,
+      "Deaths": 290
     },
     "daily": {
-      "Cases": 6205,
-      "Deaths": 80
-    }
-  },
-  {
-    "Province_State": "West Bengal",
-    "totals": {
-      "Cases": 202708,
-      "Deaths": 3945
-    },
-    "daily": {
-      "Cases": 3215,
-      "Deaths": 58
+      "Cases": 407,
+      "Deaths": 4
     }
   },
   {
@@ -84,39 +117,6 @@
     },
     "daily": {
       "Cases": 1326,
-      "Deaths": 15
-    }
-  },
-  {
-    "Province_State": "Punjab",
-    "totals": {
-      "Cases": 79679,
-      "Deaths": 2356
-    },
-    "daily": {
-      "Cases": 2622,
-      "Deaths": 68
-    }
-  },
-  {
-    "Province_State": "Madhya Pradesh",
-    "totals": {
-      "Cases": 88247,
-      "Deaths": 1762
-    },
-    "daily": {
-      "Cases": 2281,
-      "Deaths": 34
-    }
-  },
-  {
-    "Province_State": "Rajasthan",
-    "totals": {
-      "Cases": 102408,
-      "Deaths": 1236
-    },
-    "daily": {
-      "Cases": 1703,
       "Deaths": 15
     }
   },
@@ -132,14 +132,14 @@
     }
   },
   {
-    "Province_State": "Telangana",
+    "Province_State": "Himachal Pradesh",
     "totals": {
-      "Cases": 158513,
-      "Deaths": 974
+      "Cases": 9555,
+      "Deaths": 77
     },
     "daily": {
-      "Cases": 1417,
-      "Deaths": 13
+      "Cases": 326,
+      "Deaths": 4
     }
   },
   {
@@ -154,39 +154,6 @@
     }
   },
   {
-    "Province_State": "Bihar",
-    "totals": {
-      "Cases": 158285,
-      "Deaths": 822
-    },
-    "daily": {
-      "Cases": 1582,
-      "Deaths": 14
-    }
-  },
-  {
-    "Province_State": "Odisha",
-    "totals": {
-      "Cases": 150807,
-      "Deaths": 626
-    },
-    "daily": {
-      "Cases": 3913,
-      "Deaths": 10
-    }
-  },
-  {
-    "Province_State": "Chhattisgarh",
-    "totals": {
-      "Cases": 63991,
-      "Deaths": 555
-    },
-    "daily": {
-      "Cases": 2228,
-      "Deaths": 16
-    }
-  },
-  {
     "Province_State": "Jharkhand",
     "totals": {
       "Cases": 61474,
@@ -198,14 +165,14 @@
     }
   },
   {
-    "Province_State": "Assam",
+    "Province_State": "Karnataka",
     "totals": {
-      "Cases": 141763,
-      "Deaths": 469
+      "Cases": 459445,
+      "Deaths": 7265
     },
     "daily": {
-      "Cases": 1292,
-      "Deaths": 16
+      "Cases": 9894,
+      "Deaths": 104
     }
   },
   {
@@ -220,80 +187,47 @@
     }
   },
   {
-    "Province_State": "Uttarakhand",
+    "Province_State": "Ladakh",
     "totals": {
-      "Cases": 31973,
-      "Deaths": 414
+      "Cases": 3345,
+      "Deaths": 40
     },
     "daily": {
-      "Cases": 1637,
-      "Deaths": 12
-    }
-  },
-  {
-    "Province_State": "Puducherry",
-    "totals": {
-      "Cases": 19833,
-      "Deaths": 385
-    },
-    "daily": {
-      "Cases": 388,
-      "Deaths": 15
-    }
-  },
-  {
-    "Province_State": "Goa",
-    "totals": {
-      "Cases": 24592,
-      "Deaths": 290
-    },
-    "daily": {
-      "Cases": 407,
-      "Deaths": 4
-    }
-  },
-  {
-    "Province_State": "Tripura",
-    "totals": {
-      "Cases": 19165,
-      "Deaths": 200
-    },
-    "daily": {
-      "Cases": 255,
-      "Deaths": 6
-    }
-  },
-  {
-    "Province_State": "Chandigarh",
-    "totals": {
-      "Cases": 7991,
-      "Deaths": 93
-    },
-    "daily": {
-      "Cases": 449,
+      "Cases": 51,
       "Deaths": 1
     }
   },
   {
-    "Province_State": "Himachal Pradesh",
+    "Province_State": "Lakshadweep",
     "totals": {
-      "Cases": 9555,
-      "Deaths": 77
+      "Cases": 0,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 326,
-      "Deaths": 4
+      "Cases": 0,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Andaman and Nicobar Islands",
+    "Province_State": "Madhya Pradesh",
     "totals": {
-      "Cases": 3546,
-      "Deaths": 51
+      "Cases": 88247,
+      "Deaths": 1762
     },
     "daily": {
-      "Cases": 25,
-      "Deaths": 0
+      "Cases": 2281,
+      "Deaths": 34
+    }
+  },
+  {
+    "Province_State": "Maharashtra",
+    "totals": {
+      "Cases": 1060308,
+      "Deaths": 29531
+    },
+    "daily": {
+      "Cases": 22543,
+      "Deaths": 416
     }
   },
   {
@@ -304,17 +238,6 @@
     },
     "daily": {
       "Cases": 144,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Ladakh",
-    "totals": {
-      "Cases": 3345,
-      "Deaths": 40
-    },
-    "daily": {
-      "Cases": 51,
       "Deaths": 1
     }
   },
@@ -330,24 +253,13 @@
     }
   },
   {
-    "Province_State": "Sikkim",
+    "Province_State": "Mizoram",
     "totals": {
-      "Cases": 2086,
-      "Deaths": 14
+      "Cases": 1428,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 31,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Arunachal Pradesh",
-    "totals": {
-      "Cases": 6121,
-      "Deaths": 10
-    },
-    "daily": {
-      "Cases": 146,
+      "Cases": 14,
       "Deaths": 0
     }
   },
@@ -363,36 +275,91 @@
     }
   },
   {
-    "Province_State": "Dadra and Nagar Haveli and Daman and Diu",
+    "Province_State": "Odisha",
     "totals": {
-      "Cases": 2745,
-      "Deaths": 2
+      "Cases": 150807,
+      "Deaths": 626
     },
     "daily": {
-      "Cases": 20,
-      "Deaths": 0
+      "Cases": 3913,
+      "Deaths": 10
     }
   },
   {
-    "Province_State": "Lakshadweep",
+    "Province_State": "Puducherry",
     "totals": {
-      "Cases": 0,
-      "Deaths": 0
+      "Cases": 19833,
+      "Deaths": 385
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
+      "Cases": 388,
+      "Deaths": 15
     }
   },
   {
-    "Province_State": "Mizoram",
+    "Province_State": "Punjab",
     "totals": {
-      "Cases": 1428,
-      "Deaths": 0
+      "Cases": 79679,
+      "Deaths": 2356
     },
     "daily": {
-      "Cases": 14,
-      "Deaths": 0
+      "Cases": 2622,
+      "Deaths": 68
+    }
+  },
+  {
+    "Province_State": "Rajasthan",
+    "totals": {
+      "Cases": 102408,
+      "Deaths": 1236
+    },
+    "daily": {
+      "Cases": 1703,
+      "Deaths": 15
+    }
+  },
+  {
+    "Province_State": "Sikkim",
+    "totals": {
+      "Cases": 2086,
+      "Deaths": 14
+    },
+    "daily": {
+      "Cases": 31,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Tamil Nadu",
+    "totals": {
+      "Cases": 502759,
+      "Deaths": 8381
+    },
+    "daily": {
+      "Cases": 5693,
+      "Deaths": 74
+    }
+  },
+  {
+    "Province_State": "Telangana",
+    "totals": {
+      "Cases": 158513,
+      "Deaths": 974
+    },
+    "daily": {
+      "Cases": 1417,
+      "Deaths": 13
+    }
+  },
+  {
+    "Province_State": "Tripura",
+    "totals": {
+      "Cases": 19165,
+      "Deaths": 200
+    },
+    "daily": {
+      "Cases": 255,
+      "Deaths": 6
     }
   },
   {
@@ -404,6 +371,39 @@
     "daily": {
       "Cases": 0,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Uttar Pradesh",
+    "totals": {
+      "Cases": 312036,
+      "Deaths": 4429
+    },
+    "daily": {
+      "Cases": 6205,
+      "Deaths": 80
+    }
+  },
+  {
+    "Province_State": "Uttarakhand",
+    "totals": {
+      "Cases": 31973,
+      "Deaths": 414
+    },
+    "daily": {
+      "Cases": 1637,
+      "Deaths": 12
+    }
+  },
+  {
+    "Province_State": "West Bengal",
+    "totals": {
+      "Cases": 202708,
+      "Deaths": 3945
+    },
+    "daily": {
+      "Cases": 3215,
+      "Deaths": 58
     }
   }
 ]

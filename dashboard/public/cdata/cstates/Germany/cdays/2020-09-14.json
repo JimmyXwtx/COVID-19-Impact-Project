@@ -1,16 +1,5 @@
 [
   {
-    "Province_State": "Bayern",
-    "totals": {
-      "Cases": 62145,
-      "Deaths": 2645
-    },
-    "daily": {
-      "Cases": 440,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Baden-Wurttemberg",
     "totals": {
       "Cases": 45468,
@@ -22,58 +11,14 @@
     }
   },
   {
-    "Province_State": "Nordrhein-Westfalen",
+    "Province_State": "Bayern",
     "totals": {
-      "Cases": 62261,
-      "Deaths": 1829
+      "Cases": 62145,
+      "Deaths": 2645
     },
     "daily": {
-      "Cases": 182,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Niedersachsen",
-    "totals": {
-      "Cases": 17957,
-      "Deaths": 667
-    },
-    "daily": {
-      "Cases": 64,
+      "Cases": 440,
       "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Hessen",
-    "totals": {
-      "Cases": 16877,
-      "Deaths": 539
-    },
-    "daily": {
-      "Cases": 69,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Hamburg",
-    "totals": {
-      "Cases": 6845,
-      "Deaths": 268
-    },
-    "daily": {
-      "Cases": 21,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Rheinland-Pfalz",
-    "totals": {
-      "Cases": 9768,
-      "Deaths": 247
-    },
-    "daily": {
-      "Cases": 14,
-      "Deaths": 1
     }
   },
   {
@@ -84,39 +29,6 @@
     },
     "daily": {
       "Cases": 85,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sachsen",
-    "totals": {
-      "Cases": 6405,
-      "Deaths": 226
-    },
-    "daily": {
-      "Cases": 40,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Thuringen",
-    "totals": {
-      "Cases": 3790,
-      "Deaths": 188
-    },
-    "daily": {
-      "Cases": 10,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Saarland",
-    "totals": {
-      "Cases": 3245,
-      "Deaths": 175
-    },
-    "daily": {
-      "Cases": 2,
       "Deaths": 0
     }
   },
@@ -132,13 +44,101 @@
     }
   },
   {
-    "Province_State": "Schleswig-Holstein",
+    "Province_State": "Bremen",
     "totals": {
-      "Cases": 4231,
-      "Deaths": 161
+      "Cases": 2141,
+      "Deaths": 58
+    },
+    "daily": {
+      "Cases": 11,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Hamburg",
+    "totals": {
+      "Cases": 6845,
+      "Deaths": 268
+    },
+    "daily": {
+      "Cases": 21,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Hessen",
+    "totals": {
+      "Cases": 16877,
+      "Deaths": 539
+    },
+    "daily": {
+      "Cases": 69,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Mecklenburg-Vorpommern",
+    "totals": {
+      "Cases": 1064,
+      "Deaths": 20
     },
     "daily": {
       "Cases": 9,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Niedersachsen",
+    "totals": {
+      "Cases": 17957,
+      "Deaths": 667
+    },
+    "daily": {
+      "Cases": 64,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Nordrhein-Westfalen",
+    "totals": {
+      "Cases": 62261,
+      "Deaths": 1829
+    },
+    "daily": {
+      "Cases": 182,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Rheinland-Pfalz",
+    "totals": {
+      "Cases": 9768,
+      "Deaths": 247
+    },
+    "daily": {
+      "Cases": 14,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Saarland",
+    "totals": {
+      "Cases": 3245,
+      "Deaths": 175
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sachsen",
+    "totals": {
+      "Cases": 6405,
+      "Deaths": 226
+    },
+    "daily": {
+      "Cases": 40,
       "Deaths": 0
     }
   },
@@ -154,24 +154,24 @@
     }
   },
   {
-    "Province_State": "Bremen",
+    "Province_State": "Schleswig-Holstein",
     "totals": {
-      "Cases": 2141,
-      "Deaths": 58
+      "Cases": 4231,
+      "Deaths": 161
     },
     "daily": {
-      "Cases": 11,
+      "Cases": 9,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Mecklenburg-Vorpommern",
+    "Province_State": "Thuringen",
     "totals": {
-      "Cases": 1064,
-      "Deaths": 20
+      "Cases": 3790,
+      "Deaths": 188
     },
     "daily": {
-      "Cases": 9,
+      "Cases": 10,
       "Deaths": 0
     }
   },

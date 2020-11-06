@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "British Columbia",
-    "totals": {
-      "Cases": 103,
-      "Deaths": 4
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ontario",
-    "totals": {
-      "Cases": 185,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 8,
-      "Deaths": 1
-    }
-  },
-  {
     "Province_State": "Alberta",
     "totals": {
       "Cases": 74,
@@ -33,13 +11,13 @@
     }
   },
   {
-    "Province_State": "Quebec",
+    "Province_State": "British Columbia",
     "totals": {
-      "Cases": 74,
-      "Deaths": 0
+      "Cases": 103,
+      "Deaths": 4
     },
     "daily": {
-      "Cases": 24,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -77,28 +55,6 @@
     }
   },
   {
-    "Province_State": "Nova Scotia",
-    "totals": {
-      "Cases": 7,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Saskatchewan",
-    "totals": {
-      "Cases": 7,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Newfoundland and Labrador",
     "totals": {
       "Cases": 3,
@@ -110,9 +66,53 @@
     }
   },
   {
+    "Province_State": "Nova Scotia",
+    "totals": {
+      "Cases": 7,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ontario",
+    "totals": {
+      "Cases": 185,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 8,
+      "Deaths": 1
+    }
+  },
+  {
     "Province_State": "Prince Edward Island",
     "totals": {
       "Cases": 1,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Quebec",
+    "totals": {
+      "Cases": 74,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 24,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Saskatchewan",
+    "totals": {
+      "Cases": 7,
       "Deaths": 0
     },
     "daily": {

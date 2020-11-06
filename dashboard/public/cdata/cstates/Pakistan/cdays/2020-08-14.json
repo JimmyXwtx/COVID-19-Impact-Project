@@ -1,45 +1,12 @@
 [
   {
-    "Province_State": "Sindh",
+    "Province_State": "Azad Jammu and Kashmir",
     "totals": {
-      "Cases": 125289,
-      "Deaths": 2307
+      "Cases": 2167,
+      "Deaths": 59
     },
     "daily": {
-      "Cases": 360,
-      "Deaths": 10
-    }
-  },
-  {
-    "Province_State": "Punjab",
-    "totals": {
-      "Cases": 94993,
-      "Deaths": 2180
-    },
-    "daily": {
-      "Cases": 128,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Khyber Pakhtunkhwa",
-    "totals": {
-      "Cases": 35021,
-      "Deaths": 1236
-    },
-    "daily": {
-      "Cases": 74,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Islamabad",
-    "totals": {
-      "Cases": 15342,
-      "Deaths": 173
-    },
-    "daily": {
-      "Cases": 19,
+      "Cases": 3,
       "Deaths": 0
     }
   },
@@ -66,14 +33,47 @@
     }
   },
   {
-    "Province_State": "Azad Jammu and Kashmir",
+    "Province_State": "Islamabad",
     "totals": {
-      "Cases": 2167,
-      "Deaths": 59
+      "Cases": 15342,
+      "Deaths": 173
     },
     "daily": {
-      "Cases": 3,
+      "Cases": 19,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Khyber Pakhtunkhwa",
+    "totals": {
+      "Cases": 35021,
+      "Deaths": 1236
+    },
+    "daily": {
+      "Cases": 74,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Punjab",
+    "totals": {
+      "Cases": 94993,
+      "Deaths": 2180
+    },
+    "daily": {
+      "Cases": 128,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Sindh",
+    "totals": {
+      "Cases": 125289,
+      "Deaths": 2307
+    },
+    "daily": {
+      "Cases": 360,
+      "Deaths": 10
     }
   }
 ]

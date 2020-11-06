@@ -1,5 +1,16 @@
 [
   {
+    "Province_State": "Australian Capital Territory",
+    "totals": {
+      "Cases": 53,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 14,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "New South Wales",
     "totals": {
       "Cases": 1219,
@@ -7,6 +18,50 @@
     },
     "daily": {
       "Cases": 190,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Northern Territory",
+    "totals": {
+      "Cases": 12,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 6,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Queensland",
+    "totals": {
+      "Cases": 493,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 50,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "South Australia",
+    "totals": {
+      "Cases": 235,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 65,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tasmania",
+    "totals": {
+      "Cases": 47,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 11,
       "Deaths": 0
     }
   },
@@ -30,61 +85,6 @@
     "daily": {
       "Cases": 56,
       "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Queensland",
-    "totals": {
-      "Cases": 493,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 50,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Australian Capital Territory",
-    "totals": {
-      "Cases": 53,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 14,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Northern Territory",
-    "totals": {
-      "Cases": 12,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 6,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "South Australia",
-    "totals": {
-      "Cases": 235,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 65,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tasmania",
-    "totals": {
-      "Cases": 47,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 11,
-      "Deaths": 0
     }
   }
 ]

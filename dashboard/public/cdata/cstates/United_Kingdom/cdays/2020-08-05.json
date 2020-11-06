@@ -1,64 +1,9 @@
 [
   {
-    "Province_State": "England",
+    "Province_State": "Anguilla",
     "totals": {
-      "Cases": 265023,
-      "Deaths": 41749
-    },
-    "daily": {
-      "Cases": 804,
-      "Deaths": 63
-    }
-  },
-  {
-    "Province_State": "Scotland",
-    "totals": {
-      "Cases": 18781,
-      "Deaths": 2491
-    },
-    "daily": {
-      "Cases": 64,
+      "Cases": 3,
       "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Wales",
-    "totals": {
-      "Cases": 17374,
-      "Deaths": 1568
-    },
-    "daily": {
-      "Cases": 13,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Northern Ireland",
-    "totals": {
-      "Cases": 6006,
-      "Deaths": 556
-    },
-    "daily": {
-      "Cases": 10,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Channel Islands",
-    "totals": {
-      "Cases": 596,
-      "Deaths": 47
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Isle of Man",
-    "totals": {
-      "Cases": 336,
-      "Deaths": 24
     },
     "daily": {
       "Cases": 0,
@@ -73,17 +18,6 @@
     },
     "daily": {
       "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Turks and Caicos Islands",
-    "totals": {
-      "Cases": 129,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 13,
       "Deaths": 0
     }
   },
@@ -110,25 +44,25 @@
     }
   },
   {
-    "Province_State": "Montserrat",
+    "Province_State": "Channel Islands",
     "totals": {
-      "Cases": 13,
-      "Deaths": 1
+      "Cases": 596,
+      "Deaths": 47
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 1,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Anguilla",
+    "Province_State": "England",
     "totals": {
-      "Cases": 3,
-      "Deaths": 0
+      "Cases": 265023,
+      "Deaths": 41749
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
+      "Cases": 804,
+      "Deaths": 63
     }
   },
   {
@@ -154,6 +88,61 @@
     }
   },
   {
+    "Province_State": "Isle of Man",
+    "totals": {
+      "Cases": 336,
+      "Deaths": 24
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Montserrat",
+    "totals": {
+      "Cases": 13,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Northern Ireland",
+    "totals": {
+      "Cases": 6006,
+      "Deaths": 556
+    },
+    "daily": {
+      "Cases": 10,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Scotland",
+    "totals": {
+      "Cases": 18781,
+      "Deaths": 2491
+    },
+    "daily": {
+      "Cases": 64,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Turks and Caicos Islands",
+    "totals": {
+      "Cases": 129,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 13,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Unknown",
     "totals": {
       "Cases": 0,
@@ -162,6 +151,17 @@
     "daily": {
       "Cases": 0,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Wales",
+    "totals": {
+      "Cases": 17374,
+      "Deaths": 1568
+    },
+    "daily": {
+      "Cases": 13,
+      "Deaths": 2
     }
   }
 ]

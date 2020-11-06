@@ -1,24 +1,13 @@
 [
   {
-    "Province_State": "Quebec",
+    "Province_State": "Alberta",
     "totals": {
-      "Cases": 10912,
-      "Deaths": 216
+      "Cases": 1423,
+      "Deaths": 29
     },
     "daily": {
-      "Cases": 881,
-      "Deaths": 41
-    }
-  },
-  {
-    "Province_State": "Ontario",
-    "totals": {
-      "Cases": 5759,
-      "Deaths": 200
-    },
-    "daily": {
-      "Cases": 483,
-      "Deaths": 47
+      "Cases": 50,
+      "Deaths": 3
     }
   },
   {
@@ -33,14 +22,25 @@
     }
   },
   {
-    "Province_State": "Alberta",
+    "Province_State": "Diamond Princess",
     "totals": {
-      "Cases": 1423,
-      "Deaths": 29
+      "Cases": 0,
+      "Deaths": 1
     },
     "daily": {
-      "Cases": 50,
-      "Deaths": 3
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Grand Princess",
+    "totals": {
+      "Cases": 13,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
     }
   },
   {
@@ -55,13 +55,13 @@
     }
   },
   {
-    "Province_State": "Saskatchewan",
+    "Province_State": "New Brunswick",
     "totals": {
-      "Cases": 271,
-      "Deaths": 3
+      "Cases": 108,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 11,
+      "Cases": 3,
       "Deaths": 0
     }
   },
@@ -77,10 +77,10 @@
     }
   },
   {
-    "Province_State": "Diamond Princess",
+    "Province_State": "Northwest Territories",
     "totals": {
-      "Cases": 0,
-      "Deaths": 1
+      "Cases": 5,
+      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
@@ -99,36 +99,14 @@
     }
   },
   {
-    "Province_State": "Grand Princess",
+    "Province_State": "Ontario",
     "totals": {
-      "Cases": 13,
-      "Deaths": 0
+      "Cases": 5759,
+      "Deaths": 200
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "New Brunswick",
-    "totals": {
-      "Cases": 108,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Northwest Territories",
-    "totals": {
-      "Cases": 5,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
+      "Cases": 483,
+      "Deaths": 47
     }
   },
   {
@@ -140,6 +118,28 @@
     "daily": {
       "Cases": 0,
       "Deaths": -1
+    }
+  },
+  {
+    "Province_State": "Quebec",
+    "totals": {
+      "Cases": 10912,
+      "Deaths": 216
+    },
+    "daily": {
+      "Cases": 881,
+      "Deaths": 41
+    }
+  },
+  {
+    "Province_State": "Saskatchewan",
+    "totals": {
+      "Cases": 271,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 11,
+      "Deaths": 0
     }
   },
   {

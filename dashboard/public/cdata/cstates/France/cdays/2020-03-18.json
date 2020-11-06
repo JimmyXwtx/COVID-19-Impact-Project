@@ -1,38 +1,5 @@
 [
   {
-    "Province_State": "French Polynesia",
-    "totals": {
-      "Cases": 3,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Saint Barthelemy",
-    "totals": {
-      "Cases": 3,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "St Martin",
-    "totals": {
-      "Cases": 3,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "French Guiana",
     "totals": {
       "Cases": 0,
@@ -40,6 +7,17 @@
     },
     "daily": {
       "Cases": -7,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "French Polynesia",
+    "totals": {
+      "Cases": 3,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -73,6 +51,28 @@
     },
     "daily": {
       "Cases": -9,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Saint Barthelemy",
+    "totals": {
+      "Cases": 3,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "St Martin",
+    "totals": {
+      "Cases": 3,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
       "Deaths": 0
     }
   }

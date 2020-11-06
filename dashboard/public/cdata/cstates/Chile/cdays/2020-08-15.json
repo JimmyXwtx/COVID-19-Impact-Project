@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Metropolitana",
-    "totals": {
-      "Cases": 265515,
-      "Deaths": 8074
-    },
-    "daily": {
-      "Cases": 526,
-      "Deaths": 30
-    }
-  },
-  {
-    "Province_State": "Valparaiso",
-    "totals": {
-      "Cases": 20069,
-      "Deaths": 600
-    },
-    "daily": {
-      "Cases": 182,
-      "Deaths": 5
-    }
-  },
-  {
     "Province_State": "Antofagasta",
     "totals": {
       "Cases": 16669,
@@ -33,35 +11,46 @@
     }
   },
   {
-    "Province_State": "OHiggins",
+    "Province_State": "Araucania",
     "totals": {
-      "Cases": 12097,
-      "Deaths": 299
+      "Cases": 4610,
+      "Deaths": 85
     },
     "daily": {
-      "Cases": 62,
-      "Deaths": 4
+      "Cases": 46,
+      "Deaths": 1
     }
   },
   {
-    "Province_State": "Maule",
+    "Province_State": "Arica y Parinacota",
     "totals": {
-      "Cases": 10292,
-      "Deaths": 218
+      "Cases": 5692,
+      "Deaths": 82
     },
     "daily": {
-      "Cases": 98,
+      "Cases": 97,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Atacama",
+    "totals": {
+      "Cases": 4447,
+      "Deaths": 26
+    },
+    "daily": {
+      "Cases": 135,
       "Deaths": 2
     }
   },
   {
-    "Province_State": "Tarapaca",
+    "Province_State": "Aysen",
     "totals": {
-      "Cases": 9825,
-      "Deaths": 185
+      "Cases": 96,
+      "Deaths": 1
     },
     "daily": {
-      "Cases": 52,
+      "Cases": 1,
       "Deaths": 0
     }
   },
@@ -88,39 +77,6 @@
     }
   },
   {
-    "Province_State": "Araucania",
-    "totals": {
-      "Cases": 4610,
-      "Deaths": 85
-    },
-    "daily": {
-      "Cases": 46,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Arica y Parinacota",
-    "totals": {
-      "Cases": 5692,
-      "Deaths": 82
-    },
-    "daily": {
-      "Cases": 97,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Nuble",
-    "totals": {
-      "Cases": 3950,
-      "Deaths": 73
-    },
-    "daily": {
-      "Cases": 8,
-      "Deaths": 2
-    }
-  },
-  {
     "Province_State": "Los Lagos",
     "totals": {
       "Cases": 5418,
@@ -128,6 +84,17 @@
     },
     "daily": {
       "Cases": 92,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Los Rios",
+    "totals": {
+      "Cases": 1005,
+      "Deaths": 15
+    },
+    "daily": {
+      "Cases": 3,
       "Deaths": 0
     }
   },
@@ -143,35 +110,57 @@
     }
   },
   {
-    "Province_State": "Atacama",
+    "Province_State": "Maule",
     "totals": {
-      "Cases": 4447,
-      "Deaths": 26
+      "Cases": 10292,
+      "Deaths": 218
     },
     "daily": {
-      "Cases": 135,
+      "Cases": 98,
       "Deaths": 2
     }
   },
   {
-    "Province_State": "Los Rios",
+    "Province_State": "Metropolitana",
     "totals": {
-      "Cases": 1005,
-      "Deaths": 15
+      "Cases": 265515,
+      "Deaths": 8074
     },
     "daily": {
-      "Cases": 3,
-      "Deaths": 0
+      "Cases": 526,
+      "Deaths": 30
     }
   },
   {
-    "Province_State": "Aysen",
+    "Province_State": "Nuble",
     "totals": {
-      "Cases": 96,
-      "Deaths": 1
+      "Cases": 3950,
+      "Deaths": 73
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 8,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "OHiggins",
+    "totals": {
+      "Cases": 12097,
+      "Deaths": 299
+    },
+    "daily": {
+      "Cases": 62,
+      "Deaths": 4
+    }
+  },
+  {
+    "Province_State": "Tarapaca",
+    "totals": {
+      "Cases": 9825,
+      "Deaths": 185
+    },
+    "daily": {
+      "Cases": 52,
       "Deaths": 0
     }
   },
@@ -184,6 +173,17 @@
     "daily": {
       "Cases": -2,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Valparaiso",
+    "totals": {
+      "Cases": 20069,
+      "Deaths": 600
+    },
+    "daily": {
+      "Cases": 182,
+      "Deaths": 5
     }
   }
 ]

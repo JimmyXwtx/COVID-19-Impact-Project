@@ -1,16 +1,5 @@
 [
   {
-    "Province_State": "Ontario",
-    "totals": {
-      "Cases": 3,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "British Columbia",
     "totals": {
       "Cases": 1,
@@ -18,6 +7,17 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ontario",
+    "totals": {
+      "Cases": 3,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
       "Deaths": 0
     }
   }

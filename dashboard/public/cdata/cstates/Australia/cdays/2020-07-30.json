@@ -1,13 +1,13 @@
 [
   {
-    "Province_State": "Victoria",
+    "Province_State": "Australian Capital Territory",
     "totals": {
-      "Cases": 10577,
-      "Deaths": 112
+      "Cases": 113,
+      "Deaths": 3
     },
     "daily": {
-      "Cases": 579,
-      "Deaths": 7
+      "Cases": 0,
+      "Deaths": 0
     }
   },
   {
@@ -22,24 +22,13 @@
     }
   },
   {
-    "Province_State": "Tasmania",
+    "Province_State": "Northern Territory",
     "totals": {
-      "Cases": 229,
-      "Deaths": 13
+      "Cases": 31,
+      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Western Australia",
-    "totals": {
-      "Cases": 665,
-      "Deaths": 9
-    },
-    "daily": {
-      "Cases": 4,
       "Deaths": 0
     }
   },
@@ -66,10 +55,10 @@
     }
   },
   {
-    "Province_State": "Australian Capital Territory",
+    "Province_State": "Tasmania",
     "totals": {
-      "Cases": 113,
-      "Deaths": 3
+      "Cases": 229,
+      "Deaths": 13
     },
     "daily": {
       "Cases": 0,
@@ -77,13 +66,24 @@
     }
   },
   {
-    "Province_State": "Northern Territory",
+    "Province_State": "Victoria",
     "totals": {
-      "Cases": 31,
-      "Deaths": 0
+      "Cases": 10577,
+      "Deaths": 112
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 579,
+      "Deaths": 7
+    }
+  },
+  {
+    "Province_State": "Western Australia",
+    "totals": {
+      "Cases": 665,
+      "Deaths": 9
+    },
+    "daily": {
+      "Cases": 4,
       "Deaths": 0
     }
   }

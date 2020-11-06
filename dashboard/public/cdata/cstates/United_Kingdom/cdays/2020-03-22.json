@@ -1,5 +1,16 @@
 [
   {
+    "Province_State": "Bermuda",
+    "totals": {
+      "Cases": 2,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Cayman Islands",
     "totals": {
       "Cases": 3,
@@ -40,17 +51,6 @@
     },
     "daily": {
       "Cases": 4,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Bermuda",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
       "Deaths": 0
     }
   },

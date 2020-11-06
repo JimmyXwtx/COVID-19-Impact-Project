@@ -1,16 +1,5 @@
 [
   {
-    "Province_State": "Unknown",
-    "totals": {
-      "Cases": 0,
-      "Deaths": 1188
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 1188
-    }
-  },
-  {
     "Province_State": "Antofagasta",
     "totals": {
       "Cases": 2649,
@@ -173,6 +162,17 @@
     "daily": {
       "Cases": 68,
       "Deaths": -22
+    }
+  },
+  {
+    "Province_State": "Unknown",
+    "totals": {
+      "Cases": 0,
+      "Deaths": 1188
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 1188
     }
   },
   {

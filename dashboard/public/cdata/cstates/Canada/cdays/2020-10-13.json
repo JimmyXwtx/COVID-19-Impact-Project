@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Quebec",
-    "totals": {
-      "Cases": 87791,
-      "Deaths": 5970
-    },
-    "daily": {
-      "Cases": 815,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Ontario",
-    "totals": {
-      "Cases": 63300,
-      "Deaths": 3069
-    },
-    "daily": {
-      "Cases": 1622,
-      "Deaths": 13
-    }
-  },
-  {
     "Province_State": "Alberta",
     "totals": {
       "Cases": 20956,
@@ -41,61 +19,6 @@
     "daily": {
       "Cases": 549,
       "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Nova Scotia",
-    "totals": {
-      "Cases": 1092,
-      "Deaths": 65
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Manitoba",
-    "totals": {
-      "Cases": 2779,
-      "Deaths": 35
-    },
-    "daily": {
-      "Cases": 124,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Saskatchewan",
-    "totals": {
-      "Cases": 2174,
-      "Deaths": 25
-    },
-    "daily": {
-      "Cases": 34,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Newfoundland and Labrador",
-    "totals": {
-      "Cases": 283,
-      "Deaths": 4
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "New Brunswick",
-    "totals": {
-      "Cases": 284,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 6,
-      "Deaths": 0
     }
   },
   {
@@ -121,6 +44,39 @@
     }
   },
   {
+    "Province_State": "Manitoba",
+    "totals": {
+      "Cases": 2779,
+      "Deaths": 35
+    },
+    "daily": {
+      "Cases": 124,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "New Brunswick",
+    "totals": {
+      "Cases": 284,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 6,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Newfoundland and Labrador",
+    "totals": {
+      "Cases": 283,
+      "Deaths": 4
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Northwest Territories",
     "totals": {
       "Cases": 5,
@@ -132,6 +88,28 @@
     }
   },
   {
+    "Province_State": "Nova Scotia",
+    "totals": {
+      "Cases": 1092,
+      "Deaths": 65
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ontario",
+    "totals": {
+      "Cases": 63300,
+      "Deaths": 3069
+    },
+    "daily": {
+      "Cases": 1622,
+      "Deaths": 13
+    }
+  },
+  {
     "Province_State": "Prince Edward Island",
     "totals": {
       "Cases": 63,
@@ -139,6 +117,28 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Quebec",
+    "totals": {
+      "Cases": 87791,
+      "Deaths": 5970
+    },
+    "daily": {
+      "Cases": 815,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Saskatchewan",
+    "totals": {
+      "Cases": 2174,
+      "Deaths": 25
+    },
+    "daily": {
+      "Cases": 34,
       "Deaths": 0
     }
   },

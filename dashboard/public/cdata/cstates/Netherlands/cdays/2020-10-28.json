@@ -1,79 +1,46 @@
 [
   {
-    "Province_State": "Noord-Brabant",
+    "Province_State": "Aruba",
     "totals": {
-      "Cases": 47869,
-      "Deaths": 1674
+      "Cases": 4455,
+      "Deaths": 37
     },
     "daily": {
-      "Cases": 1680,
-      "Deaths": 6
-    }
-  },
-  {
-    "Province_State": "Zuid-Holland",
-    "totals": {
-      "Cases": 93886,
-      "Deaths": 1668
-    },
-    "daily": {
-      "Cases": 2148,
-      "Deaths": 21
-    }
-  },
-  {
-    "Province_State": "Noord-Holland",
-    "totals": {
-      "Cases": 62062,
-      "Deaths": 997
-    },
-    "daily": {
-      "Cases": 1351,
-      "Deaths": 14
-    }
-  },
-  {
-    "Province_State": "Limburg",
-    "totals": {
-      "Cases": 14391,
-      "Deaths": 793
-    },
-    "daily": {
-      "Cases": 313,
+      "Cases": 18,
       "Deaths": 1
     }
   },
   {
-    "Province_State": "Gelderland",
+    "Province_State": "Bonaire, Sint Eustatius and Saba",
     "totals": {
-      "Cases": 29851,
-      "Deaths": 782
+      "Cases": 150,
+      "Deaths": 3
     },
     "daily": {
-      "Cases": 918,
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Curacao",
+    "totals": {
+      "Cases": 907,
       "Deaths": 1
+    },
+    "daily": {
+      "Cases": 23,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Utrecht",
+    "Province_State": "Drenthe",
     "totals": {
-      "Cases": 27856,
-      "Deaths": 494
+      "Cases": 4756,
+      "Deaths": 76
     },
     "daily": {
-      "Cases": 570,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Overijssel",
-    "totals": {
-      "Cases": 17183,
-      "Deaths": 397
-    },
-    "daily": {
-      "Cases": 379,
-      "Deaths": 10
+      "Cases": 83,
+      "Deaths": 0
     }
   },
   {
@@ -99,35 +66,13 @@
     }
   },
   {
-    "Province_State": "Zeeland",
+    "Province_State": "Gelderland",
     "totals": {
-      "Cases": 3104,
-      "Deaths": 80
+      "Cases": 29851,
+      "Deaths": 782
     },
     "daily": {
-      "Cases": 94,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Drenthe",
-    "totals": {
-      "Cases": 4756,
-      "Deaths": 76
-    },
-    "daily": {
-      "Cases": 83,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Aruba",
-    "totals": {
-      "Cases": 4455,
-      "Deaths": 37
-    },
-    "daily": {
-      "Cases": 18,
+      "Cases": 918,
       "Deaths": 1
     }
   },
@@ -143,14 +88,47 @@
     }
   },
   {
-    "Province_State": "Unknown",
+    "Province_State": "Limburg",
     "totals": {
-      "Cases": 2203,
-      "Deaths": 23
+      "Cases": 14391,
+      "Deaths": 793
     },
     "daily": {
-      "Cases": 38,
+      "Cases": 313,
       "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Noord-Brabant",
+    "totals": {
+      "Cases": 47869,
+      "Deaths": 1674
+    },
+    "daily": {
+      "Cases": 1680,
+      "Deaths": 6
+    }
+  },
+  {
+    "Province_State": "Noord-Holland",
+    "totals": {
+      "Cases": 62062,
+      "Deaths": 997
+    },
+    "daily": {
+      "Cases": 1351,
+      "Deaths": 14
+    }
+  },
+  {
+    "Province_State": "Overijssel",
+    "totals": {
+      "Cases": 17183,
+      "Deaths": 397
+    },
+    "daily": {
+      "Cases": 379,
+      "Deaths": 10
     }
   },
   {
@@ -165,25 +143,47 @@
     }
   },
   {
-    "Province_State": "Bonaire, Sint Eustatius and Saba",
+    "Province_State": "Unknown",
     "totals": {
-      "Cases": 150,
-      "Deaths": 3
+      "Cases": 2203,
+      "Deaths": 23
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 38,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Utrecht",
+    "totals": {
+      "Cases": 27856,
+      "Deaths": 494
+    },
+    "daily": {
+      "Cases": 570,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Zeeland",
+    "totals": {
+      "Cases": 3104,
+      "Deaths": 80
+    },
+    "daily": {
+      "Cases": 94,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Curacao",
+    "Province_State": "Zuid-Holland",
     "totals": {
-      "Cases": 907,
-      "Deaths": 1
+      "Cases": 93886,
+      "Deaths": 1668
     },
     "daily": {
-      "Cases": 23,
-      "Deaths": 0
+      "Cases": 2148,
+      "Deaths": 21
     }
   }
 ]

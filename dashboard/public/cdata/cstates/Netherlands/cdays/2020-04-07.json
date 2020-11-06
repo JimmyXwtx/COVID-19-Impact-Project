@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Sint Maarten",
-    "totals": {
-      "Cases": 40,
-      "Deaths": 6
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Curacao",
-    "totals": {
-      "Cases": 13,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Aruba",
     "totals": {
       "Cases": 74,
@@ -40,6 +18,28 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Curacao",
+    "totals": {
+      "Cases": 13,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sint Maarten",
+    "totals": {
+      "Cases": 40,
+      "Deaths": 6
+    },
+    "daily": {
+      "Cases": 3,
       "Deaths": 0
     }
   }

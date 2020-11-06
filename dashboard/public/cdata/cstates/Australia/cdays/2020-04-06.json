@@ -1,5 +1,16 @@
 [
   {
+    "Province_State": "Australian Capital Territory",
+    "totals": {
+      "Cases": 96,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "New South Wales",
     "totals": {
       "Cases": 2637,
@@ -11,14 +22,14 @@
     }
   },
   {
-    "Province_State": "Victoria",
+    "Province_State": "Northern Territory",
     "totals": {
-      "Cases": 1158,
-      "Deaths": 10
+      "Cases": 28,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 23,
-      "Deaths": 2
+      "Cases": 1,
+      "Deaths": 0
     }
   },
   {
@@ -33,24 +44,13 @@
     }
   },
   {
-    "Province_State": "Western Australia",
+    "Province_State": "South Australia",
     "totals": {
-      "Cases": 460,
-      "Deaths": 4
+      "Cases": 411,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 7,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Australian Capital Territory",
-    "totals": {
-      "Cases": 96,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 0,
+      "Cases": 4,
       "Deaths": 0
     }
   },
@@ -66,25 +66,25 @@
     }
   },
   {
-    "Province_State": "Northern Territory",
+    "Province_State": "Victoria",
     "totals": {
-      "Cases": 28,
-      "Deaths": 0
+      "Cases": 1158,
+      "Deaths": 10
     },
     "daily": {
-      "Cases": 1,
-      "Deaths": 0
+      "Cases": 23,
+      "Deaths": 2
     }
   },
   {
-    "Province_State": "South Australia",
+    "Province_State": "Western Australia",
     "totals": {
-      "Cases": 411,
-      "Deaths": 0
+      "Cases": 460,
+      "Deaths": 4
     },
     "daily": {
-      "Cases": 4,
-      "Deaths": 0
+      "Cases": 7,
+      "Deaths": 1
     }
   }
 ]

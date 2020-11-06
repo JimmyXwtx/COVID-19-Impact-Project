@@ -1,115 +1,5 @@
 [
   {
-    "Province_State": "Lombardia",
-    "totals": {
-      "Cases": 91658,
-      "Deaths": 16449
-    },
-    "daily": {
-      "Cases": 244,
-      "Deaths": 21
-    }
-  },
-  {
-    "Province_State": "Emilia-Romagna",
-    "totals": {
-      "Cases": 28073,
-      "Deaths": 4204
-    },
-    "daily": {
-      "Cases": 17,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Piemonte",
-    "totals": {
-      "Cases": 31059,
-      "Deaths": 4012
-    },
-    "daily": {
-      "Cases": 30,
-      "Deaths": 6
-    }
-  },
-  {
-    "Province_State": "Veneto",
-    "totals": {
-      "Cases": 19219,
-      "Deaths": 1978
-    },
-    "daily": {
-      "Cases": 7,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Liguria",
-    "totals": {
-      "Cases": 9879,
-      "Deaths": 1521
-    },
-    "daily": {
-      "Cases": 4,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Toscana",
-    "totals": {
-      "Cases": 10180,
-      "Deaths": 1085
-    },
-    "daily": {
-      "Cases": 8,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Marche",
-    "totals": {
-      "Cases": 6758,
-      "Deaths": 993
-    },
-    "daily": {
-      "Cases": 4,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Lazio",
-    "totals": {
-      "Cases": 7955,
-      "Deaths": 808
-    },
-    "daily": {
-      "Cases": 14,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Puglia",
-    "totals": {
-      "Cases": 4515,
-      "Deaths": 532
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "P.A. Trento",
-    "totals": {
-      "Cases": 4447,
-      "Deaths": 464
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Abruzzo",
     "totals": {
       "Cases": 3279,
@@ -121,65 +11,10 @@
     }
   },
   {
-    "Province_State": "Campania",
+    "Province_State": "Basilicata",
     "totals": {
-      "Cases": 4609,
-      "Deaths": 430
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Friuli Venezia Giulia",
-    "totals": {
-      "Cases": 3296,
-      "Deaths": 343
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "P.A. Bolzano",
-    "totals": {
-      "Cases": 2613,
-      "Deaths": 291
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sicilia",
-    "totals": {
-      "Cases": 3457,
-      "Deaths": 279
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Valle d'Aosta",
-    "totals": {
-      "Cases": 1191,
-      "Deaths": 144
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sardegna",
-    "totals": {
-      "Cases": 1363,
-      "Deaths": 132
+      "Cases": 401,
+      "Deaths": 27
     },
     "daily": {
       "Cases": 0,
@@ -198,24 +33,79 @@
     }
   },
   {
-    "Province_State": "Umbria",
+    "Province_State": "Campania",
     "totals": {
-      "Cases": 1436,
-      "Deaths": 77
+      "Cases": 4609,
+      "Deaths": 430
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 1
+      "Cases": 1,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Basilicata",
+    "Province_State": "Emilia-Romagna",
     "totals": {
-      "Cases": 401,
-      "Deaths": 27
+      "Cases": 28073,
+      "Deaths": 4204
+    },
+    "daily": {
+      "Cases": 17,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Friuli Venezia Giulia",
+    "totals": {
+      "Cases": 3296,
+      "Deaths": 343
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Lazio",
+    "totals": {
+      "Cases": 7955,
+      "Deaths": 808
+    },
+    "daily": {
+      "Cases": 14,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Liguria",
+    "totals": {
+      "Cases": 9879,
+      "Deaths": 1521
+    },
+    "daily": {
+      "Cases": 4,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Lombardia",
+    "totals": {
+      "Cases": 91658,
+      "Deaths": 16449
+    },
+    "daily": {
+      "Cases": 244,
+      "Deaths": 21
+    }
+  },
+  {
+    "Province_State": "Marche",
+    "totals": {
+      "Cases": 6758,
+      "Deaths": 993
+    },
+    "daily": {
+      "Cases": 4,
       "Deaths": 0
     }
   },
@@ -228,6 +118,116 @@
     "daily": {
       "Cases": 0,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "P.A. Bolzano",
+    "totals": {
+      "Cases": 2613,
+      "Deaths": 291
+    },
+    "daily": {
+      "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "P.A. Trento",
+    "totals": {
+      "Cases": 4447,
+      "Deaths": 464
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Piemonte",
+    "totals": {
+      "Cases": 31059,
+      "Deaths": 4012
+    },
+    "daily": {
+      "Cases": 30,
+      "Deaths": 6
+    }
+  },
+  {
+    "Province_State": "Puglia",
+    "totals": {
+      "Cases": 4515,
+      "Deaths": 532
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sardegna",
+    "totals": {
+      "Cases": 1363,
+      "Deaths": 132
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sicilia",
+    "totals": {
+      "Cases": 3457,
+      "Deaths": 279
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Toscana",
+    "totals": {
+      "Cases": 10180,
+      "Deaths": 1085
+    },
+    "daily": {
+      "Cases": 8,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Umbria",
+    "totals": {
+      "Cases": 1436,
+      "Deaths": 77
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Valle d'Aosta",
+    "totals": {
+      "Cases": 1191,
+      "Deaths": 144
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Veneto",
+    "totals": {
+      "Cases": 19219,
+      "Deaths": 1978
+    },
+    "daily": {
+      "Cases": 7,
+      "Deaths": 1
     }
   }
 ]

@@ -1,89 +1,12 @@
 [
   {
-    "Province_State": "Stockholm",
+    "Province_State": "Blekinge",
     "totals": {
-      "Cases": 24387,
-      "Deaths": 2392
+      "Cases": 590,
+      "Deaths": 16
     },
     "daily": {
-      "Cases": 52,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Vastra Gotaland",
-    "totals": {
-      "Cases": 19898,
-      "Deaths": 849
-    },
-    "daily": {
-      "Cases": 85,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Skane",
-    "totals": {
-      "Cases": 4381,
-      "Deaths": 282
-    },
-    "daily": {
-      "Cases": 55,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ostergotland",
-    "totals": {
-      "Cases": 3728,
-      "Deaths": 263
-    },
-    "daily": {
-      "Cases": 5,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Sormland",
-    "totals": {
-      "Cases": 2429,
-      "Deaths": 253
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Uppsala",
-    "totals": {
-      "Cases": 3707,
-      "Deaths": 241
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Vastmanland",
-    "totals": {
-      "Cases": 2750,
-      "Deaths": 183
-    },
-    "daily": {
-      "Cases": 4,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Jonkoping",
-    "totals": {
-      "Cases": 4901,
-      "Deaths": 181
-    },
-    "daily": {
-      "Cases": 14,
+      "Cases": 3,
       "Deaths": 0
     }
   },
@@ -99,17 +22,6 @@
     }
   },
   {
-    "Province_State": "Orebro",
-    "totals": {
-      "Cases": 2642,
-      "Deaths": 171
-    },
-    "daily": {
-      "Cases": 4,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Gavleborg",
     "totals": {
       "Cases": 3246,
@@ -121,13 +33,57 @@
     }
   },
   {
-    "Province_State": "Vasternorrland",
+    "Province_State": "Gotland",
     "totals": {
-      "Cases": 1862,
-      "Deaths": 132
+      "Cases": 311,
+      "Deaths": 6
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Halland",
+    "totals": {
+      "Cases": 2020,
+      "Deaths": 81
     },
     "daily": {
       "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Jamtland Harjedalen",
+    "totals": {
+      "Cases": 1173,
+      "Deaths": 62
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Jonkoping",
+    "totals": {
+      "Cases": 4901,
+      "Deaths": 181
+    },
+    "daily": {
+      "Cases": 14,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Kalmar",
+    "totals": {
+      "Cases": 844,
+      "Deaths": 63
+    },
+    "daily": {
+      "Cases": 7,
       "Deaths": 0
     }
   },
@@ -154,13 +110,68 @@
     }
   },
   {
-    "Province_State": "Halland",
+    "Province_State": "Orebro",
     "totals": {
-      "Cases": 2020,
-      "Deaths": 81
+      "Cases": 2642,
+      "Deaths": 171
+    },
+    "daily": {
+      "Cases": 4,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ostergotland",
+    "totals": {
+      "Cases": 3728,
+      "Deaths": 263
+    },
+    "daily": {
+      "Cases": 5,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Skane",
+    "totals": {
+      "Cases": 4381,
+      "Deaths": 282
+    },
+    "daily": {
+      "Cases": 55,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sormland",
+    "totals": {
+      "Cases": 2429,
+      "Deaths": 253
     },
     "daily": {
       "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Stockholm",
+    "totals": {
+      "Cases": 24387,
+      "Deaths": 2392
+    },
+    "daily": {
+      "Cases": 52,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Uppsala",
+    "totals": {
+      "Cases": 3707,
+      "Deaths": 241
+    },
+    "daily": {
+      "Cases": 1,
       "Deaths": 0
     }
   },
@@ -176,28 +187,6 @@
     }
   },
   {
-    "Province_State": "Kalmar",
-    "totals": {
-      "Cases": 844,
-      "Deaths": 63
-    },
-    "daily": {
-      "Cases": 7,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Jamtland Harjedalen",
-    "totals": {
-      "Cases": 1173,
-      "Deaths": 62
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Vasterbotten",
     "totals": {
       "Cases": 974,
@@ -209,25 +198,36 @@
     }
   },
   {
-    "Province_State": "Blekinge",
+    "Province_State": "Vasternorrland",
     "totals": {
-      "Cases": 590,
-      "Deaths": 16
+      "Cases": 1862,
+      "Deaths": 132
     },
     "daily": {
-      "Cases": 3,
+      "Cases": 2,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Gotland",
+    "Province_State": "Vastmanland",
     "totals": {
-      "Cases": 311,
-      "Deaths": 6
+      "Cases": 2750,
+      "Deaths": 183
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 4,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Vastra Gotaland",
+    "totals": {
+      "Cases": 19898,
+      "Deaths": 849
+    },
+    "daily": {
+      "Cases": 85,
+      "Deaths": 1
     }
   }
 ]

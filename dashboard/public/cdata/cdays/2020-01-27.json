@@ -1,5 +1,38 @@
 [
   {
+    "Country_Region": "Australia",
+    "totals": {
+      "Cases": 5,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Cambodia",
+    "totals": {
+      "Cases": 1,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Canada",
+    "totals": {
+      "Cases": 1,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "China",
     "totals": {
       "Cases": 2871,
@@ -11,35 +44,24 @@
     }
   },
   {
-    "Country_Region": "Macau",
+    "Country_Region": "France",
     "totals": {
-      "Cases": 6,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Taiwan*",
-    "totals": {
-      "Cases": 5,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "United States",
-    "totals": {
-      "Cases": 5,
+      "Cases": 3,
       "Deaths": 0
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Ivory Coast",
+    "totals": {
+      "Cases": 1,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
       "Deaths": 0
     }
   },
@@ -47,17 +69,6 @@
     "Country_Region": "Japan",
     "totals": {
       "Cases": 4,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Thailand",
-    "totals": {
-      "Cases": 8,
       "Deaths": 0
     },
     "daily": {
@@ -77,9 +88,9 @@
     }
   },
   {
-    "Country_Region": "Singapore",
+    "Country_Region": "Macau",
     "totals": {
-      "Cases": 5,
+      "Cases": 6,
       "Deaths": 0
     },
     "daily": {
@@ -88,20 +99,9 @@
     }
   },
   {
-    "Country_Region": "Vietnam",
+    "Country_Region": "Malaysia",
     "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "France",
-    "totals": {
-      "Cases": 3,
+      "Cases": 4,
       "Deaths": 0
     },
     "daily": {
@@ -121,31 +121,9 @@
     }
   },
   {
-    "Country_Region": "Malaysia",
+    "Country_Region": "Singapore",
     "totals": {
-      "Cases": 4,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Canada",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Cambodia",
-    "totals": {
-      "Cases": 1,
+      "Cases": 5,
       "Deaths": 0
     },
     "daily": {
@@ -165,9 +143,9 @@
     }
   },
   {
-    "Country_Region": "Ivory Coast",
+    "Country_Region": "Taiwan*",
     "totals": {
-      "Cases": 1,
+      "Cases": 5,
       "Deaths": 0
     },
     "daily": {
@@ -176,13 +154,35 @@
     }
   },
   {
-    "Country_Region": "Australia",
+    "Country_Region": "Thailand",
+    "totals": {
+      "Cases": 8,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "United States",
     "totals": {
       "Cases": 5,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Vietnam",
+    "totals": {
+      "Cases": 2,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   }

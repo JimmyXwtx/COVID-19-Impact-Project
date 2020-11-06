@@ -11,8 +11,9 @@ const argv = require('yargs').argv;
 
 // const nlimit = 5;
 const nlimit = 0;
-const silent = argv.silent;
+const argv_silent = argv.silent;
 const argv_detail = argv.detail;
+const argv_sort_deaths = argv.sort_deaths;
 
 // const { rename_item, find_population } = require('./country');
 const { rename_item } = require('./country');
@@ -142,21 +143,19 @@ function process_cvs(cvs_inpath, file_date) {
     // console.log('file_date', file_date, 'country', country, 'ent', ent);
     const ncountry = country.replace(/ /g, '_').replace(/,/g, '');
     let cpath = path.resolve(store_dir, 'cstates', ncountry);
-    // fs.ensureDirSync(cpath);
     write_daily(ent, file_date, cpath);
   }
-  // const sums = Object.values(sums_country);
-  // sums.sort((item1, item2) => item2.totals.Deaths - item1.totals.Deaths);
-  // const fname = file_date + '.json';
-  // const outpath_country = path.resolve(store_path_cdays, fname);
-  // // const outpath_detail = path.resolve(store_path_uregion, fname);
-  // if (!silent) dump(records, sums_total, sums, cvs_inpath, outpath_country)
-  // fs.writeJsonSync(outpath_country, sums, { spaces: 2 });
 }
 
 function write_daily(sums_country, file_date, path_root) {
-  const sums = Object.values(sums_country);
-  sums.sort((item1, item2) => item2.totals.Deaths - item1.totals.Deaths);
+  let sums;
+  if (argv_sort_deaths) {
+    sums = Object.values(sums_country);
+    sums.sort((item1, item2) => item2.totals.Deaths - item1.totals.Deaths);
+  } else {
+    const keys = Object.keys(sums_country).sort();
+    sums = keys.map(key => sums_country[key]);
+  }
   if (sums.length <= 0) {
     // console.log('write_daily empty', file_date, path_root);
     return;
@@ -234,10 +233,11 @@ function write_summary(root_path, key) {
       console.log('write_summary readJson failed', fpath);
     }
   }
-
+  // Write out all dates seen
   const outpath_dates = path.resolve(root_path, 'cdates.json');
   fs.writeJsonSync(outpath_dates, dates, { spaces: 2 });
 
+  // Write out summary, remove last_date if current
   const ckeys = Object.keys(summaryDict).sort();
   const csummary = ckeys.map(uname => {
     const ent = summaryDict[uname];

@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Guadeloupe",
-    "totals": {
-      "Cases": 106,
-      "Deaths": 4
-    },
-    "daily": {
-      "Cases": 4,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Martinique",
-    "totals": {
-      "Cases": 93,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "French Guiana",
     "totals": {
       "Cases": 28,
@@ -37,6 +15,28 @@
     "totals": {
       "Cases": 30,
       "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Guadeloupe",
+    "totals": {
+      "Cases": 106,
+      "Deaths": 4
+    },
+    "daily": {
+      "Cases": 4,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Martinique",
+    "totals": {
+      "Cases": 93,
+      "Deaths": 1
     },
     "daily": {
       "Cases": 0,

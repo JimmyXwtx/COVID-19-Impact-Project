@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Metropolitana",
-    "totals": {
-      "Cases": 264222,
-      "Deaths": 8023
-    },
-    "daily": {
-      "Cases": 655,
-      "Deaths": 31
-    }
-  },
-  {
-    "Province_State": "Valparaiso",
-    "totals": {
-      "Cases": 19700,
-      "Deaths": 592
-    },
-    "daily": {
-      "Cases": 182,
-      "Deaths": 19
-    }
-  },
-  {
     "Province_State": "Antofagasta",
     "totals": {
       "Cases": 16434,
@@ -29,61 +7,6 @@
     },
     "daily": {
       "Cases": 111,
-      "Deaths": 4
-    }
-  },
-  {
-    "Province_State": "OHiggins",
-    "totals": {
-      "Cases": 11950,
-      "Deaths": 290
-    },
-    "daily": {
-      "Cases": 107,
-      "Deaths": 9
-    }
-  },
-  {
-    "Province_State": "Maule",
-    "totals": {
-      "Cases": 10095,
-      "Deaths": 215
-    },
-    "daily": {
-      "Cases": 37,
-      "Deaths": 12
-    }
-  },
-  {
-    "Province_State": "Tarapaca",
-    "totals": {
-      "Cases": 9702,
-      "Deaths": 185
-    },
-    "daily": {
-      "Cases": 85,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Biobio",
-    "totals": {
-      "Cases": 13484,
-      "Deaths": 152
-    },
-    "daily": {
-      "Cases": 224,
-      "Deaths": 7
-    }
-  },
-  {
-    "Province_State": "Coquimbo",
-    "totals": {
-      "Cases": 7777,
-      "Deaths": 93
-    },
-    "daily": {
-      "Cases": 146,
       "Deaths": 4
     }
   },
@@ -110,14 +33,47 @@
     }
   },
   {
-    "Province_State": "Nuble",
+    "Province_State": "Atacama",
     "totals": {
-      "Cases": 3910,
-      "Deaths": 70
+      "Cases": 4195,
+      "Deaths": 23
     },
     "daily": {
-      "Cases": 31,
+      "Cases": 87,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Aysen",
+    "totals": {
+      "Cases": 95,
       "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Biobio",
+    "totals": {
+      "Cases": 13484,
+      "Deaths": 152
+    },
+    "daily": {
+      "Cases": 224,
+      "Deaths": 7
+    }
+  },
+  {
+    "Province_State": "Coquimbo",
+    "totals": {
+      "Cases": 7777,
+      "Deaths": 93
+    },
+    "daily": {
+      "Cases": 146,
+      "Deaths": 4
     }
   },
   {
@@ -128,6 +84,17 @@
     },
     "daily": {
       "Cases": 75,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Los Rios",
+    "totals": {
+      "Cases": 996,
+      "Deaths": 15
+    },
+    "daily": {
+      "Cases": 9,
       "Deaths": 0
     }
   },
@@ -143,36 +110,58 @@
     }
   },
   {
-    "Province_State": "Atacama",
+    "Province_State": "Maule",
     "totals": {
-      "Cases": 4195,
-      "Deaths": 23
+      "Cases": 10095,
+      "Deaths": 215
     },
     "daily": {
-      "Cases": 87,
-      "Deaths": 2
+      "Cases": 37,
+      "Deaths": 12
     }
   },
   {
-    "Province_State": "Los Rios",
+    "Province_State": "Metropolitana",
     "totals": {
-      "Cases": 996,
-      "Deaths": 15
+      "Cases": 264222,
+      "Deaths": 8023
     },
     "daily": {
-      "Cases": 9,
-      "Deaths": 0
+      "Cases": 655,
+      "Deaths": 31
     }
   },
   {
-    "Province_State": "Aysen",
+    "Province_State": "Nuble",
     "totals": {
-      "Cases": 95,
+      "Cases": 3910,
+      "Deaths": 70
+    },
+    "daily": {
+      "Cases": 31,
       "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "OHiggins",
+    "totals": {
+      "Cases": 11950,
+      "Deaths": 290
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
+      "Cases": 107,
+      "Deaths": 9
+    }
+  },
+  {
+    "Province_State": "Tarapaca",
+    "totals": {
+      "Cases": 9702,
+      "Deaths": 185
+    },
+    "daily": {
+      "Cases": 85,
+      "Deaths": 3
     }
   },
   {
@@ -184,6 +173,17 @@
     "daily": {
       "Cases": 0,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Valparaiso",
+    "totals": {
+      "Cases": 19700,
+      "Deaths": 592
+    },
+    "daily": {
+      "Cases": 182,
+      "Deaths": 19
     }
   }
 ]

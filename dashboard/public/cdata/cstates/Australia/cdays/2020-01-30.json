@@ -11,17 +11,6 @@
     }
   },
   {
-    "Province_State": "Victoria",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Queensland",
     "totals": {
       "Cases": 3,
@@ -29,6 +18,17 @@
     },
     "daily": {
       "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Victoria",
+    "totals": {
+      "Cases": 2,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
       "Deaths": 0
     }
   }

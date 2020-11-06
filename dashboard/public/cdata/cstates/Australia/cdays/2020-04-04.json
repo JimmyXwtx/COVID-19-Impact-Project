@@ -1,38 +1,5 @@
 [
   {
-    "Province_State": "New South Wales",
-    "totals": {
-      "Cases": 2493,
-      "Deaths": 12
-    },
-    "daily": {
-      "Cases": 104,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Victoria",
-    "totals": {
-      "Cases": 1115,
-      "Deaths": 8
-    },
-    "daily": {
-      "Cases": 30,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Queensland",
-    "totals": {
-      "Cases": 900,
-      "Deaths": 4
-    },
-    "daily": {
-      "Cases": 27,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Australian Capital Territory",
     "totals": {
       "Cases": 93,
@@ -44,24 +11,13 @@
     }
   },
   {
-    "Province_State": "Tasmania",
+    "Province_State": "New South Wales",
     "totals": {
-      "Cases": 80,
-      "Deaths": 2
+      "Cases": 2493,
+      "Deaths": 12
     },
     "daily": {
-      "Cases": 6,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Western Australia",
-    "totals": {
-      "Cases": 436,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 36,
+      "Cases": 104,
       "Deaths": 0
     }
   },
@@ -77,6 +33,17 @@
     }
   },
   {
+    "Province_State": "Queensland",
+    "totals": {
+      "Cases": 900,
+      "Deaths": 4
+    },
+    "daily": {
+      "Cases": 27,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "South Australia",
     "totals": {
       "Cases": 407,
@@ -84,6 +51,39 @@
     },
     "daily": {
       "Cases": 11,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tasmania",
+    "totals": {
+      "Cases": 80,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 6,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Victoria",
+    "totals": {
+      "Cases": 1115,
+      "Deaths": 8
+    },
+    "daily": {
+      "Cases": 30,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Western Australia",
+    "totals": {
+      "Cases": 436,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 36,
       "Deaths": 0
     }
   }

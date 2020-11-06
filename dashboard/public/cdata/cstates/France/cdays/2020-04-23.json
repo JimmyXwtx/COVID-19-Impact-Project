@@ -1,9 +1,20 @@
 [
   {
-    "Province_State": "Martinique",
+    "Province_State": "French Guiana",
     "totals": {
-      "Cases": 164,
-      "Deaths": 14
+      "Cases": 107,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 10,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "French Polynesia",
+    "totals": {
+      "Cases": 57,
+      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
@@ -22,43 +33,21 @@
     }
   },
   {
+    "Province_State": "Martinique",
+    "totals": {
+      "Cases": 164,
+      "Deaths": 14
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Mayotte",
     "totals": {
       "Cases": 326,
       "Deaths": 4
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "St Martin",
-    "totals": {
-      "Cases": 38,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "French Guiana",
-    "totals": {
-      "Cases": 107,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 10,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "French Polynesia",
-    "totals": {
-      "Cases": 57,
-      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
@@ -103,6 +92,17 @@
     "totals": {
       "Cases": 1,
       "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "St Martin",
+    "totals": {
+      "Cases": 38,
+      "Deaths": 2
     },
     "daily": {
       "Cases": 0,

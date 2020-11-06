@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Metropolitana",
-    "totals": {
-      "Cases": 267924,
-      "Deaths": 8219
-    },
-    "daily": {
-      "Cases": 597,
-      "Deaths": 32
-    }
-  },
-  {
-    "Province_State": "Valparaiso",
-    "totals": {
-      "Cases": 20868,
-      "Deaths": 628
-    },
-    "daily": {
-      "Cases": 156,
-      "Deaths": 10
-    }
-  },
-  {
     "Province_State": "Antofagasta",
     "totals": {
       "Cases": 17114,
@@ -33,36 +11,47 @@
     }
   },
   {
-    "Province_State": "OHiggins",
+    "Province_State": "Araucania",
     "totals": {
-      "Cases": 12464,
-      "Deaths": 310
+      "Cases": 4771,
+      "Deaths": 87
     },
     "daily": {
+      "Cases": 35,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Arica y Parinacota",
+    "totals": {
+      "Cases": 6004,
+      "Deaths": 93
+    },
+    "daily": {
+      "Cases": 69,
+      "Deaths": 8
+    }
+  },
+  {
+    "Province_State": "Atacama",
+    "totals": {
+      "Cases": 4913,
+      "Deaths": 36
+    },
+    "daily": {
+      "Cases": 43,
+      "Deaths": 7
+    }
+  },
+  {
+    "Province_State": "Aysen",
+    "totals": {
       "Cases": 99,
-      "Deaths": 6
-    }
-  },
-  {
-    "Province_State": "Maule",
-    "totals": {
-      "Cases": 10724,
-      "Deaths": 235
+      "Deaths": 1
     },
     "daily": {
-      "Cases": 123,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Tarapaca",
-    "totals": {
-      "Cases": 10137,
-      "Deaths": 191
-    },
-    "daily": {
-      "Cases": 52,
-      "Deaths": 5
+      "Cases": 1,
+      "Deaths": 0
     }
   },
   {
@@ -88,39 +77,6 @@
     }
   },
   {
-    "Province_State": "Arica y Parinacota",
-    "totals": {
-      "Cases": 6004,
-      "Deaths": 93
-    },
-    "daily": {
-      "Cases": 69,
-      "Deaths": 8
-    }
-  },
-  {
-    "Province_State": "Araucania",
-    "totals": {
-      "Cases": 4771,
-      "Deaths": 87
-    },
-    "daily": {
-      "Cases": 35,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Nuble",
-    "totals": {
-      "Cases": 4100,
-      "Deaths": 74
-    },
-    "daily": {
-      "Cases": 44,
-      "Deaths": 1
-    }
-  },
-  {
     "Province_State": "Los Lagos",
     "totals": {
       "Cases": 5809,
@@ -129,28 +85,6 @@
     "daily": {
       "Cases": 99,
       "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Atacama",
-    "totals": {
-      "Cases": 4913,
-      "Deaths": 36
-    },
-    "daily": {
-      "Cases": 43,
-      "Deaths": 7
-    }
-  },
-  {
-    "Province_State": "Magallanes",
-    "totals": {
-      "Cases": 2451,
-      "Deaths": 32
-    },
-    "daily": {
-      "Cases": 64,
-      "Deaths": 2
     }
   },
   {
@@ -165,14 +99,69 @@
     }
   },
   {
-    "Province_State": "Aysen",
+    "Province_State": "Magallanes",
     "totals": {
-      "Cases": 99,
-      "Deaths": 1
+      "Cases": 2451,
+      "Deaths": 32
     },
     "daily": {
-      "Cases": 1,
-      "Deaths": 0
+      "Cases": 64,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Maule",
+    "totals": {
+      "Cases": 10724,
+      "Deaths": 235
+    },
+    "daily": {
+      "Cases": 123,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Metropolitana",
+    "totals": {
+      "Cases": 267924,
+      "Deaths": 8219
+    },
+    "daily": {
+      "Cases": 597,
+      "Deaths": 32
+    }
+  },
+  {
+    "Province_State": "Nuble",
+    "totals": {
+      "Cases": 4100,
+      "Deaths": 74
+    },
+    "daily": {
+      "Cases": 44,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "OHiggins",
+    "totals": {
+      "Cases": 12464,
+      "Deaths": 310
+    },
+    "daily": {
+      "Cases": 99,
+      "Deaths": 6
+    }
+  },
+  {
+    "Province_State": "Tarapaca",
+    "totals": {
+      "Cases": 10137,
+      "Deaths": 191
+    },
+    "daily": {
+      "Cases": 52,
+      "Deaths": 5
     }
   },
   {
@@ -184,6 +173,17 @@
     "daily": {
       "Cases": -2,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Valparaiso",
+    "totals": {
+      "Cases": 20868,
+      "Deaths": 628
+    },
+    "daily": {
+      "Cases": 156,
+      "Deaths": 10
     }
   }
 ]

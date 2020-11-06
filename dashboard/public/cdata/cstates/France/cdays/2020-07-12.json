@@ -1,64 +1,9 @@
 [
   {
-    "Province_State": "Mayotte",
-    "totals": {
-      "Cases": 2711,
-      "Deaths": 37
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "French Guiana",
     "totals": {
       "Cases": 5949,
       "Deaths": 26
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Martinique",
-    "totals": {
-      "Cases": 255,
-      "Deaths": 15
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Guadeloupe",
-    "totals": {
-      "Cases": 190,
-      "Deaths": 14
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Reunion",
-    "totals": {
-      "Cases": 593,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 16,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "St Martin",
-    "totals": {
-      "Cases": 43,
-      "Deaths": 3
     },
     "daily": {
       "Cases": 0,
@@ -77,6 +22,39 @@
     }
   },
   {
+    "Province_State": "Guadeloupe",
+    "totals": {
+      "Cases": 190,
+      "Deaths": 14
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Martinique",
+    "totals": {
+      "Cases": 255,
+      "Deaths": 15
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Mayotte",
+    "totals": {
+      "Cases": 2711,
+      "Deaths": 37
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "New Caledonia",
     "totals": {
       "Cases": 21,
@@ -84,6 +62,17 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Reunion",
+    "totals": {
+      "Cases": 593,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 16,
       "Deaths": 0
     }
   },
@@ -103,6 +92,17 @@
     "totals": {
       "Cases": 2,
       "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "St Martin",
+    "totals": {
+      "Cases": 43,
+      "Deaths": 3
     },
     "daily": {
       "Cases": 0,

@@ -1,5 +1,27 @@
 [
   {
+    "Province_State": "Cherkasy Oblast",
+    "totals": {
+      "Cases": 552,
+      "Deaths": 19
+    },
+    "daily": {
+      "Cases": 9,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Chernihiv Oblast",
+    "totals": {
+      "Cases": 424,
+      "Deaths": 10
+    },
+    "daily": {
+      "Cases": 14,
+      "Deaths": 1
+    }
+  },
+  {
     "Province_State": "Chernivtsi Oblast",
     "totals": {
       "Cases": 3959,
@@ -11,14 +33,36 @@
     }
   },
   {
-    "Province_State": "Lviv Oblast",
+    "Province_State": "Crimea Republic*",
     "totals": {
-      "Cases": 2933,
-      "Deaths": 95
+      "Cases": 539,
+      "Deaths": 7
     },
     "daily": {
-      "Cases": 136,
-      "Deaths": 3
+      "Cases": 27,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Dnipropetrovsk Oblast",
+    "totals": {
+      "Cases": 998,
+      "Deaths": 22
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Donetsk Oblast",
+    "totals": {
+      "Cases": 334,
+      "Deaths": 6
+    },
+    "daily": {
+      "Cases": 42,
+      "Deaths": 0
     }
   },
   {
@@ -33,17 +77,6 @@
     }
   },
   {
-    "Province_State": "Kiev",
-    "totals": {
-      "Cases": 3957,
-      "Deaths": 90
-    },
-    "daily": {
-      "Cases": 53,
-      "Deaths": 2
-    }
-  },
-  {
     "Province_State": "Kharkiv Oblast",
     "totals": {
       "Cases": 1542,
@@ -55,35 +88,35 @@
     }
   },
   {
-    "Province_State": "Rivne Oblast",
+    "Province_State": "Kherson Oblast",
     "totals": {
-      "Cases": 2369,
-      "Deaths": 46
+      "Cases": 183,
+      "Deaths": 3
     },
     "daily": {
-      "Cases": 28,
+      "Cases": 3,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Volyn Oblast",
+    "Province_State": "Khmelnytskyi Oblast",
     "totals": {
-      "Cases": 1438,
-      "Deaths": 43
+      "Cases": 559,
+      "Deaths": 14
     },
     "daily": {
-      "Cases": 40,
-      "Deaths": 1
+      "Cases": 3,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Zakarpattia Oblast",
+    "Province_State": "Kiev",
     "totals": {
-      "Cases": 1680,
-      "Deaths": 42
+      "Cases": 3957,
+      "Deaths": 90
     },
     "daily": {
-      "Cases": 48,
+      "Cases": 53,
       "Deaths": 2
     }
   },
@@ -110,6 +143,94 @@
     }
   },
   {
+    "Province_State": "Luhansk Oblast",
+    "totals": {
+      "Cases": 57,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Lviv Oblast",
+    "totals": {
+      "Cases": 2933,
+      "Deaths": 95
+    },
+    "daily": {
+      "Cases": 136,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Mykolaiv Oblast",
+    "totals": {
+      "Cases": 321,
+      "Deaths": 7
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Odessa Oblast",
+    "totals": {
+      "Cases": 1117,
+      "Deaths": 18
+    },
+    "daily": {
+      "Cases": 18,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Poltava Oblast",
+    "totals": {
+      "Cases": 278,
+      "Deaths": 13
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Rivne Oblast",
+    "totals": {
+      "Cases": 2369,
+      "Deaths": 46
+    },
+    "daily": {
+      "Cases": 28,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sevastopol*",
+    "totals": {
+      "Cases": 187,
+      "Deaths": 3
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Sumy Oblast",
+    "totals": {
+      "Cases": 227,
+      "Deaths": 5
+    },
+    "daily": {
+      "Cases": 12,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Ternopil Oblast",
     "totals": {
       "Cases": 1467,
@@ -132,47 +253,25 @@
     }
   },
   {
-    "Province_State": "Dnipropetrovsk Oblast",
+    "Province_State": "Volyn Oblast",
     "totals": {
-      "Cases": 998,
-      "Deaths": 22
+      "Cases": 1438,
+      "Deaths": 43
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
+      "Cases": 40,
+      "Deaths": 1
     }
   },
   {
-    "Province_State": "Cherkasy Oblast",
+    "Province_State": "Zakarpattia Oblast",
     "totals": {
-      "Cases": 552,
-      "Deaths": 19
+      "Cases": 1680,
+      "Deaths": 42
     },
     "daily": {
-      "Cases": 9,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Zhytomyr Oblast",
-    "totals": {
-      "Cases": 1087,
-      "Deaths": 19
-    },
-    "daily": {
-      "Cases": 42,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Odessa Oblast",
-    "totals": {
-      "Cases": 1117,
-      "Deaths": 18
-    },
-    "daily": {
-      "Cases": 18,
-      "Deaths": 0
+      "Cases": 48,
+      "Deaths": 2
     }
   },
   {
@@ -187,112 +286,13 @@
     }
   },
   {
-    "Province_State": "Khmelnytskyi Oblast",
+    "Province_State": "Zhytomyr Oblast",
     "totals": {
-      "Cases": 559,
-      "Deaths": 14
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Poltava Oblast",
-    "totals": {
-      "Cases": 278,
-      "Deaths": 13
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Chernihiv Oblast",
-    "totals": {
-      "Cases": 424,
-      "Deaths": 10
-    },
-    "daily": {
-      "Cases": 14,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Crimea Republic*",
-    "totals": {
-      "Cases": 539,
-      "Deaths": 7
-    },
-    "daily": {
-      "Cases": 27,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Mykolaiv Oblast",
-    "totals": {
-      "Cases": 321,
-      "Deaths": 7
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Donetsk Oblast",
-    "totals": {
-      "Cases": 334,
-      "Deaths": 6
+      "Cases": 1087,
+      "Deaths": 19
     },
     "daily": {
       "Cases": 42,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sumy Oblast",
-    "totals": {
-      "Cases": 227,
-      "Deaths": 5
-    },
-    "daily": {
-      "Cases": 12,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Kherson Oblast",
-    "totals": {
-      "Cases": 183,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sevastopol*",
-    "totals": {
-      "Cases": 187,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Luhansk Oblast",
-    "totals": {
-      "Cases": 57,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
       "Deaths": 0
     }
   }

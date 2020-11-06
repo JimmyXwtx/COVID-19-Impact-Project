@@ -1,79 +1,46 @@
 [
   {
-    "Province_State": "Noord-Brabant",
+    "Province_State": "Aruba",
     "totals": {
-      "Cases": 24078,
-      "Deaths": 1582
+      "Cases": 4188,
+      "Deaths": 32
     },
     "daily": {
-      "Cases": 1089,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Zuid-Holland",
-    "totals": {
-      "Cases": 50696,
-      "Deaths": 1457
-    },
-    "daily": {
-      "Cases": 1751,
-      "Deaths": 6
-    }
-  },
-  {
-    "Province_State": "Noord-Holland",
-    "totals": {
-      "Cases": 34055,
-      "Deaths": 892
-    },
-    "daily": {
-      "Cases": 1204,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Limburg",
-    "totals": {
-      "Cases": 8138,
-      "Deaths": 769
-    },
-    "daily": {
-      "Cases": 266,
+      "Cases": 21,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Gelderland",
+    "Province_State": "Bonaire, Sint Eustatius and Saba",
     "totals": {
-      "Cases": 16130,
-      "Deaths": 714
-    },
-    "daily": {
-      "Cases": 634,
+      "Cases": 148,
       "Deaths": 2
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Utrecht",
+    "Province_State": "Curacao",
     "totals": {
-      "Cases": 13992,
-      "Deaths": 457
-    },
-    "daily": {
-      "Cases": 614,
+      "Cases": 571,
       "Deaths": 1
+    },
+    "daily": {
+      "Cases": 22,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Overijssel",
+    "Province_State": "Drenthe",
     "totals": {
-      "Cases": 7504,
-      "Deaths": 351
+      "Cases": 1966,
+      "Deaths": 60
     },
     "daily": {
-      "Cases": 336,
-      "Deaths": 4
+      "Cases": 160,
+      "Deaths": 0
     }
   },
   {
@@ -99,36 +66,14 @@
     }
   },
   {
-    "Province_State": "Zeeland",
+    "Province_State": "Gelderland",
     "totals": {
-      "Cases": 1770,
-      "Deaths": 72
+      "Cases": 16130,
+      "Deaths": 714
     },
     "daily": {
-      "Cases": 43,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Drenthe",
-    "totals": {
-      "Cases": 1966,
-      "Deaths": 60
-    },
-    "daily": {
-      "Cases": 160,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Aruba",
-    "totals": {
-      "Cases": 4188,
-      "Deaths": 32
-    },
-    "daily": {
-      "Cases": 21,
-      "Deaths": 0
+      "Cases": 634,
+      "Deaths": 2
     }
   },
   {
@@ -140,6 +85,50 @@
     "daily": {
       "Cases": 110,
       "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Limburg",
+    "totals": {
+      "Cases": 8138,
+      "Deaths": 769
+    },
+    "daily": {
+      "Cases": 266,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Noord-Brabant",
+    "totals": {
+      "Cases": 24078,
+      "Deaths": 1582
+    },
+    "daily": {
+      "Cases": 1089,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Noord-Holland",
+    "totals": {
+      "Cases": 34055,
+      "Deaths": 892
+    },
+    "daily": {
+      "Cases": 1204,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Overijssel",
+    "totals": {
+      "Cases": 7504,
+      "Deaths": 351
+    },
+    "daily": {
+      "Cases": 336,
+      "Deaths": 4
     }
   },
   {
@@ -165,25 +154,36 @@
     }
   },
   {
-    "Province_State": "Bonaire, Sint Eustatius and Saba",
+    "Province_State": "Utrecht",
     "totals": {
-      "Cases": 148,
-      "Deaths": 2
+      "Cases": 13992,
+      "Deaths": 457
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 614,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Zeeland",
+    "totals": {
+      "Cases": 1770,
+      "Deaths": 72
+    },
+    "daily": {
+      "Cases": 43,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Curacao",
+    "Province_State": "Zuid-Holland",
     "totals": {
-      "Cases": 571,
-      "Deaths": 1
+      "Cases": 50696,
+      "Deaths": 1457
     },
     "daily": {
-      "Cases": 22,
-      "Deaths": 0
+      "Cases": 1751,
+      "Deaths": 6
     }
   }
 ]

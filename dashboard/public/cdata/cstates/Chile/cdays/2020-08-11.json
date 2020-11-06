@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Metropolitana",
-    "totals": {
-      "Cases": 263095,
-      "Deaths": 7972
-    },
-    "daily": {
-      "Cases": 448,
-      "Deaths": 26
-    }
-  },
-  {
-    "Province_State": "Valparaiso",
-    "totals": {
-      "Cases": 19371,
-      "Deaths": 569
-    },
-    "daily": {
-      "Cases": 128,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Antofagasta",
     "totals": {
       "Cases": 16239,
@@ -33,35 +11,46 @@
     }
   },
   {
-    "Province_State": "OHiggins",
+    "Province_State": "Araucania",
     "totals": {
-      "Cases": 11728,
-      "Deaths": 281
+      "Cases": 4455,
+      "Deaths": 83
     },
     "daily": {
-      "Cases": 107,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Maule",
-    "totals": {
-      "Cases": 9983,
-      "Deaths": 203
-    },
-    "daily": {
-      "Cases": 64,
+      "Cases": 18,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Tarapaca",
+    "Province_State": "Arica y Parinacota",
     "totals": {
-      "Cases": 9543,
-      "Deaths": 182
+      "Cases": 5334,
+      "Deaths": 78
     },
     "daily": {
-      "Cases": 124,
+      "Cases": 93,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Atacama",
+    "totals": {
+      "Cases": 3998,
+      "Deaths": 21
+    },
+    "daily": {
+      "Cases": 130,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Aysen",
+    "totals": {
+      "Cases": 95,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -88,39 +77,6 @@
     }
   },
   {
-    "Province_State": "Araucania",
-    "totals": {
-      "Cases": 4455,
-      "Deaths": 83
-    },
-    "daily": {
-      "Cases": 18,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Arica y Parinacota",
-    "totals": {
-      "Cases": 5334,
-      "Deaths": 78
-    },
-    "daily": {
-      "Cases": 93,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Nuble",
-    "totals": {
-      "Cases": 3843,
-      "Deaths": 69
-    },
-    "daily": {
-      "Cases": 20,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Los Lagos",
     "totals": {
       "Cases": 5053,
@@ -128,28 +84,6 @@
     },
     "daily": {
       "Cases": 49,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Magallanes",
-    "totals": {
-      "Cases": 2109,
-      "Deaths": 30
-    },
-    "daily": {
-      "Cases": 36,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Atacama",
-    "totals": {
-      "Cases": 3998,
-      "Deaths": 21
-    },
-    "daily": {
-      "Cases": 130,
       "Deaths": 0
     }
   },
@@ -165,13 +99,68 @@
     }
   },
   {
-    "Province_State": "Aysen",
+    "Province_State": "Magallanes",
     "totals": {
-      "Cases": 95,
-      "Deaths": 1
+      "Cases": 2109,
+      "Deaths": 30
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 36,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Maule",
+    "totals": {
+      "Cases": 9983,
+      "Deaths": 203
+    },
+    "daily": {
+      "Cases": 64,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Metropolitana",
+    "totals": {
+      "Cases": 263095,
+      "Deaths": 7972
+    },
+    "daily": {
+      "Cases": 448,
+      "Deaths": 26
+    }
+  },
+  {
+    "Province_State": "Nuble",
+    "totals": {
+      "Cases": 3843,
+      "Deaths": 69
+    },
+    "daily": {
+      "Cases": 20,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "OHiggins",
+    "totals": {
+      "Cases": 11728,
+      "Deaths": 281
+    },
+    "daily": {
+      "Cases": 107,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Tarapaca",
+    "totals": {
+      "Cases": 9543,
+      "Deaths": 182
+    },
+    "daily": {
+      "Cases": 124,
       "Deaths": 0
     }
   },
@@ -183,6 +172,17 @@
     },
     "daily": {
       "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Valparaiso",
+    "totals": {
+      "Cases": 19371,
+      "Deaths": 569
+    },
+    "daily": {
+      "Cases": 128,
       "Deaths": 0
     }
   }

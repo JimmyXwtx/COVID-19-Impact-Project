@@ -1,57 +1,68 @@
 [
   {
-    "Province_State": "New York",
+    "Province_State": "Alabama",
     "totals": {
-      "Cases": 288045,
-      "Deaths": 22269
+      "Cases": 6421,
+      "Deaths": 219
     },
     "daily": {
-      "Cases": 5902,
-      "Deaths": 260
+      "Cases": 395,
+      "Deaths": 10
     }
   },
   {
-    "Province_State": "New Jersey",
+    "Province_State": "Alaska",
     "totals": {
-      "Cases": 109038,
-      "Deaths": 5938
+      "Cases": 340,
+      "Deaths": 9
     },
     "daily": {
-      "Cases": 3540,
-      "Deaths": 24
+      "Cases": 1,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Michigan",
+    "Province_State": "Arizona",
     "totals": {
-      "Cases": 37778,
-      "Deaths": 3315
+      "Cases": 6534,
+      "Deaths": 275
     },
     "daily": {
-      "Cases": 704,
-      "Deaths": 160
+      "Cases": 248,
+      "Deaths": 2
     }
   },
   {
-    "Province_State": "Massachusetts",
+    "Province_State": "Arkansas",
     "totals": {
-      "Cases": 54938,
-      "Deaths": 2899
+      "Cases": 3001,
+      "Deaths": 51
     },
     "daily": {
-      "Cases": 1590,
-      "Deaths": 169
+      "Cases": 90,
+      "Deaths": 3
     }
   },
   {
-    "Province_State": "Illinois",
+    "Province_State": "California",
     "totals": {
-      "Cases": 43903,
-      "Deaths": 1933
+      "Cases": 43558,
+      "Deaths": 1725
     },
     "daily": {
-      "Cases": 2126,
-      "Deaths": 58
+      "Cases": 1190,
+      "Deaths": 36
+    }
+  },
+  {
+    "Province_State": "Colorado",
+    "totals": {
+      "Cases": 13441,
+      "Deaths": 688
+    },
+    "daily": {
+      "Cases": 473,
+      "Deaths": 4
     }
   },
   {
@@ -66,36 +77,36 @@
     }
   },
   {
-    "Province_State": "Pennsylvania",
+    "Province_State": "Delaware",
     "totals": {
-      "Cases": 42616,
-      "Deaths": 1816
+      "Cases": 4034,
+      "Deaths": 120
     },
     "daily": {
-      "Cases": 1463,
-      "Deaths": 23
+      "Cases": 458,
+      "Deaths": 8
     }
   },
   {
-    "Province_State": "Louisiana",
+    "Province_State": "Diamond Princess",
     "totals": {
-      "Cases": 26773,
-      "Deaths": 1729
+      "Cases": 49,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 261,
-      "Deaths": 22
+      "Cases": 0,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "California",
+    "Province_State": "District of Columbia",
     "totals": {
-      "Cases": 43558,
-      "Deaths": 1725
+      "Cases": 3841,
+      "Deaths": 178
     },
     "daily": {
-      "Cases": 1190,
-      "Deaths": 36
+      "Cases": 142,
+      "Deaths": 13
     }
   },
   {
@@ -121,14 +132,58 @@
     }
   },
   {
-    "Province_State": "Maryland",
+    "Province_State": "Grand Princess",
     "totals": {
-      "Cases": 18581,
-      "Deaths": 910
+      "Cases": 103,
+      "Deaths": 3
     },
     "daily": {
-      "Cases": 815,
-      "Deaths": 35
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Guam",
+    "totals": {
+      "Cases": 141,
+      "Deaths": 5
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Hawaii",
+    "totals": {
+      "Cases": 606,
+      "Deaths": 14
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Idaho",
+    "totals": {
+      "Cases": 1897,
+      "Deaths": 56
+    },
+    "daily": {
+      "Cases": 10,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Illinois",
+    "totals": {
+      "Cases": 43903,
+      "Deaths": 1933
+    },
+    "daily": {
+      "Cases": 2126,
+      "Deaths": 58
     }
   },
   {
@@ -143,102 +198,91 @@
     }
   },
   {
-    "Province_State": "Washington",
+    "Province_State": "Iowa",
     "totals": {
-      "Cases": 13521,
-      "Deaths": 749
+      "Cases": 5476,
+      "Deaths": 118
     },
     "daily": {
-      "Cases": 202,
-      "Deaths": 12
-    }
-  },
-  {
-    "Province_State": "Ohio",
-    "totals": {
-      "Cases": 15972,
-      "Deaths": 728
-    },
-    "daily": {
-      "Cases": 385,
-      "Deaths": 17
-    }
-  },
-  {
-    "Province_State": "Colorado",
-    "totals": {
-      "Cases": 13441,
-      "Deaths": 688
-    },
-    "daily": {
-      "Cases": 473,
-      "Deaths": 4
-    }
-  },
-  {
-    "Province_State": "Texas",
-    "totals": {
-      "Cases": 24967,
-      "Deaths": 651
-    },
-    "daily": {
-      "Cases": 814,
-      "Deaths": 13
-    }
-  },
-  {
-    "Province_State": "Virginia",
-    "totals": {
-      "Cases": 12970,
-      "Deaths": 449
-    },
-    "daily": {
-      "Cases": 604,
-      "Deaths": 12
-    }
-  },
-  {
-    "Province_State": "North Carolina",
-    "totals": {
-      "Cases": 8997,
-      "Deaths": 324
-    },
-    "daily": {
-      "Cases": 229,
-      "Deaths": 19
-    }
-  },
-  {
-    "Province_State": "Missouri",
-    "totals": {
-      "Cases": 7120,
-      "Deaths": 283
-    },
-    "daily": {
-      "Cases": 185,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Arizona",
-    "totals": {
-      "Cases": 6534,
-      "Deaths": 275
-    },
-    "daily": {
-      "Cases": 248,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Wisconsin",
-    "totals": {
-      "Cases": 5912,
-      "Deaths": 272
-    },
-    "daily": {
-      "Cases": 225,
+      "Cases": 384,
       "Deaths": 6
+    }
+  },
+  {
+    "Province_State": "Kansas",
+    "totals": {
+      "Cases": 3277,
+      "Deaths": 121
+    },
+    "daily": {
+      "Cases": 142,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Kentucky",
+    "totals": {
+      "Cases": 4085,
+      "Deaths": 208
+    },
+    "daily": {
+      "Cases": 170,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Louisiana",
+    "totals": {
+      "Cases": 26773,
+      "Deaths": 1729
+    },
+    "daily": {
+      "Cases": 261,
+      "Deaths": 22
+    }
+  },
+  {
+    "Province_State": "Maine",
+    "totals": {
+      "Cases": 1015,
+      "Deaths": 50
+    },
+    "daily": {
+      "Cases": 50,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Maryland",
+    "totals": {
+      "Cases": 18581,
+      "Deaths": 910
+    },
+    "daily": {
+      "Cases": 815,
+      "Deaths": 35
+    }
+  },
+  {
+    "Province_State": "Massachusetts",
+    "totals": {
+      "Cases": 54938,
+      "Deaths": 2899
+    },
+    "daily": {
+      "Cases": 1590,
+      "Deaths": 169
+    }
+  },
+  {
+    "Province_State": "Michigan",
+    "totals": {
+      "Cases": 37778,
+      "Deaths": 3315
+    },
+    "daily": {
+      "Cases": 704,
+      "Deaths": 160
     }
   },
   {
@@ -264,178 +308,24 @@
     }
   },
   {
-    "Province_State": "Rhode Island",
+    "Province_State": "Missouri",
     "totals": {
-      "Cases": 7439,
-      "Deaths": 226
+      "Cases": 7120,
+      "Deaths": 283
     },
     "daily": {
-      "Cases": 310,
-      "Deaths": 11
+      "Cases": 185,
+      "Deaths": 2
     }
   },
   {
-    "Province_State": "Alabama",
+    "Province_State": "Montana",
     "totals": {
-      "Cases": 6421,
-      "Deaths": 219
+      "Cases": 448,
+      "Deaths": 14
     },
     "daily": {
-      "Cases": 395,
-      "Deaths": 10
-    }
-  },
-  {
-    "Province_State": "Kentucky",
-    "totals": {
-      "Cases": 4085,
-      "Deaths": 208
-    },
-    "daily": {
-      "Cases": 170,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Nevada",
-    "totals": {
-      "Cases": 4734,
-      "Deaths": 206
-    },
-    "daily": {
-      "Cases": 195,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Oklahoma",
-    "totals": {
-      "Cases": 3254,
-      "Deaths": 195
-    },
-    "daily": {
-      "Cases": 60,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Tennessee",
-    "totals": {
-      "Cases": 9667,
-      "Deaths": 181
-    },
-    "daily": {
-      "Cases": 478,
-      "Deaths": 4
-    }
-  },
-  {
-    "Province_State": "District of Columbia",
-    "totals": {
-      "Cases": 3841,
-      "Deaths": 178
-    },
-    "daily": {
-      "Cases": 142,
-      "Deaths": 13
-    }
-  },
-  {
-    "Province_State": "South Carolina",
-    "totals": {
-      "Cases": 5498,
-      "Deaths": 174
-    },
-    "daily": {
-      "Cases": 245,
-      "Deaths": 8
-    }
-  },
-  {
-    "Province_State": "Kansas",
-    "totals": {
-      "Cases": 3277,
-      "Deaths": 121
-    },
-    "daily": {
-      "Cases": 142,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Delaware",
-    "totals": {
-      "Cases": 4034,
-      "Deaths": 120
-    },
-    "daily": {
-      "Cases": 458,
-      "Deaths": 8
-    }
-  },
-  {
-    "Province_State": "Iowa",
-    "totals": {
-      "Cases": 5476,
-      "Deaths": 118
-    },
-    "daily": {
-      "Cases": 384,
-      "Deaths": 6
-    }
-  },
-  {
-    "Province_State": "New Mexico",
-    "totals": {
-      "Cases": 2726,
-      "Deaths": 99
-    },
-    "daily": {
-      "Cases": 66,
-      "Deaths": 6
-    }
-  },
-  {
-    "Province_State": "Oregon",
-    "totals": {
-      "Cases": 2311,
-      "Deaths": 92
-    },
-    "daily": {
-      "Cases": 58,
-      "Deaths": 5
-    }
-  },
-  {
-    "Province_State": "Puerto Rico",
-    "totals": {
-      "Cases": 1371,
-      "Deaths": 84
-    },
-    "daily": {
-      "Cases": 64,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "New Hampshire",
-    "totals": {
-      "Cases": 1864,
-      "Deaths": 60
-    },
-    "daily": {
-      "Cases": 67,
-      "Deaths": 7
-    }
-  },
-  {
-    "Province_State": "Idaho",
-    "totals": {
-      "Cases": 1897,
-      "Deaths": 56
-    },
-    "daily": {
-      "Cases": 10,
+      "Cases": 3,
       "Deaths": 0
     }
   },
@@ -451,58 +341,69 @@
     }
   },
   {
-    "Province_State": "Arkansas",
+    "Province_State": "Nevada",
     "totals": {
-      "Cases": 3001,
-      "Deaths": 51
+      "Cases": 4734,
+      "Deaths": 206
     },
     "daily": {
-      "Cases": 90,
-      "Deaths": 3
+      "Cases": 195,
+      "Deaths": 1
     }
   },
   {
-    "Province_State": "Maine",
+    "Province_State": "New Hampshire",
     "totals": {
-      "Cases": 1015,
-      "Deaths": 50
+      "Cases": 1864,
+      "Deaths": 60
     },
     "daily": {
-      "Cases": 50,
-      "Deaths": 3
+      "Cases": 67,
+      "Deaths": 7
     }
   },
   {
-    "Province_State": "Vermont",
+    "Province_State": "New Jersey",
     "totals": {
-      "Cases": 851,
-      "Deaths": 46
+      "Cases": 109038,
+      "Deaths": 5938
     },
     "daily": {
-      "Cases": 8,
-      "Deaths": 0
+      "Cases": 3540,
+      "Deaths": 24
     }
   },
   {
-    "Province_State": "Utah",
+    "Province_State": "New Mexico",
     "totals": {
-      "Cases": 4123,
-      "Deaths": 41
+      "Cases": 2726,
+      "Deaths": 99
     },
     "daily": {
-      "Cases": 175,
-      "Deaths": 0
+      "Cases": 66,
+      "Deaths": 6
     }
   },
   {
-    "Province_State": "West Virginia",
+    "Province_State": "New York",
     "totals": {
-      "Cases": 1055,
-      "Deaths": 34
+      "Cases": 288045,
+      "Deaths": 22269
     },
     "daily": {
-      "Cases": 45,
-      "Deaths": 2
+      "Cases": 5902,
+      "Deaths": 260
+    }
+  },
+  {
+    "Province_State": "North Carolina",
+    "totals": {
+      "Cases": 8997,
+      "Deaths": 324
+    },
+    "daily": {
+      "Cases": 229,
+      "Deaths": 19
     }
   },
   {
@@ -517,25 +418,91 @@
     }
   },
   {
-    "Province_State": "Montana",
+    "Province_State": "Northern Mariana Islands",
     "totals": {
-      "Cases": 448,
-      "Deaths": 14
+      "Cases": 14,
+      "Deaths": 2
     },
     "daily": {
-      "Cases": 3,
+      "Cases": 0,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Hawaii",
+    "Province_State": "Ohio",
     "totals": {
-      "Cases": 606,
-      "Deaths": 14
+      "Cases": 15972,
+      "Deaths": 728
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 385,
+      "Deaths": 17
+    }
+  },
+  {
+    "Province_State": "Oklahoma",
+    "totals": {
+      "Cases": 3254,
+      "Deaths": 195
+    },
+    "daily": {
+      "Cases": 60,
       "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Oregon",
+    "totals": {
+      "Cases": 2311,
+      "Deaths": 92
+    },
+    "daily": {
+      "Cases": 58,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Pennsylvania",
+    "totals": {
+      "Cases": 42616,
+      "Deaths": 1816
+    },
+    "daily": {
+      "Cases": 1463,
+      "Deaths": 23
+    }
+  },
+  {
+    "Province_State": "Puerto Rico",
+    "totals": {
+      "Cases": 1371,
+      "Deaths": 84
+    },
+    "daily": {
+      "Cases": 64,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Rhode Island",
+    "totals": {
+      "Cases": 7439,
+      "Deaths": 226
+    },
+    "daily": {
+      "Cases": 310,
+      "Deaths": 11
+    }
+  },
+  {
+    "Province_State": "South Carolina",
+    "totals": {
+      "Cases": 5498,
+      "Deaths": 174
+    },
+    "daily": {
+      "Cases": 245,
+      "Deaths": 8
     }
   },
   {
@@ -550,35 +517,46 @@
     }
   },
   {
-    "Province_State": "Alaska",
+    "Province_State": "Tennessee",
     "totals": {
-      "Cases": 340,
-      "Deaths": 9
+      "Cases": 9667,
+      "Deaths": 181
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 478,
+      "Deaths": 4
+    }
+  },
+  {
+    "Province_State": "Texas",
+    "totals": {
+      "Cases": 24967,
+      "Deaths": 651
+    },
+    "daily": {
+      "Cases": 814,
+      "Deaths": 13
+    }
+  },
+  {
+    "Province_State": "Utah",
+    "totals": {
+      "Cases": 4123,
+      "Deaths": 41
+    },
+    "daily": {
+      "Cases": 175,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Wyoming",
+    "Province_State": "Vermont",
     "totals": {
-      "Cases": 502,
-      "Deaths": 7
+      "Cases": 851,
+      "Deaths": 46
     },
     "daily": {
-      "Cases": 11,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Guam",
-    "totals": {
-      "Cases": 141,
-      "Deaths": 5
-    },
-    "daily": {
-      "Cases": 0,
+      "Cases": 8,
       "Deaths": 0
     }
   },
@@ -594,35 +572,57 @@
     }
   },
   {
-    "Province_State": "Grand Princess",
+    "Province_State": "Virginia",
     "totals": {
-      "Cases": 103,
-      "Deaths": 3
+      "Cases": 12970,
+      "Deaths": 449
     },
     "daily": {
-      "Cases": 0,
-      "Deaths": 0
+      "Cases": 604,
+      "Deaths": 12
     }
   },
   {
-    "Province_State": "Northern Mariana Islands",
+    "Province_State": "Washington",
     "totals": {
-      "Cases": 14,
+      "Cases": 13521,
+      "Deaths": 749
+    },
+    "daily": {
+      "Cases": 202,
+      "Deaths": 12
+    }
+  },
+  {
+    "Province_State": "West Virginia",
+    "totals": {
+      "Cases": 1055,
+      "Deaths": 34
+    },
+    "daily": {
+      "Cases": 45,
       "Deaths": 2
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
     }
   },
   {
-    "Province_State": "Diamond Princess",
+    "Province_State": "Wisconsin",
     "totals": {
-      "Cases": 49,
-      "Deaths": 0
+      "Cases": 5912,
+      "Deaths": 272
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 225,
+      "Deaths": 6
+    }
+  },
+  {
+    "Province_State": "Wyoming",
+    "totals": {
+      "Cases": 502,
+      "Deaths": 7
+    },
+    "daily": {
+      "Cases": 11,
       "Deaths": 0
     }
   }

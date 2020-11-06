@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Metropolitana",
-    "totals": {
-      "Cases": 252122,
-      "Deaths": 7353
-    },
-    "daily": {
-      "Cases": 805,
-      "Deaths": 50
-    }
-  },
-  {
-    "Province_State": "Valparaiso",
-    "totals": {
-      "Cases": 16863,
-      "Deaths": 464
-    },
-    "daily": {
-      "Cases": 139,
-      "Deaths": 4
-    }
-  },
-  {
     "Province_State": "Antofagasta",
     "totals": {
       "Cases": 14093,
@@ -30,50 +8,6 @@
     "daily": {
       "Cases": 154,
       "Deaths": 12
-    }
-  },
-  {
-    "Province_State": "OHiggins",
-    "totals": {
-      "Cases": 10194,
-      "Deaths": 218
-    },
-    "daily": {
-      "Cases": 111,
-      "Deaths": 9
-    }
-  },
-  {
-    "Province_State": "Tarapaca",
-    "totals": {
-      "Cases": 8188,
-      "Deaths": 155
-    },
-    "daily": {
-      "Cases": 41,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Maule",
-    "totals": {
-      "Cases": 8574,
-      "Deaths": 154
-    },
-    "daily": {
-      "Cases": 122,
-      "Deaths": 9
-    }
-  },
-  {
-    "Province_State": "Biobio",
-    "totals": {
-      "Cases": 10553,
-      "Deaths": 105
-    },
-    "daily": {
-      "Cases": 182,
-      "Deaths": 1
     }
   },
   {
@@ -88,28 +22,6 @@
     }
   },
   {
-    "Province_State": "Coquimbo",
-    "totals": {
-      "Cases": 5685,
-      "Deaths": 62
-    },
-    "daily": {
-      "Cases": 163,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Nuble",
-    "totals": {
-      "Cases": 3377,
-      "Deaths": 60
-    },
-    "daily": {
-      "Cases": 7,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Arica y Parinacota",
     "totals": {
       "Cases": 3862,
@@ -118,39 +30,6 @@
     "daily": {
       "Cases": 135,
       "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Los Lagos",
-    "totals": {
-      "Cases": 3402,
-      "Deaths": 34
-    },
-    "daily": {
-      "Cases": 141,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Magallanes",
-    "totals": {
-      "Cases": 1643,
-      "Deaths": 28
-    },
-    "daily": {
-      "Cases": 9,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Los Rios",
-    "totals": {
-      "Cases": 875,
-      "Deaths": 13
-    },
-    "daily": {
-      "Cases": 8,
-      "Deaths": 0
     }
   },
   {
@@ -176,6 +55,116 @@
     }
   },
   {
+    "Province_State": "Biobio",
+    "totals": {
+      "Cases": 10553,
+      "Deaths": 105
+    },
+    "daily": {
+      "Cases": 182,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Coquimbo",
+    "totals": {
+      "Cases": 5685,
+      "Deaths": 62
+    },
+    "daily": {
+      "Cases": 163,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Los Lagos",
+    "totals": {
+      "Cases": 3402,
+      "Deaths": 34
+    },
+    "daily": {
+      "Cases": 141,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Los Rios",
+    "totals": {
+      "Cases": 875,
+      "Deaths": 13
+    },
+    "daily": {
+      "Cases": 8,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Magallanes",
+    "totals": {
+      "Cases": 1643,
+      "Deaths": 28
+    },
+    "daily": {
+      "Cases": 9,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Maule",
+    "totals": {
+      "Cases": 8574,
+      "Deaths": 154
+    },
+    "daily": {
+      "Cases": 122,
+      "Deaths": 9
+    }
+  },
+  {
+    "Province_State": "Metropolitana",
+    "totals": {
+      "Cases": 252122,
+      "Deaths": 7353
+    },
+    "daily": {
+      "Cases": 805,
+      "Deaths": 50
+    }
+  },
+  {
+    "Province_State": "Nuble",
+    "totals": {
+      "Cases": 3377,
+      "Deaths": 60
+    },
+    "daily": {
+      "Cases": 7,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "OHiggins",
+    "totals": {
+      "Cases": 10194,
+      "Deaths": 218
+    },
+    "daily": {
+      "Cases": 111,
+      "Deaths": 9
+    }
+  },
+  {
+    "Province_State": "Tarapaca",
+    "totals": {
+      "Cases": 8188,
+      "Deaths": 155
+    },
+    "daily": {
+      "Cases": 41,
+      "Deaths": 2
+    }
+  },
+  {
     "Province_State": "Unknown",
     "totals": {
       "Cases": 46,
@@ -184,6 +173,17 @@
     "daily": {
       "Cases": 1,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Valparaiso",
+    "totals": {
+      "Cases": 16863,
+      "Deaths": 464
+    },
+    "daily": {
+      "Cases": 139,
+      "Deaths": 4
     }
   }
 ]

@@ -1,9 +1,9 @@
 [
   {
-    "Province_State": "Western Australia",
+    "Province_State": "From Diamond Princess",
     "totals": {
-      "Cases": 2,
-      "Deaths": 1
+      "Cases": 0,
+      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
@@ -33,17 +33,6 @@
     }
   },
   {
-    "Province_State": "Victoria",
-    "totals": {
-      "Cases": 9,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "South Australia",
     "totals": {
       "Cases": 3,
@@ -66,10 +55,21 @@
     }
   },
   {
-    "Province_State": "From Diamond Princess",
+    "Province_State": "Victoria",
     "totals": {
+      "Cases": 9,
+      "Deaths": 0
+    },
+    "daily": {
       "Cases": 0,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Western Australia",
+    "totals": {
+      "Cases": 2,
+      "Deaths": 1
     },
     "daily": {
       "Cases": 0,

@@ -1,5 +1,27 @@
 [
   {
+    "Province_State": "French Guiana",
+    "totals": {
+      "Cases": 10567,
+      "Deaths": 70
+    },
+    "daily": {
+      "Cases": 31,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "French Polynesia",
+    "totals": {
+      "Cases": 8646,
+      "Deaths": 38
+    },
+    "daily": {
+      "Cases": 1384,
+      "Deaths": 9
+    }
+  },
+  {
     "Province_State": "Guadeloupe",
     "totals": {
       "Cases": 7605,
@@ -11,13 +33,13 @@
     }
   },
   {
-    "Province_State": "French Guiana",
+    "Province_State": "Martinique",
     "totals": {
-      "Cases": 10567,
-      "Deaths": 70
+      "Cases": 3552,
+      "Deaths": 30
     },
     "daily": {
-      "Cases": 31,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -33,21 +55,10 @@
     }
   },
   {
-    "Province_State": "French Polynesia",
+    "Province_State": "New Caledonia",
     "totals": {
-      "Cases": 8646,
-      "Deaths": 38
-    },
-    "daily": {
-      "Cases": 1384,
-      "Deaths": 9
-    }
-  },
-  {
-    "Province_State": "Martinique",
-    "totals": {
-      "Cases": 3552,
-      "Deaths": 30
+      "Cases": 28,
+      "Deaths": 0
     },
     "daily": {
       "Cases": 0,
@@ -66,28 +77,6 @@
     }
   },
   {
-    "Province_State": "St Martin",
-    "totals": {
-      "Cases": 566,
-      "Deaths": 9
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "New Caledonia",
-    "totals": {
-      "Cases": 28,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Saint Barthelemy",
     "totals": {
       "Cases": 83,
@@ -103,6 +92,17 @@
     "totals": {
       "Cases": 16,
       "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "St Martin",
+    "totals": {
+      "Cases": 566,
+      "Deaths": 9
     },
     "daily": {
       "Cases": 0,

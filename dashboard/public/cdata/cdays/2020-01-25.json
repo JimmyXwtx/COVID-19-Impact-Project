@@ -1,5 +1,16 @@
 [
   {
+    "Country_Region": "Australia",
+    "totals": {
+      "Cases": 4,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 4,
+      "Deaths": 0
+    }
+  },
+  {
     "Country_Region": "China",
     "totals": {
       "Cases": 1404,
@@ -11,9 +22,31 @@
     }
   },
   {
-    "Country_Region": "Taiwan*",
+    "Country_Region": "France",
     "totals": {
       "Cases": 3,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Japan",
+    "totals": {
+      "Cases": 2,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Korea, South",
+    "totals": {
+      "Cases": 2,
       "Deaths": 0
     },
     "daily": {
@@ -33,9 +66,31 @@
     }
   },
   {
-    "Country_Region": "United States",
+    "Country_Region": "Malaysia",
     "totals": {
-      "Cases": 2,
+      "Cases": 3,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Nepal",
+    "totals": {
+      "Cases": 1,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "Country_Region": "Singapore",
+    "totals": {
+      "Cases": 3,
       "Deaths": 0
     },
     "daily": {
@@ -44,9 +99,9 @@
     }
   },
   {
-    "Country_Region": "Japan",
+    "Country_Region": "Taiwan*",
     "totals": {
-      "Cases": 2,
+      "Cases": 3,
       "Deaths": 0
     },
     "daily": {
@@ -66,20 +121,9 @@
     }
   },
   {
-    "Country_Region": "Korea, South",
+    "Country_Region": "United States",
     "totals": {
       "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Singapore",
-    "totals": {
-      "Cases": 3,
       "Deaths": 0
     },
     "daily": {
@@ -95,50 +139,6 @@
     },
     "daily": {
       "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "France",
-    "totals": {
-      "Cases": 3,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Australia",
-    "totals": {
-      "Cases": 4,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 4,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Nepal",
-    "totals": {
-      "Cases": 1,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Malaysia",
-    "totals": {
-      "Cases": 3,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 3,
       "Deaths": 0
     }
   }

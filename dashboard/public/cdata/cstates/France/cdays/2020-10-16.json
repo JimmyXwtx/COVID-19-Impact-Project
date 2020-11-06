@@ -1,16 +1,5 @@
 [
   {
-    "Province_State": "Guadeloupe",
-    "totals": {
-      "Cases": 7122,
-      "Deaths": 96
-    },
-    "daily": {
-      "Cases": 214,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "French Guiana",
     "totals": {
       "Cases": 10239,
@@ -18,39 +7,6 @@
     },
     "daily": {
       "Cases": 6,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Mayotte",
-    "totals": {
-      "Cases": 4030,
-      "Deaths": 43
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Martinique",
-    "totals": {
-      "Cases": 2257,
-      "Deaths": 24
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Reunion",
-    "totals": {
-      "Cases": 4776,
-      "Deaths": 17
-    },
-    "daily": {
-      "Cases": 98,
       "Deaths": 0
     }
   },
@@ -66,13 +22,35 @@
     }
   },
   {
-    "Province_State": "St Martin",
+    "Province_State": "Guadeloupe",
     "totals": {
-      "Cases": 531,
-      "Deaths": 8
+      "Cases": 7122,
+      "Deaths": 96
     },
     "daily": {
-      "Cases": 30,
+      "Cases": 214,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Martinique",
+    "totals": {
+      "Cases": 2257,
+      "Deaths": 24
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Mayotte",
+    "totals": {
+      "Cases": 4030,
+      "Deaths": 43
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -84,6 +62,17 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Reunion",
+    "totals": {
+      "Cases": 4776,
+      "Deaths": 17
+    },
+    "daily": {
+      "Cases": 98,
       "Deaths": 0
     }
   },
@@ -106,6 +95,17 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "St Martin",
+    "totals": {
+      "Cases": 531,
+      "Deaths": 8
+    },
+    "daily": {
+      "Cases": 30,
       "Deaths": 0
     }
   }

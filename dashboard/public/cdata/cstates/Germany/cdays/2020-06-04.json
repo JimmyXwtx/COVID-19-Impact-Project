@@ -1,16 +1,5 @@
 [
   {
-    "Province_State": "Bayern",
-    "totals": {
-      "Cases": 47389,
-      "Deaths": 2491
-    },
-    "daily": {
-      "Cases": 44,
-      "Deaths": 12
-    }
-  },
-  {
     "Province_State": "Baden-Wurttemberg",
     "totals": {
       "Cases": 34843,
@@ -22,69 +11,14 @@
     }
   },
   {
-    "Province_State": "Nordrhein-Westfalen",
+    "Province_State": "Bayern",
     "totals": {
-      "Cases": 38297,
-      "Deaths": 1611
+      "Cases": 47389,
+      "Deaths": 2491
     },
     "daily": {
-      "Cases": 112,
-      "Deaths": 4
-    }
-  },
-  {
-    "Province_State": "Niedersachsen",
-    "totals": {
-      "Cases": 12232,
-      "Deaths": 607
-    },
-    "daily": {
-      "Cases": 95,
-      "Deaths": 3
-    }
-  },
-  {
-    "Province_State": "Hessen",
-    "totals": {
-      "Cases": 10129,
-      "Deaths": 482
-    },
-    "daily": {
-      "Cases": 49,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Hamburg",
-    "totals": {
-      "Cases": 5106,
-      "Deaths": 253
-    },
-    "daily": {
-      "Cases": 8,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Rheinland-Pfalz",
-    "totals": {
-      "Cases": 6726,
-      "Deaths": 230
-    },
-    "daily": {
-      "Cases": 13,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sachsen",
-    "totals": {
-      "Cases": 5312,
-      "Deaths": 212
-    },
-    "daily": {
-      "Cases": 3,
-      "Deaths": 0
+      "Cases": 44,
+      "Deaths": 12
     }
   },
   {
@@ -110,6 +44,83 @@
     }
   },
   {
+    "Province_State": "Bremen",
+    "totals": {
+      "Cases": 1500,
+      "Deaths": 44
+    },
+    "daily": {
+      "Cases": 36,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Hamburg",
+    "totals": {
+      "Cases": 5106,
+      "Deaths": 253
+    },
+    "daily": {
+      "Cases": 8,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Hessen",
+    "totals": {
+      "Cases": 10129,
+      "Deaths": 482
+    },
+    "daily": {
+      "Cases": 49,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Mecklenburg-Vorpommern",
+    "totals": {
+      "Cases": 763,
+      "Deaths": 20
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Niedersachsen",
+    "totals": {
+      "Cases": 12232,
+      "Deaths": 607
+    },
+    "daily": {
+      "Cases": 95,
+      "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Nordrhein-Westfalen",
+    "totals": {
+      "Cases": 38297,
+      "Deaths": 1611
+    },
+    "daily": {
+      "Cases": 112,
+      "Deaths": 4
+    }
+  },
+  {
+    "Province_State": "Rheinland-Pfalz",
+    "totals": {
+      "Cases": 6726,
+      "Deaths": 230
+    },
+    "daily": {
+      "Cases": 13,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Saarland",
     "totals": {
       "Cases": 2737,
@@ -121,24 +132,13 @@
     }
   },
   {
-    "Province_State": "Thuringen",
+    "Province_State": "Sachsen",
     "totals": {
-      "Cases": 3043,
-      "Deaths": 168
+      "Cases": 5312,
+      "Deaths": 212
     },
     "daily": {
-      "Cases": 19,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Schleswig-Holstein",
-    "totals": {
-      "Cases": 3106,
-      "Deaths": 146
-    },
-    "daily": {
-      "Cases": 0,
+      "Cases": 3,
       "Deaths": 0
     }
   },
@@ -154,25 +154,25 @@
     }
   },
   {
-    "Province_State": "Bremen",
+    "Province_State": "Schleswig-Holstein",
     "totals": {
-      "Cases": 1500,
-      "Deaths": 44
+      "Cases": 3106,
+      "Deaths": 146
     },
     "daily": {
-      "Cases": 36,
-      "Deaths": 1
+      "Cases": 0,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Mecklenburg-Vorpommern",
+    "Province_State": "Thuringen",
     "totals": {
-      "Cases": 763,
-      "Deaths": 20
+      "Cases": 3043,
+      "Deaths": 168
     },
     "daily": {
-      "Cases": 2,
-      "Deaths": 0
+      "Cases": 19,
+      "Deaths": 2
     }
   },
   {

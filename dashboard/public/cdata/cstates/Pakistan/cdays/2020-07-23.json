@@ -1,5 +1,60 @@
 [
   {
+    "Province_State": "Azad Jammu and Kashmir",
+    "totals": {
+      "Cases": 1989,
+      "Deaths": 49
+    },
+    "daily": {
+      "Cases": 28,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Balochistan",
+    "totals": {
+      "Cases": 11523,
+      "Deaths": 136
+    },
+    "daily": {
+      "Cases": 6,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Gilgit-Baltistan",
+    "totals": {
+      "Cases": 1918,
+      "Deaths": 46
+    },
+    "daily": {
+      "Cases": 22,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Islamabad",
+    "totals": {
+      "Cases": 14766,
+      "Deaths": 162
+    },
+    "daily": {
+      "Cases": 44,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Khyber Pakhtunkhwa",
+    "totals": {
+      "Cases": 32898,
+      "Deaths": 1169
+    },
+    "daily": {
+      "Cases": 145,
+      "Deaths": 11
+    }
+  },
+  {
     "Province_State": "Punjab",
     "totals": {
       "Cases": 91423,
@@ -19,61 +74,6 @@
     "daily": {
       "Cases": 670,
       "Deaths": 36
-    }
-  },
-  {
-    "Province_State": "Khyber Pakhtunkhwa",
-    "totals": {
-      "Cases": 32898,
-      "Deaths": 1169
-    },
-    "daily": {
-      "Cases": 145,
-      "Deaths": 11
-    }
-  },
-  {
-    "Province_State": "Islamabad",
-    "totals": {
-      "Cases": 14766,
-      "Deaths": 162
-    },
-    "daily": {
-      "Cases": 44,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Balochistan",
-    "totals": {
-      "Cases": 11523,
-      "Deaths": 136
-    },
-    "daily": {
-      "Cases": 6,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Azad Jammu and Kashmir",
-    "totals": {
-      "Cases": 1989,
-      "Deaths": 49
-    },
-    "daily": {
-      "Cases": 28,
-      "Deaths": 1
-    }
-  },
-  {
-    "Province_State": "Gilgit-Baltistan",
-    "totals": {
-      "Cases": 1918,
-      "Deaths": 46
-    },
-    "daily": {
-      "Cases": 22,
-      "Deaths": 1
     }
   }
 ]

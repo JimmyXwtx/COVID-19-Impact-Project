@@ -1,53 +1,9 @@
 [
   {
-    "Province_State": "Lima",
+    "Province_State": "Amazonas",
     "totals": {
-      "Cases": 211164,
-      "Deaths": 8892
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "La Libertad",
-    "totals": {
-      "Cases": 14722,
-      "Deaths": 1327
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Piura",
-    "totals": {
-      "Cases": 20802,
-      "Deaths": 1251
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Lambayeque",
-    "totals": {
-      "Cases": 16954,
-      "Deaths": 1215
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Callao",
-    "totals": {
-      "Cases": 20898,
-      "Deaths": 1020
+      "Cases": 5298,
+      "Deaths": 123
     },
     "daily": {
       "Cases": 0,
@@ -66,10 +22,10 @@
     }
   },
   {
-    "Province_State": "Ica",
+    "Province_State": "Apurimac",
     "totals": {
-      "Cases": 11541,
-      "Deaths": 804
+      "Cases": 858,
+      "Deaths": 37
     },
     "daily": {
       "Cases": 0,
@@ -88,54 +44,10 @@
     }
   },
   {
-    "Province_State": "Loreto",
+    "Province_State": "Ayacucho",
     "totals": {
-      "Cases": 11081,
-      "Deaths": 545
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Junin",
-    "totals": {
-      "Cases": 7276,
-      "Deaths": 402
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "San Martin",
-    "totals": {
-      "Cases": 8258,
-      "Deaths": 319
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ucayali",
-    "totals": {
-      "Cases": 9737,
-      "Deaths": 231
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Tumbes",
-    "totals": {
-      "Cases": 4090,
-      "Deaths": 209
+      "Cases": 3611,
+      "Deaths": 74
     },
     "daily": {
       "Cases": 0,
@@ -154,32 +66,10 @@
     }
   },
   {
-    "Province_State": "Huanuco",
+    "Province_State": "Callao",
     "totals": {
-      "Cases": 5969,
-      "Deaths": 191
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Amazonas",
-    "totals": {
-      "Cases": 5298,
-      "Deaths": 123
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Madre de Dios",
-    "totals": {
-      "Cases": 3170,
-      "Deaths": 97
+      "Cases": 20898,
+      "Deaths": 1020
     },
     "daily": {
       "Cases": 0,
@@ -198,32 +88,109 @@
     }
   },
   {
+    "Province_State": "Huancavelica",
+    "totals": {
+      "Cases": 1551,
+      "Deaths": 37
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Huanuco",
+    "totals": {
+      "Cases": 5969,
+      "Deaths": 191
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ica",
+    "totals": {
+      "Cases": 11541,
+      "Deaths": 804
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Junin",
+    "totals": {
+      "Cases": 7276,
+      "Deaths": 402
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "La Libertad",
+    "totals": {
+      "Cases": 14722,
+      "Deaths": 1327
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Lambayeque",
+    "totals": {
+      "Cases": 16954,
+      "Deaths": 1215
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Lima",
+    "totals": {
+      "Cases": 211164,
+      "Deaths": 8892
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Loreto",
+    "totals": {
+      "Cases": 11081,
+      "Deaths": 545
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Madre de Dios",
+    "totals": {
+      "Cases": 3170,
+      "Deaths": 97
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Moquegua",
     "totals": {
       "Cases": 2752,
       "Deaths": 80
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Ayacucho",
-    "totals": {
-      "Cases": 3611,
-      "Deaths": 74
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Puno",
-    "totals": {
-      "Cases": 2039,
-      "Deaths": 72
     },
     "daily": {
       "Cases": 0,
@@ -242,10 +209,10 @@
     }
   },
   {
-    "Province_State": "Apurimac",
+    "Province_State": "Piura",
     "totals": {
-      "Cases": 858,
-      "Deaths": 37
+      "Cases": 20802,
+      "Deaths": 1251
     },
     "daily": {
       "Cases": 0,
@@ -253,10 +220,21 @@
     }
   },
   {
-    "Province_State": "Huancavelica",
+    "Province_State": "Puno",
     "totals": {
-      "Cases": 1551,
-      "Deaths": 37
+      "Cases": 2039,
+      "Deaths": 72
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "San Martin",
+    "totals": {
+      "Cases": 8258,
+      "Deaths": 319
     },
     "daily": {
       "Cases": 0,
@@ -268,6 +246,28 @@
     "totals": {
       "Cases": 2616,
       "Deaths": 30
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Tumbes",
+    "totals": {
+      "Cases": 4090,
+      "Deaths": 209
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Ucayali",
+    "totals": {
+      "Cases": 9737,
+      "Deaths": 231
     },
     "daily": {
       "Cases": 0,

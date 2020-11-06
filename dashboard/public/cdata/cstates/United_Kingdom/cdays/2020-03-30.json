@@ -1,27 +1,5 @@
 [
   {
-    "Province_State": "Channel Islands",
-    "totals": {
-      "Cases": 141,
-      "Deaths": 2
-    },
-    "daily": {
-      "Cases": 33,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Cayman Islands",
-    "totals": {
-      "Cases": 12,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 4,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Anguilla",
     "totals": {
       "Cases": 2,
@@ -51,6 +29,28 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Cayman Islands",
+    "totals": {
+      "Cases": 12,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 4,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Channel Islands",
+    "totals": {
+      "Cases": 141,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 33,
       "Deaths": 0
     }
   },

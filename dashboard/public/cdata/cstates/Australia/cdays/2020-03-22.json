@@ -1,5 +1,38 @@
 [
   {
+    "Province_State": "Australian Capital Territory",
+    "totals": {
+      "Cases": 19,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 10,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "External territories",
+    "totals": {
+      "Cases": 0,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Jervis Bay Territory",
+    "totals": {
+      "Cases": 0,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "New South Wales",
     "totals": {
       "Cases": 669,
@@ -11,24 +44,13 @@
     }
   },
   {
-    "Province_State": "Western Australia",
+    "Province_State": "Northern Territory",
     "totals": {
-      "Cases": 120,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 30,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Victoria",
-    "totals": {
-      "Cases": 296,
+      "Cases": 5,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 67,
+      "Cases": 2,
       "Deaths": 0
     }
   },
@@ -66,46 +88,24 @@
     }
   },
   {
-    "Province_State": "Australian Capital Territory",
+    "Province_State": "Victoria",
     "totals": {
-      "Cases": 19,
+      "Cases": 296,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 10,
+      "Cases": 67,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Northern Territory",
+    "Province_State": "Western Australia",
     "totals": {
-      "Cases": 5,
-      "Deaths": 0
+      "Cases": 120,
+      "Deaths": 1
     },
     "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "External territories",
-    "totals": {
-      "Cases": 0,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Jervis Bay Territory",
-    "totals": {
-      "Cases": 0,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
+      "Cases": 30,
       "Deaths": 0
     }
   }

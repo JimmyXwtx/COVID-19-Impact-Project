@@ -1,5 +1,27 @@
 [
   {
+    "Province_State": "Arizona",
+    "totals": {
+      "Cases": 1,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "California",
+    "totals": {
+      "Cases": 10,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": -5,
+      "Deaths": 0
+    }
+  },
+  {
     "Province_State": "Diamond Princess",
     "totals": {
       "Cases": 36,
@@ -22,17 +44,6 @@
     }
   },
   {
-    "Province_State": "California",
-    "totals": {
-      "Cases": 10,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": -5,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Massachusetts",
     "totals": {
       "Cases": 1,
@@ -44,13 +55,13 @@
     }
   },
   {
-    "Province_State": "Wisconsin",
+    "Province_State": "Nebraska",
     "totals": {
-      "Cases": 1,
+      "Cases": 0,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 0,
+      "Cases": -11,
       "Deaths": 0
     }
   },
@@ -77,24 +88,13 @@
     }
   },
   {
-    "Province_State": "Arizona",
+    "Province_State": "Wisconsin",
     "totals": {
       "Cases": 1,
       "Deaths": 0
     },
     "daily": {
       "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Nebraska",
-    "totals": {
-      "Cases": 0,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": -11,
       "Deaths": 0
     }
   }

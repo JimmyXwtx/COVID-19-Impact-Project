@@ -1,12 +1,23 @@
 [
   {
-    "Province_State": "Washington",
+    "Province_State": "Arizona",
     "totals": {
-      "Cases": 11,
-      "Deaths": 1
+      "Cases": 1,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 4,
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "California",
+    "totals": {
+      "Cases": 12,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -33,17 +44,6 @@
     }
   },
   {
-    "Province_State": "California",
-    "totals": {
-      "Cases": 12,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
-      "Deaths": 0
-    }
-  },
-  {
     "Province_State": "Massachusetts",
     "totals": {
       "Cases": 1,
@@ -55,9 +55,9 @@
     }
   },
   {
-    "Province_State": "Wisconsin",
+    "Province_State": "Nebraska",
     "totals": {
-      "Cases": 1,
+      "Cases": 0,
       "Deaths": 0
     },
     "daily": {
@@ -99,20 +99,20 @@
     }
   },
   {
-    "Province_State": "Arizona",
+    "Province_State": "Washington",
     "totals": {
-      "Cases": 1,
-      "Deaths": 0
+      "Cases": 11,
+      "Deaths": 1
     },
     "daily": {
-      "Cases": 0,
+      "Cases": 4,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Nebraska",
+    "Province_State": "Wisconsin",
     "totals": {
-      "Cases": 0,
+      "Cases": 1,
       "Deaths": 0
     },
     "daily": {

@@ -1,56 +1,45 @@
 [
   {
-    "Province_State": "Sao Paulo",
+    "Province_State": "Acre",
     "totals": {
-      "Cases": 697530,
-      "Deaths": 26780
+      "Cases": 22516,
+      "Deaths": 576
     },
     "daily": {
-      "Cases": 11408,
-      "Deaths": 167
+      "Cases": 81,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Rio de Janeiro",
+    "Province_State": "Alagoas",
     "totals": {
-      "Cases": 190614,
-      "Deaths": 14526
+      "Cases": 72076,
+      "Deaths": 1742
     },
     "daily": {
-      "Cases": 723,
-      "Deaths": 19
+      "Cases": 844,
+      "Deaths": 10
     }
   },
   {
-    "Province_State": "Ceara",
+    "Province_State": "Amapa",
     "totals": {
-      "Cases": 197381,
-      "Deaths": 8129
+      "Cases": 39431,
+      "Deaths": 613
     },
     "daily": {
-      "Cases": 1237,
-      "Deaths": 6
+      "Cases": 187,
+      "Deaths": 1
     }
   },
   {
-    "Province_State": "Pernambuco",
+    "Province_State": "Amazonas",
     "totals": {
-      "Cases": 111773,
-      "Deaths": 7156
+      "Cases": 111241,
+      "Deaths": 3463
     },
     "daily": {
-      "Cases": 1364,
-      "Deaths": 45
-    }
-  },
-  {
-    "Province_State": "Para",
-    "totals": {
-      "Cases": 177010,
-      "Deaths": 5932
-    },
-    "daily": {
-      "Cases": 1402,
+      "Cases": 464,
       "Deaths": 8
     }
   },
@@ -66,113 +55,14 @@
     }
   },
   {
-    "Province_State": "Minas Gerais",
+    "Province_State": "Ceara",
     "totals": {
-      "Cases": 171514,
-      "Deaths": 4044
+      "Cases": 197381,
+      "Deaths": 8129
     },
     "daily": {
-      "Cases": 3086,
-      "Deaths": 101
-    }
-  },
-  {
-    "Province_State": "Amazonas",
-    "totals": {
-      "Cases": 111241,
-      "Deaths": 3463
-    },
-    "daily": {
-      "Cases": 464,
-      "Deaths": 8
-    }
-  },
-  {
-    "Province_State": "Maranhao",
-    "totals": {
-      "Cases": 136280,
-      "Deaths": 3253
-    },
-    "daily": {
-      "Cases": 956,
-      "Deaths": 13
-    }
-  },
-  {
-    "Province_State": "Espirito Santo",
-    "totals": {
-      "Cases": 98765,
-      "Deaths": 2864
-    },
-    "daily": {
-      "Cases": 659,
-      "Deaths": 15
-    }
-  },
-  {
-    "Province_State": "Parana",
-    "totals": {
-      "Cases": 103771,
-      "Deaths": 2665
-    },
-    "daily": {
-      "Cases": 1927,
-      "Deaths": 53
-    }
-  },
-  {
-    "Province_State": "Rio Grande do Sul",
-    "totals": {
-      "Cases": 97445,
-      "Deaths": 2647
-    },
-    "daily": {
-      "Cases": 2303,
-      "Deaths": 16
-    }
-  },
-  {
-    "Province_State": "Mato Grosso",
-    "totals": {
-      "Cases": 72761,
-      "Deaths": 2319
-    },
-    "daily": {
-      "Cases": 492,
-      "Deaths": 34
-    }
-  },
-  {
-    "Province_State": "Goias",
-    "totals": {
-      "Cases": 100938,
-      "Deaths": 2286
-    },
-    "daily": {
-      "Cases": 1704,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Paraiba",
-    "totals": {
-      "Cases": 95588,
-      "Deaths": 2138
-    },
-    "daily": {
-      "Cases": 928,
-      "Deaths": 25
-    }
-  },
-  {
-    "Province_State": "Rio Grande do Norte",
-    "totals": {
-      "Cases": 57660,
-      "Deaths": 2062
-    },
-    "daily": {
-      "Cases": 193,
-      "Deaths": 21
+      "Cases": 1237,
+      "Deaths": 6
     }
   },
   {
@@ -187,69 +77,47 @@
     }
   },
   {
-    "Province_State": "Santa Catarina",
+    "Province_State": "Espirito Santo",
     "totals": {
-      "Cases": 120001,
-      "Deaths": 1767
+      "Cases": 98765,
+      "Deaths": 2864
     },
     "daily": {
-      "Cases": 1818,
-      "Deaths": 25
+      "Cases": 659,
+      "Deaths": 15
     }
   },
   {
-    "Province_State": "Alagoas",
+    "Province_State": "Goias",
     "totals": {
-      "Cases": 72076,
-      "Deaths": 1742
+      "Cases": 100938,
+      "Deaths": 2286
     },
     "daily": {
-      "Cases": 844,
-      "Deaths": 10
+      "Cases": 1704,
+      "Deaths": 0
     }
   },
   {
-    "Province_State": "Sergipe",
+    "Province_State": "Maranhao",
     "totals": {
-      "Cases": 67701,
-      "Deaths": 1696
+      "Cases": 136280,
+      "Deaths": 3253
     },
     "daily": {
-      "Cases": 476,
-      "Deaths": 12
-    }
-  },
-  {
-    "Province_State": "Piaui",
-    "totals": {
-      "Cases": 65638,
-      "Deaths": 1594
-    },
-    "daily": {
-      "Cases": 1043,
+      "Cases": 956,
       "Deaths": 13
     }
   },
   {
-    "Province_State": "Rondonia",
+    "Province_State": "Mato Grosso",
     "totals": {
-      "Cases": 47652,
-      "Deaths": 1012
+      "Cases": 72761,
+      "Deaths": 2319
     },
     "daily": {
-      "Cases": 364,
-      "Deaths": 11
-    }
-  },
-  {
-    "Province_State": "Amapa",
-    "totals": {
-      "Cases": 39431,
-      "Deaths": 613
-    },
-    "daily": {
-      "Cases": 187,
-      "Deaths": 1
+      "Cases": 492,
+      "Deaths": 34
     }
   },
   {
@@ -264,14 +132,113 @@
     }
   },
   {
-    "Province_State": "Acre",
+    "Province_State": "Minas Gerais",
     "totals": {
-      "Cases": 22516,
-      "Deaths": 576
+      "Cases": 171514,
+      "Deaths": 4044
     },
     "daily": {
-      "Cases": 81,
-      "Deaths": 0
+      "Cases": 3086,
+      "Deaths": 101
+    }
+  },
+  {
+    "Province_State": "Para",
+    "totals": {
+      "Cases": 177010,
+      "Deaths": 5932
+    },
+    "daily": {
+      "Cases": 1402,
+      "Deaths": 8
+    }
+  },
+  {
+    "Province_State": "Paraiba",
+    "totals": {
+      "Cases": 95588,
+      "Deaths": 2138
+    },
+    "daily": {
+      "Cases": 928,
+      "Deaths": 25
+    }
+  },
+  {
+    "Province_State": "Parana",
+    "totals": {
+      "Cases": 103771,
+      "Deaths": 2665
+    },
+    "daily": {
+      "Cases": 1927,
+      "Deaths": 53
+    }
+  },
+  {
+    "Province_State": "Pernambuco",
+    "totals": {
+      "Cases": 111773,
+      "Deaths": 7156
+    },
+    "daily": {
+      "Cases": 1364,
+      "Deaths": 45
+    }
+  },
+  {
+    "Province_State": "Piaui",
+    "totals": {
+      "Cases": 65638,
+      "Deaths": 1594
+    },
+    "daily": {
+      "Cases": 1043,
+      "Deaths": 13
+    }
+  },
+  {
+    "Province_State": "Rio Grande do Norte",
+    "totals": {
+      "Cases": 57660,
+      "Deaths": 2062
+    },
+    "daily": {
+      "Cases": 193,
+      "Deaths": 21
+    }
+  },
+  {
+    "Province_State": "Rio Grande do Sul",
+    "totals": {
+      "Cases": 97445,
+      "Deaths": 2647
+    },
+    "daily": {
+      "Cases": 2303,
+      "Deaths": 16
+    }
+  },
+  {
+    "Province_State": "Rio de Janeiro",
+    "totals": {
+      "Cases": 190614,
+      "Deaths": 14526
+    },
+    "daily": {
+      "Cases": 723,
+      "Deaths": 19
+    }
+  },
+  {
+    "Province_State": "Rondonia",
+    "totals": {
+      "Cases": 47652,
+      "Deaths": 1012
+    },
+    "daily": {
+      "Cases": 364,
+      "Deaths": 11
     }
   },
   {
@@ -283,6 +250,39 @@
     "daily": {
       "Cases": 500,
       "Deaths": 3
+    }
+  },
+  {
+    "Province_State": "Santa Catarina",
+    "totals": {
+      "Cases": 120001,
+      "Deaths": 1767
+    },
+    "daily": {
+      "Cases": 1818,
+      "Deaths": 25
+    }
+  },
+  {
+    "Province_State": "Sao Paulo",
+    "totals": {
+      "Cases": 697530,
+      "Deaths": 26780
+    },
+    "daily": {
+      "Cases": 11408,
+      "Deaths": 167
+    }
+  },
+  {
+    "Province_State": "Sergipe",
+    "totals": {
+      "Cases": 67701,
+      "Deaths": 1696
+    },
+    "daily": {
+      "Cases": 476,
+      "Deaths": 12
     }
   },
   {

@@ -1,71 +1,5 @@
 [
   {
-    "Province_State": "Atlantico",
-    "totals": {
-      "Cases": 24212,
-      "Deaths": 1277
-    },
-    "daily": {
-      "Cases": 852,
-      "Deaths": 70
-    }
-  },
-  {
-    "Province_State": "Capital District",
-    "totals": {
-      "Cases": 31417,
-      "Deaths": 735
-    },
-    "daily": {
-      "Cases": 1400,
-      "Deaths": 22
-    }
-  },
-  {
-    "Province_State": "Valle del Cauca",
-    "totals": {
-      "Cases": 10508,
-      "Deaths": 422
-    },
-    "daily": {
-      "Cases": 534,
-      "Deaths": 10
-    }
-  },
-  {
-    "Province_State": "Bolivar",
-    "totals": {
-      "Cases": 9392,
-      "Deaths": 388
-    },
-    "daily": {
-      "Cases": 276,
-      "Deaths": 13
-    }
-  },
-  {
-    "Province_State": "Magdalena",
-    "totals": {
-      "Cases": 1903,
-      "Deaths": 134
-    },
-    "daily": {
-      "Cases": 49,
-      "Deaths": 13
-    }
-  },
-  {
-    "Province_State": "Narino",
-    "totals": {
-      "Cases": 3521,
-      "Deaths": 119
-    },
-    "daily": {
-      "Cases": 78,
-      "Deaths": 5
-    }
-  },
-  {
     "Province_State": "Amazonas",
     "totals": {
       "Cases": 2319,
@@ -74,50 +8,6 @@
     "daily": {
       "Cases": 20,
       "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Sucre",
-    "totals": {
-      "Cases": 1373,
-      "Deaths": 75
-    },
-    "daily": {
-      "Cases": 118,
-      "Deaths": 8
-    }
-  },
-  {
-    "Province_State": "Cundinamarca",
-    "totals": {
-      "Cases": 2975,
-      "Deaths": 66
-    },
-    "daily": {
-      "Cases": 144,
-      "Deaths": 4
-    }
-  },
-  {
-    "Province_State": "Cordoba",
-    "totals": {
-      "Cases": 801,
-      "Deaths": 59
-    },
-    "daily": {
-      "Cases": 15,
-      "Deaths": 6
-    }
-  },
-  {
-    "Province_State": "Choco",
-    "totals": {
-      "Cases": 1682,
-      "Deaths": 49
-    },
-    "daily": {
-      "Cases": 138,
-      "Deaths": 2
     }
   },
   {
@@ -132,46 +22,90 @@
     }
   },
   {
-    "Province_State": "Cesar",
+    "Province_State": "Arauca",
     "totals": {
-      "Cases": 1071,
-      "Deaths": 27
+      "Cases": 80,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 44,
-      "Deaths": 2
-    }
-  },
-  {
-    "Province_State": "Tolima",
-    "totals": {
-      "Cases": 1021,
-      "Deaths": 22
-    },
-    "daily": {
-      "Cases": 78,
+      "Cases": 4,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "La Guajira",
+    "Province_State": "Atlantico",
     "totals": {
-      "Cases": 479,
-      "Deaths": 21
+      "Cases": 24212,
+      "Deaths": 1277
     },
     "daily": {
-      "Cases": 39,
+      "Cases": 852,
+      "Deaths": 70
+    }
+  },
+  {
+    "Province_State": "Bolivar",
+    "totals": {
+      "Cases": 9392,
+      "Deaths": 388
+    },
+    "daily": {
+      "Cases": 276,
+      "Deaths": 13
+    }
+  },
+  {
+    "Province_State": "Boyaca",
+    "totals": {
+      "Cases": 390,
+      "Deaths": 17
+    },
+    "daily": {
+      "Cases": 15,
       "Deaths": 1
     }
   },
   {
-    "Province_State": "Norte de Santander",
+    "Province_State": "Caldas",
     "totals": {
-      "Cases": 342,
-      "Deaths": 20
+      "Cases": 264,
+      "Deaths": 8
     },
     "daily": {
-      "Cases": 8,
+      "Cases": 4,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Capital District",
+    "totals": {
+      "Cases": 31417,
+      "Deaths": 735
+    },
+    "daily": {
+      "Cases": 1400,
+      "Deaths": 22
+    }
+  },
+  {
+    "Province_State": "Caqueta",
+    "totals": {
+      "Cases": 39,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 4,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Casanare",
+    "totals": {
+      "Cases": 67,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
       "Deaths": 0
     }
   },
@@ -187,36 +121,69 @@
     }
   },
   {
-    "Province_State": "Boyaca",
+    "Province_State": "Cesar",
     "totals": {
-      "Cases": 390,
-      "Deaths": 17
+      "Cases": 1071,
+      "Deaths": 27
     },
     "daily": {
-      "Cases": 15,
-      "Deaths": 1
+      "Cases": 44,
+      "Deaths": 2
     }
   },
   {
-    "Province_State": "Meta",
+    "Province_State": "Choco",
     "totals": {
-      "Cases": 1271,
-      "Deaths": 16
+      "Cases": 1682,
+      "Deaths": 49
     },
     "daily": {
-      "Cases": 21,
+      "Cases": 138,
+      "Deaths": 2
+    }
+  },
+  {
+    "Province_State": "Cordoba",
+    "totals": {
+      "Cases": 801,
+      "Deaths": 59
+    },
+    "daily": {
+      "Cases": 15,
+      "Deaths": 6
+    }
+  },
+  {
+    "Province_State": "Cundinamarca",
+    "totals": {
+      "Cases": 2975,
+      "Deaths": 66
+    },
+    "daily": {
+      "Cases": 144,
+      "Deaths": 4
+    }
+  },
+  {
+    "Province_State": "Guainia",
+    "totals": {
+      "Cases": 14,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": -1,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Santander",
+    "Province_State": "Guaviare",
     "totals": {
-      "Cases": 757,
-      "Deaths": 15
+      "Cases": 39,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 44,
-      "Deaths": 1
+      "Cases": 1,
+      "Deaths": 0
     }
   },
   {
@@ -231,24 +198,57 @@
     }
   },
   {
-    "Province_State": "Risaralda",
+    "Province_State": "La Guajira",
     "totals": {
-      "Cases": 546,
-      "Deaths": 13
+      "Cases": 479,
+      "Deaths": 21
     },
     "daily": {
-      "Cases": 35,
+      "Cases": 39,
+      "Deaths": 1
+    }
+  },
+  {
+    "Province_State": "Magdalena",
+    "totals": {
+      "Cases": 1903,
+      "Deaths": 134
+    },
+    "daily": {
+      "Cases": 49,
+      "Deaths": 13
+    }
+  },
+  {
+    "Province_State": "Meta",
+    "totals": {
+      "Cases": 1271,
+      "Deaths": 16
+    },
+    "daily": {
+      "Cases": 21,
       "Deaths": 0
     }
   },
   {
-    "Province_State": "Caldas",
+    "Province_State": "Narino",
     "totals": {
-      "Cases": 264,
-      "Deaths": 8
+      "Cases": 3521,
+      "Deaths": 119
     },
     "daily": {
-      "Cases": 4,
+      "Cases": 78,
+      "Deaths": 5
+    }
+  },
+  {
+    "Province_State": "Norte de Santander",
+    "totals": {
+      "Cases": 342,
+      "Deaths": 20
+    },
+    "daily": {
+      "Cases": 8,
       "Deaths": 0
     }
   },
@@ -275,24 +275,13 @@
     }
   },
   {
-    "Province_State": "Caqueta",
+    "Province_State": "Risaralda",
     "totals": {
-      "Cases": 39,
-      "Deaths": 2
+      "Cases": 546,
+      "Deaths": 13
     },
     "daily": {
-      "Cases": 4,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": "Guainia",
-    "totals": {
-      "Cases": 14,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": -1,
+      "Cases": 35,
       "Deaths": 0
     }
   },
@@ -308,35 +297,35 @@
     }
   },
   {
-    "Province_State": "Arauca",
+    "Province_State": "Santander",
     "totals": {
-      "Cases": 80,
-      "Deaths": 0
+      "Cases": 757,
+      "Deaths": 15
     },
     "daily": {
-      "Cases": 4,
-      "Deaths": 0
+      "Cases": 44,
+      "Deaths": 1
     }
   },
   {
-    "Province_State": "Casanare",
+    "Province_State": "Sucre",
     "totals": {
-      "Cases": 67,
-      "Deaths": 0
+      "Cases": 1373,
+      "Deaths": 75
     },
     "daily": {
-      "Cases": 1,
-      "Deaths": 0
+      "Cases": 118,
+      "Deaths": 8
     }
   },
   {
-    "Province_State": "Guaviare",
+    "Province_State": "Tolima",
     "totals": {
-      "Cases": 39,
-      "Deaths": 0
+      "Cases": 1021,
+      "Deaths": 22
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 78,
       "Deaths": 0
     }
   },
@@ -349,6 +338,17 @@
     "daily": {
       "Cases": 4,
       "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Valle del Cauca",
+    "totals": {
+      "Cases": 10508,
+      "Deaths": 422
+    },
+    "daily": {
+      "Cases": 534,
+      "Deaths": 10
     }
   },
   {

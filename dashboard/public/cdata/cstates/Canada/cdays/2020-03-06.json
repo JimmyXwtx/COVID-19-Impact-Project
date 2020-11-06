@@ -1,12 +1,12 @@
 [
   {
-    "Province_State": "Toronto, ON",
+    "Province_State": " Montreal, QC",
     "totals": {
-      "Cases": 24,
+      "Cases": 2,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 3,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -18,17 +18,6 @@
     },
     "daily": {
       "Cases": 8,
-      "Deaths": 0
-    }
-  },
-  {
-    "Province_State": " Montreal, QC",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -51,6 +40,17 @@
     },
     "daily": {
       "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "Province_State": "Toronto, ON",
+    "totals": {
+      "Cases": 24,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 3,
       "Deaths": 0
     }
   }
