@@ -29,6 +29,7 @@ let toDate;
 
 // fs.ensureDirSync(store_path_cdaily);
 // if (argv_detail) fs.ensureDirSync(store_path_uregion);
+const start_time = Date.now();
 
 process_dir();
 
@@ -49,7 +50,9 @@ function process_dir() {
 
 function process_summary() {
   console.log('Parsed fromDate=' + fromDate + ' toDate=' + toDate);
-  
+  const parse_time = Date.now() - start_time;
+  console.log('parse sec', parse_time/1000);
+
   write_summary(store_dir);
 
   const npath = path.resolve(store_dir, 'cstate');
@@ -57,10 +60,13 @@ function process_summary() {
   for (let dname of dfiles) {
     const fpath = path.resolve(npath, dname);
     
-    console.log('process_summary fpath', fpath);
+    // console.log('process_summary fpath', fpath);
 
     write_summary(fpath);
   }
+ 
+  const lapse_time = Date.now() - start_time;
+  console.log('lapse sec', lapse_time/1000);
 }
 
 function process_cvs(cvs_inpath, file_date) {
