@@ -73,10 +73,10 @@ function rename_item(item) {
         console.log(item);
       }
     }
-  } else {
-    // if (!item.Province_State) {
-    //   item.Province_State = 'Other';
-    // }
+  } else if (item.Country_Region == 'France') {
+    if (!item.Province_State) {
+      item.Province_State = item.Country_Region;
+    }
   }
 }
 
