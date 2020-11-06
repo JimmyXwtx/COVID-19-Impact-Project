@@ -25,7 +25,7 @@ export default function fetchData(dpath, dataFunc) {
       // Note 1
       (error) => {
         console.error('fetchData dpath', dpath, 'Error:', error);
-        dataFunc(null);
+        dataFunc([]);
       }
     );
   // .catch((error) => {

@@ -34,14 +34,15 @@ const Rows = (props) => {
 
     return (
       <tr key={slugKey}>
-        <td
-          className="region"
-          onClick={() => {
-            console.log('CountryDataTable index', index, 'country', country);
-          }}
-        >
-          {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
-          {Country_Region}
+        <td className="region">
+          <button
+            onClick={() => {
+              console.log('CountryDataTable index', index, 'country', country);
+            }}
+          >
+            {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
+            {Country_Region}
+          </button>
         </td>
         <td className="value">
           <NumberFormat

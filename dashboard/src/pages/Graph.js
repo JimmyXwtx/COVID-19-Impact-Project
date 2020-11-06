@@ -396,12 +396,16 @@ const Graph = () => {
           <Loader>Loading</Loader>
         </Dimmer> */}
         <Loader active={loaderActive} inline></Loader>
+        {/* <Header as="h3">
+          Worldwide {uisum} {uiprop_s}: {pieData[0].stats_total} on{' '}
+          {dateFocusShort}
+        </Header> */}
+        {/* {bottomTab !== 'softbody' && <World pie_data={pieData}></World>} */}
+        <World pie_data={pieData} opacity={graphOpacity} />
         <Header as="h3">
           Worldwide {uisum} {uiprop_s}: {pieData[0].stats_total} on{' '}
           {dateFocusShort}
         </Header>
-        {/* {bottomTab !== 'softbody' && <World pie_data={pieData}></World>} */}
-        <World pie_data={pieData} opacity={graphOpacity} />
         <Grid>
           <Grid.Row
             style={{
