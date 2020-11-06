@@ -77,9 +77,11 @@ function rename_item(item) {
 }
 
 const stateFixes = {
-  'Washington, D.C.': 'District Of Columbia',
+  Chicago: 'Illinois',
+  'Grand Princess Cruise Ship': 'Grand Princess',
+  'Unassigned Location (From Diamond Princess)': 'Diamond Princess',
+  'Washington, D.C.': 'District of Columbia',
   'United States Virgin Islands': 'Virgin Islands',
-  'Unassigned Location (From Diamond Princess)': '',
   'Virgin Islands, U.S.': 'Virgin Islands',
   'Omaha, NE (From Diamond Princess)': 'Nebraska',
   'Travis, CA (From Diamond Princess)': 'California',
