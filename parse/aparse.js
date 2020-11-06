@@ -50,7 +50,7 @@ function process_summary() {
   const parse_time = Date.now() - start_time;
   console.log('parse sec', parse_time / 1000);
 
-  write_summary(store_dir);
+  write_summary(store_dir, 'Country_Region');
 
   const npath = path.resolve(store_dir, 'cstates');
   const dfiles = fs.readdirSync(npath);
@@ -59,7 +59,7 @@ function process_summary() {
 
     // console.log('process_summary fpath', fpath);
 
-    write_summary(fpath);
+    write_summary(fpath, 'Province_State');
   }
 
   const lapse_time = Date.now() - start_time;
@@ -181,7 +181,7 @@ function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
   console.log(outpath_country, '\n');
 }
 
-function write_summary(root_path) {
+function write_summary(root_path, key) {
   const dates = [];
   const npath = path.resolve(root_path, 'cdays');
   const summaryDict = {};
@@ -204,12 +204,13 @@ function write_summary(root_path) {
       prior_cdict = cdict;
       cdict = {};
       fitem.forEach(citem => {
-        const { Country_Region } = citem;
-        cdict[Country_Region] = citem;
-        let ent = summaryDict[Country_Region];
+        const kvalue = citem[key];
+        cdict[kvalue] = citem;
+        let ent = summaryDict[kvalue];
         if (!ent) {
-          ent = { Country_Region, first_date: {} };
-          summaryDict[Country_Region] = ent;
+          ent = { first_date: {} };
+          ent[key] = kvalue;
+          summaryDict[kvalue] = ent;
         }
         let { Cases, Deaths } = citem.totals;
         if (Cases && !ent.first_date.Cases) {
@@ -219,7 +220,7 @@ function write_summary(root_path) {
           ent.first_date.Deaths = date;
         }
         // Daily is difference between now and prior
-        const cprior = prior_cdict[Country_Region];
+        const cprior = prior_cdict[kvalue];
         if (cprior) {
           Cases -= cprior.totals.Cases;
           Deaths -= cprior.totals.Deaths;
