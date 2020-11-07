@@ -110,7 +110,7 @@ const Graph = () => {
     fetchData('./cdata/' + prefix + 'cfirst.json', (data) => {
       if (!data) data = [];
       if (countrySelected) {
-        items.forEach((item) => {
+        data.forEach((item) => {
           item.Country_Region = item.Province_State;
         });
       }
