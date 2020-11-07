@@ -87,10 +87,8 @@ const Graph = () => {
   const dataPrefix = (countrySelected) => {
     let prefix = '';
     if (countrySelected && countrySelected.Country_Region) {
-      prefix = countrySelected.Country_Region.replace(/ /g, '_').replace(
-        /,/g,
-        ''
-      );
+      prefix = countrySelected.Country_Region;
+      prefix = prefix.replace(/ /g, '_').replace(/,/g, '');
     }
     prefix = prefix ? 'cstates/' + prefix + '/' : '';
     return prefix;
@@ -122,7 +120,7 @@ const Graph = () => {
       setCountryList(nlist);
       setSummaryDict(dict);
     });
-  }, []);
+  }, [countrySelected]);
 
   useEffect(() => {
     // console.log(
@@ -413,7 +411,7 @@ const Graph = () => {
   const to_active = sumFocus === 'totals';
   const da_active = sumFocus === 'daily';
   const uisum = sumFocus === 'totals' ? 'Total' : 'Daily';
-  const upto_on = sumFocus === 'totals' ? 'up to' : 'on';
+  const upto_on = sumFocus === 'totals' ? 'Up to' : 'On';
 
   const updateSlider = (key) => {
     // console.log('updateSlider key', key);
@@ -496,10 +494,10 @@ const Graph = () => {
               </Button.Group>
               <Button.Group>
                 <Button size="mini" onClick={selectTotals} active={to_active}>
-                  up to
+                  Up to:
                 </Button>
                 <Button size="mini" onClick={selectDaily} active={da_active}>
-                  on
+                  On date:
                 </Button>
               </Button.Group>
               <div>

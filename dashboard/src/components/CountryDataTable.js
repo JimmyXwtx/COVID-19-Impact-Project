@@ -67,7 +67,7 @@ const Rows = (props) => {
 const CountryDataTable = (props) => {
   const { items, propTitle, pie_data, selectCountry } = props;
   const pieslices = pie_data[0].slices;
-  console.log('pieslices.length', pieslices.length);
+  // console.log('pieslices.length', pieslices.length);
   // const { items } = props;
   // console.log('CountryDataTable items', items);
   return (
