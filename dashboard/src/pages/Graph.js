@@ -61,13 +61,15 @@ const Graph = () => {
   const [playIndex, setPlayIndex] = useState(-1);
   const [playDelay, setPlayDelay] = useState(playDelayInit);
   const [pieData, setPieData] = useState();
-  const [dateStats, setDateStats] = useState({ items: [] });
+  const [dateStats, setDateStats] = useState({
+    items: [],
+  });
   const [summaryDict, setSummaryDict] = useState();
   const [bottomTab, setBottomTab] = useLocalStorage('key-source', 'places');
   // const [bottomTab, setBottomTab] = useState('places');
   const [dateIndex, setDateIndex] = useLocalStorage('key-dataIndex', 0);
   const [sortedItems, setSortedItems] = useState([]);
-  const [countrySelected, setCuntrySelected] = useState('');
+  const [countrySelected, setCuntrySelected] = useState();
 
   // dateStats = { date, items }
   // items [{
@@ -83,7 +85,13 @@ const Graph = () => {
   // },]
 
   const dataPrefix = (countrySelected) => {
-    let prefix = countrySelected.replace(/ /g, '_').replace(/,/g, '');
+    let prefix = '';
+    if (countrySelected && countrySelected.Country_Region) {
+      prefix = countrySelected.Country_Region.replace(/ /g, '_').replace(
+        /,/g,
+        ''
+      );
+    }
     prefix = prefix ? 'cstates/' + prefix + '/' : '';
     return prefix;
   };
@@ -92,6 +100,7 @@ const Graph = () => {
     // console.log('useEffect dates.json');
     const prefix = dataPrefix(countrySelected);
     fetchData('./cdata/' + prefix + 'cdates.json', (data) => {
+      if (!data) data = [];
       const list = data.map((uname) => ui_key(uname));
       setDateList(list);
     });
@@ -99,7 +108,9 @@ const Graph = () => {
 
   useEffect(() => {
     // console.log('useEffect summary.json');
-    fetchData('./cdata/cfirst.json', (data) => {
+    const prefix = dataPrefix(countrySelected);
+    fetchData('./cdata/' + prefix + 'cfirst.json', (data) => {
+      if (!data) data = [];
       const dict = {};
       const list = data.map((item) => {
         const uname = item.Country_Region;
@@ -414,13 +425,14 @@ const Graph = () => {
   const dateFocusShort = dateFocus && dateFocus.substring(5);
 
   const selectCountry = (country) => {
-    setCuntrySelected(country.Country_Region);
+    console.log('selectCountry country', country);
+    setCuntrySelected(country);
   };
 
-  const ui_top = countrySelected ? countrySelected : 'WorldWide';
+  const ui_top = countrySelected ? countrySelected.Country_Region : 'WorldWide';
 
   const selectWorldwide = () => {
-    setCuntrySelected('');
+    setCuntrySelected();
   };
 
   return (
