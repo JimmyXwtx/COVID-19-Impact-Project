@@ -11,8 +11,7 @@ const argv = require('yargs').argv;
 
 // const nlimit = 5;
 const nlimit = 0;
-const argv_silent = argv.silent;
-const argv_detail = argv.detail;
+// const argv_silent = argv.silent;
 const argv_sort_deaths = argv.sort_deaths;
 
 // const { rename_item, find_population } = require('./country');
@@ -20,13 +19,11 @@ const { rename_item } = require('./country');
 
 const daily_dir =
   '../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
-const store_dir = '../dashboard/public/cdata/';
+const store_dir = '../dashboard/public/c_data/';
 const stats_init = { Cases: 0, Deaths: 0 };
 let fromDate;
 let toDate;
 
-// fs.ensureDirSync(store_path_cdays);
-// if (argv_detail) fs.ensureDirSync(store_path_uregion);
 const start_time = Date.now();
 
 process_dir();
@@ -35,31 +32,32 @@ function process_dir() {
   // process_init();
   const nfiles = fs.readdirSync(daily_dir);
   let index = 0;
+  let country_dict;
   for (let nfile of nfiles) {
     const fparse = path.parse(nfile);
     if (fparse.ext != '.csv') continue;
     const cvs_path = path.resolve(daily_dir, nfile);
-    process_cvs(cvs_path, fparse.name);
+    country_dict = process_cvs(cvs_path, fparse.name);
     index++;
     if (nlimit && index >= nlimit) break;
   }
-  process_summary();
+  process_summary(country_dict);
 }
 
-function process_summary() {
+function process_summary(country_dict) {
   console.log('Parsed fromDate=' + fromDate + ' toDate=' + toDate);
   const parse_time = Date.now() - start_time;
   console.log('parse sec', parse_time / 1000);
 
-  write_summary(store_dir, 'Country_Region');
+  write_meta(store_dir, { key: 'Country_Region', country_dict });
 
-  const npath = path.resolve(store_dir, 'cstates');
-  const dfiles = fs.readdirSync(npath);
-  for (let dname of dfiles) {
-    if (dname.substr(0, 1) === '.') continue;
-    const fpath = path.resolve(npath, dname);
+  const states_path = path.resolve(store_dir, 'c_states');
+  const states_files = fs.readdirSync(states_path);
+  for (let state_name of states_files) {
+    if (state_name.substr(0, 1) === '.') continue;
+    const state_dir = path.resolve(states_path, state_name);
     // console.log('process_summary fpath', fpath);
-    write_summary(fpath, 'Province_State', dname);
+    write_meta(state_dir, { key: 'Province_State', state_name });
   }
 
   const lapse_time = Date.now() - start_time;
@@ -142,9 +140,10 @@ function process_cvs(cvs_inpath, file_date) {
     const ent = country_dict[country];
     // console.log('file_date', file_date, 'country', country, 'ent', ent);
     const ncountry = fileNameFromCountryName(country);
-    let cpath = path.resolve(store_dir, 'cstates', ncountry);
+    let cpath = path.resolve(store_dir, 'c_states', ncountry);
     write_daily(ent, file_date, cpath);
   }
+  return country_dict;
 }
 
 function fileNameFromCountryName(country) {
@@ -183,24 +182,24 @@ function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
   console.log(outpath_country, '\n');
 }
 
-function write_summary(root_path, key, dname) {
+function write_meta(state_dir, { key, state_name, country_dict }) {
   const dates = [];
-  const npath = path.resolve(root_path, 'cdays');
+  const days_path = path.resolve(state_dir, 'cdays');
   const summaryDict = {};
-  if (!fs.existsSync(npath)) {
-    console.log('write_summary missing npath', npath);
-    return;
+  if (!fs.existsSync(days_path)) {
+    console.log('write_meta missing days_path', days_path);
+    return null;
   }
   let cdict = {};
   let prior_cdict;
   // file names are sorted to get prior stats
-  const dfiles = fs.readdirSync(npath).sort();
-  for (let dname of dfiles) {
+  const day_names = fs.readdirSync(days_path).sort();
+  for (let day_name of day_names) {
     // eg. fname=2020-01-22.json
-    if (!dname.endsWith('.json')) continue;
-    const date = dname.substr(0, dname.length - 5);
+    if (!day_name.endsWith('.json')) continue;
+    const date = day_name.substr(0, day_name.length - 5);
     dates.push(date);
-    const fpath = path.resolve(npath, dname);
+    const fpath = path.resolve(days_path, day_name);
     const fitem = fs.readJsonSync(fpath);
     if (fitem) {
       prior_cdict = cdict;
@@ -234,24 +233,36 @@ function write_summary(root_path, key, dname) {
       // Write out updated daily
       fs.writeJsonSync(fpath, fitem, { spaces: 2 });
     } else {
-      console.log('write_summary readJson failed', fpath);
+      console.log('write_meta readJson failed', fpath);
     }
   }
   // Write out all dates seen
-  const outpath_dates = path.resolve(root_path, 'cdates.json');
-  fs.writeJsonSync(outpath_dates, dates, { spaces: 2 });
+  // const outpath_dates = path.resolve(state_dir, 'cdates.json');
+  // fs.writeJsonSync(outpath_dates, dates, { spaces: 2 });
 
   // Write out summary, remove last_date if current
   const ckeys = Object.keys(summaryDict).sort();
-  const csummary = ckeys.map(uname => {
+  const regions = ckeys.map(uname => {
     const ent = summaryDict[uname];
     if (ent.last_date === toDate) {
       delete ent.last_date;
-    } else if (dname) {
-      console.log(dname + '|' + uname + '|', 'last_date', ent.last_date);
+    } else if (state_name) {
+      console.log(state_name + '|' + uname + '|', 'last_date', ent.last_date);
+    }
+    if (country_dict) {
+      const cent = country_dict[uname];
+      if (cent) {
+        const n_states = Object.keys(cent).length;
+        if (n_states) {
+          ent.n_states = n_states;
+          console.log(uname + '|', 'n_states', ent.n_states);
+        }
+      }
     }
     return ent;
   });
-  const outpath_names = path.resolve(root_path, 'cfirst.json');
-  fs.writeJsonSync(outpath_names, csummary, { spaces: 2 });
+  const outpath_meta = path.resolve(state_dir, 'c_meta.json');
+  const meta = { regions, dates };
+  fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
+  return meta;
 }

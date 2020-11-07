@@ -90,40 +90,44 @@ const Graph = () => {
       prefix = countrySelected.Country_Region;
       prefix = prefix.replace(/ /g, '_').replace(/,/g, '');
     }
-    prefix = prefix ? 'cstates/' + prefix + '/' : '';
+    prefix = prefix ? 'c_states/' + prefix + '/' : '';
     return prefix;
   };
 
   useEffect(() => {
     // console.log('useEffect dates.json');
     const prefix = dataPrefix(countrySelected);
-    fetchData('./cdata/' + prefix + 'cdates.json', (data) => {
-      if (!data) data = [];
-      const list = data.map((uname) => ui_key(uname));
-      setDateList(list);
-    });
-  }, [countrySelected]);
+    fetchData('./c_data/' + prefix + 'c_meta.json', (meta) => {
+      const process_dates = (dates) => {
+        if (!dates) dates = [];
+        const list = dates.map((uname) => ui_key(uname));
+        setDateList(list);
+      };
 
-  useEffect(() => {
-    // console.log('useEffect summary.json');
-    const prefix = dataPrefix(countrySelected);
-    fetchData('./cdata/' + prefix + 'cfirst.json', (data) => {
-      if (!data) data = [];
-      if (countrySelected) {
-        data.forEach((item) => {
-          item.Country_Region = item.Province_State;
+      // Odd: react complains of missing dependency if process_regions is defined
+      // outside fo here.
+      const process_regions = (regions) => {
+        if (!regions) regions = [];
+        if (countrySelected) {
+          regions.forEach((item) => {
+            item.Country_Region = item.Province_State;
+          });
+        }
+        const dict = {};
+        const list = regions.map((item) => {
+          const uname = item.Country_Region;
+          dict[uname] = item;
+          return ui_key(uname);
         });
-      }
-      const dict = {};
-      const list = data.map((item) => {
-        const uname = item.Country_Region;
-        dict[uname] = item;
-        return ui_key(uname);
-      });
-      const forui = ui_key(top_label);
-      const nlist = [forui].concat(list);
-      setCountryList(nlist);
-      setSummaryDict(dict);
+        const forui = ui_key(top_label);
+        const nlist = [forui].concat(list);
+        setCountryList(nlist);
+        setSummaryDict(dict);
+      };
+
+      if (!meta) meta = {};
+      process_dates(meta.dates);
+      process_regions(meta.regions);
     });
   }, [countrySelected]);
 
@@ -146,7 +150,7 @@ const Graph = () => {
         dateStats.isLoading = true;
         const prefix = dataPrefix(countrySelected);
         fetchData(
-          './cdata/' + prefix + 'cdays/' + dateFocus + '.json',
+          './c_data/' + prefix + 'cdays/' + dateFocus + '.json',
           (items) => {
             if (!items) items = [];
             if (countrySelected) {
