@@ -107,7 +107,10 @@ function process_cvs(cvs_inpath, file_date) {
 
     const Country_Region = item.Country_Region;
     if (!Country_Region) {
-      console.log('!!@ empty Country_Region', file_date, JSON.stringify(item));
+      if (argv_verbose) {
+        const str = JSON.stringify(item);
+        console.log('!!@ empty Country_Region', file_date, str);
+      }
       return;
     }
     let ent = sums_country[Country_Region];
