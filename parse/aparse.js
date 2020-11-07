@@ -104,7 +104,12 @@ function process_cvs(cvs_inpath, file_date) {
   function process_item(item, index) {
     rename_item(item);
     item.source_index = index;
+
     const Country_Region = item.Country_Region;
+    if (!Country_Region) {
+      console.log('!!@ empty Country_Region', file_date, JSON.stringify(item));
+      return;
+    }
     let ent = sums_country[Country_Region];
     if (!ent) {
       // { Cases: 0, Deaths: 0, Recovered: 0 };
