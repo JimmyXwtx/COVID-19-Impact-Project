@@ -11,7 +11,8 @@ const argv = require('yargs').argv;
 
 // const nlimit = 5;
 const nlimit = 0;
-// const argv_silent = argv.silent;
+const argv_silent = argv.silent;
+const argv_verbose = !argv_silent;
 const argv_sort_deaths = argv.sort_deaths;
 
 // const { rename_item, find_population } = require('./country');
@@ -46,11 +47,20 @@ function process_dir() {
 
 function process_summary(country_dict) {
   console.log('Parsed fromDate=' + fromDate + ' toDate=' + toDate);
+
   const parse_time = Date.now() - start_time;
-  console.log('parse sec', parse_time / 1000);
+  if (argv_verbose) {
+    console.log('parse sec', parse_time / 1000);
+    console.log('-------------------------------------------');
+  }
 
+  // Write meta for countries
   write_meta(store_dir, { key: 'Country_Region', country_dict });
+  if (argv_verbose) {
+    console.log('-------------------------------------------');
+  }
 
+  // Write meta for states with in each country that has them
   const states_path = path.resolve(store_dir, 'c_states');
   const states_files = fs.readdirSync(states_path);
   for (let state_name of states_files) {
@@ -61,7 +71,10 @@ function process_summary(country_dict) {
   }
 
   const lapse_time = Date.now() - start_time;
-  console.log('lapse sec', lapse_time / 1000);
+  if (argv_verbose) {
+    console.log('-------------------------------------------');
+    console.log('lapse sec', lapse_time / 1000);
+  }
 }
 
 function process_cvs(cvs_inpath, file_date) {
@@ -163,7 +176,7 @@ function write_daily(sums_country, file_date, path_root) {
     // console.log('write_daily empty', file_date, path_root);
     return;
   }
-  let cpath = path.resolve(path_root, 'cdays');
+  let cpath = path.resolve(path_root, 'c_days');
   fs.ensureDirSync(cpath);
   const fname = file_date + '.json';
   cpath = path.resolve(cpath, fname);
@@ -184,7 +197,7 @@ function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
 
 function write_meta(state_dir, { key, state_name, country_dict }) {
   const dates = [];
-  const days_path = path.resolve(state_dir, 'cdays');
+  const days_path = path.resolve(state_dir, 'c_days');
   const summaryDict = {};
   if (!fs.existsSync(days_path)) {
     console.log('write_meta missing days_path', days_path);
@@ -247,7 +260,9 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
     if (ent.last_date === toDate) {
       delete ent.last_date;
     } else if (state_name) {
-      console.log(state_name + '|' + uname + '|', 'last_date', ent.last_date);
+      if (argv_verbose) {
+        console.log(state_name + '|' + uname + '|', 'last_date', ent.last_date);
+      }
     }
     if (country_dict) {
       const cent = country_dict[uname];
@@ -255,7 +270,9 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
         const n_states = Object.keys(cent).length;
         if (n_states) {
           ent.n_states = n_states;
-          console.log(uname + '|', 'n_states', ent.n_states);
+          if (argv_verbose) {
+            console.log(uname + '|', 'n_states', ent.n_states);
+          }
         }
       }
     }

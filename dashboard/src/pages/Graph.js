@@ -150,7 +150,7 @@ const Graph = () => {
         dateStats.isLoading = true;
         const prefix = dataPrefix(countrySelected);
         fetchData(
-          './c_data/' + prefix + 'cdays/' + dateFocus + '.json',
+          './c_data/' + prefix + 'c_days/' + dateFocus + '.json',
           (items) => {
             if (!items) items = [];
             if (countrySelected) {
