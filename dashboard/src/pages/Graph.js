@@ -109,6 +109,11 @@ const Graph = () => {
     const prefix = dataPrefix(countrySelected);
     fetchData('./cdata/' + prefix + 'cfirst.json', (data) => {
       if (!data) data = [];
+      if (countrySelected) {
+        items.forEach((item) => {
+          item.Country_Region = item.Province_State;
+        });
+      }
       const dict = {};
       const list = data.map((item) => {
         const uname = item.Country_Region;

@@ -59,7 +59,7 @@ function process_summary() {
     if (dname.substr(0, 1) === '.') continue;
     const fpath = path.resolve(npath, dname);
     // console.log('process_summary fpath', fpath);
-    write_summary(fpath, 'Province_State');
+    write_summary(fpath, 'Province_State', dname);
   }
 
   const lapse_time = Date.now() - start_time;
@@ -183,7 +183,7 @@ function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
   console.log(outpath_country, '\n');
 }
 
-function write_summary(root_path, key) {
+function write_summary(root_path, key, dname) {
   const dates = [];
   const npath = path.resolve(root_path, 'cdays');
   const summaryDict = {};
@@ -247,6 +247,8 @@ function write_summary(root_path, key) {
     const ent = summaryDict[uname];
     if (ent.last_date === toDate) {
       delete ent.last_date;
+    } else if (dname) {
+      console.log(dname + '|' + uname + '|', 'last_date', ent.last_date);
     }
     return ent;
   });

@@ -76,7 +76,10 @@ function rename_item(item) {
   } else if (item.Country_Region == 'France') {
     if (!item.Province_State) {
       // console.log('France', item);
+      // Must not be 'France' or will be filtered out
       item.Province_State = 'France Mainland';
+    } else if (item.Province_State == 'Fench Guiana') {
+      item.Province_State = 'French Guiana';
     }
   }
 }
