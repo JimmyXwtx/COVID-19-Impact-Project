@@ -20,8 +20,13 @@ const { rename_item } = require('./country');
 
 const daily_dir =
   '../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
+
+const population_table_path = './UID_ISO_FIPS_LookUp_Table.csv';
+
 const store_dir = '../dashboard/public/c_data/';
+
 const stats_init = { Cases: 0, Deaths: 0 };
+
 let fromDate;
 let toDate;
 
@@ -30,7 +35,7 @@ const start_time = Date.now();
 process_dir();
 
 function process_dir() {
-  // process_init();
+  // process_population_table();
   const nfiles = fs.readdirSync(daily_dir);
   let index = 0;
   let country_dict;
@@ -257,10 +262,6 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
       console.log('write_meta readJson failed', fpath);
     }
   }
-  // Write out all dates seen
-  // const outpath_dates = path.resolve(state_dir, 'cdates.json');
-  // fs.writeJsonSync(outpath_dates, dates, { spaces: 2 });
-
   // Write out summary, remove last_date if current
   const ckeys = Object.keys(summaryDict).sort();
   const regions = ckeys.map(uname => {

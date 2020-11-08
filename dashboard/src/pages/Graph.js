@@ -448,7 +448,8 @@ const Graph = () => {
     return (
       <Header as="h3">
         {countrySelected && (
-          <button onClick={selectWorldwide}>&larr; Worldwide</button>
+          // <button onClick={selectWorldwide}>&larr; Worldwide</button>
+          <button onClick={selectWorldwide}>&lt;--Worldwide--</button>
         )}
         &nbsp;
         {ui_top} {pieData[0].stats_total} {uiprop_s} {upto_on} {dateFocusShort}
@@ -464,11 +465,7 @@ const Graph = () => {
         <World pie_data={pieData} opacity={graphOpacity} />
         <HeadStats />
         <Grid>
-          <Grid.Row
-            style={{
-              padding: '0 16px',
-            }}
-          >
+          <Grid.Row style={{ padding: '0 16px' }}>
             <DateSlider
               dateIndex={dateIndex}
               dateListLength={(dateList || []).length}
