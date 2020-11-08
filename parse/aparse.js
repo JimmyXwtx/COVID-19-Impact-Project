@@ -124,7 +124,7 @@ function process_cvs(cvs_inpath, file_date) {
     if (!ent) {
       // { Cases: 0, Deaths: 0, Recovered: 0 };
       const totals = Object.assign({}, stats_init);
-      ent = { Country_Region, totals };
+      ent = { c_ref: Country_Region, totals };
       sums_country[Country_Region] = ent;
       // console.log('process_item silent', silent);
       // stats.population = find_population(item, silent);
@@ -135,7 +135,7 @@ function process_cvs(cvs_inpath, file_date) {
     let cent = country_dict[Country_Region];
     if (!cent) {
       const Population = find_population(Country_Region, pop_missing);
-      cent = { Population, states: {} };
+      cent = { c_people: Population, states: {} };
       country_dict[Country_Region] = cent;
     }
     let Province_State = item.Province_State;
@@ -151,7 +151,7 @@ function process_cvs(cvs_inpath, file_date) {
       ent = cent.states[Province_State];
       if (!ent) {
         const totals = Object.assign({}, stats_init);
-        ent = { Province_State, totals };
+        ent = { c_ref: Province_State, totals };
         cent.states[Province_State] = ent;
       }
       calc(ent.totals, item);
@@ -213,7 +213,7 @@ function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
 }
 
 function write_meta(state_dir, { key, state_name, country_dict }) {
-  const dates = [];
+  const c_dates = [];
   const days_path = path.resolve(state_dir, 'c_days');
   const summaryDict = {};
   if (!fs.existsSync(days_path)) {
@@ -228,7 +228,7 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
     // eg. fname=2020-01-22.json
     if (!day_name.endsWith('.json')) continue;
     const date = day_name.substr(0, day_name.length - 5);
-    dates.push(date);
+    c_dates.push(date);
     const fpath = path.resolve(days_path, day_name);
     const fitem = fs.readJsonSync(fpath);
     if (fitem) {
@@ -268,7 +268,7 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
   }
   // Write out summary, remove last_date if current
   const ckeys = Object.keys(summaryDict).sort();
-  const regions = ckeys.map(uname => {
+  const c_regions = ckeys.map(uname => {
     const ent = summaryDict[uname];
     if (ent.last_date === toDate) {
       delete ent.last_date;
@@ -287,13 +287,13 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
             console.log(uname + '|', 'n_states', ent.n_states);
           }
         }
-        ent.Population = cent.Population;
+        ent.c_people = cent.c_people;
       }
     }
     return ent;
   });
   const outpath_meta = path.resolve(state_dir, 'c_meta.json');
-  const meta = { regions, dates };
+  const meta = { c_regions, c_dates };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
   return meta;
 }

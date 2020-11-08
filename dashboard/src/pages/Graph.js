@@ -85,8 +85,8 @@ const Graph = () => {
 
   const dataPrefix = (countrySelected) => {
     let prefix = '';
-    if (countrySelected && countrySelected.Country_Region) {
-      prefix = countrySelected.Country_Region;
+    if (countrySelected && countrySelected.c_ref) {
+      prefix = countrySelected.c_ref;
       prefix = prefix.replace(/ /g, '_').replace(/,/g, '');
     }
     prefix = prefix ? 'c_states/' + prefix + '/' : '';
@@ -103,18 +103,18 @@ const Graph = () => {
         setDateList(list);
       };
 
-      // Odd: react complains of missing dependency if process_regions is defined
-      // outside fo here.
+      // Odd: react complains of missing dependency if process_regions
+      // is defined outside useEffect
       const process_regions = (regions) => {
         if (!regions) regions = [];
-        if (countrySelected) {
-          regions.forEach((item) => {
-            item.Country_Region = item.Province_State;
-          });
-        }
+        // if (countrySelected) {
+        //   regions.forEach((item) => {
+        //     item.Country_Region = item.Province_State;
+        //   });
+        // }
         const dict = {};
         const list = regions.map((item) => {
-          const uname = item.Country_Region;
+          const uname = item.c_ref;
           dict[uname] = item;
           return ui_key(uname);
         });
@@ -125,8 +125,8 @@ const Graph = () => {
       };
 
       if (!meta) meta = {};
-      process_dates(meta.dates);
-      process_regions(meta.regions);
+      process_dates(meta.c_dates);
+      process_regions(meta.c_regions);
     });
   }, [countrySelected]);
 
@@ -153,8 +153,8 @@ const Graph = () => {
           (items) => {
             if (!items) items = [];
             items.forEach((item) => {
-              if (countrySelected) item.Country_Region = item.Province_State;
-              const ent = metaDict[item.Country_Region];
+              // if (countrySelected) item.Country_Region = item.Province_State;
+              const ent = metaDict[item.c_ref];
               if (ent) item.n_states = ent.n_states;
             });
             setDateStats({ date: dateFocus, items, countrySelected });
@@ -170,16 +170,13 @@ const Graph = () => {
     // console.log('useEffect propFocus', propFocus);
     const sortFunc = (item1, item2) => {
       const rank = item2[sumFocus][propFocus] - item1[sumFocus][propFocus];
-      if (rank === 0)
-        return item1.Country_Region.localeCompare(item2.Country_Region);
+      if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
       return rank;
     };
     const items = dateStats.items
       .concat()
       .sort((item1, item2) => sortFunc(item1, item2));
-    let slideIndex = items.findIndex(
-      (item) => item.Country_Region === countryFocus
-    );
+    let slideIndex = items.findIndex((item) => item.c_ref === countryFocus);
     if (slideIndex < 0) slideIndex = 0;
     //   { slices, stats_total, yprop };
     const percents = 1;
@@ -438,7 +435,7 @@ const Graph = () => {
     setCountrySelected(country);
   };
 
-  const ui_top = countrySelected ? countrySelected.Country_Region : 'WorldWide';
+  const ui_top = countrySelected ? countrySelected.c_ref : 'WorldWide';
 
   const selectWorldwide = () => {
     setCountrySelected();
