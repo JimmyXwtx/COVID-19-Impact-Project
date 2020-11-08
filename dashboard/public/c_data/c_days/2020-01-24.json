@@ -1,6 +1,6 @@
 [
   {
-    "Country_Region": "China",
+    "c_ref": "China",
     "totals": {
       "Cases": 918,
       "Deaths": 26
@@ -11,7 +11,7 @@
     }
   },
   {
-    "Country_Region": "France",
+    "c_ref": "France",
     "totals": {
       "Cases": 2,
       "Deaths": 0
@@ -22,18 +22,7 @@
     }
   },
   {
-    "Country_Region": "Japan",
-    "totals": {
-      "Cases": 2,
-      "Deaths": 0
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "Country_Region": "Korea, South",
+    "c_ref": "Japan",
     "totals": {
       "Cases": 2,
       "Deaths": 0
@@ -44,7 +33,18 @@
     }
   },
   {
-    "Country_Region": "Macau",
+    "c_ref": "Korea, South",
+    "totals": {
+      "Cases": 2,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Macau",
     "totals": {
       "Cases": 2,
       "Deaths": 0
@@ -55,7 +55,7 @@
     }
   },
   {
-    "Country_Region": "Singapore",
+    "c_ref": "Singapore",
     "totals": {
       "Cases": 3,
       "Deaths": 0
@@ -66,7 +66,7 @@
     }
   },
   {
-    "Country_Region": "Taiwan*",
+    "c_ref": "Taiwan*",
     "totals": {
       "Cases": 3,
       "Deaths": 0
@@ -77,7 +77,7 @@
     }
   },
   {
-    "Country_Region": "Thailand",
+    "c_ref": "Thailand",
     "totals": {
       "Cases": 5,
       "Deaths": 0
@@ -88,7 +88,7 @@
     }
   },
   {
-    "Country_Region": "United States",
+    "c_ref": "United States",
     "totals": {
       "Cases": 2,
       "Deaths": 0
@@ -99,7 +99,7 @@
     }
   },
   {
-    "Country_Region": "Vietnam",
+    "c_ref": "Vietnam",
     "totals": {
       "Cases": 2,
       "Deaths": 0

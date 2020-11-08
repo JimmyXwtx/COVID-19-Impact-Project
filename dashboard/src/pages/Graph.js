@@ -290,7 +290,7 @@ const Graph = () => {
     if (countryFocus !== top_label && metaDict) {
       const ent = metaDict[countryFocus];
       if (ent) {
-        const ndate = ent.first_date[propFocus];
+        const ndate = ent.c_first[propFocus];
         if (ndate) {
           setDateIndexFocus(ndate);
         }

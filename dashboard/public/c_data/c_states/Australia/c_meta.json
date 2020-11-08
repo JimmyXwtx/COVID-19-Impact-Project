@@ -1,79 +1,79 @@
 {
-  "regions": [
+  "c_regions": [
     {
-      "Province_State": "Australian Capital Territory",
-      "first_date": {
+      "c_ref": "Australian Capital Territory",
+      "c_first": {
         "Cases": "2020-03-13",
         "Deaths": "2020-03-30"
       }
     },
     {
-      "Province_State": "External territories",
-      "first_date": {},
+      "c_ref": "External territories",
+      "c_first": {},
       "last_date": "2020-03-22"
     },
     {
-      "Province_State": "From Diamond Princess",
-      "first_date": {
+      "c_ref": "From Diamond Princess",
+      "c_first": {
         "Cases": "2020-02-21"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Province_State": "Jervis Bay Territory",
-      "first_date": {},
+      "c_ref": "Jervis Bay Territory",
+      "c_first": {},
       "last_date": "2020-03-22"
     },
     {
-      "Province_State": "New South Wales",
-      "first_date": {
+      "c_ref": "New South Wales",
+      "c_first": {
         "Cases": "2020-01-27",
         "Deaths": "2020-03-04"
       }
     },
     {
-      "Province_State": "Northern Territory",
-      "first_date": {
+      "c_ref": "Northern Territory",
+      "c_first": {
         "Cases": "2020-03-04"
       }
     },
     {
-      "Province_State": "Queensland",
-      "first_date": {
+      "c_ref": "Queensland",
+      "c_first": {
         "Cases": "2020-01-30",
         "Deaths": "2020-03-26"
       }
     },
     {
-      "Province_State": "South Australia",
-      "first_date": {
+      "c_ref": "South Australia",
+      "c_first": {
         "Cases": "2020-02-01",
         "Deaths": "2020-04-07"
       }
     },
     {
-      "Province_State": "Tasmania",
-      "first_date": {
+      "c_ref": "Tasmania",
+      "c_first": {
         "Cases": "2020-03-02",
         "Deaths": "2020-03-31"
       }
     },
     {
-      "Province_State": "Victoria",
-      "first_date": {
+      "c_ref": "Victoria",
+      "c_first": {
         "Cases": "2020-01-27",
         "Deaths": "2020-03-26"
       }
     },
     {
-      "Province_State": "Western Australia",
-      "first_date": {
+      "c_ref": "Western Australia",
+      "c_first": {
         "Cases": "2020-02-29",
         "Deaths": "2020-03-01"
       }
     }
   ],
-  "dates": [
+  "c_dates": [
     "2020-01-27",
     "2020-01-28",
     "2020-01-29",

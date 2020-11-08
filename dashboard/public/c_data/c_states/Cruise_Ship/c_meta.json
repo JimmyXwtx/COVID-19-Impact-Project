@@ -1,15 +1,15 @@
 {
-  "regions": [
+  "c_regions": [
     {
-      "Province_State": "Diamond Princess",
-      "first_date": {
+      "c_ref": "Diamond Princess",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-11"
       },
       "last_date": "2020-03-23"
     }
   ],
-  "dates": [
+  "c_dates": [
     "2020-03-11",
     "2020-03-12",
     "2020-03-13",

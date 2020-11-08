@@ -1,124 +1,124 @@
 {
-  "regions": [
+  "c_regions": [
     {
-      "Province_State": "Anguilla",
-      "first_date": {
+      "c_ref": "Anguilla",
+      "c_first": {
         "Cases": "2020-03-28"
       }
     },
     {
-      "Province_State": "Bermuda",
-      "first_date": {
+      "c_ref": "Bermuda",
+      "c_first": {
         "Cases": "2020-03-19",
         "Deaths": "2020-04-06"
       }
     },
     {
-      "Province_State": "British Virgin Islands",
-      "first_date": {
+      "c_ref": "British Virgin Islands",
+      "c_first": {
         "Cases": "2020-03-28",
         "Deaths": "2020-04-19"
       }
     },
     {
-      "Province_State": "Cayman Islands",
-      "first_date": {
+      "c_ref": "Cayman Islands",
+      "c_first": {
         "Cases": "2020-03-16",
         "Deaths": "2020-03-16"
       }
     },
     {
-      "Province_State": "Channel Islands",
-      "first_date": {
+      "c_ref": "Channel Islands",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-26"
       }
     },
     {
-      "Province_State": "England",
-      "first_date": {
+      "c_ref": "England",
+      "c_first": {
         "Cases": "2020-06-11",
         "Deaths": "2020-06-11"
       }
     },
     {
-      "Province_State": "Falkland Islands (Islas Malvinas)",
-      "first_date": {
+      "c_ref": "Falkland Islands (Islas Malvinas)",
+      "c_first": {
         "Cases": "2020-04-04"
       },
       "last_date": "2020-04-06"
     },
     {
-      "Province_State": "Falkland Islands (Malvinas)",
-      "first_date": {
+      "c_ref": "Falkland Islands (Malvinas)",
+      "c_first": {
         "Cases": "2020-04-07"
       }
     },
     {
-      "Province_State": "Gibraltar",
-      "first_date": {
+      "c_ref": "Gibraltar",
+      "c_first": {
         "Cases": "2020-03-11"
       }
     },
     {
-      "Province_State": "Isle of Man",
-      "first_date": {
+      "c_ref": "Isle of Man",
+      "c_first": {
         "Cases": "2020-03-20",
         "Deaths": "2020-04-01"
       }
     },
     {
-      "Province_State": "Montserrat",
-      "first_date": {
+      "c_ref": "Montserrat",
+      "c_first": {
         "Cases": "2020-03-18",
         "Deaths": "2020-04-24"
       }
     },
     {
-      "Province_State": "Northern Ireland",
-      "first_date": {
+      "c_ref": "Northern Ireland",
+      "c_first": {
         "Cases": "2020-06-11",
         "Deaths": "2020-06-11"
       }
     },
     {
-      "Province_State": "Scotland",
-      "first_date": {
+      "c_ref": "Scotland",
+      "c_first": {
         "Cases": "2020-06-11",
         "Deaths": "2020-06-11"
       }
     },
     {
-      "Province_State": "Turks and Caicos Islands",
-      "first_date": {
+      "c_ref": "Turks and Caicos Islands",
+      "c_first": {
         "Cases": "2020-03-28",
         "Deaths": "2020-04-05"
       }
     },
     {
-      "Province_State": "UK",
-      "first_date": {
+      "c_ref": "UK",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-11"
       },
       "last_date": "2020-03-12"
     },
     {
-      "Province_State": "Unknown",
-      "first_date": {
+      "c_ref": "Unknown",
+      "c_first": {
         "Cases": "2020-06-11",
         "Deaths": "2020-07-12"
       }
     },
     {
-      "Province_State": "Wales",
-      "first_date": {
+      "c_ref": "Wales",
+      "c_first": {
         "Cases": "2020-06-11",
         "Deaths": "2020-06-11"
       }
     }
   ],
-  "dates": [
+  "c_dates": [
     "2020-03-11",
     "2020-03-12",
     "2020-03-13",

@@ -1,138 +1,138 @@
 {
-  "regions": [
+  "c_regions": [
     {
-      "Province_State": " Montreal, QC",
-      "first_date": {
+      "c_ref": " Montreal, QC",
+      "c_first": {
         "Cases": "2020-02-28"
       },
       "last_date": "2020-03-08"
     },
     {
-      "Province_State": "Alberta",
-      "first_date": {
+      "c_ref": "Alberta",
+      "c_first": {
         "Cases": "2020-03-09",
         "Deaths": "2020-03-20"
       }
     },
     {
-      "Province_State": "British Columbia",
-      "first_date": {
+      "c_ref": "British Columbia",
+      "c_first": {
         "Cases": "2020-01-28",
         "Deaths": "2020-03-09"
       }
     },
     {
-      "Province_State": "Calgary, Alberta",
-      "first_date": {
+      "c_ref": "Calgary, Alberta",
+      "c_first": {
         "Cases": "2020-03-06"
       },
       "last_date": "2020-03-08"
     },
     {
-      "Province_State": "Diamond Princess",
-      "first_date": {
+      "c_ref": "Diamond Princess",
+      "c_first": {
         "Deaths": "2020-03-22",
         "Cases": "2020-05-01"
       }
     },
     {
-      "Province_State": "Edmonton, Alberta",
-      "first_date": {
+      "c_ref": "Edmonton, Alberta",
+      "c_first": {
         "Cases": "2020-03-07"
       },
       "last_date": "2020-03-08"
     },
     {
-      "Province_State": "Grand Princess",
-      "first_date": {
+      "c_ref": "Grand Princess",
+      "c_first": {
         "Cases": "2020-03-13"
       }
     },
     {
-      "Province_State": "London, ON",
-      "first_date": {
+      "c_ref": "London, ON",
+      "c_first": {
         "Cases": "2020-02-04"
       },
       "last_date": "2020-03-08"
     },
     {
-      "Province_State": "Manitoba",
-      "first_date": {
+      "c_ref": "Manitoba",
+      "c_first": {
         "Cases": "2020-03-13",
         "Deaths": "2020-03-27"
       }
     },
     {
-      "Province_State": "New Brunswick",
-      "first_date": {
+      "c_ref": "New Brunswick",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-06-04"
       }
     },
     {
-      "Province_State": "Newfoundland and Labrador",
-      "first_date": {
+      "c_ref": "Newfoundland and Labrador",
+      "c_first": {
         "Cases": "2020-03-15",
         "Deaths": "2020-03-30"
       }
     },
     {
-      "Province_State": "Northwest Territories",
-      "first_date": {
+      "c_ref": "Northwest Territories",
+      "c_first": {
         "Cases": "2020-03-21"
       }
     },
     {
-      "Province_State": "Nova Scotia",
-      "first_date": {
+      "c_ref": "Nova Scotia",
+      "c_first": {
         "Cases": "2020-03-16",
         "Deaths": "2020-04-07"
       }
     },
     {
-      "Province_State": "Ontario",
-      "first_date": {
+      "c_ref": "Ontario",
+      "c_first": {
         "Cases": "2020-01-26",
         "Deaths": "2020-03-17"
       }
     },
     {
-      "Province_State": "Prince Edward Island",
-      "first_date": {
+      "c_ref": "Prince Edward Island",
+      "c_first": {
         "Cases": "2020-03-15",
         "Deaths": "2020-04-08"
       }
     },
     {
-      "Province_State": "Quebec",
-      "first_date": {
+      "c_ref": "Quebec",
+      "c_first": {
         "Cases": "2020-03-09",
         "Deaths": "2020-03-19"
       }
     },
     {
-      "Province_State": "Saskatchewan",
-      "first_date": {
+      "c_ref": "Saskatchewan",
+      "c_first": {
         "Cases": "2020-03-13",
         "Deaths": "2020-03-30"
       }
     },
     {
-      "Province_State": "Toronto, ON",
-      "first_date": {
+      "c_ref": "Toronto, ON",
+      "c_first": {
         "Cases": "2020-02-04"
       },
       "last_date": "2020-03-08"
     },
     {
-      "Province_State": "Yukon",
-      "first_date": {
+      "c_ref": "Yukon",
+      "c_first": {
         "Cases": "2020-03-26",
         "Deaths": "2020-10-30"
       }
     }
   ],
-  "dates": [
+  "c_dates": [
     "2020-01-26",
     "2020-01-27",
     "2020-01-28",

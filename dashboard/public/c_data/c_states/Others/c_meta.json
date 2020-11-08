@@ -1,22 +1,22 @@
 {
-  "regions": [
+  "c_regions": [
     {
-      "Province_State": "Cruise Ship",
-      "first_date": {
+      "c_ref": "Cruise Ship",
+      "c_first": {
         "Cases": "2020-02-07"
       },
       "last_date": "2020-02-08"
     },
     {
-      "Province_State": "Diamond Princess cruise ship",
-      "first_date": {
+      "c_ref": "Diamond Princess cruise ship",
+      "c_first": {
         "Cases": "2020-02-09",
         "Deaths": "2020-02-20"
       },
       "last_date": "2020-03-10"
     }
   ],
-  "dates": [
+  "c_dates": [
     "2020-02-07",
     "2020-02-08",
     "2020-02-09",

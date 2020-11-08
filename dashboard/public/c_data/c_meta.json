@@ -1,1785 +1,1785 @@
 {
-  "regions": [
+  "c_regions": [
     {
-      "Country_Region": "Afghanistan",
-      "first_date": {
+      "c_ref": "Afghanistan",
+      "c_first": {
         "Cases": "2020-02-24",
         "Deaths": "2020-03-22"
       },
-      "Population": 38928341
+      "c_people": 38928341
     },
     {
-      "Country_Region": "Albania",
-      "first_date": {
+      "c_ref": "Albania",
+      "c_first": {
         "Cases": "2020-03-09",
         "Deaths": "2020-03-11"
       },
-      "Population": 2877800
+      "c_people": 2877800
     },
     {
-      "Country_Region": "Algeria",
-      "first_date": {
+      "c_ref": "Algeria",
+      "c_first": {
         "Cases": "2020-02-25",
         "Deaths": "2020-03-12"
       },
-      "Population": 43851043
+      "c_people": 43851043
     },
     {
-      "Country_Region": "Andorra",
-      "first_date": {
+      "c_ref": "Andorra",
+      "c_first": {
         "Cases": "2020-03-02",
         "Deaths": "2020-03-22"
       },
-      "Population": 77265
+      "c_people": 77265
     },
     {
-      "Country_Region": "Angola",
-      "first_date": {
+      "c_ref": "Angola",
+      "c_first": {
         "Cases": "2020-03-20",
         "Deaths": "2020-03-29"
       },
-      "Population": 32866268
+      "c_people": 32866268
     },
     {
-      "Country_Region": "Antigua and Barbuda",
-      "first_date": {
+      "c_ref": "Antigua and Barbuda",
+      "c_first": {
         "Cases": "2020-03-13",
         "Deaths": "2020-04-07"
       },
-      "Population": 97928
+      "c_people": 97928
     },
     {
-      "Country_Region": "Argentina",
-      "first_date": {
+      "c_ref": "Argentina",
+      "c_first": {
         "Cases": "2020-03-03",
         "Deaths": "2020-03-08"
       },
-      "Population": 45195777
+      "c_people": 45195777
     },
     {
-      "Country_Region": "Armenia",
-      "first_date": {
+      "c_ref": "Armenia",
+      "c_first": {
         "Cases": "2020-03-01",
         "Deaths": "2020-03-26"
       },
-      "Population": 2963234
+      "c_people": 2963234
     },
     {
-      "Country_Region": "Aruba",
-      "first_date": {
+      "c_ref": "Aruba",
+      "c_first": {
         "Cases": "2020-03-13"
       },
       "last_date": "2020-03-19"
     },
     {
-      "Country_Region": "Australia",
-      "first_date": {
+      "c_ref": "Australia",
+      "c_first": {
         "Cases": "2020-01-25",
         "Deaths": "2020-03-01"
       },
       "n_states": 8,
-      "Population": 25459700
+      "c_people": 25459700
     },
     {
-      "Country_Region": "Austria",
-      "first_date": {
+      "c_ref": "Austria",
+      "c_first": {
         "Cases": "2020-02-25",
         "Deaths": "2020-03-12"
       },
-      "Population": 9006400
+      "c_people": 9006400
     },
     {
-      "Country_Region": "Azerbaijan",
-      "first_date": {
+      "c_ref": "Azerbaijan",
+      "c_first": {
         "Cases": "2020-02-28",
         "Deaths": "2020-03-13"
       },
-      "Population": 10139175
+      "c_people": 10139175
     },
     {
-      "Country_Region": "Bahamas",
-      "first_date": {
+      "c_ref": "Bahamas",
+      "c_first": {
         "Cases": "2020-03-16",
         "Deaths": "2020-04-01"
       },
-      "Population": 393248
+      "c_people": 393248
     },
     {
-      "Country_Region": "Bahrain",
-      "first_date": {
+      "c_ref": "Bahrain",
+      "c_first": {
         "Cases": "2020-02-24",
         "Deaths": "2020-03-16"
       },
-      "Population": 1701583
+      "c_people": 1701583
     },
     {
-      "Country_Region": "Bangladesh",
-      "first_date": {
+      "c_ref": "Bangladesh",
+      "c_first": {
         "Cases": "2020-03-08",
         "Deaths": "2020-03-18"
       },
-      "Population": 164689383
+      "c_people": 164689383
     },
     {
-      "Country_Region": "Barbados",
-      "first_date": {
+      "c_ref": "Barbados",
+      "c_first": {
         "Cases": "2020-03-17",
         "Deaths": "2020-04-05"
       },
-      "Population": 287371
+      "c_people": 287371
     },
     {
-      "Country_Region": "Belarus",
-      "first_date": {
+      "c_ref": "Belarus",
+      "c_first": {
         "Cases": "2020-02-28",
         "Deaths": "2020-03-31"
       },
-      "Population": 9449321
+      "c_people": 9449321
     },
     {
-      "Country_Region": "Belgium",
-      "first_date": {
+      "c_ref": "Belgium",
+      "c_first": {
         "Cases": "2020-02-04",
         "Deaths": "2020-03-11"
       },
-      "Population": 11589616
+      "c_people": 11589616
     },
     {
-      "Country_Region": "Belize",
-      "first_date": {
+      "c_ref": "Belize",
+      "c_first": {
         "Cases": "2020-03-23",
         "Deaths": "2020-04-06"
       },
-      "Population": 397621
+      "c_people": 397621
     },
     {
-      "Country_Region": "Benin",
-      "first_date": {
+      "c_ref": "Benin",
+      "c_first": {
         "Cases": "2020-03-16",
         "Deaths": "2020-04-06"
       },
-      "Population": 12123198
+      "c_people": 12123198
     },
     {
-      "Country_Region": "Bhutan",
-      "first_date": {
+      "c_ref": "Bhutan",
+      "c_first": {
         "Cases": "2020-03-06"
       },
-      "Population": 771612
+      "c_people": 771612
     },
     {
-      "Country_Region": "Bolivia",
-      "first_date": {
+      "c_ref": "Bolivia",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-29"
       },
-      "Population": 11673029
+      "c_people": 11673029
     },
     {
-      "Country_Region": "Bosnia and Herzegovina",
-      "first_date": {
+      "c_ref": "Bosnia and Herzegovina",
+      "c_first": {
         "Cases": "2020-03-05",
         "Deaths": "2020-03-21"
       },
-      "Population": 3280815
+      "c_people": 3280815
     },
     {
-      "Country_Region": "Botswana",
-      "first_date": {
+      "c_ref": "Botswana",
+      "c_first": {
         "Cases": "2020-03-30",
         "Deaths": "2020-03-31"
       },
-      "Population": 2351625
+      "c_people": 2351625
     },
     {
-      "Country_Region": "Brazil",
-      "first_date": {
+      "c_ref": "Brazil",
+      "c_first": {
         "Cases": "2020-02-26",
         "Deaths": "2020-03-17"
       },
       "n_states": 27,
-      "Population": 212559409
+      "c_people": 212559409
     },
     {
-      "Country_Region": "Brunei",
-      "first_date": {
+      "c_ref": "Brunei",
+      "c_first": {
         "Cases": "2020-03-09",
         "Deaths": "2020-03-28"
       },
-      "Population": 437483
+      "c_people": 437483
     },
     {
-      "Country_Region": "Bulgaria",
-      "first_date": {
+      "c_ref": "Bulgaria",
+      "c_first": {
         "Cases": "2020-03-08",
         "Deaths": "2020-03-11"
       },
-      "Population": 6948445
+      "c_people": 6948445
     },
     {
-      "Country_Region": "Burkina Faso",
-      "first_date": {
+      "c_ref": "Burkina Faso",
+      "c_first": {
         "Cases": "2020-03-10",
         "Deaths": "2020-03-18"
       },
-      "Population": 20903278
+      "c_people": 20903278
     },
     {
-      "Country_Region": "Burma",
-      "first_date": {
+      "c_ref": "Burma",
+      "c_first": {
         "Cases": "2020-03-27",
         "Deaths": "2020-03-31"
       },
-      "Population": 54409794
+      "c_people": 54409794
     },
     {
-      "Country_Region": "Burundi",
-      "first_date": {
+      "c_ref": "Burundi",
+      "c_first": {
         "Cases": "2020-03-31",
         "Deaths": "2020-04-13"
       },
-      "Population": 11890781
+      "c_people": 11890781
     },
     {
-      "Country_Region": "Cabo Verde",
-      "first_date": {
+      "c_ref": "Cabo Verde",
+      "c_first": {
         "Cases": "2020-03-20",
         "Deaths": "2020-03-24"
       },
-      "Population": 555988
+      "c_people": 555988
     },
     {
-      "Country_Region": "Cambodia",
-      "first_date": {
+      "c_ref": "Cambodia",
+      "c_first": {
         "Cases": "2020-01-27"
       },
-      "Population": 16718971
+      "c_people": 16718971
     },
     {
-      "Country_Region": "Cameroon",
-      "first_date": {
+      "c_ref": "Cameroon",
+      "c_first": {
         "Cases": "2020-03-06",
         "Deaths": "2020-03-25"
       },
-      "Population": 26545864
+      "c_people": 26545864
     },
     {
-      "Country_Region": "Canada",
-      "first_date": {
+      "c_ref": "Canada",
+      "c_first": {
         "Cases": "2020-01-26",
         "Deaths": "2020-03-09"
       },
       "n_states": 14,
-      "Population": 37855702
+      "c_people": 37855702
     },
     {
-      "Country_Region": "Cape Verde",
-      "first_date": {
+      "c_ref": "Cape Verde",
+      "c_first": {
         "Cases": "2020-03-21"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Cayman Islands",
-      "first_date": {
+      "c_ref": "Cayman Islands",
+      "c_first": {
         "Cases": "2020-03-13"
       },
       "last_date": "2020-03-15"
     },
     {
-      "Country_Region": "Central African Republic",
-      "first_date": {
+      "c_ref": "Central African Republic",
+      "c_first": {
         "Cases": "2020-03-15",
         "Deaths": "2020-05-23"
       },
-      "Population": 4829764
+      "c_people": 4829764
     },
     {
-      "Country_Region": "Chad",
-      "first_date": {
+      "c_ref": "Chad",
+      "c_first": {
         "Cases": "2020-03-19",
         "Deaths": "2020-04-28"
       },
-      "Population": 16425859
+      "c_people": 16425859
     },
     {
-      "Country_Region": "Channel Islands",
-      "first_date": {
+      "c_ref": "Channel Islands",
+      "c_first": {
         "Cases": "2020-03-10"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Chile",
-      "first_date": {
+      "c_ref": "Chile",
+      "c_first": {
         "Cases": "2020-03-03",
         "Deaths": "2020-03-22"
       },
       "n_states": 17,
-      "Population": 19116209
+      "c_people": 19116209
     },
     {
-      "Country_Region": "China",
-      "first_date": {
+      "c_ref": "China",
+      "c_first": {
         "Cases": "2020-01-22",
         "Deaths": "2020-01-22"
       },
       "n_states": 33,
-      "Population": 1404676330
+      "c_people": 1404676330
     },
     {
-      "Country_Region": "Colombia",
-      "first_date": {
+      "c_ref": "Colombia",
+      "c_first": {
         "Cases": "2020-03-06",
         "Deaths": "2020-03-22"
       },
       "n_states": 34,
-      "Population": 50882884
+      "c_people": 50882884
     },
     {
-      "Country_Region": "Comoros",
-      "first_date": {
+      "c_ref": "Comoros",
+      "c_first": {
         "Cases": "2020-04-30",
         "Deaths": "2020-05-06"
       },
-      "Population": 869595
+      "c_people": 869595
     },
     {
-      "Country_Region": "Congo (Brazzaville)",
-      "first_date": {
+      "c_ref": "Congo (Brazzaville)",
+      "c_first": {
         "Cases": "2020-03-15",
         "Deaths": "2020-04-02"
       },
-      "Population": 5518092
+      "c_people": 5518092
     },
     {
-      "Country_Region": "Congo (Kinshasa)",
-      "first_date": {
+      "c_ref": "Congo (Kinshasa)",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-21"
       },
-      "Population": 89561404
+      "c_people": 89561404
     },
     {
-      "Country_Region": "Costa Rica",
-      "first_date": {
+      "c_ref": "Costa Rica",
+      "c_first": {
         "Cases": "2020-03-06",
         "Deaths": "2020-03-19"
       },
-      "Population": 5094114
+      "c_people": 5094114
     },
     {
-      "Country_Region": "Cote d'Ivoire",
-      "first_date": {
+      "c_ref": "Cote d'Ivoire",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-29"
       },
-      "Population": 26378275
+      "c_people": 26378275
     },
     {
-      "Country_Region": "Croatia",
-      "first_date": {
+      "c_ref": "Croatia",
+      "c_first": {
         "Cases": "2020-02-25",
         "Deaths": "2020-03-19"
       },
-      "Population": 4105268
+      "c_people": 4105268
     },
     {
-      "Country_Region": "Cruise Ship",
-      "first_date": {
+      "c_ref": "Cruise Ship",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-11"
       },
       "last_date": "2020-03-23"
     },
     {
-      "Country_Region": "Cuba",
-      "first_date": {
+      "c_ref": "Cuba",
+      "c_first": {
         "Cases": "2020-03-12",
         "Deaths": "2020-03-18"
       },
-      "Population": 11326616
+      "c_people": 11326616
     },
     {
-      "Country_Region": "Curacao",
-      "first_date": {
+      "c_ref": "Curacao",
+      "c_first": {
         "Cases": "2020-03-14"
       },
       "last_date": "2020-03-15"
     },
     {
-      "Country_Region": "Cyprus",
-      "first_date": {
+      "c_ref": "Cyprus",
+      "c_first": {
         "Cases": "2020-03-09",
         "Deaths": "2020-03-22"
       },
-      "Population": 1207361
+      "c_people": 1207361
     },
     {
-      "Country_Region": "Czech Republic",
-      "first_date": {
+      "c_ref": "Czech Republic",
+      "c_first": {
         "Cases": "2020-03-01"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Czechia",
-      "first_date": {
+      "c_ref": "Czechia",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-22"
       },
-      "Population": 10708982
+      "c_people": 10708982
     },
     {
-      "Country_Region": "Denmark",
-      "first_date": {
+      "c_ref": "Denmark",
+      "c_first": {
         "Cases": "2020-02-27",
         "Deaths": "2020-03-14"
       },
       "n_states": 2,
-      "Population": 5792203
+      "c_people": 5792203
     },
     {
-      "Country_Region": "Diamond Princess",
-      "first_date": {
+      "c_ref": "Diamond Princess",
+      "c_first": {
         "Cases": "2020-03-25",
         "Deaths": "2020-03-25"
       },
-      "Population": 0
+      "c_people": 0
     },
     {
-      "Country_Region": "Djibouti",
-      "first_date": {
+      "c_ref": "Djibouti",
+      "c_first": {
         "Cases": "2020-03-18",
         "Deaths": "2020-04-10"
       },
-      "Population": 988002
+      "c_people": 988002
     },
     {
-      "Country_Region": "Dominica",
-      "first_date": {
+      "c_ref": "Dominica",
+      "c_first": {
         "Cases": "2020-03-22"
       },
-      "Population": 71991
+      "c_people": 71991
     },
     {
-      "Country_Region": "Dominican Republic",
-      "first_date": {
+      "c_ref": "Dominican Republic",
+      "c_first": {
         "Cases": "2020-03-01",
         "Deaths": "2020-03-17"
       },
-      "Population": 10847904
+      "c_people": 10847904
     },
     {
-      "Country_Region": "East Timor",
-      "first_date": {
+      "c_ref": "East Timor",
+      "c_first": {
         "Cases": "2020-03-21"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Ecuador",
-      "first_date": {
+      "c_ref": "Ecuador",
+      "c_first": {
         "Cases": "2020-03-01",
         "Deaths": "2020-03-14"
       },
-      "Population": 17643060
+      "c_people": 17643060
     },
     {
-      "Country_Region": "Egypt",
-      "first_date": {
+      "c_ref": "Egypt",
+      "c_first": {
         "Cases": "2020-02-14",
         "Deaths": "2020-03-08"
       },
-      "Population": 102334403
+      "c_people": 102334403
     },
     {
-      "Country_Region": "El Salvador",
-      "first_date": {
+      "c_ref": "El Salvador",
+      "c_first": {
         "Cases": "2020-03-19",
         "Deaths": "2020-03-31"
       },
-      "Population": 6486201
+      "c_people": 6486201
     },
     {
-      "Country_Region": "Equatorial Guinea",
-      "first_date": {
+      "c_ref": "Equatorial Guinea",
+      "c_first": {
         "Cases": "2020-03-15",
         "Deaths": "2020-04-22"
       },
-      "Population": 1402985
+      "c_people": 1402985
     },
     {
-      "Country_Region": "Eritrea",
-      "first_date": {
+      "c_ref": "Eritrea",
+      "c_first": {
         "Cases": "2020-03-21"
       },
-      "Population": 3546427
+      "c_people": 3546427
     },
     {
-      "Country_Region": "Estonia",
-      "first_date": {
+      "c_ref": "Estonia",
+      "c_first": {
         "Cases": "2020-02-27",
         "Deaths": "2020-03-25"
       },
-      "Population": 1326539
+      "c_people": 1326539
     },
     {
-      "Country_Region": "Eswatini",
-      "first_date": {
+      "c_ref": "Eswatini",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-04-16"
       },
-      "Population": 1160164
+      "c_people": 1160164
     },
     {
-      "Country_Region": "Ethiopia",
-      "first_date": {
+      "c_ref": "Ethiopia",
+      "c_first": {
         "Cases": "2020-03-13",
         "Deaths": "2020-04-05"
       },
-      "Population": 114963583
+      "c_people": 114963583
     },
     {
-      "Country_Region": "Faroe Islands",
-      "first_date": {
+      "c_ref": "Faroe Islands",
+      "c_first": {
         "Cases": "2020-03-04"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Fiji",
-      "first_date": {
+      "c_ref": "Fiji",
+      "c_first": {
         "Cases": "2020-03-19",
         "Deaths": "2020-07-31"
       },
-      "Population": 896444
+      "c_people": 896444
     },
     {
-      "Country_Region": "Finland",
-      "first_date": {
+      "c_ref": "Finland",
+      "c_first": {
         "Cases": "2020-01-29",
         "Deaths": "2020-03-21"
       },
-      "Population": 5540718
+      "c_people": 5540718
     },
     {
-      "Country_Region": "France",
-      "first_date": {
+      "c_ref": "France",
+      "c_first": {
         "Cases": "2020-01-24",
         "Deaths": "2020-02-15"
       },
       "n_states": 11,
-      "Population": 65273512
+      "c_people": 65273512
     },
     {
-      "Country_Region": "French Guiana",
-      "first_date": {
+      "c_ref": "French Guiana",
+      "c_first": {
         "Cases": "2020-03-07"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Gabon",
-      "first_date": {
+      "c_ref": "Gabon",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-03-20"
       },
-      "Population": 2225728
+      "c_people": 2225728
     },
     {
-      "Country_Region": "Gambia",
-      "first_date": {
+      "c_ref": "Gambia",
+      "c_first": {
         "Cases": "2020-03-17",
         "Deaths": "2020-03-23"
       },
-      "Population": 2416664
+      "c_people": 2416664
     },
     {
-      "Country_Region": "Georgia",
-      "first_date": {
+      "c_ref": "Georgia",
+      "c_first": {
         "Cases": "2020-02-26",
         "Deaths": "2020-04-04"
       },
-      "Population": 3989175
+      "c_people": 3989175
     },
     {
-      "Country_Region": "Germany",
-      "first_date": {
+      "c_ref": "Germany",
+      "c_first": {
         "Cases": "2020-01-28",
         "Deaths": "2020-03-09"
       },
       "n_states": 17,
-      "Population": 83783945
+      "c_people": 83783945
     },
     {
-      "Country_Region": "Ghana",
-      "first_date": {
+      "c_ref": "Ghana",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-03-21"
       },
-      "Population": 31072945
+      "c_people": 31072945
     },
     {
-      "Country_Region": "Gibraltar",
-      "first_date": {
+      "c_ref": "Gibraltar",
+      "c_first": {
         "Cases": "2020-03-04"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Greece",
-      "first_date": {
+      "c_ref": "Greece",
+      "c_first": {
         "Cases": "2020-02-26",
         "Deaths": "2020-03-11"
       },
-      "Population": 10423056
+      "c_people": 10423056
     },
     {
-      "Country_Region": "Greenland",
-      "first_date": {
+      "c_ref": "Greenland",
+      "c_first": {
         "Cases": "2020-03-16"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Grenada",
-      "first_date": {
+      "c_ref": "Grenada",
+      "c_first": {
         "Cases": "2020-03-22"
       },
-      "Population": 112519
+      "c_people": 112519
     },
     {
-      "Country_Region": "Guadeloupe",
-      "first_date": {
+      "c_ref": "Guadeloupe",
+      "c_first": {
         "Cases": "2020-03-13"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Guam",
-      "first_date": {
+      "c_ref": "Guam",
+      "c_first": {
         "Cases": "2020-03-16"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Guatemala",
-      "first_date": {
+      "c_ref": "Guatemala",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-03-16"
       },
-      "Population": 17915567
+      "c_people": 17915567
     },
     {
-      "Country_Region": "Guernsey",
-      "first_date": {
+      "c_ref": "Guernsey",
+      "c_first": {
         "Cases": "2020-03-14"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Guinea",
-      "first_date": {
+      "c_ref": "Guinea",
+      "c_first": {
         "Cases": "2020-03-13",
         "Deaths": "2020-04-15"
       },
-      "Population": 13132792
+      "c_people": 13132792
     },
     {
-      "Country_Region": "Guinea-Bissau",
-      "first_date": {
+      "c_ref": "Guinea-Bissau",
+      "c_first": {
         "Cases": "2020-03-25",
         "Deaths": "2020-04-26"
       },
-      "Population": 1967998
+      "c_people": 1967998
     },
     {
-      "Country_Region": "Guyana",
-      "first_date": {
+      "c_ref": "Guyana",
+      "c_first": {
         "Cases": "2020-03-12",
         "Deaths": "2020-03-12"
       },
-      "Population": 786559
+      "c_people": 786559
     },
     {
-      "Country_Region": "Haiti",
-      "first_date": {
+      "c_ref": "Haiti",
+      "c_first": {
         "Cases": "2020-03-20",
         "Deaths": "2020-04-05"
       },
-      "Population": 11402533
+      "c_people": 11402533
     },
     {
-      "Country_Region": "Holy See",
-      "first_date": {
+      "c_ref": "Holy See",
+      "c_first": {
         "Cases": "2020-03-10"
       },
-      "Population": 809
+      "c_people": 809
     },
     {
-      "Country_Region": "Honduras",
-      "first_date": {
+      "c_ref": "Honduras",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-26"
       },
-      "Population": 9904608
+      "c_people": 9904608
     },
     {
-      "Country_Region": "Hong Kong SAR",
-      "first_date": {
+      "c_ref": "Hong Kong SAR",
+      "c_first": {
         "Cases": "2020-03-10",
         "Deaths": "2020-03-10"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Hungary",
-      "first_date": {
+      "c_ref": "Hungary",
+      "c_first": {
         "Cases": "2020-03-04",
         "Deaths": "2020-03-15"
       },
-      "Population": 9660350
+      "c_people": 9660350
     },
     {
-      "Country_Region": "Iceland",
-      "first_date": {
+      "c_ref": "Iceland",
+      "c_first": {
         "Cases": "2020-02-28",
         "Deaths": "2020-03-15"
       },
-      "Population": 341250
+      "c_people": 341250
     },
     {
-      "Country_Region": "India",
-      "first_date": {
+      "c_ref": "India",
+      "c_first": {
         "Cases": "2020-01-30",
         "Deaths": "2020-03-11"
       },
       "n_states": 37,
-      "Population": 1380004385
+      "c_people": 1380004385
     },
     {
-      "Country_Region": "Indonesia",
-      "first_date": {
+      "c_ref": "Indonesia",
+      "c_first": {
         "Cases": "2020-03-02",
         "Deaths": "2020-03-11"
       },
-      "Population": 273523621
+      "c_people": 273523621
     },
     {
-      "Country_Region": "Iran",
-      "first_date": {
+      "c_ref": "Iran",
+      "c_first": {
         "Cases": "2020-02-19",
         "Deaths": "2020-02-19"
       },
-      "Population": 83992953
+      "c_people": 83992953
     },
     {
-      "Country_Region": "Iraq",
-      "first_date": {
+      "c_ref": "Iraq",
+      "c_first": {
         "Cases": "2020-02-24",
         "Deaths": "2020-03-04"
       },
-      "Population": 40222503
+      "c_people": 40222503
     },
     {
-      "Country_Region": "Ireland",
-      "first_date": {
+      "c_ref": "Ireland",
+      "c_first": {
         "Cases": "2020-02-29",
         "Deaths": "2020-03-11"
       },
-      "Population": 4937796
+      "c_people": 4937796
     },
     {
-      "Country_Region": "Israel",
-      "first_date": {
+      "c_ref": "Israel",
+      "c_first": {
         "Cases": "2020-02-21",
         "Deaths": "2020-03-21"
       },
-      "Population": 8655541
+      "c_people": 8655541
     },
     {
-      "Country_Region": "Italy",
-      "first_date": {
+      "c_ref": "Italy",
+      "c_first": {
         "Cases": "2020-01-31",
         "Deaths": "2020-02-21"
       },
       "n_states": 21,
-      "Population": 60461828
+      "c_people": 60461828
     },
     {
-      "Country_Region": "Ivory Coast",
-      "first_date": {
+      "c_ref": "Ivory Coast",
+      "c_first": {
         "Cases": "2020-01-27"
       },
       "last_date": "2020-01-27"
     },
     {
-      "Country_Region": "Jamaica",
-      "first_date": {
+      "c_ref": "Jamaica",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-19"
       },
-      "Population": 2961161
+      "c_people": 2961161
     },
     {
-      "Country_Region": "Japan",
-      "first_date": {
+      "c_ref": "Japan",
+      "c_first": {
         "Cases": "2020-01-22",
         "Deaths": "2020-02-13"
       },
       "n_states": 49,
-      "Population": 126476458
+      "c_people": 126476458
     },
     {
-      "Country_Region": "Jersey",
-      "first_date": {
+      "c_ref": "Jersey",
+      "c_first": {
         "Cases": "2020-03-14"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Jordan",
-      "first_date": {
+      "c_ref": "Jordan",
+      "c_first": {
         "Cases": "2020-03-03",
         "Deaths": "2020-03-27"
       },
-      "Population": 10203140
+      "c_people": 10203140
     },
     {
-      "Country_Region": "Kazakhstan",
-      "first_date": {
+      "c_ref": "Kazakhstan",
+      "c_first": {
         "Cases": "2020-03-13",
         "Deaths": "2020-03-20"
       },
-      "Population": 18776707
+      "c_people": 18776707
     },
     {
-      "Country_Region": "Kenya",
-      "first_date": {
+      "c_ref": "Kenya",
+      "c_first": {
         "Cases": "2020-03-13",
         "Deaths": "2020-03-26"
       },
-      "Population": 53771300
+      "c_people": 53771300
     },
     {
-      "Country_Region": "Korea, South",
-      "first_date": {
+      "c_ref": "Korea, South",
+      "c_first": {
         "Cases": "2020-01-22",
         "Deaths": "2020-02-20"
       },
-      "Population": 51269183
+      "c_people": 51269183
     },
     {
-      "Country_Region": "Kosovo",
-      "first_date": {
+      "c_ref": "Kosovo",
+      "c_first": {
         "Cases": "2020-03-15",
         "Deaths": "2020-03-26"
       },
-      "Population": 1810366
+      "c_people": 1810366
     },
     {
-      "Country_Region": "Kuwait",
-      "first_date": {
+      "c_ref": "Kuwait",
+      "c_first": {
         "Cases": "2020-02-24",
         "Deaths": "2020-04-04"
       },
-      "Population": 4270563
+      "c_people": 4270563
     },
     {
-      "Country_Region": "Kyrgyzstan",
-      "first_date": {
+      "c_ref": "Kyrgyzstan",
+      "c_first": {
         "Cases": "2020-03-18",
         "Deaths": "2020-04-03"
       },
-      "Population": 6524191
+      "c_people": 6524191
     },
     {
-      "Country_Region": "Laos",
-      "first_date": {
+      "c_ref": "Laos",
+      "c_first": {
         "Cases": "2020-03-24"
       },
-      "Population": 7275556
+      "c_people": 7275556
     },
     {
-      "Country_Region": "Latvia",
-      "first_date": {
+      "c_ref": "Latvia",
+      "c_first": {
         "Cases": "2020-03-02",
         "Deaths": "2020-04-03"
       },
-      "Population": 1886202
+      "c_people": 1886202
     },
     {
-      "Country_Region": "Lebanon",
-      "first_date": {
+      "c_ref": "Lebanon",
+      "c_first": {
         "Cases": "2020-02-21",
         "Deaths": "2020-03-10"
       },
-      "Population": 6825442
+      "c_people": 6825442
     },
     {
-      "Country_Region": "Lesotho",
-      "first_date": {
+      "c_ref": "Lesotho",
+      "c_first": {
         "Cases": "2020-05-13",
         "Deaths": "2020-07-09"
       },
-      "Population": 2142252
+      "c_people": 2142252
     },
     {
-      "Country_Region": "Liberia",
-      "first_date": {
+      "c_ref": "Liberia",
+      "c_first": {
         "Cases": "2020-03-16",
         "Deaths": "2020-04-04"
       },
-      "Population": 5057677
+      "c_people": 5057677
     },
     {
-      "Country_Region": "Libya",
-      "first_date": {
+      "c_ref": "Libya",
+      "c_first": {
         "Cases": "2020-03-24",
         "Deaths": "2020-04-02"
       },
-      "Population": 6871287
+      "c_people": 6871287
     },
     {
-      "Country_Region": "Liechtenstein",
-      "first_date": {
+      "c_ref": "Liechtenstein",
+      "c_first": {
         "Cases": "2020-03-04",
         "Deaths": "2020-04-04"
       },
-      "Population": 38137
+      "c_people": 38137
     },
     {
-      "Country_Region": "Lithuania",
-      "first_date": {
+      "c_ref": "Lithuania",
+      "c_first": {
         "Cases": "2020-02-28",
         "Deaths": "2020-03-21"
       },
-      "Population": 2722291
+      "c_people": 2722291
     },
     {
-      "Country_Region": "Luxembourg",
-      "first_date": {
+      "c_ref": "Luxembourg",
+      "c_first": {
         "Cases": "2020-02-29",
         "Deaths": "2020-03-14"
       },
-      "Population": 625976
+      "c_people": 625976
     },
     {
-      "Country_Region": "MS Zaandam",
-      "first_date": {
+      "c_ref": "MS Zaandam",
+      "c_first": {
         "Cases": "2020-03-28",
         "Deaths": "2020-04-01"
       },
-      "Population": 0
+      "c_people": 0
     },
     {
-      "Country_Region": "Macao SAR",
-      "first_date": {
+      "c_ref": "Macao SAR",
+      "c_first": {
         "Cases": "2020-03-10"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Macau",
-      "first_date": {
+      "c_ref": "Macau",
+      "c_first": {
         "Cases": "2020-01-22"
       },
       "last_date": "2020-03-09"
     },
     {
-      "Country_Region": "Madagascar",
-      "first_date": {
+      "c_ref": "Madagascar",
+      "c_first": {
         "Cases": "2020-03-20",
         "Deaths": "2020-05-17"
       },
-      "Population": 27691019
+      "c_people": 27691019
     },
     {
-      "Country_Region": "Malawi",
-      "first_date": {
+      "c_ref": "Malawi",
+      "c_first": {
         "Cases": "2020-04-02",
         "Deaths": "2020-04-07"
       },
-      "Population": 19129955
+      "c_people": 19129955
     },
     {
-      "Country_Region": "Malaysia",
-      "first_date": {
+      "c_ref": "Malaysia",
+      "c_first": {
         "Cases": "2020-01-25",
         "Deaths": "2020-03-17"
       },
-      "Population": 32365998
+      "c_people": 32365998
     },
     {
-      "Country_Region": "Maldives",
-      "first_date": {
+      "c_ref": "Maldives",
+      "c_first": {
         "Cases": "2020-03-08",
         "Deaths": "2020-04-29"
       },
-      "Population": 540542
+      "c_people": 540542
     },
     {
-      "Country_Region": "Mali",
-      "first_date": {
+      "c_ref": "Mali",
+      "c_first": {
         "Cases": "2020-03-25",
         "Deaths": "2020-03-29"
       },
-      "Population": 20250834
+      "c_people": 20250834
     },
     {
-      "Country_Region": "Malta",
-      "first_date": {
+      "c_ref": "Malta",
+      "c_first": {
         "Cases": "2020-03-07",
         "Deaths": "2020-04-08"
       },
-      "Population": 441539
+      "c_people": 441539
     },
     {
-      "Country_Region": "Marshall Islands",
-      "first_date": {
+      "c_ref": "Marshall Islands",
+      "c_first": {
         "Cases": "2020-10-28"
       },
-      "Population": 58413
+      "c_people": 58413
     },
     {
-      "Country_Region": "Martinique",
-      "first_date": {
+      "c_ref": "Martinique",
+      "c_first": {
         "Cases": "2020-03-07",
         "Deaths": "2020-03-16"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Mauritania",
-      "first_date": {
+      "c_ref": "Mauritania",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-03-30"
       },
-      "Population": 4649660
+      "c_people": 4649660
     },
     {
-      "Country_Region": "Mauritius",
-      "first_date": {
+      "c_ref": "Mauritius",
+      "c_first": {
         "Cases": "2020-03-18",
         "Deaths": "2020-03-21"
       },
-      "Population": 1271767
+      "c_people": 1271767
     },
     {
-      "Country_Region": "Mayotte",
-      "first_date": {
+      "c_ref": "Mayotte",
+      "c_first": {
         "Cases": "2020-03-16"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Mexico",
-      "first_date": {
+      "c_ref": "Mexico",
+      "c_first": {
         "Cases": "2020-02-28",
         "Deaths": "2020-03-19"
       },
       "n_states": 31,
-      "Population": 127792286
+      "c_people": 127792286
     },
     {
-      "Country_Region": "Moldova",
-      "first_date": {
+      "c_ref": "Moldova",
+      "c_first": {
         "Cases": "2020-03-08",
         "Deaths": "2020-03-18"
       },
-      "Population": 4033963
+      "c_people": 4033963
     },
     {
-      "Country_Region": "Monaco",
-      "first_date": {
+      "c_ref": "Monaco",
+      "c_first": {
         "Cases": "2020-02-29",
         "Deaths": "2020-03-29"
       },
-      "Population": 39244
+      "c_people": 39244
     },
     {
-      "Country_Region": "Mongolia",
-      "first_date": {
+      "c_ref": "Mongolia",
+      "c_first": {
         "Cases": "2020-03-10"
       },
-      "Population": 3278292
+      "c_people": 3278292
     },
     {
-      "Country_Region": "Montenegro",
-      "first_date": {
+      "c_ref": "Montenegro",
+      "c_first": {
         "Cases": "2020-03-17",
         "Deaths": "2020-03-23"
       },
-      "Population": 628062
+      "c_people": 628062
     },
     {
-      "Country_Region": "Morocco",
-      "first_date": {
+      "c_ref": "Morocco",
+      "c_first": {
         "Cases": "2020-03-02",
         "Deaths": "2020-03-10"
       },
-      "Population": 36910558
+      "c_people": 36910558
     },
     {
-      "Country_Region": "Mozambique",
-      "first_date": {
+      "c_ref": "Mozambique",
+      "c_first": {
         "Cases": "2020-03-22",
         "Deaths": "2020-05-25"
       },
-      "Population": 31255435
+      "c_people": 31255435
     },
     {
-      "Country_Region": "Namibia",
-      "first_date": {
+      "c_ref": "Namibia",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-07-10"
       },
-      "Population": 2540916
+      "c_people": 2540916
     },
     {
-      "Country_Region": "Nepal",
-      "first_date": {
+      "c_ref": "Nepal",
+      "c_first": {
         "Cases": "2020-01-25",
         "Deaths": "2020-05-16"
       },
-      "Population": 29136808
+      "c_people": 29136808
     },
     {
-      "Country_Region": "Netherlands",
-      "first_date": {
+      "c_ref": "Netherlands",
+      "c_first": {
         "Cases": "2020-02-27",
         "Deaths": "2020-03-06"
       },
       "n_states": 17,
-      "Population": 17134873
+      "c_people": 17134873
     },
     {
-      "Country_Region": "New Zealand",
-      "first_date": {
+      "c_ref": "New Zealand",
+      "c_first": {
         "Cases": "2020-02-28",
         "Deaths": "2020-03-29"
       },
-      "Population": 4822233
+      "c_people": 4822233
     },
     {
-      "Country_Region": "Nicaragua",
-      "first_date": {
+      "c_ref": "Nicaragua",
+      "c_first": {
         "Cases": "2020-03-19",
         "Deaths": "2020-03-27"
       },
-      "Population": 6624554
+      "c_people": 6624554
     },
     {
-      "Country_Region": "Niger",
-      "first_date": {
+      "c_ref": "Niger",
+      "c_first": {
         "Cases": "2020-03-20",
         "Deaths": "2020-03-25"
       },
-      "Population": 24206636
+      "c_people": 24206636
     },
     {
-      "Country_Region": "Nigeria",
-      "first_date": {
+      "c_ref": "Nigeria",
+      "c_first": {
         "Cases": "2020-02-28",
         "Deaths": "2020-03-23"
       },
-      "Population": 206139587
+      "c_people": 206139587
     },
     {
-      "Country_Region": "North Ireland",
-      "first_date": {
+      "c_ref": "North Ireland",
+      "c_first": {
         "Cases": "2020-02-28"
       },
       "last_date": "2020-02-28"
     },
     {
-      "Country_Region": "North Macedonia",
-      "first_date": {
+      "c_ref": "North Macedonia",
+      "c_first": {
         "Cases": "2020-02-26",
         "Deaths": "2020-03-22"
       },
-      "Population": 2083380
+      "c_people": 2083380
     },
     {
-      "Country_Region": "Norway",
-      "first_date": {
+      "c_ref": "Norway",
+      "c_first": {
         "Cases": "2020-02-26",
         "Deaths": "2020-03-14"
       },
-      "Population": 5421242
+      "c_people": 5421242
     },
     {
-      "Country_Region": "Oman",
-      "first_date": {
+      "c_ref": "Oman",
+      "c_first": {
         "Cases": "2020-02-24",
         "Deaths": "2020-03-31"
       },
-      "Population": 5106622
+      "c_people": 5106622
     },
     {
-      "Country_Region": "Others",
-      "first_date": {
+      "c_ref": "Others",
+      "c_first": {
         "Cases": "2020-02-07",
         "Deaths": "2020-02-20"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Pakistan",
-      "first_date": {
+      "c_ref": "Pakistan",
+      "c_first": {
         "Cases": "2020-02-26",
         "Deaths": "2020-03-19"
       },
       "n_states": 7,
-      "Population": 220892331
+      "c_people": 220892331
     },
     {
-      "Country_Region": "Palestine",
-      "first_date": {
+      "c_ref": "Palestine",
+      "c_first": {
         "Cases": "2020-03-05"
       },
       "last_date": "2020-03-09"
     },
     {
-      "Country_Region": "Panama",
-      "first_date": {
+      "c_ref": "Panama",
+      "c_first": {
         "Cases": "2020-03-10",
         "Deaths": "2020-03-11"
       },
-      "Population": 4314768
+      "c_people": 4314768
     },
     {
-      "Country_Region": "Papua New Guinea",
-      "first_date": {
+      "c_ref": "Papua New Guinea",
+      "c_first": {
         "Cases": "2020-03-20",
         "Deaths": "2020-07-20"
       },
-      "Population": 8947027
+      "c_people": 8947027
     },
     {
-      "Country_Region": "Paraguay",
-      "first_date": {
+      "c_ref": "Paraguay",
+      "c_first": {
         "Cases": "2020-03-08",
         "Deaths": "2020-03-21"
       },
-      "Population": 7132530
+      "c_people": 7132530
     },
     {
-      "Country_Region": "Peru",
-      "first_date": {
+      "c_ref": "Peru",
+      "c_first": {
         "Cases": "2020-03-06",
         "Deaths": "2020-03-20"
       },
       "n_states": 26,
-      "Population": 32971846
+      "c_people": 32971846
     },
     {
-      "Country_Region": "Philippines",
-      "first_date": {
+      "c_ref": "Philippines",
+      "c_first": {
         "Cases": "2020-01-30",
         "Deaths": "2020-02-02"
       },
-      "Population": 109581085
+      "c_people": 109581085
     },
     {
-      "Country_Region": "Poland",
-      "first_date": {
+      "c_ref": "Poland",
+      "c_first": {
         "Cases": "2020-03-04",
         "Deaths": "2020-03-12"
       },
-      "Population": 37846605
+      "c_people": 37846605
     },
     {
-      "Country_Region": "Portugal",
-      "first_date": {
+      "c_ref": "Portugal",
+      "c_first": {
         "Cases": "2020-03-02",
         "Deaths": "2020-03-17"
       },
-      "Population": 10196707
+      "c_people": 10196707
     },
     {
-      "Country_Region": "Qatar",
-      "first_date": {
+      "c_ref": "Qatar",
+      "c_first": {
         "Cases": "2020-02-29",
         "Deaths": "2020-03-28"
       },
-      "Population": 2881060
+      "c_people": 2881060
     },
     {
-      "Country_Region": "Republic of Ireland",
-      "first_date": {
+      "c_ref": "Republic of Ireland",
+      "c_first": {
         "Cases": "2020-03-08"
       },
       "last_date": "2020-03-08"
     },
     {
-      "Country_Region": "Republic of Korea",
-      "first_date": {
+      "c_ref": "Republic of Korea",
+      "c_first": {
         "Cases": "2020-03-10",
         "Deaths": "2020-03-10"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Republic of Moldova",
-      "first_date": {
+      "c_ref": "Republic of Moldova",
+      "c_first": {
         "Cases": "2020-03-10"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Reunion",
-      "first_date": {
+      "c_ref": "Reunion",
+      "c_first": {
         "Cases": "2020-03-11"
       },
       "last_date": "2020-03-21"
     },
     {
-      "Country_Region": "Romania",
-      "first_date": {
+      "c_ref": "Romania",
+      "c_first": {
         "Cases": "2020-02-26",
         "Deaths": "2020-03-22"
       },
-      "Population": 19237682
+      "c_people": 19237682
     },
     {
-      "Country_Region": "Russia",
-      "first_date": {
+      "c_ref": "Russia",
+      "c_first": {
         "Cases": "2020-01-31",
         "Deaths": "2020-03-19"
       },
       "n_states": 83,
-      "Population": 145934460
+      "c_people": 145934460
     },
     {
-      "Country_Region": "Russian Federation",
-      "first_date": {
+      "c_ref": "Russian Federation",
+      "c_first": {
         "Cases": "2020-03-10"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Rwanda",
-      "first_date": {
+      "c_ref": "Rwanda",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-05-30"
       },
-      "Population": 12952209
+      "c_people": 12952209
     },
     {
-      "Country_Region": "Saint Barthelemy",
-      "first_date": {
+      "c_ref": "Saint Barthelemy",
+      "c_first": {
         "Cases": "2020-03-04"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Saint Kitts and Nevis",
-      "first_date": {
+      "c_ref": "Saint Kitts and Nevis",
+      "c_first": {
         "Cases": "2020-03-25"
       },
-      "Population": 53192
+      "c_people": 53192
     },
     {
-      "Country_Region": "Saint Lucia",
-      "first_date": {
+      "c_ref": "Saint Lucia",
+      "c_first": {
         "Cases": "2020-03-14"
       },
-      "Population": 183629
+      "c_people": 183629
     },
     {
-      "Country_Region": "Saint Martin",
-      "first_date": {
+      "c_ref": "Saint Martin",
+      "c_first": {
         "Cases": "2020-03-10"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Saint Vincent and the Grenadines",
-      "first_date": {
+      "c_ref": "Saint Vincent and the Grenadines",
+      "c_first": {
         "Cases": "2020-03-14"
       },
-      "Population": 110947
+      "c_people": 110947
     },
     {
-      "Country_Region": "San Marino",
-      "first_date": {
+      "c_ref": "San Marino",
+      "c_first": {
         "Cases": "2020-02-27",
         "Deaths": "2020-03-03"
       },
-      "Population": 33938
+      "c_people": 33938
     },
     {
-      "Country_Region": "Sao Tome and Principe",
-      "first_date": {
+      "c_ref": "Sao Tome and Principe",
+      "c_first": {
         "Cases": "2020-04-06",
         "Deaths": "2020-05-01"
       },
-      "Population": 219161
+      "c_people": 219161
     },
     {
-      "Country_Region": "Saudi Arabia",
-      "first_date": {
+      "c_ref": "Saudi Arabia",
+      "c_first": {
         "Cases": "2020-03-02",
         "Deaths": "2020-03-24"
       },
-      "Population": 34813867
+      "c_people": 34813867
     },
     {
-      "Country_Region": "Senegal",
-      "first_date": {
+      "c_ref": "Senegal",
+      "c_first": {
         "Cases": "2020-03-02",
         "Deaths": "2020-04-01"
       },
-      "Population": 16743930
+      "c_people": 16743930
     },
     {
-      "Country_Region": "Serbia",
-      "first_date": {
+      "c_ref": "Serbia",
+      "c_first": {
         "Cases": "2020-03-06",
         "Deaths": "2020-03-20"
       },
-      "Population": 8737370
+      "c_people": 8737370
     },
     {
-      "Country_Region": "Seychelles",
-      "first_date": {
+      "c_ref": "Seychelles",
+      "c_first": {
         "Cases": "2020-03-14"
       },
-      "Population": 98340
+      "c_people": 98340
     },
     {
-      "Country_Region": "Sierra Leone",
-      "first_date": {
+      "c_ref": "Sierra Leone",
+      "c_first": {
         "Cases": "2020-03-31",
         "Deaths": "2020-04-23"
       },
-      "Population": 7976985
+      "c_people": 7976985
     },
     {
-      "Country_Region": "Singapore",
-      "first_date": {
+      "c_ref": "Singapore",
+      "c_first": {
         "Cases": "2020-01-23",
         "Deaths": "2020-03-21"
       },
-      "Population": 5850343
+      "c_people": 5850343
     },
     {
-      "Country_Region": "Slovakia",
-      "first_date": {
+      "c_ref": "Slovakia",
+      "c_first": {
         "Cases": "2020-03-06",
         "Deaths": "2020-03-18"
       },
-      "Population": 5459643
+      "c_people": 5459643
     },
     {
-      "Country_Region": "Slovenia",
-      "first_date": {
+      "c_ref": "Slovenia",
+      "c_first": {
         "Cases": "2020-03-05",
         "Deaths": "2020-03-14"
       },
-      "Population": 2078932
+      "c_people": 2078932
     },
     {
-      "Country_Region": "Solomon Islands",
-      "first_date": {
+      "c_ref": "Solomon Islands",
+      "c_first": {
         "Cases": "2020-10-12"
       },
-      "Population": 652858
+      "c_people": 652858
     },
     {
-      "Country_Region": "Somalia",
-      "first_date": {
+      "c_ref": "Somalia",
+      "c_first": {
         "Cases": "2020-03-16",
         "Deaths": "2020-04-08"
       },
-      "Population": 15893219
+      "c_people": 15893219
     },
     {
-      "Country_Region": "South Africa",
-      "first_date": {
+      "c_ref": "South Africa",
+      "c_first": {
         "Cases": "2020-03-05",
         "Deaths": "2020-03-27"
       },
-      "Population": 59308690
+      "c_people": 59308690
     },
     {
-      "Country_Region": "South Sudan",
-      "first_date": {
+      "c_ref": "South Sudan",
+      "c_first": {
         "Cases": "2020-04-05",
         "Deaths": "2020-05-15"
       },
-      "Population": 11193729
+      "c_people": 11193729
     },
     {
-      "Country_Region": "Spain",
-      "first_date": {
+      "c_ref": "Spain",
+      "c_first": {
         "Cases": "2020-02-01",
         "Deaths": "2020-03-03"
       },
       "n_states": 20,
-      "Population": 46754783
+      "c_people": 46754783
     },
     {
-      "Country_Region": "Sri Lanka",
-      "first_date": {
+      "c_ref": "Sri Lanka",
+      "c_first": {
         "Cases": "2020-01-27",
         "Deaths": "2020-03-28"
       },
-      "Population": 21413250
+      "c_people": 21413250
     },
     {
-      "Country_Region": "St. Martin",
-      "first_date": {
+      "c_ref": "St. Martin",
+      "c_first": {
         "Cases": "2020-03-09"
       },
       "last_date": "2020-03-09"
     },
     {
-      "Country_Region": "Sudan",
-      "first_date": {
+      "c_ref": "Sudan",
+      "c_first": {
         "Cases": "2020-03-13",
         "Deaths": "2020-03-13"
       },
-      "Population": 43849269
+      "c_people": 43849269
     },
     {
-      "Country_Region": "Suriname",
-      "first_date": {
+      "c_ref": "Suriname",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-04-03"
       },
-      "Population": 586634
+      "c_people": 586634
     },
     {
-      "Country_Region": "Sweden",
-      "first_date": {
+      "c_ref": "Sweden",
+      "c_first": {
         "Cases": "2020-01-31",
         "Deaths": "2020-03-11"
       },
       "n_states": 21,
-      "Population": 10099270
+      "c_people": 10099270
     },
     {
-      "Country_Region": "Switzerland",
-      "first_date": {
+      "c_ref": "Switzerland",
+      "c_first": {
         "Cases": "2020-02-25",
         "Deaths": "2020-03-05"
       },
-      "Population": 8654618
+      "c_people": 8654618
     },
     {
-      "Country_Region": "Syria",
-      "first_date": {
+      "c_ref": "Syria",
+      "c_first": {
         "Cases": "2020-03-22",
         "Deaths": "2020-03-29"
       },
-      "Population": 17500657
+      "c_people": 17500657
     },
     {
-      "Country_Region": "Taipei and environs",
-      "first_date": {
+      "c_ref": "Taipei and environs",
+      "c_first": {
         "Cases": "2020-03-10",
         "Deaths": "2020-03-10"
       },
       "last_date": "2020-03-10"
     },
     {
-      "Country_Region": "Taiwan*",
-      "first_date": {
+      "c_ref": "Taiwan*",
+      "c_first": {
         "Cases": "2020-01-22",
         "Deaths": "2020-02-16"
       },
-      "Population": 23816775
+      "c_people": 23816775
     },
     {
-      "Country_Region": "Tajikistan",
-      "first_date": {
+      "c_ref": "Tajikistan",
+      "c_first": {
         "Cases": "2020-04-30",
         "Deaths": "2020-05-02"
       },
-      "Population": 9537642
+      "c_people": 9537642
     },
     {
-      "Country_Region": "Tanzania",
-      "first_date": {
+      "c_ref": "Tanzania",
+      "c_first": {
         "Cases": "2020-03-16",
         "Deaths": "2020-03-31"
       },
-      "Population": 59734213
+      "c_people": 59734213
     },
     {
-      "Country_Region": "Thailand",
-      "first_date": {
+      "c_ref": "Thailand",
+      "c_first": {
         "Cases": "2020-01-22",
         "Deaths": "2020-03-01"
       },
-      "Population": 69799978
+      "c_people": 69799978
     },
     {
-      "Country_Region": "Timor-Leste",
-      "first_date": {
+      "c_ref": "Timor-Leste",
+      "c_first": {
         "Cases": "2020-03-22"
       },
-      "Population": 1318442
+      "c_people": 1318442
     },
     {
-      "Country_Region": "Togo",
-      "first_date": {
+      "c_ref": "Togo",
+      "c_first": {
         "Cases": "2020-03-06",
         "Deaths": "2020-03-27"
       },
-      "Population": 8278737
+      "c_people": 8278737
     },
     {
-      "Country_Region": "Trinidad and Tobago",
-      "first_date": {
+      "c_ref": "Trinidad and Tobago",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-03-25"
       },
-      "Population": 1399491
+      "c_people": 1399491
     },
     {
-      "Country_Region": "Tunisia",
-      "first_date": {
+      "c_ref": "Tunisia",
+      "c_first": {
         "Cases": "2020-03-04",
         "Deaths": "2020-03-19"
       },
-      "Population": 11818618
+      "c_people": 11818618
     },
     {
-      "Country_Region": "Turkey",
-      "first_date": {
+      "c_ref": "Turkey",
+      "c_first": {
         "Cases": "2020-03-11",
         "Deaths": "2020-03-17"
       },
-      "Population": 84339067
+      "c_people": 84339067
     },
     {
-      "Country_Region": "Uganda",
-      "first_date": {
+      "c_ref": "Uganda",
+      "c_first": {
         "Cases": "2020-03-21",
         "Deaths": "2020-07-24"
       },
-      "Population": 45741000
+      "c_people": 45741000
     },
     {
-      "Country_Region": "Ukraine",
-      "first_date": {
+      "c_ref": "Ukraine",
+      "c_first": {
         "Cases": "2020-03-03",
         "Deaths": "2020-03-13"
       },
       "n_states": 27,
-      "Population": 43733759
+      "c_people": 43733759
     },
     {
-      "Country_Region": "United Arab Emirates",
-      "first_date": {
+      "c_ref": "United Arab Emirates",
+      "c_first": {
         "Cases": "2020-01-29",
         "Deaths": "2020-03-20"
       },
-      "Population": 9890400
+      "c_people": 9890400
     },
     {
-      "Country_Region": "United Kingdom",
-      "first_date": {
+      "c_ref": "United Kingdom",
+      "c_first": {
         "Cases": "2020-01-31",
         "Deaths": "2020-03-05"
       },
       "n_states": 15,
-      "Population": 67886004
+      "c_people": 67886004
     },
     {
-      "Country_Region": "United States",
-      "first_date": {
+      "c_ref": "United States",
+      "c_first": {
         "Cases": "2020-01-22",
         "Deaths": "2020-02-29"
       },
       "n_states": 57,
-      "Population": 329466283
+      "c_people": 329466283
     },
     {
-      "Country_Region": "Uruguay",
-      "first_date": {
+      "c_ref": "Uruguay",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-03-29"
       },
-      "Population": 3473727
+      "c_people": 3473727
     },
     {
-      "Country_Region": "Uzbekistan",
-      "first_date": {
+      "c_ref": "Uzbekistan",
+      "c_first": {
         "Cases": "2020-03-15",
         "Deaths": "2020-03-27"
       },
-      "Population": 33469199
+      "c_people": 33469199
     },
     {
-      "Country_Region": "Vatican City",
-      "first_date": {
+      "c_ref": "Vatican City",
+      "c_first": {
         "Cases": "2020-03-06"
       },
       "last_date": "2020-03-09"
     },
     {
-      "Country_Region": "Venezuela",
-      "first_date": {
+      "c_ref": "Venezuela",
+      "c_first": {
         "Cases": "2020-03-14",
         "Deaths": "2020-03-27"
       },
-      "Population": 28435943
+      "c_people": 28435943
     },
     {
-      "Country_Region": "Vietnam",
-      "first_date": {
+      "c_ref": "Vietnam",
+      "c_first": {
         "Cases": "2020-01-23",
         "Deaths": "2020-07-31"
       },
-      "Population": 97338583
+      "c_people": 97338583
     },
     {
-      "Country_Region": "Western Sahara",
-      "first_date": {
+      "c_ref": "Western Sahara",
+      "c_first": {
         "Cases": "2020-04-05",
         "Deaths": "2020-05-26"
       },
-      "Population": 597330
+      "c_people": 597330
     },
     {
-      "Country_Region": "Yemen",
-      "first_date": {
+      "c_ref": "Yemen",
+      "c_first": {
         "Cases": "2020-04-10",
         "Deaths": "2020-04-30"
       },
-      "Population": 29825968
+      "c_people": 29825968
     },
     {
-      "Country_Region": "Zambia",
-      "first_date": {
+      "c_ref": "Zambia",
+      "c_first": {
         "Cases": "2020-03-18",
         "Deaths": "2020-04-02"
       },
-      "Population": 18383956
+      "c_people": 18383956
     },
     {
-      "Country_Region": "Zimbabwe",
-      "first_date": {
+      "c_ref": "Zimbabwe",
+      "c_first": {
         "Cases": "2020-03-20",
         "Deaths": "2020-03-23"
       },
-      "Population": 14862927
+      "c_people": 14862927
     },
     {
-      "Country_Region": "occupied Palestinian territory",
-      "first_date": {
+      "c_ref": "occupied Palestinian territory",
+      "c_first": {
         "Cases": "2020-03-10",
         "Deaths": "2020-03-26"
       },
-      "Population": 0
+      "c_people": 0
     }
   ],
-  "dates": [
+  "c_dates": [
     "2020-01-22",
     "2020-01-23",
     "2020-01-24",

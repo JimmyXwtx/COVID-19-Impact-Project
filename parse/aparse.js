@@ -61,7 +61,8 @@ function process_summary(country_dict) {
   }
 
   // Write meta for countries
-  write_meta(store_dir, { key: 'Country_Region', country_dict });
+  // write_meta(store_dir, { key: 'Country_Region', country_dict });
+  write_meta(store_dir, { key: 'c_ref', country_dict });
   if (argv_verbose) {
     console.log('-------------------------------------------');
   }
@@ -73,7 +74,8 @@ function process_summary(country_dict) {
     if (state_name.substr(0, 1) === '.') continue;
     const state_dir = path.resolve(states_path, state_name);
     // console.log('process_summary fpath', fpath);
-    write_meta(state_dir, { key: 'Province_State', state_name });
+    // write_meta(state_dir, { key: 'Province_State', state_name });
+    write_meta(state_dir, { key: 'c_ref', state_name });
   }
 
   const lapse_time = Date.now() - start_time;
@@ -241,15 +243,15 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
         if (!ent) {
           ent = {};
           ent[key] = kvalue;
-          ent.first_date = {};
+          ent.c_first = {};
           summaryDict[kvalue] = ent;
         }
         let { Cases, Deaths } = citem.totals;
-        if (Cases && !ent.first_date.Cases) {
-          ent.first_date.Cases = date;
+        if (Cases && !ent.c_first.Cases) {
+          ent.c_first.Cases = date;
         }
-        if (Deaths && !ent.first_date.Deaths) {
-          ent.first_date.Deaths = date;
+        if (Deaths && !ent.c_first.Deaths) {
+          ent.c_first.Deaths = date;
         }
         // Daily is difference between now and prior
         const cprior = prior_cdict[kvalue];
