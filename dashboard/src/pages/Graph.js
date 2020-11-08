@@ -444,37 +444,25 @@ const Graph = () => {
     setCountrySelected();
   };
 
+  const HeadStats = () => {
+    return (
+      <Header as="h3">
+        {countrySelected && (
+          <button onClick={selectWorldwide}>&larr; Worldwide</button>
+        )}
+        &nbsp;
+        {ui_top} {pieData[0].stats_total} {uiprop_s} {upto_on} {dateFocusShort}
+      </Header>
+    );
+  };
+
   return (
     <>
       <Container style={{ marginTop: '1rem' }}>
-        {/* <Dimmer active={loaderActive} inverted>
-          <Loader>Loading</Loader>
-        </Dimmer> */}
         <Loader active={loaderActive} inline></Loader>
-        {/* <Header as="h3">{countrySelected}</Header> */}
-        {/* <Header as="h3">
-          Worldwide {uisum} {uiprop_s}: {pieData[0].stats_total} on{' '}
-          {dateFocusShort}
-        </Header> */}
-        <Header as="h3">
-          {ui_top} {pieData[0].stats_total} {uiprop_s} {upto_on}{' '}
-          {dateFocusShort}
-        </Header>
-        {/* {bottomTab !== 'softbody' && <World pie_data={pieData}></World>} */}
+        <HeadStats />
         <World pie_data={pieData} opacity={graphOpacity} />
-        <Header as="h3">
-          {countrySelected && (
-            // <Button.Group>
-            //   <Button size="mini" onClick={selectWorldwide}>
-            //     &larr; Worldwide
-            //   </Button>
-            // </Button.Group>
-            <button onClick={selectWorldwide}>&larr; Worldwide</button>
-          )}
-          &nbsp;
-          {ui_top} {pieData[0].stats_total} {uiprop_s} {upto_on}{' '}
-          {dateFocusShort}
-        </Header>
+        <HeadStats />
         <Grid>
           <Grid.Row
             style={{
@@ -610,3 +598,9 @@ const StyledControlRow = styled.div`
 `;
 
 export default Graph;
+
+// <Button.Group>
+//   <Button size="mini" onClick={selectWorldwide}>
+//     &larr; Worldwide
+//   </Button>
+// </Button.Group>
