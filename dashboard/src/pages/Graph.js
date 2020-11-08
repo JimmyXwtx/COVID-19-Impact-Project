@@ -61,9 +61,7 @@ const Graph = () => {
   const [playIndex, setPlayIndex] = useState(-1);
   const [playDelay, setPlayDelay] = useState(playDelayInit);
   const [pieData, setPieData] = useState();
-  const [dateStats, setDateStats] = useState({
-    items: [],
-  });
+  const [dateStats, setDateStats] = useState({ items: [] });
   const [metaDict, setMetaDict] = useState();
   const [bottomTab, setBottomTab] = useLocalStorage('key-source', 'places');
   const [dateIndex, setDateIndex] = useLocalStorage('key-dataIndex', 0);
@@ -429,9 +427,10 @@ const Graph = () => {
 
   const selectCountry = (country) => {
     console.log('selectCountry country', country);
-    setDateFocus();
-    setDateList();
-    setMetaDict();
+    // setDateFocus();
+    // setDateList();
+    // setMetaDict();
+    setDateStats({ items: [] });
     setCountrySelected(country);
   };
 
@@ -446,7 +445,7 @@ const Graph = () => {
       <Header as="h3">
         {countrySelected && (
           // <button onClick={selectWorldwide}>&larr; Worldwide</button>
-          <button onClick={selectWorldwide}>&lt;--Worldwide--</button>
+          <button onClick={selectWorldwide}>&lt;-Worldwide-]</button>
         )}
         &nbsp;
         {ui_top} {pieData[0].stats_total} {uiprop_s} {upto_on} {dateFocusShort}
