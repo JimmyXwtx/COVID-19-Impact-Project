@@ -1,6 +1,6 @@
 import React from 'react';
 import NumberFormat from 'react-number-format';
-import slug from 'slug';
+// import slug from 'slug';
 import styled from 'styled-components';
 import FlagIcon from '../components/FlagIcon';
 import { colorfor } from '../graph/colors';
@@ -21,12 +21,37 @@ function percentFormat(num) {
   });
 }
 
+const regionRow = (country, index, selectCountry) => {
+  const { Country_Region } = country;
+  const countryCode = getCountryCode(Country_Region);
+  if (country.n_states)
+    return (
+      <button
+        onClick={() => {
+          console.log('CountryDataTable index', index, 'country', country);
+          if (selectCountry) selectCountry(country);
+        }}
+      >
+        {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
+        {Country_Region}
+      </button>
+    );
+  else
+    return (
+      <>
+        {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
+        {Country_Region}
+      </>
+    );
+};
+
 const Rows = (props) => {
   const { items, nslices, selectCountry } = props;
   const rows = items.map((country, index) => {
-    const { Country_Region, propValue, propPercent } = country;
-    const slugKey = `tr-${slug(Country_Region).toLowerCase()}`;
-    const countryCode = getCountryCode(Country_Region);
+    const { propValue, propPercent } = country;
+    // const slugKey = `tr-${slug(Country_Region).toLowerCase()}`;
+    const slugKey = `tr-country-${index}`;
+    // const countryCode = getCountryCode(Country_Region);
     const style = {
       backgroundColor:
         index < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
@@ -34,17 +59,7 @@ const Rows = (props) => {
 
     return (
       <tr key={slugKey}>
-        <td className="region">
-          <button
-            onClick={() => {
-              console.log('CountryDataTable index', index, 'country', country);
-              if (selectCountry) selectCountry(country);
-            }}
-          >
-            {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
-            {Country_Region}
-          </button>
-        </td>
+        <td className="region">{regionRow(country, index, selectCountry)}</td>
         <td className="value">
           <NumberFormat
             value={propValue}

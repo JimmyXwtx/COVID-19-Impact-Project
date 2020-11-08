@@ -5,8 +5,11 @@
 // const upper_label = '▲'; // ('Greater'); ▲
 // const lower_label = '▼'; // 'Less'; ▼
 
-const upper_label = '✱▲'; // ('Greater'); ▲
-const lower_label = '✱▼'; // 'Less'; ▼
+// const upper_label = '✱▲'; // ('Greater'); ▲
+// const lower_label = '✱▼'; // 'Less'; ▼
+
+const upper_label = '✱'; // ('Greater'); ▲
+const lower_label = '✱'; // 'Less'; ▼
 
 function percentFormat(val, stats_total) {
   if (!stats_total) return '';

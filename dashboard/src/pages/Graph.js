@@ -64,12 +64,11 @@ const Graph = () => {
   const [dateStats, setDateStats] = useState({
     items: [],
   });
-  const [summaryDict, setSummaryDict] = useState();
+  const [metaDict, setMetaDict] = useState();
   const [bottomTab, setBottomTab] = useLocalStorage('key-source', 'places');
-  // const [bottomTab, setBottomTab] = useState('places');
   const [dateIndex, setDateIndex] = useLocalStorage('key-dataIndex', 0);
   const [sortedItems, setSortedItems] = useState([]);
-  const [countrySelected, setCuntrySelected] = useState();
+  const [countrySelected, setCountrySelected] = useState();
 
   // dateStats = { date, items }
   // items [{
@@ -122,7 +121,7 @@ const Graph = () => {
         const forui = ui_key(top_label);
         const nlist = [forui].concat(list);
         setCountryList(nlist);
-        setSummaryDict(dict);
+        setMetaDict(dict);
       };
 
       if (!meta) meta = {};
@@ -138,7 +137,7 @@ const Graph = () => {
     //   'dateStats',
     //   dateStats
     // );
-    if (!dateStats.isLoading) {
+    if (!dateStats.isLoading && metaDict) {
       if (
         dateFocus &&
         !(
@@ -153,17 +152,17 @@ const Graph = () => {
           './c_data/' + prefix + 'c_days/' + dateFocus + '.json',
           (items) => {
             if (!items) items = [];
-            if (countrySelected) {
-              items.forEach((item) => {
-                item.Country_Region = item.Province_State;
-              });
-            }
+            items.forEach((item) => {
+              if (countrySelected) item.Country_Region = item.Province_State;
+              const ent = metaDict[item.Country_Region];
+              if (ent) item.n_states = ent.n_states;
+            });
             setDateStats({ date: dateFocus, items, countrySelected });
           }
         );
       }
     }
-  }, [dateFocus, dateStats, countrySelected]);
+  }, [dateFocus, dateStats, countrySelected, metaDict]);
 
   useEffect(() => {
     // console.log('useEffect dateStats.items', dateStats.items);
@@ -291,8 +290,8 @@ const Graph = () => {
 
   const findFirstDate = () => {
     console.log('findFirstDate countryFocus', countryFocus);
-    if (countryFocus !== top_label && summaryDict) {
-      const ent = summaryDict[countryFocus];
+    if (countryFocus !== top_label && metaDict) {
+      const ent = metaDict[countryFocus];
       if (ent) {
         const ndate = ent.first_date[propFocus];
         if (ndate) {
@@ -420,7 +419,7 @@ const Graph = () => {
   const to_active = sumFocus === 'totals';
   const da_active = sumFocus === 'daily';
   const uisum = sumFocus === 'totals' ? 'Total' : 'Daily';
-  const upto_on = sumFocus === 'totals' ? 'Up to' : 'On';
+  const upto_on = sumFocus === 'totals' ? 'Total to' : 'On';
 
   const updateSlider = (key) => {
     // console.log('updateSlider key', key);
@@ -433,13 +432,16 @@ const Graph = () => {
 
   const selectCountry = (country) => {
     console.log('selectCountry country', country);
-    setCuntrySelected(country);
+    setDateFocus();
+    setDateList();
+    setMetaDict();
+    setCountrySelected(country);
   };
 
   const ui_top = countrySelected ? countrySelected.Country_Region : 'WorldWide';
 
   const selectWorldwide = () => {
-    setCuntrySelected();
+    setCountrySelected();
   };
 
   return (
@@ -461,6 +463,15 @@ const Graph = () => {
         {/* {bottomTab !== 'softbody' && <World pie_data={pieData}></World>} */}
         <World pie_data={pieData} opacity={graphOpacity} />
         <Header as="h3">
+          {countrySelected && (
+            // <Button.Group>
+            //   <Button size="mini" onClick={selectWorldwide}>
+            //     &larr; Worldwide
+            //   </Button>
+            // </Button.Group>
+            <button onClick={selectWorldwide}>&larr; Worldwide</button>
+          )}
+          &nbsp;
           {ui_top} {pieData[0].stats_total} {uiprop_s} {upto_on}{' '}
           {dateFocusShort}
         </Header>
@@ -478,13 +489,6 @@ const Graph = () => {
           </Grid.Row>
           <Grid.Row>
             <StyledControlRow>
-              {countrySelected && (
-                <Button.Group>
-                  <Button size="mini" onClick={selectWorldwide}>
-                    Worldwide
-                  </Button>
-                </Button.Group>
-              )}
               <Button.Group>
                 <Button
                   size="mini"
@@ -503,7 +507,7 @@ const Graph = () => {
               </Button.Group>
               <Button.Group>
                 <Button size="mini" onClick={selectTotals} active={to_active}>
-                  Up to:
+                  Total:
                 </Button>
                 <Button size="mini" onClick={selectDaily} active={da_active}>
                   On date:
