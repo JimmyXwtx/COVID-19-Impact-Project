@@ -28,6 +28,7 @@ let fromDate;
 let toDate;
 
 const start_time = Date.now();
+const pop_missing = {};
 
 process_dir();
 
@@ -43,6 +44,9 @@ function process_dir() {
     country_dict = process_cvs(cvs_path, fparse.name);
     index++;
     if (nlimit && index >= nlimit) break;
+  }
+  if (argv_verbose) {
+    console.log('pop_missing', Object.keys(pop_missing).sort());
   }
   process_summary(country_dict);
 }
@@ -96,6 +100,7 @@ function process_cvs(cvs_inpath, file_date) {
   const sums_country = {};
   const sums_total = Object.assign({}, stats_init);
   const country_dict = {};
+
   const input = fs.readFileSync(cvs_inpath);
   const records = parse(input, {
     columns: true,
@@ -129,7 +134,7 @@ function process_cvs(cvs_inpath, file_date) {
 
     let cent = country_dict[Country_Region];
     if (!cent) {
-      const Population = find_population(Country_Region);
+      const Population = find_population(Country_Region, pop_missing);
       cent = { Population, states: {} };
       country_dict[Country_Region] = cent;
     }
@@ -159,7 +164,6 @@ function process_cvs(cvs_inpath, file_date) {
       sums[prop] += parseFloat(val);
     }
   }
-
   write_daily(sums_country, file_date, store_dir);
 
   for (let country in country_dict) {

@@ -42,6 +42,9 @@ function process_population_table() {
   });
   let pop_dict = {};
   for (let rent of records) {
+    const cname = Country_Region_renames[rent.Country_Region];
+    if (cname) rent.Country_Region = cname;
+
     rent.Population = parseFloat(rent.Population ? rent.Population : 0);
     let cent = pop_dict[rent.Country_Region];
     if (!cent) {
@@ -69,6 +72,49 @@ function process_population_table() {
   //   console.log(index, records[index]);
   // }
 }
+
+// pop_missing [
+//   'Aruba',
+//   'Cape Verde',
+//   'Cayman Islands',
+//   'Channel Islands',
+//   'Cruise Ship',
+//   'Curacao',
+//   'Czech Republic',
+//   'East Timor',
+//   'Faroe Islands',
+//   'French Guiana',
+//   'Gibraltar',
+//   'Greenland',
+//   'Guadeloupe',
+//   'Guam',
+//   'Guernsey',
+//   'Hong Kong SAR',
+//   'Ivory Coast',
+//   'Jersey',
+//   'Macao SAR',
+//   'Macau',
+//   'Martinique',
+//   'Mayotte',
+//   'North Ireland',
+//   'Others',
+//   'Palestine',
+//   'Republic of Ireland',
+//   'Republic of Korea',
+//   'Republic of Moldova',
+//   'Reunion',
+//   'Russian Federation',
+//   'Saint Barthelemy',
+//   'Saint Martin',
+//   'St. Martin',
+//   'Taipei and environs',
+//   'United States',
+//   'Vatican City',
+//   'occupied Palestinian territory'
+// ]
+const Country_Region_renames = {
+  US: 'United States',
+};
 
 if (!module.parent) {
   const start_time = Date.now();
