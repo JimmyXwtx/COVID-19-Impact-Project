@@ -56,7 +56,7 @@ export default function extract_slices(
       upper_stat += yvalue;
       upper_count += 1;
     } else if (index < slideIndex + nslice) {
-      const x = item.Country_Region;
+      const x = item.c_ref;
       const y = yvalue;
       const label = x + '\n' + countFormat(y);
       slices.push({ x, y, label });

@@ -3,7 +3,7 @@ import { VictoryBar, VictoryPie } from 'victory';
 import { colorfor, colors, orderColors_pie } from './colors';
 import material from './material';
 
-// const x = item.Country_Region;
+// const x = item.c_ref;
 // const y = item.Deaths;
 // const label = x + '\n' + item.Deaths;
 // pie_data.push({ x, y, label });

@@ -22,8 +22,8 @@ function percentFormat(num) {
 }
 
 const regionRow = (country, index, selectCountry) => {
-  const { Country_Region } = country;
-  const countryCode = getCountryCode(Country_Region);
+  const { c_ref } = country;
+  const countryCode = getCountryCode(c_ref);
   if (country.n_states)
     return (
       <button
@@ -33,14 +33,14 @@ const regionRow = (country, index, selectCountry) => {
         }}
       >
         {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
-        {Country_Region}
+        {c_ref}
       </button>
     );
   else
     return (
       <>
         {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
-        {Country_Region}
+        {c_ref}
       </>
     );
 };
@@ -49,9 +49,9 @@ const Rows = (props) => {
   const { items, nslices, selectCountry } = props;
   const rows = items.map((country, index) => {
     const { propValue, propPercent } = country;
-    // const slugKey = `tr-${slug(Country_Region).toLowerCase()}`;
+    // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
     const slugKey = `tr-country-${index}`;
-    // const countryCode = getCountryCode(Country_Region);
+    // const countryCode = getCountryCode(c_ref);
     const style = {
       backgroundColor:
         index < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
