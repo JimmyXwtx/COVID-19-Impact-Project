@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 // import styled from 'styled-components';
 import {
   Button,
+  Container,
   Form,
   Grid,
+  Message,
   Segment,
   Transition,
-  Message,
-  Container,
 } from 'semantic-ui-react';
-import { connect } from 'react-redux';
 import uuid from 'uuid';
-
-import useLocalStorage from '../hooks/useLocalStorage';
-import useInterval from '../hooks/useInterval';
 import { submitContact } from '../actions';
+import useInterval from '../hooks/useInterval';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 // import { history } from '../history';
 
@@ -31,7 +30,7 @@ const Contact = (props) => {
   const [contactNameError, setContactNameError] = useState();
   const [message, setMessage] = useState('');
   const [feedbackText, setFeedbackText] = useState('');
-  const [token, setToken] = useLocalStorage('key-token');
+  const [token, setToken] = useLocalStorage('co-token');
 
   useInterval(
     () => {

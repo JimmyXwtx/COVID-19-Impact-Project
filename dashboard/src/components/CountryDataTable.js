@@ -46,9 +46,18 @@ const regionRow = (country, index, selectCountry, parentCountry) => {
 };
 
 const Rows = (props) => {
-  const { items, nslices, selectCountry, parentCountry } = props;
+  const { items, nslices, selectCountry, parentCountry, per100k } = props;
   const rows = items.map((country, index) => {
-    const { propValue, propPercent } = country;
+    let { propValue, propPercent } = country;
+    let valid = true;
+    if (per100k) {
+      if (country.c_people) {
+        // propValue = (propValue * (100000 / country.c_people)).toPrecision(2);
+        propValue = propValue * (100000 / country.c_people);
+      } else {
+        valid = false;
+      }
+    }
     // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
     const slugKey = `tr-country-${index}`;
     const style = {
@@ -61,11 +70,14 @@ const Rows = (props) => {
           {regionRow(country, index, selectCountry, parentCountry)}
         </td>
         <td className="value">
-          <NumberFormat
-            value={propValue}
-            displayType={'text'}
-            thousandSeparator={true}
-          />
+          {valid && (
+            <NumberFormat
+              value={propValue}
+              displayType={'text'}
+              thousandSeparator={true}
+              decimalScale={2}
+            />
+          )}
         </td>
         <td className="percent">
           <StyledPercentData>
@@ -86,8 +98,9 @@ const CountryDataTable = (props) => {
     pie_data,
     selectCountry,
     parentCountry,
-    regionPlusClick,
-    regionOptions,
+    // regionPlusClick,
+    // regionOptions,
+    per100k,
   } = props;
   const pieslices = pie_data[0].slices;
   // console.log('pieslices.length', pieslices.length);
@@ -99,12 +112,14 @@ const CountryDataTable = (props) => {
         <tr>
           {/* <th width="60%">Region</th> */}
           <th>
-            <button onClick={regionPlusClick}>
+            {/* <button onClick={regionPlusClick}>
               {regionOptions ? '-' : '+'}
-            </button>{' '}
+            </button>{' '} */}
             Region
           </th>
-          <th>{propTitle}</th>
+          <th>
+            {propTitle} {per100k ? ' per 100k' : null}
+          </th>
           <th width="10%">Percent</th>
         </tr>
       </thead>
@@ -114,6 +129,7 @@ const CountryDataTable = (props) => {
           nslices={pieslices.length}
           selectCountry={selectCountry}
           parentCountry={parentCountry}
+          per100k={per100k}
         />
       </tbody>
     </StyledCountryDataTable>

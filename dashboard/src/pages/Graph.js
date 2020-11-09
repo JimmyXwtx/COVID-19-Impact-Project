@@ -37,18 +37,18 @@ function ui_key(uname) {
 
 const Graph = () => {
   const [loaderActive, setLoaderActive] = useState(true);
-  const [propFocus, setPropFocus] = useLocalStorage('key-propFocus', 'Deaths');
-  const [sumFocus, setSumFocus] = useLocalStorage('key-sumFocus', 'totals');
-  // const [dateFocus, setDateFocus] = useLocalStorage('key-dateFocus', '');
+  const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');
+  const [sumFocus, setSumFocus] = useLocalStorage('co-sumFocus', 'totals');
+  // const [dateFocus, setDateFocus] = useLocalStorage('co-dateFocus', '');
   const [dateFocus, setDateFocus] = useState();
   // const [countryFocus, setCountryFocus] = useLocalStorage(
-  //   'key-countryFocus',
+  //   'co-countryFocus',
   //   top_label
   // );
   const [
     focusCountries,
     setFocusCountries,
-  ] = useLocalStorage('key-focusCountries', [
+  ] = useLocalStorage('co-focusCountries', [
     'China',
     'United States',
     'Jamaica',
@@ -63,11 +63,12 @@ const Graph = () => {
   const [pieData, setPieData] = useState();
   const [dateStats, setDateStats] = useState({ items: [] });
   const [metaDict, setMetaDict] = useState();
-  const [bottomTab, setBottomTab] = useLocalStorage('key-source', 'places');
-  const [dateIndex, setDateIndex] = useLocalStorage('key-dataIndex', 0);
+  const [bottomTab, setBottomTab] = useLocalStorage('co-source', 'places');
+  const [dateIndex, setDateIndex] = useLocalStorage('co-dataIndex', 0);
   const [sortedItems, setSortedItems] = useState([]);
   const [countrySelected, setCountrySelected] = useState();
-  const [regionOptions, setRegionOptions] = useState();
+  const [regionOptions, setRegionOptions] = useLocalStorage('co-region');
+  const [per100k, setPer100k] = useLocalStorage('co-per100k');
 
   // dateStats = { date, items }
   // items [{
@@ -158,7 +159,10 @@ const Graph = () => {
             );
             items.forEach((item) => {
               const ent = metaDict[item.c_ref];
-              if (ent) item.n_states = ent.n_states;
+              if (ent) {
+                item.c_people = ent.c_people;
+                item.n_states = ent.n_states;
+              }
             });
             setDateStats({ date: dateFocus, items, countrySelected });
           }
@@ -454,8 +458,11 @@ const Graph = () => {
   };
 
   const regionPlusClick = () => {
-    console.log('regionPlusClick');
     setRegionOptions(!regionOptions);
+  };
+
+  const clickPer100k = () => {
+    setPer100k(!per100k);
   };
 
   const RegionTab = () => {
@@ -463,7 +470,9 @@ const Graph = () => {
       <div>
         {regionOptions && (
           <div>
-            <button>+ Per 100K</button>
+            <button onClick={clickPer100k}>
+              {per100k ? '-' : '+'} Per 100K
+            </button>
             <button onClick={findFirstDate}>First {uiprop}</button>
             <button onClick={findLastestDate}>Latest</button>
           </div>
@@ -476,12 +485,14 @@ const Graph = () => {
           parentCountry={countrySelected}
           regionPlusClick={regionPlusClick}
           regionOptions={regionOptions}
+          per100k={per100k}
         />
       </div>
     );
   };
 
   const HeadStats = () => {
+    const stats_total = pieData[0].stats_total;
     return (
       <Header as="h3">
         {countrySelected && (
@@ -489,7 +500,7 @@ const Graph = () => {
           <button onClick={selectWorldwide}>&lt;-Worldwide-]</button>
         )}
         &nbsp;
-        {ui_top} {pieData[0].stats_total} {uiprop_s} {upto_on} {dateFocusShort}
+        {ui_top} {stats_total} {uiprop_s} {upto_on} {dateFocusShort}
       </Header>
     );
   };
@@ -558,12 +569,23 @@ const Graph = () => {
       </Container>
       <StyledDetailsContainer>
         <Menu tabular>
-          <Menu.Item
+          {/* <Menu.Item
             name="places"
             active={bottomTab === 'places'}
             content="Regions"
             onClick={handleBottomTab}
-          />
+          /> */}
+          <Menu.Item
+            name="places"
+            active={bottomTab === 'places'}
+            onClick={handleBottomTab}
+          >
+            <button onClick={regionPlusClick}>
+              {regionOptions ? '-' : '+'}
+            </button>
+            &nbsp; Regions
+          </Menu.Item>
+
           <Menu.Item
             name="purpose"
             active={bottomTab === 'purpose'}

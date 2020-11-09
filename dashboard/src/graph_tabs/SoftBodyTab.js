@@ -28,8 +28,8 @@ const ui = { min_radius, smallnum, split_ratio };
 const SoftBodyTab = (props) => {
   // console.log('SoftBodyTab render props=', props);
   const { pie_data } = props;
-  const [softView, setSoftView] = useLocalStorage('key-view', 'div');
-  const [split, setSplit] = useLocalStorage('key-split', false);
+  const [softView, setSoftView] = useLocalStorage('co-view', 'div');
+  const [split, setSplit] = useLocalStorage('co-split', false);
 
   const p5Ref = useRef();
 
