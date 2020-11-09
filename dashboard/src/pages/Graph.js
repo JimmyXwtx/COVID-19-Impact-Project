@@ -585,7 +585,6 @@ const Graph = () => {
             </button>
             &nbsp; Regions
           </Menu.Item>
-
           <Menu.Item
             name="purpose"
             active={bottomTab === 'purpose'}
