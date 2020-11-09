@@ -67,6 +67,7 @@ const Graph = () => {
   const [dateIndex, setDateIndex] = useLocalStorage('key-dataIndex', 0);
   const [sortedItems, setSortedItems] = useState([]);
   const [countrySelected, setCountrySelected] = useState();
+  const [regionOptions, setRegionOptions] = useState();
 
   // dateStats = { date, items }
   // items [{
@@ -298,8 +299,16 @@ const Graph = () => {
         }
       }
     } else if (dateList && dateList.length) {
-      const ndate = dateList[0].value;
-      setDateIndexFocus(ndate);
+      let fdate = '9999-99-99';
+      for (let prop in metaDict) {
+        const cent = metaDict[prop];
+        const ndate = cent.c_first[propFocus];
+        if (ndate < fdate) {
+          fdate = ndate;
+        }
+      }
+      // const ndate = dateList[0].value;
+      setDateIndexFocus(fdate);
     }
   };
 
@@ -444,6 +453,34 @@ const Graph = () => {
     setCountrySelected();
   };
 
+  const regionPlusClick = () => {
+    console.log('regionPlusClick');
+    setRegionOptions(!regionOptions);
+  };
+
+  const RegionTab = () => {
+    return (
+      <div>
+        {regionOptions && (
+          <div>
+            <button>+ Per 100K</button>
+            <button onClick={findFirstDate}>First {uiprop}</button>
+            <button onClick={findLastestDate}>Latest</button>
+          </div>
+        )}
+        <CountryDataTable
+          items={sortedItems}
+          propTitle={uisum + ' ' + uiprop_s}
+          pie_data={pieData}
+          selectCountry={selectCountry}
+          parentCountry={countrySelected}
+          regionPlusClick={regionPlusClick}
+          regionOptions={regionOptions}
+        />
+      </div>
+    );
+  };
+
   const HeadStats = () => {
     return (
       <Header as="h3">
@@ -549,15 +586,7 @@ const Graph = () => {
             onClick={handleBottomTab}
           />
         </Menu>
-        {bottomTab === 'places' && (
-          <CountryDataTable
-            items={sortedItems}
-            propTitle={uisum + ' ' + uiprop_s}
-            pie_data={pieData}
-            selectCountry={selectCountry}
-            parentCountry={countrySelected}
-          />
-        )}
+        {bottomTab === 'places' && <RegionTab />}
         {bottomTab === 'purpose' && <AboutTab />}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}

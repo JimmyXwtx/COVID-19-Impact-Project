@@ -51,12 +51,10 @@ const Rows = (props) => {
     const { propValue, propPercent } = country;
     // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
     const slugKey = `tr-country-${index}`;
-    // const countryCode = getCountryCode(c_ref);
     const style = {
       backgroundColor:
         index < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
     };
-
     return (
       <tr key={slugKey}>
         <td className="region">
@@ -82,7 +80,15 @@ const Rows = (props) => {
 };
 
 const CountryDataTable = (props) => {
-  const { items, propTitle, pie_data, selectCountry, parentCountry } = props;
+  const {
+    items,
+    propTitle,
+    pie_data,
+    selectCountry,
+    parentCountry,
+    regionPlusClick,
+    regionOptions,
+  } = props;
   const pieslices = pie_data[0].slices;
   // console.log('pieslices.length', pieslices.length);
   // const { items } = props;
@@ -92,7 +98,12 @@ const CountryDataTable = (props) => {
       <thead>
         <tr>
           {/* <th width="60%">Region</th> */}
-          <th>Region</th>
+          <th>
+            <button onClick={regionPlusClick}>
+              {regionOptions ? '-' : '+'}
+            </button>{' '}
+            Region
+          </th>
           <th>{propTitle}</th>
           <th width="10%">Percent</th>
         </tr>
