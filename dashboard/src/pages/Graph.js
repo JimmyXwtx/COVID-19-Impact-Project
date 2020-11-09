@@ -468,15 +468,13 @@ const Graph = () => {
   const RegionTab = () => {
     return (
       <div>
-        {regionOptions && (
-          <div>
-            <button onClick={clickPer100k}>
-              {per100k ? '-' : '+'} Per 100K
-            </button>
-            <button onClick={findFirstDate}>First {uiprop}</button>
-            <button onClick={findLastestDate}>Latest</button>
-          </div>
-        )}
+        {/* {regionOptions && ( */}
+        <div>
+          <button onClick={clickPer100k}>{per100k ? '-' : '+'} Per 100K</button>
+          <button onClick={findFirstDate}>First {uiprop}</button>
+          <button onClick={findLastestDate}>Latest</button>
+        </div>
+        {/* )} */}
         <CountryDataTable
           items={sortedItems}
           propTitle={uisum + ' ' + uiprop_s}
@@ -571,11 +569,18 @@ const Graph = () => {
         <Menu tabular>
           {/* <Menu.Item
             name="places"
+            active={true}
+            content={regionOptions ? '-' : '+'}
+            onClick={regionPlusClick}
+            style={{ fontWeight: 'bold' }}
+          /> */}
+          <Menu.Item
+            name="places"
             active={bottomTab === 'places'}
             content="Regions"
             onClick={handleBottomTab}
-          /> */}
-          <Menu.Item
+          />
+          {/* <Menu.Item
             name="places"
             active={bottomTab === 'places'}
             onClick={handleBottomTab}
@@ -584,7 +589,7 @@ const Graph = () => {
               {regionOptions ? '-' : '+'}
             </button>
             &nbsp; Regions
-          </Menu.Item>
+          </Menu.Item> */}
           <Menu.Item
             name="purpose"
             active={bottomTab === 'purpose'}
@@ -607,6 +612,15 @@ const Graph = () => {
             onClick={handleBottomTab}
           />
         </Menu>
+        {/* {regionOptions && (
+          <div>
+            <button onClick={clickPer100k}>
+              {per100k ? '-' : '+'} Per 100K
+            </button>
+            <button onClick={findFirstDate}>First {uiprop}</button>
+            <button onClick={findLastestDate}>Latest</button>
+          </div>
+        )} */}
         {bottomTab === 'places' && <RegionTab />}
         {bottomTab === 'purpose' && <AboutTab />}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
