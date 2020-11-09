@@ -21,9 +21,9 @@ function percentFormat(num) {
   });
 }
 
-const regionRow = (country, index, selectCountry) => {
+const regionRow = (country, index, selectCountry, parentCountry) => {
   const { c_ref } = country;
-  const countryCode = getCountryCode(c_ref);
+  const countryCode = parentCountry ? null : getCountryCode(c_ref);
   if (country.n_states)
     return (
       <button
@@ -46,7 +46,7 @@ const regionRow = (country, index, selectCountry) => {
 };
 
 const Rows = (props) => {
-  const { items, nslices, selectCountry } = props;
+  const { items, nslices, selectCountry, parentCountry } = props;
   const rows = items.map((country, index) => {
     const { propValue, propPercent } = country;
     // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
@@ -59,7 +59,9 @@ const Rows = (props) => {
 
     return (
       <tr key={slugKey}>
-        <td className="region">{regionRow(country, index, selectCountry)}</td>
+        <td className="region">
+          {regionRow(country, index, selectCountry, parentCountry)}
+        </td>
         <td className="value">
           <NumberFormat
             value={propValue}
@@ -80,7 +82,7 @@ const Rows = (props) => {
 };
 
 const CountryDataTable = (props) => {
-  const { items, propTitle, pie_data, selectCountry } = props;
+  const { items, propTitle, pie_data, selectCountry, parentCountry } = props;
   const pieslices = pie_data[0].slices;
   // console.log('pieslices.length', pieslices.length);
   // const { items } = props;
@@ -100,6 +102,7 @@ const CountryDataTable = (props) => {
           items={items}
           nslices={pieslices.length}
           selectCountry={selectCountry}
+          parentCountry={parentCountry}
         />
       </tbody>
     </StyledCountryDataTable>

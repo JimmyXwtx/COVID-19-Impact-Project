@@ -105,11 +105,6 @@ const Graph = () => {
       // is defined outside useEffect
       const process_regions = (regions) => {
         if (!regions) regions = [];
-        // if (countrySelected) {
-        //   regions.forEach((item) => {
-        //     item.Country_Region = item.Province_State;
-        //   });
-        // }
         const dict = {};
         const list = regions.map((item) => {
           const uname = item.c_ref;
@@ -125,6 +120,12 @@ const Graph = () => {
       if (!meta) meta = {};
       process_dates(meta.c_dates);
       process_regions(meta.c_regions);
+
+      console.log('fetchData c_meta c_regions n', meta.c_regions.length);
+      // console.log(
+      //   'fetchData c_meta metaDict n',
+      //   metaDict ? Object.keys(metaDict).length : -1
+      // );
     });
   }, [countrySelected]);
 
@@ -150,8 +151,11 @@ const Graph = () => {
           './c_data/' + prefix + 'c_days/' + dateFocus + '.json',
           (items) => {
             if (!items) items = [];
+            console.log(
+              'fetchData c_days metaDict n',
+              Object.keys(metaDict).length
+            );
             items.forEach((item) => {
-              // if (countrySelected) item.Country_Region = item.Province_State;
               const ent = metaDict[item.c_ref];
               if (ent) item.n_states = ent.n_states;
             });
@@ -551,6 +555,7 @@ const Graph = () => {
             propTitle={uisum + ' ' + uiprop_s}
             pie_data={pieData}
             selectCountry={selectCountry}
+            parentCountry={countrySelected}
           />
         )}
         {bottomTab === 'purpose' && <AboutTab />}
