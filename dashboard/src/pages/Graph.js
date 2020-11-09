@@ -121,7 +121,7 @@ const Graph = () => {
       process_dates(meta.c_dates);
       process_regions(meta.c_regions);
 
-      console.log('fetchData c_meta c_regions n', meta.c_regions.length);
+      console.log('fetchData c_meta set c_regions n', meta.c_regions.length);
       // console.log(
       //   'fetchData c_meta metaDict n',
       //   metaDict ? Object.keys(metaDict).length : -1
@@ -152,7 +152,7 @@ const Graph = () => {
           (items) => {
             if (!items) items = [];
             console.log(
-              'fetchData c_days metaDict n',
+              'fetchData c_days using metaDict n',
               Object.keys(metaDict).length
             );
             items.forEach((item) => {
