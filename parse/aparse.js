@@ -68,16 +68,12 @@ function process_summary(country_dict) {
   report_log('Parsed fromDate=' + fromDate + ' toDate=' + toDate);
 
   const parse_time = Date.now() - start_time;
-  if (argv_verbose) {
-    report_log('parse sec ' + parse_time / 1000);
-    report_log('-------------------------------------------');
-  }
+  report_log('parse sec ' + parse_time / 1000);
+  report_log('-------------------------------------------');
 
   // Write meta for countries
-  write_meta(store_dir, { key: 'c_ref', country_dict });
-  if (argv_verbose) {
-    report_log('-------------------------------------------');
-  }
+  write_meta(store_dir, { country_dict });
+  report_log('-------------------------------------------');
 
   // Write meta for states with in each country that has them
   const states_path = path.resolve(store_dir, 'c_subs');
@@ -89,27 +85,14 @@ function process_summary(country_dict) {
     }
     const state_dir = path.resolve(states_path, cent.ncountry);
     // report_log('process_summary fpath', fpath);
-    // write_meta(state_dir, { key: 'Province_State', state_name });
     write_meta(state_dir, {
-      key: 'c_ref',
       state_name: cent.ncountry,
       country_dict: cent.states,
     });
   }
-  // const states_files = fs.readdirSync(states_path);
-  // for (let state_name of states_files) {
-  //   if (state_name.substr(0, 1) === '.') continue;
-  //   const state_dir = path.resolve(states_path, state_name);
-  //   // report_log('process_summary fpath', fpath);
-  //   // write_meta(state_dir, { key: 'Province_State', state_name });
-  //   write_meta(state_dir, { key: 'c_ref', state_name });
-  // }
-
   const lapse_time = Date.now() - start_time;
-  if (argv_verbose) {
-    report_log('-------------------------------------------');
-    report_log('lapse sec ' + lapse_time / 1000);
-  }
+  report_log('-------------------------------------------');
+  report_log('lapse sec ' + lapse_time / 1000);
 }
 
 function process_cvs(cvs_inpath, file_date) {
@@ -143,10 +126,8 @@ function process_cvs(cvs_inpath, file_date) {
 
     const Country_Region = item.Country_Region;
     if (!Country_Region) {
-      if (argv_verbose) {
-        const str = JSON.stringify(item);
-        report_log('!!@ empty Country_Region ' + file_date + ' ' + str);
-      }
+      const str = JSON.stringify(item);
+      report_log('!!@ empty Country_Region ' + file_date + ' ' + str);
       return;
     }
     // let ent = sums_country[Country_Region];
@@ -255,8 +236,9 @@ function write_daily(country_dict, file_date, path_root) {
   return 1;
 }
 
-function write_meta(state_dir, { key, state_name, country_dict }) {
+function write_meta(state_dir, { state_name, country_dict }) {
   // report_log('write_meta state_dir', state_dir);
+  const key = 'c_ref';
   const c_dates = [];
   const days_path = path.resolve(state_dir, 'c_days');
   const summaryDict = {};
@@ -307,7 +289,7 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
       // Write out updated daily
       fs.writeJsonSync(fpath, fitem, { spaces: 2 });
     } else {
-      report_log('write_meta readJson failed', fpath);
+      report_log('write_meta readJson failed ' + fpath);
     }
   }
   // Write out summary, remove last_date if current
@@ -317,9 +299,7 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
     if (ent.last_date === toDate) {
       delete ent.last_date;
     } else if (state_name) {
-      if (argv_verbose) {
-        report_log(state_name + '|' + uname + '| last_date ' + ent.last_date);
-      }
+      report_log(state_name + '|' + uname + '| last_date ' + ent.last_date);
     }
     if (country_dict) {
       const cent = country_dict[uname];
@@ -328,9 +308,7 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
         const n_states = Object.keys(cent.states).length;
         if (n_states) {
           ent.n_states = n_states;
-          if (argv_verbose) {
-            report_log(uname + '| n_states ' + ent.n_states);
-          }
+          report_log(uname + '| n_states ' + ent.n_states);
         }
         ent.c_people = cent.c_people;
       }

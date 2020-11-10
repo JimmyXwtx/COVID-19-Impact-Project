@@ -89,7 +89,7 @@ const Graph = () => {
       prefix = countrySelected.c_ref;
       prefix = prefix.replace(/ /g, '_').replace(/,/g, '');
     }
-    prefix = prefix ? 'c_states/' + prefix + '/' : '';
+    prefix = prefix ? 'c_subs/' + prefix + '/' : '';
     return prefix;
   };
 
