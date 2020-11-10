@@ -9,7 +9,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const argv = require('yargs').argv;
 
-const { rename_item, find_population } = require('./country');
+const { rename_item, country_pop_ent } = require('./country');
 
 // const nlimit = 5;
 const nlimit = 0;
@@ -145,11 +145,12 @@ function process_cvs(cvs_inpath, file_date) {
     let cent = country_dict[Country_Region];
     if (!cent) {
       const totals = Object.assign({}, stats_init);
-      const Population = find_population(Country_Region, pop_missing);
+      const pop_ent = country_pop_ent(Country_Region, pop_missing);
       cent = {
         c_ref: Country_Region,
         totals,
-        c_people: Population,
+        c_people: pop_ent ? pop_ent.Population : 0,
+        pop_ent,
         states: {},
       };
       country_dict[Country_Region] = cent;
@@ -165,8 +166,13 @@ function process_cvs(cvs_inpath, file_date) {
     ) {
       let ent = cent.states[Province_State];
       if (!ent) {
+        const pop_ent = cent.pop_ent[Province_State];
         const totals = Object.assign({}, stats_init);
-        ent = { c_ref: Province_State, totals };
+        ent = {
+          c_ref: Province_State,
+          totals,
+          c_people: pop_ent ? pop_ent.Population : 0,
+        };
         cent.states[Province_State] = ent;
       }
       calc(ent.totals, item);

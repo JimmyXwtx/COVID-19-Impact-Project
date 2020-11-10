@@ -110,13 +110,13 @@ const { population_dict } = require('./population_dict');
 let pop_dict = population_dict();
 console.log('pop_dict n', Object.keys(pop_dict).length);
 
-function find_population(Country_Region, missing) {
-  let pent = pop_dict[Country_Region];
-  if (!pent) {
+function country_pop_ent(Country_Region, missing) {
+  let pop_ent = pop_dict[Country_Region];
+  if (!pop_ent) {
     missing[Country_Region] = 1;
     return 0;
   }
-  return pent.Population;
+  return pop_ent;
   // console.log('set_population: item', item);
 }
 
@@ -124,5 +124,5 @@ function find_population(Country_Region, missing) {
 
 module.exports = {
   rename_item,
-  find_population,
+  country_pop_ent,
 };
