@@ -15,7 +15,6 @@ const { rename_item, country_pop_ent } = require('./country');
 const nlimit = 0;
 const argv_silent = argv.silent;
 const argv_verbose = !argv_silent;
-// const argv_sort_deaths = argv.sort_deaths;
 
 const daily_dir =
   '../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
@@ -29,6 +28,7 @@ let toDate;
 
 const start_time = Date.now();
 const pop_missing = {};
+const report_lines = [];
 
 process_dir();
 
@@ -45,25 +45,38 @@ function process_dir() {
     index++;
     if (nlimit && index >= nlimit) break;
   }
-  if (argv_verbose) {
-    console.log('pop_missing', Object.keys(pop_missing).sort());
-  }
+  const keys = Object.keys(pop_missing);
+  // report_log('pop_missing', keys.length, keys.sort());
+  report_log('pop_missing ' + keys.length);
+  report_log(JSON.stringify(keys.sort(), null, 2));
+
   process_summary(country_dict);
+
+  report_write();
+}
+
+function report_write() {
+  fs.writeFileSync('./report.txt', report_lines.join('\n'));
+}
+
+function report_log(aline, aobj) {
+  report_lines.push(aline);
+  if (argv_verbose) console.log(aline);
 }
 
 function process_summary(country_dict) {
-  console.log('Parsed fromDate=' + fromDate + ' toDate=' + toDate);
+  report_log('Parsed fromDate=' + fromDate + ' toDate=' + toDate);
 
   const parse_time = Date.now() - start_time;
   if (argv_verbose) {
-    console.log('parse sec', parse_time / 1000);
-    console.log('-------------------------------------------');
+    report_log('parse sec ' + parse_time / 1000);
+    report_log('-------------------------------------------');
   }
 
   // Write meta for countries
   write_meta(store_dir, { key: 'c_ref', country_dict });
   if (argv_verbose) {
-    console.log('-------------------------------------------');
+    report_log('-------------------------------------------');
   }
 
   // Write meta for states with in each country that has them
@@ -71,11 +84,11 @@ function process_summary(country_dict) {
   for (let country in country_dict) {
     const cent = country_dict[country];
     if (!cent.ncountry) {
-      // console.log('skipping country', country);
+      // report_log('skipping country', country);
       continue;
     }
     const state_dir = path.resolve(states_path, cent.ncountry);
-    // console.log('process_summary fpath', fpath);
+    // report_log('process_summary fpath', fpath);
     // write_meta(state_dir, { key: 'Province_State', state_name });
     write_meta(state_dir, {
       key: 'c_ref',
@@ -87,15 +100,15 @@ function process_summary(country_dict) {
   // for (let state_name of states_files) {
   //   if (state_name.substr(0, 1) === '.') continue;
   //   const state_dir = path.resolve(states_path, state_name);
-  //   // console.log('process_summary fpath', fpath);
+  //   // report_log('process_summary fpath', fpath);
   //   // write_meta(state_dir, { key: 'Province_State', state_name });
   //   write_meta(state_dir, { key: 'c_ref', state_name });
   // }
 
   const lapse_time = Date.now() - start_time;
   if (argv_verbose) {
-    console.log('-------------------------------------------');
-    console.log('lapse sec', lapse_time / 1000);
+    report_log('-------------------------------------------');
+    report_log('lapse sec ' + lapse_time / 1000);
   }
 }
 
@@ -132,7 +145,7 @@ function process_cvs(cvs_inpath, file_date) {
     if (!Country_Region) {
       if (argv_verbose) {
         const str = JSON.stringify(item);
-        console.log('!!@ empty Country_Region', file_date, str);
+        report_log('!!@ empty Country_Region ' + file_date + ' ' + str);
       }
       return;
     }
@@ -150,7 +163,7 @@ function process_cvs(cvs_inpath, file_date) {
     if (!cent) {
       const totals = Object.assign({}, stats_init);
       const pop_ent = country_pop_ent(Country_Region, pop_missing);
-      // if (Country_Region === 'United States') console.log('pop_ent', pop_ent);
+      // if (Country_Region === 'United States') report_log('pop_ent', pop_ent);
       cent = {
         c_ref: Country_Region,
         totals,
@@ -173,7 +186,7 @@ function process_cvs(cvs_inpath, file_date) {
       if (!ent) {
         const pop_ent = cent.pop_ent && cent.pop_ent.states[Province_State];
         // if (Country_Region === 'United States')
-        //   console.log(
+        //   report_log(
         //     // 'Country_Region',
         //     // Country_Region,
         //     'Province_State',
@@ -204,7 +217,7 @@ function process_cvs(cvs_inpath, file_date) {
 
   for (let country in country_dict) {
     const cent = country_dict[country];
-    // console.log('file_date', file_date, 'country', country, 'cent', cent);
+    // report_log('file_date', file_date, 'country', country, 'cent', cent);
     const ncountry = fileNameFromCountryName(country);
     cent.ncountry = ncountry;
     let cpath = path.resolve(store_dir, 'c_subs', ncountry);
@@ -231,7 +244,7 @@ function write_daily(country_dict, file_date, path_root) {
   });
   // }
   if (sums.length <= 0) {
-    // console.log('write_daily empty', file_date, path_root);
+    // report_log('write_daily empty', file_date, path_root);
     return 0;
   }
   let cpath = path.resolve(path_root, 'c_days');
@@ -242,25 +255,13 @@ function write_daily(country_dict, file_date, path_root) {
   return 1;
 }
 
-function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
-  console.log('records[0]', records[0]);
-  console.log('sums_total', sums_total);
-  console.log('sums.length', sums.length);
-  const ndump = 1;
-  for (let index = 0; index < ndump; index++) {
-    console.log('sums[' + index + ']', JSON.stringify(sums[index]));
-  }
-  console.log(cvs_inpath);
-  console.log(outpath_country, '\n');
-}
-
 function write_meta(state_dir, { key, state_name, country_dict }) {
-  // console.log('write_meta state_dir', state_dir);
+  // report_log('write_meta state_dir', state_dir);
   const c_dates = [];
   const days_path = path.resolve(state_dir, 'c_days');
   const summaryDict = {};
   if (!fs.existsSync(days_path)) {
-    console.log('write_meta missing days_path', days_path);
+    report_log('write_meta missing days_path ' + days_path);
     return null;
   }
   let cdict = {};
@@ -306,7 +307,7 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
       // Write out updated daily
       fs.writeJsonSync(fpath, fitem, { spaces: 2 });
     } else {
-      console.log('write_meta readJson failed', fpath);
+      report_log('write_meta readJson failed', fpath);
     }
   }
   // Write out summary, remove last_date if current
@@ -317,7 +318,7 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
       delete ent.last_date;
     } else if (state_name) {
       if (argv_verbose) {
-        console.log(state_name + '|' + uname + '|', 'last_date', ent.last_date);
+        report_log(state_name + '|' + uname + '| last_date ' + ent.last_date);
       }
     }
     if (country_dict) {
@@ -328,7 +329,7 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
         if (n_states) {
           ent.n_states = n_states;
           if (argv_verbose) {
-            console.log(uname + '|', 'n_states', ent.n_states);
+            report_log(uname + '| n_states ' + ent.n_states);
           }
         }
         ent.c_people = cent.c_people;
@@ -340,4 +341,16 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
   const meta = { c_regions, c_dates };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
   return meta;
+}
+
+function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
+  report_log('records[0] ' + records[0]);
+  report_log('sums_total ' + sums_total);
+  report_log('sums.length ' + sums.length);
+  const ndump = 1;
+  for (let index = 0; index < ndump; index++) {
+    report_log('sums[' + index + '] ' + JSON.stringify(sums[index]));
+  }
+  report_log(cvs_inpath);
+  report_log(outpath_country, '\n');
 }
