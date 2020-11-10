@@ -67,7 +67,7 @@ function process_summary(country_dict) {
   }
 
   // Write meta for states with in each country that has them
-  const states_path = path.resolve(store_dir, 'c_states');
+  const states_path = path.resolve(store_dir, 'c_subs');
   for (let country in country_dict) {
     const cent = country_dict[country];
     if (!cent.ncountry) {
@@ -207,7 +207,7 @@ function process_cvs(cvs_inpath, file_date) {
     // console.log('file_date', file_date, 'country', country, 'cent', cent);
     const ncountry = fileNameFromCountryName(country);
     cent.ncountry = ncountry;
-    let cpath = path.resolve(store_dir, 'c_states', ncountry);
+    let cpath = path.resolve(store_dir, 'c_subs', ncountry);
     const writen = write_daily(cent.states, file_date, cpath);
     if (!writen) delete cent.ncountry;
   }
