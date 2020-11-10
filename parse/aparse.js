@@ -15,7 +15,7 @@ const { rename_item, find_population } = require('./country');
 const nlimit = 0;
 const argv_silent = argv.silent;
 const argv_verbose = !argv_silent;
-const argv_sort_deaths = argv.sort_deaths;
+// const argv_sort_deaths = argv.sort_deaths;
 
 const daily_dir =
   '../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
@@ -61,7 +61,6 @@ function process_summary(country_dict) {
   }
 
   // Write meta for countries
-  // write_meta(store_dir, { key: 'Country_Region', country_dict });
   write_meta(store_dir, { key: 'c_ref', country_dict });
   if (argv_verbose) {
     console.log('-------------------------------------------');
@@ -69,14 +68,25 @@ function process_summary(country_dict) {
 
   // Write meta for states with in each country that has them
   const states_path = path.resolve(store_dir, 'c_states');
-  const states_files = fs.readdirSync(states_path);
-  for (let state_name of states_files) {
-    if (state_name.substr(0, 1) === '.') continue;
-    const state_dir = path.resolve(states_path, state_name);
+  for (let country in country_dict) {
+    const cent = country_dict[country];
+    if (!cent.ncountry) {
+      // console.log('skipping country', country);
+      continue;
+    }
+    const state_dir = path.resolve(states_path, cent.ncountry);
     // console.log('process_summary fpath', fpath);
     // write_meta(state_dir, { key: 'Province_State', state_name });
-    write_meta(state_dir, { key: 'c_ref', state_name });
+    write_meta(state_dir, { key: 'c_ref', state_name: cent.ncountry });
   }
+  // const states_files = fs.readdirSync(states_path);
+  // for (let state_name of states_files) {
+  //   if (state_name.substr(0, 1) === '.') continue;
+  //   const state_dir = path.resolve(states_path, state_name);
+  //   // console.log('process_summary fpath', fpath);
+  //   // write_meta(state_dir, { key: 'Province_State', state_name });
+  //   write_meta(state_dir, { key: 'c_ref', state_name });
+  // }
 
   const lapse_time = Date.now() - start_time;
   if (argv_verbose) {
@@ -99,7 +109,7 @@ function process_cvs(cvs_inpath, file_date) {
   if (toDate < file_date) toDate = file_date;
   if (fromDate > file_date) fromDate = file_date;
 
-  const sums_country = {};
+  // const sums_country = {};
   const sums_total = Object.assign({}, stats_init);
   const country_dict = {};
 
@@ -122,35 +132,38 @@ function process_cvs(cvs_inpath, file_date) {
       }
       return;
     }
-    let ent = sums_country[Country_Region];
-    if (!ent) {
-      // { Cases: 0, Deaths: 0, Recovered: 0 };
-      const totals = Object.assign({}, stats_init);
-      ent = { c_ref: Country_Region, totals };
-      sums_country[Country_Region] = ent;
-      // console.log('process_item silent', silent);
-      // stats.population = find_population(item, silent);
-    }
-    calc(ent.totals, item);
-    calc(sums_total, item);
+    // let ent = sums_country[Country_Region];
+    // if (!ent) {
+    //   // { Cases: 0, Deaths: 0, Recovered: 0 };
+    //   const totals = Object.assign({}, stats_init);
+    //   ent = { c_ref: Country_Region, totals };
+    //   sums_country[Country_Region] = ent;
+    // }
+    // calc(ent.totals, item);
+    // calc(sums_total, item);
 
     let cent = country_dict[Country_Region];
     if (!cent) {
+      const totals = Object.assign({}, stats_init);
       const Population = find_population(Country_Region, pop_missing);
-      cent = { c_people: Population, states: {} };
+      cent = {
+        c_ref: Country_Region,
+        totals,
+        c_people: Population,
+        states: {},
+      };
       country_dict[Country_Region] = cent;
     }
-    let Province_State = item.Province_State;
-    // if (! Province_State) Province_State = Country_Region;
-    // console.log('item', item);
-    // console.log('Province_State', Province_State);
+    calc(cent.totals, item);
+    calc(sums_total, item);
 
+    let Province_State = item.Province_State;
     if (
       Province_State &&
       Province_State !== 'Recovered' &&
       Province_State !== Country_Region
     ) {
-      ent = cent.states[Province_State];
+      let ent = cent.states[Province_State];
       if (!ent) {
         const totals = Object.assign({}, stats_init);
         ent = { c_ref: Province_State, totals };
@@ -166,14 +179,16 @@ function process_cvs(cvs_inpath, file_date) {
       sums[prop] += parseFloat(val);
     }
   }
-  write_daily(sums_country, file_date, store_dir);
+  write_daily(country_dict, file_date, store_dir);
 
   for (let country in country_dict) {
     const cent = country_dict[country];
     // console.log('file_date', file_date, 'country', country, 'cent', cent);
     const ncountry = fileNameFromCountryName(country);
+    cent.ncountry = ncountry;
     let cpath = path.resolve(store_dir, 'c_states', ncountry);
-    write_daily(cent.states, file_date, cpath);
+    const writen = write_daily(cent.states, file_date, cpath);
+    if (!writen) delete cent.ncountry;
   }
   return country_dict;
 }
@@ -182,24 +197,28 @@ function fileNameFromCountryName(country) {
   return country.replace(/ /g, '_').replace(/,/g, '');
 }
 
-function write_daily(sums_country, file_date, path_root) {
-  let sums;
-  if (argv_sort_deaths) {
-    sums = Object.values(sums_country);
-    sums.sort((item1, item2) => item2.totals.Deaths - item1.totals.Deaths);
-  } else {
-    const keys = Object.keys(sums_country).sort();
-    sums = keys.map(key => sums_country[key]);
-  }
+function write_daily(country_dict, file_date, path_root) {
+  // if (argv_sort_deaths) {
+  //   sums = Object.values(country_dict);
+  //   sums.sort((item1, item2) => item2.totals.Deaths - item1.totals.Deaths);
+  // } else
+  // {
+  const keys = Object.keys(country_dict).sort();
+  const sums = keys.map(key => {
+    const { c_ref, totals } = country_dict[key];
+    return { c_ref, totals };
+  });
+  // }
   if (sums.length <= 0) {
     // console.log('write_daily empty', file_date, path_root);
-    return;
+    return 0;
   }
   let cpath = path.resolve(path_root, 'c_days');
   fs.ensureDirSync(cpath);
   const fname = file_date + '.json';
   cpath = path.resolve(cpath, fname);
   fs.writeJsonSync(cpath, sums, { spaces: 2 });
+  return 1;
 }
 
 function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
@@ -215,6 +234,7 @@ function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
 }
 
 function write_meta(state_dir, { key, state_name, country_dict }) {
+  // console.log('write_meta state_dir', state_dir);
   const c_dates = [];
   const days_path = path.resolve(state_dir, 'c_days');
   const summaryDict = {};

@@ -56,6 +56,7 @@ function process_population_table() {
     if (!rent.Province_State) continue;
     let sent = cent.states[rent.Province_State];
     if (!sent) {
+      // First occurrence of Province_State is for entire state
       sent = { Population: rent.Population };
       cent.states[rent.Province_State] = sent;
     } else {
