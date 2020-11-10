@@ -77,7 +77,11 @@ function process_summary(country_dict) {
     const state_dir = path.resolve(states_path, cent.ncountry);
     // console.log('process_summary fpath', fpath);
     // write_meta(state_dir, { key: 'Province_State', state_name });
-    write_meta(state_dir, { key: 'c_ref', state_name: cent.ncountry });
+    write_meta(state_dir, {
+      key: 'c_ref',
+      state_name: cent.ncountry,
+      country_dict: cent.states,
+    });
   }
   // const states_files = fs.readdirSync(states_path);
   // for (let state_name of states_files) {
@@ -146,6 +150,7 @@ function process_cvs(cvs_inpath, file_date) {
     if (!cent) {
       const totals = Object.assign({}, stats_init);
       const pop_ent = country_pop_ent(Country_Region, pop_missing);
+      // if (Country_Region === 'United States') console.log('pop_ent', pop_ent);
       cent = {
         c_ref: Country_Region,
         totals,
@@ -166,12 +171,22 @@ function process_cvs(cvs_inpath, file_date) {
     ) {
       let ent = cent.states[Province_State];
       if (!ent) {
-        const pop_ent = cent.pop_ent[Province_State];
+        const pop_ent = cent.pop_ent && cent.pop_ent.states[Province_State];
+        // if (Country_Region === 'United States')
+        //   console.log(
+        //     // 'Country_Region',
+        //     // Country_Region,
+        //     'Province_State',
+        //     Province_State,
+        //     'pop_ent',
+        //     pop_ent
+        //   );
         const totals = Object.assign({}, stats_init);
         ent = {
           c_ref: Province_State,
           totals,
           c_people: pop_ent ? pop_ent.Population : 0,
+          states: {},
         };
         cent.states[Province_State] = ent;
       }
@@ -308,6 +323,7 @@ function write_meta(state_dir, { key, state_name, country_dict }) {
     if (country_dict) {
       const cent = country_dict[uname];
       if (cent) {
+        // const n_states = Object.keys(cent.states ? cent.states : {}).length;
         const n_states = Object.keys(cent.states).length;
         if (n_states) {
           ent.n_states = n_states;
