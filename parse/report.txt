@@ -1,5 +1,4 @@
-!!@ empty Country_Region 2020-11-03 {"FIPS":"","Admin2":"","Province_State":"","Country_Region":"","Last_Update":"2020-11-04 05:25:09","Lat":"","Long_":"","Confirmed":"0","Deaths":"0","Recovered":"0","Active":"0","Combined_Key":"","Incidence_Rate":"","Case-Fatality_Ratio":"","Cases":"0","source_index":3959}
-pop_missing 36
+pop_missing 37
 [
   "Aruba",
   "Cape Verde",
@@ -35,11 +34,12 @@ pop_missing 36
   "Saint Martin",
   "St. Martin",
   "Taipei and environs",
+  "Vanuatu",
   "Vatican City",
   "occupied Palestinian territory"
 ]
-Parsed fromDate=2020-01-22 toDate=2020-11-09
-parse sec 14.142
+Parsed fromDate=2020-01-22 toDate=2020-11-10
+parse sec 17.849
 -------------------------------------------
 Australia| n_states 8
 Brazil| n_states 27
@@ -81,4 +81,4 @@ United_States|Wuhan Evacuee| last_date 2020-03-22
 United_Kingdom|Falkland Islands (Islas Malvinas)| last_date 2020-04-06
 United_Kingdom|UK| last_date 2020-03-12
 -------------------------------------------
-lapse sec 21.035
+lapse sec 27.022
