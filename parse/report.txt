@@ -1,4 +1,4 @@
-pop_missing 37
+pop_missing 36
 [
   "Aruba",
   "Cape Verde",
@@ -34,12 +34,11 @@ pop_missing 37
   "Saint Martin",
   "St. Martin",
   "Taipei and environs",
-  "Vanuatu",
   "Vatican City",
   "occupied Palestinian territory"
 ]
 Parsed fromDate=2020-01-22 toDate=2020-11-10
-parse sec 17.849
+parse sec 17.669
 -------------------------------------------
 Australia| n_states 8
 Brazil| n_states 27
@@ -81,4 +80,4 @@ United_States|Wuhan Evacuee| last_date 2020-03-22
 United_Kingdom|Falkland Islands (Islas Malvinas)| last_date 2020-04-06
 United_Kingdom|UK| last_date 2020-03-12
 -------------------------------------------
-lapse sec 27.022
+lapse sec 25.31
