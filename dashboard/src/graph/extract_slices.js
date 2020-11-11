@@ -50,7 +50,7 @@ export default function extract_slices(
     let yvalue = item[sumFocus][yprop];
     if (yvalue < 0) {
       // !!@ 2020-08-17 United Kingdom -5,337
-      yvalue = 0;
+      // yvalue = 0;
     }
     stats_total += yvalue;
     if (index < slideIndex) {
