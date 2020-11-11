@@ -15,9 +15,9 @@ const World = ({ pie_data, opacity }) => {
   orderColors_pie(pieslices);
   // console.log('World items', pie_data);
   // console.log('World pieslices', pieslices);
-  // console.log('World barslices', barslices);
+  console.log('World barslices pie_data[1]', pie_data[1]);
   let other = '';
-  if (barslices.length > 0) {
+  if (barslices.length > 0 && pie_data[1].overFlow) {
     // other = barslices[0].label.split('\n')[0];
     const ent = barslices[0];
     const label = ent.x.substring(0, 1);

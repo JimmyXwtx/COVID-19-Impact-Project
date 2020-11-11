@@ -303,7 +303,11 @@ const Graph = () => {
   };
 
   const findFirstDate = () => {
-    console.log('findFirstDate countryFocus', countryFocus);
+    console.log(
+      'findFirstDate countryFocus',
+      countryFocus,
+      countrySelected.c_ref
+    );
     if (countryFocus !== top_label && metac.metaDict) {
       const ent = metac.metaDict[countryFocus];
       if (ent) {

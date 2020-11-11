@@ -104,5 +104,11 @@ export default function extract_slices(
   }
   const ostats_total = stats_total;
   stats_total = Number(stats_total).toLocaleString();
-  return { slices, stats_total, ostats_total, yprop };
+  return {
+    slices,
+    stats_total,
+    ostats_total,
+    yprop,
+    overFlow: slices.length < items.length,
+  };
 }
