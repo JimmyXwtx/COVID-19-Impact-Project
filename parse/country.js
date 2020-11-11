@@ -108,7 +108,7 @@ const stateCodeMaps = require('./states_hash.json');
 const { population_dict } = require('./population_dict');
 
 let pop_dict = population_dict();
-console.log('pop_dict n', Object.keys(pop_dict).length);
+// console.log('pop_dict n', Object.keys(pop_dict).length);
 
 function country_pop_ent(Country_Region, missing) {
   let pop_ent = pop_dict[Country_Region];
@@ -125,4 +125,5 @@ function country_pop_ent(Country_Region, missing) {
 module.exports = {
   rename_item,
   country_pop_ent,
+  pop_dict,
 };

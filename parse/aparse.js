@@ -9,7 +9,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const argv = require('yargs').argv;
 
-const { rename_item, country_pop_ent } = require('./country');
+const { rename_item, country_pop_ent, pop_dict } = require('./country');
 
 // const nlimit = 5;
 const nlimit = 0;
@@ -33,7 +33,8 @@ const report_lines = [];
 process_dir();
 
 function process_dir() {
-  // process_population_table();
+  report_log('pop_dict n ' + Object.keys(pop_dict).length);
+
   const nfiles = fs.readdirSync(daily_dir);
   let index = 0;
   let country_dict;
