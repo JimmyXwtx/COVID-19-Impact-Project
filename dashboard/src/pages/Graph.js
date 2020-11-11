@@ -463,7 +463,7 @@ const Graph = () => {
     setCountrySelected(country);
   };
 
-  const ui_top = metac ? countrySelected.c_ref : 'WorldWide';
+  const ui_top = countrySelected.c_ref ? countrySelected.c_ref : 'WorldWide';
 
   const selectWorldwide = () => {
     setDay({});
