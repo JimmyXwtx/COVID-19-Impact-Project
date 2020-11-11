@@ -1,9 +1,5 @@
 [
   {
-    "Country_Region": "",
-    "first_date": {}
-  },
-  {
     "Country_Region": "Afghanistan",
     "first_date": {
       "Cases": "2020-02-24",
@@ -1195,7 +1191,8 @@
   {
     "Country_Region": "Saint Lucia",
     "first_date": {
-      "Cases": "2020-03-14"
+      "Cases": "2020-03-14",
+      "Deaths": "2020-11-10"
     }
   },
   {
@@ -1477,6 +1474,12 @@
     "first_date": {
       "Cases": "2020-03-15",
       "Deaths": "2020-03-27"
+    }
+  },
+  {
+    "Country_Region": "Vanuatu",
+    "first_date": {
+      "Cases": "2020-11-10"
     }
   },
   {
