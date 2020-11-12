@@ -7,7 +7,9 @@
 const parse = require('csv-parse/lib/sync');
 const fs = require('fs-extra');
 
-const population_table_path = './UID_ISO_FIPS_LookUp_Table.csv';
+// const population_table_path = './UID_ISO_FIPS_LookUp_Table.csv';
+const population_table_path =
+  '../COVID-19-JHU/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv';
 const population_json_path = './population.json';
 
 module.exports = {
@@ -36,6 +38,7 @@ function population_dict() {
 
 function process_population_table() {
   const input = fs.readFileSync(population_table_path);
+  // const input = (fs.readFileSync(population_table_path) + '').replace(/\r?\n/, '\n');
   const records = parse(input, {
     columns: true,
     skip_empty_lines: true,
@@ -46,6 +49,7 @@ function process_population_table() {
     if (cname) rent.Country_Region = cname;
 
     rent.Population = parseFloat(rent.Population ? rent.Population : 0);
+
     let cent = pop_dict[rent.Country_Region];
     if (!cent) {
       cent = { Population: rent.Population, states: {} };
