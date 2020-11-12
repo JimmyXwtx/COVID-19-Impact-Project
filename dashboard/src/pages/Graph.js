@@ -445,7 +445,7 @@ const Graph = () => {
   const to_active = sumFocus === 'totals';
   const da_active = sumFocus === 'daily';
   const uisum = sumFocus === 'totals' ? 'Total' : 'Daily';
-  const upto_on = sumFocus === 'totals' ? 'Total to' : 'On';
+  const upto_on = sumFocus === 'totals' ? 'total to' : 'on';
 
   const updateSlider = (key) => {
     // console.log('updateSlider key', key);
@@ -484,7 +484,7 @@ const Graph = () => {
       <div>
         {/* {regionOptions && ( */}
         <div>
-          <button onClick={clickPer100k}>{per100k ? '-' : '+'} Per 100K</button>
+          <button onClick={clickPer100k}>{per100k ? '-' : ''} Per 100K</button>
           <button onClick={findFirstDate}>First {uiprop}</button>
           <button onClick={findLastestDate}>Latest</button>
           {countrySelected.c_ref && (
@@ -511,7 +511,7 @@ const Graph = () => {
     const stats_total = pieData[0].stats_total;
     return (
       <Header as="h3">
-        {ui_top} {stats_total} {uiprop_s} {upto_on} {dateFocusShort}
+        {ui_top}: {stats_total} {uiprop_s} {upto_on} {dateFocusShort}
       </Header>
     );
   };
@@ -628,7 +628,7 @@ const Graph = () => {
         {/* {regionOptions && (
           <div>
             <button onClick={clickPer100k}>
-              {per100k ? '-' : '+'} Per 100K
+              {per100k ? '-' : ''} Per 100K
             </button>
             <button onClick={findFirstDate}>First {uiprop}</button>
             <button onClick={findLastestDate}>Latest</button>

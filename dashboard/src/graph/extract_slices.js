@@ -7,7 +7,7 @@
 
 // Need two distinct labesl
 const upper_label = '✱▲'; // ('Greater'); ▲
-const lower_label = '✱'; // 'Less'; ▼
+const lower_label = '✱▼'; // 'Less'; ▼
 
 // const upper_label = '✱'; // ('Greater'); ▲
 // const lower_label = '✱'; // 'Less'; ▼
