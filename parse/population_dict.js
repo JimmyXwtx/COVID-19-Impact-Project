@@ -131,5 +131,5 @@ if (!module.parent) {
   process_population_table();
 
   const lapse_time = Date.now() - start_time;
-  console.log('lapse sec', lapse_time / 1000);
+  console.log(population_json_path + ' lapse sec', lapse_time / 1000);
 }
