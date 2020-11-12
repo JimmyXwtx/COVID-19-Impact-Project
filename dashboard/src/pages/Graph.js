@@ -487,6 +487,10 @@ const Graph = () => {
           <button onClick={clickPer100k}>{per100k ? '-' : '+'} Per 100K</button>
           <button onClick={findFirstDate}>First {uiprop}</button>
           <button onClick={findLastestDate}>Latest</button>
+          {countrySelected.c_ref && (
+            // <button onClick={selectWorldwide}>&larr; Worldwide</button>
+            <button onClick={selectWorldwide}>Worldwide</button>
+          )}
         </div>
         {/* )} */}
         <CountryDataTable
@@ -507,11 +511,6 @@ const Graph = () => {
     const stats_total = pieData[0].stats_total;
     return (
       <Header as="h3">
-        {countrySelected.c_ref && (
-          // <button onClick={selectWorldwide}>&larr; Worldwide</button>
-          <button onClick={selectWorldwide}>&lt;-Worldwide-]</button>
-        )}
-        &nbsp;
         {ui_top} {stats_total} {uiprop_s} {upto_on} {dateFocusShort}
       </Header>
     );
