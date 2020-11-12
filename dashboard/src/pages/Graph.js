@@ -37,39 +37,35 @@ function ui_key(uname) {
 
 const Graph = () => {
   const [loaderActive, setLoaderActive] = useState(true);
-  const [propFocus, setPropFocus] = useLocalStorage('key-propFocus', 'Deaths');
-  const [sumFocus, setSumFocus] = useLocalStorage('key-sumFocus', 'totals');
-  // const [dateFocus, setDateFocus] = useLocalStorage('key-dateFocus', '');
-  const [dateFocus, setDateFocus] = useState();
-  // const [countryFocus, setCountryFocus] = useLocalStorage(
-  //   'key-countryFocus',
-  //   top_label
-  // );
+  const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');
+  const [sumFocus, setSumFocus] = useLocalStorage('co-sumFocus', 'totals');
   const [
     focusCountries,
     setFocusCountries,
-  ] = useLocalStorage('key-focusCountries', [
+  ] = useLocalStorage('co-focusCountries', [
     'China',
     'United States',
     'Jamaica',
   ]);
   const [focusIndex, setFocusIndex] = useState(-1);
   const [countryFocus, setCountryFocus] = useState(top_label);
-  const [dateList, setDateList] = useState();
-  const [countryList, setCountryList] = useState();
   const [playingState, setPlayingState] = useState(false);
   const [playIndex, setPlayIndex] = useState(-1);
   const [playDelay, setPlayDelay] = useState(playDelayInit);
-  const [pieData, setPieData] = useState();
-  const [dateStats, setDateStats] = useState({ items: [] });
-  const [summaryDict, setSummaryDict] = useState();
-  const [bottomTab, setBottomTab] = useLocalStorage('key-source', 'places');
-  // const [bottomTab, setBottomTab] = useState('places');
-  const [dateIndex, setDateIndex] = useLocalStorage('key-dataIndex', 0);
-  const [sortedItems, setSortedItems] = useState([]);
+  const [bottomTab, setBottomTab] = useLocalStorage('co-source', 'places');
+  const [dateIndex, setDateIndex] = useLocalStorage('co-dataIndex', 0);
+  const [regionOptions, setRegionOptions] = useLocalStorage('co-region');
+  const [per100k, setPer100k] = useLocalStorage('co-per100k');
 
-  // dateStats = { date, items }
-  // items [{
+  const [dateFocus, setDateFocus] = useState();
+  const [countrySelected, setCountrySelected] = useState({});
+  const [metac, setMetac] = useState({});
+  const [day, setDay] = useState({});
+  const [sortedItems, setSortedItems] = useState();
+  const [pieData, setPieData] = useState();
+
+  // metac = {
+  //   "c_ref": "US"
   //   totals: {
   //    "Cases": 1486757,
   //    "Deaths": 89562,
@@ -77,79 +73,127 @@ const Graph = () => {
   //   daily: {
   //    "Cases": 1486757,
   //    "Deaths": 89562,
-  //   },
-  //   "Country_Region": "US"
-  // },]
+  //   }
+
+  // console.log('countrySelected', countrySelected);
+
+  const dataPrefix = (countrySelected) => {
+    let prefix = '';
+    if (countrySelected.c_ref) {
+      prefix = countrySelected.c_ref;
+      prefix = prefix.replace(/ /g, '_').replace(/,/g, '');
+    }
+    prefix = prefix ? 'c_subs/' + prefix + '/' : '';
+    return prefix;
+  };
 
   useEffect(() => {
     // console.log('useEffect dates.json');
-    fetchData('./stats/dates.json', (data) => {
-      const list = data.map((uname) => ui_key(uname));
-      setDateList(list);
-    });
-  }, []);
+    const prefix = dataPrefix(countrySelected);
+    fetchData('./c_data/' + prefix + 'c_meta.json', (meta) => {
+      let dateList;
+      let metaDict;
+      let countryList;
+      const process_dates = (dates) => {
+        if (!dates) dates = [];
+        dateList = dates.map((uname) => ui_key(uname));
+      };
 
-  useEffect(() => {
-    // console.log('useEffect summary.json');
-    fetchData('./stats/summary.json', (data) => {
-      const dict = {};
-      const list = data.map((item) => {
-        const uname = item.Country_Region;
-        dict[uname] = item;
-        return ui_key(uname);
-      });
-      const forui = ui_key(top_label);
-      const nlist = [forui].concat(list);
-      setCountryList(nlist);
-      setSummaryDict(dict);
-    });
-  }, []);
-
-  useEffect(() => {
-    // console.log(
-    //   'useEffect dateFocus',
-    //   dateFocus,
-    //   'dateStats',
-    //   dateStats
-    // );
-    if (!dateStats.isLoading) {
-      if (dateFocus && dateStats.date !== dateFocus) {
-        // setDateStats({ date: dateFocus, items: [] });
-        dateStats.isLoading = true;
-        fetchData('./stats/country/' + dateFocus + '.json', (items) => {
-          if (!items) items = [];
-          setDateStats({ date: dateFocus, items });
+      // Odd: react complains of missing dependency if process_regions
+      // is defined outside useEffect
+      const process_regions = (regions) => {
+        if (!regions) regions = [];
+        metaDict = {};
+        const list = regions.map((item) => {
+          const uname = item.c_ref;
+          metaDict[uname] = item;
+          return ui_key(uname);
         });
-      }
-    }
-  }, [dateFocus, dateStats]);
+        const forui = ui_key(top_label);
+        countryList = [forui].concat(list);
+      };
+
+      if (!meta) meta = {};
+      process_dates(meta.c_dates);
+      process_regions(meta.c_regions);
+
+      console.log('fetchData metac set c_regions n', meta.c_regions.length);
+      // console.log('fetchData metac metaDict', metaDict);
+      setMetac({
+        countrySelected: countrySelected,
+        dateList,
+        metaDict,
+        countryList,
+      });
+    });
+  }, [countrySelected]);
 
   useEffect(() => {
-    // console.log('useEffect dateStats.items', dateStats.items);
-    // console.log('useEffect sumFocus', sumFocus);
-    // console.log('useEffect propFocus', propFocus);
+    // console.log('useEffect c_days dateFocus', dateFocus, 'metac ', metac);
+    if (
+      !day.isLoading &&
+      metac.metaDict &&
+      (!dateFocus || day.dateFocus !== dateFocus)
+    ) {
+      day.isLoading = true;
+      const prefix = dataPrefix(countrySelected);
+      fetchData(
+        './c_data/' + prefix + 'c_days/' + dateFocus + '.json',
+        (items) => {
+          if (!items) items = [];
+          console.log(
+            'fetchData c_days using metaDict n',
+            Object.keys(metac.metaDict).length
+          );
+          items.forEach((item) => {
+            const ent = metac.metaDict[item.c_ref];
+            if (ent) {
+              item.c_people = ent.c_people;
+              item.n_states = ent.n_states;
+            }
+          });
+          setDay({ items, dateFocus, isLoading: false });
+        }
+      );
+    }
+  }, [countrySelected, day, dateFocus, metac.metaDict, day.dateFocus, metac]);
+
+  useEffect(() => {
+    // console.log('useEffect day.items', day.items);
+    // console.log('useEffect sorted_items', 'day', day, 'dateFocus', dateFocus);
+    console.log(
+      'useEffect sorted_items dateFocus',
+      dateFocus,
+      countrySelected.c_ref,
+      !dateFocus || !day.items || day.isLoading
+    );
+    if (!dateFocus || !day.items || day.isLoading) return;
     const sortFunc = (item1, item2) => {
       const rank = item2[sumFocus][propFocus] - item1[sumFocus][propFocus];
-      if (rank === 0)
-        return item1.Country_Region.localeCompare(item2.Country_Region);
+      if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
       return rank;
     };
-    const items = dateStats.items
+    const sorted_items = day.items
       .concat()
       .sort((item1, item2) => sortFunc(item1, item2));
-    let slideIndex = items.findIndex(
-      (item) => item.Country_Region === countryFocus
+    let slideIndex = sorted_items.findIndex(
+      (item) => item.c_ref === countryFocus
     );
     if (slideIndex < 0) slideIndex = 0;
     //   { slices, stats_total, yprop };
     const percents = 1;
     const spec = { sumFocus, propFocus };
     // console.log('spec', spec);
-    const pie0 = extract_slices(items, spec, nslice, percents, slideIndex);
-    const pie1 = extract_slices(items, spec, nslice, 0, slideIndex);
-    setPieData([pie0, pie1]);
+    const pie0 = extract_slices(
+      sorted_items,
+      spec,
+      nslice,
+      percents,
+      slideIndex
+    );
+    const pie1 = extract_slices(sorted_items, spec, nslice, 0, slideIndex);
     const total = pie0.ostats_total;
-    items.forEach((item) => {
+    sorted_items.forEach((item) => {
       let yvalue = item[sumFocus][propFocus];
       item.propValue = yvalue;
       if (yvalue < 0) {
@@ -158,27 +202,29 @@ const Graph = () => {
       }
       item.propPercent = total ? yvalue / total : 0;
     });
-    setSortedItems(items);
-  }, [dateStats.items, propFocus, countryFocus, sumFocus]);
+    setPieData([pie0, pie1]);
+    setSortedItems(sorted_items);
+    // setMetac({ ...metac, sorted_items, pieData });
+  }, [countrySelected, day, propFocus, countryFocus, sumFocus, dateFocus]);
 
   useInterval(
     () => {
       // console.log('useInterval playIndex', playIndex, 'isLoading', isLoading);
-      if (!dateList || dateStats.isLoading) return;
+      if (!metac.dateList || day.isLoading) return;
       if (playIndex < 0) {
         return;
       }
       let ndelay = playDelayInit;
       if (!ndelay) return;
       let nplayIndex = playIndex + 1;
-      if (nplayIndex >= dateList.length) {
+      if (nplayIndex >= metac.dateList.length) {
         nplayIndex = 0;
-      } else if (nplayIndex === dateList.length - 1) {
+      } else if (nplayIndex === metac.dateList.length - 1) {
         ndelay = playEndDelayInit;
       }
       setPlayDelay(ndelay);
       setPlayIndex(nplayIndex);
-      setDateFocus(dateList[nplayIndex].value);
+      setDateFocus(metac.dateList[nplayIndex].value);
       setDateIndex(nplayIndex);
     },
     playingState ? playDelay * 1000 : null
@@ -186,18 +232,24 @@ const Graph = () => {
 
   // console.log('Graph countryFocus', countryFocus);
 
-  if (!pieData) {
-    return <Loader active={loaderActive} inline></Loader>;
-  }
-
   const setDateIndexFocus = (value) => {
-    const index = dateList.findIndex((item) => item.value === value);
+    const index = metac.dateList.findIndex((item) => item.value === value);
     setDateIndex(index);
     setDateFocus(value);
   };
 
-  if (!dateFocus && dateList && dateList.length) {
-    setDateIndexFocus(dateList[dateList.length - 1].value);
+  if (!dateFocus && metac.dateList && metac.dateList.length) {
+    console.log(
+      'dateFocus',
+      dateFocus,
+      'metac.dateList.length',
+      metac.dateList.length
+    );
+    setDateIndexFocus(metac.dateList[metac.dateList.length - 1].value);
+  }
+
+  if (!pieData) {
+    return <Loader active={loaderActive} inline></Loader>;
   }
 
   if (sortedItems.length > 0 && loaderActive) {
@@ -206,7 +258,9 @@ const Graph = () => {
 
   const playAction = () => {
     if (!playingState) {
-      const nindex = dateList.findIndex((item) => item.value === dateFocus);
+      const nindex = metac.dateList.findIndex(
+        (item) => item.value === dateFocus
+      );
       setPlayIndex(nindex);
       setPlayDelay(playDelayInit);
       setPlayingState(true);
@@ -228,15 +282,15 @@ const Graph = () => {
   };
 
   const stepAction = (delta) => {
-    if (!dateList) return;
-    let index = dateList.findIndex((item) => item.value === dateFocus);
+    if (!metac.dateList) return;
+    let index = metac.dateList.findIndex((item) => item.value === dateFocus);
     index += delta;
-    if (index >= dateList.length) {
+    if (index >= metac.dateList.length) {
       index = 0;
     } else if (index < 0) {
-      index = dateList.length - 1;
+      index = metac.dateList.length - 1;
     }
-    setDateIndexFocus(dateList[index].value);
+    setDateIndexFocus(metac.dateList[index].value);
     pauseAction();
   };
 
@@ -249,24 +303,36 @@ const Graph = () => {
   };
 
   const findFirstDate = () => {
-    console.log('findFirstDate countryFocus', countryFocus);
-    if (countryFocus !== top_label && summaryDict) {
-      const ent = summaryDict[countryFocus];
+    console.log(
+      'findFirstDate countryFocus',
+      countryFocus,
+      countrySelected.c_ref
+    );
+    if (countryFocus !== top_label && metac.metaDict) {
+      const ent = metac.metaDict[countryFocus];
       if (ent) {
-        const ndate = ent.first_date[propFocus];
+        const ndate = ent.c_first[propFocus];
         if (ndate) {
           setDateIndexFocus(ndate);
         }
       }
-    } else if (dateList && dateList.length) {
-      const ndate = dateList[0].value;
-      setDateIndexFocus(ndate);
+    } else if (metac.dateList && metac.dateList.length) {
+      let fdate = '9999-99-99';
+      for (let prop in metac.metaDict) {
+        const cent = metac.metaDict[prop];
+        const ndate = cent.c_first[propFocus];
+        if (ndate < fdate) {
+          fdate = ndate;
+        }
+      }
+      // const ndate = metac.dateList[0].value;
+      setDateIndexFocus(fdate);
     }
   };
 
   const findLastestDate = () => {
-    if (dateList && dateList.length) {
-      const ndate = dateList[dateList.length - 1].value;
+    if (metac.dateList && metac.dateList.length) {
+      const ndate = metac.dateList[metac.dateList.length - 1].value;
       setDateIndexFocus(ndate);
     }
   };
@@ -280,7 +346,7 @@ const Graph = () => {
         onChange={(param, data) => {
           setDateIndexFocus(data.value);
         }}
-        options={dateList || []}
+        options={metac.dateList || []}
       />
     );
   };
@@ -309,7 +375,7 @@ const Graph = () => {
             // setFocusCountries([data.value, focusCountries[0], focusCountries[1]]);
           }
         }}
-        options={countryList || []}
+        options={metac.countryList || []}
       />
     );
   };
@@ -379,51 +445,94 @@ const Graph = () => {
   const to_active = sumFocus === 'totals';
   const da_active = sumFocus === 'daily';
   const uisum = sumFocus === 'totals' ? 'Total' : 'Daily';
+  const upto_on = sumFocus === 'totals' ? 'total to' : 'on';
 
   const updateSlider = (key) => {
     // console.log('updateSlider key', key);
-    setDateFocus(dateList[key].value);
+    setDateFocus(metac.dateList[key].value);
   };
 
   const graphOpacity = bottomTab === 'softbody' ? 0.6 : 1.0;
 
   const dateFocusShort = dateFocus && dateFocus.substring(5);
 
+  const selectCountry = (country) => {
+    console.log('selectCountry country', country);
+    setDay({});
+    setMetac({});
+    setCountrySelected(country);
+  };
+
+  const ui_top = countrySelected.c_ref ? countrySelected.c_ref : 'WorldWide';
+
+  const selectWorldwide = () => {
+    setDay({});
+    setMetac({});
+    setCountrySelected({});
+  };
+
+  const regionPlusClick = () => {
+    setRegionOptions(!regionOptions);
+  };
+
+  const clickPer100k = () => {
+    setPer100k(!per100k);
+  };
+
+  const RegionTab = () => {
+    return (
+      <div>
+        {/* {regionOptions && ( */}
+        <div>
+          <button onClick={clickPer100k}>{per100k ? '-' : ''} Per 100K</button>
+          <button onClick={findFirstDate}>First {uiprop}</button>
+          <button onClick={findLastestDate}>Latest</button>
+          {countrySelected.c_ref && (
+            // <button onClick={selectWorldwide}>&larr; Worldwide</button>
+            <button onClick={selectWorldwide}>Worldwide</button>
+          )}
+        </div>
+        {/* )} */}
+        <CountryDataTable
+          items={sortedItems || []}
+          propTitle={uisum + ' ' + uiprop_s}
+          pie_data={pieData}
+          selectCountry={selectCountry}
+          parentCountry={countrySelected.c_ref}
+          regionPlusClick={regionPlusClick}
+          regionOptions={regionOptions}
+          per100k={per100k}
+        />
+      </div>
+    );
+  };
+
+  const HeadStats = () => {
+    const stats_total = pieData[0].stats_total;
+    return (
+      <Header as="h3">
+        {ui_top}: {stats_total} {uiprop_s} {upto_on} {dateFocusShort}
+      </Header>
+    );
+  };
+
   return (
     <>
       <Container style={{ marginTop: '1rem' }}>
-        {/* <Dimmer active={loaderActive} inverted>
-          <Loader>Loading</Loader>
-        </Dimmer> */}
         <Loader active={loaderActive} inline></Loader>
-        <Header as="h3">
-          Worldwide {uisum} {uiprop_s}: {pieData[0].stats_total} on{' '}
-          {dateFocusShort}
-        </Header>
-        {/* {bottomTab !== 'softbody' && <World pie_data={pieData}></World>} */}
+        <HeadStats />
         <World pie_data={pieData} opacity={graphOpacity} />
+        <HeadStats />
         <Grid>
-          <Grid.Row
-            style={{
-              padding: '0 16px',
-            }}
-          >
+          <Grid.Row style={{ padding: '0 16px' }}>
             <DateSlider
               dateIndex={dateIndex}
-              dateListLength={(dateList || []).length}
+              dateListLength={(metac.dateList || []).length}
               updateSlider={updateSlider}
             />
           </Grid.Row>
           <Grid.Row>
             <StyledControlRow>
-              <Button.Group>
-                <Button size="mini" onClick={selectTotals} active={to_active}>
-                  Total
-                </Button>
-                <Button size="mini" onClick={selectDaily} active={da_active}>
-                  Daily
-                </Button>
-              </Button.Group>
               <Button.Group>
                 <Button
                   size="mini"
@@ -438,6 +547,14 @@ const Graph = () => {
                   active={dactive}
                 >
                   Deaths
+                </Button>
+              </Button.Group>
+              <Button.Group>
+                <Button size="mini" onClick={selectTotals} active={to_active}>
+                  Total:
+                </Button>
+                <Button size="mini" onClick={selectDaily} active={da_active}>
+                  On date:
                 </Button>
               </Button.Group>
               <div>
@@ -463,12 +580,29 @@ const Graph = () => {
       </Container>
       <StyledDetailsContainer>
         <Menu tabular>
+          {/* <Menu.Item
+            name="places"
+            active={true}
+            content={regionOptions ? '-' : '+'}
+            onClick={regionPlusClick}
+            style={{ fontWeight: 'bold' }}
+          /> */}
           <Menu.Item
             name="places"
             active={bottomTab === 'places'}
             content="Regions"
             onClick={handleBottomTab}
           />
+          {/* <Menu.Item
+            name="places"
+            active={bottomTab === 'places'}
+            onClick={handleBottomTab}
+          >
+            <button onClick={regionPlusClick}>
+              {regionOptions ? '-' : '+'}
+            </button>
+            &nbsp; Regions
+          </Menu.Item> */}
           <Menu.Item
             name="purpose"
             active={bottomTab === 'purpose'}
@@ -491,13 +625,16 @@ const Graph = () => {
             onClick={handleBottomTab}
           />
         </Menu>
-        {bottomTab === 'places' && (
-          <CountryDataTable
-            items={sortedItems}
-            propTitle={uisum + ' ' + uiprop_s}
-            pie_data={pieData}
-          />
-        )}
+        {/* {regionOptions && (
+          <div>
+            <button onClick={clickPer100k}>
+              {per100k ? '-' : ''} Per 100K
+            </button>
+            <button onClick={findFirstDate}>First {uiprop}</button>
+            <button onClick={findLastestDate}>Latest</button>
+          </div>
+        )} */}
+        {bottomTab === 'places' && <RegionTab />}
         {bottomTab === 'purpose' && <AboutTab />}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
@@ -536,3 +673,9 @@ const StyledControlRow = styled.div`
 `;
 
 export default Graph;
+
+// <Button.Group>
+//   <Button size="mini" onClick={selectWorldwide}>
+//     &larr; Worldwide
+//   </Button>
+// </Button.Group>

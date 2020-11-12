@@ -29,6 +29,15 @@ This command generates static content into the `build` directory and can be serv
 ### Deployment
 
 ```
+# Build and publish docus to epvisual.com
+bin/doc-build-pub.sh
+
+open https://epvisual.com/COVID-19-Impact/Project
+
+```
+
+```
+# pub to github.io --retired--
 GIT_USER=jhtep yarn deploy
 
 open https://ep-visual-design.github.io/COVID-19-Impact/

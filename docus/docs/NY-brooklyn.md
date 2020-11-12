@@ -13,6 +13,7 @@ https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-case
 
 | Date  | Cases | Per 100,000 | Deaths | Per 100,000 |
 | ----- | ----- | ----------- | ------ | ----------- |
+| 11/04 | 2,828 | 2,967       | 196    | 206         |
 | 09/17 | 2,526 | 2,650       | 195    | 205         |
 | 09/08 | 2,498 | 2,621       |        |             |
 | 08/24 | 2,452 | 2,573       |        |             |

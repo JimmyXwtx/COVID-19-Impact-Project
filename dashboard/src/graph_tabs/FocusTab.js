@@ -16,7 +16,7 @@ const FocusTab = (props) => {
     focusIndex,
   } = props.actions;
 
-  const shortcuts = [1, 0];
+  const shortcuts = [1, 0, 2];
 
   return (
     <StyledDiv>

@@ -1,10 +1,9 @@
+import React from 'react';
 import { VictoryBar, VictoryPie } from 'victory';
 import { colorfor, colors, orderColors_pie } from './colors';
-
-import React from 'react';
 import material from './material';
 
-// const x = item.Country_Region;
+// const x = item.c_ref;
 // const y = item.Deaths;
 // const label = x + '\n' + item.Deaths;
 // pie_data.push({ x, y, label });
@@ -15,10 +14,10 @@ const World = ({ pie_data, opacity }) => {
   const barslices = pie_data[1].slices.concat().reverse();
   orderColors_pie(pieslices);
   // console.log('World items', pie_data);
-  console.log('World pieslices', pieslices);
-  console.log('World barslices', barslices);
+  // console.log('World pieslices', pieslices);
+  // console.log('World barslices pie_data[1]', pie_data[1]);
   let other = '';
-  if (barslices.length > 0) {
+  if (barslices.length > 0 && pie_data[1].overFlow) {
     // other = barslices[0].label.split('\n')[0];
     const ent = barslices[0];
     const label = ent.x.substring(0, 1);

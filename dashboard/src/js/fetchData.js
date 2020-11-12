@@ -11,8 +11,9 @@ export default function fetchData(dpath, dataFunc) {
   // console.log('loc', window.location.href);
   // Need to get paths to work on server
   // Added slash after audit fixes
-  dpath = window.location.href + '/' + dpath;
-  fetch(dpath)
+  const fpath = window.location.href + '/' + dpath;
+  const start_time = Date.now();
+  fetch(fpath)
     .then((response) => {
       // console.log('response', response);
       return response.json();
@@ -20,6 +21,8 @@ export default function fetchData(dpath, dataFunc) {
     .then(
       (data) => {
         // console.log('dpath', dpath, 'data', data);
+        const lapse = Date.now() - start_time;
+        console.log('fetchData dpath', dpath, 'secs', lapse / 1000);
         dataFunc(data);
       },
       // Note 1

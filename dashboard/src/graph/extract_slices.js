@@ -5,8 +5,12 @@
 // const upper_label = '▲'; // ('Greater'); ▲
 // const lower_label = '▼'; // 'Less'; ▼
 
+// Need two distinct labesl
 const upper_label = '✱▲'; // ('Greater'); ▲
 const lower_label = '✱▼'; // 'Less'; ▼
+
+// const upper_label = '✱'; // ('Greater'); ▲
+// const lower_label = '✱'; // 'Less'; ▼
 
 function percentFormat(val, stats_total) {
   if (!stats_total) return '';
@@ -46,14 +50,14 @@ export default function extract_slices(
     let yvalue = item[sumFocus][yprop];
     if (yvalue < 0) {
       // !!@ 2020-08-17 United Kingdom -5,337
-      yvalue = 0;
+      // yvalue = 0;
     }
     stats_total += yvalue;
     if (index < slideIndex) {
       upper_stat += yvalue;
       upper_count += 1;
     } else if (index < slideIndex + nslice) {
-      const x = item.Country_Region;
+      const x = item.c_ref;
       const y = yvalue;
       const label = x + '\n' + countFormat(y);
       slices.push({ x, y, label });
@@ -101,5 +105,11 @@ export default function extract_slices(
   }
   const ostats_total = stats_total;
   stats_total = Number(stats_total).toLocaleString();
-  return { slices, stats_total, ostats_total, yprop };
+  return {
+    slices,
+    stats_total,
+    ostats_total,
+    yprop,
+    overFlow: slices.length < items.length,
+  };
 }

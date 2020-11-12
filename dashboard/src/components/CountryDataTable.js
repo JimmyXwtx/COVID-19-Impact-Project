@@ -1,6 +1,6 @@
 import React from 'react';
 import NumberFormat from 'react-number-format';
-import slug from 'slug';
+// import slug from 'slug';
 import styled from 'styled-components';
 import FlagIcon from '../components/FlagIcon';
 import { colorfor } from '../graph/colors';
@@ -21,29 +21,63 @@ function percentFormat(num) {
   });
 }
 
+const regionRow = (country, index, selectCountry, parentCountry) => {
+  const { c_ref } = country;
+  const countryCode = parentCountry ? null : getCountryCode(c_ref);
+  if (country.n_states)
+    return (
+      <button
+        onClick={() => {
+          console.log('CountryDataTable index', index, 'country', country);
+          if (selectCountry) selectCountry(country);
+        }}
+      >
+        {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
+        {c_ref}
+      </button>
+    );
+  else
+    return (
+      <>
+        {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
+        {c_ref}
+      </>
+    );
+};
+
 const Rows = (props) => {
-  const { items, nslices } = props;
+  const { items, nslices, selectCountry, parentCountry, per100k } = props;
   const rows = items.map((country, index) => {
-    const { Country_Region, propValue, propPercent } = country;
-    const slugKey = `tr-${slug(Country_Region).toLowerCase()}`;
-    const countryCode = getCountryCode(Country_Region);
+    let { propValue, propPercent } = country;
+    let valid = true;
+    if (per100k) {
+      if (country.c_people) {
+        // propValue = (propValue * (100000 / country.c_people)).toPrecision(2);
+        propValue = propValue * (100000 / country.c_people);
+      } else {
+        valid = false;
+      }
+    }
+    // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
+    const slugKey = `tr-country-${index}`;
     const style = {
       backgroundColor:
         index < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
     };
-
     return (
       <tr key={slugKey}>
         <td className="region">
-          {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
-          {Country_Region}
+          {regionRow(country, index, selectCountry, parentCountry)}
         </td>
         <td className="value">
-          <NumberFormat
-            value={propValue}
-            displayType={'text'}
-            thousandSeparator={true}
-          />
+          {valid && (
+            <NumberFormat
+              value={propValue}
+              displayType={'text'}
+              thousandSeparator={true}
+              decimalScale={2}
+            />
+          )}
         </td>
         <td className="percent">
           <StyledPercentData>
@@ -58,9 +92,18 @@ const Rows = (props) => {
 };
 
 const CountryDataTable = (props) => {
-  const { items, propTitle, pie_data } = props;
+  const {
+    items,
+    propTitle,
+    pie_data,
+    selectCountry,
+    parentCountry,
+    // regionPlusClick,
+    // regionOptions,
+    per100k,
+  } = props;
   const pieslices = pie_data[0].slices;
-  console.log('pieslices.length', pieslices.length);
+  // console.log('pieslices.length', pieslices.length);
   // const { items } = props;
   // console.log('CountryDataTable items', items);
   return (
@@ -68,13 +111,26 @@ const CountryDataTable = (props) => {
       <thead>
         <tr>
           {/* <th width="60%">Region</th> */}
-          <th>Region</th>
-          <th>{propTitle}</th>
+          <th>
+            {/* <button onClick={regionPlusClick}>
+              {regionOptions ? '-' : '+'}
+            </button>{' '} */}
+            Region
+          </th>
+          <th>
+            {propTitle} {per100k ? ' per 100k' : null}
+          </th>
           <th width="10%">Percent</th>
         </tr>
       </thead>
       <tbody>
-        <Rows items={items} nslices={pieslices.length} />
+        <Rows
+          items={items}
+          nslices={pieslices.length}
+          selectCountry={selectCountry}
+          parentCountry={parentCountry}
+          per100k={per100k}
+        />
       </tbody>
     </StyledCountryDataTable>
   );

@@ -8,4 +8,5 @@ cd ../COVID-19-JHU/
 git pull
 
 cd ../parse
+node population_dict.js 
 node aparse.js --silent

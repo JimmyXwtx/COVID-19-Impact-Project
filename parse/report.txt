@@ -1,0 +1,84 @@
+pop_dict n 191
+pop_missing 36
+[
+  "Aruba",
+  "Cape Verde",
+  "Cayman Islands",
+  "Channel Islands",
+  "Cruise Ship",
+  "Curacao",
+  "Czech Republic",
+  "East Timor",
+  "Faroe Islands",
+  "French Guiana",
+  "Gibraltar",
+  "Greenland",
+  "Guadeloupe",
+  "Guam",
+  "Guernsey",
+  "Hong Kong SAR",
+  "Ivory Coast",
+  "Jersey",
+  "Macao SAR",
+  "Macau",
+  "Martinique",
+  "Mayotte",
+  "North Ireland",
+  "Others",
+  "Palestine",
+  "Republic of Ireland",
+  "Republic of Korea",
+  "Republic of Moldova",
+  "Reunion",
+  "Russian Federation",
+  "Saint Barthelemy",
+  "Saint Martin",
+  "St. Martin",
+  "Taipei and environs",
+  "Vatican City",
+  "occupied Palestinian territory"
+]
+Parsed fromDate=2020-01-22 toDate=2020-11-11
+parse sec 15.169
+-------------------------------------------
+Australia| n_states 8
+Brazil| n_states 27
+Canada| n_states 14
+Chile| n_states 17
+China| n_states 33
+Colombia| n_states 34
+Denmark| n_states 2
+France| n_states 11
+Germany| n_states 17
+India| n_states 37
+Italy| n_states 21
+Japan| n_states 49
+Mexico| n_states 31
+Netherlands| n_states 17
+Pakistan| n_states 7
+Peru| n_states 26
+Russia| n_states 83
+Spain| n_states 20
+Sweden| n_states 21
+Ukraine| n_states 27
+United Kingdom| n_states 15
+United States| n_states 57
+-------------------------------------------
+Australia|External territories| last_date 2020-03-22
+Australia|From Diamond Princess| last_date 2020-03-21
+Australia|Jervis Bay Territory| last_date 2020-03-22
+Brazil|Unknown| last_date 2020-06-07
+Canada| Montreal, QC| last_date 2020-03-08
+Canada|Calgary, Alberta| last_date 2020-03-08
+Canada|Edmonton, Alberta| last_date 2020-03-08
+Canada|London, ON| last_date 2020-03-08
+Canada|Toronto, ON| last_date 2020-03-08
+Germany|Bavaria| last_date 2020-01-31
+India|Dadar Nagar Haveli| last_date 2020-06-10
+United_States|American Samoa| last_date 2020-03-30
+United_States|US| last_date 2020-03-21
+United_States|Wuhan Evacuee| last_date 2020-03-22
+United_Kingdom|Falkland Islands (Islas Malvinas)| last_date 2020-04-06
+United_Kingdom|UK| last_date 2020-03-12
+-------------------------------------------
+lapse sec 22.461
