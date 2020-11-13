@@ -38,10 +38,11 @@ pop_missing 36
   "Vatican City",
   "occupied Palestinian territory"
 ]
-Parsed fromDate=2020-01-22 toDate=2020-11-11
-parse sec 11.047
+Parsed fromDate=2020-01-22 toDate=2020-11-12
+parse sec 10.498
 -------------------------------------------
 Australia| n_states 8
+Belgium| n_states 12
 Brazil| n_states 27
 Canada| n_states 14
 Chile| n_states 17
@@ -53,7 +54,7 @@ Germany| n_states 17
 India| n_states 37
 Italy| n_states 21
 Japan| n_states 49
-Mexico| n_states 31
+Mexico| n_states 32
 Netherlands| n_states 17
 Pakistan| n_states 7
 Peru| n_states 26
@@ -81,4 +82,4 @@ United_States|Wuhan Evacuee| last_date 2020-03-22
 United_Kingdom|Falkland Islands (Islas Malvinas)| last_date 2020-04-06
 United_Kingdom|UK| last_date 2020-03-12
 -------------------------------------------
-lapse sec 12.565
+lapse sec 12.283
