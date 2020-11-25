@@ -25,17 +25,18 @@ Visualization of COVID-19 statistics from
 
 - ./dashboard : Browser app to view graphs of daily data
 
-- ./dashboard/public/stats : JSON stats from COVID-19-JHU site as static files
+- ./dashboard/public/c_data/ : csv data from COVID-19-JHU converted to json
 
-  - ./country/2020-01-22.json - daily summary stats by country
+  - ... /c_data/c_meta.json -- per country info and populations
+  - ... /c_data/c_days/2020-01-22.json -- daily summary stats by country
   - ...
-  - ./country/2020-04-30.json
+  - ... /c_data/c_days/2020-11-11.json
 
 - ./docus : Docusaurus based documentation
 
 - ./parse : nodejs code to convert CSV to JSON
 
-- ./COVID-19-JHU : source git repo https://github.com/CSSEGISandData/COVID-19
+- ./COVID-19-JHU : data source git repo https://github.com/CSSEGISandData/COVID-19
 
 ## Other visualization sites:
 
