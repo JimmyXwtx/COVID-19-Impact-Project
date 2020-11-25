@@ -48,13 +48,14 @@ export default function extract_slices(
   let slices = [];
   items.forEach((item, index) => {
     let yvalue = item[sumFocus][yprop];
-    if (yvalue < 0) {
-      // !!@ 2020-08-17 United Kingdom -5,337
-      // yvalue = 0;
-    }
-    stats_total += yvalue;
+    // if (yvalue < 0) {
+    // !!@ 2020-08-17 United Kingdom -5,337
+    // yvalue = 0;
+    // }
+    let nyvalue = yvalue < 0 ? 0 : yvalue;
+    stats_total += nyvalue;
     if (index < slideIndex) {
-      upper_stat += yvalue;
+      upper_stat += nyvalue;
       upper_count += 1;
     } else if (index < slideIndex + nslice) {
       const x = item.c_ref;
@@ -62,7 +63,7 @@ export default function extract_slices(
       const label = x + '\n' + countFormat(y);
       slices.push({ x, y, label });
     } else {
-      other_stat += yvalue;
+      other_stat += nyvalue;
       other_count += 1;
     }
   });

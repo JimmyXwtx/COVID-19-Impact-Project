@@ -52,7 +52,6 @@ const Rows = (props) => {
     let valid = true;
     if (per100k) {
       if (country.c_people) {
-        // propValue = (propValue * (100000 / country.c_people)).toPrecision(2);
         propValue = propValue * (100000 / country.c_people);
       } else {
         valid = false;
