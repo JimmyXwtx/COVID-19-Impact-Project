@@ -11,7 +11,7 @@ verbose=
 
 host=epdev@epvisual.com
 siteroot=/var/www/sites/epvisual.com
-homepage=COVID-19-Impact/Dashboard/a1
+homepage=COVID-19-Impact/Dashboard/a0
 rpath="${siteroot}/${homepage}"
 
 rdest=$host:${rpath}
