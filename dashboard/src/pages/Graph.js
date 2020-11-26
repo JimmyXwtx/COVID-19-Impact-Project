@@ -168,6 +168,12 @@ const Graph = () => {
       !dateFocus || !day.items || day.isLoading
     );
     if (!dateFocus || !day.items || day.isLoading) return;
+
+    // propValue is item[sumFocus][propFocus];
+    // or
+    // set propPerCent
+    // set propValid
+
     const sortFunc = (item1, item2) => {
       const rank = item2[sumFocus][propFocus] - item1[sumFocus][propFocus];
       if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
