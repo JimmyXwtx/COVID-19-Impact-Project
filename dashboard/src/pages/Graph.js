@@ -170,48 +170,63 @@ const Graph = () => {
     if (!dateFocus || !day.items || day.isLoading) return;
 
     // propValue is item[sumFocus][propFocus];
-    // or
     // set propPerCent
-    // set propValid
-
-    const sortFunc = (item1, item2) => {
-      const rank = item2[sumFocus][propFocus] - item1[sumFocus][propFocus];
+    const items = day.items;
+    let stats_total = 0;
+    items.forEach((item) => {
+      const nval = item[sumFocus][propFocus];
+      item.propValue = nval;
+      item.propValueTable = nval;
+      if (nval > 0) stats_total += nval;
+    });
+    items.forEach((item) => {
+      item.propPercent = stats_total ? item.propValue / stats_total : 0;
+    });
+    const sortPropValue = (item1, item2) => {
+      const rank = item2.propValue - item1.propValue;
       if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
       return rank;
     };
-    const sorted_items = day.items
-      .concat()
-      .sort((item1, item2) => sortFunc(item1, item2));
+    const sorted_items = items.concat().sort(sortPropValue);
+
     let slideIndex = sorted_items.findIndex(
       (item) => item.c_ref === countryFocus
     );
     if (slideIndex < 0) slideIndex = 0;
-    //   { slices, stats_total, yprop };
-    const percents = 1;
-    const spec = { sumFocus, propFocus };
-    // console.log('spec', spec);
-    const pie0 = extract_slices(
-      sorted_items,
-      spec,
-      nslice,
-      percents,
-      slideIndex
-    );
-    const pie1 = extract_slices(sorted_items, spec, nslice, 0, slideIndex);
-    const total = pie0.ostats_total;
-    sorted_items.forEach((item) => {
-      let yvalue = item[sumFocus][propFocus];
-      item.propValue = yvalue;
-      if (yvalue < 0) {
-        // !!@ 2020-08-17 United Kingdom -5,337
-        yvalue = 0;
-      }
-      item.propPercent = total ? yvalue / total : 0;
-    });
+
+    // const percents = 1;
+    const pie0 = extract_slices(sorted_items, nslice, 1, slideIndex);
+    const pie1 = extract_slices(sorted_items, nslice, 0, slideIndex);
+
+    if (per100k) {
+      sorted_items.forEach((item) => {
+        if (item.c_people) {
+          item.propValueTable = item.propValue * (100000 / item.c_people);
+        } else {
+          item.propValueInvalid = true;
+          item.propValueTable = 0;
+        }
+      });
+      // !!@ Awaiting sort in table header
+      // const sortPropValueTable = (item1, item2) => {
+      //   const rank = item2.propValueTable - item1.propValueTable;
+      //   if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
+      //   return rank;
+      // };
+      // sorted_items.sort(sortPropValueTable);
+    }
+
     setPieData([pie0, pie1]);
     setSortedItems(sorted_items);
-    // setMetac({ ...metac, sorted_items, pieData });
-  }, [countrySelected, day, propFocus, countryFocus, sumFocus, dateFocus]);
+  }, [
+    countrySelected,
+    day,
+    propFocus,
+    countryFocus,
+    sumFocus,
+    dateFocus,
+    per100k,
+  ]);
 
   useInterval(
     () => {
@@ -298,14 +313,6 @@ const Graph = () => {
     }
     setDateIndexFocus(metac.dateList[index].value);
     pauseAction();
-  };
-
-  const showStatsJSON = () => {
-    const dat = pieData[0];
-    dat.date = dateFocus;
-    const str = JSON.stringify(dat, null, 2);
-    console.log('pieData 0');
-    console.log(str);
   };
 
   const findFirstDate = () => {
@@ -442,7 +449,6 @@ const Graph = () => {
     showWorldAction,
     findFirstDate,
     findLastestDate,
-    showStatsJSON,
     uiprop,
     focusCountries,
     showCountryAction,

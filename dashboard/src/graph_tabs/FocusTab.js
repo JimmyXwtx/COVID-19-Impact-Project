@@ -9,7 +9,6 @@ const FocusTab = (props) => {
     showWorldAction,
     findFirstDate,
     findLastestDate,
-    // showStatsJSON,
     uiprop,
     focusCountries,
     showCountryAction,

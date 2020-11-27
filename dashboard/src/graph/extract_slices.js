@@ -31,15 +31,15 @@ function countFormat(val) {
 
 export default function extract_slices(
   items,
-  spec,
+  // spec,
   nslice,
   formatPercent,
   slideIndex
 ) {
   // console.log('extract_slices spec', spec);
   // console.log('extract_slices items[0]', items[0]);
-  const sumFocus = spec.sumFocus;
-  const yprop = spec.propFocus;
+  // const sumFocus = spec.sumFocus;
+  // const yprop = spec.propFocus;
   let stats_total = 0;
   let other_stat = 0;
   let other_count = 0;
@@ -47,7 +47,7 @@ export default function extract_slices(
   let upper_count = 0;
   let slices = [];
   items.forEach((item, index) => {
-    let yvalue = item[sumFocus][yprop];
+    let yvalue = item.propValue;
     // if (yvalue < 0) {
     // !!@ 2020-08-17 United Kingdom -5,337
     // yvalue = 0;
@@ -110,7 +110,7 @@ export default function extract_slices(
     slices,
     stats_total,
     ostats_total,
-    yprop,
+    // yprop,
     overFlow: slices.length < items.length,
   };
 }

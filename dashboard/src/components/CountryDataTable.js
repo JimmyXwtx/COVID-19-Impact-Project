@@ -46,17 +46,9 @@ const regionRow = (country, index, selectCountry, parentCountry) => {
 };
 
 const Rows = (props) => {
-  const { items, nslices, selectCountry, parentCountry, per100k } = props;
+  const { items, nslices, selectCountry, parentCountry } = props;
   const rows = items.map((country, index) => {
-    let { propValue, propPercent } = country;
-    let valid = true;
-    if (per100k) {
-      if (country.c_people) {
-        propValue = propValue * (100000 / country.c_people);
-      } else {
-        valid = false;
-      }
-    }
+    let { propValueTable, propValueInvalid, propPercent } = country;
     // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
     const slugKey = `tr-country-${index}`;
     const style = {
@@ -69,9 +61,9 @@ const Rows = (props) => {
           {regionRow(country, index, selectCountry, parentCountry)}
         </td>
         <td className="value">
-          {valid && (
+          {!propValueInvalid && (
             <NumberFormat
-              value={propValue}
+              value={propValueTable}
               displayType={'text'}
               thousandSeparator={true}
               decimalScale={2}
