@@ -64,6 +64,8 @@ const Graph = () => {
   const [sortedItems, setSortedItems] = useState();
   const [pieData, setPieData] = useState();
 
+  const [sortColumn, setSortColumn] = useState('');
+
   // metac = {
   //   "c_ref": "US"
   //   totals: {
@@ -168,44 +170,93 @@ const Graph = () => {
       !dateFocus || !day.items || day.isLoading
     );
     if (!dateFocus || !day.items || day.isLoading) return;
-    const sortFunc = (item1, item2) => {
-      const rank = item2[sumFocus][propFocus] - item1[sumFocus][propFocus];
+
+    // propValue is item[sumFocus][propFocus];
+    // set propPerCent
+    const items = day.items;
+    let stats_total = 0;
+    items.forEach((item) => {
+      const nval = item[sumFocus][propFocus];
+      item.propValue = nval;
+      item.propValueTable = nval;
+      if (nval > 0) stats_total += nval;
+    });
+    items.forEach((item) => {
+      item.propPercent = stats_total ? item.propValue / stats_total : 0;
+    });
+    const sortPropValue = (item1, item2) => {
+      const rank = item2.propValue - item1.propValue;
       if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
       return rank;
     };
-    const sorted_items = day.items
-      .concat()
-      .sort((item1, item2) => sortFunc(item1, item2));
+    const sorted_items = items.concat().sort(sortPropValue);
+
     let slideIndex = sorted_items.findIndex(
       (item) => item.c_ref === countryFocus
     );
     if (slideIndex < 0) slideIndex = 0;
-    //   { slices, stats_total, yprop };
-    const percents = 1;
-    const spec = { sumFocus, propFocus };
-    // console.log('spec', spec);
-    const pie0 = extract_slices(
-      sorted_items,
-      spec,
-      nslice,
-      percents,
-      slideIndex
-    );
-    const pie1 = extract_slices(sorted_items, spec, nslice, 0, slideIndex);
-    const total = pie0.ostats_total;
-    sorted_items.forEach((item) => {
-      let yvalue = item[sumFocus][propFocus];
-      item.propValue = yvalue;
-      if (yvalue < 0) {
-        // !!@ 2020-08-17 United Kingdom -5,337
-        yvalue = 0;
-      }
-      item.propPercent = total ? yvalue / total : 0;
-    });
+
+    // const percents = 1;
+    const pie0 = extract_slices(sorted_items, nslice, 1, slideIndex);
+    const pie1 = extract_slices(sorted_items, nslice, 0, slideIndex);
+
+    if (per100k) {
+      sorted_items.forEach((item) => {
+        if (item.c_people) {
+          item.propValueTable = item.propValue * (100000 / item.c_people);
+        } else {
+          item.propValueInvalid = true;
+          item.propValueTable = 0;
+        }
+      });
+      // !!@ Awaiting sort in table header
+      // const sortPropValueTable = (item1, item2) => {
+      //   const rank = item2.propValueTable - item1.propValueTable;
+      //   if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
+      //   return rank;
+      // };
+      // sorted_items.sort(sortPropValueTable);
+    }
+    let sortFunc;
+    switch (sortColumn) {
+      case 'region':
+        sortFunc = (item1, item2) => {
+          return item1.c_ref.localeCompare(item2.c_ref);
+        };
+        break;
+      case 'prop':
+        sortFunc = (item1, item2) => {
+          const rank = item2.propValueTable - item1.propValueTable;
+          if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
+          return rank;
+        };
+        break;
+      case 'percent':
+        sortFunc = (item1, item2) => {
+          const rank = item2.propPercent - item1.propPercent;
+          if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
+          return rank;
+        };
+        break;
+      default:
+        break;
+    }
+    if (sortFunc) {
+      sorted_items.sort(sortFunc);
+    }
+
     setPieData([pie0, pie1]);
     setSortedItems(sorted_items);
-    // setMetac({ ...metac, sorted_items, pieData });
-  }, [countrySelected, day, propFocus, countryFocus, sumFocus, dateFocus]);
+  }, [
+    countrySelected,
+    day,
+    propFocus,
+    countryFocus,
+    sumFocus,
+    dateFocus,
+    per100k,
+    sortColumn,
+  ]);
 
   useInterval(
     () => {
@@ -292,14 +343,6 @@ const Graph = () => {
     }
     setDateIndexFocus(metac.dateList[index].value);
     pauseAction();
-  };
-
-  const showStatsJSON = () => {
-    const dat = pieData[0];
-    dat.date = dateFocus;
-    const str = JSON.stringify(dat, null, 2);
-    console.log('pieData 0');
-    console.log(str);
   };
 
   const findFirstDate = () => {
@@ -436,7 +479,6 @@ const Graph = () => {
     showWorldAction,
     findFirstDate,
     findLastestDate,
-    showStatsJSON,
     uiprop,
     focusCountries,
     showCountryAction,
@@ -479,20 +521,41 @@ const Graph = () => {
     setPer100k(!per100k);
   };
 
+  const tunder = { textDecoration: 'underline' };
+  const headerSpec = {
+    region: {
+      style: sortColumn === 'region' ? tunder : null,
+      onclick: () => {
+        setSortColumn('region');
+      },
+    },
+    prop: {
+      style: sortColumn === 'prop' ? tunder : null,
+      onclick: () => {
+        setSortColumn('prop');
+      },
+    },
+    percent: {
+      style: sortColumn === 'percent' ? tunder : null,
+      onclick: () => {
+        setSortColumn('percent');
+      },
+    },
+  };
+
   const RegionTab = () => {
     return (
       <div>
-        {/* {regionOptions && ( */}
         <div>
-          <button onClick={clickPer100k}>{per100k ? '-' : ''} Per 100K</button>
+          <button onClick={clickPer100k}>
+            {per100k ? '-' : ''} Per 100,000
+          </button>
           <button onClick={findFirstDate}>First {uiprop}</button>
           <button onClick={findLastestDate}>Latest</button>
           {countrySelected.c_ref && (
-            // <button onClick={selectWorldwide}>&larr; Worldwide</button>
             <button onClick={selectWorldwide}>Worldwide</button>
           )}
         </div>
-        {/* )} */}
         <CountryDataTable
           items={sortedItems || []}
           propTitle={uisum + ' ' + uiprop_s}
@@ -502,6 +565,7 @@ const Graph = () => {
           regionPlusClick={regionPlusClick}
           regionOptions={regionOptions}
           per100k={per100k}
+          headerSpec={headerSpec}
         />
       </div>
     );
@@ -580,29 +644,12 @@ const Graph = () => {
       </Container>
       <StyledDetailsContainer>
         <Menu tabular>
-          {/* <Menu.Item
-            name="places"
-            active={true}
-            content={regionOptions ? '-' : '+'}
-            onClick={regionPlusClick}
-            style={{ fontWeight: 'bold' }}
-          /> */}
           <Menu.Item
             name="places"
             active={bottomTab === 'places'}
             content="Regions"
             onClick={handleBottomTab}
           />
-          {/* <Menu.Item
-            name="places"
-            active={bottomTab === 'places'}
-            onClick={handleBottomTab}
-          >
-            <button onClick={regionPlusClick}>
-              {regionOptions ? '-' : '+'}
-            </button>
-            &nbsp; Regions
-          </Menu.Item> */}
           <Menu.Item
             name="purpose"
             active={bottomTab === 'purpose'}
@@ -625,15 +672,6 @@ const Graph = () => {
             onClick={handleBottomTab}
           />
         </Menu>
-        {/* {regionOptions && (
-          <div>
-            <button onClick={clickPer100k}>
-              {per100k ? '-' : ''} Per 100K
-            </button>
-            <button onClick={findFirstDate}>First {uiprop}</button>
-            <button onClick={findLastestDate}>Latest</button>
-          </div>
-        )} */}
         {bottomTab === 'places' && <RegionTab />}
         {bottomTab === 'purpose' && <AboutTab />}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
