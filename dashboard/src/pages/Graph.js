@@ -64,6 +64,8 @@ const Graph = () => {
   const [sortedItems, setSortedItems] = useState();
   const [pieData, setPieData] = useState();
 
+  const [sortColumn, setSortColumn] = useState('');
+
   // metac = {
   //   "c_ref": "US"
   //   totals: {
@@ -215,6 +217,33 @@ const Graph = () => {
       // };
       // sorted_items.sort(sortPropValueTable);
     }
+    let sortFunc;
+    switch (sortColumn) {
+      case 'region':
+        sortFunc = (item1, item2) => {
+          return item1.c_ref.localeCompare(item2.c_ref);
+        };
+        break;
+      case 'prop':
+        sortFunc = (item1, item2) => {
+          const rank = item2.propValueTable - item1.propValueTable;
+          if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
+          return rank;
+        };
+        break;
+      case 'percent':
+        sortFunc = (item1, item2) => {
+          const rank = item2.propPercent - item1.propPercent;
+          if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
+          return rank;
+        };
+        break;
+      default:
+        break;
+    }
+    if (sortFunc) {
+      sorted_items.sort(sortFunc);
+    }
 
     setPieData([pie0, pie1]);
     setSortedItems(sorted_items);
@@ -226,6 +255,7 @@ const Graph = () => {
     sumFocus,
     dateFocus,
     per100k,
+    sortColumn,
   ]);
 
   useInterval(
@@ -491,20 +521,41 @@ const Graph = () => {
     setPer100k(!per100k);
   };
 
+  const tunder = { textDecoration: 'underline' };
+  const headerSpec = {
+    region: {
+      style: sortColumn === 'region' ? tunder : null,
+      onclick: () => {
+        setSortColumn('region');
+      },
+    },
+    prop: {
+      style: sortColumn === 'prop' ? tunder : null,
+      onclick: () => {
+        setSortColumn('prop');
+      },
+    },
+    percent: {
+      style: sortColumn === 'percent' ? tunder : null,
+      onclick: () => {
+        setSortColumn('percent');
+      },
+    },
+  };
+
   const RegionTab = () => {
     return (
       <div>
-        {/* {regionOptions && ( */}
         <div>
-          <button onClick={clickPer100k}>{per100k ? '-' : ''} Per 100K</button>
+          <button onClick={clickPer100k}>
+            {per100k ? '-' : ''} Per 100,000
+          </button>
           <button onClick={findFirstDate}>First {uiprop}</button>
           <button onClick={findLastestDate}>Latest</button>
           {countrySelected.c_ref && (
-            // <button onClick={selectWorldwide}>&larr; Worldwide</button>
             <button onClick={selectWorldwide}>Worldwide</button>
           )}
         </div>
-        {/* )} */}
         <CountryDataTable
           items={sortedItems || []}
           propTitle={uisum + ' ' + uiprop_s}
@@ -514,6 +565,7 @@ const Graph = () => {
           regionPlusClick={regionPlusClick}
           regionOptions={regionOptions}
           per100k={per100k}
+          headerSpec={headerSpec}
         />
       </div>
     );
@@ -592,29 +644,12 @@ const Graph = () => {
       </Container>
       <StyledDetailsContainer>
         <Menu tabular>
-          {/* <Menu.Item
-            name="places"
-            active={true}
-            content={regionOptions ? '-' : '+'}
-            onClick={regionPlusClick}
-            style={{ fontWeight: 'bold' }}
-          /> */}
           <Menu.Item
             name="places"
             active={bottomTab === 'places'}
             content="Regions"
             onClick={handleBottomTab}
           />
-          {/* <Menu.Item
-            name="places"
-            active={bottomTab === 'places'}
-            onClick={handleBottomTab}
-          >
-            <button onClick={regionPlusClick}>
-              {regionOptions ? '-' : '+'}
-            </button>
-            &nbsp; Regions
-          </Menu.Item> */}
           <Menu.Item
             name="purpose"
             active={bottomTab === 'purpose'}
@@ -637,15 +672,6 @@ const Graph = () => {
             onClick={handleBottomTab}
           />
         </Menu>
-        {/* {regionOptions && (
-          <div>
-            <button onClick={clickPer100k}>
-              {per100k ? '-' : ''} Per 100K
-            </button>
-            <button onClick={findFirstDate}>First {uiprop}</button>
-            <button onClick={findLastestDate}>Latest</button>
-          </div>
-        )} */}
         {bottomTab === 'places' && <RegionTab />}
         {bottomTab === 'purpose' && <AboutTab />}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}

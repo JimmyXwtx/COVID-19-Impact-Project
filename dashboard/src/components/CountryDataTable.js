@@ -89,9 +89,8 @@ const CountryDataTable = (props) => {
     pie_data,
     selectCountry,
     parentCountry,
-    // regionPlusClick,
-    // regionOptions,
     per100k,
+    headerSpec,
   } = props;
   const pieslices = pie_data[0].slices;
   // console.log('pieslices.length', pieslices.length);
@@ -102,16 +101,18 @@ const CountryDataTable = (props) => {
       <thead>
         <tr>
           {/* <th width="60%">Region</th> */}
-          <th>
-            {/* <button onClick={regionPlusClick}>
-              {regionOptions ? '-' : '+'}
-            </button>{' '} */}
+          <th style={headerSpec.region.style}>
+            <button onClick={headerSpec.region.onclick}>▼</button>
             Region
           </th>
-          <th>
-            {propTitle} {per100k ? ' per 100k' : null}
+          <th style={headerSpec.prop.style}>
+            <button onClick={headerSpec.prop.onclick}>▼</button>
+            {propTitle} {per100k ? ' per 100,000' : null}
           </th>
-          <th width="10%">Percent</th>
+          <th width="10%" style={headerSpec.percent.style}>
+            <button onClick={headerSpec.percent.onclick}>▼</button>
+            Percent
+          </th>
         </tr>
       </thead>
       <tbody>
