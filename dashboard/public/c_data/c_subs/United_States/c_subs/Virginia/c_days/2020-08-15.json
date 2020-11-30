@@ -1,0 +1,940 @@
+[
+  {
+    "c_ref": "Accomack",
+    "totals": {
+      "Cases": 1120,
+      "Deaths": 17
+    }
+  },
+  {
+    "c_ref": "Albemarle",
+    "totals": {
+      "Cases": 890,
+      "Deaths": 16
+    }
+  },
+  {
+    "c_ref": "Alexandria",
+    "totals": {
+      "Cases": 3082,
+      "Deaths": 61
+    }
+  },
+  {
+    "c_ref": "Alleghany",
+    "totals": {
+      "Cases": 59,
+      "Deaths": 4
+    }
+  },
+  {
+    "c_ref": "Amelia",
+    "totals": {
+      "Cases": 83,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Amherst",
+    "totals": {
+      "Cases": 206,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Appomattox",
+    "totals": {
+      "Cases": 102,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Arlington",
+    "totals": {
+      "Cases": 3196,
+      "Deaths": 135
+    }
+  },
+  {
+    "c_ref": "Augusta",
+    "totals": {
+      "Cases": 306,
+      "Deaths": 4
+    }
+  },
+  {
+    "c_ref": "Bath",
+    "totals": {
+      "Cases": 4,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Bedford",
+    "totals": {
+      "Cases": 397,
+      "Deaths": 8
+    }
+  },
+  {
+    "c_ref": "Bland",
+    "totals": {
+      "Cases": 30,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Botetourt",
+    "totals": {
+      "Cases": 220,
+      "Deaths": 7
+    }
+  },
+  {
+    "c_ref": "Bristol",
+    "totals": {
+      "Cases": 92,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Brunswick",
+    "totals": {
+      "Cases": 247,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Buchanan",
+    "totals": {
+      "Cases": 83,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Buckingham",
+    "totals": {
+      "Cases": 616,
+      "Deaths": 8
+    }
+  },
+  {
+    "c_ref": "Buena Vista",
+    "totals": {
+      "Cases": 64,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Campbell",
+    "totals": {
+      "Cases": 244,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Caroline",
+    "totals": {
+      "Cases": 224,
+      "Deaths": 5
+    }
+  },
+  {
+    "c_ref": "Carroll",
+    "totals": {
+      "Cases": 340,
+      "Deaths": 14
+    }
+  },
+  {
+    "c_ref": "Charles City",
+    "totals": {
+      "Cases": 54,
+      "Deaths": 5
+    }
+  },
+  {
+    "c_ref": "Charlotte",
+    "totals": {
+      "Cases": 57,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Charlottesville",
+    "totals": {
+      "Cases": 558,
+      "Deaths": 15
+    }
+  },
+  {
+    "c_ref": "Chesapeake",
+    "totals": {
+      "Cases": 3197,
+      "Deaths": 41
+    }
+  },
+  {
+    "c_ref": "Chesterfield",
+    "totals": {
+      "Cases": 4596,
+      "Deaths": 80
+    }
+  },
+  {
+    "c_ref": "Clarke",
+    "totals": {
+      "Cases": 73,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Colonial Heights",
+    "totals": {
+      "Cases": 205,
+      "Deaths": 22
+    }
+  },
+  {
+    "c_ref": "Covington",
+    "totals": {
+      "Cases": 13,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Craig",
+    "totals": {
+      "Cases": 19,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Culpeper",
+    "totals": {
+      "Cases": 1033,
+      "Deaths": 12
+    }
+  },
+  {
+    "c_ref": "Cumberland",
+    "totals": {
+      "Cases": 80,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Danville",
+    "totals": {
+      "Cases": 451,
+      "Deaths": 8
+    }
+  },
+  {
+    "c_ref": "Dickenson",
+    "totals": {
+      "Cases": 52,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Dinwiddie",
+    "totals": {
+      "Cases": 232,
+      "Deaths": 7
+    }
+  },
+  {
+    "c_ref": "Emporia",
+    "totals": {
+      "Cases": 188,
+      "Deaths": 15
+    }
+  },
+  {
+    "c_ref": "Essex",
+    "totals": {
+      "Cases": 108,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Fairfax",
+    "totals": {
+      "Cases": 16882,
+      "Deaths": 533
+    }
+  },
+  {
+    "c_ref": "Fairfax City",
+    "totals": {
+      "Cases": 98,
+      "Deaths": 7
+    }
+  },
+  {
+    "c_ref": "Falls Church",
+    "totals": {
+      "Cases": 62,
+      "Deaths": 6
+    }
+  },
+  {
+    "c_ref": "Fauquier",
+    "totals": {
+      "Cases": 632,
+      "Deaths": 9
+    }
+  },
+  {
+    "c_ref": "Floyd",
+    "totals": {
+      "Cases": 111,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Fluvanna",
+    "totals": {
+      "Cases": 201,
+      "Deaths": 9
+    }
+  },
+  {
+    "c_ref": "Franklin",
+    "totals": {
+      "Cases": 182,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Franklin City",
+    "totals": {
+      "Cases": 205,
+      "Deaths": 6
+    }
+  },
+  {
+    "c_ref": "Frederick",
+    "totals": {
+      "Cases": 695,
+      "Deaths": 10
+    }
+  },
+  {
+    "c_ref": "Fredericksburg",
+    "totals": {
+      "Cases": 426,
+      "Deaths": 4
+    }
+  },
+  {
+    "c_ref": "Galax",
+    "totals": {
+      "Cases": 353,
+      "Deaths": 27
+    }
+  },
+  {
+    "c_ref": "Giles",
+    "totals": {
+      "Cases": 29,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Gloucester",
+    "totals": {
+      "Cases": 175,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Goochland",
+    "totals": {
+      "Cases": 171,
+      "Deaths": 7
+    }
+  },
+  {
+    "c_ref": "Grayson",
+    "totals": {
+      "Cases": 164,
+      "Deaths": 5
+    }
+  },
+  {
+    "c_ref": "Greene",
+    "totals": {
+      "Cases": 176,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Greensville",
+    "totals": {
+      "Cases": 569,
+      "Deaths": 11
+    }
+  },
+  {
+    "c_ref": "Halifax",
+    "totals": {
+      "Cases": 167,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Hampton",
+    "totals": {
+      "Cases": 1321,
+      "Deaths": 9
+    }
+  },
+  {
+    "c_ref": "Hanover",
+    "totals": {
+      "Cases": 695,
+      "Deaths": 33
+    }
+  },
+  {
+    "c_ref": "Harrisonburg",
+    "totals": {
+      "Cases": 1093,
+      "Deaths": 31
+    }
+  },
+  {
+    "c_ref": "Henrico",
+    "totals": {
+      "Cases": 4068,
+      "Deaths": 187
+    }
+  },
+  {
+    "c_ref": "Henry",
+    "totals": {
+      "Cases": 672,
+      "Deaths": 9
+    }
+  },
+  {
+    "c_ref": "Highland",
+    "totals": {
+      "Cases": 6,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Hopewell",
+    "totals": {
+      "Cases": 286,
+      "Deaths": 5
+    }
+  },
+  {
+    "c_ref": "Isle of Wight",
+    "totals": {
+      "Cases": 429,
+      "Deaths": 9
+    }
+  },
+  {
+    "c_ref": "James City",
+    "totals": {
+      "Cases": 637,
+      "Deaths": 17
+    }
+  },
+  {
+    "c_ref": "King George",
+    "totals": {
+      "Cases": 164,
+      "Deaths": 4
+    }
+  },
+  {
+    "c_ref": "King William",
+    "totals": {
+      "Cases": 101,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "King and Queen",
+    "totals": {
+      "Cases": 42,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Lancaster",
+    "totals": {
+      "Cases": 49,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Lee",
+    "totals": {
+      "Cases": 144,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Lexington",
+    "totals": {
+      "Cases": 35,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Loudoun",
+    "totals": {
+      "Cases": 5482,
+      "Deaths": 115
+    }
+  },
+  {
+    "c_ref": "Louisa",
+    "totals": {
+      "Cases": 203,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Lunenburg",
+    "totals": {
+      "Cases": 67,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Lynchburg",
+    "totals": {
+      "Cases": 719,
+      "Deaths": 5
+    }
+  },
+  {
+    "c_ref": "Madison",
+    "totals": {
+      "Cases": 72,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Manassas",
+    "totals": {
+      "Cases": 1696,
+      "Deaths": 22
+    }
+  },
+  {
+    "c_ref": "Manassas Park",
+    "totals": {
+      "Cases": 530,
+      "Deaths": 7
+    }
+  },
+  {
+    "c_ref": "Martinsville",
+    "totals": {
+      "Cases": 240,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Mathews",
+    "totals": {
+      "Cases": 23,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Mecklenburg",
+    "totals": {
+      "Cases": 458,
+      "Deaths": 32
+    }
+  },
+  {
+    "c_ref": "Middlesex",
+    "totals": {
+      "Cases": 51,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Montgomery",
+    "totals": {
+      "Cases": 321,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Nelson",
+    "totals": {
+      "Cases": 61,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "New Kent",
+    "totals": {
+      "Cases": 134,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Newport News",
+    "totals": {
+      "Cases": 1960,
+      "Deaths": 20
+    }
+  },
+  {
+    "c_ref": "Norfolk",
+    "totals": {
+      "Cases": 3944,
+      "Deaths": 34
+    }
+  },
+  {
+    "c_ref": "Northampton",
+    "totals": {
+      "Cases": 298,
+      "Deaths": 29
+    }
+  },
+  {
+    "c_ref": "Northumberland",
+    "totals": {
+      "Cases": 79,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Norton",
+    "totals": {
+      "Cases": 23,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Nottoway",
+    "totals": {
+      "Cases": 183,
+      "Deaths": 14
+    }
+  },
+  {
+    "c_ref": "Orange",
+    "totals": {
+      "Cases": 233,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Page",
+    "totals": {
+      "Cases": 352,
+      "Deaths": 25
+    }
+  },
+  {
+    "c_ref": "Patrick",
+    "totals": {
+      "Cases": 176,
+      "Deaths": 5
+    }
+  },
+  {
+    "c_ref": "Petersburg",
+    "totals": {
+      "Cases": 537,
+      "Deaths": 19
+    }
+  },
+  {
+    "c_ref": "Pittsylvania",
+    "totals": {
+      "Cases": 560,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Poquoson",
+    "totals": {
+      "Cases": 45,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Portsmouth",
+    "totals": {
+      "Cases": 1964,
+      "Deaths": 25
+    }
+  },
+  {
+    "c_ref": "Powhatan",
+    "totals": {
+      "Cases": 161,
+      "Deaths": 4
+    }
+  },
+  {
+    "c_ref": "Prince Edward",
+    "totals": {
+      "Cases": 447,
+      "Deaths": 10
+    }
+  },
+  {
+    "c_ref": "Prince George",
+    "totals": {
+      "Cases": 454,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Prince William",
+    "totals": {
+      "Cases": 9824,
+      "Deaths": 178
+    }
+  },
+  {
+    "c_ref": "Pulaski",
+    "totals": {
+      "Cases": 91,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Radford",
+    "totals": {
+      "Cases": 65,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Rappahannock",
+    "totals": {
+      "Cases": 45,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Richmond",
+    "totals": {
+      "Cases": 323,
+      "Deaths": 4
+    }
+  },
+  {
+    "c_ref": "Richmond City",
+    "totals": {
+      "Cases": 3339,
+      "Deaths": 42
+    }
+  },
+  {
+    "c_ref": "Roanoke",
+    "totals": {
+      "Cases": 515,
+      "Deaths": 4
+    }
+  },
+  {
+    "c_ref": "Roanoke City",
+    "totals": {
+      "Cases": 1056,
+      "Deaths": 15
+    }
+  },
+  {
+    "c_ref": "Rockbridge",
+    "totals": {
+      "Cases": 75,
+      "Deaths": 1
+    }
+  },
+  {
+    "c_ref": "Rockingham",
+    "totals": {
+      "Cases": 968,
+      "Deaths": 20
+    }
+  },
+  {
+    "c_ref": "Russell",
+    "totals": {
+      "Cases": 145,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Salem",
+    "totals": {
+      "Cases": 165,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Scott",
+    "totals": {
+      "Cases": 114,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Shenandoah",
+    "totals": {
+      "Cases": 736,
+      "Deaths": 47
+    }
+  },
+  {
+    "c_ref": "Smyth",
+    "totals": {
+      "Cases": 164,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Southampton",
+    "totals": {
+      "Cases": 301,
+      "Deaths": 13
+    }
+  },
+  {
+    "c_ref": "Spotsylvania",
+    "totals": {
+      "Cases": 1598,
+      "Deaths": 35
+    }
+  },
+  {
+    "c_ref": "Stafford",
+    "totals": {
+      "Cases": 1480,
+      "Deaths": 10
+    }
+  },
+  {
+    "c_ref": "Staunton",
+    "totals": {
+      "Cases": 158,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Suffolk",
+    "totals": {
+      "Cases": 1401,
+      "Deaths": 53
+    }
+  },
+  {
+    "c_ref": "Surry",
+    "totals": {
+      "Cases": 51,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Sussex",
+    "totals": {
+      "Cases": 316,
+      "Deaths": 9
+    }
+  },
+  {
+    "c_ref": "Tazewell",
+    "totals": {
+      "Cases": 130,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Unassigned",
+    "totals": {
+      "Cases": 0,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Virginia Beach",
+    "totals": {
+      "Cases": 5322,
+      "Deaths": 55
+    }
+  },
+  {
+    "c_ref": "Warren",
+    "totals": {
+      "Cases": 367,
+      "Deaths": 6
+    }
+  },
+  {
+    "c_ref": "Washington",
+    "totals": {
+      "Cases": 261,
+      "Deaths": 6
+    }
+  },
+  {
+    "c_ref": "Waynesboro",
+    "totals": {
+      "Cases": 187,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Westmoreland",
+    "totals": {
+      "Cases": 216,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "Williamsburg",
+    "totals": {
+      "Cases": 133,
+      "Deaths": 6
+    }
+  },
+  {
+    "c_ref": "Winchester",
+    "totals": {
+      "Cases": 416,
+      "Deaths": 4
+    }
+  },
+  {
+    "c_ref": "Wise",
+    "totals": {
+      "Cases": 229,
+      "Deaths": 5
+    }
+  },
+  {
+    "c_ref": "Wythe",
+    "totals": {
+      "Cases": 125,
+      "Deaths": 3
+    }
+  },
+  {
+    "c_ref": "York",
+    "totals": {
+      "Cases": 400,
+      "Deaths": 4
+    }
+  }
+]
