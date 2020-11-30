@@ -213,7 +213,7 @@ function process_cvs(cvs_inpath, file_date) {
 
   write_daily(country_dict, file_date, store_dir);
 
-  write_subs(country_dict, file_date, store_dir);
+  // write_subs(country_dict, file_date, store_dir);
 
   return country_dict;
 }
