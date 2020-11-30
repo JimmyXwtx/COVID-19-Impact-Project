@@ -125,6 +125,10 @@ function process_cvs(cvs_inpath, file_date) {
     rename_item(item);
     item.source_index = index;
 
+    if (!hasValue(item)) {
+      return;
+    }
+
     const Country_Region = item.Country_Region;
     if (!Country_Region) {
       const str = JSON.stringify(item);
@@ -189,6 +193,15 @@ function process_cvs(cvs_inpath, file_date) {
         calc(aent.totals, item);
       }
     }
+  }
+  function hasValue(item) {
+    let sum = 0;
+    for (let prop in stats_init) {
+      let val = item[prop];
+      if (!val) val = 0;
+      sum += parseFloat(val);
+    }
+    return sum;
   }
   function calc(sums, item) {
     for (let prop in stats_init) {
