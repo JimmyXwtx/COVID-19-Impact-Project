@@ -68,12 +68,14 @@ function process_population_table() {
       sent = { Population: rent.Population };
       cent.states[rent.Province_State] = sent;
     } else {
-      // ...
+      if (rent.Admin2) {
+        if (!sent.states) {
+          sent.states = {};
+        }
+        sent.states[rent.Admin2] = { Population: rent.Population };
+      }
     }
-    // sent.Population += rent.Population;
-    // cent.Population += rent.Population;
   }
-  // console.log('pop_dict', pop_dict);
   fs.writeJsonSync(population_json_path, pop_dict, { spaces: 2 });
 
   // console.log('process_population_table records', records);
