@@ -77,20 +77,21 @@ function process_summary(country_dict) {
   report_log('-------------------------------------------');
 
   // Write meta for states with in each country that has them
-  const states_path = path.resolve(store_dir, 'c_subs');
-  for (let country in country_dict) {
-    const cent = country_dict[country];
-    if (!cent.ncountry) {
-      // report_log('skipping country', country);
-      continue;
-    }
-    const state_dir = path.resolve(states_path, cent.ncountry);
-    // report_log('process_summary fpath', fpath);
-    write_meta(state_dir, {
-      state_name: cent.ncountry,
-      country_dict: cent.states,
-    });
-  }
+  // const states_path = path.resolve(store_dir, 'c_subs');
+  // for (let country in country_dict) {
+  //   const cent = country_dict[country];
+  //   if (!cent.ncountry) {
+  //     // report_log('skipping country', country);
+  //     continue;
+  //   }
+  //   const state_dir = path.resolve(states_path, cent.ncountry);
+  //   // report_log('process_summary fpath', fpath);
+  //   write_meta(state_dir, {
+  //     state_name: cent.ncountry,
+  //     country_dict: cent.states,
+  //   });
+  // }
+
   const lapse_time = Date.now() - start_time;
   report_log('-------------------------------------------');
   report_log('lapse sec ' + lapse_time / 1000);
@@ -338,7 +339,32 @@ function write_meta(state_dir, { state_name, country_dict, report_n_states }) {
   const outpath_meta = path.resolve(state_dir, 'c_meta.json');
   const meta = { c_regions, c_dates };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
+
+  write_meta_subs(state_dir, { state_name, country_dict, report_n_states: 0 });
+
   return meta;
+}
+
+function write_meta_subs(
+  path_root,
+  { state_name, country_dict, report_n_states }
+) {
+  // Write meta for states with in each country that has them
+  const subs_path = path.resolve(path_root, 'c_subs');
+  for (let country in country_dict) {
+    const cent = country_dict[country];
+    if (!cent.ncountry) {
+      // report_log('skipping country', country);
+      continue;
+    }
+    const state_dir = path.resolve(subs_path, cent.ncountry);
+    // report_log('process_summary fpath', fpath);
+    write_meta(state_dir, {
+      state_name: (state_name ? state_name + ' ' : '') + cent.ncountry,
+      country_dict: cent.states,
+      report_n_states,
+    });
+  }
 }
 
 function dump(records, sums_total, sums, cvs_inpath, outpath_country) {

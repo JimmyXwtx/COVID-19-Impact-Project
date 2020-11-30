@@ -4,6 +4,10 @@
     "totals": {
       "Cases": 2402,
       "Deaths": 108
+    },
+    "daily": {
+      "Cases": 83,
+      "Deaths": -1
     }
   },
   {
@@ -11,6 +15,10 @@
     "totals": {
       "Cases": 7379,
       "Deaths": 293
+    },
+    "daily": {
+      "Cases": 70,
+      "Deaths": 2
     }
   },
   {
@@ -18,12 +26,20 @@
     "totals": {
       "Cases": 5928,
       "Deaths": 192
+    },
+    "daily": {
+      "Cases": 47,
+      "Deaths": 0
     }
   },
   {
     "c_ref": "Unassigned",
     "totals": {
       "Cases": 258,
+      "Deaths": 0
+    },
+    "daily": {
+      "Cases": 2,
       "Deaths": 0
     }
   }
