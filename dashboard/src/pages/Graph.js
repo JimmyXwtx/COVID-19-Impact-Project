@@ -16,6 +16,7 @@ import DateSlider from '../components/DateSlider';
 import FocusTab from '../graph_tabs/FocusTab';
 import ReactGA from 'react-ga';
 import ReferencesTab from '../graph_tabs/ReferencesTab';
+import RegionNavTable from '../components/RegionNavTable';
 import SoftBodyTab from '../graph_tabs/SoftBodyTab';
 import World from '../graph/World';
 import extract_slices from '../graph/extract_slices';
@@ -55,7 +56,7 @@ const Graph = () => {
   const [playDelay, setPlayDelay] = useState(playDelayInit);
   const [bottomTab, setBottomTab] = useLocalStorage('co-source', 'places');
   const [dateIndex, setDateIndex] = useLocalStorage('co-dataIndex', 0);
-  const [regionOptions, setRegionOptions] = useLocalStorage('co-region');
+  // const [regionOptions, setRegionOptions] = useLocalStorage('co-region');
   const [per100k, setPer100k] = useLocalStorage('co-per100k');
 
   const [dateFocus, setDateFocus] = useState();
@@ -493,8 +494,10 @@ const Graph = () => {
   };
   const to_active = sumFocus === 'totals';
   const da_active = sumFocus === 'daily';
-  const uisum = sumFocus === 'totals' ? 'Total' : 'Daily';
-  const upto_on = sumFocus === 'totals' ? 'total to' : 'on';
+  // const uisum = sumFocus === 'totals' ? 'Total' : 'Daily';
+  // const upto_on = sumFocus === 'totals' ? 'total to' : 'on';
+  const upto_on = sumFocus === 'totals' ? 'to date' : 'on day';
+  const propTitle = uiprop_s + ' ' + upto_on;
 
   const updateSlider = (key) => {
     // console.log('updateSlider key', key);
@@ -503,7 +506,8 @@ const Graph = () => {
 
   const graphOpacity = bottomTab === 'softbody' ? 0.6 : 1.0;
 
-  const dateFocusShort = dateFocus && dateFocus.substring(5);
+  // const dateFocusShort = dateFocus && dateFocus.substring(5);
+  const dateFocusShort = dateFocus;
 
   const selectCountry = (country) => {
     console.log('selectCountry country', country);
@@ -515,7 +519,7 @@ const Graph = () => {
     setCountrySelected(country);
   };
 
-  const ui_top = countrySelected.c_ref ? countrySelected.c_ref : 'WorldWide';
+  const ui_top = countrySelected.c_ref ? countrySelected.c_ref : 'Worldwide';
 
   const selectWorldwide = () => {
     setDay({});
@@ -523,22 +527,22 @@ const Graph = () => {
     setCountrySelected({});
   };
 
-  const selectParentCounty = () => {
-    setDay({});
-    setMetac({});
-    setCountrySelected(countrySelected.parent);
-  };
+  // const selectParentCounty = () => {
+  //   setDay({});
+  //   setMetac({});
+  //   setCountrySelected(countrySelected.parent);
+  // };
 
-  const regionPlusClick = () => {
-    setRegionOptions(!regionOptions);
-  };
+  // const regionPlusClick = () => {
+  //   setRegionOptions(!regionOptions);
+  // };
 
   const clickPer100k = () => {
     setPer100k(!per100k);
   };
 
   const tunder = { textDecoration: 'underline' };
-  const headerSpec = {
+  const sortActionSpec = {
     region: {
       style: sortColumn === 'region' ? tunder : null,
       onclick: () => {
@@ -559,45 +563,93 @@ const Graph = () => {
     },
   };
 
-  const CountryNavButtons = () => {
-    return (
-      <>
-        {countrySelected.c_ref && (
-          <button onClick={selectWorldwide}>Worldwide</button>
-        )}
-        {countrySelected.parent && (
-          <button onClick={selectParentCounty}>
-            {countrySelected.parent.c_ref}
-          </button>
-        )}
-      </>
-    );
+  // const CountryNavButtons = () => {
+  //   return (
+  //     <>
+  //       {countrySelected.c_ref && (
+  //         <button onClick={selectWorldwide}>Worldwide</button>
+  //       )}
+  //       {countrySelected.parent && (
+  //         <button onClick={selectParentCounty}>
+  //           {countrySelected.parent.c_ref}
+  //         </button>
+  //       )}
+  //     </>
+  //   );
+  // };
+
+  const getRegionTitle = () => {
+    if (!countrySelected.c_ref) return 'Country';
+    if (!countrySelected.parent) return 'State';
+    return 'County';
+  };
+
+  const selectCountryParent = (ncountry) => {
+    setDay({});
+    setMetac({});
+    setCountrySelected(ncountry.parent);
+  };
+
+  const countryTabNavItems = () => {
+    const stats_total = pieData[0].stats_total;
+    const items = [
+      {
+        c_ref: ui_top + ' ' + stats_total + ' ' + uiprop_s,
+        // propValueTable: stats_total,
+        propPercent: 1.0,
+      },
+    ];
+    for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
+      let item;
+      if (ncountry.parent) {
+        item = {
+          c_ref: (
+            <button
+              onClick={() => {
+                selectCountryParent(ncountry);
+              }}
+            >
+              {ncountry.parent.c_ref}
+            </button>
+          ),
+          propValueInvalid: true,
+          propPercentInvalid: true,
+        };
+      } else if (ncountry.c_ref) {
+        item = {
+          c_ref: <button onClick={selectWorldwide}>Worldwide</button>,
+          propValueInvalid: true,
+          propPercentInvalid: true,
+        };
+      }
+      if (item) items.push(item);
+    }
+    return items.reverse();
   };
 
   const RegionTab = () => {
+    const nslices = pieData[0].slices.length;
+    const regionTitle = getRegionTitle();
     return (
       <div>
+        <RegionNavTable items={countryTabNavItems()} />
         <div>
           <button onClick={clickPer100k}>
             {per100k ? '-' : ''} Per 100,000
           </button>
           <button onClick={findFirstDate}>First {uiprop}</button>
           <button onClick={findLastestDate}>Latest</button>
-          <CountryNavButtons />
-          {/* {countrySelected.c_ref && (
-            <button onClick={selectWorldwide}>Worldwide</button>
-          )} */}
+          {/* <CountryNavButtons /> */}
         </div>
         <CountryDataTable
           items={sortedItems || []}
-          propTitle={uisum + ' ' + uiprop_s}
-          pie_data={pieData}
+          propTitle={propTitle}
+          nslices={nslices}
           selectCountry={selectCountry}
           parentCountry={countrySelected.c_ref}
-          regionPlusClick={regionPlusClick}
-          regionOptions={regionOptions}
           per100k={per100k}
-          headerSpec={headerSpec}
+          sortActionSpec={sortActionSpec}
+          regionTitle={regionTitle}
         />
       </div>
     );
@@ -607,7 +659,7 @@ const Graph = () => {
     const stats_total = pieData[0].stats_total;
     return (
       <Header as="h3">
-        {ui_top}: {stats_total} {uiprop_s} {upto_on} {dateFocusShort}
+        {stats_total} {ui_top} {uiprop_s} {upto_on} {dateFocusShort}
       </Header>
     );
   };
@@ -618,7 +670,7 @@ const Graph = () => {
         <Loader active={loaderActive} inline></Loader>
         <HeadStats />
         <World pie_data={pieData} opacity={graphOpacity} />
-        <HeadStats />
+        {/* <HeadStats /> */}
         <Grid>
           <Grid.Row style={{ padding: '0 16px' }}>
             <DateSlider
@@ -647,10 +699,12 @@ const Graph = () => {
               </Button.Group>
               <Button.Group>
                 <Button size="mini" onClick={selectTotals} active={to_active}>
-                  Total:
+                  To Date:
+                  {/* Total: */}
                 </Button>
                 <Button size="mini" onClick={selectDaily} active={da_active}>
-                  On date:
+                  On Day:
+                  {/* On date: */}
                 </Button>
               </Button.Group>
               <div>
@@ -743,9 +797,3 @@ const StyledControlRow = styled.div`
 `;
 
 export default Graph;
-
-// <Button.Group>
-//   <Button size="mini" onClick={selectWorldwide}>
-//     &larr; Worldwide
-//   </Button>
-// </Button.Group>

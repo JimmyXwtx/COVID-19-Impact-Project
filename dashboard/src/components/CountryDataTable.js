@@ -1,11 +1,11 @@
-import React from 'react';
-import NumberFormat from 'react-number-format';
-// import slug from 'slug';
-import styled from 'styled-components';
 import FlagIcon from '../components/FlagIcon';
+import NumberFormat from 'react-number-format';
+import React from 'react';
+import StyledCountryDataTable from '../styles/StyledCountryDataTable';
 import { colorfor } from '../graph/colors';
 import getCountryCode from '../js/getCountryCode';
-import StyledCountryDataTable from '../styles/StyledCountryDataTable';
+// import slug from 'slug';
+import styled from 'styled-components';
 
 function percentFormat(num) {
   // num = Math.round((val / stats_total) * 1000) / 10;
@@ -48,7 +48,12 @@ const regionRow = (country, index, selectCountry, parentCountry) => {
 const Rows = (props) => {
   const { items, nslices, selectCountry, parentCountry } = props;
   const rows = items.map((country, index) => {
-    let { propValueTable, propValueInvalid, propPercent } = country;
+    let {
+      propValueTable,
+      propValueInvalid,
+      propPercent,
+      propPercentInvalid,
+    } = country;
     // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
     const slugKey = `tr-country-${index}`;
     const style = {
@@ -70,11 +75,13 @@ const Rows = (props) => {
             />
           )}
         </td>
-        <td className="percent">
-          <StyledPercentData>
-            {percentFormat(propPercent)}
-            <StyledColorIndicator style={style} />
-          </StyledPercentData>
+        <td className="percent" width="10%">
+          {!propPercentInvalid && (
+            <StyledPercentData>
+              {percentFormat(propPercent)}
+              <StyledColorIndicator style={style} />
+            </StyledPercentData>
+          )}
         </td>
       </tr>
     );
@@ -86,39 +93,42 @@ const CountryDataTable = (props) => {
   const {
     items,
     propTitle,
-    pie_data,
+    nslices,
     selectCountry,
     parentCountry,
     per100k,
-    headerSpec,
+    sortActionSpec,
+    regionTitle,
   } = props;
-  const pieslices = pie_data[0].slices;
+  // const pieslices = pie_data[0].slices;
   // console.log('pieslices.length', pieslices.length);
   // const { items } = props;
-  // console.log('CountryDataTable items', items);
+  console.log('CountryDataTable items', items);
   return (
     <StyledCountryDataTable>
-      <thead>
-        <tr>
-          {/* <th width="60%">Region</th> */}
-          <th style={headerSpec.region.style}>
-            <button onClick={headerSpec.region.onclick}>▼</button>
-            Region
-          </th>
-          <th style={headerSpec.prop.style}>
-            <button onClick={headerSpec.prop.onclick}>▼</button>
-            {propTitle} {per100k ? ' per 100,000' : null}
-          </th>
-          <th width="10%" style={headerSpec.percent.style}>
-            <button onClick={headerSpec.percent.onclick}>▼</button>
-            Percent
-          </th>
-        </tr>
-      </thead>
+      {sortActionSpec && (
+        <thead>
+          <tr>
+            {/* <th width="60%">Region</th> */}
+            <th style={sortActionSpec.region.style}>
+              <button onClick={sortActionSpec.region.onclick}>▼</button>
+              {regionTitle}
+            </th>
+            <th style={sortActionSpec.prop.style}>
+              <button onClick={sortActionSpec.prop.onclick}>▼</button>
+              {propTitle} {per100k ? ' per 100,000' : null}
+            </th>
+            <th width="10%" style={sortActionSpec.percent.style}>
+              <button onClick={sortActionSpec.percent.onclick}>▼</button>
+              Percent
+            </th>
+          </tr>
+        </thead>
+      )}
       <tbody>
         <Rows
           items={items}
-          nslices={pieslices.length}
+          nslices={nslices}
           selectCountry={selectCountry}
           parentCountry={parentCountry}
           per100k={per100k}
