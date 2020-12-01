@@ -324,11 +324,12 @@ function write_meta(state_dir, { state_name, country_dict, report_n_states }) {
     if (country_dict) {
       const cent = country_dict[uname];
       if (cent) {
-        // const n_states = Object.keys(cent.states ? cent.states : {}).length;
         const n_states = Object.keys(cent.states).length;
-        if (n_states && report_n_states) {
+        if (n_states) {
           ent.n_states = n_states;
-          report_log(uname + '| n_states ' + ent.n_states);
+          if (report_n_states) {
+            report_log(uname + '| n_states ' + ent.n_states);
+          }
         }
         ent.c_people = cent.c_people;
       }
