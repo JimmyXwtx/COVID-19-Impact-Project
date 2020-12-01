@@ -73,24 +73,24 @@ function process_summary(country_dict) {
   report_log('-------------------------------------------');
 
   // Write meta for countries
-  write_meta(store_dir, { country_dict });
-  report_log('-------------------------------------------');
+  write_meta(store_dir, { country_dict, report_n_states: 1 });
 
   // Write meta for states with in each country that has them
-  const states_path = path.resolve(store_dir, 'c_subs');
-  for (let country in country_dict) {
-    const cent = country_dict[country];
-    if (!cent.ncountry) {
-      // report_log('skipping country', country);
-      continue;
-    }
-    const state_dir = path.resolve(states_path, cent.ncountry);
-    // report_log('process_summary fpath', fpath);
-    write_meta(state_dir, {
-      state_name: cent.ncountry,
-      country_dict: cent.states,
-    });
-  }
+  // const states_path = path.resolve(store_dir, 'c_subs');
+  // for (let country in country_dict) {
+  //   const cent = country_dict[country];
+  //   if (!cent.ncountry) {
+  //     // report_log('skipping country', country);
+  //     continue;
+  //   }
+  //   const state_dir = path.resolve(states_path, cent.ncountry);
+  //   // report_log('process_summary fpath', fpath);
+  //   write_meta(state_dir, {
+  //     state_name: cent.ncountry,
+  //     country_dict: cent.states,
+  //   });
+  // }
+
   const lapse_time = Date.now() - start_time;
   report_log('-------------------------------------------');
   report_log('lapse sec ' + lapse_time / 1000);
@@ -125,24 +125,20 @@ function process_cvs(cvs_inpath, file_date) {
     rename_item(item);
     item.source_index = index;
 
+    if (!hasValue(item)) {
+      return;
+    }
+
     const Country_Region = item.Country_Region;
     if (!Country_Region) {
       const str = JSON.stringify(item);
       report_log('!!@ empty Country_Region ' + file_date + ' ' + str);
       return;
     }
-    // let ent = sums_country[Country_Region];
-    // if (!ent) {
-    //   // { Cases: 0, Deaths: 0, Recovered: 0 };
-    //   const totals = Object.assign({}, stats_init);
-    //   ent = { c_ref: Country_Region, totals };
-    //   sums_country[Country_Region] = ent;
-    // }
-    // calc(ent.totals, item);
-    // calc(sums_total, item);
 
     let cent = country_dict[Country_Region];
     if (!cent) {
+      // stats_init = { Cases: 0, Deaths: 0 };
       const totals = Object.assign({}, stats_init);
       const pop_ent = country_pop_ent(Country_Region, pop_missing);
       // if (Country_Region === 'United States') report_log('pop_ent', pop_ent);
@@ -164,29 +160,48 @@ function process_cvs(cvs_inpath, file_date) {
       Province_State !== 'Recovered' &&
       Province_State !== Country_Region
     ) {
-      let ent = cent.states[Province_State];
-      if (!ent) {
+      let sent = cent.states[Province_State];
+      if (!sent) {
         const pop_ent = cent.pop_ent && cent.pop_ent.states[Province_State];
-        // if (Country_Region === 'United States')
-        //   report_log(
-        //     // 'Country_Region',
-        //     // Country_Region,
-        //     'Province_State',
-        //     Province_State,
-        //     'pop_ent',
-        //     pop_ent
-        //   );
         const totals = Object.assign({}, stats_init);
-        ent = {
+        sent = {
           c_ref: Province_State,
           totals,
           c_people: pop_ent ? pop_ent.Population : 0,
           states: {},
         };
-        cent.states[Province_State] = ent;
+        cent.states[Province_State] = sent;
       }
-      calc(ent.totals, item);
+      calc(sent.totals, item);
+      const Admin2 = item.Admin2;
+      if (Admin2) {
+        let aent = sent.states[Admin2];
+        if (!aent) {
+          let pop_ent = cent.pop_ent && cent.pop_ent.states[Province_State];
+          if (pop_ent && pop_ent.states) {
+            pop_ent = pop_ent.states[Admin2];
+          }
+          const totals = Object.assign({}, stats_init);
+          aent = {
+            c_ref: Admin2,
+            totals,
+            c_people: pop_ent ? pop_ent.Population : 0,
+            states: {},
+          };
+          sent.states[Admin2] = aent;
+        }
+        calc(aent.totals, item);
+      }
     }
+  }
+  function hasValue(item) {
+    let sum = 0;
+    for (let prop in stats_init) {
+      let val = item[prop];
+      if (!val) val = 0;
+      sum += parseFloat(val);
+    }
+    return sum;
   }
   function calc(sums, item) {
     for (let prop in stats_init) {
@@ -195,18 +210,26 @@ function process_cvs(cvs_inpath, file_date) {
       sums[prop] += parseFloat(val);
     }
   }
+
   write_daily(country_dict, file_date, store_dir);
 
-  for (let country in country_dict) {
-    const cent = country_dict[country];
+  // write_subs(country_dict, file_date, store_dir);
+
+  return country_dict;
+}
+
+function write_subs(subs_dict, file_date, path_root) {
+  for (let country in subs_dict) {
+    const cent = subs_dict[country];
     // report_log('file_date', file_date, 'country', country, 'cent', cent);
     const ncountry = fileNameFromCountryName(country);
     cent.ncountry = ncountry;
-    let cpath = path.resolve(store_dir, 'c_subs', ncountry);
-    const writen = write_daily(cent.states, file_date, cpath);
-    if (!writen) delete cent.ncountry;
+    let cpath = path.resolve(path_root, 'c_subs', ncountry);
+    const some = write_daily(cent.states, file_date, cpath);
+    if (!some) {
+      delete cent.ncountry;
+    }
   }
-  return country_dict;
 }
 
 function fileNameFromCountryName(country) {
@@ -214,30 +237,26 @@ function fileNameFromCountryName(country) {
 }
 
 function write_daily(country_dict, file_date, path_root) {
-  // if (argv_sort_deaths) {
-  //   sums = Object.values(country_dict);
-  //   sums.sort((item1, item2) => item2.totals.Deaths - item1.totals.Deaths);
-  // } else
-  // {
   const keys = Object.keys(country_dict).sort();
   const sums = keys.map(key => {
     const { c_ref, totals } = country_dict[key];
     return { c_ref, totals };
   });
-  // }
-  if (sums.length <= 0) {
+  if (sums.length > 0) {
+    let cpath = path.resolve(path_root, 'c_days');
+    fs.ensureDirSync(cpath);
+    const fname = file_date + '.json';
+    cpath = path.resolve(cpath, fname);
+    fs.writeJsonSync(cpath, sums, { spaces: 2 });
+
+    write_subs(country_dict, file_date, path_root);
+  } else {
     // report_log('write_daily empty', file_date, path_root);
-    return 0;
   }
-  let cpath = path.resolve(path_root, 'c_days');
-  fs.ensureDirSync(cpath);
-  const fname = file_date + '.json';
-  cpath = path.resolve(cpath, fname);
-  fs.writeJsonSync(cpath, sums, { spaces: 2 });
-  return 1;
+  return sums.length;
 }
 
-function write_meta(state_dir, { state_name, country_dict }) {
+function write_meta(state_dir, { state_name, country_dict, report_n_states }) {
   // report_log('write_meta state_dir', state_dir);
   const key = 'c_ref';
   const c_dates = [];
@@ -305,11 +324,12 @@ function write_meta(state_dir, { state_name, country_dict }) {
     if (country_dict) {
       const cent = country_dict[uname];
       if (cent) {
-        // const n_states = Object.keys(cent.states ? cent.states : {}).length;
         const n_states = Object.keys(cent.states).length;
         if (n_states) {
           ent.n_states = n_states;
-          report_log(uname + '| n_states ' + ent.n_states);
+          if (report_n_states) {
+            report_log(uname + '| n_states ' + ent.n_states);
+          }
         }
         ent.c_people = cent.c_people;
       }
@@ -319,7 +339,32 @@ function write_meta(state_dir, { state_name, country_dict }) {
   const outpath_meta = path.resolve(state_dir, 'c_meta.json');
   const meta = { c_regions, c_dates };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
+
+  write_meta_subs(state_dir, { state_name, country_dict, report_n_states: 0 });
+
   return meta;
+}
+
+function write_meta_subs(
+  path_root,
+  { state_name, country_dict, report_n_states }
+) {
+  // Write meta for states with in each country that has them
+  const subs_path = path.resolve(path_root, 'c_subs');
+  for (let country in country_dict) {
+    const cent = country_dict[country];
+    if (!cent.ncountry) {
+      // report_log('skipping country', country);
+      continue;
+    }
+    const state_dir = path.resolve(subs_path, cent.ncountry);
+    // report_log('process_summary fpath', fpath);
+    write_meta(state_dir, {
+      state_name: (state_name ? state_name + ' ' : '') + cent.ncountry,
+      country_dict: cent.states,
+      report_n_states,
+    });
+  }
 }
 
 function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
@@ -331,5 +376,5 @@ function dump(records, sums_total, sums, cvs_inpath, outpath_country) {
     report_log('sums[' + index + '] ' + JSON.stringify(sums[index]));
   }
   report_log(cvs_inpath);
-  report_log(outpath_country, '\n');
+  report_log(outpath_country + '\n');
 }
