@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
 import {
   Button,
   Container,
@@ -8,22 +10,19 @@ import {
   Menu,
   Select,
 } from 'semantic-ui-react';
-import React, { useEffect, useState } from 'react';
-
-import AboutTab from '../graph_tabs/AboutTab';
+import styled from 'styled-components';
 import CountryDataTable from '../components/CountryDataTable';
 import DateSlider from '../components/DateSlider';
-import FocusTab from '../graph_tabs/FocusTab';
-import ReactGA from 'react-ga';
-import ReferencesTab from '../graph_tabs/ReferencesTab';
 import RegionNavTable from '../components/RegionNavTable';
-import SoftBodyTab from '../graph_tabs/SoftBodyTab';
 import World from '../graph/World';
 import extract_slices from '../graph/extract_slices';
-import fetchData from '../js/fetchData';
-import styled from 'styled-components';
+import AboutTab from '../graph_tabs/AboutTab';
+import FocusTab from '../graph_tabs/FocusTab';
+import ReferencesTab from '../graph_tabs/ReferencesTab';
+import SoftBodyTab from '../graph_tabs/SoftBodyTab';
 import useInterval from '../hooks/useInterval';
 import useLocalStorage from '../hooks/useLocalStorage';
+import fetchData from '../js/fetchData';
 
 const nslice = 8;
 const top_label = 'World';
@@ -699,12 +698,10 @@ const Graph = () => {
               </Button.Group>
               <Button.Group>
                 <Button size="mini" onClick={selectTotals} active={to_active}>
-                  To Date:
-                  {/* Total: */}
+                  to date:
                 </Button>
                 <Button size="mini" onClick={selectDaily} active={da_active}>
-                  On Day:
-                  {/* On date: */}
+                  on day:
                 </Button>
               </Button.Group>
               <div>
