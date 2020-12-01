@@ -77,54 +77,19 @@ function process_population_table() {
     }
   }
   fs.writeJsonSync(population_json_path, pop_dict, { spaces: 2 });
-
-  // console.log('process_population_table records', records);
-  // for (let index = 0; index < 10; index++) {
-  //   console.log(index, records[index]);
-  // }
 }
 
-// pop_missing [
-//   'Aruba',
-//   'Cape Verde',
-//   'Cayman Islands',
-//   'Channel Islands',
-//   'Cruise Ship',
-//   'Curacao',
-//   'Czech Republic',
-//   'East Timor',
-//   'Faroe Islands',
-//   'French Guiana',
-//   'Gibraltar',
-//   'Greenland',
-//   'Guadeloupe',
-//   'Guam',
-//   'Guernsey',
-//   'Hong Kong SAR',
-//   'Ivory Coast',
-//   'Jersey',
-//   'Macao SAR',
-//   'Macau',
-//   'Martinique',
-//   'Mayotte',
-//   'North Ireland',
-//   'Others',
-//   'Palestine',
-//   'Republic of Ireland',
-//   'Republic of Korea',
-//   'Republic of Moldova',
-//   'Reunion',
-//   'Russian Federation',
-//   'Saint Barthelemy',
-//   'Saint Martin',
-//   'St. Martin',
-//   'Taipei and environs',
-//   'United States',
-//   'Vatican City',
-//   'occupied Palestinian territory'
-// ]
 const Country_Region_renames = {
   US: 'United States',
+};
+
+const Country_Region_renames2 = {
+  US: {
+    Country_Region: 'United States',
+    Province_State: {
+      'New York': { Admin2: { Kings: 'Brooklyn', Richmond: 'Staten Island' } },
+    },
+  },
 };
 
 if (!module.parent) {

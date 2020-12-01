@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import ReactGA from 'react-ga';
 import {
   Button,
   Container,
@@ -10,18 +8,21 @@ import {
   Menu,
   Select,
 } from 'semantic-ui-react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
+
+import AboutTab from '../graph_tabs/AboutTab';
 import CountryDataTable from '../components/CountryDataTable';
 import DateSlider from '../components/DateSlider';
-import World from '../graph/World';
-import extract_slices from '../graph/extract_slices';
-import AboutTab from '../graph_tabs/AboutTab';
 import FocusTab from '../graph_tabs/FocusTab';
+import ReactGA from 'react-ga';
 import ReferencesTab from '../graph_tabs/ReferencesTab';
 import SoftBodyTab from '../graph_tabs/SoftBodyTab';
+import World from '../graph/World';
+import extract_slices from '../graph/extract_slices';
+import fetchData from '../js/fetchData';
+import styled from 'styled-components';
 import useInterval from '../hooks/useInterval';
 import useLocalStorage from '../hooks/useLocalStorage';
-import fetchData from '../js/fetchData';
 
 const nslice = 8;
 const top_label = 'World';
@@ -82,10 +83,16 @@ const Graph = () => {
   const dataPrefix = (countrySelected) => {
     let prefix = '';
     if (countrySelected.c_ref) {
-      prefix = countrySelected.c_ref;
-      prefix = prefix.replace(/ /g, '_').replace(/,/g, '');
+      for (
+        let ncountry = countrySelected;
+        ncountry;
+        ncountry = ncountry.parent
+      ) {
+        let c_ref = ncountry.c_ref.replace(/ /g, '_').replace(/,/g, '');
+        prefix = 'c_subs/' + c_ref + '/' + prefix;
+      }
     }
-    prefix = prefix ? 'c_subs/' + prefix + '/' : '';
+    // prefix = prefix ? 'c_subs/' + prefix + '/' : '';
     return prefix;
   };
 
@@ -502,6 +509,9 @@ const Graph = () => {
     console.log('selectCountry country', country);
     setDay({});
     setMetac({});
+    if (countrySelected.c_ref) {
+      country = { ...country, parent: countrySelected };
+    }
     setCountrySelected(country);
   };
 
@@ -511,6 +521,12 @@ const Graph = () => {
     setDay({});
     setMetac({});
     setCountrySelected({});
+  };
+
+  const selectParentCounty = () => {
+    setDay({});
+    setMetac({});
+    setCountrySelected(countrySelected.parent);
   };
 
   const regionPlusClick = () => {
@@ -543,6 +559,21 @@ const Graph = () => {
     },
   };
 
+  const CountryNavButtons = () => {
+    return (
+      <>
+        {countrySelected.c_ref && (
+          <button onClick={selectWorldwide}>Worldwide</button>
+        )}
+        {countrySelected.parent && (
+          <button onClick={selectParentCounty}>
+            {countrySelected.parent.c_ref}
+          </button>
+        )}
+      </>
+    );
+  };
+
   const RegionTab = () => {
     return (
       <div>
@@ -552,9 +583,10 @@ const Graph = () => {
           </button>
           <button onClick={findFirstDate}>First {uiprop}</button>
           <button onClick={findLastestDate}>Latest</button>
-          {countrySelected.c_ref && (
+          <CountryNavButtons />
+          {/* {countrySelected.c_ref && (
             <button onClick={selectWorldwide}>Worldwide</button>
-          )}
+          )} */}
         </div>
         <CountryDataTable
           items={sortedItems || []}
