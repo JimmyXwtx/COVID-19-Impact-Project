@@ -74,7 +74,6 @@ function process_summary(country_dict) {
 
   // Write meta for countries
   write_meta(store_dir, { country_dict, report_n_states: 1 });
-  report_log('-------------------------------------------');
 
   // Write meta for states with in each country that has them
   // const states_path = path.resolve(store_dir, 'c_subs');
