@@ -631,7 +631,6 @@ const Graph = () => {
     const regionTitle = getRegionTitle();
     return (
       <div>
-        <RegionNavTable items={countryTabNavItems()} />
         <div>
           <button onClick={clickPer100k}>
             {per100k ? '-' : ''} Per 100,000
@@ -640,6 +639,7 @@ const Graph = () => {
           <button onClick={findLastestDate}>Latest</button>
           {/* <CountryNavButtons /> */}
         </div>
+        <RegionNavTable items={countryTabNavItems()} />
         <CountryDataTable
           items={sortedItems || []}
           propTitle={propTitle}

@@ -12,6 +12,7 @@ const StyledCountryDataTable = styled.table`
 
   td {
     padding: 0.625rem;
+    font-weight: bold;
   }
 
   thead {
