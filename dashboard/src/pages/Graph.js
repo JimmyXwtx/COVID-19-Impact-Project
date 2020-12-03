@@ -603,20 +603,26 @@ const Graph = () => {
       if (ncountry.parent) {
         item = {
           c_ref: (
-            <button
+            <Button
+              basic
+              size="mini"
               onClick={() => {
                 selectCountryParent(ncountry);
               }}
             >
               {ncountry.parent.c_ref}
-            </button>
+            </Button>
           ),
           propValueInvalid: true,
           propPercentInvalid: true,
         };
       } else if (ncountry.c_ref) {
         item = {
-          c_ref: <button onClick={selectWorldwide}>Worldwide</button>,
+          c_ref: (
+            <Button basic size="mini" onClick={selectWorldwide}>
+              Worldwide
+            </Button>
+          ),
           propValueInvalid: true,
           propPercentInvalid: true,
         };
@@ -631,14 +637,17 @@ const Graph = () => {
     const regionTitle = getRegionTitle();
     return (
       <div>
-        <div>
-          <button onClick={clickPer100k}>
-            {per100k ? '-' : ''} Per 100,000
-          </button>
-          <button onClick={findFirstDate}>First {uiprop}</button>
-          <button onClick={findLastestDate}>Latest</button>
-          {/* <CountryNavButtons /> */}
-        </div>
+        <Button basic size="mini" onClick={clickPer100k}>
+          {per100k ? '-' : ''} Per 100,000
+        </Button>
+        <Button basic size="mini" onClick={findFirstDate}>
+          First {uiprop}
+        </Button>
+        <Button basic size="mini" onClick={findLastestDate}>
+          Latest
+        </Button>
+        {/* <CountryNavButtons /> */}
+
         <RegionNavTable items={countryTabNavItems()} />
         <CountryDataTable
           items={sortedItems || []}
