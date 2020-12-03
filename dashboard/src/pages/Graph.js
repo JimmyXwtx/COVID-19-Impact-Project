@@ -198,6 +198,10 @@ const Graph = () => {
     };
     const sorted_items = items.concat().sort(sortPropValue);
 
+    sorted_items.forEach((item, index) => {
+      item.iorder = index;
+    });
+
     let slideIndex = sorted_items.findIndex(
       (item) => item.c_ref === countryFocus
     );
@@ -216,29 +220,22 @@ const Graph = () => {
           item.propValueTable = 0;
         }
       });
-      // !!@ Awaiting sort in table header
-      // const sortPropValueTable = (item1, item2) => {
-      //   const rank = item2.propValueTable - item1.propValueTable;
-      //   if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
-      //   return rank;
-      // };
-      // sorted_items.sort(sortPropValueTable);
     }
     let sortFunc;
     switch (sortColumn) {
-      case 'region':
+      case 'Region':
         sortFunc = (item1, item2) => {
           return item1.c_ref.localeCompare(item2.c_ref);
         };
         break;
-      case 'prop':
+      case 'Totals':
         sortFunc = (item1, item2) => {
           const rank = item2.propValueTable - item1.propValueTable;
           if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
           return rank;
         };
         break;
-      case 'percent':
+      case 'Percent':
         sortFunc = (item1, item2) => {
           const rank = item2.propPercent - item1.propPercent;
           if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
@@ -632,6 +629,24 @@ const Graph = () => {
     return items.reverse();
   };
 
+  const SortBySelect = () => {
+    const options = ['Region', 'Totals', 'Percent'].map((uname) =>
+      ui_key(uname)
+    );
+    return (
+      <Select
+        placeholder="Sort By"
+        size="mini"
+        selection
+        value={sortColumn}
+        onChange={(param, data) => {
+          setSortColumn(data.value);
+        }}
+        options={options}
+      />
+    );
+  };
+
   const RegionTab = () => {
     const nslices = pieData[0].slices.length;
     const regionTitle = getRegionTitle();
@@ -646,8 +661,8 @@ const Graph = () => {
         <Button basic size="mini" onClick={findLastestDate}>
           Latest
         </Button>
-        {/* <CountryNavButtons /> */}
-
+        Sort By:
+        <SortBySelect />
         <RegionNavTable items={countryTabNavItems()} />
         <CountryDataTable
           items={sortedItems || []}

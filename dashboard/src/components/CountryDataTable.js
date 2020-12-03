@@ -56,12 +56,13 @@ const Rows = (props) => {
       propValueInvalid,
       propPercent,
       propPercentInvalid,
+      iorder,
     } = country;
     // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
     const slugKey = `tr-country-${index}`;
     const style = {
       backgroundColor:
-        index < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
+        iorder < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
     };
     return (
       <tr key={slugKey}>
@@ -112,8 +113,13 @@ const CountryDataTable = (props) => {
       {sortActionSpec && (
         <thead>
           <tr>
+            <th>{regionTitle}</th>
+            <th>
+              {propTitle} {per100k ? ' per 100,000' : null}
+            </th>
+            <th>Percent</th>
             {/* <th width="60%">Region</th> */}
-            <th style={sortActionSpec.region.style}>
+            {/* <th style={sortActionSpec.region.style}>
               <Button basic size="tiny" onClick={sortActionSpec.region.onclick}>
                 ▼ {regionTitle}
               </Button>
@@ -131,7 +137,7 @@ const CountryDataTable = (props) => {
               >
                 ▼ Percent
               </Button>
-            </th>
+            </th> */}
           </tr>
         </thead>
       )}
