@@ -101,7 +101,7 @@ const CountryDataTable = (props) => {
     selectCountry,
     parentCountry,
     per100k,
-    sortActionSpec,
+    // sortActionSpec,
     regionTitle,
   } = props;
   // const pieslices = pie_data[0].slices;
@@ -110,16 +110,16 @@ const CountryDataTable = (props) => {
   console.log('CountryDataTable items', items);
   return (
     <StyledCountryDataTable>
-      {sortActionSpec && (
-        <thead>
-          <tr>
-            <th>{regionTitle}</th>
-            <th>
-              {propTitle} {per100k ? ' per 100,000' : null}
-            </th>
-            <th>Percent</th>
-            {/* <th width="60%">Region</th> */}
-            {/* <th style={sortActionSpec.region.style}>
+      {/* {sortActionSpec && ( */}
+      <thead>
+        <tr>
+          <th>{regionTitle}</th>
+          <th>
+            {propTitle} {per100k ? ' per 100,000' : null}
+          </th>
+          <th>Percent</th>
+          {/* <th width="60%">Region</th> */}
+          {/* <th style={sortActionSpec.region.style}>
               <Button basic size="tiny" onClick={sortActionSpec.region.onclick}>
                 ▼ {regionTitle}
               </Button>
@@ -138,9 +138,9 @@ const CountryDataTable = (props) => {
                 ▼ Percent
               </Button>
             </th> */}
-          </tr>
-        </thead>
-      )}
+        </tr>
+      </thead>
+      {/* )} */}
       <tbody>
         <Rows
           items={items}

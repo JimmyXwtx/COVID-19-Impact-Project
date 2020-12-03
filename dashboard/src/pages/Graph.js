@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactGA from 'react-ga';
 import {
   Button,
+  Checkbox,
   Container,
   Grid,
   Header,
@@ -22,6 +23,7 @@ import ReferencesTab from '../graph_tabs/ReferencesTab';
 import SoftBodyTab from '../graph_tabs/SoftBodyTab';
 import useInterval from '../hooks/useInterval';
 import useLocalStorage from '../hooks/useLocalStorage';
+import useWindowSize from '../hooks/useWindowSize';
 import fetchData from '../js/fetchData';
 
 const nslice = 8;
@@ -65,7 +67,9 @@ const Graph = () => {
   const [sortedItems, setSortedItems] = useState();
   const [pieData, setPieData] = useState();
 
-  const [sortColumn, setSortColumn] = useState('');
+  const [sortColumn, setSortColumn] = useState('Percent');
+
+  const windowSize = useWindowSize();
 
   // metac = {
   //   "c_ref": "US"
@@ -533,31 +537,31 @@ const Graph = () => {
   //   setRegionOptions(!regionOptions);
   // };
 
-  const clickPer100k = () => {
-    setPer100k(!per100k);
-  };
+  // const clickPer100k = () => {
+  //   setPer100k(!per100k);
+  // };
 
-  const tunder = { textDecoration: 'underline' };
-  const sortActionSpec = {
-    region: {
-      style: sortColumn === 'region' ? tunder : null,
-      onclick: () => {
-        setSortColumn('region');
-      },
-    },
-    prop: {
-      style: sortColumn === 'prop' ? tunder : null,
-      onclick: () => {
-        setSortColumn('prop');
-      },
-    },
-    percent: {
-      style: sortColumn === 'percent' ? tunder : null,
-      onclick: () => {
-        setSortColumn('percent');
-      },
-    },
-  };
+  // const tunder = { textDecoration: 'underline' };
+  // const sortActionSpec = {
+  //   region: {
+  //     style: sortColumn === 'region' ? tunder : null,
+  //     onclick: () => {
+  //       setSortColumn('region');
+  //     },
+  //   },
+  //   prop: {
+  //     style: sortColumn === 'prop' ? tunder : null,
+  //     onclick: () => {
+  //       setSortColumn('prop');
+  //     },
+  //   },
+  //   percent: {
+  //     style: sortColumn === 'percent' ? tunder : null,
+  //     onclick: () => {
+  //       setSortColumn('percent');
+  //     },
+  //   },
+  // };
 
   // const CountryNavButtons = () => {
   //   return (
@@ -634,16 +638,19 @@ const Graph = () => {
       ui_key(uname)
     );
     return (
-      <Select
-        placeholder="Sort By"
-        size="mini"
-        selection
-        value={sortColumn}
-        onChange={(param, data) => {
-          setSortColumn(data.value);
-        }}
-        options={options}
-      />
+      <>
+        Sort By:{' '}
+        <Select
+          placeholder="Sort By"
+          size="mini"
+          selection
+          value={sortColumn}
+          onChange={(param, data) => {
+            setSortColumn(data.value);
+          }}
+          options={options}
+        />{' '}
+      </>
     );
   };
 
@@ -652,17 +659,23 @@ const Graph = () => {
     const regionTitle = getRegionTitle();
     return (
       <div>
-        <Button basic size="mini" onClick={clickPer100k}>
+        {/* <Button basic size="mini" onClick={clickPer100k}>
           {per100k ? '-' : ''} Per 100,000
-        </Button>
+        </Button> */}
+        <SortBySelect />
+        <Checkbox
+          label="Per 100,000"
+          onChange={() => {
+            setPer100k(!per100k);
+          }}
+          checked={per100k}
+        />{' '}
         <Button basic size="mini" onClick={findFirstDate}>
           First {uiprop}
         </Button>
         <Button basic size="mini" onClick={findLastestDate}>
           Latest
         </Button>
-        Sort By:
-        <SortBySelect />
         <RegionNavTable items={countryTabNavItems()} />
         <CountryDataTable
           items={sortedItems || []}
@@ -671,7 +684,7 @@ const Graph = () => {
           selectCountry={selectCountry}
           parentCountry={countrySelected.c_ref}
           per100k={per100k}
-          sortActionSpec={sortActionSpec}
+          // sortActionSpec={sortActionSpec}
           regionTitle={regionTitle}
         />
       </div>
@@ -687,13 +700,14 @@ const Graph = () => {
     );
   };
 
+  const stacked = windowSize.width < 1024;
+
   return (
     <>
       <Container style={{ marginTop: '1rem' }}>
         <Loader active={loaderActive} inline></Loader>
         <HeadStats />
-        <World pie_data={pieData} opacity={graphOpacity} />
-        {/* <HeadStats /> */}
+        <World pie_data={pieData} opacity={graphOpacity} stacked={stacked} />
         <Grid>
           <Grid.Row style={{ padding: '0 16px' }}>
             <DateSlider

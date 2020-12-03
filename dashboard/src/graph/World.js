@@ -8,7 +8,7 @@ import material from './material';
 // const label = x + '\n' + item.Deaths;
 // pie_data.push({ x, y, label });
 
-const World = ({ pie_data, opacity }) => {
+const World = ({ pie_data, opacity, stacked }) => {
   // const { pie_data } = props;
   const pieslices = pie_data[0].slices;
   const barslices = pie_data[1].slices.concat().reverse();
@@ -25,11 +25,14 @@ const World = ({ pie_data, opacity }) => {
     other =
       label + ' Total for the ' + ent.count + ' regions not shown on graph';
   }
+  let style_parent = { parent: { maxWidth: '50%' } };
+  if (stacked) style_parent = null;
   return (
     <div>
       <div style={{ display: 'flex', flexWrap: 'wrap', opacity }}>
         <VictoryPie
-          style={{ parent: { maxWidth: '50%' } }}
+          // style={{ parent: { maxWidth: '50%' } }}
+          style={{ ...style_parent }}
           colorScale={colors}
           theme={material}
           data={pieslices}
@@ -37,7 +40,7 @@ const World = ({ pie_data, opacity }) => {
         <VictoryBar
           horizontal
           style={{
-            parent: { maxWidth: '50%' },
+            ...style_parent,
             data: {
               fill: ({ _x }) => colorfor(barslices.length - _x),
             },
