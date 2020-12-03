@@ -1,7 +1,7 @@
-import NumberFormat from 'react-number-format';
 import React from 'react';
-import StyledRegionNavTable from '../styles/StyledRegionNavTable';
+import NumberFormat from 'react-number-format';
 import styled from 'styled-components';
+import StyledRegionNavTable from '../styles/StyledRegionNavTable';
 
 function percentFormat(num) {
   // num = Math.round((val / stats_total) * 1000) / 10;
@@ -58,10 +58,7 @@ const Rows = (props) => {
 
 const RegionNavTable = (props) => {
   const { items } = props;
-  // const pieslices = pie_data[0].slices;
-  // console.log('pieslices.length', pieslices.length);
-  // const { items } = props;
-  console.log('CountryDataTable items', items);
+  console.log('RegionNavTable items', items);
   return (
     <StyledRegionNavTable>
       <tbody>

@@ -104,10 +104,7 @@ const CountryDataTable = (props) => {
     // sortActionSpec,
     regionTitle,
   } = props;
-  // const pieslices = pie_data[0].slices;
-  // console.log('pieslices.length', pieslices.length);
-  // const { items } = props;
-  console.log('CountryDataTable items', items);
+  // console.log('CountryDataTable items', items);
   return (
     <StyledCountryDataTable>
       {/* {sortActionSpec && ( */}

@@ -701,6 +701,8 @@ const Graph = () => {
   };
 
   const stacked = windowSize.width < 1024;
+  // console.log('windowSize.width', windowSize.width);
+  // console.log('window', window);
 
   return (
     <>
