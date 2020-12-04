@@ -24,23 +24,41 @@ const World = ({ pie_data, opacity, stacked }) => {
   if (stacked) style_parent = null;
   return (
     <div>
-      <div style={{ display: 'flex', flexWrap: 'wrap', opacity }}>
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          opacity,
+          // pointerEvents: 'auto',
+          // userSelect: 'auto',
+        }}
+      >
         <VictoryPie
-          style={{ ...style_parent }}
+          style={{
+            ...style_parent,
+            pointerEvents: 'auto',
+            touchAction: 'auto',
+            userSelect: 'auto',
+          }}
           colorScale={colors}
           theme={material}
           data={pieslices}
+          // pointerEvents="none"
         />
         <VictoryBar
           horizontal
           style={{
             ...style_parent,
+            pointerEvents: 'auto',
+            touchAction: 'auto',
+            userSelect: 'auto',
             data: {
               fill: ({ _x }) => colorfor(barslices.length - _x),
             },
           }}
           theme={material}
           data={barslices}
+          // pointerEvents="none"
         />
         <p style={{ marginBottom: 8 }}>{other}</p>
       </div>
