@@ -68,8 +68,8 @@ const Graph = () => {
   const [pieData, setPieData] = useState();
 
   const [sortColumn, setSortColumn] = useState('Percent');
-
   const windowSize = useWindowSize();
+  const [graphVisible, setGraphVisible] = useState();
 
   // metac = {
   //   "c_ref": "US"
@@ -691,25 +691,42 @@ const Graph = () => {
     );
   };
 
+  const stacked = windowSize.width < 1024;
+  // console.log('windowSize.width', windowSize.width);
+  // console.log('window', window);
+
+  const showGraphAction = () => {
+    setGraphVisible(!graphVisible);
+  };
+
   const HeadStats = () => {
     const stats_total = pieData[0].stats_total;
     return (
       <Header as="h3">
-        {stats_total} {ui_top} {uiprop_s} {upto_on} {dateFocusShort}
+        {stats_total} {ui_top} {uiprop_s} {upto_on} {dateFocusShort}{' '}
+        {stacked && (
+          <Button size="mini" onClick={showGraphAction}>
+            {graphVisible ? 'Hide Graph' : 'Show Graph'}
+          </Button>
+        )}
       </Header>
     );
   };
 
-  const stacked = windowSize.width < 1024;
-  // console.log('windowSize.width', windowSize.width);
-  // console.log('window', window);
+  const WorldStub = () => {
+    if (!stacked || graphVisible)
+      return (
+        <World pie_data={pieData} opacity={graphOpacity} stacked={stacked} />
+      );
+    return null;
+  };
 
   return (
     <>
       <Container style={{ marginTop: '1rem' }}>
         <Loader active={loaderActive} inline></Loader>
         <HeadStats />
-        <World pie_data={pieData} opacity={graphOpacity} stacked={stacked} />
+        <WorldStub />
         <Grid>
           <Grid.Row style={{ padding: '0 16px' }}>
             <DateSlider

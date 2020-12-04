@@ -21,7 +21,7 @@ const World = ({ pie_data, opacity, stacked }) => {
       label + ' Total for the ' + ent.count + ' regions not shown on graph';
   }
   let style_parent = { parent: { maxWidth: '50%' } };
-  if (stacked) style_parent = null;
+  if (stacked) style_parent = {};
   return (
     <div>
       <div
@@ -29,8 +29,6 @@ const World = ({ pie_data, opacity, stacked }) => {
           display: 'flex',
           flexWrap: 'wrap',
           opacity,
-          // pointerEvents: 'auto',
-          // userSelect: 'auto',
         }}
       >
         <VictoryPie
@@ -43,7 +41,6 @@ const World = ({ pie_data, opacity, stacked }) => {
           colorScale={colors}
           theme={material}
           data={pieslices}
-          // pointerEvents="none"
         />
         <VictoryBar
           horizontal
@@ -58,7 +55,6 @@ const World = ({ pie_data, opacity, stacked }) => {
           }}
           theme={material}
           data={barslices}
-          // pointerEvents="none"
         />
         <p style={{ marginBottom: 8 }}>{other}</p>
       </div>
