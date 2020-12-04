@@ -151,6 +151,13 @@ const GlobalStyle = createGlobalStyle`
   .numbers { letter-spacing: .01em; }
 
   .ui.search.dropdown { min-width: auto; }
+
+
+  .VictoryContainer {
+    user-select: auto !important;
+    pointer-events: auto !important;
+    touch-action: auto !important;
+    }    
 `;
 
 export default GlobalStyle;

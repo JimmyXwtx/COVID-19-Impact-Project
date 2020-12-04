@@ -1,11 +1,12 @@
-import FlagIcon from '../components/FlagIcon';
-import NumberFormat from 'react-number-format';
 import React from 'react';
-import StyledCountryDataTable from '../styles/StyledCountryDataTable';
-import { colorfor } from '../graph/colors';
-import getCountryCode from '../js/getCountryCode';
+import NumberFormat from 'react-number-format';
+import { Button } from 'semantic-ui-react';
 // import slug from 'slug';
 import styled from 'styled-components';
+import FlagIcon from '../components/FlagIcon';
+import { colorfor } from '../graph/colors';
+import getCountryCode from '../js/getCountryCode';
+import StyledCountryDataTable from '../styles/StyledCountryDataTable';
 
 function percentFormat(num) {
   // num = Math.round((val / stats_total) * 1000) / 10;
@@ -26,7 +27,9 @@ const regionRow = (country, index, selectCountry, parentCountry) => {
   const countryCode = parentCountry ? null : getCountryCode(c_ref);
   if (country.n_states)
     return (
-      <button
+      <Button
+        basic
+        size="tiny"
         onClick={() => {
           console.log('CountryDataTable index', index, 'country', country);
           if (selectCountry) selectCountry(country);
@@ -34,7 +37,7 @@ const regionRow = (country, index, selectCountry, parentCountry) => {
       >
         {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
         {c_ref}
-      </button>
+      </Button>
     );
   else
     return (
@@ -53,12 +56,13 @@ const Rows = (props) => {
       propValueInvalid,
       propPercent,
       propPercentInvalid,
+      iorder,
     } = country;
     // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
     const slugKey = `tr-country-${index}`;
     const style = {
       backgroundColor:
-        index < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
+        iorder < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
     };
     return (
       <tr key={slugKey}>
@@ -97,34 +101,43 @@ const CountryDataTable = (props) => {
     selectCountry,
     parentCountry,
     per100k,
-    sortActionSpec,
+    // sortActionSpec,
     regionTitle,
   } = props;
-  // const pieslices = pie_data[0].slices;
-  // console.log('pieslices.length', pieslices.length);
-  // const { items } = props;
-  console.log('CountryDataTable items', items);
+  // console.log('CountryDataTable items', items);
   return (
     <StyledCountryDataTable>
-      {sortActionSpec && (
-        <thead>
-          <tr>
-            {/* <th width="60%">Region</th> */}
-            <th style={sortActionSpec.region.style}>
-              <button onClick={sortActionSpec.region.onclick}>▼</button>
-              {regionTitle}
+      {/* {sortActionSpec && ( */}
+      <thead>
+        <tr>
+          <th>{regionTitle}</th>
+          <th>
+            {propTitle} {per100k ? ' per 100,000' : null}
+          </th>
+          <th>Percent</th>
+          {/* <th width="60%">Region</th> */}
+          {/* <th style={sortActionSpec.region.style}>
+              <Button basic size="tiny" onClick={sortActionSpec.region.onclick}>
+                ▼ {regionTitle}
+              </Button>
             </th>
             <th style={sortActionSpec.prop.style}>
-              <button onClick={sortActionSpec.prop.onclick}>▼</button>
-              {propTitle} {per100k ? ' per 100,000' : null}
+              <Button basic size="tiny" onClick={sortActionSpec.prop.onclick}>
+                ▼ {propTitle} {per100k ? ' per 100,000' : null}
+              </Button>
             </th>
             <th width="10%" style={sortActionSpec.percent.style}>
-              <button onClick={sortActionSpec.percent.onclick}>▼</button>
-              Percent
-            </th>
-          </tr>
-        </thead>
-      )}
+              <Button
+                basic
+                size="tiny"
+                onClick={sortActionSpec.percent.onclick}
+              >
+                ▼ Percent
+              </Button>
+            </th> */}
+        </tr>
+      </thead>
+      {/* )} */}
       <tbody>
         <Rows
           items={items}

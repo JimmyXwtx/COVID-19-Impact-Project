@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactGA from 'react-ga';
 import {
   Button,
+  Checkbox,
   Container,
   Grid,
   Header,
@@ -22,6 +23,7 @@ import ReferencesTab from '../graph_tabs/ReferencesTab';
 import SoftBodyTab from '../graph_tabs/SoftBodyTab';
 import useInterval from '../hooks/useInterval';
 import useLocalStorage from '../hooks/useLocalStorage';
+import useWindowSize from '../hooks/useWindowSize';
 import fetchData from '../js/fetchData';
 
 const nslice = 8;
@@ -65,7 +67,9 @@ const Graph = () => {
   const [sortedItems, setSortedItems] = useState();
   const [pieData, setPieData] = useState();
 
-  const [sortColumn, setSortColumn] = useState('');
+  const [sortColumn, setSortColumn] = useState('Percent');
+  const windowSize = useWindowSize();
+  const [graphVisible, setGraphVisible] = useState();
 
   // metac = {
   //   "c_ref": "US"
@@ -198,6 +202,10 @@ const Graph = () => {
     };
     const sorted_items = items.concat().sort(sortPropValue);
 
+    sorted_items.forEach((item, index) => {
+      item.iorder = index;
+    });
+
     let slideIndex = sorted_items.findIndex(
       (item) => item.c_ref === countryFocus
     );
@@ -216,29 +224,22 @@ const Graph = () => {
           item.propValueTable = 0;
         }
       });
-      // !!@ Awaiting sort in table header
-      // const sortPropValueTable = (item1, item2) => {
-      //   const rank = item2.propValueTable - item1.propValueTable;
-      //   if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
-      //   return rank;
-      // };
-      // sorted_items.sort(sortPropValueTable);
     }
     let sortFunc;
     switch (sortColumn) {
-      case 'region':
+      case 'Region':
         sortFunc = (item1, item2) => {
           return item1.c_ref.localeCompare(item2.c_ref);
         };
         break;
-      case 'prop':
+      case 'Totals':
         sortFunc = (item1, item2) => {
           const rank = item2.propValueTable - item1.propValueTable;
           if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
           return rank;
         };
         break;
-      case 'percent':
+      case 'Percent':
         sortFunc = (item1, item2) => {
           const rank = item2.propPercent - item1.propPercent;
           if (rank === 0) return item1.c_ref.localeCompare(item2.c_ref);
@@ -536,31 +537,31 @@ const Graph = () => {
   //   setRegionOptions(!regionOptions);
   // };
 
-  const clickPer100k = () => {
-    setPer100k(!per100k);
-  };
+  // const clickPer100k = () => {
+  //   setPer100k(!per100k);
+  // };
 
-  const tunder = { textDecoration: 'underline' };
-  const sortActionSpec = {
-    region: {
-      style: sortColumn === 'region' ? tunder : null,
-      onclick: () => {
-        setSortColumn('region');
-      },
-    },
-    prop: {
-      style: sortColumn === 'prop' ? tunder : null,
-      onclick: () => {
-        setSortColumn('prop');
-      },
-    },
-    percent: {
-      style: sortColumn === 'percent' ? tunder : null,
-      onclick: () => {
-        setSortColumn('percent');
-      },
-    },
-  };
+  // const tunder = { textDecoration: 'underline' };
+  // const sortActionSpec = {
+  //   region: {
+  //     style: sortColumn === 'region' ? tunder : null,
+  //     onclick: () => {
+  //       setSortColumn('region');
+  //     },
+  //   },
+  //   prop: {
+  //     style: sortColumn === 'prop' ? tunder : null,
+  //     onclick: () => {
+  //       setSortColumn('prop');
+  //     },
+  //   },
+  //   percent: {
+  //     style: sortColumn === 'percent' ? tunder : null,
+  //     onclick: () => {
+  //       setSortColumn('percent');
+  //     },
+  //   },
+  // };
 
   // const CountryNavButtons = () => {
   //   return (
@@ -589,41 +590,128 @@ const Graph = () => {
     setCountrySelected(ncountry.parent);
   };
 
-  const countryTabNavItems = () => {
+  // const countryTabNavItems = () => {
+  //   const stats_total = pieData[0].stats_total;
+  //   const items = [
+  //     {
+  //       c_ref: ui_top + ' ' + stats_total + ' ' + uiprop_s,
+  //       // propValueTable: stats_total,
+  //       propPercent: 1.0,
+  //     },
+  //   ];
+  //   for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
+  //     let item;
+  //     if (ncountry.parent) {
+  //       item = {
+  //         c_ref: (
+  //           <Button
+  //             basic
+  //             size="mini"
+  //             onClick={() => {
+  //               selectCountryParent(ncountry);
+  //             }}
+  //           >
+  //             &lt; {ncountry.parent.c_ref}
+  //           </Button>
+  //         ),
+  //         propValueInvalid: true,
+  //         propPercentInvalid: true,
+  //       };
+  //     } else if (ncountry.c_ref) {
+  //       item = {
+  //         c_ref: (
+  //           <Button basic size="mini" onClick={selectWorldwide}>
+  //             &lt; Worldwide
+  //           </Button>
+  //         ),
+  //         propValueInvalid: true,
+  //         propPercentInvalid: true,
+  //       };
+  //     }
+  //     if (item) items.push(item);
+  //   }
+  //   return items.reverse();
+  // };
+
+  // function CountryTabNavDiv() {
+  //   let items = countryTabNavItems();
+  //   if (items.length > 1) {
+  //     const nitems = [<br />];
+  //     for (let index = 0; index < items.length - 1; index++) {
+  //       const item = items[index];
+  //       nitems.push(item.c_ref);
+  //     }
+  //     nitems.push(<RegionNavTable items={[items[items.length - 1]]} />);
+  //     return nitems;
+  //   }
+  //   return <RegionNavTable items={items} />;
+  // }
+
+  function CountryTabPreHeader() {
     const stats_total = pieData[0].stats_total;
     const items = [
       {
         c_ref: ui_top + ' ' + stats_total + ' ' + uiprop_s,
-        // propValueTable: stats_total,
         propPercent: 1.0,
       },
     ];
+    return <RegionNavTable items={items} />;
+  }
+
+  function CountryTabBackNav() {
+    const items = [];
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
       let item;
       if (ncountry.parent) {
-        item = {
-          c_ref: (
-            <button
-              onClick={() => {
-                selectCountryParent(ncountry);
-              }}
-            >
-              {ncountry.parent.c_ref}
-            </button>
-          ),
-          propValueInvalid: true,
-          propPercentInvalid: true,
-        };
+        item = (
+          <Button
+            basic
+            size="mini"
+            onClick={() => {
+              selectCountryParent(ncountry);
+            }}
+          >
+            &lt; {ncountry.parent.c_ref}
+          </Button>
+        );
       } else if (ncountry.c_ref) {
-        item = {
-          c_ref: <button onClick={selectWorldwide}>Worldwide</button>,
-          propValueInvalid: true,
-          propPercentInvalid: true,
-        };
+        item = (
+          <Button basic size="mini" onClick={selectWorldwide}>
+            &lt; Worldwide
+          </Button>
+        );
       }
       if (item) items.push(item);
     }
-    return items.reverse();
+    items.reverse();
+    if (items.length > 0) items.push(<br />);
+    return items;
+  }
+
+  const SortBySelect = () => {
+    const options = ['Region', 'Totals', 'Percent'].map((uname) =>
+      ui_key(uname)
+    );
+    return (
+      <>
+        Sort By:{' '}
+        <Select
+          placeholder="Sort By"
+          size="mini"
+          selection
+          value={sortColumn}
+          onChange={(param, data) => {
+            setSortColumn(data.value);
+          }}
+          options={options}
+          style={{
+            // Put above table header
+            // ../styles/StyledCountryDataTable.js thead { z-index: 10;
+            zIndex: 11,
+          }}
+        />{' '}
+      </>
+    );
   };
 
   const RegionTab = () => {
@@ -631,15 +719,16 @@ const Graph = () => {
     const regionTitle = getRegionTitle();
     return (
       <div>
-        <div>
-          <button onClick={clickPer100k}>
-            {per100k ? '-' : ''} Per 100,000
-          </button>
-          <button onClick={findFirstDate}>First {uiprop}</button>
-          <button onClick={findLastestDate}>Latest</button>
-          {/* <CountryNavButtons /> */}
-        </div>
-        <RegionNavTable items={countryTabNavItems()} />
+        <CountryTabBackNav />
+        <SortBySelect />
+        <Checkbox
+          label="Per 100,000"
+          onChange={() => {
+            setPer100k(!per100k);
+          }}
+          checked={per100k}
+        />{' '}
+        <CountryTabPreHeader />
         <CountryDataTable
           items={sortedItems || []}
           propTitle={propTitle}
@@ -647,20 +736,41 @@ const Graph = () => {
           selectCountry={selectCountry}
           parentCountry={countrySelected.c_ref}
           per100k={per100k}
-          sortActionSpec={sortActionSpec}
+          // sortActionSpec={sortActionSpec}
           regionTitle={regionTitle}
         />
       </div>
     );
   };
 
+  const stacked = windowSize.width < 1024;
+  // console.log('windowSize.width', windowSize.width);
+  // console.log('window', window);
+
+  const showGraphAction = () => {
+    setGraphVisible(!graphVisible);
+  };
+
   const HeadStats = () => {
     const stats_total = pieData[0].stats_total;
     return (
       <Header as="h3">
-        {stats_total} {ui_top} {uiprop_s} {upto_on} {dateFocusShort}
+        {stats_total} {ui_top} {uiprop_s} {upto_on} {dateFocusShort}{' '}
+        {stacked && (
+          <Button size="mini" onClick={showGraphAction}>
+            {graphVisible ? 'Hide Graph' : 'Show Graph'}
+          </Button>
+        )}
       </Header>
     );
+  };
+
+  const WorldStub = () => {
+    if (!stacked || graphVisible)
+      return (
+        <World pie_data={pieData} opacity={graphOpacity} stacked={stacked} />
+      );
+    return null;
   };
 
   return (
@@ -668,8 +778,7 @@ const Graph = () => {
       <Container style={{ marginTop: '1rem' }}>
         <Loader active={loaderActive} inline></Loader>
         <HeadStats />
-        <World pie_data={pieData} opacity={graphOpacity} />
-        {/* <HeadStats /> */}
+        <WorldStub />
         <Grid>
           <Grid.Row style={{ padding: '0 16px' }}>
             <DateSlider
@@ -721,6 +830,12 @@ const Graph = () => {
                   </Button>
                 </span>
               </Button.Group>
+              <Button basic size="mini" onClick={findFirstDate}>
+                First {uiprop}
+              </Button>
+              <Button basic size="mini" onClick={findLastestDate}>
+                Latest
+              </Button>
             </StyledControlRow>
           </Grid.Row>
         </Grid>
