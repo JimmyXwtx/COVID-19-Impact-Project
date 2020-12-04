@@ -649,7 +649,11 @@ const Graph = () => {
             setSortColumn(data.value);
           }}
           options={options}
-          style={{ zIndex: 11 }}
+          style={{
+            // Put above table header
+            // ../styles/StyledCountryDataTable.js thead { z-index: 10;
+            zIndex: 11,
+          }}
         />{' '}
       </>
     );
