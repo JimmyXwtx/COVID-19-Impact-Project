@@ -590,48 +590,103 @@ const Graph = () => {
     setCountrySelected(ncountry.parent);
   };
 
-  const countryTabNavItems = () => {
+  // const countryTabNavItems = () => {
+  //   const stats_total = pieData[0].stats_total;
+  //   const items = [
+  //     {
+  //       c_ref: ui_top + ' ' + stats_total + ' ' + uiprop_s,
+  //       // propValueTable: stats_total,
+  //       propPercent: 1.0,
+  //     },
+  //   ];
+  //   for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
+  //     let item;
+  //     if (ncountry.parent) {
+  //       item = {
+  //         c_ref: (
+  //           <Button
+  //             basic
+  //             size="mini"
+  //             onClick={() => {
+  //               selectCountryParent(ncountry);
+  //             }}
+  //           >
+  //             &lt; {ncountry.parent.c_ref}
+  //           </Button>
+  //         ),
+  //         propValueInvalid: true,
+  //         propPercentInvalid: true,
+  //       };
+  //     } else if (ncountry.c_ref) {
+  //       item = {
+  //         c_ref: (
+  //           <Button basic size="mini" onClick={selectWorldwide}>
+  //             &lt; Worldwide
+  //           </Button>
+  //         ),
+  //         propValueInvalid: true,
+  //         propPercentInvalid: true,
+  //       };
+  //     }
+  //     if (item) items.push(item);
+  //   }
+  //   return items.reverse();
+  // };
+
+  // function CountryTabNavDiv() {
+  //   let items = countryTabNavItems();
+  //   if (items.length > 1) {
+  //     const nitems = [<br />];
+  //     for (let index = 0; index < items.length - 1; index++) {
+  //       const item = items[index];
+  //       nitems.push(item.c_ref);
+  //     }
+  //     nitems.push(<RegionNavTable items={[items[items.length - 1]]} />);
+  //     return nitems;
+  //   }
+  //   return <RegionNavTable items={items} />;
+  // }
+
+  function CountryTabPreHeader() {
     const stats_total = pieData[0].stats_total;
     const items = [
       {
         c_ref: ui_top + ' ' + stats_total + ' ' + uiprop_s,
-        // propValueTable: stats_total,
         propPercent: 1.0,
       },
     ];
+    return <RegionNavTable items={items} />;
+  }
+
+  function CountryTabBackNav() {
+    const items = [];
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
       let item;
       if (ncountry.parent) {
-        item = {
-          c_ref: (
-            <Button
-              basic
-              size="mini"
-              onClick={() => {
-                selectCountryParent(ncountry);
-              }}
-            >
-              {ncountry.parent.c_ref}
-            </Button>
-          ),
-          propValueInvalid: true,
-          propPercentInvalid: true,
-        };
+        item = (
+          <Button
+            basic
+            size="mini"
+            onClick={() => {
+              selectCountryParent(ncountry);
+            }}
+          >
+            &lt; {ncountry.parent.c_ref}
+          </Button>
+        );
       } else if (ncountry.c_ref) {
-        item = {
-          c_ref: (
-            <Button basic size="mini" onClick={selectWorldwide}>
-              Worldwide
-            </Button>
-          ),
-          propValueInvalid: true,
-          propPercentInvalid: true,
-        };
+        item = (
+          <Button basic size="mini" onClick={selectWorldwide}>
+            &lt; Worldwide
+          </Button>
+        );
       }
       if (item) items.push(item);
     }
-    return items.reverse();
-  };
+    items.reverse();
+    if (items.length > 0) items.push(<br />);
+    return items;
+  }
 
   const SortBySelect = () => {
     const options = ['Region', 'Totals', 'Percent'].map((uname) =>
@@ -664,9 +719,7 @@ const Graph = () => {
     const regionTitle = getRegionTitle();
     return (
       <div>
-        {/* <Button basic size="mini" onClick={clickPer100k}>
-          {per100k ? '-' : ''} Per 100,000
-        </Button> */}
+        <CountryTabBackNav />
         <SortBySelect />
         <Checkbox
           label="Per 100,000"
@@ -675,13 +728,7 @@ const Graph = () => {
           }}
           checked={per100k}
         />{' '}
-        <Button basic size="mini" onClick={findFirstDate}>
-          First {uiprop}
-        </Button>
-        <Button basic size="mini" onClick={findLastestDate}>
-          Latest
-        </Button>
-        <RegionNavTable items={countryTabNavItems()} />
+        <CountryTabPreHeader />
         <CountryDataTable
           items={sortedItems || []}
           propTitle={propTitle}
@@ -783,6 +830,12 @@ const Graph = () => {
                   </Button>
                 </span>
               </Button.Group>
+              <Button basic size="mini" onClick={findFirstDate}>
+                First {uiprop}
+              </Button>
+              <Button basic size="mini" onClick={findLastestDate}>
+                Latest
+              </Button>
             </StyledControlRow>
           </Grid.Row>
         </Grid>
