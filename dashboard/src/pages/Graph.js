@@ -649,6 +649,7 @@ const Graph = () => {
             setSortColumn(data.value);
           }}
           options={options}
+          style={{ zIndex: 11 }}
         />{' '}
       </>
     );
