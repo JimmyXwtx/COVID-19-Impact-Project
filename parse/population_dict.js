@@ -81,13 +81,20 @@ function process_population_table() {
 
 const Country_Region_renames = {
   US: 'United States',
+  'Korea, South': 'South Korea',
 };
 
 const Country_Region_renames2 = {
   US: {
     Country_Region: 'United States',
     Province_State: {
-      'New York': { Admin2: { Kings: 'Brooklyn', Richmond: 'Staten Island' } },
+      'New York': {
+        Admin2: {
+          Kings: 'Brooklyn',
+          'New York': 'Manhattan',
+          Richmond: 'Staten Island',
+        },
+      },
     },
   },
 };

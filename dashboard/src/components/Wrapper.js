@@ -21,10 +21,6 @@ const Wrapper = () => (
         <Navbar />
         <Switch>
           <Route path="/signin" exact component={SignIn} />
-          {/*  
-            <Route path="/wp/edit/:id" exact component={WPEdit} /> 
-            <Route path="/wp/duplicate/:id" exact component={WPDup} />  
-            */}
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/admin" exact component={Admin} />
