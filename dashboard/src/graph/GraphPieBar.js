@@ -8,7 +8,7 @@ import material from './material';
 // const label = x + '\n' + item.Deaths;
 // pie_data.push({ x, y, label });
 
-const World = ({ pie_data, opacity, stacked }) => {
+const GraphPieBar = ({ pie_data, opacity, stacked }) => {
   const pieslices = pie_data[0].slices;
   const barslices = pie_data[1].slices.concat().reverse();
   orderColors_pie(pieslices);
@@ -62,4 +62,4 @@ const World = ({ pie_data, opacity, stacked }) => {
   );
 };
 
-export default World;
+export default GraphPieBar;

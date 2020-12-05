@@ -1,18 +1,16 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { Route, Router, Switch } from 'react-router-dom';
 import { Normalize } from 'styled-normalize';
-import GlobalStyle from '../styles/GlobalStyle';
-
 import { history } from '../history';
-import ScrollToTop from './ScrollToTop';
-import Navbar from './Navbar';
-
 import Admin from '../pages/Admin';
-import Graph from '../pages/Graph';
+import Contact from '../pages/Contact';
+import Dashboard from '../pages/Dashboard';
+import Gallery from '../pages/Gallery';
 import NotFound from '../pages/NotFound';
 import SignIn from '../pages/SignIn';
-import Contact from '../pages/Contact';
-import Gallery from '../pages/Gallery';
+import GlobalStyle from '../styles/GlobalStyle';
+import Navbar from './Navbar';
+import ScrollToTop from './ScrollToTop';
 
 const Wrapper = () => (
   <>
@@ -30,7 +28,7 @@ const Wrapper = () => (
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/admin" exact component={Admin} />
-          <Route path="/" exact component={Graph} />
+          <Route path="/" exact component={Dashboard} />
           <Route component={NotFound} />
         </Switch>
       </ScrollToTop>

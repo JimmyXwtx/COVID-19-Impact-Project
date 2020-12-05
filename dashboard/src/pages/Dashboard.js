@@ -15,7 +15,7 @@ import styled from 'styled-components';
 import CountryDataTable from '../components/CountryDataTable';
 import DateSlider from '../components/DateSlider';
 import RegionNavTable from '../components/RegionNavTable';
-import World from '../graph/World';
+import GraphPieBar from '../graph/GraphPieBar';
 import extract_slices from '../graph/extract_slices';
 import AboutTab from '../graph_tabs/AboutTab';
 import FocusTab from '../graph_tabs/FocusTab';
@@ -38,7 +38,7 @@ function ui_key(uname) {
   return { key: uname, value: uname, text: uname };
 }
 
-const Graph = () => {
+const Dashboard = () => {
   const [loaderActive, setLoaderActive] = useState(true);
   const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');
   const [sumFocus, setSumFocus] = useLocalStorage('co-sumFocus', 'totals');
@@ -766,10 +766,14 @@ const Graph = () => {
     );
   };
 
-  const WorldStub = () => {
+  const GraphPieBarStub = () => {
     if (!stacked || graphVisible)
       return (
-        <World pie_data={pieData} opacity={graphOpacity} stacked={stacked} />
+        <GraphPieBar
+          pie_data={pieData}
+          opacity={graphOpacity}
+          stacked={stacked}
+        />
       );
     return null;
   };
@@ -779,7 +783,7 @@ const Graph = () => {
       <Container style={{ marginTop: '1rem' }}>
         <Loader active={loaderActive} inline></Loader>
         <HeadStats />
-        <WorldStub />
+        <GraphPieBarStub />
         <Grid>
           <Grid.Row style={{ padding: '0 16px' }}>
             <DateSlider
@@ -909,4 +913,4 @@ const StyledControlRow = styled.div`
   }
 `;
 
-export default Graph;
+export default Dashboard;
