@@ -30,11 +30,19 @@ const start_time = Date.now();
 const pop_missing = {};
 const report_lines = [];
 
-process_dir();
+process_world_dir();
 
-function process_dir() {
+function process_world_dir() {
   report_log('pop_dict n ' + Object.keys(pop_dict).length);
 
+  const country_dict = process_dir_cvs();
+
+  process_summary(country_dict);
+
+  report_write();
+}
+
+function process_dir_cvs() {
   const nfiles = fs.readdirSync(daily_dir);
   let index = 0;
   let country_dict;
@@ -50,17 +58,14 @@ function process_dir() {
   // report_log('pop_missing', keys.length, keys.sort());
   report_log('pop_missing ' + keys.length);
   report_log(JSON.stringify(keys.sort(), null, 2));
-
-  process_summary(country_dict);
-
-  report_write();
+  return country_dict;
 }
 
 function report_write() {
   fs.writeFileSync('./report.txt', report_lines.join('\n'));
 }
 
-function report_log(aline, aobj) {
+function report_log(aline) {
   report_lines.push(aline);
   if (argv_verbose) console.log(aline);
 }
@@ -74,22 +79,6 @@ function process_summary(country_dict) {
 
   // Write meta for countries
   write_meta(store_dir, { country_dict, report_n_states: 1 });
-
-  // Write meta for states with in each country that has them
-  // const states_path = path.resolve(store_dir, 'c_subs');
-  // for (let country in country_dict) {
-  //   const cent = country_dict[country];
-  //   if (!cent.ncountry) {
-  //     // report_log('skipping country', country);
-  //     continue;
-  //   }
-  //   const state_dir = path.resolve(states_path, cent.ncountry);
-  //   // report_log('process_summary fpath', fpath);
-  //   write_meta(state_dir, {
-  //     state_name: cent.ncountry,
-  //     country_dict: cent.states,
-  //   });
-  // }
 
   const lapse_time = Date.now() - start_time;
   report_log('-------------------------------------------');
@@ -212,8 +201,6 @@ function process_cvs(cvs_inpath, file_date) {
   }
 
   write_daily(country_dict, file_date, store_dir);
-
-  // write_subs(country_dict, file_date, store_dir);
 
   return country_dict;
 }
