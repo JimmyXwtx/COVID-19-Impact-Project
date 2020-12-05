@@ -696,9 +696,9 @@ const Graph = () => {
       <>
         Sort By:{' '}
         <Select
-          placeholder="Sort By"
-          size="mini"
-          selection
+          // placeholder="Sort By"
+          // size="mini"
+          // selection
           value={sortColumn}
           onChange={(param, data) => {
             setSortColumn(data.value);
@@ -708,6 +708,7 @@ const Graph = () => {
             // Put above table header
             // ../styles/StyledCountryDataTable.js thead { z-index: 10;
             zIndex: 11,
+            minWidth: 'auto',
           }}
         />{' '}
       </>
@@ -727,7 +728,7 @@ const Graph = () => {
             setPer100k(!per100k);
           }}
           checked={per100k}
-        />{' '}
+        />
         <CountryTabPreHeader />
         <CountryDataTable
           items={sortedItems || []}
