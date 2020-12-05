@@ -13,10 +13,12 @@ cd ..
 
 dest=nyc-data
 if [ ! -e "$dest" ]; then
-  git clone https://github.com/nychealth/coronavirus-data $dest
+  mkdir -p $dest
+  git clone https://github.com/nychealth/coronavirus-data $dest/repo
 fi
-cd $dest
+cd $dest/repo
 git pull
+cd ..
 
 # Init components
 
