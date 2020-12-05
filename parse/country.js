@@ -61,18 +61,26 @@ function rename_item(item) {
     const stateFix = stateFixes[item.Province_State];
     if (stateFix) {
       item.Province_State = stateFix;
-      return;
-    }
-    const parts = item.Province_State.split(',');
-    if (parts.length >= 2) {
-      const stateCode = parts[1].trim();
-      const stateName = stateCodeMaps[stateCode];
-      if (stateName) {
-        item.Province_State = stateName;
-      } else {
-        console.log('rename_item !!@ item.Province_State', item.Province_State);
-        console.log(item);
+      // return;
+    } else {
+      const parts = item.Province_State.split(',');
+      if (parts.length >= 2) {
+        const stateCode = parts[1].trim();
+        const stateName = stateCodeMaps[stateCode];
+        if (stateName) {
+          item.Province_State = stateName;
+        } else {
+          console.log(
+            'rename_item !!@ item.Province_State',
+            item.Province_State
+          );
+          console.log(item);
+        }
       }
+    }
+    if (item.Province_State == 'New York') {
+      const nAdmin2 = newYorkCountyFixes[item.Admin2];
+      if (nAdmin2) item.Admin2 = nAdmin2;
     }
   } else if (item.Country_Region == 'France') {
     if (!item.Province_State) {
@@ -95,6 +103,12 @@ const stateFixes = {
   'Omaha, NE (From Diamond Princess)': 'Nebraska',
   'Travis, CA (From Diamond Princess)': 'California',
   'Lackland, TX (From Diamond Princess)': 'Texas',
+};
+
+const newYorkCountyFixes = {
+  Kings: 'Brooklyn',
+  'New York': 'Manhattan',
+  Richmond: 'Staten Island',
 };
 
 // !!@     "Province_State": "Wuhan Evacuee",

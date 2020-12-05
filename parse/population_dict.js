@@ -69,6 +69,13 @@ function process_population_table() {
       cent.states[rent.Province_State] = sent;
     } else {
       if (rent.Admin2) {
+        if (
+          rent.Country_Region == 'United States' &&
+          rent.Province_State == 'New York'
+        ) {
+          const nAdmin2 = newYorkCountyFixes[rent.Admin2];
+          if (nAdmin2) rent.Admin2 = nAdmin2;
+        }
         if (!sent.states) {
           sent.states = {};
         }
@@ -84,7 +91,16 @@ const Country_Region_renames = {
   'Korea, South': 'South Korea',
 };
 
+const newYorkCountyFixes = {
+  Kings: 'Brooklyn',
+  'New York': 'Manhattan',
+  Richmond: 'Staten Island',
+};
+
 const Country_Region_renames2 = {
+  'Korea, South': {
+    Country_Region: 'South Korea',
+  },
   US: {
     Country_Region: 'United States',
     Province_State: {
