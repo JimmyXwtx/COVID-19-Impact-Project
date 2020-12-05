@@ -33,6 +33,17 @@
     }
   },
   {
+    "c_ref": "Brooklyn",
+    "totals": {
+      "Cases": 74339,
+      "Deaths": 7382
+    },
+    "daily": {
+      "Cases": 225,
+      "Deaths": 1
+    }
+  },
+  {
     "c_ref": "Broome",
     "totals": {
       "Cases": 3330,
@@ -253,17 +264,6 @@
     }
   },
   {
-    "c_ref": "Kings",
-    "totals": {
-      "Cases": 74339,
-      "Deaths": 7382
-    },
-    "daily": {
-      "Cases": 225,
-      "Deaths": 1
-    }
-  },
-  {
     "c_ref": "Lewis",
     "totals": {
       "Cases": 92,
@@ -293,6 +293,17 @@
     },
     "daily": {
       "Cases": 5,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Manhattan",
+    "totals": {
+      "Cases": 35610,
+      "Deaths": 3192
+    },
+    "daily": {
+      "Cases": 151,
       "Deaths": 0
     }
   },
@@ -327,17 +338,6 @@
     "daily": {
       "Cases": 161,
       "Deaths": 1
-    }
-  },
-  {
-    "c_ref": "New York",
-    "totals": {
-      "Cases": 35610,
-      "Deaths": 3192
-    },
-    "daily": {
-      "Cases": 151,
-      "Deaths": 0
     }
   },
   {
@@ -473,17 +473,6 @@
     }
   },
   {
-    "c_ref": "Richmond",
-    "totals": {
-      "Cases": 17004,
-      "Deaths": 1094
-    },
-    "daily": {
-      "Cases": 75,
-      "Deaths": 0
-    }
-  },
-  {
     "c_ref": "Rockland",
     "totals": {
       "Cases": 17635,
@@ -557,6 +546,17 @@
     },
     "daily": {
       "Cases": 3,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Staten Island",
+    "totals": {
+      "Cases": 17004,
+      "Deaths": 1094
+    },
+    "daily": {
+      "Cases": 75,
       "Deaths": 0
     }
   },
