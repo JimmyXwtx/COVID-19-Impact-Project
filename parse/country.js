@@ -116,7 +116,7 @@ const newYorkCountyFixes = {
 //   "Cases": "2020-03-22"
 
 // // https://gist.github.com/mshafrir/2646763#file-states_hash-json
-const stateCodeMaps = require('./states_hash.json');
+const stateCodeMaps = require('./data/states_hash.json');
 
 // ----------------------------------------------------------------------------
 

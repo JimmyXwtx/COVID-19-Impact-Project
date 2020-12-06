@@ -17,6 +17,7 @@
 //      2020-12-04.csv
 //
 
+// rm -rf ../dashboard/public/c_data/nyc/
 // node parse_nyc --date 2020-12-03
 
 const parse = require('csv-parse/lib/sync');
@@ -24,13 +25,16 @@ const fs = require('fs-extra');
 const path = require('path');
 const argv = require('yargs').argv;
 
+const report = require('./report');
+
 // const nlimit = 5;
 const nlimit = 0;
 const argv_silent = argv.silent;
 const argv_verbose = !argv_silent;
 const argv_date = argv.date;
 
-console.log('argv_date', argv_date);
+console.log('report', report);
+report.verbose(argv_verbose);
 
 const daily_file = '../nyc-data/repo/totals/data-by-modzcta.csv';
 
@@ -43,7 +47,6 @@ let fromDate;
 let toDate;
 
 const start_time = Date.now();
-const report_lines = [];
 
 function process_nyc() {
   // 2020-12-06T06:31:38.404Z
@@ -56,29 +59,20 @@ function process_nyc() {
 
   process_summary(sub_dict);
 
-  report_write();
-}
-
-function report_write() {
-  fs.writeFileSync('./report.txt', report_lines.join('\n'));
-}
-
-function report_log(aline) {
-  report_lines.push(aline);
-  if (argv_verbose) console.log(aline);
+  report.flush();
 }
 
 function process_summary(sub_dict) {
   const parse_time = Date.now() - start_time;
-  report_log('parse sec ' + parse_time / 1000);
-  report_log('-------------------------------------------');
+  report.log('parse sec ' + parse_time / 1000);
+  report.log('-------------------------------------------');
 
   // Write meta for countries
   write_meta(store_dir, { sub_dict, report_n_subs: 1 });
 
   const lapse_time = Date.now() - start_time;
-  report_log('-------------------------------------------');
-  report_log('lapse sec ' + lapse_time / 1000);
+  report.log('-------------------------------------------');
+  report.log('lapse sec ' + lapse_time / 1000);
 }
 
 function process_file_csv(csv_inpath, file_date) {
@@ -118,7 +112,7 @@ function process_file_csv(csv_inpath, file_date) {
     const key1 = item.BOROUGH_GROUP;
     if (!key1) {
       const str = JSON.stringify(item);
-      report_log('!!@ empty key1 ' + file_date + ' ' + str);
+      report.log('!!@ empty key1 ' + file_date + ' ' + str);
       return;
     }
 
@@ -126,7 +120,7 @@ function process_file_csv(csv_inpath, file_date) {
     if (!cent) {
       // stats_init = { Cases: 0, Deaths: 0 };
       const totals = Object.assign({}, stats_init);
-      // if (key1 === 'United States') report_log('pop_ent', pop_ent);
+      // if (key1 === 'United States') report.log('pop_ent', pop_ent);
       cent = {
         c_ref: key1,
         totals,
@@ -190,7 +184,7 @@ function rename_item(item) {
 function write_subs(subs_dict, file_date, path_root) {
   for (let country in subs_dict) {
     const cent = subs_dict[country];
-    // report_log('file_date', file_date, 'country', country, 'cent', cent);
+    // report.log('file_date', file_date, 'country', country, 'cent', cent);
     const ncountry = fileNameFromCountryName(country);
     cent.ncountry = ncountry;
     let cpath = path.resolve(path_root, 'c_subs', ncountry);
@@ -220,19 +214,19 @@ function write_daily(sub_dict, file_date, path_root) {
 
     write_subs(sub_dict, file_date, path_root);
   } else {
-    // report_log('write_daily empty', file_date, path_root);
+    // report.log('write_daily empty', file_date, path_root);
   }
   return sums.length;
 }
 
 function write_meta(state_dir, { state_name, sub_dict, report_n_subs }) {
-  // report_log('write_meta state_dir', state_dir);
+  // report.log('write_meta state_dir', state_dir);
   const key = 'c_ref';
   const c_dates = [];
   const days_path = path.resolve(state_dir, 'c_days');
   const summaryDict = {};
   if (!fs.existsSync(days_path)) {
-    report_log('write_meta missing days_path ' + days_path);
+    report.log('write_meta missing days_path ' + days_path);
     return null;
   }
   let cdict = {};
@@ -278,7 +272,7 @@ function write_meta(state_dir, { state_name, sub_dict, report_n_subs }) {
       // Write out updated daily
       fs.writeJsonSync(fpath, fitem, { spaces: 2 });
     } else {
-      report_log('write_meta readJson failed ' + fpath);
+      report.log('write_meta readJson failed ' + fpath);
     }
   }
   // Write out summary, remove last_date if current
@@ -288,7 +282,7 @@ function write_meta(state_dir, { state_name, sub_dict, report_n_subs }) {
     if (ent.last_date === toDate) {
       delete ent.last_date;
     } else if (state_name) {
-      report_log(state_name + '|' + uname + '| last_date ' + ent.last_date);
+      report.log(state_name + '|' + uname + '| last_date ' + ent.last_date);
     }
     if (sub_dict) {
       const cent = sub_dict[uname];
@@ -297,7 +291,7 @@ function write_meta(state_dir, { state_name, sub_dict, report_n_subs }) {
         if (n_subs) {
           ent.n_subs = n_subs;
           if (report_n_subs) {
-            report_log(uname + '| n_subs ' + ent.n_subs);
+            report.log(uname + '| n_subs ' + ent.n_subs);
           }
         }
         ent.c_people = cent.c_people;
@@ -320,11 +314,11 @@ function write_meta_subs(path_root, { state_name, sub_dict, report_n_subs }) {
   for (let country in sub_dict) {
     const cent = sub_dict[country];
     if (!cent.ncountry) {
-      // report_log('skipping country', country);
+      // report.log('skipping country', country);
       continue;
     }
     const state_dir = path.resolve(subs_path, cent.ncountry);
-    // report_log('process_summary fpath', fpath);
+    // report.log('process_summary fpath', fpath);
     write_meta(state_dir, {
       state_name: (state_name ? state_name + ' ' : '') + cent.ncountry,
       sub_dict: cent.states,

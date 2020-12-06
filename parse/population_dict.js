@@ -10,7 +10,7 @@ const fs = require('fs-extra');
 // const population_table_path = './UID_ISO_FIPS_LookUp_Table.csv';
 const population_table_path =
   '../COVID-19-JHU/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv';
-const population_json_path = './population.json';
+const population_json_path = './data/population.json';
 
 module.exports = {
   population_dict,
@@ -41,7 +41,7 @@ function process_population_table() {
 
   // Write copy of csv in unix line ending to track changes via git
   const strOut = (input + '').replace(/\r\n/g, '\n');
-  fs.writeFileSync('./UID_ISO_FIPS_LookUp_Table.csv', strOut);
+  fs.writeFileSync('./data/UID_ISO_FIPS_LookUp_Table.csv', strOut);
 
   const records = parse(input, {
     columns: true,
