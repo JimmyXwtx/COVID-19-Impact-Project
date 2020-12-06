@@ -1,7 +1,20 @@
 //
-// COVID stats parse from csv to json
+// parse COVID  NYC stats from csv to json
 //
 /* eslint-disable max-len */
+
+// Input: ./nyc-data/repo/totals/data-by-modzcta.csv
+//    stats by borough / zipcode
+// eg:
+//  MODIFIED_ZCTA,NEIGHBORHOOD_NAME,BOROUGH_GROUP,COVID_CASE_COUNT,COVID_CASE_RATE,POP_DENOMINATOR,
+//    COVID_DEATH_COUNT,COVID_DEATH_RATE,PERCENT_POSITIVE,TOTAL_COVID_TESTS
+//  11234,Bergen Beach/Flatlands/Marine Park/Mill Basin,Brooklyn,3259,3464.95,94056.07,197,209.45,10.05,31969
+//
+// Write out per-day csv
+//  ./nyc-data
+//    repo
+//    days
+//      2020-12-04.csv
 //
 
 const parse = require('csv-parse/lib/sync');
@@ -16,7 +29,7 @@ const argv_verbose = !argv_silent;
 
 const daily_file = '../nyc-data/repo/totals/data-by-modzcta.csv';
 
-const store_dir = '../dashboard/public/c_nyc/';
+const store_dir = '../dashboard/public/c_data/nyc/';
 
 const stats_init = { Cases: 0, Deaths: 0 };
 let fromDate;

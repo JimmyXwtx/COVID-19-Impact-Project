@@ -31,8 +31,8 @@ const top_label = 'World';
 const playDelayInit = 0.1;
 const playEndDelayInit = 3;
 
-const c_root = './c_data/';
-// const c_root = './c_nyc/';
+const c_root = './c_data/world/';
+// const c_root = './c_data/nyc/';
 
 ReactGA.initialize('UA-168322336-1');
 ReactGA.pageview(window.location.pathname + window.location.search);

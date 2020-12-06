@@ -19,7 +19,7 @@ const argv_verbose = !argv_silent;
 const daily_dir =
   '../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
 
-const store_dir = '../dashboard/public/c_data/';
+const store_dir = '../dashboard/public/c_data/world';
 
 const stats_init = { Cases: 0, Deaths: 0 };
 let fromDate;
