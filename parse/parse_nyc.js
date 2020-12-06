@@ -35,12 +35,15 @@ const argv_date = argv.date;
 
 console.log('report', report);
 report.verbose(argv_verbose);
+report.logFile('./report-nyc.txt');
 
 const daily_file = '../nyc-data/repo/totals/data-by-modzcta.csv';
 
 const store_dir = '../dashboard/public/c_data/nyc/';
 
 const csv_out_dir = '../nyc-data/days/';
+
+const data_file = './data/data-by-modzcta.csv';
 
 const stats_init = { Cases: 0, Deaths: 0 };
 let fromDate;
@@ -93,7 +96,8 @@ function process_file_csv(csv_inpath, file_date) {
   const cpath = path.resolve(csv_out_dir, file_date + '.csv');
   const strOut = (strIn + '').replace(/\r\n/g, '\n');
   fs.writeFileSync(cpath, strOut);
-
+  fs.writeFileSync(data_file, strOut);
+  )
   const records = parse(strIn, {
     columns: true,
     skip_empty_lines: true,
