@@ -38,11 +38,11 @@ function population_dict() {
 
 function process_population_table() {
   const input = fs.readFileSync(population_table_path);
-  // const input = (fs.readFileSync(population_table_path) + '').replace(/\r?\n/, '\n');
-  fs.writeFileSync(
-    './UID_ISO_FIPS_LookUp_Table.csv',
-    (input + '').replace(/\r\n/g, '\n')
-  );
+
+  // Write copy of csv in unix line ending to track changes via git
+  const strOut = (input + '').replace(/\r\n/g, '\n');
+  fs.writeFileSync('./UID_ISO_FIPS_LookUp_Table.csv', strOut);
+
   const records = parse(input, {
     columns: true,
     skip_empty_lines: true,

@@ -36,6 +36,8 @@ const daily_file = '../nyc-data/repo/totals/data-by-modzcta.csv';
 
 const store_dir = '../dashboard/public/c_data/nyc/';
 
+const csv_out_dir = '../nyc-data/days/';
+
 const stats_init = { Cases: 0, Deaths: 0 };
 let fromDate;
 let toDate;
@@ -50,9 +52,9 @@ function process_nyc() {
   let filedate = argv_date;
   if (!filedate) filedate = new Date().toISOString().substring(0, 10);
 
-  const country_dict = process_file_csv(daily_file, filedate);
+  const sub_dict = process_file_csv(daily_file, filedate);
 
-  process_summary(country_dict);
+  process_summary(sub_dict);
 
   report_write();
 }
@@ -66,13 +68,13 @@ function report_log(aline) {
   if (argv_verbose) console.log(aline);
 }
 
-function process_summary(country_dict) {
+function process_summary(sub_dict) {
   const parse_time = Date.now() - start_time;
   report_log('parse sec ' + parse_time / 1000);
   report_log('-------------------------------------------');
 
   // Write meta for countries
-  write_meta(store_dir, { country_dict, report_n_subs: 1 });
+  write_meta(store_dir, { sub_dict, report_n_subs: 1 });
 
   const lapse_time = Date.now() - start_time;
   report_log('-------------------------------------------');
@@ -87,12 +89,18 @@ function process_file_csv(csv_inpath, file_date) {
   if (fromDate > file_date) fromDate = file_date;
 
   const sums_total = Object.assign({}, stats_init);
-  const country_dict = {};
+  const sub_dict = {};
 
-  const input = fs.readFileSync(csv_inpath);
-  console.log('process_file_csv  input.length', input.length);
+  const strIn = fs.readFileSync(csv_inpath);
+  console.log('process_file_csv  strIn.length', strIn.length);
 
-  const records = parse(input, {
+  // Write out csv to csv_out_dir
+  fs.ensureDirSync(csv_out_dir);
+  const cpath = path.resolve(csv_out_dir, file_date + '.csv');
+  const strOut = (strIn + '').replace(/\r\n/g, '\n');
+  fs.writeFileSync(cpath, strOut);
+
+  const records = parse(strIn, {
     columns: true,
     skip_empty_lines: true,
   });
@@ -114,7 +122,7 @@ function process_file_csv(csv_inpath, file_date) {
       return;
     }
 
-    let cent = country_dict[key1];
+    let cent = sub_dict[key1];
     if (!cent) {
       // stats_init = { Cases: 0, Deaths: 0 };
       const totals = Object.assign({}, stats_init);
@@ -124,12 +132,12 @@ function process_file_csv(csv_inpath, file_date) {
         totals,
         states: {},
       };
-      country_dict[key1] = cent;
+      sub_dict[key1] = cent;
     }
     calc(cent.totals, item);
     calc(sums_total, item);
 
-    let key2 = item.MODIFIED_ZCTA;
+    let key2 = item.MODIFIED_ZCTA + ' ' + item.NEIGHBORHOOD_NAME;
     if (key2) {
       let sent = cent.states[key2];
       if (!sent) {
@@ -161,9 +169,9 @@ function process_file_csv(csv_inpath, file_date) {
     }
   }
 
-  write_daily(country_dict, file_date, store_dir);
+  write_daily(sub_dict, file_date, store_dir);
 
-  return country_dict;
+  return sub_dict;
 }
 
 const prop_renames = {
@@ -197,10 +205,10 @@ function fileNameFromCountryName(country) {
   return country.replace(/ /g, '_').replace(/,/g, '');
 }
 
-function write_daily(country_dict, file_date, path_root) {
-  const keys = Object.keys(country_dict).sort();
+function write_daily(sub_dict, file_date, path_root) {
+  const keys = Object.keys(sub_dict).sort();
   const sums = keys.map(key => {
-    const { c_ref, totals } = country_dict[key];
+    const { c_ref, totals } = sub_dict[key];
     return { c_ref, totals };
   });
   if (sums.length > 0) {
@@ -210,14 +218,14 @@ function write_daily(country_dict, file_date, path_root) {
     cpath = path.resolve(cpath, fname);
     fs.writeJsonSync(cpath, sums, { spaces: 2 });
 
-    write_subs(country_dict, file_date, path_root);
+    write_subs(sub_dict, file_date, path_root);
   } else {
     // report_log('write_daily empty', file_date, path_root);
   }
   return sums.length;
 }
 
-function write_meta(state_dir, { state_name, country_dict, report_n_subs }) {
+function write_meta(state_dir, { state_name, sub_dict, report_n_subs }) {
   // report_log('write_meta state_dir', state_dir);
   const key = 'c_ref';
   const c_dates = [];
@@ -282,8 +290,8 @@ function write_meta(state_dir, { state_name, country_dict, report_n_subs }) {
     } else if (state_name) {
       report_log(state_name + '|' + uname + '| last_date ' + ent.last_date);
     }
-    if (country_dict) {
-      const cent = country_dict[uname];
+    if (sub_dict) {
+      const cent = sub_dict[uname];
       if (cent) {
         const n_subs = Object.keys(cent.states).length;
         if (n_subs) {
@@ -301,19 +309,16 @@ function write_meta(state_dir, { state_name, country_dict, report_n_subs }) {
   const meta = { c_regions, c_dates };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
 
-  write_meta_subs(state_dir, { state_name, country_dict, report_n_subs: 0 });
+  write_meta_subs(state_dir, { state_name, sub_dict, report_n_subs: 0 });
 
   return meta;
 }
 
-function write_meta_subs(
-  path_root,
-  { state_name, country_dict, report_n_subs }
-) {
+function write_meta_subs(path_root, { state_name, sub_dict, report_n_subs }) {
   // Write meta for states with in each country that has them
   const subs_path = path.resolve(path_root, 'c_subs');
-  for (let country in country_dict) {
-    const cent = country_dict[country];
+  for (let country in sub_dict) {
+    const cent = sub_dict[country];
     if (!cent.ncountry) {
       // report_log('skipping country', country);
       continue;
@@ -322,7 +327,7 @@ function write_meta_subs(
     // report_log('process_summary fpath', fpath);
     write_meta(state_dir, {
       state_name: (state_name ? state_name + ' ' : '') + cent.ncountry,
-      country_dict: cent.states,
+      sub_dict: cent.states,
       report_n_subs,
     });
   }
