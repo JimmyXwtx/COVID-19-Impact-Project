@@ -31,6 +31,9 @@ const top_label = 'World';
 const playDelayInit = 0.1;
 const playEndDelayInit = 3;
 
+const c_root = './c_data/';
+// const c_root = './c_nyc/';
+
 ReactGA.initialize('UA-168322336-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
@@ -57,7 +60,6 @@ const Dashboard = () => {
   const [playDelay, setPlayDelay] = useState(playDelayInit);
   const [bottomTab, setBottomTab] = useLocalStorage('co-source', 'places');
   const [dateIndex, setDateIndex] = useLocalStorage('co-dataIndex', 0);
-  // const [regionOptions, setRegionOptions] = useLocalStorage('co-region');
   const [per100k, setPer100k] = useLocalStorage('co-per100k');
 
   const [dateFocus, setDateFocus] = useState();
@@ -96,14 +98,13 @@ const Dashboard = () => {
         prefix = 'c_subs/' + c_ref + '/' + prefix;
       }
     }
-    // prefix = prefix ? 'c_subs/' + prefix + '/' : '';
     return prefix;
   };
 
   useEffect(() => {
     // console.log('useEffect dates.json');
     const prefix = dataPrefix(countrySelected);
-    fetchData('./c_data/' + prefix + 'c_meta.json', (meta) => {
+    fetchData(c_root + prefix + 'c_meta.json', (meta) => {
       let dateList;
       let metaDict;
       let countryList;
@@ -150,24 +151,21 @@ const Dashboard = () => {
     ) {
       day.isLoading = true;
       const prefix = dataPrefix(countrySelected);
-      fetchData(
-        './c_data/' + prefix + 'c_days/' + dateFocus + '.json',
-        (items) => {
-          if (!items) items = [];
-          console.log(
-            'fetchData c_days using metaDict n',
-            Object.keys(metac.metaDict).length
-          );
-          items.forEach((item) => {
-            const ent = metac.metaDict[item.c_ref];
-            if (ent) {
-              item.c_people = ent.c_people;
-              item.n_states = ent.n_states;
-            }
-          });
-          setDay({ items, dateFocus, isLoading: false });
-        }
-      );
+      fetchData(c_root + prefix + 'c_days/' + dateFocus + '.json', (items) => {
+        if (!items) items = [];
+        console.log(
+          'fetchData c_days using metaDict n',
+          Object.keys(metac.metaDict).length
+        );
+        items.forEach((item) => {
+          const ent = metac.metaDict[item.c_ref];
+          if (ent) {
+            item.c_people = ent.c_people;
+            item.n_subs = ent.n_subs;
+          }
+        });
+        setDay({ items, dateFocus, isLoading: false });
+      });
     }
   }, [countrySelected, day, dateFocus, metac.metaDict, day.dateFocus, metac]);
 

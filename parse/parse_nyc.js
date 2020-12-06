@@ -19,11 +19,11 @@ const daily_file = '../nyc-data/repo/totals/data-by-modzcta.csv';
 const store_dir = '../dashboard/public/c_nyc/';
 
 const stats_init = { Cases: 0, Deaths: 0 };
+let fromDate;
+let toDate;
 
 const start_time = Date.now();
 const report_lines = [];
-
-process_nyc();
 
 function process_nyc() {
   // 2020-12-06T06:31:38.404Z
@@ -53,7 +53,7 @@ function process_summary(country_dict) {
   report_log('-------------------------------------------');
 
   // Write meta for countries
-  write_meta(store_dir, { country_dict, report_n_states: 1 });
+  write_meta(store_dir, { country_dict, report_n_subs: 1 });
 
   const lapse_time = Date.now() - start_time;
   report_log('-------------------------------------------');
@@ -61,10 +61,17 @@ function process_summary(country_dict) {
 }
 
 function process_file_csv(csv_inpath, file_date) {
+  if (!toDate) toDate = file_date;
+  if (!fromDate) fromDate = file_date;
+  if (toDate < file_date) toDate = file_date;
+  if (fromDate > file_date) fromDate = file_date;
+
   const sums_total = Object.assign({}, stats_init);
   const country_dict = {};
 
   const input = fs.readFileSync(csv_inpath);
+  console.log('process_file_csv  input.length', input.length);
+
   const records = parse(input, {
     columns: true,
     skip_empty_lines: true,
@@ -75,6 +82,7 @@ function process_file_csv(csv_inpath, file_date) {
     rename_item(item);
     item.source_index = index;
 
+    console.log('process_item', item);
     if (!hasValue(item)) {
       return;
     }
@@ -94,7 +102,6 @@ function process_file_csv(csv_inpath, file_date) {
       cent = {
         c_ref: Country_Region,
         totals,
-        pop_ent,
         states: {},
       };
       country_dict[Country_Region] = cent;
@@ -139,6 +146,19 @@ function process_file_csv(csv_inpath, file_date) {
   return country_dict;
 }
 
+const prop_renames = {
+  COVID_CASE_COUNT: 'Cases',
+  COVID_DEATH_COUNT: 'Deaths',
+};
+
+function rename_item(item) {
+  for (let prop in prop_renames) {
+    const nprop = prop_renames[prop];
+    const val = item[prop];
+    if (val) item[nprop] = val;
+  }
+}
+
 function write_subs(subs_dict, file_date, path_root) {
   for (let country in subs_dict) {
     const cent = subs_dict[country];
@@ -177,7 +197,7 @@ function write_daily(country_dict, file_date, path_root) {
   return sums.length;
 }
 
-function write_meta(state_dir, { state_name, country_dict, report_n_states }) {
+function write_meta(state_dir, { state_name, country_dict, report_n_subs }) {
   // report_log('write_meta state_dir', state_dir);
   const key = 'c_ref';
   const c_dates = [];
@@ -245,11 +265,11 @@ function write_meta(state_dir, { state_name, country_dict, report_n_states }) {
     if (country_dict) {
       const cent = country_dict[uname];
       if (cent) {
-        const n_states = Object.keys(cent.states).length;
-        if (n_states) {
-          ent.n_states = n_states;
-          if (report_n_states) {
-            report_log(uname + '| n_states ' + ent.n_states);
+        const n_subs = Object.keys(cent.states).length;
+        if (n_subs) {
+          ent.n_subs = n_subs;
+          if (report_n_subs) {
+            report_log(uname + '| n_subs ' + ent.n_subs);
           }
         }
         ent.c_people = cent.c_people;
@@ -261,14 +281,14 @@ function write_meta(state_dir, { state_name, country_dict, report_n_states }) {
   const meta = { c_regions, c_dates };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
 
-  write_meta_subs(state_dir, { state_name, country_dict, report_n_states: 0 });
+  write_meta_subs(state_dir, { state_name, country_dict, report_n_subs: 0 });
 
   return meta;
 }
 
 function write_meta_subs(
   path_root,
-  { state_name, country_dict, report_n_states }
+  { state_name, country_dict, report_n_subs }
 ) {
   // Write meta for states with in each country that has them
   const subs_path = path.resolve(path_root, 'c_subs');
@@ -283,19 +303,9 @@ function write_meta_subs(
     write_meta(state_dir, {
       state_name: (state_name ? state_name + ' ' : '') + cent.ncountry,
       country_dict: cent.states,
-      report_n_states,
+      report_n_subs,
     });
   }
 }
 
-function dump(records, sums_total, sums, csv_inpath, outpath_country) {
-  report_log('records[0] ' + records[0]);
-  report_log('sums_total ' + sums_total);
-  report_log('sums.length ' + sums.length);
-  const ndump = 1;
-  for (let index = 0; index < ndump; index++) {
-    report_log('sums[' + index + '] ' + JSON.stringify(sums[index]));
-  }
-  report_log(csv_inpath);
-  report_log(outpath_country + '\n');
-}
+process_nyc();

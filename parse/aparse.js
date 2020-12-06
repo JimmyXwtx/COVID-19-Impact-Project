@@ -22,7 +22,6 @@ const daily_dir =
 const store_dir = '../dashboard/public/c_data/';
 
 const stats_init = { Cases: 0, Deaths: 0 };
-
 let fromDate;
 let toDate;
 
@@ -78,7 +77,7 @@ function process_summary(country_dict) {
   report_log('-------------------------------------------');
 
   // Write meta for countries
-  write_meta(store_dir, { country_dict, report_n_states: 1 });
+  write_meta(store_dir, { country_dict, report_n_subs: 1 });
 
   const lapse_time = Date.now() - start_time;
   report_log('-------------------------------------------');
@@ -243,7 +242,7 @@ function write_daily(country_dict, file_date, path_root) {
   return sums.length;
 }
 
-function write_meta(state_dir, { state_name, country_dict, report_n_states }) {
+function write_meta(state_dir, { state_name, country_dict, report_n_subs }) {
   // report_log('write_meta state_dir', state_dir);
   const key = 'c_ref';
   const c_dates = [];
@@ -311,11 +310,11 @@ function write_meta(state_dir, { state_name, country_dict, report_n_states }) {
     if (country_dict) {
       const cent = country_dict[uname];
       if (cent) {
-        const n_states = Object.keys(cent.states).length;
-        if (n_states) {
-          ent.n_states = n_states;
-          if (report_n_states) {
-            report_log(uname + '| n_states ' + ent.n_states);
+        const n_subs = Object.keys(cent.states).length;
+        if (n_subs) {
+          ent.n_subs = n_subs;
+          if (report_n_subs) {
+            report_log(uname + '| n_subs ' + ent.n_subs);
           }
         }
         ent.c_people = cent.c_people;
@@ -327,14 +326,14 @@ function write_meta(state_dir, { state_name, country_dict, report_n_states }) {
   const meta = { c_regions, c_dates };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
 
-  write_meta_subs(state_dir, { state_name, country_dict, report_n_states: 0 });
+  write_meta_subs(state_dir, { state_name, country_dict, report_n_subs: 0 });
 
   return meta;
 }
 
 function write_meta_subs(
   path_root,
-  { state_name, country_dict, report_n_states }
+  { state_name, country_dict, report_n_subs }
 ) {
   // Write meta for states with in each country that has them
   const subs_path = path.resolve(path_root, 'c_subs');
@@ -349,7 +348,7 @@ function write_meta_subs(
     write_meta(state_dir, {
       state_name: (state_name ? state_name + ' ' : '') + cent.ncountry,
       country_dict: cent.states,
-      report_n_states,
+      report_n_subs,
     });
   }
 }
