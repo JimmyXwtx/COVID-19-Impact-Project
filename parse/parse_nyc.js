@@ -97,7 +97,7 @@ function process_file_csv(csv_inpath, file_date) {
   const strOut = (strIn + '').replace(/\r\n/g, '\n');
   fs.writeFileSync(cpath, strOut);
   fs.writeFileSync(data_file, strOut);
-  )
+
   const records = parse(strIn, {
     columns: true,
     skip_empty_lines: true,

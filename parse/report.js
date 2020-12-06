@@ -7,7 +7,7 @@ let verbose;
 let logFile = './report.txt';
 
 function report_flush() {
-  fs.writeFileSync(log_file, report_lines.join('\n'));
+  fs.writeFileSync(logFile, report_lines.join('\n'));
 }
 
 function report_log(aline) {
@@ -20,7 +20,7 @@ function report_verbose(state) {
 }
 
 function report_logFile(nfile) {
-  log_fillogFilee = nfile;
+  logFile = nfile;
 }
 
 module.exports = {
