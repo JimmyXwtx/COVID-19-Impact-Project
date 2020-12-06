@@ -9,56 +9,33 @@ const fs = require('fs-extra');
 const path = require('path');
 const argv = require('yargs').argv;
 
-const { rename_item, country_pop_ent, pop_dict } = require('./country');
-
 // const nlimit = 5;
 const nlimit = 0;
 const argv_silent = argv.silent;
 const argv_verbose = !argv_silent;
 
-const daily_dir =
-  '../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
+const daily_file = '../nyc-data/repo/totals/data-by-modzcta.csv';
 
-const store_dir = '../dashboard/public/c_data/';
+const store_dir = '../dashboard/public/c_nyc/';
 
 const stats_init = { Cases: 0, Deaths: 0 };
 
-let fromDate;
-let toDate;
-
 const start_time = Date.now();
-const pop_missing = {};
 const report_lines = [];
 
-process_world_dir();
+process_nyc();
 
-function process_world_dir() {
-  report_log('pop_dict n ' + Object.keys(pop_dict).length);
+function process_nyc() {
+  // 2020-12-06T06:31:38.404Z
+  // 1234567890
+  //
+  const today = new Date().toISOString().substring(0, 10);
 
-  const country_dict = process_dir_csv();
+  const country_dict = process_file_csv(daily_file, today);
 
   process_summary(country_dict);
 
   report_write();
-}
-
-function process_dir_csv() {
-  const nfiles = fs.readdirSync(daily_dir);
-  let index = 0;
-  let country_dict;
-  for (let nfile of nfiles) {
-    const fparse = path.parse(nfile);
-    if (fparse.ext != '.csv') continue;
-    const csv_path = path.resolve(daily_dir, nfile);
-    country_dict = process_file_csv(csv_path, fparse.name);
-    index++;
-    if (nlimit && index >= nlimit) break;
-  }
-  const keys = Object.keys(pop_missing);
-  // report_log('pop_missing', keys.length, keys.sort());
-  report_log('pop_missing ' + keys.length);
-  report_log(JSON.stringify(keys.sort(), null, 2));
-  return country_dict;
 }
 
 function report_write() {
@@ -71,8 +48,6 @@ function report_log(aline) {
 }
 
 function process_summary(country_dict) {
-  report_log('Parsed fromDate=' + fromDate + ' toDate=' + toDate);
-
   const parse_time = Date.now() - start_time;
   report_log('parse sec ' + parse_time / 1000);
   report_log('-------------------------------------------');
@@ -86,20 +61,6 @@ function process_summary(country_dict) {
 }
 
 function process_file_csv(csv_inpath, file_date) {
-  // 05-15-2020 --> 2020-05-15
-  // 0123456789
-  file_date =
-    file_date.substring(6, 10) +
-    '-' +
-    file_date.substring(0, 3) +
-    file_date.substring(3, 5);
-
-  if (!toDate) toDate = file_date;
-  if (!fromDate) fromDate = file_date;
-  if (toDate < file_date) toDate = file_date;
-  if (fromDate > file_date) fromDate = file_date;
-
-  // const sums_country = {};
   const sums_total = Object.assign({}, stats_init);
   const country_dict = {};
 
@@ -118,7 +79,7 @@ function process_file_csv(csv_inpath, file_date) {
       return;
     }
 
-    const Country_Region = item.Country_Region;
+    const Country_Region = item.BOROUGH_GROUP;
     if (!Country_Region) {
       const str = JSON.stringify(item);
       report_log('!!@ empty Country_Region ' + file_date + ' ' + str);
@@ -129,12 +90,10 @@ function process_file_csv(csv_inpath, file_date) {
     if (!cent) {
       // stats_init = { Cases: 0, Deaths: 0 };
       const totals = Object.assign({}, stats_init);
-      const pop_ent = country_pop_ent(Country_Region, pop_missing);
       // if (Country_Region === 'United States') report_log('pop_ent', pop_ent);
       cent = {
         c_ref: Country_Region,
         totals,
-        c_people: pop_ent ? pop_ent.Population : 0,
         pop_ent,
         states: {},
       };
@@ -143,44 +102,19 @@ function process_file_csv(csv_inpath, file_date) {
     calc(cent.totals, item);
     calc(sums_total, item);
 
-    let Province_State = item.Province_State;
-    if (
-      Province_State &&
-      Province_State !== 'Recovered' &&
-      Province_State !== Country_Region
-    ) {
+    let Province_State = item.MODIFIED_ZCTA;
+    if (Province_State) {
       let sent = cent.states[Province_State];
       if (!sent) {
-        const pop_ent = cent.pop_ent && cent.pop_ent.states[Province_State];
         const totals = Object.assign({}, stats_init);
         sent = {
           c_ref: Province_State,
           totals,
-          c_people: pop_ent ? pop_ent.Population : 0,
           states: {},
         };
         cent.states[Province_State] = sent;
       }
       calc(sent.totals, item);
-      const Admin2 = item.Admin2;
-      if (Admin2) {
-        let aent = sent.states[Admin2];
-        if (!aent) {
-          let pop_ent = cent.pop_ent && cent.pop_ent.states[Province_State];
-          if (pop_ent && pop_ent.states) {
-            pop_ent = pop_ent.states[Admin2];
-          }
-          const totals = Object.assign({}, stats_init);
-          aent = {
-            c_ref: Admin2,
-            totals,
-            c_people: pop_ent ? pop_ent.Population : 0,
-            states: {},
-          };
-          sent.states[Admin2] = aent;
-        }
-        calc(aent.totals, item);
-      }
     }
   }
   function hasValue(item) {

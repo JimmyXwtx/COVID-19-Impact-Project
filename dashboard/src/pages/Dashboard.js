@@ -660,7 +660,10 @@ const Dashboard = () => {
 
   function CountryTabBackNav() {
     const items = [];
+    let index = 0;
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
+      const key = 'ctbv-' + index;
+      index++;
       let item;
       if (ncountry.parent) {
         item = (
@@ -670,13 +673,14 @@ const Dashboard = () => {
             onClick={() => {
               selectCountryParent(ncountry);
             }}
+            key={key}
           >
             &lt; {ncountry.parent.c_ref}
           </Button>
         );
       } else if (ncountry.c_ref) {
         item = (
-          <Button basic size="mini" onClick={selectWorldwide}>
+          <Button basic size="mini" onClick={selectWorldwide} key={key}>
             &lt; Worldwide
           </Button>
         );
@@ -684,7 +688,10 @@ const Dashboard = () => {
       if (item) items.push(item);
     }
     items.reverse();
-    if (items.length > 0) items.push(<br />);
+    if (items.length > 0) {
+      const key = 'ctbv-' + index;
+      items.push(<br key={key} />);
+    }
     return items;
   }
 
