@@ -47,7 +47,10 @@ function fileNameForSub(nsub) {
 
 // Write jons to c_meta.json and any sub divisions
 //
-function write_meta(sub_dir, { sub_label, sub_dict, report_n_subs, to_date }) {
+function write_meta(
+  sub_dir,
+  { sub_label, sub_dict, report_n_subs, to_date, c_title, c_sub_titles }
+) {
   // report.log('write_meta sub_dir ' + sub_dir);
   // report.log('write_meta to_date ' + to_date);
   const c_dates = [];
@@ -128,17 +131,25 @@ function write_meta(sub_dir, { sub_label, sub_dict, report_n_subs, to_date }) {
     return ent;
   });
   const outpath_meta = path.resolve(sub_dir, 'c_meta.json');
-  const meta = { c_regions, c_dates };
+  const c_sub_title = c_sub_titles.length > 0 ? c_sub_titles[0] : undefined;
+  const meta = { c_regions, c_dates, c_title, c_sub_title };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
 
-  write_meta_subs(sub_dir, { sub_label, sub_dict, report_n_subs: 0, to_date });
+  c_sub_titles.splice(0, 1);
+  write_meta_subs(sub_dir, {
+    sub_label,
+    sub_dict,
+    report_n_subs: 0,
+    to_date,
+    c_sub_titles,
+  });
 
   return meta;
 }
 
 function write_meta_subs(
   path_root,
-  { sub_label, sub_dict, report_n_subs, to_date }
+  { sub_label, sub_dict, report_n_subs, to_date, c_sub_titles }
 ) {
   // Write meta for states with in each country that has them
   const subs_path = path.resolve(path_root, 'c_subs');
@@ -155,6 +166,7 @@ function write_meta_subs(
       sub_dict: cent.subs,
       report_n_subs,
       to_date,
+      c_sub_titles,
     });
   }
 }

@@ -73,7 +73,13 @@ function process_summary(sub_dict) {
   // Write meta for countries
   console.log('process_summary to_date ' + to_date);
 
-  cdata.write_meta(store_dir, { sub_dict, report_n_subs: 1, to_date });
+  cdata.write_meta(store_dir, {
+    sub_dict,
+    report_n_subs: 1,
+    to_date,
+    c_title: 'New York City',
+    c_sub_titles: ['Borough', 'Zipcode'],
+  });
 
   const lapse_time = Date.now() - start_time;
   report.log('-------------------------------------------');
