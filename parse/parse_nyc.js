@@ -17,6 +17,8 @@
 //      2020-12-04.csv
 //
 
+// node parse_nyc --date 2020-12-03
+
 const parse = require('csv-parse/lib/sync');
 const fs = require('fs-extra');
 const path = require('path');
@@ -26,6 +28,9 @@ const argv = require('yargs').argv;
 const nlimit = 0;
 const argv_silent = argv.silent;
 const argv_verbose = !argv_silent;
+const argv_date = argv.date;
+
+console.log('argv_date', argv_date);
 
 const daily_file = '../nyc-data/repo/totals/data-by-modzcta.csv';
 
@@ -42,9 +47,10 @@ function process_nyc() {
   // 2020-12-06T06:31:38.404Z
   // 1234567890
   //
-  const today = new Date().toISOString().substring(0, 10);
+  let filedate = argv_date;
+  if (!filedate) filedate = new Date().toISOString().substring(0, 10);
 
-  const country_dict = process_file_csv(daily_file, today);
+  const country_dict = process_file_csv(daily_file, filedate);
 
   process_summary(country_dict);
 
@@ -74,6 +80,7 @@ function process_summary(country_dict) {
 }
 
 function process_file_csv(csv_inpath, file_date) {
+  console.log('csv_inpath', csv_inpath, 'file_date', file_date);
   if (!toDate) toDate = file_date;
   if (!fromDate) fromDate = file_date;
   if (toDate < file_date) toDate = file_date;
@@ -95,44 +102,44 @@ function process_file_csv(csv_inpath, file_date) {
     rename_item(item);
     item.source_index = index;
 
-    console.log('process_item', item);
+    // console.log('process_item', item);
     if (!hasValue(item)) {
       return;
     }
 
-    const Country_Region = item.BOROUGH_GROUP;
-    if (!Country_Region) {
+    const key1 = item.BOROUGH_GROUP;
+    if (!key1) {
       const str = JSON.stringify(item);
-      report_log('!!@ empty Country_Region ' + file_date + ' ' + str);
+      report_log('!!@ empty key1 ' + file_date + ' ' + str);
       return;
     }
 
-    let cent = country_dict[Country_Region];
+    let cent = country_dict[key1];
     if (!cent) {
       // stats_init = { Cases: 0, Deaths: 0 };
       const totals = Object.assign({}, stats_init);
-      // if (Country_Region === 'United States') report_log('pop_ent', pop_ent);
+      // if (key1 === 'United States') report_log('pop_ent', pop_ent);
       cent = {
-        c_ref: Country_Region,
+        c_ref: key1,
         totals,
         states: {},
       };
-      country_dict[Country_Region] = cent;
+      country_dict[key1] = cent;
     }
     calc(cent.totals, item);
     calc(sums_total, item);
 
-    let Province_State = item.MODIFIED_ZCTA;
-    if (Province_State) {
-      let sent = cent.states[Province_State];
+    let key2 = item.MODIFIED_ZCTA;
+    if (key2) {
+      let sent = cent.states[key2];
       if (!sent) {
         const totals = Object.assign({}, stats_init);
         sent = {
-          c_ref: Province_State,
+          c_ref: key2,
           totals,
           states: {},
         };
-        cent.states[Province_State] = sent;
+        cent.states[key2] = sent;
       }
       calc(sent.totals, item);
     }
