@@ -138,6 +138,8 @@ const Dashboard = () => {
         dateList,
         metaDict,
         countryList,
+        c_title: meta.c_title,
+        c_sub_title: meta.c_sub_title,
       });
     });
   }, [countrySelected]);
@@ -287,7 +289,9 @@ const Dashboard = () => {
     playingState ? playDelay * 1000 : null
   );
 
-  // console.log('Graph countryFocus', countryFocus);
+  // console.log('Dashboard countryFocus', countryFocus);
+  console.log('Dashboard metac', metac);
+  console.log('Dashboard countrySelected', countrySelected);
 
   const setDateIndexFocus = (value) => {
     const index = metac.dateList.findIndex((item) => item.value === value);
@@ -514,10 +518,13 @@ const Dashboard = () => {
     if (countrySelected.c_ref) {
       country = { ...country, parent: countrySelected };
     }
+    country.c_title = metac.c_title;
+    console.log('selectCountry country', country, 'metac', metac);
     setCountrySelected(country);
   };
 
-  const ui_top = countrySelected.c_ref ? countrySelected.c_ref : 'Worldwide';
+  let ui_top = countrySelected.c_ref ? countrySelected.c_ref : 'Worldwide';
+  if (metac.c_title) ui_top = metac.c_title;
 
   const selectWorldwide = () => {
     setDay({});
@@ -525,58 +532,8 @@ const Dashboard = () => {
     setCountrySelected({});
   };
 
-  // const selectParentCounty = () => {
-  //   setDay({});
-  //   setMetac({});
-  //   setCountrySelected(countrySelected.parent);
-  // };
-
-  // const regionPlusClick = () => {
-  //   setRegionOptions(!regionOptions);
-  // };
-
-  // const clickPer100k = () => {
-  //   setPer100k(!per100k);
-  // };
-
-  // const tunder = { textDecoration: 'underline' };
-  // const sortActionSpec = {
-  //   region: {
-  //     style: sortColumn === 'region' ? tunder : null,
-  //     onclick: () => {
-  //       setSortColumn('region');
-  //     },
-  //   },
-  //   prop: {
-  //     style: sortColumn === 'prop' ? tunder : null,
-  //     onclick: () => {
-  //       setSortColumn('prop');
-  //     },
-  //   },
-  //   percent: {
-  //     style: sortColumn === 'percent' ? tunder : null,
-  //     onclick: () => {
-  //       setSortColumn('percent');
-  //     },
-  //   },
-  // };
-
-  // const CountryNavButtons = () => {
-  //   return (
-  //     <>
-  //       {countrySelected.c_ref && (
-  //         <button onClick={selectWorldwide}>Worldwide</button>
-  //       )}
-  //       {countrySelected.parent && (
-  //         <button onClick={selectParentCounty}>
-  //           {countrySelected.parent.c_ref}
-  //         </button>
-  //       )}
-  //     </>
-  //   );
-  // };
-
   const getRegionTitle = () => {
+    if (metac.c_sub_title) return metac.c_sub_title;
     if (!countrySelected.c_ref) return 'Country';
     if (!countrySelected.parent) return 'State';
     return 'County';
@@ -587,63 +544,6 @@ const Dashboard = () => {
     setMetac({});
     setCountrySelected(ncountry.parent);
   };
-
-  // const countryTabNavItems = () => {
-  //   const stats_total = pieData[0].stats_total;
-  //   const items = [
-  //     {
-  //       c_ref: ui_top + ' ' + stats_total + ' ' + uiprop_s,
-  //       // propValueTable: stats_total,
-  //       propPercent: 1.0,
-  //     },
-  //   ];
-  //   for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
-  //     let item;
-  //     if (ncountry.parent) {
-  //       item = {
-  //         c_ref: (
-  //           <Button
-  //             basic
-  //             size="mini"
-  //             onClick={() => {
-  //               selectCountryParent(ncountry);
-  //             }}
-  //           >
-  //             &lt; {ncountry.parent.c_ref}
-  //           </Button>
-  //         ),
-  //         propValueInvalid: true,
-  //         propPercentInvalid: true,
-  //       };
-  //     } else if (ncountry.c_ref) {
-  //       item = {
-  //         c_ref: (
-  //           <Button basic size="mini" onClick={selectWorldwide}>
-  //             &lt; Worldwide
-  //           </Button>
-  //         ),
-  //         propValueInvalid: true,
-  //         propPercentInvalid: true,
-  //       };
-  //     }
-  //     if (item) items.push(item);
-  //   }
-  //   return items.reverse();
-  // };
-
-  // function CountryTabNavDiv() {
-  //   let items = countryTabNavItems();
-  //   if (items.length > 1) {
-  //     const nitems = [<br />];
-  //     for (let index = 0; index < items.length - 1; index++) {
-  //       const item = items[index];
-  //       nitems.push(item.c_ref);
-  //     }
-  //     nitems.push(<RegionNavTable items={[items[items.length - 1]]} />);
-  //     return nitems;
-  //   }
-  //   return <RegionNavTable items={items} />;
-  // }
 
   function CountryTabPreHeader() {
     const stats_total = pieData[0].stats_total;
@@ -677,9 +577,11 @@ const Dashboard = () => {
           </Button>
         );
       } else if (ncountry.c_ref) {
+        console.log('CountryTabBackNav ncountry', ncountry);
         item = (
           <Button basic size="mini" onClick={selectWorldwide} key={key}>
-            &lt; Worldwide
+            &lt;{' '}
+            {countrySelected.c_title ? countrySelected.c_title : 'Worldwide'}
           </Button>
         );
       }
