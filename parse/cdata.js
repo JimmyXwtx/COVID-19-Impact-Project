@@ -5,9 +5,20 @@ const path = require('path');
 
 const report = require('./report');
 
+const stats_init = { Cases: 0, Deaths: 0 };
+
 // Write json to c_days and to any sub divisions
 //
 function write_daily(sub_dict, file_date, path_root) {
+  // console.log(
+  //   'write_daily sub_dict:' +
+  //     sub_dict +
+  //     ' file_date:' +
+  //     file_date +
+  //     ' path_root:' +
+  //     path_root
+  // );
+  // console.log('sub_dict:' + JSON.stringify(sub_dict, null, 2));
   const keys = Object.keys(sub_dict).sort();
   const sums = keys.map(key => {
     const { c_ref, totals } = sub_dict[key];
@@ -28,9 +39,17 @@ function write_daily(sub_dict, file_date, path_root) {
 }
 
 function write_subs(subs_dict, file_date, path_root) {
+  // console.log(
+  //   'write_subs subs_dict:' +
+  //     subs_dict +
+  //     ' file_date:' +
+  //     file_date +
+  //     ' path_root:' +
+  //     path_root
+  // );
   for (let sub in subs_dict) {
     const cent = subs_dict[sub];
-    // report.log('file_date', file_date, 'sub', sub, 'cent', cent);
+    // report.log('write_subs file_date', file_date, 'sub', sub, 'cent', cent);
     const nsubs = fileNameForSub(sub);
     cent.nsubs = nsubs;
     let cpath = path.resolve(path_root, 'c_subs', nsubs);
@@ -52,7 +71,7 @@ function write_meta(
   { sub_label, sub_dict, report_n_subs, to_date, c_title, c_sub_titles }
 ) {
   // report.log('write_meta sub_dir ' + sub_dir);
-  // report.log('write_meta to_date ' + to_date);
+  // console.log('write_meta to_date ', to_date, 'sub_dict', sub_dict);
   const c_dates = [];
   const days_path = path.resolve(sub_dir, 'c_days');
   const summaryDict = {};
@@ -131,11 +150,14 @@ function write_meta(
     return ent;
   });
   const outpath_meta = path.resolve(sub_dir, 'c_meta.json');
+
   const c_sub_title = c_sub_titles.length > 0 ? c_sub_titles[0] : undefined;
+
   const meta = { c_regions, c_dates, c_title, c_sub_title };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
 
   c_sub_titles = c_sub_titles.slice(1);
+
   write_meta_subs(sub_dir, {
     sub_label,
     sub_dict,
@@ -171,7 +193,7 @@ function write_meta_subs(
   }
 }
 
-function hasValue(item, stats_init) {
+function hasValue(item) {
   let sum = 0;
   for (let prop in stats_init) {
     let val = item[prop];
@@ -180,7 +202,8 @@ function hasValue(item, stats_init) {
   }
   return sum;
 }
-function calc(sums, item, stats_init) {
+
+function calc(sums, item) {
   for (let prop in stats_init) {
     let val = item[prop];
     if (!val) val = 0;
@@ -188,9 +211,14 @@ function calc(sums, item, stats_init) {
   }
 }
 
+function empty() {
+  return Object.assign({}, stats_init);
+}
+
 module.exports = {
   write_daily,
   write_meta,
   hasValue,
   calc,
+  empty,
 };

@@ -44,7 +44,6 @@ const csv_out_dir = '../nyc-data/days/';
 
 const save_to_file = './data/data-by-modzcta.csv';
 
-const stats_init = { Cases: 0, Deaths: 0 };
 let from_date;
 let to_date;
 
@@ -93,7 +92,7 @@ function process_file_csv(csv_inpath, file_date) {
   if (to_date < file_date) to_date = file_date;
   if (from_date > file_date) from_date = file_date;
 
-  const sums_total = Object.assign({}, stats_init);
+  const sums_total = cdata.empty();
   const sub_dict = {};
 
   const strIn = fs.readFileSync(csv_inpath);
@@ -117,7 +116,7 @@ function process_file_csv(csv_inpath, file_date) {
     item.source_index = index;
 
     // console.log('process_item', item);
-    if (!cdata.hasValue(item, stats_init)) {
+    if (!cdata.hasValue(item)) {
       return;
     }
 
@@ -130,8 +129,8 @@ function process_file_csv(csv_inpath, file_date) {
 
     let cent = sub_dict[key1];
     if (!cent) {
-      // stats_init = { Cases: 0, Deaths: 0 };
-      const totals = Object.assign({}, stats_init);
+      //  { Cases: 0, Deaths: 0 };
+      const totals = cdata.empty();
       cent = {
         c_ref: key1,
         totals,
@@ -139,14 +138,14 @@ function process_file_csv(csv_inpath, file_date) {
       };
       sub_dict[key1] = cent;
     }
-    cdata.calc(cent.totals, item, stats_init);
-    cdata.calc(sums_total, item, stats_init);
+    cdata.calc(cent.totals, item);
+    cdata.calc(sums_total, item);
 
     let key2 = item.MODIFIED_ZCTA + ' ' + item.NEIGHBORHOOD_NAME;
     if (key2) {
       let sent = cent.subs[key2];
       if (!sent) {
-        const totals = Object.assign({}, stats_init);
+        const totals = cdata.empty();
         sent = {
           c_ref: key2,
           totals,
@@ -154,7 +153,7 @@ function process_file_csv(csv_inpath, file_date) {
         };
         cent.subs[key2] = sent;
       }
-      cdata.calc(sent.totals, item, stats_init);
+      cdata.calc(sent.totals, item);
     }
   }
 

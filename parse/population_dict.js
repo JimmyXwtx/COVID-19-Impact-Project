@@ -56,17 +56,17 @@ function process_population_table() {
 
     let cent = pop_dict[rent.Country_Region];
     if (!cent) {
-      cent = { Population: rent.Population, states: {} };
+      cent = { Population: rent.Population, subs: {} };
       pop_dict[rent.Country_Region] = cent;
     } else {
       // ...
     }
     if (!rent.Province_State) continue;
-    let sent = cent.states[rent.Province_State];
+    let sent = cent.subs[rent.Province_State];
     if (!sent) {
       // First occurrence of Province_State is for entire state
       sent = { Population: rent.Population };
-      cent.states[rent.Province_State] = sent;
+      cent.subs[rent.Province_State] = sent;
     } else {
       if (rent.Admin2) {
         if (
@@ -76,10 +76,10 @@ function process_population_table() {
           const nAdmin2 = newYorkCountyFixes[rent.Admin2];
           if (nAdmin2) rent.Admin2 = nAdmin2;
         }
-        if (!sent.states) {
-          sent.states = {};
+        if (!sent.subs) {
+          sent.subs = {};
         }
-        sent.states[rent.Admin2] = { Population: rent.Population };
+        sent.subs[rent.Admin2] = { Population: rent.Population };
       }
     }
   }
