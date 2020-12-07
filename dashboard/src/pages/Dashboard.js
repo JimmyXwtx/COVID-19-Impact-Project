@@ -31,6 +31,9 @@ const top_label = 'World';
 const playDelayInit = 0.1;
 const playEndDelayInit = 3;
 
+const c_root = './c_data/world/';
+// const c_root = './c_data/nyc/';
+
 ReactGA.initialize('UA-168322336-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
@@ -57,7 +60,6 @@ const Dashboard = () => {
   const [playDelay, setPlayDelay] = useState(playDelayInit);
   const [bottomTab, setBottomTab] = useLocalStorage('co-source', 'places');
   const [dateIndex, setDateIndex] = useLocalStorage('co-dataIndex', 0);
-  // const [regionOptions, setRegionOptions] = useLocalStorage('co-region');
   const [per100k, setPer100k] = useLocalStorage('co-per100k');
 
   const [dateFocus, setDateFocus] = useState();
@@ -96,14 +98,13 @@ const Dashboard = () => {
         prefix = 'c_subs/' + c_ref + '/' + prefix;
       }
     }
-    // prefix = prefix ? 'c_subs/' + prefix + '/' : '';
     return prefix;
   };
 
   useEffect(() => {
     // console.log('useEffect dates.json');
     const prefix = dataPrefix(countrySelected);
-    fetchData('./c_data/' + prefix + 'c_meta.json', (meta) => {
+    fetchData(c_root + prefix + 'c_meta.json', (meta) => {
       let dateList;
       let metaDict;
       let countryList;
@@ -137,6 +138,8 @@ const Dashboard = () => {
         dateList,
         metaDict,
         countryList,
+        c_title: meta.c_title,
+        c_sub_title: meta.c_sub_title,
       });
     });
   }, [countrySelected]);
@@ -150,24 +153,21 @@ const Dashboard = () => {
     ) {
       day.isLoading = true;
       const prefix = dataPrefix(countrySelected);
-      fetchData(
-        './c_data/' + prefix + 'c_days/' + dateFocus + '.json',
-        (items) => {
-          if (!items) items = [];
-          console.log(
-            'fetchData c_days using metaDict n',
-            Object.keys(metac.metaDict).length
-          );
-          items.forEach((item) => {
-            const ent = metac.metaDict[item.c_ref];
-            if (ent) {
-              item.c_people = ent.c_people;
-              item.n_states = ent.n_states;
-            }
-          });
-          setDay({ items, dateFocus, isLoading: false });
-        }
-      );
+      fetchData(c_root + prefix + 'c_days/' + dateFocus + '.json', (items) => {
+        if (!items) items = [];
+        console.log(
+          'fetchData c_days using metaDict n',
+          Object.keys(metac.metaDict).length
+        );
+        items.forEach((item) => {
+          const ent = metac.metaDict[item.c_ref];
+          if (ent) {
+            item.c_people = ent.c_people;
+            item.n_subs = ent.n_subs;
+          }
+        });
+        setDay({ items, dateFocus, isLoading: false });
+      });
     }
   }, [countrySelected, day, dateFocus, metac.metaDict, day.dateFocus, metac]);
 
@@ -289,7 +289,9 @@ const Dashboard = () => {
     playingState ? playDelay * 1000 : null
   );
 
-  // console.log('Graph countryFocus', countryFocus);
+  // console.log('Dashboard countryFocus', countryFocus);
+  console.log('Dashboard metac', metac);
+  console.log('Dashboard countrySelected', countrySelected);
 
   const setDateIndexFocus = (value) => {
     const index = metac.dateList.findIndex((item) => item.value === value);
@@ -516,10 +518,13 @@ const Dashboard = () => {
     if (countrySelected.c_ref) {
       country = { ...country, parent: countrySelected };
     }
+    country.c_title = metac.c_title;
+    console.log('selectCountry country', country, 'metac', metac);
     setCountrySelected(country);
   };
 
-  const ui_top = countrySelected.c_ref ? countrySelected.c_ref : 'Worldwide';
+  let ui_top = countrySelected.c_ref ? countrySelected.c_ref : 'Worldwide';
+  if (metac.c_title) ui_top = metac.c_title;
 
   const selectWorldwide = () => {
     setDay({});
@@ -527,58 +532,8 @@ const Dashboard = () => {
     setCountrySelected({});
   };
 
-  // const selectParentCounty = () => {
-  //   setDay({});
-  //   setMetac({});
-  //   setCountrySelected(countrySelected.parent);
-  // };
-
-  // const regionPlusClick = () => {
-  //   setRegionOptions(!regionOptions);
-  // };
-
-  // const clickPer100k = () => {
-  //   setPer100k(!per100k);
-  // };
-
-  // const tunder = { textDecoration: 'underline' };
-  // const sortActionSpec = {
-  //   region: {
-  //     style: sortColumn === 'region' ? tunder : null,
-  //     onclick: () => {
-  //       setSortColumn('region');
-  //     },
-  //   },
-  //   prop: {
-  //     style: sortColumn === 'prop' ? tunder : null,
-  //     onclick: () => {
-  //       setSortColumn('prop');
-  //     },
-  //   },
-  //   percent: {
-  //     style: sortColumn === 'percent' ? tunder : null,
-  //     onclick: () => {
-  //       setSortColumn('percent');
-  //     },
-  //   },
-  // };
-
-  // const CountryNavButtons = () => {
-  //   return (
-  //     <>
-  //       {countrySelected.c_ref && (
-  //         <button onClick={selectWorldwide}>Worldwide</button>
-  //       )}
-  //       {countrySelected.parent && (
-  //         <button onClick={selectParentCounty}>
-  //           {countrySelected.parent.c_ref}
-  //         </button>
-  //       )}
-  //     </>
-  //   );
-  // };
-
   const getRegionTitle = () => {
+    if (metac.c_sub_title) return metac.c_sub_title;
     if (!countrySelected.c_ref) return 'Country';
     if (!countrySelected.parent) return 'State';
     return 'County';
@@ -589,63 +544,6 @@ const Dashboard = () => {
     setMetac({});
     setCountrySelected(ncountry.parent);
   };
-
-  // const countryTabNavItems = () => {
-  //   const stats_total = pieData[0].stats_total;
-  //   const items = [
-  //     {
-  //       c_ref: ui_top + ' ' + stats_total + ' ' + uiprop_s,
-  //       // propValueTable: stats_total,
-  //       propPercent: 1.0,
-  //     },
-  //   ];
-  //   for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
-  //     let item;
-  //     if (ncountry.parent) {
-  //       item = {
-  //         c_ref: (
-  //           <Button
-  //             basic
-  //             size="mini"
-  //             onClick={() => {
-  //               selectCountryParent(ncountry);
-  //             }}
-  //           >
-  //             &lt; {ncountry.parent.c_ref}
-  //           </Button>
-  //         ),
-  //         propValueInvalid: true,
-  //         propPercentInvalid: true,
-  //       };
-  //     } else if (ncountry.c_ref) {
-  //       item = {
-  //         c_ref: (
-  //           <Button basic size="mini" onClick={selectWorldwide}>
-  //             &lt; Worldwide
-  //           </Button>
-  //         ),
-  //         propValueInvalid: true,
-  //         propPercentInvalid: true,
-  //       };
-  //     }
-  //     if (item) items.push(item);
-  //   }
-  //   return items.reverse();
-  // };
-
-  // function CountryTabNavDiv() {
-  //   let items = countryTabNavItems();
-  //   if (items.length > 1) {
-  //     const nitems = [<br />];
-  //     for (let index = 0; index < items.length - 1; index++) {
-  //       const item = items[index];
-  //       nitems.push(item.c_ref);
-  //     }
-  //     nitems.push(<RegionNavTable items={[items[items.length - 1]]} />);
-  //     return nitems;
-  //   }
-  //   return <RegionNavTable items={items} />;
-  // }
 
   function CountryTabPreHeader() {
     const stats_total = pieData[0].stats_total;
@@ -660,7 +558,10 @@ const Dashboard = () => {
 
   function CountryTabBackNav() {
     const items = [];
+    let index = 0;
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
+      const key = 'ctbv-' + index;
+      index++;
       let item;
       if (ncountry.parent) {
         item = (
@@ -670,21 +571,27 @@ const Dashboard = () => {
             onClick={() => {
               selectCountryParent(ncountry);
             }}
+            key={key}
           >
             &lt; {ncountry.parent.c_ref}
           </Button>
         );
       } else if (ncountry.c_ref) {
+        console.log('CountryTabBackNav ncountry', ncountry);
         item = (
-          <Button basic size="mini" onClick={selectWorldwide}>
-            &lt; Worldwide
+          <Button basic size="mini" onClick={selectWorldwide} key={key}>
+            &lt;{' '}
+            {countrySelected.c_title ? countrySelected.c_title : 'Worldwide'}
           </Button>
         );
       }
       if (item) items.push(item);
     }
     items.reverse();
-    if (items.length > 0) items.push(<br />);
+    if (items.length > 0) {
+      const key = 'ctbv-' + index;
+      items.push(<br key={key} />);
+    }
     return items;
   }
 

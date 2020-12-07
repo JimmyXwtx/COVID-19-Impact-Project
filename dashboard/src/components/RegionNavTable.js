@@ -58,7 +58,7 @@ const Rows = (props) => {
 
 const RegionNavTable = (props) => {
   const { items } = props;
-  console.log('RegionNavTable items', items);
+  // console.log('RegionNavTable items', items);
   return (
     <StyledRegionNavTable>
       <tbody>

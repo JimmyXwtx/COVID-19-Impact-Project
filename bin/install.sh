@@ -11,6 +11,15 @@ fi
 cd $dest
 git pull
 
+dest=nyc-data
+if [ ! -e "$dest" ]; then
+  mkdir -p $dest
+  git clone https://github.com/nychealth/coronavirus-data $dest/repo
+fi
+cd $dest/repo
+git pull
+cd ..
+
 # Init components
 
 cd ../dashboard

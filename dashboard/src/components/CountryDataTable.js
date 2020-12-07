@@ -25,7 +25,7 @@ function percentFormat(num) {
 const regionRow = (country, index, selectCountry, parentCountry) => {
   const { c_ref } = country;
   const countryCode = parentCountry ? null : getCountryCode(c_ref);
-  if (country.n_states)
+  if (country.n_subs)
     return (
       <Button
         basic

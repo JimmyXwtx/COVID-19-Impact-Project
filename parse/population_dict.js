@@ -10,7 +10,7 @@ const fs = require('fs-extra');
 // const population_table_path = './UID_ISO_FIPS_LookUp_Table.csv';
 const population_table_path =
   '../COVID-19-JHU/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv';
-const population_json_path = './population.json';
+const population_json_path = './data/population.json';
 
 module.exports = {
   population_dict,
@@ -38,11 +38,11 @@ function population_dict() {
 
 function process_population_table() {
   const input = fs.readFileSync(population_table_path);
-  // const input = (fs.readFileSync(population_table_path) + '').replace(/\r?\n/, '\n');
-  fs.writeFileSync(
-    './UID_ISO_FIPS_LookUp_Table.csv',
-    (input + '').replace(/\r\n/g, '\n')
-  );
+
+  // Write copy of csv in unix line ending to track changes via git
+  const strOut = (input + '').replace(/\r\n/g, '\n');
+  fs.writeFileSync('./data/UID_ISO_FIPS_LookUp_Table.csv', strOut);
+
   const records = parse(input, {
     columns: true,
     skip_empty_lines: true,
@@ -56,23 +56,30 @@ function process_population_table() {
 
     let cent = pop_dict[rent.Country_Region];
     if (!cent) {
-      cent = { Population: rent.Population, states: {} };
+      cent = { Population: rent.Population, subs: {} };
       pop_dict[rent.Country_Region] = cent;
     } else {
       // ...
     }
     if (!rent.Province_State) continue;
-    let sent = cent.states[rent.Province_State];
+    let sent = cent.subs[rent.Province_State];
     if (!sent) {
       // First occurrence of Province_State is for entire state
       sent = { Population: rent.Population };
-      cent.states[rent.Province_State] = sent;
+      cent.subs[rent.Province_State] = sent;
     } else {
       if (rent.Admin2) {
-        if (!sent.states) {
-          sent.states = {};
+        if (
+          rent.Country_Region == 'United States' &&
+          rent.Province_State == 'New York'
+        ) {
+          const nAdmin2 = newYorkCountyFixes[rent.Admin2];
+          if (nAdmin2) rent.Admin2 = nAdmin2;
         }
-        sent.states[rent.Admin2] = { Population: rent.Population };
+        if (!sent.subs) {
+          sent.subs = {};
+        }
+        sent.subs[rent.Admin2] = { Population: rent.Population };
       }
     }
   }
@@ -81,13 +88,29 @@ function process_population_table() {
 
 const Country_Region_renames = {
   US: 'United States',
+  'Korea, South': 'South Korea',
+};
+
+const newYorkCountyFixes = {
+  Kings: 'Brooklyn',
+  'New York': 'Manhattan',
+  Richmond: 'Staten Island',
 };
 
 const Country_Region_renames2 = {
+  'Korea, South': {
+    Country_Region: 'South Korea',
+  },
   US: {
     Country_Region: 'United States',
     Province_State: {
-      'New York': { Admin2: { Kings: 'Brooklyn', Richmond: 'Staten Island' } },
+      'New York': {
+        Admin2: {
+          Kings: 'Brooklyn',
+          'New York': 'Manhattan',
+          Richmond: 'Staten Island',
+        },
+      },
     },
   },
 };

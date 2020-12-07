@@ -25,7 +25,8 @@ const Country_Region_renames = {
   'Mainland China': 'China',
   'Hong Kong': 'China',
   Taiwan: 'Taiwan*',
-  'South Korea': 'Korea, South',
+  // 'South Korea': 'Korea, South',
+  'Korea, South': 'South Korea',
   ' Azerbaijan': 'Azerbaijan',
   'Bahamas, The': 'Bahamas',
   'The Bahamas': 'Bahamas',
@@ -60,18 +61,26 @@ function rename_item(item) {
     const stateFix = stateFixes[item.Province_State];
     if (stateFix) {
       item.Province_State = stateFix;
-      return;
-    }
-    const parts = item.Province_State.split(',');
-    if (parts.length >= 2) {
-      const stateCode = parts[1].trim();
-      const stateName = stateCodeMaps[stateCode];
-      if (stateName) {
-        item.Province_State = stateName;
-      } else {
-        console.log('rename_item !!@ item.Province_State', item.Province_State);
-        console.log(item);
+      // return;
+    } else {
+      const parts = item.Province_State.split(',');
+      if (parts.length >= 2) {
+        const stateCode = parts[1].trim();
+        const stateName = stateCodeMaps[stateCode];
+        if (stateName) {
+          item.Province_State = stateName;
+        } else {
+          console.log(
+            'rename_item !!@ item.Province_State',
+            item.Province_State
+          );
+          console.log(item);
+        }
       }
+    }
+    if (item.Province_State == 'New York') {
+      const nAdmin2 = newYorkCountyFixes[item.Admin2];
+      if (nAdmin2) item.Admin2 = nAdmin2;
     }
   } else if (item.Country_Region == 'France') {
     if (!item.Province_State) {
@@ -96,12 +105,18 @@ const stateFixes = {
   'Lackland, TX (From Diamond Princess)': 'Texas',
 };
 
+const newYorkCountyFixes = {
+  Kings: 'Brooklyn',
+  'New York': 'Manhattan',
+  Richmond: 'Staten Island',
+};
+
 // !!@     "Province_State": "Wuhan Evacuee",
 // "first_date": {
 //   "Cases": "2020-03-22"
 
 // // https://gist.github.com/mshafrir/2646763#file-states_hash-json
-const stateCodeMaps = require('./states_hash.json');
+const stateCodeMaps = require('./data/states_hash.json');
 
 // ----------------------------------------------------------------------------
 
