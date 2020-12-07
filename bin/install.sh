@@ -14,7 +14,8 @@ git pull
 dest=nyc-data
 if [ ! -e "$dest" ]; then
   mkdir -p $dest
-  git clone https://github.com/nychealth/coronavirus-data $dest/repo
+  cd $dest
+  git clone https://github.com/nychealth/coronavirus-data repo
 fi
 cd $dest/repo
 git pull
