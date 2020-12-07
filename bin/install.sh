@@ -10,12 +10,14 @@ if [ ! -e "$dest" ]; then
 fi
 cd $dest
 git pull
+cd ..
 
 dest=nyc-data
 if [ ! -e "$dest" ]; then
   mkdir -p $dest
   cd $dest
   git clone https://github.com/nychealth/coronavirus-data repo
+  cd ..
 fi
 cd $dest/repo
 git pull
