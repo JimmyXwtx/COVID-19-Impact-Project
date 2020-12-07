@@ -7,6 +7,11 @@ cd ${0%/*}
 cd ../COVID-19-JHU/
 git pull
 
+cd ../nyc-data/repo
+git pull
+cd ..
+
 cd ../parse
 node population_dict.js 
 node aparse.js --silent
+node parse_nyc.js --silent
