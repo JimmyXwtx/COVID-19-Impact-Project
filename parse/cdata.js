@@ -38,17 +38,17 @@ function write_daily(sub_dict, file_date, path_root) {
   return sums.length;
 }
 
-function write_subs(subs_dict, file_date, path_root) {
+function write_subs(sub_dict, file_date, path_root) {
   // console.log(
-  //   'write_subs subs_dict:' +
-  //     subs_dict +
+  //   'write_subs sub_dict:' +
+  //     sub_dict +
   //     ' file_date:' +
   //     file_date +
   //     ' path_root:' +
   //     path_root
   // );
-  for (let sub in subs_dict) {
-    const cent = subs_dict[sub];
+  for (let sub in sub_dict) {
+    const cent = sub_dict[sub];
     // report.log('write_subs file_date', file_date, 'sub', sub, 'cent', cent);
     const nsubs = fileNameForSub(sub);
     cent.nsubs = nsubs;
