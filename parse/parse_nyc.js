@@ -70,7 +70,7 @@ function process_summary(sub_dict) {
   report.log('-------------------------------------------');
 
   // Write meta for countries
-  console.log('process_summary to_date ' + to_date);
+  // console.log('process_summary to_date ' + to_date);
 
   cdata.write_meta(store_dir, {
     sub_dict,
@@ -86,7 +86,7 @@ function process_summary(sub_dict) {
 }
 
 function process_file_csv(csv_inpath, file_date) {
-  console.log('csv_inpath', csv_inpath, 'file_date', file_date);
+  // console.log('csv_inpath', csv_inpath, 'file_date', file_date);
   if (!to_date) to_date = file_date;
   if (!from_date) from_date = file_date;
   if (to_date < file_date) to_date = file_date;
@@ -96,7 +96,7 @@ function process_file_csv(csv_inpath, file_date) {
   const sub_dict = {};
 
   const strIn = fs.readFileSync(csv_inpath);
-  console.log('process_file_csv  strIn.length', strIn.length);
+  // console.log('process_file_csv  strIn.length', strIn.length);
 
   // Write out csv to csv_out_dir
   fs.ensureDirSync(csv_out_dir);
