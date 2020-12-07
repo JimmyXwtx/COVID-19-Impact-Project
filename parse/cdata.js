@@ -135,7 +135,7 @@ function write_meta(
   const meta = { c_regions, c_dates, c_title, c_sub_title };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
 
-  c_sub_titles.splice(0, 1);
+  c_sub_titles = c_sub_titles.slice(1);
   write_meta_subs(sub_dir, {
     sub_label,
     sub_dict,
