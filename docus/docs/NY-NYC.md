@@ -32,3 +32,62 @@ https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-case
 | 07/15 | 224,293     | 22,808       |
 | 07/14 | 223,382     | 22,750       |
 | 07/10 | 222,723     | 22,719       |
+
+## Issues
+
+### 2020-12-07 nyc stats reconciliation
+
+Deaths in New York City reconciliation issues
+
+| 12/07 | 335,768 | 24,365 |
+
+-- From JHU data:
+23,171 -- diff 1194 vs. 24,365
+
+| Borough       | Deaths |
+| ------------- | ------ |
+| Brooklyn      | 7,529  |
+| Queens        | 7,375  |
+| Bronx         | 5,032  |
+| Manhattan     | 3,235  |
+| Staten Island | 1,157  |
+
+-- From NYC heath data:
+19,288 -- diff 3883 vs. 23,171
+
+| Borough   | Deaths |
+| --------- | ------ |
+| Brooklyn  | 5,748  |
+| Queens    | 6,024  |
+| Bronx     | 4,036  |
+| Manhattan | 2,520  |
+| Staten Is | 960    |
+
+-- Dashboard matches NY Times
+11234 Bergen Beach/Flatlands/Marine Park/Mill Basin 187
+
+Cases
+
+| 12/07 | 335,768 | 24,365 |
+
+-- JHU Total
+331,006 -- diff 4762 vs. 335,768
+
+| Borough       | Cases  |
+| ------------- | ------ |
+| Queens        | 95,446 |
+| Brooklyn      | 94,312 |
+| Bronx         | 67,257 |
+| Manhattan     | 48,521 |
+| Staten Island | 25,470 |
+
+-- From NYC heath data:
+294,585 -- diff 36,421 vs. 331,006
+
+| Borough   | Cases  |
+| --------- | ------ |
+| Brooklyn  | 86,187 |
+| Queens    | 83,706 |
+| Bronx     | 61,987 |
+| Manhattan | 39,925 |
+| Staten Is | 22,780 |
