@@ -4,10 +4,11 @@ title: New York City
 sidebar_label: NYC
 ---
 
-COVID-19 stats from New York City.
+COVID-19 stats for New York City from the New York Times publication.
 
-Source:  
-https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-cases.html
+Source:
+
+- https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-cases.html
 
 ** New York City Case and Death Count **
 
@@ -36,6 +37,12 @@ https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-case
 ## Issues
 
 ### 2020-12-07 nyc stats reconciliation
+
+NYC Heath data from
+
+- https://www1.nyc.gov/site/doh/covid/covid-19-data.page
+- https://github.com/nychealth/coronavirus-data
+- https://github.com/nychealth/coronavirus-data/blob/master/totals/data-by-modzcta.csv
 
 Deaths in New York City reconciliation issues
 
@@ -91,3 +98,18 @@ Cases
 | Bronx     | 61,987 |
 | Manhattan | 39,925 |
 | Staten Is | 22,780 |
+
+Source:
+
+- https://github.com/nychealth/coronavirus-data/blob/master/totals/summary.csv
+
+| MEASURE                             | NUMBER_OF_NYC_RESIDENTS |
+| ----------------------------------- | ----------------------- |
+| NYC_CASE_COUNT                      | 309566                  |
+| NYC_PROBABLE_CASE_COUNT             | 29810                   |
+| NYC_TOTAL_CASE_COUNT                | 339376                  |
+| NYC_HOSPITALIZED_COUNT              | 62651                   |
+| NYC_CONFIRMED_DEATH_COUNT           | 19673                   |
+| NYC_PROBABLE_DEATH_COUNT            | 4714                    |
+| NYC_TOTAL_DEATH_COUNT               | 24387                   |
+| DATE_UPDATED December 7, at 10 a.m. |                         |

@@ -4,7 +4,7 @@ title: Brooklyn Flatlands
 sidebar_label: Brooklyn
 ---
 
-COVID-19 stats from where we are staying in the Flatlands of Brooklyn.
+COVID-19 stats for our location in the Flatlands of Brooklyn.
 
 Source:  
 https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-cases.html

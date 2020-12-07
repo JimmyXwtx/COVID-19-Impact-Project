@@ -223,6 +223,7 @@ const Dashboard = () => {
       const nval = item[sumFocus][propFocus];
       item.propValue = nval;
       item.propValueTable = nval;
+      item.propValueInvalid = false;
       if (nval > 0) stats_total += nval;
     });
     items.forEach((item) => {
@@ -252,6 +253,7 @@ const Dashboard = () => {
       sorted_items.forEach((item) => {
         if (item.c_people) {
           item.propValueTable = item.propValue * (100000 / item.c_people);
+          item.propValueInvalid = false;
         } else {
           item.propValueInvalid = true;
           item.propValueTable = 0;

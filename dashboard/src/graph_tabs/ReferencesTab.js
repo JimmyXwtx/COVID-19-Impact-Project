@@ -19,6 +19,14 @@ const ReferencesTab = () => {
       url: 'https://github.com/CSSEGISandData/COVID-19',
     },
     {
+      anchor: 'NYC Coronavirus Disease 2019 (COVID-19) Data',
+      heading: 'New York City Data source: ',
+      quote: '',
+      url:
+        'https://github.com/nychealth/coronavirus-data/blob/master/totals/data-by-modzcta.csv',
+    },
+
+    {
       anchor: 'NYC Comptroller Report on Frontline Workers',
       heading: '',
       quote:
