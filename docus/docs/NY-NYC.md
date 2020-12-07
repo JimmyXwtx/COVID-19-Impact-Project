@@ -13,6 +13,7 @@ https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-case
 
 | Date  | Total Cases | Total Deaths |
 | ----- | ----------- | ------------ |
+| 12/07 | 335,768     | 24,365       |
 | 11/30 | 314,223     | 24,268       |
 | 11/19 | 293,592     | 24,167       |
 | 11/04 | 271,112     | 24,034       |

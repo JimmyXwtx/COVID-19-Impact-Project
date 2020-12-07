@@ -31,7 +31,7 @@ const regionRow = (country, index, selectCountry, parentCountry) => {
         basic
         size="tiny"
         onClick={() => {
-          console.log('CountryDataTable index', index, 'country', country);
+          // console.log('CountryDataTable index', index, 'country', country);
           if (selectCountry) selectCountry(country);
         }}
       >
