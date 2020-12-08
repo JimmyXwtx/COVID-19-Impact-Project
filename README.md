@@ -1,6 +1,6 @@
 # COVID-19 Impact Project
 
-Visualization of COVID-19 statistics from
+Visualization of COVID-19 data from
 
 - "JHU CSSE COVID-19 Data"
 - "COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University"
@@ -9,6 +9,7 @@ Visualization of COVID-19 statistics from
 New York City data from
 
 - https://github.com/nychealth/coronavirus-data/blob/master/totals/data-by-modzcta.csv
+- "NYC Coronavirus Disease 2019 (COVID-19) Data - NYC Department of Health and Mental Hygiene"
 
 ## Links
 

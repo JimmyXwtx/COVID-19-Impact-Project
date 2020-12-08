@@ -655,7 +655,13 @@ const Dashboard = () => {
     }
     if (rootcIndex === 1) {
       const item = (
-        <Button basic size="mini" onClick={selectRootcPop} key={nextKey()}>
+        <Button
+          basic
+          size="mini"
+          onClick={selectRootcPop}
+          key={nextKey()}
+          style={{ padding: '10px' }}
+        >
           &lt; New York State
         </Button>
       );

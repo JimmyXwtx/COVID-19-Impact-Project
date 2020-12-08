@@ -53,10 +53,10 @@ Deaths in New York City reconciliation issues
 
 | Borough       | Deaths |
 | ------------- | ------ |
-| Brooklyn      | 7,529  |
-| Queens        | 7,375  |
 | Bronx         | 5,032  |
+| Brooklyn      | 7,529  |
 | Manhattan     | 3,235  |
+| Queens        | 7,375  |
 | Staten Island | 1,157  |
 
 -- From NYC heath data:
@@ -64,10 +64,10 @@ Deaths in New York City reconciliation issues
 
 | Borough   | Deaths |
 | --------- | ------ |
-| Brooklyn  | 5,748  |
-| Queens    | 6,024  |
 | Bronx     | 4,036  |
+| Brooklyn  | 5,748  |
 | Manhattan | 2,520  |
+| Queens    | 6,024  |
 | Staten Is | 960    |
 
 -- Dashboard matches NY Times
@@ -82,10 +82,10 @@ Cases
 
 | Borough       | Cases  |
 | ------------- | ------ |
-| Queens        | 95,446 |
-| Brooklyn      | 94,312 |
 | Bronx         | 67,257 |
+| Brooklyn      | 94,312 |
 | Manhattan     | 48,521 |
+| Queens        | 95,446 |
 | Staten Island | 25,470 |
 
 -- From NYC heath data:
@@ -93,23 +93,23 @@ Cases
 
 | Borough   | Cases  |
 | --------- | ------ |
-| Brooklyn  | 86,187 |
-| Queens    | 83,706 |
 | Bronx     | 61,987 |
+| Brooklyn  | 86,187 |
 | Manhattan | 39,925 |
+| Queens    | 83,706 |
 | Staten Is | 22,780 |
 
 Source:
 
 - https://github.com/nychealth/coronavirus-data/blob/master/totals/summary.csv
 
-| MEASURE                             | NUMBER_OF_NYC_RESIDENTS |
-| ----------------------------------- | ----------------------- |
-| NYC_CASE_COUNT                      | 309566                  |
-| NYC_PROBABLE_CASE_COUNT             | 29810                   |
-| NYC_TOTAL_CASE_COUNT                | 339376                  |
-| NYC_HOSPITALIZED_COUNT              | 62651                   |
-| NYC_CONFIRMED_DEATH_COUNT           | 19673                   |
-| NYC_PROBABLE_DEATH_COUNT            | 4714                    |
-| NYC_TOTAL_DEATH_COUNT               | 24387                   |
-| DATE_UPDATED December 7, at 10 a.m. |                         |
+| MEASURE                   | NUMBER_OF_NYC_RESIDENTS             |
+| ------------------------- | ----------------------------------- |
+| NYC_CASE_COUNT            | 309566                              |
+| NYC_PROBABLE_CASE_COUNT   | 29810                               |
+| NYC_TOTAL_CASE_COUNT      | 339376                              |
+| NYC_HOSPITALIZED_COUNT    | 62651                               |
+| NYC_CONFIRMED_DEATH_COUNT | 19673                               |
+| NYC_PROBABLE_DEATH_COUNT  | 4714                                |
+| NYC_TOTAL_DEATH_COUNT     | 24387                               |
+| DATE_UPDATED              | DATE_UPDATED December 7, at 10 a.m. |
