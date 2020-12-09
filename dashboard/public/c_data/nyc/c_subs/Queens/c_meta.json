@@ -1,422 +1,509 @@
 {
+  "c_sub_title": "Zipcode",
+  "c_sub_captions": {
+    "11004": "Bellerose/Douglaston-Little Neck",
+    "11101": "Astoria (South)/Long Island City/Sunnyside",
+    "11102": "Astoria (North)",
+    "11103": "Astoria (North)/Astoria (South)",
+    "11104": "Sunnyside",
+    "11105": "Ditmars Steinway",
+    "11106": "Astoria (South)",
+    "11109": "Long Island City",
+    "11354": "Flushing/Murray Hill",
+    "11355": "Flushing/Murray Hill/Queensboro Hill",
+    "11356": "College Point",
+    "11357": "Whitestone",
+    "11358": "Auburndale/Murray Hill",
+    "11360": "Bayside (North)",
+    "11361": "Bayside (North)/Bayside (South)",
+    "11362": "Douglaston-Little Neck",
+    "11363": "Douglaston-Little Neck",
+    "11364": "Bayside (South)/Oakland Gardens",
+    "11365": "Auburndale/Fresh Meadows/Pomonok/Utopia",
+    "11366": "Fresh Meadows/Hillcrest",
+    "11367": "Kew Gardens Hills/Pomonok",
+    "11368": "Corona/North Corona",
+    "11369": "Airport/East Elmhurst",
+    "11370": "Jackson Heights/Rikers Island",
+    "11372": "Jackson Heights",
+    "11373": "Elmhurst",
+    "11374": "Rego Park",
+    "11375": "Forest Hills",
+    "11377": "Woodside",
+    "11378": "Maspeth",
+    "11379": "Middle Village",
+    "11385": "Glendale/Ridgewood",
+    "11411": "Cambria Heights",
+    "11412": "St. Albans",
+    "11413": "Laurelton/Rosedale",
+    "11414": "Hamilton Beach/Howard Beach/Lindenwood",
+    "11415": "Kew Gardens",
+    "11416": "Ozone Park",
+    "11417": "Ozone Park",
+    "11418": "Richmond Hill",
+    "11419": "Richmond Hill/South Ozone Park",
+    "11420": "South Ozone Park",
+    "11421": "Woodhaven",
+    "11422": "Rosedale",
+    "11423": "Hollis/Holliswood",
+    "11426": "Bellerose",
+    "11427": "Bellerose/Hollis Hills/Holliswood",
+    "11428": "Queens Village",
+    "11429": "Queens Village",
+    "11432": "Hillcrest/Jamaica Estates/Jamaica Hills",
+    "11433": "Jamaica",
+    "11434": "Airport/South Jamaica/Springfield Gardens/St. Albans",
+    "11435": "Briarwood/Jamaica",
+    "11436": "South Jamaica/South Ozone Park",
+    "11691": "Edgemere/Far Rockaway",
+    "11692": "Arverne/Edgemere",
+    "11693": "Arverne/Broad Channel",
+    "11694": "Belle Harbor-Neponsit/Rockaway Park",
+    "11697": "Breezy Point"
+  },
   "c_regions": [
     {
-      "c_ref": "11004 Bellerose/Douglaston-Little Neck",
+      "c_ref": "11004",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11101 Astoria (South)/Long Island City/Sunnyside",
+      "c_ref": "11101",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11102 Astoria (North)",
+      "c_ref": "11102",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11103 Astoria (North)/Astoria (South)",
+      "c_ref": "11103",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11104 Sunnyside",
+      "c_ref": "11104",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11105 Ditmars Steinway",
+      "c_ref": "11105",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11106 Astoria (South)",
+      "c_ref": "11106",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11109 Long Island City",
+      "c_ref": "11109",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11354 Flushing/Murray Hill",
+      "c_ref": "11354",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11355 Flushing/Murray Hill/Queensboro Hill",
+      "c_ref": "11355",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11356 College Point",
+      "c_ref": "11356",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11357 Whitestone",
+      "c_ref": "11357",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11358 Auburndale/Murray Hill",
+      "c_ref": "11358",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11360 Bayside (North)",
+      "c_ref": "11360",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11361 Bayside (North)/Bayside (South)",
+      "c_ref": "11361",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11362 Douglaston-Little Neck",
+      "c_ref": "11362",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11363 Douglaston-Little Neck",
+      "c_ref": "11363",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11364 Bayside (South)/Oakland Gardens",
+      "c_ref": "11364",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11365 Auburndale/Fresh Meadows/Pomonok/Utopia",
+      "c_ref": "11365",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11366 Fresh Meadows/Hillcrest",
+      "c_ref": "11366",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11367 Kew Gardens Hills/Pomonok",
+      "c_ref": "11367",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11368 Corona/North Corona",
+      "c_ref": "11368",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11369 Airport/East Elmhurst",
+      "c_ref": "11369",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11370 Jackson Heights/Rikers Island",
+      "c_ref": "11370",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11372 Jackson Heights",
+      "c_ref": "11372",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11373 Elmhurst",
+      "c_ref": "11373",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11374 Rego Park",
+      "c_ref": "11374",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11375 Forest Hills",
+      "c_ref": "11375",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11377 Woodside",
+      "c_ref": "11377",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11378 Maspeth",
+      "c_ref": "11378",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11379 Middle Village",
+      "c_ref": "11379",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11385 Glendale/Ridgewood",
+      "c_ref": "11385",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11411 Cambria Heights",
+      "c_ref": "11411",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11412 St. Albans",
+      "c_ref": "11412",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11413 Laurelton/Rosedale",
+      "c_ref": "11413",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11414 Hamilton Beach/Howard Beach/Lindenwood",
+      "c_ref": "11414",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11415 Kew Gardens",
+      "c_ref": "11415",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11416 Ozone Park",
+      "c_ref": "11416",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11417 Ozone Park",
+      "c_ref": "11417",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11418 Richmond Hill",
+      "c_ref": "11418",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11419 Richmond Hill/South Ozone Park",
+      "c_ref": "11419",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11420 South Ozone Park",
+      "c_ref": "11420",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11421 Woodhaven",
+      "c_ref": "11421",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11422 Rosedale",
+      "c_ref": "11422",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11423 Hollis/Holliswood",
+      "c_ref": "11423",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11426 Bellerose",
+      "c_ref": "11426",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11427 Bellerose/Hollis Hills/Holliswood",
+      "c_ref": "11427",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11428 Queens Village",
+      "c_ref": "11428",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11429 Queens Village",
+      "c_ref": "11429",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11432 Hillcrest/Jamaica Estates/Jamaica Hills",
+      "c_ref": "11432",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11433 Jamaica",
+      "c_ref": "11433",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11434 Airport/South Jamaica/Springfield Gardens/St. Albans",
+      "c_ref": "11434",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11435 Briarwood/Jamaica",
+      "c_ref": "11435",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11436 South Jamaica/South Ozone Park",
+      "c_ref": "11436",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11691 Edgemere/Far Rockaway",
+      "c_ref": "11691",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11692 Arverne/Edgemere",
+      "c_ref": "11692",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11693 Arverne/Broad Channel",
+      "c_ref": "11693",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11694 Belle Harbor-Neponsit/Rockaway Park",
+      "c_ref": "11694",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11697 Breezy Point",
+      "c_ref": "11697",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     }
   ],
   "c_dates": [
+    "2020-05-18",
+    "2020-05-20",
+    "2020-05-22",
+    "2020-06-01",
+    "2020-06-15",
+    "2020-07-01",
+    "2020-07-03",
+    "2020-07-04",
+    "2020-07-08",
+    "2020-07-09",
+    "2020-07-23",
+    "2020-07-24",
+    "2020-08-01",
+    "2020-09-01",
+    "2020-09-17",
+    "2020-09-18",
+    "2020-10-01",
+    "2020-11-01",
+    "2020-11-02",
+    "2020-11-04",
+    "2020-11-05",
+    "2020-11-19",
+    "2020-11-20",
+    "2020-11-30",
+    "2020-12-01",
+    "2020-12-06",
     "2020-12-07",
     "2020-12-08"
-  ],
-  "c_sub_title": "Zipcode"
+  ]
 }

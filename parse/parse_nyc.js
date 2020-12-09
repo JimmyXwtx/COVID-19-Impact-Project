@@ -76,7 +76,7 @@ function process_days() {
   for (let nfile of nfiles) {
     const fparse = path.parse(nfile);
     if (fparse.ext != '.csv') continue;
-    const csv_path = path.resolve(daily_dir, nfile);
+    const csv_path = path.resolve(csv_days_dir, nfile);
     sub_dict = process_file_csv(csv_path, fparse.name, {});
     index++;
     if (nlimit && index >= nlimit) break;
