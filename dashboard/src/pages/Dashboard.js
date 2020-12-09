@@ -162,6 +162,7 @@ const Dashboard = () => {
         countryList,
         c_title: meta.c_title,
         c_sub_title: meta.c_sub_title,
+        c_sub_captions: meta.c_sub_captions,
       });
     });
   }, [countrySelected, data_prefix, rootcPath]);
@@ -188,6 +189,10 @@ const Dashboard = () => {
             if (ent) {
               item.c_people = ent.c_people;
               item.n_subs = ent.n_subs;
+            }
+            if (metac.c_sub_captions) {
+              const cap = metac.c_sub_captions[item.c_ref];
+              if (cap) item.c_ref = item.c_ref + ' ' + cap;
             }
           });
           setDay({ items, dateFocus, isLoading: false });
