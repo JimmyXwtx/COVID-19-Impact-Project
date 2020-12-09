@@ -185,6 +185,7 @@ const Dashboard = () => {
           //   Object.keys(metac.metaDict).length
           // );
           items.forEach((item) => {
+            item.title = item.c_ref;
             const ent = metac.metaDict[item.c_ref];
             if (ent) {
               item.c_people = ent.c_people;
@@ -192,7 +193,7 @@ const Dashboard = () => {
             }
             if (metac.c_sub_captions) {
               const cap = metac.c_sub_captions[item.c_ref];
-              if (cap) item.c_ref = item.c_ref + ' ' + cap;
+              if (cap) item.title = item.c_ref + ' ' + cap;
             }
           });
           setDay({ items, dateFocus, isLoading: false });
@@ -646,18 +647,6 @@ const Dashboard = () => {
       }
       if (item) items.push(item);
     }
-    items.reverse();
-    if (
-      rootcIndex === 0 &&
-      data_prefix === 'c_subs/United_States/c_subs/New_York/'
-    ) {
-      const item = (
-        <Button basic size="mini" onClick={selectNewYorkCity} key={nextKey()}>
-          New York City
-        </Button>
-      );
-      items.push(item);
-    }
     if (rootcIndex === 1) {
       const item = (
         <Button
@@ -668,6 +657,18 @@ const Dashboard = () => {
           style={{ padding: '10px' }}
         >
           &lt; New York State
+        </Button>
+      );
+      items.push(item);
+    }
+    items.reverse();
+    if (
+      rootcIndex === 0 &&
+      data_prefix === 'c_subs/United_States/c_subs/New_York/'
+    ) {
+      const item = (
+        <Button basic size="mini" onClick={selectNewYorkCity} key={nextKey()}>
+          New York City
         </Button>
       );
       items.push(item);
