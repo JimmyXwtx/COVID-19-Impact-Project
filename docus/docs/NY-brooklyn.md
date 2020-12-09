@@ -4,7 +4,7 @@ title: Brooklyn Flatlands
 sidebar_label: Brooklyn
 ---
 
-COVID-19 stats from where we are staying in the Flatlands of Brooklyn.
+COVID-19 stats for our location in the Flatlands of Brooklyn.
 
 Source:  
 https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-cases.html
@@ -13,6 +13,7 @@ https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-case
 
 | Date  | Cases | Per 100,000 | Deaths | Per 100,000 |
 | ----- | ----- | ----------- | ------ | ----------- |
+| 12/07 | 3,295 | 3,457       | 187    | 196         |
 | 11/30 | 3,144 | 3,299       | 198    | 208         |
 | 11/19 | 2,975 | 3,122       | 197    | 207         |
 | 11/04 | 2,828 | 2,967       | 196    | 206         |
@@ -35,3 +36,7 @@ https://www.nytimes.com/interactive/2020/nyregion/new-york-city-coronavirus-case
 | 07/08 | 2,313 | 2,427       | 192    | 201         |
 | 07/06 | 2,307 | 2,421       |
 | 07/03 | 2,291 | 2,404       | 191    | 200         |
+
+## Issues
+
+2020-12-07 - Deaths drop from 198 to 187, 11 fewer that previous reported

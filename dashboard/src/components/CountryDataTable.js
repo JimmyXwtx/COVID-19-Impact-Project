@@ -23,27 +23,27 @@ function percentFormat(num) {
 }
 
 const regionRow = (country, index, selectCountry, parentCountry) => {
-  const { c_ref } = country;
-  const countryCode = parentCountry ? null : getCountryCode(c_ref);
+  const { title } = country;
+  const countryCode = parentCountry ? null : getCountryCode(title);
   if (country.n_subs)
     return (
       <Button
         basic
         size="tiny"
         onClick={() => {
-          console.log('CountryDataTable index', index, 'country', country);
+          // console.log('CountryDataTable index', index, 'country', country);
           if (selectCountry) selectCountry(country);
         }}
       >
         {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
-        {c_ref}
+        {title}
       </Button>
     );
   else
     return (
       <>
         {countryCode ? <FlagIcon code={countryCode.toLowerCase()} /> : null}
-        {c_ref}
+        {title}
       </>
     );
 };
@@ -58,7 +58,6 @@ const Rows = (props) => {
       propPercentInvalid,
       iorder,
     } = country;
-    // const slugKey = `tr-${slug(c_ref).toLowerCase()}`;
     const slugKey = `tr-country-${index}`;
     const style = {
       backgroundColor:

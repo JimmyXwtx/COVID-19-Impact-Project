@@ -68,7 +68,15 @@ function fileNameForSub(nsub) {
 //
 function write_meta(
   sub_dir,
-  { sub_label, sub_dict, report_n_subs, to_date, c_title, c_sub_titles }
+  {
+    sub_label,
+    sub_dict,
+    report_n_subs,
+    to_date,
+    c_title,
+    c_sub_titles,
+    c_sub_captions,
+  }
 ) {
   // report.log('write_meta sub_dir ' + sub_dir);
   // console.log('write_meta to_date ', to_date, 'sub_dict', sub_dict);
@@ -153,7 +161,14 @@ function write_meta(
 
   const c_sub_title = c_sub_titles.length > 0 ? c_sub_titles[0] : undefined;
 
-  const meta = { c_regions, c_dates, c_title, c_sub_title };
+  // console.log(
+  //   'write_meta sub_dict',
+  //   sub_dict,
+  //   'c_sub_captions',
+  //   c_sub_captions
+  // );
+
+  const meta = { c_title, c_sub_title, c_sub_captions, c_regions, c_dates };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
 
   c_sub_titles = c_sub_titles.slice(1);
@@ -189,6 +204,7 @@ function write_meta_subs(
       report_n_subs,
       to_date,
       c_sub_titles,
+      c_sub_captions: cent.c_sub_captions,
     });
   }
 }

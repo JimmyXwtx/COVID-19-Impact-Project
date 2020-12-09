@@ -1,268 +1,334 @@
 {
+  "c_sub_title": "Zipcode",
+  "c_sub_captions": {
+    "11201": "Brooklyn Heights/DUMBO/Downtown Brooklyn",
+    "11203": "East Flatbush (North)/East Flatbush (South)",
+    "11204": "Bensonhurst/Mapleton",
+    "11205": "Bedford-Stuyvesant (West)/Clinton Hill/Fort Greene",
+    "11206": "Williamsburg (South)",
+    "11207": "Cypress Hills/East New York",
+    "11208": "Cypress Hills/East New York",
+    "11209": "Bay Ridge/Fort Hamilton",
+    "11210": "Flatlands/Midwood",
+    "11211": "East Williamsburg/Williamsburg (North)/Williamsburg (Sout",
+    "11212": "Ocean Hill-Brownsville",
+    "11213": "Crown Heights (East)",
+    "11214": "Bath Beach/Bensonhurst/Gravesend",
+    "11215": "Gowanus/Park Slope/Windsor Terrace",
+    "11216": "Bedford-Stuyvesant (West)/Crown Heights (West)",
+    "11217": "Boerum Hill/Park Slope",
+    "11218": "Kensington/Windsor Terrace",
+    "11219": "Borough Park",
+    "11220": "Sunset Park",
+    "11221": "Bedford-Stuyvesant (East)/Bushwick",
+    "11222": "Greenpoint",
+    "11223": "Gravesend/Homecrest",
+    "11224": "Brighton Beach/Coney Island/Seagate",
+    "11225": "Crown Heights (West)/Prospect Lefferts Gardens",
+    "11226": "Flatbush/Prospect Lefferts Gardens",
+    "11228": "Bath Beach/Dyker Heights",
+    "11229": "Gerritsen Beach/Homecrest/Sheepshead Bay",
+    "11230": "Midwood",
+    "11231": "Carroll Gardens/Cobble Hill/Red Hook",
+    "11232": "Sunset Park",
+    "11233": "Bedford-Stuyvesant (East)/Ocean Hill-Brownsville",
+    "11234": "Bergen Beach/Flatlands/Marine Park/Mill Basin",
+    "11235": "Brighton Beach/Manhattan Beach/Sheepshead Bay",
+    "11236": "Canarsie",
+    "11237": "Bushwick/East Williamsburg",
+    "11238": "Clinton Hill/Prospect Heights",
+    "11239": "East New York"
+  },
   "c_regions": [
     {
-      "c_ref": "11201 Brooklyn Heights/DUMBO/Downtown Brooklyn",
+      "c_ref": "11201",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11203 East Flatbush (North)/East Flatbush (South)",
+      "c_ref": "11203",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11204 Bensonhurst/Mapleton",
+      "c_ref": "11204",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11205 Bedford-Stuyvesant (West)/Clinton Hill/Fort Greene",
+      "c_ref": "11205",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11206 Williamsburg (South)",
+      "c_ref": "11206",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11207 Cypress Hills/East New York",
+      "c_ref": "11207",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11208 Cypress Hills/East New York",
+      "c_ref": "11208",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11209 Bay Ridge/Fort Hamilton",
+      "c_ref": "11209",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11210 Flatlands/Midwood",
+      "c_ref": "11210",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11211 East Williamsburg/Williamsburg (North)/Williamsburg (Sout",
+      "c_ref": "11211",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11212 Ocean Hill-Brownsville",
+      "c_ref": "11212",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11213 Crown Heights (East)",
+      "c_ref": "11213",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11214 Bath Beach/Bensonhurst/Gravesend",
+      "c_ref": "11214",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11215 Gowanus/Park Slope/Windsor Terrace",
+      "c_ref": "11215",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11216 Bedford-Stuyvesant (West)/Crown Heights (West)",
+      "c_ref": "11216",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11217 Boerum Hill/Park Slope",
+      "c_ref": "11217",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11218 Kensington/Windsor Terrace",
+      "c_ref": "11218",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11219 Borough Park",
+      "c_ref": "11219",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11220 Sunset Park",
+      "c_ref": "11220",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11221 Bedford-Stuyvesant (East)/Bushwick",
+      "c_ref": "11221",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11222 Greenpoint",
+      "c_ref": "11222",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11223 Gravesend/Homecrest",
+      "c_ref": "11223",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11224 Brighton Beach/Coney Island/Seagate",
+      "c_ref": "11224",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11225 Crown Heights (West)/Prospect Lefferts Gardens",
+      "c_ref": "11225",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11226 Flatbush/Prospect Lefferts Gardens",
+      "c_ref": "11226",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11228 Bath Beach/Dyker Heights",
+      "c_ref": "11228",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11229 Gerritsen Beach/Homecrest/Sheepshead Bay",
+      "c_ref": "11229",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11230 Midwood",
+      "c_ref": "11230",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11231 Carroll Gardens/Cobble Hill/Red Hook",
+      "c_ref": "11231",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11232 Sunset Park",
+      "c_ref": "11232",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11233 Bedford-Stuyvesant (East)/Ocean Hill-Brownsville",
+      "c_ref": "11233",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11234 Bergen Beach/Flatlands/Marine Park/Mill Basin",
+      "c_ref": "11234",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11235 Brighton Beach/Manhattan Beach/Sheepshead Bay",
+      "c_ref": "11235",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11236 Canarsie",
+      "c_ref": "11236",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11237 Bushwick/East Williamsburg",
+      "c_ref": "11237",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11238 Clinton Hill/Prospect Heights",
+      "c_ref": "11238",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     },
     {
-      "c_ref": "11239 East New York",
+      "c_ref": "11239",
       "c_first": {
-        "Cases": "2020-12-07",
-        "Deaths": "2020-12-07"
+        "Cases": "2020-05-18",
+        "Deaths": "2020-05-18"
       }
     }
   ],
   "c_dates": [
+    "2020-05-18",
+    "2020-05-20",
+    "2020-05-22",
+    "2020-06-01",
+    "2020-06-15",
+    "2020-07-01",
+    "2020-07-03",
+    "2020-07-04",
+    "2020-07-08",
+    "2020-07-09",
+    "2020-07-23",
+    "2020-07-24",
+    "2020-08-01",
+    "2020-09-01",
+    "2020-09-17",
+    "2020-09-18",
+    "2020-10-01",
+    "2020-11-01",
+    "2020-11-02",
+    "2020-11-04",
+    "2020-11-05",
+    "2020-11-19",
+    "2020-11-20",
+    "2020-11-30",
+    "2020-12-01",
+    "2020-12-06",
     "2020-12-07",
-    "2020-12-08"
-  ],
-  "c_sub_title": "Zipcode"
+    "2020-12-08",
+    "2020-12-09"
+  ]
 }

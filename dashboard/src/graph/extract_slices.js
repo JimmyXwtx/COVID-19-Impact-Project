@@ -58,7 +58,8 @@ export default function extract_slices(
       upper_stat += nyvalue;
       upper_count += 1;
     } else if (index < slideIndex + nslice) {
-      const x = item.c_ref;
+      // const x = item.c_ref;
+      const x = item.title;
       const y = yvalue;
       const label = x + '\n' + countFormat(y);
       slices.push({ x, y, label });

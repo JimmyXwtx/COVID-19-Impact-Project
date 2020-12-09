@@ -31,8 +31,22 @@ const top_label = 'World';
 const playDelayInit = 0.1;
 const playEndDelayInit = 3;
 
-const c_root = './c_data/world/';
-// const c_root = './c_data/nyc/';
+const rootcArr = [
+  {
+    path: './c_data/world/',
+    data_prefix_maps: {
+      'c_subs/United_States/c_subs/New_York/': {
+        rootcIndex: 1,
+        btn_label: 'New York City',
+      },
+    },
+  },
+  {
+    path: './c_data/nyc/',
+    data_prefix_maps: {},
+    popButton: '&lt; New York State',
+  },
+];
 
 ReactGA.initialize('UA-168322336-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -42,6 +56,12 @@ function ui_key(uname) {
 }
 
 const Dashboard = () => {
+  const [rootcIndex, setRootcIndex] = useState(0);
+  const rootcSelected = rootcArr[rootcIndex];
+
+  const [rootcStack, setRootcStack] = useState([]); // {rootcIndex, countrySelected}
+  const rootcPath = rootcSelected.path;
+
   const [loaderActive, setLoaderActive] = useState(true);
   const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');
   const [sumFocus, setSumFocus] = useLocalStorage('co-sumFocus', 'totals');
@@ -100,11 +120,13 @@ const Dashboard = () => {
     }
     return prefix;
   };
+  const data_prefix = dataPrefix(countrySelected);
+  console.log('Dashboard data_prefix', data_prefix);
 
   useEffect(() => {
     // console.log('useEffect dates.json');
-    const prefix = dataPrefix(countrySelected);
-    fetchData(c_root + prefix + 'c_meta.json', (meta) => {
+    // const prefix = dataPrefix(countrySelected);
+    fetchData(rootcPath + data_prefix + 'c_meta.json', (meta) => {
       let dateList;
       let metaDict;
       let countryList;
@@ -131,7 +153,7 @@ const Dashboard = () => {
       process_dates(meta.c_dates);
       process_regions(meta.c_regions);
 
-      console.log('fetchData metac set c_regions n', meta.c_regions.length);
+      // console.log('fetchData metac set c_regions n', meta.c_regions.length);
       // console.log('fetchData metac metaDict', metaDict);
       setMetac({
         countrySelected: countrySelected,
@@ -140,9 +162,10 @@ const Dashboard = () => {
         countryList,
         c_title: meta.c_title,
         c_sub_title: meta.c_sub_title,
+        c_sub_captions: meta.c_sub_captions,
       });
     });
-  }, [countrySelected]);
+  }, [countrySelected, data_prefix, rootcPath]);
 
   useEffect(() => {
     // console.log('useEffect c_days dateFocus', dateFocus, 'metac ', metac);
@@ -152,34 +175,50 @@ const Dashboard = () => {
       (!dateFocus || day.dateFocus !== dateFocus)
     ) {
       day.isLoading = true;
-      const prefix = dataPrefix(countrySelected);
-      fetchData(c_root + prefix + 'c_days/' + dateFocus + '.json', (items) => {
-        if (!items) items = [];
-        console.log(
-          'fetchData c_days using metaDict n',
-          Object.keys(metac.metaDict).length
-        );
-        items.forEach((item) => {
-          const ent = metac.metaDict[item.c_ref];
-          if (ent) {
-            item.c_people = ent.c_people;
-            item.n_subs = ent.n_subs;
-          }
-        });
-        setDay({ items, dateFocus, isLoading: false });
-      });
+      // const prefix = dataPrefix(countrySelected);
+      fetchData(
+        rootcPath + data_prefix + 'c_days/' + dateFocus + '.json',
+        (items) => {
+          if (!items) items = [];
+          // console.log(
+          //   'useEffect fetchData c_days using metaDict n',
+          //   Object.keys(metac.metaDict).length
+          // );
+          items.forEach((item) => {
+            item.title = item.c_ref;
+            const ent = metac.metaDict[item.c_ref];
+            if (ent) {
+              item.c_people = ent.c_people;
+              item.n_subs = ent.n_subs;
+            }
+            if (metac.c_sub_captions) {
+              const cap = metac.c_sub_captions[item.c_ref];
+              if (cap) item.title = item.c_ref + ' ' + cap;
+            }
+          });
+          setDay({ items, dateFocus, isLoading: false });
+        }
+      );
     }
-  }, [countrySelected, day, dateFocus, metac.metaDict, day.dateFocus, metac]);
+  }, [
+    data_prefix,
+    day,
+    dateFocus,
+    metac.metaDict,
+    day.dateFocus,
+    metac,
+    rootcPath,
+  ]);
 
   useEffect(() => {
     // console.log('useEffect day.items', day.items);
     // console.log('useEffect sorted_items', 'day', day, 'dateFocus', dateFocus);
-    console.log(
-      'useEffect sorted_items dateFocus',
-      dateFocus,
-      countrySelected.c_ref,
-      !dateFocus || !day.items || day.isLoading
-    );
+    // console.log(
+    //   'useEffect sorted_items dateFocus',
+    //   dateFocus,
+    //   countrySelected.c_ref,
+    //   !dateFocus || !day.items || day.isLoading
+    // );
     if (!dateFocus || !day.items || day.isLoading) return;
 
     // propValue is item[sumFocus][propFocus];
@@ -190,6 +229,7 @@ const Dashboard = () => {
       const nval = item[sumFocus][propFocus];
       item.propValue = nval;
       item.propValueTable = nval;
+      item.propValueInvalid = false;
       if (nval > 0) stats_total += nval;
     });
     items.forEach((item) => {
@@ -219,6 +259,7 @@ const Dashboard = () => {
       sorted_items.forEach((item) => {
         if (item.c_people) {
           item.propValueTable = item.propValue * (100000 / item.c_people);
+          item.propValueInvalid = false;
         } else {
           item.propValueInvalid = true;
           item.propValueTable = 0;
@@ -290,8 +331,8 @@ const Dashboard = () => {
   );
 
   // console.log('Dashboard countryFocus', countryFocus);
-  console.log('Dashboard metac', metac);
-  console.log('Dashboard countrySelected', countrySelected);
+  // console.log('Dashboard metac', metac);
+  // console.log('Dashboard countrySelected', countrySelected);
 
   const setDateIndexFocus = (value) => {
     const index = metac.dateList.findIndex((item) => item.value === value);
@@ -300,12 +341,12 @@ const Dashboard = () => {
   };
 
   if (!dateFocus && metac.dateList && metac.dateList.length) {
-    console.log(
-      'dateFocus',
-      dateFocus,
-      'metac.dateList.length',
-      metac.dateList.length
-    );
+    // console.log(
+    //   'Dashboard dateFocus',
+    //   dateFocus,
+    //   'metac.dateList.length',
+    //   metac.dateList.length
+    // );
     setDateIndexFocus(metac.dateList[metac.dateList.length - 1].value);
   }
 
@@ -512,14 +553,14 @@ const Dashboard = () => {
   const dateFocusShort = dateFocus;
 
   const selectCountry = (country) => {
-    console.log('selectCountry country', country);
+    // console.log('selectCountry country', country);
     setDay({});
     setMetac({});
     if (countrySelected.c_ref) {
       country = { ...country, parent: countrySelected };
     }
     country.c_title = metac.c_title;
-    console.log('selectCountry country', country, 'metac', metac);
+    // console.log('selectCountry country', country, 'metac', metac);
     setCountrySelected(country);
   };
 
@@ -556,12 +597,31 @@ const Dashboard = () => {
     return <RegionNavTable items={items} />;
   }
 
+  function selectNewYorkCity() {
+    setRootcIndex(1);
+    selectWorldwide();
+    setDateFocus();
+    setRootcStack([countrySelected]);
+  }
+
+  function selectRootcPop() {
+    setRootcIndex(0);
+    setDay({});
+    setMetac({});
+    setCountrySelected(rootcStack[0]);
+    setRootcStack([]);
+    setDateFocus();
+  }
+
   function CountryTabBackNav() {
     const items = [];
     let index = 0;
-    for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
+    function nextKey() {
       const key = 'ctbv-' + index;
       index++;
+      return key;
+    }
+    for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
       let item;
       if (ncountry.parent) {
         item = (
@@ -571,15 +631,15 @@ const Dashboard = () => {
             onClick={() => {
               selectCountryParent(ncountry);
             }}
-            key={key}
+            key={nextKey()}
           >
             &lt; {ncountry.parent.c_ref}
           </Button>
         );
       } else if (ncountry.c_ref) {
-        console.log('CountryTabBackNav ncountry', ncountry);
+        // console.log('CountryTabBackNav ncountry', ncountry);
         item = (
-          <Button basic size="mini" onClick={selectWorldwide} key={key}>
+          <Button basic size="mini" onClick={selectWorldwide} key={nextKey()}>
             &lt;{' '}
             {countrySelected.c_title ? countrySelected.c_title : 'Worldwide'}
           </Button>
@@ -587,10 +647,35 @@ const Dashboard = () => {
       }
       if (item) items.push(item);
     }
+    if (rootcIndex === 1) {
+      const item = (
+        <Button
+          basic
+          size="mini"
+          onClick={selectRootcPop}
+          key={nextKey()}
+          style={{ padding: '10px' }}
+        >
+          &lt; New York State
+        </Button>
+      );
+      items.push(item);
+    }
     items.reverse();
+    if (
+      rootcIndex === 0 &&
+      data_prefix === 'c_subs/United_States/c_subs/New_York/'
+    ) {
+      const item = (
+        <Button basic size="mini" onClick={selectNewYorkCity} key={nextKey()}>
+          New York City
+        </Button>
+      );
+      items.push(item);
+    }
+    // Add line break;
     if (items.length > 0) {
-      const key = 'ctbv-' + index;
-      items.push(<br key={key} />);
+      items.push(<br key={nextKey()} />);
     }
     return items;
   }
