@@ -153,7 +153,9 @@ function write_meta(
 
   const c_sub_title = c_sub_titles.length > 0 ? c_sub_titles[0] : undefined;
 
-  const meta = { c_regions, c_dates, c_title, c_sub_title };
+  const c_sub_captions = sub_dict.c_sub_captions;
+
+  const meta = { c_title, c_sub_title, c_sub_captions, c_regions, c_dates };
   fs.writeJsonSync(outpath_meta, meta, { spaces: 2 });
 
   c_sub_titles = c_sub_titles.slice(1);
