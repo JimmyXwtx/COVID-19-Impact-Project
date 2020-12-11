@@ -16,5 +16,5 @@ bin/pub-html.sh
 #
 git add *
 xdate=`date "+%Y-%m-%d-%H:%M:%S"`
-git commit -a -m  "cron $xdate"
+git commit -a -m  "cron pub $xdate"
 git push origin master

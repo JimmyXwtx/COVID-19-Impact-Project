@@ -112,19 +112,10 @@ const Dashboard = () => {
     let prefix = '';
     // if (countrySelected.c_ref) {
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
-      // let rci = ncountry.rootcIndex;
-      // if (!rci) rci = rootcIndex;
-      // if (rci !== rootcIndex) {
-      //   continue;
-      // }
       let c_ref = ncountry.c_ref;
-      if (c_ref) {
-        c_ref = c_ref.replace(/ /g, '_').replace(/,/g, '');
-        prefix = 'c_subs/' + c_ref + '/' + prefix;
-      } else {
-        break;
-      }
-      // }
+      if (!c_ref) break;
+      c_ref = c_ref.replace(/ /g, '_').replace(/,/g, '');
+      prefix = 'c_subs/' + c_ref + '/' + prefix;
     }
     return rootcPath + prefix;
   };
@@ -564,12 +555,6 @@ const Dashboard = () => {
     setCountrySelected(country);
   }
 
-  // function selectWorldwide() {
-  //   setDay({});
-  //   setMetac({});
-  //   setCountrySelected({});
-  // }
-
   function selectCountryParent(ncountry) {
     setDay({});
     setMetac({});
@@ -584,38 +569,25 @@ const Dashboard = () => {
   function selectNewYorkCity() {
     setRootcIndex(1);
     setDateFocus();
-    // selectWorldwide();
-    // setRootcStack([countrySelected]);
-    // countrySelected.c_ref = 'New York State';
     selectCountry({ rootcIndex: 1 });
   }
 
-  // function selectRootcPop() {
-  //   setRootcIndex(0);
-  //   setDay({});
-  //   setMetac({});
-  //   setCountrySelected(rootcStack[0]);
-  //   setRootcStack([]);
-  //   setDateFocus();
-  // }
-
   function CountryTabBackNav() {
     const items = [];
-    let index = 0;
     function nextKey() {
-      const key = 'ctbv-' + index;
-      index++;
+      const key = 'ctbv-' + items.length;
       return key;
     }
-    // let nindex = 0;
+    console.log('CountryTabBackNav countrySelected', countrySelected);
+    let nindex = 0;
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
       let item;
-      // console.log(nindex, 'ncountry', ncountry);
-      // nindex++;
+      console.log('CountryTabBackNav nindex', nindex, 'ncountry', ncountry);
+      nindex++;
       if (ncountry.parent) {
         let c_ref = ncountry.parent.c_ref;
         if (!c_ref) {
-          c_ref = countrySelected.c_title;
+          c_ref = ncountry.c_title;
           if (!c_ref) c_ref = 'Worldwide';
         }
         item = (
@@ -630,32 +602,11 @@ const Dashboard = () => {
             &lt; {c_ref}
           </Button>
         );
+      } else {
+        // nui_top = 'Worldwide';
       }
-      // else if (ncountry.c_ref) {
-      //   // console.log('CountryTabBackNav ncountry', ncountry);
-      //   item = (
-      //     <Button basic size="mini" onClick={selectWorldwide} key={nextKey()}>
-      //       &lt;{' '}
-      //       {countrySelected.c_title ? countrySelected.c_title : 'Worldwide'}
-      //     </Button>
-      //   );
-      // }
       if (item) items.push(item);
     }
-    // if (rootcIndex === 1) {
-    //   const item = (
-    //     <Button
-    //       basic
-    //       size="mini"
-    //       onClick={selectRootcPop}
-    //       key={nextKey()}
-    //       style={{ padding: '10px' }}
-    //     >
-    //       &lt; New York State
-    //     </Button>
-    //   );
-    //   items.push(item);
-    // }
     items.reverse();
     if (items.length > 0) {
       const item = (
