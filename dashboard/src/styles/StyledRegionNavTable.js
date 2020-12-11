@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledCountryDataTable = styled.table`
+const StyledRegionNavTable = styled.table`
   border-collapse: collapse;
   font-size: 1rem;
   width: 100%;
@@ -46,4 +46,4 @@ const StyledCountryDataTable = styled.table`
   }
 `;
 
-export default StyledCountryDataTable;
+export default StyledRegionNavTable;

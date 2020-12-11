@@ -58,8 +58,7 @@ function ui_key(uname) {
 const Dashboard = () => {
   const [rootcIndex, setRootcIndex] = useState(0);
   const rootcSelected = rootcArr[rootcIndex];
-
-  const [rootcStack, setRootcStack] = useState([]); // {rootcIndex, countrySelected}
+  // const [rootcStack, setRootcStack] = useState([]); // {rootcIndex, countrySelected}
   const rootcPath = rootcSelected.path;
 
   const [loaderActive, setLoaderActive] = useState(true);
@@ -107,16 +106,25 @@ const Dashboard = () => {
   // console.log('countrySelected', countrySelected);
 
   const dataPrefix = (countrySelected) => {
+    console.log('dataPrefix countrySelected', countrySelected);
+    console.log('dataPrefix rootcIndex', rootcIndex);
+    console.log('dataPrefix rootcPath', rootcPath);
     let prefix = '';
-    if (countrySelected.c_ref) {
-      for (
-        let ncountry = countrySelected;
-        ncountry;
-        ncountry = ncountry.parent
-      ) {
-        let c_ref = ncountry.c_ref.replace(/ /g, '_').replace(/,/g, '');
+    // if (countrySelected.c_ref) {
+    for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
+      // let rci = ncountry.rootcIndex;
+      // if (!rci) rci = rootcIndex;
+      // if (rci !== rootcIndex) {
+      //   continue;
+      // }
+      let c_ref = ncountry.c_ref;
+      if (c_ref) {
+        c_ref = c_ref.replace(/ /g, '_').replace(/,/g, '');
         prefix = 'c_subs/' + c_ref + '/' + prefix;
+      } else {
+        break;
       }
+      // }
     }
     return prefix;
   };
@@ -552,66 +560,58 @@ const Dashboard = () => {
   // const dateFocusShort = dateFocus && dateFocus.substring(5);
   const dateFocusShort = dateFocus;
 
-  const selectCountry = (country) => {
-    // console.log('selectCountry country', country);
-    setDay({});
-    setMetac({});
-    if (countrySelected.c_ref) {
-      country = { ...country, parent: countrySelected };
-    }
-    country.c_title = metac.c_title;
-    // console.log('selectCountry country', country, 'metac', metac);
-    setCountrySelected(country);
-  };
-
   let ui_top = countrySelected.c_ref ? countrySelected.c_ref : 'Worldwide';
   if (metac.c_title) ui_top = metac.c_title;
 
-  const selectWorldwide = () => {
+  function selectCountry(country) {
+    console.log('selectCountry country', country);
+    console.log('selectCountry rootcIndex', rootcIndex);
     setDay({});
     setMetac({});
-    setCountrySelected({});
-  };
+    // if (countrySelected.c_ref) {
+    const parent = { ...countrySelected };
+    parent.rootcIndex = rootcIndex;
+    country = { ...country, parent };
+    // }
+    country.c_title = metac.c_title;
+    // console.log('selectCountry country', country, 'metac', metac);
+    setCountrySelected(country);
+  }
 
-  const getRegionTitle = () => {
-    if (metac.c_sub_title) return metac.c_sub_title;
-    if (!countrySelected.c_ref) return 'Country';
-    if (!countrySelected.parent) return 'State';
-    return 'County';
-  };
+  // function selectWorldwide() {
+  //   setDay({});
+  //   setMetac({});
+  //   setCountrySelected({});
+  // }
 
-  const selectCountryParent = (ncountry) => {
+  function selectCountryParent(ncountry) {
     setDay({});
     setMetac({});
-    setCountrySelected(ncountry.parent);
-  };
-
-  function CountryTabPreHeader() {
-    const stats_total = pieData[0].stats_total;
-    const items = [
-      {
-        c_ref: ui_top + ' ' + stats_total + ' ' + uiprop_s,
-        propPercent: 1.0,
-      },
-    ];
-    return <RegionNavTable items={items} />;
+    const parent = ncountry.parent;
+    setCountrySelected(parent);
+    setRootcIndex(parent.rootcIndex);
+    if (parent.rootcIndex !== rootcIndex) {
+      setDateFocus();
+    }
   }
 
   function selectNewYorkCity() {
     setRootcIndex(1);
-    selectWorldwide();
     setDateFocus();
-    setRootcStack([countrySelected]);
+    // selectWorldwide();
+    // setRootcStack([countrySelected]);
+    // countrySelected.c_ref = 'New York State';
+    selectCountry({ rootcIndex: 1 });
   }
 
-  function selectRootcPop() {
-    setRootcIndex(0);
-    setDay({});
-    setMetac({});
-    setCountrySelected(rootcStack[0]);
-    setRootcStack([]);
-    setDateFocus();
-  }
+  // function selectRootcPop() {
+  //   setRootcIndex(0);
+  //   setDay({});
+  //   setMetac({});
+  //   setCountrySelected(rootcStack[0]);
+  //   setRootcStack([]);
+  //   setDateFocus();
+  // }
 
   function CountryTabBackNav() {
     const items = [];
@@ -621,9 +621,17 @@ const Dashboard = () => {
       index++;
       return key;
     }
+    let nindex = 0;
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
       let item;
+      console.log(nindex, 'ncountry', ncountry);
+      nindex++;
       if (ncountry.parent) {
+        let c_ref = ncountry.parent.c_ref;
+        if (!c_ref) {
+          c_ref = countrySelected.c_title;
+          if (!c_ref) c_ref = 'Worldwide';
+        }
         item = (
           <Button
             basic
@@ -633,35 +641,44 @@ const Dashboard = () => {
             }}
             key={nextKey()}
           >
-            &lt; {ncountry.parent.c_ref}
-          </Button>
-        );
-      } else if (ncountry.c_ref) {
-        // console.log('CountryTabBackNav ncountry', ncountry);
-        item = (
-          <Button basic size="mini" onClick={selectWorldwide} key={nextKey()}>
-            &lt;{' '}
-            {countrySelected.c_title ? countrySelected.c_title : 'Worldwide'}
+            &lt; {c_ref}
           </Button>
         );
       }
+      // else if (ncountry.c_ref) {
+      //   // console.log('CountryTabBackNav ncountry', ncountry);
+      //   item = (
+      //     <Button basic size="mini" onClick={selectWorldwide} key={nextKey()}>
+      //       &lt;{' '}
+      //       {countrySelected.c_title ? countrySelected.c_title : 'Worldwide'}
+      //     </Button>
+      //   );
+      // }
       if (item) items.push(item);
     }
-    if (rootcIndex === 1) {
+    // if (rootcIndex === 1) {
+    //   const item = (
+    //     <Button
+    //       basic
+    //       size="mini"
+    //       onClick={selectRootcPop}
+    //       key={nextKey()}
+    //       style={{ padding: '10px' }}
+    //     >
+    //       &lt; New York State
+    //     </Button>
+    //   );
+    //   items.push(item);
+    // }
+    items.reverse();
+    if (items.length > 0) {
       const item = (
-        <Button
-          basic
-          size="mini"
-          onClick={selectRootcPop}
-          key={nextKey()}
-          style={{ padding: '10px' }}
-        >
-          &lt; New York State
-        </Button>
+        <span style={{ fontWeight: 'bold' }} key={nextKey()}>
+          {' ' + ui_top + ' '}
+        </span>
       );
       items.push(item);
     }
-    items.reverse();
     if (
       rootcIndex === 0 &&
       data_prefix === 'c_subs/United_States/c_subs/New_York/'
@@ -680,6 +697,24 @@ const Dashboard = () => {
     return items;
   }
 
+  function getRegionTitle() {
+    if (metac.c_sub_title) return metac.c_sub_title;
+    if (!countrySelected.c_ref) return 'Country';
+    if (!countrySelected.parent) return 'State';
+    return 'County';
+  }
+
+  function CountryTabPreHeader() {
+    const stats_total = pieData[0].stats_total;
+    const items = [
+      {
+        c_ref: ui_top + ' ' + stats_total + ' ' + uiprop_s,
+        propPercent: 1.0,
+      },
+    ];
+    return <RegionNavTable items={items} />;
+  }
+
   const SortBySelect = () => {
     const options = ['Region', 'Totals', 'Percent'].map((uname) =>
       ui_key(uname)
@@ -688,9 +723,6 @@ const Dashboard = () => {
       <>
         Sort By:{' '}
         <Select
-          // placeholder="Sort By"
-          // size="mini"
-          // selection
           value={sortColumn}
           onChange={(param, data) => {
             setSortColumn(data.value);
