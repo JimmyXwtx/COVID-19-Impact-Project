@@ -126,7 +126,7 @@ const Dashboard = () => {
       }
       // }
     }
-    return prefix;
+    return rootcPath + prefix;
   };
   const data_prefix = dataPrefix(countrySelected);
   console.log('Dashboard data_prefix', data_prefix);
@@ -134,7 +134,7 @@ const Dashboard = () => {
   useEffect(() => {
     // console.log('useEffect dates.json');
     // const prefix = dataPrefix(countrySelected);
-    fetchData(rootcPath + data_prefix + 'c_meta.json', (meta) => {
+    fetchData(data_prefix + 'c_meta.json', (meta) => {
       let dateList;
       let metaDict;
       let countryList;
@@ -173,7 +173,7 @@ const Dashboard = () => {
         c_sub_captions: meta.c_sub_captions,
       });
     });
-  }, [countrySelected, data_prefix, rootcPath]);
+  }, [countrySelected, data_prefix]);
 
   useEffect(() => {
     // console.log('useEffect c_days dateFocus', dateFocus, 'metac ', metac);
@@ -184,39 +184,28 @@ const Dashboard = () => {
     ) {
       day.isLoading = true;
       // const prefix = dataPrefix(countrySelected);
-      fetchData(
-        rootcPath + data_prefix + 'c_days/' + dateFocus + '.json',
-        (items) => {
-          if (!items) items = [];
-          // console.log(
-          //   'useEffect fetchData c_days using metaDict n',
-          //   Object.keys(metac.metaDict).length
-          // );
-          items.forEach((item) => {
-            item.title = item.c_ref;
-            const ent = metac.metaDict[item.c_ref];
-            if (ent) {
-              item.c_people = ent.c_people;
-              item.n_subs = ent.n_subs;
-            }
-            if (metac.c_sub_captions) {
-              const cap = metac.c_sub_captions[item.c_ref];
-              if (cap) item.title = item.c_ref + ' ' + cap;
-            }
-          });
-          setDay({ items, dateFocus, isLoading: false });
-        }
-      );
+      fetchData(data_prefix + 'c_days/' + dateFocus + '.json', (items) => {
+        if (!items) items = [];
+        // console.log(
+        //   'useEffect fetchData c_days using metaDict n',
+        //   Object.keys(metac.metaDict).length
+        // );
+        items.forEach((item) => {
+          item.title = item.c_ref;
+          const ent = metac.metaDict[item.c_ref];
+          if (ent) {
+            item.c_people = ent.c_people;
+            item.n_subs = ent.n_subs;
+          }
+          if (metac.c_sub_captions) {
+            const cap = metac.c_sub_captions[item.c_ref];
+            if (cap) item.title = item.c_ref + ' ' + cap;
+          }
+        });
+        setDay({ items, dateFocus, isLoading: false });
+      });
     }
-  }, [
-    data_prefix,
-    day,
-    dateFocus,
-    metac.metaDict,
-    day.dateFocus,
-    metac,
-    rootcPath,
-  ]);
+  }, [data_prefix, day, dateFocus, metac.metaDict, day.dateFocus, metac]);
 
   useEffect(() => {
     // console.log('useEffect day.items', day.items);
@@ -681,7 +670,7 @@ const Dashboard = () => {
     }
     if (
       rootcIndex === 0 &&
-      data_prefix === 'c_subs/United_States/c_subs/New_York/'
+      data_prefix === './c_data/world/c_subs/United_States/c_subs/New_York/'
     ) {
       const item = (
         <Button basic size="mini" onClick={selectNewYorkCity} key={nextKey()}>
