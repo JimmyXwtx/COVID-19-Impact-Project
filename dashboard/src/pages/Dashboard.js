@@ -106,9 +106,9 @@ const Dashboard = () => {
   // console.log('countrySelected', countrySelected);
 
   const dataPrefix = (countrySelected) => {
-    console.log('dataPrefix countrySelected', countrySelected);
-    console.log('dataPrefix rootcIndex', rootcIndex);
-    console.log('dataPrefix rootcPath', rootcPath);
+    // console.log('dataPrefix countrySelected', countrySelected);
+    // console.log('dataPrefix rootcIndex', rootcIndex);
+    // console.log('dataPrefix rootcPath', rootcPath);
     let prefix = '';
     // if (countrySelected.c_ref) {
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
@@ -553,17 +553,14 @@ const Dashboard = () => {
   if (metac.c_title) ui_top = metac.c_title;
 
   function selectCountry(country) {
-    console.log('selectCountry country', country);
-    console.log('selectCountry rootcIndex', rootcIndex);
+    // console.log('selectCountry country', country);
+    // console.log('selectCountry rootcIndex', rootcIndex);
     setDay({});
     setMetac({});
-    // if (countrySelected.c_ref) {
     const parent = { ...countrySelected };
     parent.rootcIndex = rootcIndex;
     country = { ...country, parent };
-    // }
     country.c_title = metac.c_title;
-    // console.log('selectCountry country', country, 'metac', metac);
     setCountrySelected(country);
   }
 
@@ -610,11 +607,11 @@ const Dashboard = () => {
       index++;
       return key;
     }
-    let nindex = 0;
+    // let nindex = 0;
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
       let item;
-      console.log(nindex, 'ncountry', ncountry);
-      nindex++;
+      // console.log(nindex, 'ncountry', ncountry);
+      // nindex++;
       if (ncountry.parent) {
         let c_ref = ncountry.parent.c_ref;
         if (!c_ref) {
