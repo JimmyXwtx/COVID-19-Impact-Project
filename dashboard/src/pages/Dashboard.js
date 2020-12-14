@@ -17,14 +17,14 @@ import DateSlider from '../components/DateSlider';
 import RegionNavTable from '../components/RegionNavTable';
 import GraphPieBar from '../graph/GraphPieBar';
 import extract_slices from '../graph/extract_slices';
-import AboutTab from '../graph_tabs/AboutTab';
-import FocusTab from '../graph_tabs/FocusTab';
-import ReferencesTab from '../graph_tabs/ReferencesTab';
-import SoftBodyTab from '../graph_tabs/SoftBodyTab';
 import useInterval from '../hooks/useInterval';
 import useLocalStorage from '../hooks/useLocalStorage';
 import useWindowSize from '../hooks/useWindowSize';
 import fetchData from '../js/fetchData';
+import AboutTab from '../tabs/AboutTab';
+import FocusTab from '../tabs/FocusTab';
+import ReferencesTab from '../tabs/ReferencesTab';
+import SoftBodyTab from '../tabs/SoftBodyTab';
 
 const nslice = 8;
 const top_label = 'World';
