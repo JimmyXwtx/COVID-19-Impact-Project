@@ -15,7 +15,6 @@ import styled from 'styled-components';
 import CountryDataTable from '../components/CountryDataTable';
 import DateSlider from '../components/DateSlider';
 import RegionNavTable from '../components/RegionNavTable';
-import CustomTheme from '../graph/CustomTheme';
 import GraphPieBar from '../graph/GraphPieBar';
 import extract_slices from '../graph/extract_slices';
 import useInterval from '../hooks/useInterval';
@@ -23,6 +22,7 @@ import useLocalStorage from '../hooks/useLocalStorage';
 import useWindowSize from '../hooks/useWindowSize';
 import fetchData from '../js/fetchData';
 import AboutTab from '../tabs/AboutTab';
+import CompareTab from '../tabs/CompareTab';
 import FocusTab from '../tabs/FocusTab';
 // import ReferencesTab from '../tabs/ReferencesTab';
 import SoftBodyTab from '../tabs/SoftBodyTab';
@@ -35,17 +35,17 @@ const playEndDelayInit = 3;
 const rootcArr = [
   {
     path: './c_data/world/',
-    data_prefix_maps: {
-      'c_subs/United_States/c_subs/New_York/': {
-        rootcIndex: 1,
-        btn_label: 'New York City',
-      },
-    },
+    // data_prefix_maps: {
+    //   'c_subs/United_States/c_subs/New_York/': {
+    //     rootcIndex: 1,
+    //     btn_label: 'New York City',
+    //   },
+    // },
   },
   {
     path: './c_data/nyc/',
-    data_prefix_maps: {},
-    popButton: '&lt; New York State',
+    // data_prefix_maps: {},
+    // popButton: '&lt; New York State',
   },
 ];
 
@@ -442,6 +442,8 @@ const Dashboard = () => {
         selection
         value={countryFocus}
         onChange={(param, data) => {
+          console.log('CountrySelect param', param);
+          console.log('CountrySelect data', data);
           setCountryFocus(data.value);
           let nindex = focusCountries.indexOf(data.value);
           if (nindex >= 0) {
@@ -845,11 +847,12 @@ const Dashboard = () => {
           /> */}
         </Menu>
         {bottomTab === 'places' && <RegionTab />}
-        {bottomTab === 'compare' && <CustomTheme />}
+        {bottomTab === 'compare' && (
+          <CompareTab items={sortedItems} ui_key={ui_key} />
+        )}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
         {bottomTab === 'purpose' && <AboutTab />}
-        {/* {bottomTab === 'references' && <CustomTheme />} */}
       </StyledDetailsContainer>
     </>
   );
