@@ -24,22 +24,16 @@ function RegionSelect(props) {
 }
 
 function CompareTab(props) {
-  const [compareRegionIndex1, setCompareRegionIndex1] = useLocalStorage(
-    'co-region-1',
-    0
-  );
-  const [compareRegionIndex2, setCompareRegionIndex2] = useLocalStorage(
-    'co-region-2',
-    1
-  );
+  const [compareIndex1, setCompareIndex1] = useLocalStorage('co-iregion-1', 0);
+  const [compareIndex2, setCompareIndex2] = useLocalStorage('co-iregion-2', 1);
   const items = props.items;
   // const ui_key = props.ui_key;
   // const options = props.items.map((item) => ui_key(item.c_ref));
   const options = props.items.map((item, index) => {
     return { key: item.c_ref, value: index, text: item.c_ref };
   });
-  const value1 = compareRegionIndex1;
-  const value2 = compareRegionIndex2;
+  const value1 = compareIndex1;
+  const value2 = compareIndex2;
   const title1 = options[value1].c_ref;
   const title2 = options[value2].c_ref;
 
@@ -53,13 +47,13 @@ function CompareTab(props) {
           <RegionSelect
             value={value1}
             options={options}
-            setValue={setCompareRegionIndex1}
+            setValue={setCompareIndex1}
           />
           &nbsp; vs. &nbsp;
           <RegionSelect
             value={value2}
             options={options}
-            setValue={setCompareRegionIndex2}
+            setValue={setCompareIndex2}
           />
         </Grid.Row>
       </Grid>
