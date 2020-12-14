@@ -209,8 +209,8 @@ class CustomTheme extends React.Component {
       axisYears: {
         axis: { stroke: 'black', strokeWidth: 1 },
         ticks: {
-          // size: ({ tick }) => {
-          size: (tick) => {
+          size: ({ tick }) => {
+            // size: (tick) => {
             // console.log('CustomTheme getStyles props', props);
             // const tick = props.tick;
             const tickSize = tick.getFullYear() % 5 === 0 ? 10 : 5;

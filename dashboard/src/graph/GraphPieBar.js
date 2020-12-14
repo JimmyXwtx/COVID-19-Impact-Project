@@ -50,7 +50,12 @@ const GraphPieBar = ({ pie_data, opacity, stacked }) => {
             touchAction: 'auto',
             userSelect: 'auto',
             data: {
-              fill: ({ _x }) => colorfor(barslices.length - _x),
+              fill: ({ index }) => colorfor(barslices.length - index),
+              // fill: ({ _x }) => colorfor(barslices.length - _x),
+              // fill: (props) => {
+              //   console.log('props', props);
+              //   return colorfor(barslices.length - props.index);
+              // },
             },
           }}
           theme={material}
