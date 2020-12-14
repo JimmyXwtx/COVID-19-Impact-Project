@@ -1,12 +1,14 @@
+import React from 'react';
+import { VictoryAxis, VictoryLabel, VictoryLine } from 'victory';
+
 class CustomTheme extends React.Component {
   render() {
     const styles = this.getStyles();
     const dataSetOne = this.getDataSetOne();
     const dataSetTwo = this.getDataSetTwo();
     const tickValues = this.getTickValues();
-
     return (
-      <svg style={styles.parent} viewBox="0 0 600 350">
+      <svg style={styles.parent} viewBox="0 0 450 350">
         {/* Create stylistic elements */}
         <rect x="0" y="0" width="10" height="30" fill="#f01616" />
         <rect x="420" y="10" width="20" height="20" fill="#458ca8" />
@@ -178,6 +180,8 @@ class CustomTheme extends React.Component {
     const BLUE_COLOR = '#00a3de';
     const RED_COLOR = '#7c270b';
 
+    console.log('CustomTheme getStyles this', this);
+
     return {
       parent: {
         background: '#ccdee8',
@@ -205,7 +209,10 @@ class CustomTheme extends React.Component {
       axisYears: {
         axis: { stroke: 'black', strokeWidth: 1 },
         ticks: {
-          size: ({ tick }) => {
+          // size: ({ tick }) => {
+          size: (tick) => {
+            // console.log('CustomTheme getStyles props', props);
+            // const tick = props.tick;
             const tickSize = tick.getFullYear() % 5 === 0 ? 10 : 5;
             return tickSize;
           },
@@ -276,3 +283,7 @@ class CustomTheme extends React.Component {
     };
   }
 }
+
+export default CustomTheme;
+
+// https://formidable.com/open-source/victory/guides/custom-charts

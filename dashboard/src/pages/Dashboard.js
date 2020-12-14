@@ -15,6 +15,7 @@ import styled from 'styled-components';
 import CountryDataTable from '../components/CountryDataTable';
 import DateSlider from '../components/DateSlider';
 import RegionNavTable from '../components/RegionNavTable';
+import CustomTheme from '../graph/CustomTheme';
 import GraphPieBar from '../graph/GraphPieBar';
 import extract_slices from '../graph/extract_slices';
 import useInterval from '../hooks/useInterval';
@@ -23,7 +24,7 @@ import useWindowSize from '../hooks/useWindowSize';
 import fetchData from '../js/fetchData';
 import AboutTab from '../tabs/AboutTab';
 import FocusTab from '../tabs/FocusTab';
-import ReferencesTab from '../tabs/ReferencesTab';
+// import ReferencesTab from '../tabs/ReferencesTab';
 import SoftBodyTab from '../tabs/SoftBodyTab';
 
 const nslice = 8;
@@ -815,8 +816,9 @@ const Dashboard = () => {
             onClick={handleBottomTab}
           />
           <Menu.Item
-            name="purpose"
-            active={bottomTab === 'purpose'}
+            name="compare"
+            active={bottomTab === 'compare'}
+            content="Compare"
             onClick={handleBottomTab}
           />
           <Menu.Item
@@ -831,16 +833,23 @@ const Dashboard = () => {
             onClick={handleBottomTab}
           />
           <Menu.Item
+            name="purpose"
+            active={bottomTab === 'purpose'}
+            content="About"
+            onClick={handleBottomTab}
+          />
+          {/* <Menu.Item
             name="references"
             active={bottomTab === 'references'}
             onClick={handleBottomTab}
-          />
+          /> */}
         </Menu>
         {bottomTab === 'places' && <RegionTab />}
-        {bottomTab === 'purpose' && <AboutTab />}
+        {bottomTab === 'compare' && <CustomTheme />}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
-        {bottomTab === 'references' && <ReferencesTab />}
+        {bottomTab === 'purpose' && <AboutTab />}
+        {/* {bottomTab === 'references' && <CustomTheme />} */}
       </StyledDetailsContainer>
     </>
   );

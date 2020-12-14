@@ -43,19 +43,22 @@ const ReferencesTab = () => {
     },
   ];
   return (
-    <StyledSection>
-      {data.map(({ anchor, heading, quote, url }) => (
-        <div key={uuidv4()}>
-          <p>
-            {heading && heading}
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {anchor}
-            </a>{' '}
-            {quote}
-          </p>
-        </div>
-      ))}
-    </StyledSection>
+    <>
+      <StyledSection>
+        <h2 id="heading-purpose">References</h2>
+        {data.map(({ anchor, heading, quote, url }) => (
+          <div key={uuidv4()}>
+            <p>
+              {heading && heading}
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {anchor}
+              </a>{' '}
+              {quote}
+            </p>
+          </div>
+        ))}
+      </StyledSection>
+    </>
   );
 };
 
