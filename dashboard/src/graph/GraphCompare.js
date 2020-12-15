@@ -5,18 +5,36 @@ import { VictoryAxis, VictoryLabel, VictoryLine } from 'victory';
 //   render(props) {
 function GraphCompare(props) {
   console.log('GraphCompare props', props);
+  const titles = props.titles;
   const data = props.data;
-  const propFocus = props.propFocus;
-  const data1 = data[0].map((item, index) => {
-    return { x: index, y: item[propFocus] };
-  });
+  const data1 = data[0];
+  const data2 = data[1];
+
+  // const data1 = data[0].map((item, index) => {
+  //   const y = item[propFocus] || 0;
+  //   return { x: index, y };
+  // });
 
   console.log('GraphCompare data1', data1);
+  console.log('GraphCompare data2', data2);
+  if (data1.length <= 0) return null;
+  if (data2.length <= 0) return null;
+
+  let min = Number.MAX_SAFE_INTEGER;
+  let max = Number.MIN_SAFE_INTEGER;
+  for (let index = 0; index < data1.length; index++) {
+    const item1 = data1[index];
+    const item2 = data2[index];
+    min = Math.min(min, item1.y, item2.y);
+    max = Math.max(max, item1.y, item2.y);
+  }
+  const ydomain = [min, max];
+  const xdomain = [0, data1.length];
+  console.log('GraphCompare ydomain', ydomain);
+  console.log('GraphCompare xdomain', xdomain);
 
   const styles = getStyles();
-  const dataSetOne = getDataSetOne();
-  const dataSetTwo = getDataSetTwo();
-  const tickValues = getTickValues();
+  // const tickValues = getTickValues();
 
   return (
     <svg style={styles.parent} viewBox="0 0 450 350">
@@ -27,23 +45,13 @@ function GraphCompare(props) {
       {/* Define labels */}
       {/* <VictoryLabel x={25} y={24} style={styles.title} text="An outlook" />
         <VictoryLabel x={430} y={20} style={styles.labelNumber} text="1" /> */}
-      <VictoryLabel
-        x={25}
-        y={20}
-        style={styles.labelOne}
-        text={props.titles[0]}
-      />
-      <VictoryLabel
-        x={425}
-        y={20}
-        style={styles.labelTwo}
-        text={props.titles[1]}
-      />
+      <VictoryLabel x={25} y={20} style={styles.labelOne} text={titles[0]} />
+      <VictoryLabel x={425} y={20} style={styles.labelTwo} text={titles[1]} />
 
-      {/* <g transform={'translate(0, 40)'}> */}
-      <g>
+      <g transform={'translate(0, 40)'}>
+        {/* <g> */}
         {/* Add shared independent axis */}
-        <VictoryAxis
+        {/* <VictoryAxis
           scale="time"
           standalone={false}
           style={styles.axisYears}
@@ -56,35 +64,58 @@ function GraphCompare(props) {
               return x.getFullYear().toString().slice(2);
             }
           }}
-        />
-
+        /> */}
         {/*
             Add the dependent axis for the first data set.
             Note that all components plotted against this axis will have the same y domain
           */}
+        {/* <VictoryAxis
+          dependentAxis
+          domain={[-10, 15]}
+          offsetX={50}
+          orientation="left"
+          standalone={false}
+          style={styles.axisOne}
+        /> */}
         <VictoryAxis
           dependentAxis
-          // domain={[-10, 15]}
-          // offsetX={50}
+          domain={ydomain}
+          offsetX={50}
           orientation="left"
           standalone={false}
           style={styles.axisOne}
         />
-
-        {/* dataset one */}
+        {/* dataset data1 */}
         <VictoryLine
+          data={data1}
+          domain={{
+            x: xdomain,
+            y: ydomain,
+          }}
+          standalone={false}
+          style={styles.lineOne}
+        />
+        {/* dataset data2 */}
+        <VictoryLine
+          data={data2}
+          domain={{
+            x: xdomain,
+            y: ydomain,
+          }}
+          standalone={false}
+          style={styles.lineTwo}
+        />
+        {/* <VictoryLine
           data={dataSetOne}
-          // data={data1}
           domain={{
             x: [new Date(1999, 1, 1), new Date(2016, 1, 1)],
             y: [-10, 15],
           }}
-          // interpolation="monotoneX"
+          interpolation="monotoneX"
           scale={{ x: 'time', y: 'linear' }}
           standalone={false}
           style={styles.lineOne}
-        />
-
+        /> */}
         {/*
             Add the dependent axis for the second data set.
             Note that all components plotted against this axis will have the same y domain
@@ -96,7 +127,6 @@ function GraphCompare(props) {
           standalone={false}
           style={styles.axisTwo}
         /> */}
-
         {/* dataset two */}
         {/* <VictoryLine
           data={dataSetTwo}
@@ -112,66 +142,6 @@ function GraphCompare(props) {
       </g>
     </svg>
   );
-}
-
-function getDataSetOne() {
-  return [
-    { x: new Date(2000, 1, 1), y: 12 },
-    { x: new Date(2000, 6, 1), y: 10 },
-    { x: new Date(2000, 12, 1), y: 11 },
-    { x: new Date(2001, 1, 1), y: 5 },
-    { x: new Date(2002, 1, 1), y: 4 },
-    { x: new Date(2003, 1, 1), y: 6 },
-    { x: new Date(2004, 1, 1), y: 5 },
-    { x: new Date(2005, 1, 1), y: 7 },
-    { x: new Date(2006, 1, 1), y: 8 },
-    { x: new Date(2007, 1, 1), y: 9 },
-    { x: new Date(2008, 1, 1), y: -8.5 },
-    { x: new Date(2009, 1, 1), y: -9 },
-    { x: new Date(2010, 1, 1), y: 5 },
-    { x: new Date(2013, 1, 1), y: 1 },
-    { x: new Date(2014, 1, 1), y: 2 },
-    { x: new Date(2015, 1, 1), y: -5 },
-  ];
-}
-
-function getDataSetTwo() {
-  return [
-    { x: new Date(2000, 1, 1), y: 5 },
-    { x: new Date(2003, 1, 1), y: 6 },
-    { x: new Date(2004, 1, 1), y: 4 },
-    { x: new Date(2005, 1, 1), y: 10 },
-    { x: new Date(2006, 1, 1), y: 12 },
-    { x: new Date(2007, 2, 1), y: 48 },
-    { x: new Date(2008, 1, 1), y: 19 },
-    { x: new Date(2009, 1, 1), y: 31 },
-    { x: new Date(2011, 1, 1), y: 49 },
-    { x: new Date(2014, 1, 1), y: 40 },
-    { x: new Date(2015, 1, 1), y: 21 },
-  ];
-}
-
-function getTickValues() {
-  return [
-    new Date(1999, 1, 1),
-    new Date(2000, 1, 1),
-    new Date(2001, 1, 1),
-    new Date(2002, 1, 1),
-    new Date(2003, 1, 1),
-    new Date(2004, 1, 1),
-    new Date(2005, 1, 1),
-    new Date(2006, 1, 1),
-    new Date(2007, 1, 1),
-    new Date(2008, 1, 1),
-    new Date(2009, 1, 1),
-    new Date(2010, 1, 1),
-    new Date(2011, 1, 1),
-    new Date(2012, 1, 1),
-    new Date(2013, 1, 1),
-    new Date(2014, 1, 1),
-    new Date(2015, 1, 1),
-    new Date(2016, 1, 1),
-  ];
 }
 
 function getStyles() {
@@ -232,7 +202,7 @@ function getStyles() {
       tickLabels: {
         fill: BLUE_COLOR,
         fontFamily: 'inherit',
-        fontSize: 16,
+        fontSize: 6,
       },
     },
     labelOne: {
@@ -242,7 +212,8 @@ function getStyles() {
       fontStyle: 'italic',
     },
     lineOne: {
-      data: { stroke: BLUE_COLOR, strokeWidth: 4.5 },
+      data: { stroke: BLUE_COLOR, strokeWidth: 1 },
+      // data: { stroke: BLUE_COLOR, strokeWidth: 4.5 },
     },
     axisOneCustomLabel: {
       fill: BLUE_COLOR,
@@ -268,7 +239,8 @@ function getStyles() {
       fontStyle: 'italic',
     },
     lineTwo: {
-      data: { stroke: RED_COLOR, strokeWidth: 4.5 },
+      data: { stroke: RED_COLOR, strokeWidth: 1 },
+      // data: { stroke: RED_COLOR, strokeWidth: 4.5 },
     },
 
     // HORIZONTAL LINE

@@ -837,6 +837,7 @@ const Dashboard = () => {
             data_prefix={data_prefix}
             c_dates={metac.c_dates}
             propFocus={propFocus}
+            propDiff={sumFocus !== 'totals'}
           />
         )}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}

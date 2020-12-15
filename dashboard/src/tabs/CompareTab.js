@@ -24,6 +24,22 @@ function RegionSelect(props) {
   );
 }
 
+function dataForGraph(data, propFocus, propDiff) {
+  const data1 = [];
+  let oy = 0;
+  for (let index = 0; index < data.length; index++) {
+    const item = data[index];
+    let y = item[propFocus] || 0;
+    if (propDiff) {
+      const ny = y;
+      y = y - oy;
+      oy = ny;
+    }
+    data1.push({ x: index, y });
+  }
+  return data1;
+}
+
 function CompareTab(props) {
   const [compareIndex1, setCompareIndex1] = useLocalStorage('co-iregion-1', 0);
   const [compareIndex2, setCompareIndex2] = useLocalStorage('co-iregion-2', 1);
@@ -38,11 +54,13 @@ function CompareTab(props) {
   });
   const value1 = compareIndex1;
   const value2 = compareIndex2;
-  const title1 = items[value1].c_ref;
-  const title2 = items[value2].c_ref;
+  const title1 = (items[value1] || {}).c_ref;
+  const title2 = (items[value2] || {}).c_ref;
   const data_prefix = props.data_prefix;
   const c_dates = props.c_dates;
   const propFocus = props.propFocus;
+  const propDiff = props.propDiff;
+  // const domain = [0, 0];
 
   console.log('CompareTab items', items);
   console.log('CompareTab options', options);
@@ -55,9 +73,9 @@ function CompareTab(props) {
     let cname = title1.replace(/ /g, '_').replace(/,/g, '');
     fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
       console.log('CompareTab data1', data);
-      setDateItems1(data);
+      setDateItems1(dataForGraph(data, propFocus, propDiff));
     });
-  }, [data_prefix, title1]);
+  }, [data_prefix, title1, propFocus, propDiff]);
 
   useEffect(() => {
     console.log('CompareTab useEffect title2', title2);
@@ -65,9 +83,9 @@ function CompareTab(props) {
     let cname = title2.replace(/ /g, '_').replace(/,/g, '');
     fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
       console.log('CompareTab data2', data);
-      setDateItems2(data);
+      setDateItems2(dataForGraph(data, propFocus, propDiff));
     });
-  }, [data_prefix, title2]);
+  }, [data_prefix, title2, propFocus, propDiff]);
 
   return (
     <StyledDiv>
