@@ -72,6 +72,7 @@ function TrendTab(props) {
     let cname = title1.replace(/ /g, '_').replace(/,/g, '');
     fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
       console.log('TrendTab data1', data);
+      if (!data) data = [];
       setDateItems1(dataForGraph(data, propFocus, propDiff));
     });
   }, [data_prefix, title1, propFocus, propDiff]);
@@ -82,6 +83,7 @@ function TrendTab(props) {
     let cname = title2.replace(/ /g, '_').replace(/,/g, '');
     fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
       console.log('TrendTab data2', data);
+      if (!data) data = [];
       setDateItems2(dataForGraph(data, propFocus, propDiff));
     });
   }, [data_prefix, title2, propFocus, propDiff]);

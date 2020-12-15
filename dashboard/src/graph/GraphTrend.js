@@ -7,6 +7,7 @@ function GraphTrend(props) {
   console.log('GraphTrend props', props);
   const titles = props.titles;
   const data = props.data;
+  const c_dates = props.c_dates;
   const data1 = data[0];
   const data2 = data[1];
 
@@ -22,16 +23,22 @@ function GraphTrend(props) {
 
   let min = Number.MAX_SAFE_INTEGER;
   let max = Number.MIN_SAFE_INTEGER;
+  let maxIndex = 0;
   for (let index = 0; index < data1.length; index++) {
     const item1 = data1[index];
     const item2 = data2[index];
     min = Math.min(min, item1.y, item2.y);
+    if (max < item1.y) {
+      maxIndex = index;
+    }
     max = Math.max(max, item1.y, item2.y);
   }
   const ydomain = [min, max];
   const xdomain = [0, data1.length];
   console.log('GraphTrend ydomain', ydomain);
   console.log('GraphTrend xdomain', xdomain);
+  console.log('maxIndex', maxIndex);
+  console.log('c_dates[maxIndex]', c_dates[maxIndex]);
 
   const styles = getStyles();
   // const tickValues = getTickValues();
