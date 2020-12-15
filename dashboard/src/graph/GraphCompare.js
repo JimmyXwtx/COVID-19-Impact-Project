@@ -5,6 +5,13 @@ import { VictoryAxis, VictoryLabel, VictoryLine } from 'victory';
 //   render(props) {
 function GraphCompare(props) {
   console.log('GraphCompare props', props);
+  const data = props.data;
+  const propFocus = props.propFocus;
+  const data1 = data[0].map((item, index) => {
+    return { x: index, y: item[propFocus] };
+  });
+
+  console.log('GraphCompare data1', data1);
 
   const styles = getStyles();
   const dataSetOne = getDataSetOne();
@@ -57,36 +64,22 @@ function GraphCompare(props) {
           */}
         <VictoryAxis
           dependentAxis
-          domain={[-10, 15]}
-          offsetX={50}
+          // domain={[-10, 15]}
+          // offsetX={50}
           orientation="left"
           standalone={false}
           style={styles.axisOne}
         />
 
-        {/* Red annotation line */}
-        <VictoryLine
-          data={[
-            { x: new Date(1999, 1, 1), y: 0 },
-            { x: new Date(2014, 6, 1), y: 0 },
-          ]}
-          domain={{
-            x: [new Date(1999, 1, 1), new Date(2016, 1, 1)],
-            y: [-10, 15],
-          }}
-          scale={{ x: 'time', y: 'linear' }}
-          standalone={false}
-          style={styles.lineThree}
-        />
-
         {/* dataset one */}
         <VictoryLine
           data={dataSetOne}
+          // data={data1}
           domain={{
             x: [new Date(1999, 1, 1), new Date(2016, 1, 1)],
             y: [-10, 15],
           }}
-          interpolation="monotoneX"
+          // interpolation="monotoneX"
           scale={{ x: 'time', y: 'linear' }}
           standalone={false}
           style={styles.lineOne}
@@ -96,16 +89,16 @@ function GraphCompare(props) {
             Add the dependent axis for the second data set.
             Note that all components plotted against this axis will have the same y domain
           */}
-        <VictoryAxis
+        {/* <VictoryAxis
           dependentAxis
           domain={[0, 50]}
           orientation="right"
           standalone={false}
           style={styles.axisTwo}
-        />
+        /> */}
 
         {/* dataset two */}
-        <VictoryLine
+        {/* <VictoryLine
           data={dataSetTwo}
           domain={{
             x: [new Date(1999, 1, 1), new Date(2016, 1, 1)],
@@ -115,7 +108,7 @@ function GraphCompare(props) {
           scale={{ x: 'time', y: 'linear' }}
           standalone={false}
           style={styles.lineTwo}
-        />
+        /> */}
       </g>
     </svg>
   );

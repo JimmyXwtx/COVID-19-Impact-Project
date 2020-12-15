@@ -1,5 +1,5 @@
 // import React, { useState } from 'react';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Grid } from 'semantic-ui-react';
 import { Select } from 'semantic-ui-react';
 import styled from 'styled-components';
@@ -27,6 +27,9 @@ function RegionSelect(props) {
 function CompareTab(props) {
   const [compareIndex1, setCompareIndex1] = useLocalStorage('co-iregion-1', 0);
   const [compareIndex2, setCompareIndex2] = useLocalStorage('co-iregion-2', 1);
+  const [dateItems1, setDateItems1] = useState([]);
+  const [dateItems2, setDateItems2] = useState([]);
+
   const items = props.items;
   // const ui_key = props.ui_key;
   // const options = props.items.map((item) => ui_key(item.c_ref));
@@ -38,6 +41,8 @@ function CompareTab(props) {
   const title1 = items[value1].c_ref;
   const title2 = items[value2].c_ref;
   const data_prefix = props.data_prefix;
+  const c_dates = props.c_dates;
+  const propFocus = props.propFocus;
 
   console.log('CompareTab items', items);
   console.log('CompareTab options', options);
@@ -49,9 +54,20 @@ function CompareTab(props) {
     if (!title1) return;
     let cname = title1.replace(/ /g, '_').replace(/,/g, '');
     fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
-      console.log('CompareTab data', data);
+      console.log('CompareTab data1', data);
+      setDateItems1(data);
     });
   }, [data_prefix, title1]);
+
+  useEffect(() => {
+    console.log('CompareTab useEffect title2', title2);
+    if (!title2) return;
+    let cname = title2.replace(/ /g, '_').replace(/,/g, '');
+    fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
+      console.log('CompareTab data2', data);
+      setDateItems2(data);
+    });
+  }, [data_prefix, title2]);
 
   return (
     <StyledDiv>
@@ -71,7 +87,12 @@ function CompareTab(props) {
           />
         </Grid.Row>
       </Grid>
-      <GraphCompare titles={[title1, title2]} />
+      <GraphCompare
+        titles={[title1, title2]}
+        data={[dateItems1, dateItems2]}
+        c_dates={c_dates}
+        propFocus={propFocus}
+      />
     </StyledDiv>
   );
 }

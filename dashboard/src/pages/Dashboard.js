@@ -146,6 +146,7 @@ const Dashboard = () => {
         c_title: meta.c_title,
         c_sub_title: meta.c_sub_title,
         c_sub_captions: meta.c_sub_captions,
+        c_dates: meta.c_dates,
       });
     });
   }, [countrySelected, data_prefix]);
@@ -831,7 +832,12 @@ const Dashboard = () => {
         </Menu>
         {bottomTab === 'places' && <RegionTab />}
         {bottomTab === 'compare' && (
-          <CompareTab items={sortedItems} data_prefix={data_prefix} />
+          <CompareTab
+            items={sortedItems}
+            data_prefix={data_prefix}
+            c_dates={metac.c_dates}
+            propFocus={propFocus}
+          />
         )}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
