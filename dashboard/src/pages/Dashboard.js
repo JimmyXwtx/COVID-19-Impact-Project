@@ -831,7 +831,7 @@ const Dashboard = () => {
         </Menu>
         {bottomTab === 'places' && <RegionTab />}
         {bottomTab === 'compare' && (
-          <CompareTab items={sortedItems} ui_key={ui_key} />
+          <CompareTab items={sortedItems} data_prefix={data_prefix} />
         )}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
