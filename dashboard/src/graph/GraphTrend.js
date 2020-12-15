@@ -1,10 +1,10 @@
 import React from 'react';
 import { VictoryAxis, VictoryLabel, VictoryLine } from 'victory';
 
-// class GraphCompare extends React.Component {
+// class GraphTrend extends React.Component {
 //   render(props) {
-function GraphCompare(props) {
-  console.log('GraphCompare props', props);
+function GraphTrend(props) {
+  console.log('GraphTrend props', props);
   const titles = props.titles;
   const data = props.data;
   const data1 = data[0];
@@ -15,8 +15,8 @@ function GraphCompare(props) {
   //   return { x: index, y };
   // });
 
-  console.log('GraphCompare data1', data1);
-  console.log('GraphCompare data2', data2);
+  console.log('GraphTrend data1', data1);
+  console.log('GraphTrend data2', data2);
   if (data1.length <= 0) return null;
   if (data2.length <= 0) return null;
 
@@ -30,8 +30,8 @@ function GraphCompare(props) {
   }
   const ydomain = [min, max];
   const xdomain = [0, data1.length];
-  console.log('GraphCompare ydomain', ydomain);
-  console.log('GraphCompare xdomain', xdomain);
+  console.log('GraphTrend ydomain', ydomain);
+  console.log('GraphTrend xdomain', xdomain);
 
   const styles = getStyles();
   // const tickValues = getTickValues();
@@ -148,7 +148,7 @@ function getStyles() {
   const BLUE_COLOR = '#00a3de';
   const RED_COLOR = '#7c270b';
 
-  // console.log('GraphCompare getStyles this', this);
+  // console.log('GraphTrend getStyles this', this);
 
   return {
     parent: {
@@ -250,6 +250,6 @@ function getStyles() {
   };
 }
 
-export default GraphCompare;
+export default GraphTrend;
 
 // https://formidable.com/open-source/victory/guides/custom-charts

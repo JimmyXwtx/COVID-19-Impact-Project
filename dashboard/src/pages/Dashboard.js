@@ -22,10 +22,10 @@ import useLocalStorage from '../hooks/useLocalStorage';
 import useWindowSize from '../hooks/useWindowSize';
 import fetchData from '../js/fetchData';
 import AboutTab from '../tabs/AboutTab';
-import CompareTab from '../tabs/CompareTab';
 import FocusTab from '../tabs/FocusTab';
 // import ReferencesTab from '../tabs/ReferencesTab';
 import SoftBodyTab from '../tabs/SoftBodyTab';
+import TrendTab from '../tabs/TrendTab';
 
 const nslice = 8;
 const top_label = 'World';
@@ -804,7 +804,7 @@ const Dashboard = () => {
           <Menu.Item
             name="compare"
             active={bottomTab === 'compare'}
-            content="Compare"
+            content="Trends"
             onClick={handleBottomTab}
           />
           <Menu.Item
@@ -832,7 +832,7 @@ const Dashboard = () => {
         </Menu>
         {bottomTab === 'places' && <RegionTab />}
         {bottomTab === 'compare' && (
-          <CompareTab
+          <TrendTab
             items={sortedItems}
             data_prefix={data_prefix}
             c_dates={metac.c_dates}

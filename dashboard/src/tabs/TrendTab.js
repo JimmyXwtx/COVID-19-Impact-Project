@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Grid } from 'semantic-ui-react';
 import { Select } from 'semantic-ui-react';
 import styled from 'styled-components';
-import GraphCompare from '../graph/GraphCompare';
+import GraphTrend from '../graph/GraphTrend';
 import useLocalStorage from '../hooks/useLocalStorage';
 import fetchData from '../js/fetchData';
 
@@ -40,15 +40,13 @@ function dataForGraph(data, propFocus, propDiff) {
   return data1;
 }
 
-function CompareTab(props) {
+function TrendTab(props) {
   const [compareIndex1, setCompareIndex1] = useLocalStorage('co-iregion-1', 0);
   const [compareIndex2, setCompareIndex2] = useLocalStorage('co-iregion-2', 1);
   const [dateItems1, setDateItems1] = useState([]);
   const [dateItems2, setDateItems2] = useState([]);
 
   const items = props.items;
-  // const ui_key = props.ui_key;
-  // const options = props.items.map((item) => ui_key(item.c_ref));
   const options = items.map((item, index) => {
     return { key: item.c_ref, value: index, text: item.c_ref };
   });
@@ -60,29 +58,30 @@ function CompareTab(props) {
   const c_dates = props.c_dates;
   const propFocus = props.propFocus;
   const propDiff = props.propDiff;
-  // const domain = [0, 0];
+  // const titles = ['1. ' + title1, '2. ' + title2];
+  const titles = [title1, title2];
 
-  console.log('CompareTab items', items);
-  console.log('CompareTab options', options);
-  console.log('CompareTab value1', value1);
-  console.log('CompareTab title1', title1);
+  console.log('TrendTab items', items);
+  console.log('TrendTab options', options);
+  console.log('TrendTab value1', value1);
+  console.log('TrendTab title1', title1);
 
   useEffect(() => {
-    console.log('CompareTab useEffect title1', title1);
+    console.log('TrendTab useEffect title1', title1);
     if (!title1) return;
     let cname = title1.replace(/ /g, '_').replace(/,/g, '');
     fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
-      console.log('CompareTab data1', data);
+      console.log('TrendTab data1', data);
       setDateItems1(dataForGraph(data, propFocus, propDiff));
     });
   }, [data_prefix, title1, propFocus, propDiff]);
 
   useEffect(() => {
-    console.log('CompareTab useEffect title2', title2);
+    console.log('TrendTab useEffect title2', title2);
     if (!title2) return;
     let cname = title2.replace(/ /g, '_').replace(/,/g, '');
     fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
-      console.log('CompareTab data2', data);
+      console.log('TrendTab data2', data);
       setDateItems2(dataForGraph(data, propFocus, propDiff));
     });
   }, [data_prefix, title2, propFocus, propDiff]);
@@ -90,14 +89,15 @@ function CompareTab(props) {
   return (
     <StyledDiv>
       <Grid style={{ margin: 0 }}>
-        <Grid.Row>Compare two regions over time.</Grid.Row>
+        {/* <Grid.Row>Compare two regions over time.</Grid.Row> */}
         <Grid.Row>
+          {/* 1. &nbsp; */}
           <RegionSelect
             value={value1}
             options={options}
             setValue={setCompareIndex1}
           />
-          &nbsp; vs. &nbsp;
+          {/* &nbsp; 2. &nbsp; */}
           <RegionSelect
             value={value2}
             options={options}
@@ -105,8 +105,8 @@ function CompareTab(props) {
           />
         </Grid.Row>
       </Grid>
-      <GraphCompare
-        titles={[title1, title2]}
+      <GraphTrend
+        titles={titles}
         data={[dateItems1, dateItems2]}
         c_dates={c_dates}
         propFocus={propFocus}
@@ -144,4 +144,4 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default CompareTab;
+export default TrendTab;
