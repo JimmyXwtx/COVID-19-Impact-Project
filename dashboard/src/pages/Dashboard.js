@@ -32,22 +32,7 @@ const top_label = 'World';
 const playDelayInit = 0.1;
 const playEndDelayInit = 3;
 
-const rootcArr = [
-  {
-    path: './c_data/world/',
-    // data_prefix_maps: {
-    //   'c_subs/United_States/c_subs/New_York/': {
-    //     rootcIndex: 1,
-    //     btn_label: 'New York City',
-    //   },
-    // },
-  },
-  {
-    path: './c_data/nyc/',
-    // data_prefix_maps: {},
-    // popButton: '&lt; New York State',
-  },
-];
+const rootcPaths = ['./c_data/world/', './c_data/nyc/'];
 
 ReactGA.initialize('UA-168322336-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -58,9 +43,7 @@ function ui_key(uname) {
 
 const Dashboard = () => {
   const [rootcIndex, setRootcIndex] = useState(0);
-  const rootcSelected = rootcArr[rootcIndex];
-  // const [rootcStack, setRootcStack] = useState([]); // {rootcIndex, countrySelected}
-  const rootcPath = rootcSelected.path;
+  const rootcPath = rootcPaths[rootcIndex];
 
   const [loaderActive, setLoaderActive] = useState(true);
   const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');

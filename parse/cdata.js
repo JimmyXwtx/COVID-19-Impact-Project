@@ -87,6 +87,10 @@ function write_meta(
     report.log('write_meta missing days_path ' + days_path);
     return null;
   }
+  let c_series = {};
+  // c_series[c_ref] --> "United States": {
+  //      '2020-02-28': { "Cases": 1,  "Deaths": 0 }
+  //
   let cdict = {};
   let prior_cdict;
   // file names are sorted to get prior stats
@@ -103,6 +107,12 @@ function write_meta(
       cdict = {};
       fitem.forEach(citem => {
         const c_ref = citem.c_ref;
+        let sitem = c_series[c_ref];
+        if (!sitem) {
+          sitem = {};
+          c_series[c_ref] = sitem;
+        }
+        sitem[date] = citem.totals;
         cdict[c_ref] = citem;
         let ent = summaryDict[c_ref];
         if (!ent) {
@@ -160,6 +170,9 @@ function write_meta(
   const outpath_meta = path.resolve(sub_dir, 'c_meta.json');
 
   const c_sub_title = c_sub_titles.length > 0 ? c_sub_titles[0] : undefined;
+
+  // console.log('sub_dir', sub_dir);
+  // console.log('c_series', JSON.stringify(c_series, null, 2));
 
   // console.log(
   //   'write_meta sub_dict',
