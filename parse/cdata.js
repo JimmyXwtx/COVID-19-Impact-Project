@@ -52,6 +52,7 @@ function write_subs(sub_dict, file_date, path_root) {
     // report.log('write_subs file_date', file_date, 'sub', sub, 'cent', cent);
     const nsubs = fileNameForSub(sub);
     cent.nsubs = nsubs;
+    cent.nsubs_name = nsubs;
     let cpath = path.resolve(path_root, 'c_subs', nsubs);
     const some = write_daily(cent.subs, file_date, cpath);
     if (!some) {
@@ -213,16 +214,17 @@ function write_cseries_sub(sub_dir, sub_dict, c_dates, c_series) {
   // console.log('write_cseries_sub sub_dir', sub_dir);
   // const keys = Object.keys(c_series).sort();
   // console.log('c_series keys', keys);
-  const cpath = path.resolve(sub_dir, 'c_subs');
+  const cpath = path.resolve(sub_dir, 'c_series');
+  fs.ensureDirSync(cpath);
   for (let sub_name in sub_dict) {
     const cent = sub_dict[sub_name];
-    if (!cent.nsubs) {
-      // console.log('write_cseries_sub skipping sub_name ' + sub_name);
+    if (!cent.nsubs_name) {
+      console.log('write_cseries_sub skipping sub_name ' + sub_name);
       continue;
     }
-    let spath = path.resolve(cpath, cent.nsubs);
-    fs.ensureDirSync(spath);
-    spath = path.resolve(spath, 'c_series.json');
+    let spath = path.resolve(cpath, cent.nsubs_name + '.json');
+    // fs.ensureDirSync(spath);
+    // spath = path.resolve(spath, 'c_series.json');
     const dent = c_series[sub_name];
     if (!dent) {
       console.log('!!@ write_cseries_sub missing sub_name ' + sub_name);
