@@ -838,18 +838,30 @@ const Dashboard = () => {
     );
   }
 
+  function UpperView() {
+    if (bottomTab !== 'compare') {
+      return (
+        <>
+          <HeadStats />
+          <GraphPieBarStub />
+          <GraphNavs />
+        </>
+      );
+    } else {
+      return <TrendTabParams />;
+    }
+  }
+
   return (
     <>
       <Container style={{ marginTop: '1rem' }}>
         <Loader active={loaderActive} inline></Loader>
-        <HeadStats />
-        <GraphPieBarStub />
-        <GraphNavs />
+        <UpperView />
       </Container>
       <StyledDetailsContainer>
         <LowerMenuTabs />
         {bottomTab === 'places' && <RegionTab />}
-        {bottomTab === 'compare' && <TrendTabParams />}
+        {/* {bottomTab === 'compare' && <TrendTabParams />} */}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
         {bottomTab === 'purpose' && <AboutTab />}
