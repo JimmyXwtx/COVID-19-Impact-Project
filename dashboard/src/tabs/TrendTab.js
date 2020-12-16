@@ -90,6 +90,12 @@ function TrendTab(props) {
 
   return (
     <StyledDiv>
+      <GraphTrend
+        titles={titles}
+        data={[dateItems1, dateItems2]}
+        c_dates={c_dates}
+        propFocus={propFocus}
+      />
       <Grid style={{ margin: 0 }}>
         {/* <Grid.Row>Compare two regions over time.</Grid.Row> */}
         <Grid.Row>
@@ -107,12 +113,6 @@ function TrendTab(props) {
           />
         </Grid.Row>
       </Grid>
-      <GraphTrend
-        titles={titles}
-        data={[dateItems1, dateItems2]}
-        c_dates={c_dates}
-        propFocus={propFocus}
-      />
     </StyledDiv>
   );
 }

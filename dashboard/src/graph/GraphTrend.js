@@ -44,7 +44,9 @@ function GraphTrend(props) {
   // const tickValues = getTickValues();
 
   return (
+    // <svg style={styles.parent} viewBox="0 0 300 200">
     <svg style={styles.parent} viewBox="0 0 450 350">
+      {/* <svg style={styles.parent} viewBox="0 0 400 300"> */}
       {/* Create stylistic elements */}
       {/* <rect x="0" y="0" width="10" height="30" fill="#f01616" />
         <rect x="420" y="10" width="20" height="20" fill="#458ca8" /> */}
@@ -53,6 +55,7 @@ function GraphTrend(props) {
       {/* <VictoryLabel x={25} y={24} style={styles.title} text="An outlook" />
         <VictoryLabel x={430} y={20} style={styles.labelNumber} text="1" /> */}
       <VictoryLabel x={25} y={20} style={styles.labelOne} text={titles[0]} />
+      {/* <VictoryLabel x={325} y={20} style={styles.labelTwo} text={titles[1]} /> */}
       <VictoryLabel x={425} y={20} style={styles.labelTwo} text={titles[1]} />
 
       <g transform={'translate(0, 40)'}>
