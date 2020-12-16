@@ -834,6 +834,7 @@ const Dashboard = () => {
         c_dates={metac.c_dates}
         propFocus={propFocus}
         propDiff={sumFocus !== 'totals'}
+        CountryTabBackNav={CountryTabBackNav}
       />
     );
   }

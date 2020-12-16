@@ -1,7 +1,6 @@
 // import React, { useState } from 'react';
 import React, { useEffect, useState } from 'react';
-import { Grid } from 'semantic-ui-react';
-import { Select } from 'semantic-ui-react';
+import { Button, Grid, Select } from 'semantic-ui-react';
 import styled from 'styled-components';
 import GraphTrend from '../graph/GraphTrend';
 import useLocalStorage from '../hooks/useLocalStorage';
@@ -45,6 +44,8 @@ function TrendTab(props) {
   const [compareIndex2, setCompareIndex2] = useLocalStorage('co-iregion-2', 1);
   const [dateItems1, setDateItems1] = useState([]);
   const [dateItems2, setDateItems2] = useState([]);
+  const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');
+  const [sumFocus, setSumFocus] = useLocalStorage('co-sumFocus', 'totals');
 
   const items = props.items;
   const options = items.map((item, index) => {
@@ -56,10 +57,12 @@ function TrendTab(props) {
   const title2 = (items[value2] || {}).c_ref;
   const data_prefix = props.data_prefix;
   const c_dates = props.c_dates;
-  const propFocus = props.propFocus;
-  const propDiff = props.propDiff;
+  // const propFocus = props.propFocus;
+  // const propDiff = props.propDiff;
   // const titles = ['1. ' + title1, '2. ' + title2];
   const titles = [title1, title2];
+  const propDiff = sumFocus === 'daily';
+  const CountryTabBackNav = props.CountryTabBackNav;
 
   console.log('TrendTab items', items);
   console.log('TrendTab options', options);
@@ -88,6 +91,24 @@ function TrendTab(props) {
     });
   }, [data_prefix, title2, propFocus, propDiff]);
 
+  function casesAction() {
+    setPropFocus('Cases');
+  }
+  function deathsAction() {
+    setPropFocus('Deaths');
+  }
+  function cumulativeAction() {
+    setSumFocus('totals');
+  }
+  function dailyAction() {
+    setSumFocus('daily');
+  }
+
+  const cases_active = propFocus === 'Cases';
+  const deaths_active = propFocus === 'Deaths';
+  const total_active = !propDiff;
+  const daily_active = propDiff;
+
   return (
     <StyledDiv>
       <GraphTrend
@@ -97,21 +118,37 @@ function TrendTab(props) {
         propFocus={propFocus}
       />
       <Grid style={{ margin: 0 }}>
-        {/* <Grid.Row>Compare two regions over time.</Grid.Row> */}
+        <Button.Group>
+          <Button size="mini" onClick={casesAction} active={cases_active}>
+            Cases
+          </Button>
+          <Button size="mini" onClick={deathsAction} active={deaths_active}>
+            Deaths
+          </Button>
+        </Button.Group>
+        <Button.Group>
+          <Button size="mini" onClick={cumulativeAction} active={total_active}>
+            Cumulative
+          </Button>
+          <Button size="mini" onClick={dailyAction} active={daily_active}>
+            Daily
+          </Button>
+        </Button.Group>
+
         <Grid.Row>
-          {/* 1. &nbsp; */}
           <RegionSelect
             value={value1}
             options={options}
             setValue={setCompareIndex1}
           />
-          {/* &nbsp; 2. &nbsp; */}
           <RegionSelect
             value={value2}
             options={options}
             setValue={setCompareIndex2}
           />
         </Grid.Row>
+
+        <CountryTabBackNav />
       </Grid>
     </StyledDiv>
   );
