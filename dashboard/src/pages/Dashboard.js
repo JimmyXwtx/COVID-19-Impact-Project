@@ -726,74 +726,9 @@ const Dashboard = () => {
     return null;
   };
 
-  return (
-    <>
-      <Container style={{ marginTop: '1rem' }}>
-        <Loader active={loaderActive} inline></Loader>
-        <HeadStats />
-        <GraphPieBarStub />
-        <Grid>
-          <Grid.Row style={{ padding: '0 16px' }}>
-            <DateSlider
-              dateIndex={dateIndex}
-              dateListLength={(metac.dateList || []).length}
-              updateSlider={updateSlider}
-            />
-          </Grid.Row>
-          <Grid.Row>
-            <StyledControlRow>
-              <Button.Group>
-                <Button
-                  size="mini"
-                  onClick={selectCasesAction}
-                  active={cactive}
-                >
-                  Cases
-                </Button>
-                <Button
-                  size="mini"
-                  onClick={selectDeathsAction}
-                  active={dactive}
-                >
-                  Deaths
-                </Button>
-              </Button.Group>
-              <Button.Group>
-                <Button size="mini" onClick={selectTotals} active={to_active}>
-                  to date:
-                </Button>
-                <Button size="mini" onClick={selectDaily} active={da_active}>
-                  on day:
-                </Button>
-              </Button.Group>
-              <div>
-                <DateFocusSelect />
-              </div>
-              <Button.Group>
-                <span>
-                  <Button size="mini" onClick={previousAction}>
-                    <Icon name="step backward" />
-                  </Button>
-                  {/* <ButtonPlayPause /> */}
-                  <Button size="mini" onClick={playAction}>
-                    <Icon name="play" />
-                  </Button>
-                  <Button size="mini" onClick={nextAction}>
-                    <Icon name="step forward" />
-                  </Button>
-                </span>
-              </Button.Group>
-              <Button basic size="mini" onClick={findFirstDate}>
-                First {uiprop}
-              </Button>
-              <Button basic size="mini" onClick={findLastestDate}>
-                Latest
-              </Button>
-            </StyledControlRow>
-          </Grid.Row>
-        </Grid>
-      </Container>
-      <StyledDetailsContainer>
+  function LowerMenuTabs() {
+    return (
+      <>
         <Menu tabular>
           <Menu.Item
             name="places"
@@ -830,16 +765,91 @@ const Dashboard = () => {
             onClick={handleBottomTab}
           /> */}
         </Menu>
-        {bottomTab === 'places' && <RegionTab />}
-        {bottomTab === 'compare' && (
-          <TrendTab
-            items={sortedItems}
-            data_prefix={data_prefix}
-            c_dates={metac.c_dates}
-            propFocus={propFocus}
-            propDiff={sumFocus !== 'totals'}
+      </>
+    );
+  }
+
+  function GraphNavs() {
+    return (
+      <Grid>
+        <Grid.Row style={{ padding: '0 16px' }}>
+          <DateSlider
+            dateIndex={dateIndex}
+            dateListLength={(metac.dateList || []).length}
+            updateSlider={updateSlider}
           />
-        )}
+        </Grid.Row>
+        <Grid.Row>
+          <StyledControlRow>
+            <Button.Group>
+              <Button size="mini" onClick={selectCasesAction} active={cactive}>
+                Cases
+              </Button>
+              <Button size="mini" onClick={selectDeathsAction} active={dactive}>
+                Deaths
+              </Button>
+            </Button.Group>
+            <Button.Group>
+              <Button size="mini" onClick={selectTotals} active={to_active}>
+                to date:
+              </Button>
+              <Button size="mini" onClick={selectDaily} active={da_active}>
+                on day:
+              </Button>
+            </Button.Group>
+            <div>
+              <DateFocusSelect />
+            </div>
+            <Button.Group>
+              <span>
+                <Button size="mini" onClick={previousAction}>
+                  <Icon name="step backward" />
+                </Button>
+                {/* <ButtonPlayPause /> */}
+                <Button size="mini" onClick={playAction}>
+                  <Icon name="play" />
+                </Button>
+                <Button size="mini" onClick={nextAction}>
+                  <Icon name="step forward" />
+                </Button>
+              </span>
+            </Button.Group>
+            <Button basic size="mini" onClick={findFirstDate}>
+              First {uiprop}
+            </Button>
+            <Button basic size="mini" onClick={findLastestDate}>
+              Latest
+            </Button>
+          </StyledControlRow>
+        </Grid.Row>
+      </Grid>
+    );
+  }
+
+  function TrendTabParams() {
+    return (
+      <TrendTab
+        items={sortedItems}
+        data_prefix={data_prefix}
+        c_dates={metac.c_dates}
+        propFocus={propFocus}
+        propDiff={sumFocus !== 'totals'}
+      />
+    );
+  }
+
+  return (
+    <>
+      <Container style={{ marginTop: '1rem' }}>
+        <Loader active={loaderActive} inline></Loader>
+        <HeadStats />
+        <GraphPieBarStub />
+        <GraphNavs />
+      </Container>
+      <StyledDetailsContainer>
+        <LowerMenuTabs />
+        {bottomTab === 'places' && <RegionTab />}
+        {bottomTab === 'compare' && <TrendTabParams />}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
         {bottomTab === 'purpose' && <AboutTab />}
