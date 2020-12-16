@@ -13,14 +13,14 @@ const ReferencesTab = () => {
     {
       anchor:
         '2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE',
-      heading: 'Data source: ',
+      heading: 'Worldwide Data Source: ',
       quote:
         '"...data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)..."',
       url: 'https://github.com/CSSEGISandData/COVID-19',
     },
     {
       anchor: 'NYC Coronavirus Disease 2019 (COVID-19) Data',
-      heading: 'New York City Data source: ',
+      heading: 'New York City Data Source: ',
       quote: '',
       url:
         'https://github.com/nychealth/coronavirus-data/blob/master/totals/data-by-modzcta.csv',
