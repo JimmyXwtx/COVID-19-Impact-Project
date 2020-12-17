@@ -62,7 +62,7 @@ function TrendTab(props) {
   // const titles = ['1. ' + title1, '2. ' + title2];
   const titles = [title1, title2];
   const propDiff = sumFocus === 'daily';
-  const CountryTabBackNav = props.CountryTabBackNav;
+  // const CountryTabBackNav = props.CountryTabBackNav;
 
   console.log('TrendTab items', items);
   console.log('TrendTab options', options);
@@ -148,7 +148,7 @@ function TrendTab(props) {
           />
         </Grid.Row>
 
-        <CountryTabBackNav />
+        {/* <CountryTabBackNav /> */}
       </Grid>
     </StyledDiv>
   );
