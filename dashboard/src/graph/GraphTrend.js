@@ -19,14 +19,14 @@ function GraphTrend(props) {
 
   let min = Number.MAX_SAFE_INTEGER;
   let max = Number.MIN_SAFE_INTEGER;
-  let maxIndex = 0;
+  // let maxIndex = 0;
   for (let index = 0; index < data1.length; index++) {
     const item1 = data1[index];
     const item2 = data2[index];
     min = Math.min(min, item1.y, item2.y);
-    if (max < item1.y) {
-      maxIndex = index;
-    }
+    // if (max < item1.y) {
+    //   maxIndex = index;
+    // }
     max = Math.max(max, item1.y, item2.y);
   }
   const ydomain = [min, max];
