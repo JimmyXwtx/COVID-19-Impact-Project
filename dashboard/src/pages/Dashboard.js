@@ -120,6 +120,8 @@ const Dashboard = () => {
 
       // Odd: react complains of missing dependency if process_regions
       // is defined outside useEffect
+      // c_regions are regions in sorted order
+      // countryList is options list for Select ui
       const process_regions = (regions) => {
         if (!regions) regions = [];
         metaDict = {};
@@ -147,6 +149,7 @@ const Dashboard = () => {
         c_sub_title: meta.c_sub_title,
         c_sub_captions: meta.c_sub_captions,
         c_dates: meta.c_dates,
+        c_regions: meta.c_regions,
       });
     });
   }, [countrySelected, data_prefix]);
@@ -827,14 +830,16 @@ const Dashboard = () => {
   }
 
   function TrendTabParams() {
+    // Use the top two entries for Trend comparison
+    const selected_items = sortedItems.slice(0, 2);
     return (
       <TrendTab
-        items={sortedItems}
+        all_items={metac.c_regions}
+        selected_items={selected_items}
         data_prefix={data_prefix}
         c_dates={metac.c_dates}
         propFocus={propFocus}
-        propDiff={sumFocus !== 'totals'}
-        CountryTabBackNav={CountryTabBackNav}
+        sumFocus={sumFocus}
       />
     );
   }

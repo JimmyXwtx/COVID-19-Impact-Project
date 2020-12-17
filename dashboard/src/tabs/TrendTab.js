@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Grid, Select } from 'semantic-ui-react';
 import styled from 'styled-components';
 import GraphTrend from '../graph/GraphTrend';
-import useLocalStorage from '../hooks/useLocalStorage';
+// import useLocalStorage from '../hooks/useLocalStorage';
 import fetchData from '../js/fetchData';
 
 function RegionSelect(props) {
@@ -40,14 +40,34 @@ function dataForGraph(data, propFocus, propDiff) {
 }
 
 function TrendTab(props) {
-  const [compareIndex1, setCompareIndex1] = useLocalStorage('co-iregion-1', 0);
-  const [compareIndex2, setCompareIndex2] = useLocalStorage('co-iregion-2', 1);
+  const [compareIndex1, setCompareIndex1] = useState(0);
+  const [compareIndex2, setCompareIndex2] = useState(1);
   const [dateItems1, setDateItems1] = useState([]);
   const [dateItems2, setDateItems2] = useState([]);
-  const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');
-  const [sumFocus, setSumFocus] = useLocalStorage('co-sumFocus', 'totals');
+  // const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');
+  // const [sumFocus, setSumFocus] = useLocalStorage('co-sumFocus', 'totals');
+  const [propFocus, setPropFocus] = useState('Deaths');
+  const [sumFocus, setSumFocus] = useState('totals');
 
-  const items = props.items;
+  useEffect(() => {
+    setPropFocus(props.propFocus);
+    setSumFocus(props.sumFocus);
+    const title1 = props.selected_items[0].c_ref;
+    const title2 = props.selected_items[1].c_ref;
+    props.all_items.forEach((item, index) => {
+      if (item.c_ref === title1 && compareIndex1 !== index)
+        setCompareIndex1(index);
+      if (item.c_ref === title2 && compareIndex2 !== index)
+        setCompareIndex2(index);
+    });
+  }, []);
+
+  console.log('TrendTab propFocus', propFocus);
+  console.log('TrendTab sumFocus', sumFocus);
+
+  const data_prefix = props.data_prefix;
+  const c_dates = props.c_dates;
+  const items = props.all_items;
   const options = items.map((item, index) => {
     return { key: item.c_ref, value: index, text: item.c_ref };
   });
@@ -55,18 +75,12 @@ function TrendTab(props) {
   const value2 = compareIndex2;
   const title1 = (items[value1] || {}).c_ref;
   const title2 = (items[value2] || {}).c_ref;
-  const data_prefix = props.data_prefix;
-  const c_dates = props.c_dates;
-  // const propFocus = props.propFocus;
-  // const propDiff = props.propDiff;
-  // const titles = ['1. ' + title1, '2. ' + title2];
   const titles = [title1, title2];
   const propDiff = sumFocus === 'daily';
-  // const CountryTabBackNav = props.CountryTabBackNav;
 
-  console.log('TrendTab items', items);
-  console.log('TrendTab options', options);
-  console.log('TrendTab value1', value1);
+  // console.log('TrendTab items', items);
+  // console.log('TrendTab options', options);
+  // console.log('TrendTab value1', value1);
   console.log('TrendTab title1', title1);
 
   useEffect(() => {
