@@ -69,7 +69,6 @@ function GraphTrend(props) {
             Add the dependent axis for the first data set.
             Note that all components plotted against this axis will have the same y domain
           */}
-        /> */}
         <VictoryAxis
           dependentAxis
           domain={ydomain}
