@@ -9,6 +9,8 @@ test=
 verbose=
 # verbose=v
 
+start_time=`date +%s`
+
 host=epdev@epvisual.com
 siteroot=/var/www/sites/epvisual.com
 homepage=COVID-19-Impact/Dashboard/a1
@@ -35,4 +37,7 @@ ssh $host ls -la $rpath/index.html
 grep \"version\" ../dashboard/package.json
 
 echo
+echo Lapse $(expr `date +%s` - $start_time) 
 echo "open https://epvisual.com/${homepage}"
+
+
