@@ -569,11 +569,11 @@ const Dashboard = () => {
       return key;
     }
     // console.log('CountryTabBackNav countrySelected', countrySelected);
-    let nindex = 0;
+    // let nindex = 0;
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
       let item;
       // console.log('CountryTabBackNav nindex', nindex, 'ncountry', ncountry);
-      nindex++;
+      // nindex++;
       if (ncountry.parent) {
         let c_ref = ncountry.parent.c_ref;
         if (!c_ref) {
@@ -772,62 +772,62 @@ const Dashboard = () => {
     );
   }
 
-  function GraphNavs() {
-    return (
-      <Grid>
-        <Grid.Row style={{ padding: '0 16px' }}>
-          <DateSlider
-            dateIndex={dateIndex}
-            dateListLength={(metac.dateList || []).length}
-            updateSlider={updateSlider}
-          />
-        </Grid.Row>
-        <Grid.Row>
-          <StyledControlRow>
-            <Button.Group>
-              <Button size="mini" onClick={selectCasesAction} active={cactive}>
-                Cases
-              </Button>
-              <Button size="mini" onClick={selectDeathsAction} active={dactive}>
-                Deaths
-              </Button>
-            </Button.Group>
-            <Button.Group>
-              <Button size="mini" onClick={selectTotals} active={to_active}>
-                to date:
-              </Button>
-              <Button size="mini" onClick={selectDaily} active={da_active}>
-                on day:
-              </Button>
-            </Button.Group>
-            <div>
-              <DateFocusSelect />
-            </div>
-            <Button.Group>
-              <span>
-                <Button size="mini" onClick={previousAction}>
-                  <Icon name="step backward" />
-                </Button>
-                {/* <ButtonPlayPause /> */}
-                <Button size="mini" onClick={playAction}>
-                  <Icon name="play" />
-                </Button>
-                <Button size="mini" onClick={nextAction}>
-                  <Icon name="step forward" />
-                </Button>
-              </span>
-            </Button.Group>
-            <Button basic size="mini" onClick={findFirstDate}>
-              First {uiprop}
-            </Button>
-            <Button basic size="mini" onClick={findLastestDate}>
-              Latest
-            </Button>
-          </StyledControlRow>
-        </Grid.Row>
-      </Grid>
-    );
-  }
+  // function GraphNavs() {
+  //   return (
+  //     <Grid>
+  //       <Grid.Row style={{ padding: '0 16px' }}>
+  //         <DateSlider
+  //           dateIndex={dateIndex}
+  //           dateListLength={(metac.dateList || []).length}
+  //           updateSlider={updateSlider}
+  //         />
+  //       </Grid.Row>
+  //       <Grid.Row>
+  //         <StyledControlRow>
+  //           <Button.Group>
+  //             <Button size="mini" onClick={selectCasesAction} active={cactive}>
+  //               Cases
+  //             </Button>
+  //             <Button size="mini" onClick={selectDeathsAction} active={dactive}>
+  //               Deaths
+  //             </Button>
+  //           </Button.Group>
+  //           <Button.Group>
+  //             <Button size="mini" onClick={selectTotals} active={to_active}>
+  //               to date:
+  //             </Button>
+  //             <Button size="mini" onClick={selectDaily} active={da_active}>
+  //               on day:
+  //             </Button>
+  //           </Button.Group>
+  //           <div>
+  //             <DateFocusSelect />
+  //           </div>
+  //           <Button.Group>
+  //             <span>
+  //               <Button size="mini" onClick={previousAction}>
+  //                 <Icon name="step backward" />
+  //               </Button>
+  //               {/* <ButtonPlayPause /> */}
+  //               <Button size="mini" onClick={playAction}>
+  //                 <Icon name="play" />
+  //               </Button>
+  //               <Button size="mini" onClick={nextAction}>
+  //                 <Icon name="step forward" />
+  //               </Button>
+  //             </span>
+  //           </Button.Group>
+  //           <Button basic size="mini" onClick={findFirstDate}>
+  //             First {uiprop}
+  //           </Button>
+  //           <Button basic size="mini" onClick={findLastestDate}>
+  //             Latest
+  //           </Button>
+  //         </StyledControlRow>
+  //       </Grid.Row>
+  //     </Grid>
+  //   );
+  // }
 
   function TrendTabParams() {
     // Use the top two entries for Trend comparison
@@ -858,85 +858,85 @@ const Dashboard = () => {
   //   }
   // }
 
-  function UpperView() {
-    // if (bottomTab !== 'compare') {
-    return (
-      <Container style={{ marginTop: '1rem' }}>
-        <Loader active={loaderActive} inline></Loader>
-        <HeadStats />
-        <GraphPieBarStub />
-        {/* <GraphNavs /> */}
-        <Grid>
-          <Grid.Row style={{ padding: '0 16px' }}>
-            <DateSlider
-              dateIndex={dateIndex}
-              dateListLength={(metac.dateList || []).length}
-              updateSlider={updateSlider}
-            />
-          </Grid.Row>
-          <Grid.Row>
-            <StyledControlRow>
-              <Button.Group>
-                <Button
-                  size="mini"
-                  onClick={selectCasesAction}
-                  active={cactive}
-                >
-                  Cases
-                </Button>
-                <Button
-                  size="mini"
-                  onClick={selectDeathsAction}
-                  active={dactive}
-                >
-                  Deaths
-                </Button>
-              </Button.Group>
-              <Button.Group>
-                <Button size="mini" onClick={selectTotals} active={to_active}>
-                  to date:
-                </Button>
-                <Button size="mini" onClick={selectDaily} active={da_active}>
-                  on day:
-                </Button>
-              </Button.Group>
-              <div>
-                <DateFocusSelect />
-              </div>
-              <Button.Group>
-                <span>
-                  <Button size="mini" onClick={previousAction}>
-                    <Icon name="step backward" />
-                  </Button>
-                  {/* <ButtonPlayPause /> */}
-                  <Button size="mini" onClick={playAction}>
-                    <Icon name="play" />
-                  </Button>
-                  <Button size="mini" onClick={nextAction}>
-                    <Icon name="step forward" />
-                  </Button>
-                </span>
-              </Button.Group>
-              <Button basic size="mini" onClick={findFirstDate}>
-                First {uiprop}
-              </Button>
-              <Button basic size="mini" onClick={findLastestDate}>
-                Latest
-              </Button>
-            </StyledControlRow>
-          </Grid.Row>
-        </Grid>
-      </Container>
-    );
-    // } else {
-    //   return (
-    // <Container style={{ marginTop: '1rem' }}>
-    //   <Loader active={loaderActive} inline></Loader>
-    //   <TrendTabParams />;
-    // </Container>
-    //   );
-    // }
-  }
+  // function UpperView() {
+  //   if (bottomTab !== 'compare') {
+  //   return (
+  //     <Container style={{ marginTop: '1rem' }}>
+  //       <Loader active={loaderActive} inline></Loader>
+  //       <HeadStats />
+  //       <GraphPieBarStub />
+  //       {/* <GraphNavs /> */}
+  //       <Grid>
+  //         <Grid.Row style={{ padding: '0 16px' }}>
+  //           <DateSlider
+  //             dateIndex={dateIndex}
+  //             dateListLength={(metac.dateList || []).length}
+  //             updateSlider={updateSlider}
+  //           />
+  //         </Grid.Row>
+  //         <Grid.Row>
+  //           <StyledControlRow>
+  //             <Button.Group>
+  //               <Button
+  //                 size="mini"
+  //                 onClick={selectCasesAction}
+  //                 active={cactive}
+  //               >
+  //                 Cases
+  //               </Button>
+  //               <Button
+  //                 size="mini"
+  //                 onClick={selectDeathsAction}
+  //                 active={dactive}
+  //               >
+  //                 Deaths
+  //               </Button>
+  //             </Button.Group>
+  //             <Button.Group>
+  //               <Button size="mini" onClick={selectTotals} active={to_active}>
+  //                 to date:
+  //               </Button>
+  //               <Button size="mini" onClick={selectDaily} active={da_active}>
+  //                 on day:
+  //               </Button>
+  //             </Button.Group>
+  //             <div>
+  //               <DateFocusSelect />
+  //             </div>
+  //             <Button.Group>
+  //               <span>
+  //                 <Button size="mini" onClick={previousAction}>
+  //                   <Icon name="step backward" />
+  //                 </Button>
+  //                 {/* <ButtonPlayPause /> */}
+  //                 <Button size="mini" onClick={playAction}>
+  //                   <Icon name="play" />
+  //                 </Button>
+  //                 <Button size="mini" onClick={nextAction}>
+  //                   <Icon name="step forward" />
+  //                 </Button>
+  //               </span>
+  //             </Button.Group>
+  //             <Button basic size="mini" onClick={findFirstDate}>
+  //               First {uiprop}
+  //             </Button>
+  //             <Button basic size="mini" onClick={findLastestDate}>
+  //               Latest
+  //             </Button>
+  //           </StyledControlRow>
+  //         </Grid.Row>
+  //       </Grid>
+  //     </Container>
+  //   );
+  //   } else {
+  //     return (
+  //   <Container style={{ marginTop: '1rem' }}>
+  //     <Loader active={loaderActive} inline></Loader>
+  //     <TrendTabParams />;
+  //   </Container>
+  //     );
+  //   }
+  // }
 
   return (
     <>
