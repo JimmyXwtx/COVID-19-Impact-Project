@@ -13,8 +13,8 @@ function RegionSelect(props) {
       selection
       value={props.value}
       onChange={(param, data) => {
-        console.log('RegionSelect param', param);
-        console.log('RegionSelect data', data);
+        // console.log('RegionSelect param', param);
+        // console.log('RegionSelect data', data);
         // setCountryFocus(data.value);
         props.setValue(data.value);
       }}
@@ -62,8 +62,8 @@ function TrendTab(props) {
     });
   }, []);
 
-  console.log('TrendTab propFocus', propFocus);
-  console.log('TrendTab sumFocus', sumFocus);
+  // console.log('TrendTab propFocus', propFocus);
+  // console.log('TrendTab sumFocus', sumFocus);
 
   const data_prefix = props.data_prefix;
   const c_dates = props.c_dates;
@@ -81,25 +81,25 @@ function TrendTab(props) {
   // console.log('TrendTab items', items);
   // console.log('TrendTab options', options);
   // console.log('TrendTab value1', value1);
-  console.log('TrendTab title1', title1);
+  // console.log('TrendTab title1', title1);
 
   useEffect(() => {
-    console.log('TrendTab useEffect title1', title1);
+    // console.log('TrendTab useEffect title1', title1);
     if (!title1) return;
     let cname = title1.replace(/ /g, '_').replace(/,/g, '');
     fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
-      console.log('TrendTab data1', data);
+      // console.log('TrendTab data1', data);
       if (!data) data = [];
       setDateItems1(dataForGraph(data, propFocus, propDiff));
     });
   }, [data_prefix, title1, propFocus, propDiff]);
 
   useEffect(() => {
-    console.log('TrendTab useEffect title2', title2);
+    // console.log('TrendTab useEffect title2', title2);
     if (!title2) return;
     let cname = title2.replace(/ /g, '_').replace(/,/g, '');
     fetchData(data_prefix + 'c_series/' + cname + '.json', (data) => {
-      console.log('TrendTab data2', data);
+      // console.log('TrendTab data2', data);
       if (!data) data = [];
       setDateItems2(dataForGraph(data, propFocus, propDiff));
     });
