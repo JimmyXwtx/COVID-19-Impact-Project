@@ -2,19 +2,52 @@
   {
     "c_ref": "Adams",
     "totals": {
-      "Cases": 690,
-      "Deaths": 8
+      "Cases": 701,
+      "Deaths": 10
     },
     "daily": {
-      "Cases": 19,
+      "Cases": 12,
       "Deaths": 0
     }
   },
   {
     "c_ref": "Asotin",
     "totals": {
-      "Cases": 57,
+      "Cases": 58,
       "Deaths": 2
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Benton",
+    "totals": {
+      "Cases": 4225,
+      "Deaths": 122
+    },
+    "daily": {
+      "Cases": 5,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Chelan",
+    "totals": {
+      "Cases": 1847,
+      "Deaths": 14
+    },
+    "daily": {
+      "Cases": 13,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Clallam",
+    "totals": {
+      "Cases": 211,
+      "Deaths": 1
     },
     "daily": {
       "Cases": 0,
@@ -22,53 +55,20 @@
     }
   },
   {
-    "c_ref": "Benton",
-    "totals": {
-      "Cases": 4210,
-      "Deaths": 125
-    },
-    "daily": {
-      "Cases": 10,
-      "Deaths": 0
-    }
-  },
-  {
-    "c_ref": "Chelan",
-    "totals": {
-      "Cases": 1743,
-      "Deaths": 12
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
-    "c_ref": "Clallam",
-    "totals": {
-      "Cases": 217,
-      "Deaths": 1
-    },
-    "daily": {
-      "Cases": 1,
-      "Deaths": 0
-    }
-  },
-  {
     "c_ref": "Clark",
     "totals": {
-      "Cases": 2283,
-      "Deaths": 57
+      "Cases": 2311,
+      "Deaths": 64
     },
     "daily": {
-      "Cases": 17,
-      "Deaths": 0
+      "Cases": 7,
+      "Deaths": 1
     }
   },
   {
     "c_ref": "Columbia",
     "totals": {
-      "Cases": 15,
+      "Cases": 14,
       "Deaths": 1
     },
     "daily": {
@@ -79,22 +79,22 @@
   {
     "c_ref": "Cowlitz",
     "totals": {
-      "Cases": 555,
+      "Cases": 559,
       "Deaths": 6
     },
     "daily": {
-      "Cases": 3,
+      "Cases": 0,
       "Deaths": 0
     }
   },
   {
     "c_ref": "Douglas",
     "totals": {
-      "Cases": 1158,
+      "Cases": 1208,
       "Deaths": 8
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 5,
       "Deaths": 0
     }
   },
@@ -105,18 +105,18 @@
       "Deaths": 0
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 0,
       "Deaths": 0
     }
   },
   {
     "c_ref": "Franklin",
     "totals": {
-      "Cases": 4023,
-      "Deaths": 58
+      "Cases": 4070,
+      "Deaths": 57
     },
     "daily": {
-      "Cases": 16,
+      "Cases": 12,
       "Deaths": 0
     }
   },
@@ -134,22 +134,22 @@
   {
     "c_ref": "Grant",
     "totals": {
-      "Cases": 2422,
-      "Deaths": 17
+      "Cases": 2466,
+      "Deaths": 19
     },
     "daily": {
-      "Cases": 31,
+      "Cases": 30,
       "Deaths": 0
     }
   },
   {
     "c_ref": "Grays Harbor",
     "totals": {
-      "Cases": 277,
-      "Deaths": 6
+      "Cases": 306,
+      "Deaths": 7
     },
     "daily": {
-      "Cases": 9,
+      "Cases": 11,
       "Deaths": 0
     }
   },
@@ -157,10 +157,10 @@
     "c_ref": "Island",
     "totals": {
       "Cases": 274,
-      "Deaths": 11
+      "Deaths": 10
     },
     "daily": {
-      "Cases": 1,
+      "Cases": 0,
       "Deaths": 0
     }
   },
@@ -178,29 +178,29 @@
   {
     "c_ref": "King",
     "totals": {
-      "Cases": 20166,
-      "Deaths": 736
+      "Cases": 20388,
+      "Deaths": 734
     },
     "daily": {
-      "Cases": 144,
-      "Deaths": 1
+      "Cases": 79,
+      "Deaths": 3
     }
   },
   {
     "c_ref": "Kitsap",
     "totals": {
-      "Cases": 1040,
+      "Cases": 1041,
       "Deaths": 11
     },
     "daily": {
-      "Cases": 9,
+      "Cases": 6,
       "Deaths": 0
     }
   },
   {
     "c_ref": "Kittitas",
     "totals": {
-      "Cases": 452,
+      "Cases": 458,
       "Deaths": 21
     },
     "daily": {
@@ -211,30 +211,8 @@
   {
     "c_ref": "Klickitat",
     "totals": {
-      "Cases": 178,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": -1,
-      "Deaths": 0
-    }
-  },
-  {
-    "c_ref": "Lewis",
-    "totals": {
-      "Cases": 362,
-      "Deaths": 4
-    },
-    "daily": {
-      "Cases": 8,
-      "Deaths": 0
-    }
-  },
-  {
-    "c_ref": "Lincoln",
-    "totals": {
-      "Cases": 32,
-      "Deaths": 1
+      "Cases": 198,
+      "Deaths": 2
     },
     "daily": {
       "Cases": 0,
@@ -242,9 +220,20 @@
     }
   },
   {
-    "c_ref": "Mason",
+    "c_ref": "Lewis",
     "totals": {
-      "Cases": 334,
+      "Cases": 380,
+      "Deaths": 4
+    },
+    "daily": {
+      "Cases": 9,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Lincoln",
+    "totals": {
+      "Cases": 33,
       "Deaths": 1
     },
     "daily": {
@@ -253,10 +242,21 @@
     }
   },
   {
+    "c_ref": "Mason",
+    "totals": {
+      "Cases": 339,
+      "Deaths": 2
+    },
+    "daily": {
+      "Cases": 1,
+      "Deaths": 1
+    }
+  },
+  {
     "c_ref": "Okanogan",
     "totals": {
-      "Cases": 1003,
-      "Deaths": 7
+      "Cases": 1004,
+      "Deaths": 9
     },
     "daily": {
       "Cases": 0,
@@ -266,19 +266,8 @@
   {
     "c_ref": "Pacific",
     "totals": {
-      "Cases": 66,
-      "Deaths": 3
-    },
-    "daily": {
-      "Cases": 2,
-      "Deaths": 0
-    }
-  },
-  {
-    "c_ref": "Pend Oreille",
-    "totals": {
-      "Cases": 56,
-      "Deaths": 0
+      "Cases": 68,
+      "Deaths": 2
     },
     "daily": {
       "Cases": 1,
@@ -286,14 +275,25 @@
     }
   },
   {
-    "c_ref": "Pierce",
+    "c_ref": "Pend Oreille",
     "totals": {
-      "Cases": 7039,
-      "Deaths": 177
+      "Cases": 58,
+      "Deaths": 0
     },
     "daily": {
-      "Cases": 49,
+      "Cases": 0,
       "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Pierce",
+    "totals": {
+      "Cases": 7114,
+      "Deaths": 175
+    },
+    "daily": {
+      "Cases": 41,
+      "Deaths": 3
     }
   },
   {
@@ -310,52 +310,19 @@
   {
     "c_ref": "Skagit",
     "totals": {
-      "Cases": 1044,
+      "Cases": 1076,
       "Deaths": 22
     },
     "daily": {
-      "Cases": 2,
+      "Cases": 5,
       "Deaths": 0
     }
   },
   {
     "c_ref": "Skamania",
     "totals": {
-      "Cases": 60,
+      "Cases": 61,
       "Deaths": 1
-    },
-    "daily": {
-      "Cases": -1,
-      "Deaths": 0
-    }
-  },
-  {
-    "c_ref": "Snohomish",
-    "totals": {
-      "Cases": 6343,
-      "Deaths": 207
-    },
-    "daily": {
-      "Cases": 33,
-      "Deaths": 0
-    }
-  },
-  {
-    "c_ref": "Spokane",
-    "totals": {
-      "Cases": 5509,
-      "Deaths": 138
-    },
-    "daily": {
-      "Cases": 40,
-      "Deaths": 0
-    }
-  },
-  {
-    "c_ref": "Stevens",
-    "totals": {
-      "Cases": 128,
-      "Deaths": 2
     },
     "daily": {
       "Cases": 0,
@@ -363,25 +330,58 @@
     }
   },
   {
-    "c_ref": "Thurston",
+    "c_ref": "Snohomish",
     "totals": {
-      "Cases": 955,
-      "Deaths": 16
+      "Cases": 6460,
+      "Deaths": 200
     },
     "daily": {
-      "Cases": 5,
+      "Cases": 26,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Spokane",
+    "totals": {
+      "Cases": 5543,
+      "Deaths": 135
+    },
+    "daily": {
+      "Cases": 25,
+      "Deaths": 2
+    }
+  },
+  {
+    "c_ref": "Stevens",
+    "totals": {
+      "Cases": 131,
+      "Deaths": 1
+    },
+    "daily": {
+      "Cases": 2,
+      "Deaths": 0
+    }
+  },
+  {
+    "c_ref": "Thurston",
+    "totals": {
+      "Cases": 993,
+      "Deaths": 15
+    },
+    "daily": {
+      "Cases": 9,
       "Deaths": 0
     }
   },
   {
     "c_ref": "Unassigned",
     "totals": {
-      "Cases": 295,
-      "Deaths": 4
+      "Cases": 253,
+      "Deaths": 1
     },
     "daily": {
-      "Cases": 5,
-      "Deaths": -1
+      "Cases": 6,
+      "Deaths": 0
     }
   },
   {
@@ -398,19 +398,8 @@
   {
     "c_ref": "Walla Walla",
     "totals": {
-      "Cases": 786,
-      "Deaths": 5
-    },
-    "daily": {
-      "Cases": 5,
-      "Deaths": 0
-    }
-  },
-  {
-    "c_ref": "Whatcom",
-    "totals": {
-      "Cases": 1133,
-      "Deaths": 39
+      "Cases": 795,
+      "Deaths": 2
     },
     "daily": {
       "Cases": 8,
@@ -418,24 +407,35 @@
     }
   },
   {
+    "c_ref": "Whatcom",
+    "totals": {
+      "Cases": 1143,
+      "Deaths": 34
+    },
+    "daily": {
+      "Cases": 7,
+      "Deaths": 0
+    }
+  },
+  {
     "c_ref": "Whitman",
     "totals": {
-      "Cases": 760,
+      "Cases": 823,
       "Deaths": 0
     },
     "daily": {
-      "Cases": 54,
+      "Cases": 55,
       "Deaths": 0
     }
   },
   {
     "c_ref": "Yakima",
     "totals": {
-      "Cases": 11034,
-      "Deaths": 243
+      "Cases": 11233,
+      "Deaths": 249
     },
     "daily": {
-      "Cases": 27,
+      "Cases": 43,
       "Deaths": 0
     }
   }
