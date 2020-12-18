@@ -17,36 +17,22 @@ import DateSlider from '../components/DateSlider';
 import RegionNavTable from '../components/RegionNavTable';
 import GraphPieBar from '../graph/GraphPieBar';
 import extract_slices from '../graph/extract_slices';
-import AboutTab from '../graph_tabs/AboutTab';
-import FocusTab from '../graph_tabs/FocusTab';
-import ReferencesTab from '../graph_tabs/ReferencesTab';
-import SoftBodyTab from '../graph_tabs/SoftBodyTab';
 import useInterval from '../hooks/useInterval';
 import useLocalStorage from '../hooks/useLocalStorage';
 import useWindowSize from '../hooks/useWindowSize';
 import fetchData from '../js/fetchData';
+import AboutTab from '../tabs/AboutTab';
+import FocusTab from '../tabs/FocusTab';
+// import ReferencesTab from '../tabs/ReferencesTab';
+import SoftBodyTab from '../tabs/SoftBodyTab';
+import TrendTab from '../tabs/TrendTab';
 
 const nslice = 8;
 const top_label = 'World';
 const playDelayInit = 0.1;
 const playEndDelayInit = 3;
 
-const rootcArr = [
-  {
-    path: './c_data/world/',
-    data_prefix_maps: {
-      'c_subs/United_States/c_subs/New_York/': {
-        rootcIndex: 1,
-        btn_label: 'New York City',
-      },
-    },
-  },
-  {
-    path: './c_data/nyc/',
-    data_prefix_maps: {},
-    popButton: '&lt; New York State',
-  },
-];
+const rootcPaths = ['./c_data/world/', './c_data/nyc/'];
 
 ReactGA.initialize('UA-168322336-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -57,9 +43,7 @@ function ui_key(uname) {
 
 const Dashboard = () => {
   const [rootcIndex, setRootcIndex] = useState(0);
-  const rootcSelected = rootcArr[rootcIndex];
-  // const [rootcStack, setRootcStack] = useState([]); // {rootcIndex, countrySelected}
-  const rootcPath = rootcSelected.path;
+  const rootcPath = rootcPaths[rootcIndex];
 
   const [loaderActive, setLoaderActive] = useState(true);
   const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');
@@ -136,6 +120,8 @@ const Dashboard = () => {
 
       // Odd: react complains of missing dependency if process_regions
       // is defined outside useEffect
+      // c_regions are regions in sorted order
+      // countryList is options list for Select ui
       const process_regions = (regions) => {
         if (!regions) regions = [];
         metaDict = {};
@@ -162,6 +148,8 @@ const Dashboard = () => {
         c_title: meta.c_title,
         c_sub_title: meta.c_sub_title,
         c_sub_captions: meta.c_sub_captions,
+        c_dates: meta.c_dates,
+        c_regions: meta.c_regions,
       });
     });
   }, [countrySelected, data_prefix]);
@@ -441,6 +429,8 @@ const Dashboard = () => {
         selection
         value={countryFocus}
         onChange={(param, data) => {
+          console.log('CountrySelect param', param);
+          console.log('CountrySelect data', data);
           setCountryFocus(data.value);
           let nindex = focusCountries.indexOf(data.value);
           if (nindex >= 0) {
@@ -578,12 +568,12 @@ const Dashboard = () => {
       const key = 'ctbv-' + items.length;
       return key;
     }
-    console.log('CountryTabBackNav countrySelected', countrySelected);
-    let nindex = 0;
+    // console.log('CountryTabBackNav countrySelected', countrySelected);
+    // let nindex = 0;
     for (let ncountry = countrySelected; ncountry; ncountry = ncountry.parent) {
       let item;
-      console.log('CountryTabBackNav nindex', nindex, 'ncountry', ncountry);
-      nindex++;
+      // console.log('CountryTabBackNav nindex', nindex, 'ncountry', ncountry);
+      // nindex++;
       if (ncountry.parent) {
         let c_ref = ncountry.parent.c_ref;
         if (!c_ref) {
@@ -739,74 +729,9 @@ const Dashboard = () => {
     return null;
   };
 
-  return (
-    <>
-      <Container style={{ marginTop: '1rem' }}>
-        <Loader active={loaderActive} inline></Loader>
-        <HeadStats />
-        <GraphPieBarStub />
-        <Grid>
-          <Grid.Row style={{ padding: '0 16px' }}>
-            <DateSlider
-              dateIndex={dateIndex}
-              dateListLength={(metac.dateList || []).length}
-              updateSlider={updateSlider}
-            />
-          </Grid.Row>
-          <Grid.Row>
-            <StyledControlRow>
-              <Button.Group>
-                <Button
-                  size="mini"
-                  onClick={selectCasesAction}
-                  active={cactive}
-                >
-                  Cases
-                </Button>
-                <Button
-                  size="mini"
-                  onClick={selectDeathsAction}
-                  active={dactive}
-                >
-                  Deaths
-                </Button>
-              </Button.Group>
-              <Button.Group>
-                <Button size="mini" onClick={selectTotals} active={to_active}>
-                  to date:
-                </Button>
-                <Button size="mini" onClick={selectDaily} active={da_active}>
-                  on day:
-                </Button>
-              </Button.Group>
-              <div>
-                <DateFocusSelect />
-              </div>
-              <Button.Group>
-                <span>
-                  <Button size="mini" onClick={previousAction}>
-                    <Icon name="step backward" />
-                  </Button>
-                  {/* <ButtonPlayPause /> */}
-                  <Button size="mini" onClick={playAction}>
-                    <Icon name="play" />
-                  </Button>
-                  <Button size="mini" onClick={nextAction}>
-                    <Icon name="step forward" />
-                  </Button>
-                </span>
-              </Button.Group>
-              <Button basic size="mini" onClick={findFirstDate}>
-                First {uiprop}
-              </Button>
-              <Button basic size="mini" onClick={findLastestDate}>
-                Latest
-              </Button>
-            </StyledControlRow>
-          </Grid.Row>
-        </Grid>
-      </Container>
-      <StyledDetailsContainer>
+  function LowerMenuTabs() {
+    return (
+      <>
         <Menu tabular>
           <Menu.Item
             name="places"
@@ -815,8 +740,9 @@ const Dashboard = () => {
             onClick={handleBottomTab}
           />
           <Menu.Item
-            name="purpose"
-            active={bottomTab === 'purpose'}
+            name="compare"
+            active={bottomTab === 'compare'}
+            content="Trends"
             onClick={handleBottomTab}
           />
           <Menu.Item
@@ -831,16 +757,274 @@ const Dashboard = () => {
             onClick={handleBottomTab}
           />
           <Menu.Item
+            name="purpose"
+            active={bottomTab === 'purpose'}
+            content="About"
+            onClick={handleBottomTab}
+          />
+          {/* <Menu.Item
             name="references"
             active={bottomTab === 'references'}
             onClick={handleBottomTab}
-          />
+          /> */}
         </Menu>
+      </>
+    );
+  }
+
+  // function GraphNavs() {
+  //   return (
+  //     <Grid>
+  //       <Grid.Row style={{ padding: '0 16px' }}>
+  //         <DateSlider
+  //           dateIndex={dateIndex}
+  //           dateListLength={(metac.dateList || []).length}
+  //           updateSlider={updateSlider}
+  //         />
+  //       </Grid.Row>
+  //       <Grid.Row>
+  //         <StyledControlRow>
+  //           <Button.Group>
+  //             <Button size="mini" onClick={selectCasesAction} active={cactive}>
+  //               Cases
+  //             </Button>
+  //             <Button size="mini" onClick={selectDeathsAction} active={dactive}>
+  //               Deaths
+  //             </Button>
+  //           </Button.Group>
+  //           <Button.Group>
+  //             <Button size="mini" onClick={selectTotals} active={to_active}>
+  //               to date:
+  //             </Button>
+  //             <Button size="mini" onClick={selectDaily} active={da_active}>
+  //               on day:
+  //             </Button>
+  //           </Button.Group>
+  //           <div>
+  //             <DateFocusSelect />
+  //           </div>
+  //           <Button.Group>
+  //             <span>
+  //               <Button size="mini" onClick={previousAction}>
+  //                 <Icon name="step backward" />
+  //               </Button>
+  //               {/* <ButtonPlayPause /> */}
+  //               <Button size="mini" onClick={playAction}>
+  //                 <Icon name="play" />
+  //               </Button>
+  //               <Button size="mini" onClick={nextAction}>
+  //                 <Icon name="step forward" />
+  //               </Button>
+  //             </span>
+  //           </Button.Group>
+  //           <Button basic size="mini" onClick={findFirstDate}>
+  //             First {uiprop}
+  //           </Button>
+  //           <Button basic size="mini" onClick={findLastestDate}>
+  //             Latest
+  //           </Button>
+  //         </StyledControlRow>
+  //       </Grid.Row>
+  //     </Grid>
+  //   );
+  // }
+
+  function TrendTabParams() {
+    // Use the top two entries for Trend comparison
+    const selected_items = sortedItems.slice(0, 2);
+    return (
+      <TrendTab
+        all_items={metac.c_regions}
+        selected_items={selected_items}
+        data_prefix={data_prefix}
+        c_dates={metac.c_dates}
+        propFocus={propFocus}
+        sumFocus={sumFocus}
+      />
+    );
+  }
+
+  // function UpperView() {
+  //   if (bottomTab !== 'compare') {
+  //     return (
+  //       <>
+  //         <HeadStats />
+  //         <GraphPieBarStub />
+  //         <GraphNavs />
+  //       </>
+  //     );
+  //   } else {
+  //     return <TrendTabParams />;
+  //   }
+  // }
+
+  // function UpperView() {
+  //   if (bottomTab !== 'compare') {
+  //   return (
+  //     <Container style={{ marginTop: '1rem' }}>
+  //       <Loader active={loaderActive} inline></Loader>
+  //       <HeadStats />
+  //       <GraphPieBarStub />
+  //       {/* <GraphNavs /> */}
+  //       <Grid>
+  //         <Grid.Row style={{ padding: '0 16px' }}>
+  //           <DateSlider
+  //             dateIndex={dateIndex}
+  //             dateListLength={(metac.dateList || []).length}
+  //             updateSlider={updateSlider}
+  //           />
+  //         </Grid.Row>
+  //         <Grid.Row>
+  //           <StyledControlRow>
+  //             <Button.Group>
+  //               <Button
+  //                 size="mini"
+  //                 onClick={selectCasesAction}
+  //                 active={cactive}
+  //               >
+  //                 Cases
+  //               </Button>
+  //               <Button
+  //                 size="mini"
+  //                 onClick={selectDeathsAction}
+  //                 active={dactive}
+  //               >
+  //                 Deaths
+  //               </Button>
+  //             </Button.Group>
+  //             <Button.Group>
+  //               <Button size="mini" onClick={selectTotals} active={to_active}>
+  //                 to date:
+  //               </Button>
+  //               <Button size="mini" onClick={selectDaily} active={da_active}>
+  //                 on day:
+  //               </Button>
+  //             </Button.Group>
+  //             <div>
+  //               <DateFocusSelect />
+  //             </div>
+  //             <Button.Group>
+  //               <span>
+  //                 <Button size="mini" onClick={previousAction}>
+  //                   <Icon name="step backward" />
+  //                 </Button>
+  //                 {/* <ButtonPlayPause /> */}
+  //                 <Button size="mini" onClick={playAction}>
+  //                   <Icon name="play" />
+  //                 </Button>
+  //                 <Button size="mini" onClick={nextAction}>
+  //                   <Icon name="step forward" />
+  //                 </Button>
+  //               </span>
+  //             </Button.Group>
+  //             <Button basic size="mini" onClick={findFirstDate}>
+  //               First {uiprop}
+  //             </Button>
+  //             <Button basic size="mini" onClick={findLastestDate}>
+  //               Latest
+  //             </Button>
+  //           </StyledControlRow>
+  //         </Grid.Row>
+  //       </Grid>
+  //     </Container>
+  //   );
+  //   } else {
+  //     return (
+  //   <Container style={{ marginTop: '1rem' }}>
+  //     <Loader active={loaderActive} inline></Loader>
+  //     <TrendTabParams />;
+  //   </Container>
+  //     );
+  //   }
+  // }
+
+  return (
+    <>
+      {/* <UpperView /> */}
+      {bottomTab !== 'compare' ? (
+        <Container style={{ marginTop: '1rem' }}>
+          <Loader active={loaderActive} inline></Loader>
+          <HeadStats />
+          <GraphPieBarStub />
+          {/* 
+          <GraphNavs /> 
+          2020-12-17 jht: DateSlider when nested in GraphNavs requires two clicks 
+          for playback to head jump.
+          */}
+          <Grid>
+            <Grid.Row style={{ padding: '0 16px' }}>
+              <DateSlider
+                dateIndex={dateIndex}
+                dateListLength={(metac.dateList || []).length}
+                updateSlider={updateSlider}
+              />
+            </Grid.Row>
+            <Grid.Row>
+              <StyledControlRow>
+                <Button.Group>
+                  <Button
+                    size="mini"
+                    onClick={selectCasesAction}
+                    active={cactive}
+                  >
+                    Cases
+                  </Button>
+                  <Button
+                    size="mini"
+                    onClick={selectDeathsAction}
+                    active={dactive}
+                  >
+                    Deaths
+                  </Button>
+                </Button.Group>
+                <Button.Group>
+                  <Button size="mini" onClick={selectTotals} active={to_active}>
+                    to date:
+                  </Button>
+                  <Button size="mini" onClick={selectDaily} active={da_active}>
+                    on day:
+                  </Button>
+                </Button.Group>
+                <div>
+                  <DateFocusSelect />
+                </div>
+                <Button.Group>
+                  <span>
+                    <Button size="mini" onClick={previousAction}>
+                      <Icon name="step backward" />
+                    </Button>
+                    {/* <ButtonPlayPause /> */}
+                    <Button size="mini" onClick={playAction}>
+                      <Icon name="play" />
+                    </Button>
+                    <Button size="mini" onClick={nextAction}>
+                      <Icon name="step forward" />
+                    </Button>
+                  </span>
+                </Button.Group>
+                <Button basic size="mini" onClick={findFirstDate}>
+                  First {uiprop}
+                </Button>
+                <Button basic size="mini" onClick={findLastestDate}>
+                  Latest
+                </Button>
+              </StyledControlRow>
+            </Grid.Row>
+          </Grid>
+        </Container>
+      ) : (
+        <Container style={{ marginTop: '1rem' }}>
+          <Loader active={loaderActive} inline></Loader>
+          <TrendTabParams />
+        </Container>
+      )}
+      <StyledDetailsContainer>
+        <LowerMenuTabs />
         {bottomTab === 'places' && <RegionTab />}
-        {bottomTab === 'purpose' && <AboutTab />}
+        {/* {bottomTab === 'compare' && <TrendTabParams />} */}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
-        {bottomTab === 'references' && <ReferencesTab />}
+        {bottomTab === 'purpose' && <AboutTab />}
       </StyledDetailsContainer>
     </>
   );

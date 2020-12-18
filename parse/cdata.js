@@ -52,6 +52,7 @@ function write_subs(sub_dict, file_date, path_root) {
     // report.log('write_subs file_date', file_date, 'sub', sub, 'cent', cent);
     const nsubs = fileNameForSub(sub);
     cent.nsubs = nsubs;
+    cent.nsubs_name = nsubs;
     let cpath = path.resolve(path_root, 'c_subs', nsubs);
     const some = write_daily(cent.subs, file_date, cpath);
     if (!some) {
@@ -87,6 +88,12 @@ function write_meta(
     report.log('write_meta missing days_path ' + days_path);
     return null;
   }
+  let c_series = {};
+  // c_series[c_ref] --> "United States": {
+  //      '2020-02-28': { "Cases": 1,  "Deaths": 0 }
+  //      ,,,
+  //      '2020-12-14': { "Cases": 9999,  "Deaths": 999 }
+  //
   let cdict = {};
   let prior_cdict;
   // file names are sorted to get prior stats
@@ -103,6 +110,12 @@ function write_meta(
       cdict = {};
       fitem.forEach(citem => {
         const c_ref = citem.c_ref;
+        let sitem = c_series[c_ref];
+        if (!sitem) {
+          sitem = {};
+          c_series[c_ref] = sitem;
+        }
+        sitem[date] = citem.totals;
         cdict[c_ref] = citem;
         let ent = summaryDict[c_ref];
         if (!ent) {
@@ -161,6 +174,10 @@ function write_meta(
 
   const c_sub_title = c_sub_titles.length > 0 ? c_sub_titles[0] : undefined;
 
+  // console.log('sub_dir', sub_dir);
+  // console.log('c_series', JSON.stringify(c_series, null, 2));
+  write_cseries_sub(sub_dir, sub_dict, c_dates, c_series);
+
   // console.log(
   //   'write_meta sub_dict',
   //   sub_dict,
@@ -182,6 +199,47 @@ function write_meta(
   });
 
   return meta;
+}
+
+// Write out stats as date series eg.
+// date stat entries are in same order as c_dates
+// c_data/world/c_subs/United_States/c_series.json
+//  [ {
+//    { "Cases": 1,  "Deaths": 0 },
+//    ...
+//    { "Cases": 9999,  "Deaths": 99 }
+//  } ]
+//
+function write_cseries_sub(sub_dir, sub_dict, c_dates, c_series) {
+  // console.log('write_cseries_sub sub_dir', sub_dir);
+  // const keys = Object.keys(c_series).sort();
+  // console.log('c_series keys', keys);
+  const cpath = path.resolve(sub_dir, 'c_series');
+  fs.ensureDirSync(cpath);
+  for (let sub_name in sub_dict) {
+    const cent = sub_dict[sub_name];
+    if (!cent.nsubs_name) {
+      console.log('write_cseries_sub skipping sub_name ' + sub_name);
+      continue;
+    }
+    let spath = path.resolve(cpath, cent.nsubs_name + '.json');
+    // fs.ensureDirSync(spath);
+    // spath = path.resolve(spath, 'c_series.json');
+    const dent = c_series[sub_name];
+    if (!dent) {
+      console.log('!!@ write_cseries_sub missing sub_name ' + sub_name);
+      continue;
+    }
+    const dates = [];
+    for (const adate of c_dates) {
+      let ent = dent[adate];
+      if (!ent) ent = {};
+      dates.push(ent);
+    }
+    // fs.writeJsonSync(spath, dates, { spaces: 2 });
+    // stats by dates no spaces
+    fs.writeJsonSync(spath, dates);
+  }
 }
 
 function write_meta_subs(

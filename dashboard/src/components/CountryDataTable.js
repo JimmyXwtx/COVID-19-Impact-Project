@@ -61,7 +61,8 @@ const Rows = (props) => {
     const slugKey = `tr-country-${index}`;
     const style = {
       backgroundColor:
-        iorder < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
+        iorder < nslices - 1 ? colorfor(iorder) : colorfor(nslices - 1),
+      // index < nslices - 1 ? colorfor(index) : colorfor(nslices - 1),
     };
     return (
       <tr key={slugKey}>
