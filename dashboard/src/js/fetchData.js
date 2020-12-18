@@ -4,10 +4,10 @@ let url_prefix = window.location.href;
 if (process.env.REACT_APP_C19_C_DATA) {
   url_prefix = process.env.REACT_APP_C19_C_DATA;
 }
-console.log(
-  'fetchData process.env.REACT_APP_C19_C_DATA',
-  process.env.REACT_APP_C19_C_DATA
-);
+// console.log(
+//   'fetchData process.env.REACT_APP_C19_C_DATA',
+//   process.env.REACT_APP_C19_C_DATA
+// );
 console.log('fetchData url_prefix', url_prefix);
 
 export default function fetchData(dpath, dataFunc) {
@@ -17,7 +17,7 @@ export default function fetchData(dpath, dataFunc) {
   // Need to get paths to work on server
   // Added slash after audit fixes
   const fpath = url_prefix + '/' + dpath;
-  console.log('fetchData fpath', fpath);
+  // console.log('fetchData fpath', fpath);
   const start_time = Date.now();
   fetch(fpath)
     .then((response) => {
@@ -35,6 +35,7 @@ export default function fetchData(dpath, dataFunc) {
       // instead of a catch() block so that we don't swallow
       // exceptions from actual bugs in components.
       (error) => {
+        console.log('fetchData fpath', fpath);
         console.error('fetchData dpath', dpath, 'Error:', error);
         dataFunc(null);
       }
