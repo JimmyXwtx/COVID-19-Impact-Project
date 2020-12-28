@@ -31,6 +31,7 @@ if [ ! -e "$dest" ]; then
 fi
 cd $dest
 git pull
+cd ..
 
 # Init install for our components
 
