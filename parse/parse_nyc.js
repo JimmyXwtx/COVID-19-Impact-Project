@@ -15,9 +15,11 @@
 //      2020-12-04.csv
 //
 
-// testing:
+// dev:
 // rm -rf ../dashboard/public/c_data/nyc/
+// build single day
 // node parse_nyc --date 2020-12-03
+// -- rebuild all days
 // node parse_nyc --days
 
 const parse = require('csv-parse/lib/sync');
