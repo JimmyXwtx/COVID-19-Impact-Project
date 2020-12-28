@@ -22,7 +22,7 @@ if [ ! -e "$dest" ]; then
 fi
 cd $dest/repo
 git pull
-cd ..
+cd ../..
 
 # Our parsed data repo
 dest=parsed-data
@@ -31,7 +31,6 @@ if [ ! -e "$dest" ]; then
 fi
 cd $dest
 git pull
-cd ..
 
 # Init install for our components
 
