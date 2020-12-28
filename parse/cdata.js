@@ -234,7 +234,7 @@ function write_cseries_sub(sub_dir, sub_dict, c_dates, c_series) {
     for (const adate of c_dates) {
       let ent = dent[adate];
       if (!ent) ent = {};
-      ent = { on: adate, ...ent };
+      else ent = { on: adate, ...ent };
       dates.push(ent);
     }
     // stats by dates no spaces
