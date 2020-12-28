@@ -1,1 +1,1402 @@
-[{"Cases":33,"Deaths":2},{"Cases":48,"Deaths":2},{"Cases":50,"Deaths":2},{"Cases":77,"Deaths":2},{"Cases":110,"Deaths":4},{"Cases":156,"Deaths":4},{"Cases":206,"Deaths":4},{"Cases":246,"Deaths":4},{"Cases":293,"Deaths":4},{"Cases":373,"Deaths":4},{"Cases":392,"Deaths":4},{"Cases":541,"Deaths":5},{"Cases":602,"Deaths":6},{"Cases":657,"Deaths":8},{"Cases":713,"Deaths":8},{"Cases":744,"Deaths":8},{"Cases":763,"Deaths":9},{"Cases":803,"Deaths":10},{"Cases":857,"Deaths":11},{"Cases":895,"Deaths":13},{"Cases":914,"Deaths":13},{"Cases":949,"Deaths":13},{"Cases":1024,"Deaths":13},{"Cases":1038,"Deaths":13},{"Cases":1073,"Deaths":18},{"Cases":1114,"Deaths":21},{"Cases":1158,"Deaths":23},{"Cases":1180,"Deaths":23},{"Cases":1198,"Deaths":23},{"Cases":1216,"Deaths":27},{"Cases":1235,"Deaths":27},{"Cases":1251,"Deaths":28},{"Cases":1274,"Deaths":29},{"Cases":1290,"Deaths":30},{"Cases":1304,"Deaths":30},{"Cases":1322,"Deaths":30},{"Cases":1339,"Deaths":30},{"Cases":1363,"Deaths":32},{"Cases":1371,"Deaths":33},{"Cases":1385,"Deaths":34},{"Cases":1413,"Deaths":34},{"Cases":1422,"Deaths":35},{"Cases":1434,"Deaths":35},{"Cases":1438,"Deaths":35},{"Cases":1446,"Deaths":35},{"Cases":1460,"Deaths":36},{"Cases":1474,"Deaths":36},{"Cases":1478,"Deaths":35},{"Cases":1505,"Deaths":35},{"Cases":1505,"Deaths":35},{"Cases":1512,"Deaths":35},{"Cases":1537,"Deaths":35},{"Cases":1553,"Deaths":36},{"Cases":1577,"Deaths":36},{"Cases":1615,"Deaths":36},{"Cases":1629,"Deaths":38},{"Cases":1655,"Deaths":38},{"Cases":1679,"Deaths":38},{"Cases":1699,"Deaths":38},{"Cases":1708,"Deaths":38},{"Cases":1726,"Deaths":38},{"Cases":1744,"Deaths":38},{"Cases":1768,"Deaths":39},{"Cases":1808,"Deaths":39},{"Cases":1831,"Deaths":39},{"Cases":1849,"Deaths":39},{"Cases":1877,"Deaths":39},{"Cases":1902,"Deaths":40},{"Cases":1945,"Deaths":41},{"Cases":1976,"Deaths":41},{"Cases":2002,"Deaths":41},{"Cases":2031,"Deaths":41},{"Cases":2048,"Deaths":41},{"Cases":2121,"Deaths":41},{"Cases":2169,"Deaths":43},{"Cases":2210,"Deaths":43},{"Cases":2256,"Deaths":45},{"Cases":2316,"Deaths":45},{"Cases":2378,"Deaths":45},{"Cases":2449,"Deaths":45},{"Cases":2542,"Deaths":46},{"Cases":2678,"Deaths":46},{"Cases":2773,"Deaths":46},{"Cases":2937,"Deaths":46},{"Cases":3130,"Deaths":46},{"Cases":3282,"Deaths":46},{"Cases":3437,"Deaths":47},{"Cases":3584,"Deaths":48},{"Cases":3900,"Deaths":48},{"Cases":4274,"Deaths":48},{"Cases":4569,"Deaths":48},{"Cases":4914,"Deaths":48},{"Cases":5157,"Deaths":49},{"Cases":5502,"Deaths":51},{"Cases":6056,"Deaths":53},{"Cases":6786,"Deaths":55},{"Cases":7848,"Deaths":56},{"Cases":8837,"Deaths":56},{"Cases":9671,"Deaths":56},{"Cases":10014,"Deaths":56},{"Cases":10314,"Deaths":58},{"Cases":10874,"Deaths":58},{"Cases":11458,"Deaths":59},{"Cases":12078,"Deaths":59},{"Cases":13262,"Deaths":59},{"Cases":14032,"Deaths":59},{"Cases":14407,"Deaths":61},{"Cases":14768,"Deaths":61},{"Cases":15194,"Deaths":63},{"Cases":15595,"Deaths":69},{"Cases":16148,"Deaths":78},{"Cases":16630,"Deaths":80},{"Cases":18001,"Deaths":80},{"Cases":18937,"Deaths":83},{"Cases":19377,"Deaths":85},{"Cases":19909,"Deaths":94},{"Cases":21299,"Deaths":102},{"Cases":22049,"Deaths":103},{"Cases":22518,"Deaths":117},{"Cases":23259,"Deaths":120},{"Cases":23584,"Deaths":119},{"Cases":24011,"Deaths":124},{"Cases":24700,"Deaths":138},{"Cases":25254,"Deaths":156},{"Cases":25952,"Deaths":164},{"Cases":26559,"Deaths":173},{"Cases":26980,"Deaths":173},{"Cases":27393,"Deaths":174},{"Cases":27820,"Deaths":179},{"Cases":28191,"Deaths":203},{"Cases":28591,"Deaths":212},{"Cases":29011,"Deaths":216},{"Cases":29466,"Deaths":232},{"Cases":29699,"Deaths":234},{"Cases":29927,"Deaths":239},{"Cases":30140,"Deaths":241},{"Cases":30425,"Deaths":250},{"Cases":30776,"Deaths":275},{"Cases":31026,"Deaths":287},{"Cases":31395,"Deaths":297},{"Cases":31719,"Deaths":298},{"Cases":31851,"Deaths":298},{"Cases":32042,"Deaths":315},{"Cases":32341,"Deaths":325},{"Cases":32575,"Deaths":330},{"Cases":32861,"Deaths":335},{"Cases":33180,"Deaths":351},{"Cases":33382,"Deaths":351},{"Cases":33486,"Deaths":351},{"Cases":33709,"Deaths":352},{"Cases":33946,"Deaths":356},{"Cases":34135,"Deaths":359},{"Cases":34321,"Deaths":358},{"Cases":34538,"Deaths":361},{"Cases":34662,"Deaths":361},{"Cases":34781,"Deaths":361},{"Cases":34910,"Deaths":364},{"Cases":35083,"Deaths":365},{"Cases":35245,"Deaths":369},{"Cases":35449,"Deaths":370},{"Cases":35613,"Deaths":376},{"Cases":35770,"Deaths":376},{"Cases":35902,"Deaths":377},{"Cases":36400,"Deaths":378},{"Cases":36488,"Deaths":383},{"Cases":36668,"Deaths":386},{"Cases":36827,"Deaths":386},{"Cases":36966,"Deaths":387},{"Cases":37074,"Deaths":387},{"Cases":37152,"Deaths":387},{"Cases":37247,"Deaths":387},{"Cases":37366,"Deaths":394},{"Cases":37473,"Deaths":401},{"Cases":37701,"Deaths":405},{"Cases":37846,"Deaths":409},{"Cases":37939,"Deaths":409},{"Cases":38013,"Deaths":409},{"Cases":38147,"Deaths":412},{"Cases":38242,"Deaths":416},{"Cases":38422,"Deaths":426},{"Cases":38623,"Deaths":431},{"Cases":38818,"Deaths":432},{"Cases":38971,"Deaths":431},{"Cases":39056,"Deaths":431},{"Cases":39232,"Deaths":432},{"Cases":39412,"Deaths":438},{"Cases":39560,"Deaths":440},{"Cases":39717,"Deaths":444},{"Cases":39875,"Deaths":445},{"Cases":39973,"Deaths":445},{"Cases":39990,"Deaths":444},{"Cases":40224,"Deaths":446},{"Cases":40329,"Deaths":458},{"Cases":40485,"Deaths":470},{"Cases":40659,"Deaths":474},{"Cases":40841,"Deaths":479},{"Cases":40940,"Deaths":481},{"Cases":41055,"Deaths":483},{"Cases":41218,"Deaths":487},{"Cases":41409,"Deaths":491},{"Cases":41571,"Deaths":495},{"Cases":41822,"Deaths":502},{"Cases":41822,"Deaths":502},{"Cases":42105,"Deaths":514},{"Cases":42219,"Deaths":516},{"Cases":42401,"Deaths":520},{"Cases":42572,"Deaths":523},{"Cases":42778,"Deaths":528},{"Cases":43044,"Deaths":528},{"Cases":43302,"Deaths":530},{"Cases":43453,"Deaths":530},{"Cases":43621,"Deaths":534},{"Cases":43943,"Deaths":532},{"Cases":44112,"Deaths":533},{"Cases":44435,"Deaths":532},{"Cases":44605,"Deaths":537},{"Cases":44921,"Deaths":546},{"Cases":45042,"Deaths":546},{"Cases":45242,"Deaths":546},{"Cases":45492,"Deaths":546},{"Cases":45755,"Deaths":549},{"Cases":45941,"Deaths":559},{"Cases":46424,"Deaths":559},{"Cases":46434,"Deaths":560},{"Cases":46725,"Deaths":560},{"Cases":46986,"Deaths":561},{"Cases":47346,"Deaths":561},{"Cases":47655,"Deaths":561},{"Cases":48015,"Deaths":567},{"Cases":48322,"Deaths":576},{"Cases":48596,"Deaths":591},{"Cases":48729,"Deaths":591},{"Cases":49029,"Deaths":592},{"Cases":49422,"Deaths":598},{"Cases":49752,"Deaths":601},{"Cases":50135,"Deaths":600},{"Cases":50446,"Deaths":601},{"Cases":50830,"Deaths":603},{"Cases":51575,"Deaths":604},{"Cases":51888,"Deaths":604},{"Cases":52298,"Deaths":612},{"Cases":52862,"Deaths":613},{"Cases":53384,"Deaths":619},{"Cases":53941,"Deaths":620},{"Cases":54341,"Deaths":625},{"Cases":54636,"Deaths":625},{"Cases":55047,"Deaths":629},{"Cases":55526,"Deaths":635},{"Cases":55966,"Deaths":635},{"Cases":55966,"Deaths":635},{"Cases":57101,"Deaths":642},{"Cases":57321,"Deaths":645},{"Cases":57805,"Deaths":645},{"Cases":58325,"Deaths":645},{"Cases":58862,"Deaths":646},{"Cases":59218,"Deaths":648},{"Cases":59791,"Deaths":652},{"Cases":60392,"Deaths":651},{"Cases":61030,"Deaths":656},{"Cases":61474,"Deaths":657},{"Cases":62041,"Deaths":658},{"Cases":60291,"Deaths":642},{"Cases":61055,"Deaths":652},{"Cases":61697,"Deaths":677},{"Cases":62522,"Deaths":678},{"Cases":63281,"Deaths":679},{"Cases":63814,"Deaths":679},{"Cases":64593,"Deaths":680},{"Cases":65251,"Deaths":681},{"Cases":65975,"Deaths":684},{"Cases":66786,"Deaths":697},{"Cases":67577,"Deaths":703},{"Cases":68367,"Deaths":713},{"Cases":68858,"Deaths":715},{"Cases":69491,"Deaths":717},{"Cases":70103,"Deaths":717},{"Cases":70814,"Deaths":726},{"Cases":71524,"Deaths":726},{"Cases":71524,"Deaths":726},{"Cases":72663,"Deaths":727}]
+[
+  {
+    "on": "2020-03-22",
+    "Cases": 33,
+    "Deaths": 2
+  },
+  {
+    "on": "2020-03-23",
+    "Cases": 48,
+    "Deaths": 2
+  },
+  {
+    "on": "2020-03-24",
+    "Cases": 50,
+    "Deaths": 2
+  },
+  {
+    "on": "2020-03-25",
+    "Cases": 77,
+    "Deaths": 2
+  },
+  {
+    "on": "2020-03-26",
+    "Cases": 110,
+    "Deaths": 4
+  },
+  {
+    "on": "2020-03-27",
+    "Cases": 156,
+    "Deaths": 4
+  },
+  {
+    "on": "2020-03-28",
+    "Cases": 206,
+    "Deaths": 4
+  },
+  {
+    "on": "2020-03-29",
+    "Cases": 246,
+    "Deaths": 4
+  },
+  {
+    "on": "2020-03-30",
+    "Cases": 293,
+    "Deaths": 4
+  },
+  {
+    "on": "2020-03-31",
+    "Cases": 373,
+    "Deaths": 4
+  },
+  {
+    "on": "2020-04-01",
+    "Cases": 392,
+    "Deaths": 4
+  },
+  {
+    "on": "2020-04-02",
+    "Cases": 541,
+    "Deaths": 5
+  },
+  {
+    "on": "2020-04-03",
+    "Cases": 602,
+    "Deaths": 6
+  },
+  {
+    "on": "2020-04-04",
+    "Cases": 657,
+    "Deaths": 8
+  },
+  {
+    "on": "2020-04-05",
+    "Cases": 713,
+    "Deaths": 8
+  },
+  {
+    "on": "2020-04-06",
+    "Cases": 744,
+    "Deaths": 8
+  },
+  {
+    "on": "2020-04-07",
+    "Cases": 763,
+    "Deaths": 9
+  },
+  {
+    "on": "2020-04-08",
+    "Cases": 803,
+    "Deaths": 10
+  },
+  {
+    "on": "2020-04-09",
+    "Cases": 857,
+    "Deaths": 11
+  },
+  {
+    "on": "2020-04-10",
+    "Cases": 895,
+    "Deaths": 13
+  },
+  {
+    "on": "2020-04-11",
+    "Cases": 914,
+    "Deaths": 13
+  },
+  {
+    "on": "2020-04-12",
+    "Cases": 949,
+    "Deaths": 13
+  },
+  {
+    "on": "2020-04-13",
+    "Cases": 1024,
+    "Deaths": 13
+  },
+  {
+    "on": "2020-04-14",
+    "Cases": 1038,
+    "Deaths": 13
+  },
+  {
+    "on": "2020-04-15",
+    "Cases": 1073,
+    "Deaths": 18
+  },
+  {
+    "on": "2020-04-16",
+    "Cases": 1114,
+    "Deaths": 21
+  },
+  {
+    "on": "2020-04-17",
+    "Cases": 1158,
+    "Deaths": 23
+  },
+  {
+    "on": "2020-04-18",
+    "Cases": 1180,
+    "Deaths": 23
+  },
+  {
+    "on": "2020-04-19",
+    "Cases": 1198,
+    "Deaths": 23
+  },
+  {
+    "on": "2020-04-20",
+    "Cases": 1216,
+    "Deaths": 27
+  },
+  {
+    "on": "2020-04-21",
+    "Cases": 1235,
+    "Deaths": 27
+  },
+  {
+    "on": "2020-04-22",
+    "Cases": 1251,
+    "Deaths": 28
+  },
+  {
+    "on": "2020-04-23",
+    "Cases": 1274,
+    "Deaths": 29
+  },
+  {
+    "on": "2020-04-24",
+    "Cases": 1290,
+    "Deaths": 30
+  },
+  {
+    "on": "2020-04-25",
+    "Cases": 1304,
+    "Deaths": 30
+  },
+  {
+    "on": "2020-04-26",
+    "Cases": 1322,
+    "Deaths": 30
+  },
+  {
+    "on": "2020-04-27",
+    "Cases": 1339,
+    "Deaths": 30
+  },
+  {
+    "on": "2020-04-28",
+    "Cases": 1363,
+    "Deaths": 32
+  },
+  {
+    "on": "2020-04-29",
+    "Cases": 1371,
+    "Deaths": 33
+  },
+  {
+    "on": "2020-04-30",
+    "Cases": 1385,
+    "Deaths": 34
+  },
+  {
+    "on": "2020-05-01",
+    "Cases": 1413,
+    "Deaths": 34
+  },
+  {
+    "on": "2020-05-02",
+    "Cases": 1422,
+    "Deaths": 35
+  },
+  {
+    "on": "2020-05-03",
+    "Cases": 1434,
+    "Deaths": 35
+  },
+  {
+    "on": "2020-05-04",
+    "Cases": 1438,
+    "Deaths": 35
+  },
+  {
+    "on": "2020-05-05",
+    "Cases": 1446,
+    "Deaths": 35
+  },
+  {
+    "on": "2020-05-06",
+    "Cases": 1460,
+    "Deaths": 36
+  },
+  {
+    "on": "2020-05-07",
+    "Cases": 1474,
+    "Deaths": 36
+  },
+  {
+    "on": "2020-05-08",
+    "Cases": 1478,
+    "Deaths": 35
+  },
+  {
+    "on": "2020-05-09",
+    "Cases": 1505,
+    "Deaths": 35
+  },
+  {
+    "on": "2020-05-10",
+    "Cases": 1505,
+    "Deaths": 35
+  },
+  {
+    "on": "2020-05-11",
+    "Cases": 1512,
+    "Deaths": 35
+  },
+  {
+    "on": "2020-05-12",
+    "Cases": 1537,
+    "Deaths": 35
+  },
+  {
+    "on": "2020-05-13",
+    "Cases": 1553,
+    "Deaths": 36
+  },
+  {
+    "on": "2020-05-14",
+    "Cases": 1577,
+    "Deaths": 36
+  },
+  {
+    "on": "2020-05-15",
+    "Cases": 1615,
+    "Deaths": 36
+  },
+  {
+    "on": "2020-05-16",
+    "Cases": 1629,
+    "Deaths": 38
+  },
+  {
+    "on": "2020-05-17",
+    "Cases": 1655,
+    "Deaths": 38
+  },
+  {
+    "on": "2020-05-18",
+    "Cases": 1679,
+    "Deaths": 38
+  },
+  {
+    "on": "2020-05-19",
+    "Cases": 1699,
+    "Deaths": 38
+  },
+  {
+    "on": "2020-05-20",
+    "Cases": 1708,
+    "Deaths": 38
+  },
+  {
+    "on": "2020-05-21",
+    "Cases": 1726,
+    "Deaths": 38
+  },
+  {
+    "on": "2020-05-22",
+    "Cases": 1744,
+    "Deaths": 38
+  },
+  {
+    "on": "2020-05-23",
+    "Cases": 1768,
+    "Deaths": 39
+  },
+  {
+    "on": "2020-05-24",
+    "Cases": 1808,
+    "Deaths": 39
+  },
+  {
+    "on": "2020-05-25",
+    "Cases": 1831,
+    "Deaths": 39
+  },
+  {
+    "on": "2020-05-26",
+    "Cases": 1849,
+    "Deaths": 39
+  },
+  {
+    "on": "2020-05-27",
+    "Cases": 1877,
+    "Deaths": 39
+  },
+  {
+    "on": "2020-05-28",
+    "Cases": 1902,
+    "Deaths": 40
+  },
+  {
+    "on": "2020-05-29",
+    "Cases": 1945,
+    "Deaths": 41
+  },
+  {
+    "on": "2020-05-30",
+    "Cases": 1976,
+    "Deaths": 41
+  },
+  {
+    "on": "2020-05-31",
+    "Cases": 2002,
+    "Deaths": 41
+  },
+  {
+    "on": "2020-06-01",
+    "Cases": 2031,
+    "Deaths": 41
+  },
+  {
+    "on": "2020-06-02",
+    "Cases": 2048,
+    "Deaths": 41
+  },
+  {
+    "on": "2020-06-03",
+    "Cases": 2121,
+    "Deaths": 41
+  },
+  {
+    "on": "2020-06-04",
+    "Cases": 2169,
+    "Deaths": 43
+  },
+  {
+    "on": "2020-06-05",
+    "Cases": 2210,
+    "Deaths": 43
+  },
+  {
+    "on": "2020-06-06",
+    "Cases": 2256,
+    "Deaths": 45
+  },
+  {
+    "on": "2020-06-07",
+    "Cases": 2316,
+    "Deaths": 45
+  },
+  {
+    "on": "2020-06-08",
+    "Cases": 2378,
+    "Deaths": 45
+  },
+  {
+    "on": "2020-06-09",
+    "Cases": 2449,
+    "Deaths": 45
+  },
+  {
+    "on": "2020-06-10",
+    "Cases": 2542,
+    "Deaths": 46
+  },
+  {
+    "on": "2020-06-11",
+    "Cases": 2678,
+    "Deaths": 46
+  },
+  {
+    "on": "2020-06-12",
+    "Cases": 2773,
+    "Deaths": 46
+  },
+  {
+    "on": "2020-06-13",
+    "Cases": 2937,
+    "Deaths": 46
+  },
+  {
+    "on": "2020-06-14",
+    "Cases": 3130,
+    "Deaths": 46
+  },
+  {
+    "on": "2020-06-15",
+    "Cases": 3282,
+    "Deaths": 46
+  },
+  {
+    "on": "2020-06-16",
+    "Cases": 3437,
+    "Deaths": 47
+  },
+  {
+    "on": "2020-06-17",
+    "Cases": 3584,
+    "Deaths": 48
+  },
+  {
+    "on": "2020-06-18",
+    "Cases": 3900,
+    "Deaths": 48
+  },
+  {
+    "on": "2020-06-19",
+    "Cases": 4274,
+    "Deaths": 48
+  },
+  {
+    "on": "2020-06-20",
+    "Cases": 4569,
+    "Deaths": 48
+  },
+  {
+    "on": "2020-06-21",
+    "Cases": 4914,
+    "Deaths": 48
+  },
+  {
+    "on": "2020-06-22",
+    "Cases": 5157,
+    "Deaths": 49
+  },
+  {
+    "on": "2020-06-23",
+    "Cases": 5502,
+    "Deaths": 51
+  },
+  {
+    "on": "2020-06-24",
+    "Cases": 6056,
+    "Deaths": 53
+  },
+  {
+    "on": "2020-06-25",
+    "Cases": 6786,
+    "Deaths": 55
+  },
+  {
+    "on": "2020-06-26",
+    "Cases": 7848,
+    "Deaths": 56
+  },
+  {
+    "on": "2020-06-27",
+    "Cases": 8837,
+    "Deaths": 56
+  },
+  {
+    "on": "2020-06-28",
+    "Cases": 9671,
+    "Deaths": 56
+  },
+  {
+    "on": "2020-06-29",
+    "Cases": 10014,
+    "Deaths": 56
+  },
+  {
+    "on": "2020-06-30",
+    "Cases": 10314,
+    "Deaths": 58
+  },
+  {
+    "on": "2020-07-01",
+    "Cases": 10874,
+    "Deaths": 58
+  },
+  {
+    "on": "2020-07-02",
+    "Cases": 11458,
+    "Deaths": 59
+  },
+  {
+    "on": "2020-07-03",
+    "Cases": 12078,
+    "Deaths": 59
+  },
+  {
+    "on": "2020-07-04",
+    "Cases": 13262,
+    "Deaths": 59
+  },
+  {
+    "on": "2020-07-05",
+    "Cases": 14032,
+    "Deaths": 59
+  },
+  {
+    "on": "2020-07-06",
+    "Cases": 14407,
+    "Deaths": 61
+  },
+  {
+    "on": "2020-07-07",
+    "Cases": 14768,
+    "Deaths": 61
+  },
+  {
+    "on": "2020-07-08",
+    "Cases": 15194,
+    "Deaths": 63
+  },
+  {
+    "on": "2020-07-09",
+    "Cases": 15595,
+    "Deaths": 69
+  },
+  {
+    "on": "2020-07-10",
+    "Cases": 16148,
+    "Deaths": 78
+  },
+  {
+    "on": "2020-07-11",
+    "Cases": 16630,
+    "Deaths": 80
+  },
+  {
+    "on": "2020-07-12",
+    "Cases": 18001,
+    "Deaths": 80
+  },
+  {
+    "on": "2020-07-13",
+    "Cases": 18937,
+    "Deaths": 83
+  },
+  {
+    "on": "2020-07-14",
+    "Cases": 19377,
+    "Deaths": 85
+  },
+  {
+    "on": "2020-07-15",
+    "Cases": 19909,
+    "Deaths": 94
+  },
+  {
+    "on": "2020-07-16",
+    "Cases": 21299,
+    "Deaths": 102
+  },
+  {
+    "on": "2020-07-17",
+    "Cases": 22049,
+    "Deaths": 103
+  },
+  {
+    "on": "2020-07-18",
+    "Cases": 22518,
+    "Deaths": 117
+  },
+  {
+    "on": "2020-07-19",
+    "Cases": 23259,
+    "Deaths": 120
+  },
+  {
+    "on": "2020-07-20",
+    "Cases": 23584,
+    "Deaths": 119
+  },
+  {
+    "on": "2020-07-21",
+    "Cases": 24011,
+    "Deaths": 124
+  },
+  {
+    "on": "2020-07-22",
+    "Cases": 24700,
+    "Deaths": 138
+  },
+  {
+    "on": "2020-07-23",
+    "Cases": 25254,
+    "Deaths": 156
+  },
+  {
+    "on": "2020-07-24",
+    "Cases": 25952,
+    "Deaths": 164
+  },
+  {
+    "on": "2020-07-25",
+    "Cases": 26559,
+    "Deaths": 173
+  },
+  {
+    "on": "2020-07-26",
+    "Cases": 26980,
+    "Deaths": 173
+  },
+  {
+    "on": "2020-07-27",
+    "Cases": 27393,
+    "Deaths": 174
+  },
+  {
+    "on": "2020-07-28",
+    "Cases": 27820,
+    "Deaths": 179
+  },
+  {
+    "on": "2020-07-29",
+    "Cases": 28191,
+    "Deaths": 203
+  },
+  {
+    "on": "2020-07-30",
+    "Cases": 28591,
+    "Deaths": 212
+  },
+  {
+    "on": "2020-07-31",
+    "Cases": 29011,
+    "Deaths": 216
+  },
+  {
+    "on": "2020-08-01",
+    "Cases": 29466,
+    "Deaths": 232
+  },
+  {
+    "on": "2020-08-02",
+    "Cases": 29699,
+    "Deaths": 234
+  },
+  {
+    "on": "2020-08-03",
+    "Cases": 29927,
+    "Deaths": 239
+  },
+  {
+    "on": "2020-08-04",
+    "Cases": 30140,
+    "Deaths": 241
+  },
+  {
+    "on": "2020-08-05",
+    "Cases": 30425,
+    "Deaths": 250
+  },
+  {
+    "on": "2020-08-06",
+    "Cases": 30776,
+    "Deaths": 275
+  },
+  {
+    "on": "2020-08-07",
+    "Cases": 31026,
+    "Deaths": 287
+  },
+  {
+    "on": "2020-08-08",
+    "Cases": 31395,
+    "Deaths": 297
+  },
+  {
+    "on": "2020-08-09",
+    "Cases": 31719,
+    "Deaths": 298
+  },
+  {
+    "on": "2020-08-10",
+    "Cases": 31851,
+    "Deaths": 298
+  },
+  {
+    "on": "2020-08-11",
+    "Cases": 32042,
+    "Deaths": 315
+  },
+  {
+    "on": "2020-08-12",
+    "Cases": 32341,
+    "Deaths": 325
+  },
+  {
+    "on": "2020-08-13",
+    "Cases": 32575,
+    "Deaths": 330
+  },
+  {
+    "on": "2020-08-14",
+    "Cases": 32861,
+    "Deaths": 335
+  },
+  {
+    "on": "2020-08-15",
+    "Cases": 33180,
+    "Deaths": 351
+  },
+  {
+    "on": "2020-08-16",
+    "Cases": 33382,
+    "Deaths": 351
+  },
+  {
+    "on": "2020-08-17",
+    "Cases": 33486,
+    "Deaths": 351
+  },
+  {
+    "on": "2020-08-18",
+    "Cases": 33709,
+    "Deaths": 352
+  },
+  {
+    "on": "2020-08-19",
+    "Cases": 33946,
+    "Deaths": 356
+  },
+  {
+    "on": "2020-08-20",
+    "Cases": 34135,
+    "Deaths": 359
+  },
+  {
+    "on": "2020-08-21",
+    "Cases": 34321,
+    "Deaths": 358
+  },
+  {
+    "on": "2020-08-22",
+    "Cases": 34538,
+    "Deaths": 361
+  },
+  {
+    "on": "2020-08-23",
+    "Cases": 34662,
+    "Deaths": 361
+  },
+  {
+    "on": "2020-08-24",
+    "Cases": 34781,
+    "Deaths": 361
+  },
+  {
+    "on": "2020-08-25",
+    "Cases": 34910,
+    "Deaths": 364
+  },
+  {
+    "on": "2020-08-26",
+    "Cases": 35083,
+    "Deaths": 365
+  },
+  {
+    "on": "2020-08-27",
+    "Cases": 35245,
+    "Deaths": 369
+  },
+  {
+    "on": "2020-08-28",
+    "Cases": 35449,
+    "Deaths": 370
+  },
+  {
+    "on": "2020-08-29",
+    "Cases": 35613,
+    "Deaths": 376
+  },
+  {
+    "on": "2020-08-30",
+    "Cases": 35770,
+    "Deaths": 376
+  },
+  {
+    "on": "2020-08-31",
+    "Cases": 35902,
+    "Deaths": 377
+  },
+  {
+    "on": "2020-09-01",
+    "Cases": 36400,
+    "Deaths": 378
+  },
+  {
+    "on": "2020-09-02",
+    "Cases": 36488,
+    "Deaths": 383
+  },
+  {
+    "on": "2020-09-03",
+    "Cases": 36668,
+    "Deaths": 386
+  },
+  {
+    "on": "2020-09-04",
+    "Cases": 36827,
+    "Deaths": 386
+  },
+  {
+    "on": "2020-09-05",
+    "Cases": 36966,
+    "Deaths": 387
+  },
+  {
+    "on": "2020-09-06",
+    "Cases": 37074,
+    "Deaths": 387
+  },
+  {
+    "on": "2020-09-07",
+    "Cases": 37152,
+    "Deaths": 387
+  },
+  {
+    "on": "2020-09-08",
+    "Cases": 37247,
+    "Deaths": 387
+  },
+  {
+    "on": "2020-09-09",
+    "Cases": 37366,
+    "Deaths": 394
+  },
+  {
+    "on": "2020-09-10",
+    "Cases": 37473,
+    "Deaths": 401
+  },
+  {
+    "on": "2020-09-11",
+    "Cases": 37701,
+    "Deaths": 405
+  },
+  {
+    "on": "2020-09-12",
+    "Cases": 37846,
+    "Deaths": 409
+  },
+  {
+    "on": "2020-09-13",
+    "Cases": 37939,
+    "Deaths": 409
+  },
+  {
+    "on": "2020-09-14",
+    "Cases": 38013,
+    "Deaths": 409
+  },
+  {
+    "on": "2020-09-15",
+    "Cases": 38147,
+    "Deaths": 412
+  },
+  {
+    "on": "2020-09-16",
+    "Cases": 38242,
+    "Deaths": 416
+  },
+  {
+    "on": "2020-09-17",
+    "Cases": 38422,
+    "Deaths": 426
+  },
+  {
+    "on": "2020-09-18",
+    "Cases": 38623,
+    "Deaths": 431
+  },
+  {
+    "on": "2020-09-19",
+    "Cases": 38818,
+    "Deaths": 432
+  },
+  {
+    "on": "2020-09-20",
+    "Cases": 38971,
+    "Deaths": 431
+  },
+  {
+    "on": "2020-09-21",
+    "Cases": 39056,
+    "Deaths": 431
+  },
+  {
+    "on": "2020-09-22",
+    "Cases": 39232,
+    "Deaths": 432
+  },
+  {
+    "on": "2020-09-23",
+    "Cases": 39412,
+    "Deaths": 438
+  },
+  {
+    "on": "2020-09-24",
+    "Cases": 39560,
+    "Deaths": 440
+  },
+  {
+    "on": "2020-09-25",
+    "Cases": 39717,
+    "Deaths": 444
+  },
+  {
+    "on": "2020-09-26",
+    "Cases": 39875,
+    "Deaths": 445
+  },
+  {
+    "on": "2020-09-27",
+    "Cases": 39973,
+    "Deaths": 445
+  },
+  {
+    "on": "2020-09-28",
+    "Cases": 39990,
+    "Deaths": 444
+  },
+  {
+    "on": "2020-09-29",
+    "Cases": 40224,
+    "Deaths": 446
+  },
+  {
+    "on": "2020-09-30",
+    "Cases": 40329,
+    "Deaths": 458
+  },
+  {
+    "on": "2020-10-01",
+    "Cases": 40485,
+    "Deaths": 470
+  },
+  {
+    "on": "2020-10-02",
+    "Cases": 40659,
+    "Deaths": 474
+  },
+  {
+    "on": "2020-10-03",
+    "Cases": 40841,
+    "Deaths": 479
+  },
+  {
+    "on": "2020-10-04",
+    "Cases": 40940,
+    "Deaths": 481
+  },
+  {
+    "on": "2020-10-05",
+    "Cases": 41055,
+    "Deaths": 483
+  },
+  {
+    "on": "2020-10-06",
+    "Cases": 41218,
+    "Deaths": 487
+  },
+  {
+    "on": "2020-10-07",
+    "Cases": 41409,
+    "Deaths": 491
+  },
+  {
+    "on": "2020-10-08",
+    "Cases": 41571,
+    "Deaths": 495
+  },
+  {
+    "on": "2020-10-09",
+    "Cases": 41822,
+    "Deaths": 502
+  },
+  {
+    "on": "2020-10-10",
+    "Cases": 41822,
+    "Deaths": 502
+  },
+  {
+    "on": "2020-10-11",
+    "Cases": 42105,
+    "Deaths": 514
+  },
+  {
+    "on": "2020-10-12",
+    "Cases": 42219,
+    "Deaths": 516
+  },
+  {
+    "on": "2020-10-13",
+    "Cases": 42401,
+    "Deaths": 520
+  },
+  {
+    "on": "2020-10-14",
+    "Cases": 42572,
+    "Deaths": 523
+  },
+  {
+    "on": "2020-10-15",
+    "Cases": 42778,
+    "Deaths": 528
+  },
+  {
+    "on": "2020-10-16",
+    "Cases": 43044,
+    "Deaths": 528
+  },
+  {
+    "on": "2020-10-17",
+    "Cases": 43302,
+    "Deaths": 530
+  },
+  {
+    "on": "2020-10-18",
+    "Cases": 43453,
+    "Deaths": 530
+  },
+  {
+    "on": "2020-10-19",
+    "Cases": 43621,
+    "Deaths": 534
+  },
+  {
+    "on": "2020-10-20",
+    "Cases": 43943,
+    "Deaths": 532
+  },
+  {
+    "on": "2020-10-21",
+    "Cases": 44112,
+    "Deaths": 533
+  },
+  {
+    "on": "2020-10-22",
+    "Cases": 44435,
+    "Deaths": 532
+  },
+  {
+    "on": "2020-10-23",
+    "Cases": 44605,
+    "Deaths": 537
+  },
+  {
+    "on": "2020-10-24",
+    "Cases": 44921,
+    "Deaths": 546
+  },
+  {
+    "on": "2020-10-25",
+    "Cases": 45042,
+    "Deaths": 546
+  },
+  {
+    "on": "2020-10-26",
+    "Cases": 45242,
+    "Deaths": 546
+  },
+  {
+    "on": "2020-10-27",
+    "Cases": 45492,
+    "Deaths": 546
+  },
+  {
+    "on": "2020-10-28",
+    "Cases": 45755,
+    "Deaths": 549
+  },
+  {
+    "on": "2020-10-29",
+    "Cases": 45941,
+    "Deaths": 559
+  },
+  {
+    "on": "2020-10-30",
+    "Cases": 46424,
+    "Deaths": 559
+  },
+  {
+    "on": "2020-10-31",
+    "Cases": 46434,
+    "Deaths": 560
+  },
+  {
+    "on": "2020-11-01",
+    "Cases": 46725,
+    "Deaths": 560
+  },
+  {
+    "on": "2020-11-02",
+    "Cases": 46986,
+    "Deaths": 561
+  },
+  {
+    "on": "2020-11-03",
+    "Cases": 47346,
+    "Deaths": 561
+  },
+  {
+    "on": "2020-11-04",
+    "Cases": 47655,
+    "Deaths": 561
+  },
+  {
+    "on": "2020-11-05",
+    "Cases": 48015,
+    "Deaths": 567
+  },
+  {
+    "on": "2020-11-06",
+    "Cases": 48322,
+    "Deaths": 576
+  },
+  {
+    "on": "2020-11-07",
+    "Cases": 48596,
+    "Deaths": 591
+  },
+  {
+    "on": "2020-11-08",
+    "Cases": 48729,
+    "Deaths": 591
+  },
+  {
+    "on": "2020-11-09",
+    "Cases": 49029,
+    "Deaths": 592
+  },
+  {
+    "on": "2020-11-10",
+    "Cases": 49422,
+    "Deaths": 598
+  },
+  {
+    "on": "2020-11-11",
+    "Cases": 49752,
+    "Deaths": 601
+  },
+  {
+    "on": "2020-11-12",
+    "Cases": 50135,
+    "Deaths": 600
+  },
+  {
+    "on": "2020-11-13",
+    "Cases": 50446,
+    "Deaths": 601
+  },
+  {
+    "on": "2020-11-14",
+    "Cases": 50830,
+    "Deaths": 603
+  },
+  {
+    "on": "2020-11-15",
+    "Cases": 51575,
+    "Deaths": 604
+  },
+  {
+    "on": "2020-11-16",
+    "Cases": 51888,
+    "Deaths": 604
+  },
+  {
+    "on": "2020-11-17",
+    "Cases": 52298,
+    "Deaths": 612
+  },
+  {
+    "on": "2020-11-18",
+    "Cases": 52862,
+    "Deaths": 613
+  },
+  {
+    "on": "2020-11-19",
+    "Cases": 53384,
+    "Deaths": 619
+  },
+  {
+    "on": "2020-11-20",
+    "Cases": 53941,
+    "Deaths": 620
+  },
+  {
+    "on": "2020-11-21",
+    "Cases": 54341,
+    "Deaths": 625
+  },
+  {
+    "on": "2020-11-22",
+    "Cases": 54636,
+    "Deaths": 625
+  },
+  {
+    "on": "2020-11-23",
+    "Cases": 55047,
+    "Deaths": 629
+  },
+  {
+    "on": "2020-11-24",
+    "Cases": 55526,
+    "Deaths": 635
+  },
+  {
+    "on": "2020-11-25",
+    "Cases": 55966,
+    "Deaths": 635
+  },
+  {
+    "on": "2020-11-26",
+    "Cases": 55966,
+    "Deaths": 635
+  },
+  {
+    "on": "2020-11-27",
+    "Cases": 57101,
+    "Deaths": 642
+  },
+  {
+    "on": "2020-11-28",
+    "Cases": 57321,
+    "Deaths": 645
+  },
+  {
+    "on": "2020-11-29",
+    "Cases": 57805,
+    "Deaths": 645
+  },
+  {
+    "on": "2020-11-30",
+    "Cases": 58325,
+    "Deaths": 645
+  },
+  {
+    "on": "2020-12-01",
+    "Cases": 58862,
+    "Deaths": 646
+  },
+  {
+    "on": "2020-12-02",
+    "Cases": 59218,
+    "Deaths": 648
+  },
+  {
+    "on": "2020-12-03",
+    "Cases": 59791,
+    "Deaths": 652
+  },
+  {
+    "on": "2020-12-04",
+    "Cases": 60392,
+    "Deaths": 651
+  },
+  {
+    "on": "2020-12-05",
+    "Cases": 61030,
+    "Deaths": 656
+  },
+  {
+    "on": "2020-12-06",
+    "Cases": 61474,
+    "Deaths": 657
+  },
+  {
+    "on": "2020-12-07",
+    "Cases": 62041,
+    "Deaths": 658
+  },
+  {
+    "on": "2020-12-08",
+    "Cases": 60291,
+    "Deaths": 642
+  },
+  {
+    "on": "2020-12-09",
+    "Cases": 61055,
+    "Deaths": 652
+  },
+  {
+    "on": "2020-12-10",
+    "Cases": 61697,
+    "Deaths": 677
+  },
+  {
+    "on": "2020-12-11",
+    "Cases": 62522,
+    "Deaths": 678
+  },
+  {
+    "on": "2020-12-12",
+    "Cases": 63281,
+    "Deaths": 679
+  },
+  {
+    "on": "2020-12-13",
+    "Cases": 63814,
+    "Deaths": 679
+  },
+  {
+    "on": "2020-12-14",
+    "Cases": 64593,
+    "Deaths": 680
+  },
+  {
+    "on": "2020-12-15",
+    "Cases": 65251,
+    "Deaths": 681
+  },
+  {
+    "on": "2020-12-16",
+    "Cases": 65975,
+    "Deaths": 684
+  },
+  {
+    "on": "2020-12-17",
+    "Cases": 66786,
+    "Deaths": 697
+  },
+  {
+    "on": "2020-12-18",
+    "Cases": 67577,
+    "Deaths": 703
+  },
+  {
+    "on": "2020-12-19",
+    "Cases": 68367,
+    "Deaths": 713
+  },
+  {
+    "on": "2020-12-20",
+    "Cases": 68858,
+    "Deaths": 715
+  },
+  {
+    "on": "2020-12-21",
+    "Cases": 69491,
+    "Deaths": 717
+  },
+  {
+    "on": "2020-12-22",
+    "Cases": 70103,
+    "Deaths": 717
+  },
+  {
+    "on": "2020-12-23",
+    "Cases": 70814,
+    "Deaths": 726
+  },
+  {
+    "on": "2020-12-24",
+    "Cases": 71524,
+    "Deaths": 726
+  },
+  {
+    "on": "2020-12-25",
+    "Cases": 71524,
+    "Deaths": 726
+  },
+  {
+    "on": "2020-12-26",
+    "Cases": 72663,
+    "Deaths": 727
+  }
+]
