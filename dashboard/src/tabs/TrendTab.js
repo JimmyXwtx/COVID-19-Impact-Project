@@ -130,13 +130,14 @@ function TrendTab(props) {
         <Grid.Row>
           Comparison of the data between two regions over time.
         </Grid.Row>
-        <GraphTrend
-          titles={titles}
-          data={[dateItems1, dateItems2]}
-          c_dates={c_dates}
-          propFocus={propFocus}
-        />
-        {/* <Grid style={{ margin: 0 }}> */}
+      </Grid>
+      <GraphTrend
+        titles={titles}
+        data={[dateItems1, dateItems2]}
+        c_dates={c_dates}
+        propFocus={propFocus}
+      />
+      <Grid style={{ margin: 0 }}>
         <Grid.Row>
           <Button.Group>
             <Button size="mini" onClick={casesAction} active={cases_active}>
