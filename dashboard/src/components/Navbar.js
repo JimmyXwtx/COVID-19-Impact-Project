@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Icon, Menu, Select } from 'semantic-ui-react';
 import { version } from '../../package.json';
 // import Authentication from '../components/Authentication';
-import { setApp, signOut } from '../actions';
+import { setApp, setTrends, signOut } from '../actions';
 import { history } from '../history';
 
 const Navbar = (props) => {
@@ -16,7 +16,14 @@ const Navbar = (props) => {
     setApp,
     signOut,
     email,
+    // trends,
+    // setTrends,
   } = props;
+
+  // function trendsAction() {
+  //   console.log('trendsAction trends', trends);
+  //   setTrends(!trends);
+  // }
 
   const handleGallery = () => {
     history.push('/gallery');
@@ -120,6 +127,9 @@ const Navbar = (props) => {
           COVID-19 Dashboard &nbsp;
           <Version />
         </Menu.Item>
+        {/* <Menu.Item name="trends" onClick={trendsAction}>
+          Trends
+        </Menu.Item> */}
         {process.env.REACT_APP_C19_CONTACT && (
           <>
             <Menu.Item name="contact" onClick={handleContact}>
@@ -148,6 +158,7 @@ const mapStateToProps = (state) => {
     email: state.auth.email,
     isSignedIn: state.auth.isSignedIn,
     admin_lockout_message: state.auth.admin_lockout_message,
+    trends: state.trends.trends,
   };
 };
 
@@ -155,4 +166,4 @@ Navbar.propTypes = {
   showCreateButton: PropTypes.bool,
 };
 
-export default connect(mapStateToProps, { setApp, signOut })(Navbar);
+export default connect(mapStateToProps, { setApp, signOut, setTrends })(Navbar);

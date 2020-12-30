@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactGA from 'react-ga';
+import { connect } from 'react-redux';
 import {
   Button,
   Checkbox,
@@ -41,7 +42,9 @@ function ui_key(uname) {
   return { key: uname, value: uname, text: uname };
 }
 
-const Dashboard = () => {
+const Dashboard = (props) => {
+  console.log('Dashboard props.trends', props.trends);
+
   const [rootcIndex, setRootcIndex] = useState(0);
   const rootcPath = rootcPaths[rootcIndex];
 
@@ -74,7 +77,7 @@ const Dashboard = () => {
 
   const [sortColumn, setSortColumn] = useState('Percent');
   const windowSize = useWindowSize();
-  const [graphVisible, setGraphVisible] = useState();
+  const [graphVisible, setGraphVisible] = useState(true);
 
   // metac = {
   //   "c_ref": "US"
@@ -708,17 +711,18 @@ const Dashboard = () => {
     return (
       <Header as="h3">
         {stats_total} {ui_top} {uiprop_s} {upto_on} {dateFocusShort}{' '}
-        {stacked && (
-          <Button size="mini" onClick={showGraphAction}>
-            {graphVisible ? 'Hide Graph' : 'Show Graph'}
-          </Button>
-        )}
+        {/* {stacked && ( */}
+        <Button size="mini" onClick={showGraphAction}>
+          {graphVisible ? 'Hide Graph' : 'Show Graph'}
+        </Button>
+        {/* )} */}
       </Header>
     );
   };
 
   const GraphPieBarStub = () => {
-    if (!stacked || graphVisible)
+    // if (!stacked || graphVisible)
+    if (graphVisible)
       return (
         <GraphPieBar
           pie_data={pieData}
@@ -740,8 +744,8 @@ const Dashboard = () => {
             onClick={handleBottomTab}
           />
           <Menu.Item
-            name="compare"
-            active={bottomTab === 'compare'}
+            name="trends"
+            active={bottomTab === 'trends'}
             content="Trends"
             onClick={handleBottomTab}
           />
@@ -941,87 +945,97 @@ const Dashboard = () => {
   return (
     <>
       {/* <UpperView /> */}
-      {bottomTab !== 'compare' ? (
-        <Container style={{ marginTop: '1rem' }}>
-          <Loader active={loaderActive} inline></Loader>
-          <HeadStats />
-          <GraphPieBarStub />
-          {/* 
+      {
+        /*bottomTab !== 'compare'*/ !props.trends ? (
+          <Container style={{ marginTop: '1rem' }}>
+            <Loader active={loaderActive} inline></Loader>
+            <HeadStats />
+            <GraphPieBarStub />
+            {/* 
           <GraphNavs /> 
           2020-12-17 jht: DateSlider when nested in GraphNavs requires two clicks 
           for playback to head jump.
           */}
-          <Grid>
-            <Grid.Row style={{ padding: '0 16px' }}>
-              <DateSlider
-                dateIndex={dateIndex}
-                dateListLength={(metac.dateList || []).length}
-                updateSlider={updateSlider}
-              />
-            </Grid.Row>
-            <Grid.Row>
-              <StyledControlRow>
-                <Button.Group>
-                  <Button
-                    size="mini"
-                    onClick={selectCasesAction}
-                    active={cactive}
-                  >
-                    Cases
-                  </Button>
-                  <Button
-                    size="mini"
-                    onClick={selectDeathsAction}
-                    active={dactive}
-                  >
-                    Deaths
-                  </Button>
-                </Button.Group>
-                <Button.Group>
-                  <Button size="mini" onClick={selectTotals} active={to_active}>
-                    to date:
-                  </Button>
-                  <Button size="mini" onClick={selectDaily} active={da_active}>
-                    on day:
-                  </Button>
-                </Button.Group>
-                <div>
-                  <DateFocusSelect />
-                </div>
-                <Button.Group>
-                  <span>
-                    <Button size="mini" onClick={previousAction}>
-                      <Icon name="step backward" />
+            <Grid>
+              <Grid.Row style={{ padding: '0 16px' }}>
+                <DateSlider
+                  dateIndex={dateIndex}
+                  dateListLength={(metac.dateList || []).length}
+                  updateSlider={updateSlider}
+                />
+              </Grid.Row>
+              <Grid.Row>
+                <StyledControlRow>
+                  <Button.Group>
+                    <Button
+                      size="mini"
+                      onClick={selectCasesAction}
+                      active={cactive}
+                    >
+                      Cases
                     </Button>
-                    {/* <ButtonPlayPause /> */}
-                    <Button size="mini" onClick={playAction}>
-                      <Icon name="play" />
+                    <Button
+                      size="mini"
+                      onClick={selectDeathsAction}
+                      active={dactive}
+                    >
+                      Deaths
                     </Button>
-                    <Button size="mini" onClick={nextAction}>
-                      <Icon name="step forward" />
+                  </Button.Group>
+                  <Button.Group>
+                    <Button
+                      size="mini"
+                      onClick={selectTotals}
+                      active={to_active}
+                    >
+                      to date:
                     </Button>
-                  </span>
-                </Button.Group>
-                <Button basic size="mini" onClick={findFirstDate}>
-                  First {uiprop}
-                </Button>
-                <Button basic size="mini" onClick={findLastestDate}>
-                  Latest
-                </Button>
-              </StyledControlRow>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      ) : (
-        <Container style={{ marginTop: '1rem' }}>
-          <Loader active={loaderActive} inline></Loader>
-          <TrendTabParams />
-        </Container>
-      )}
+                    <Button
+                      size="mini"
+                      onClick={selectDaily}
+                      active={da_active}
+                    >
+                      on day:
+                    </Button>
+                  </Button.Group>
+                  <div>
+                    <DateFocusSelect />
+                  </div>
+                  <Button.Group>
+                    <span>
+                      <Button size="mini" onClick={previousAction}>
+                        <Icon name="step backward" />
+                      </Button>
+                      {/* <ButtonPlayPause /> */}
+                      <Button size="mini" onClick={playAction}>
+                        <Icon name="play" />
+                      </Button>
+                      <Button size="mini" onClick={nextAction}>
+                        <Icon name="step forward" />
+                      </Button>
+                    </span>
+                  </Button.Group>
+                  {/* <Button basic size="mini" onClick={findFirstDate}>
+                    First {uiprop}
+                  </Button>
+                  <Button basic size="mini" onClick={findLastestDate}>
+                    Latest
+                  </Button> */}
+                </StyledControlRow>
+              </Grid.Row>
+            </Grid>
+          </Container>
+        ) : (
+          <Container style={{ marginTop: '1rem' }}>
+            <Loader active={loaderActive} inline></Loader>
+            <TrendTabParams />
+          </Container>
+        )
+      }
       <StyledDetailsContainer>
         <LowerMenuTabs />
         {bottomTab === 'places' && <RegionTab />}
-        {/* {bottomTab === 'compare' && <TrendTabParams />} */}
+        {bottomTab === 'trends' && <TrendTabParams />}
         {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
         {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
         {bottomTab === 'purpose' && <AboutTab />}
@@ -1058,4 +1072,12 @@ const StyledControlRow = styled.div`
   }
 `;
 
-export default Dashboard;
+// export default Dashboard;
+
+const mapStateToProps = (state) => {
+  return {
+    trends: state.trends.trends,
+  };
+};
+
+export default connect(mapStateToProps, {})(Dashboard);

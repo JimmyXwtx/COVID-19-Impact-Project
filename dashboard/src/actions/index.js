@@ -1,18 +1,25 @@
 import server from '../apis/server';
 import {
-  SIGN_IN,
-  SIGN_OUT,
-  FETCH_STATS,
+  BACKUP_DB,
+  CLEAR_GALLERY,
   CLEAR_STATS,
+  FETCH_GALLERY,
+  FETCH_STATS,
   LOCKOUT_MESSAGE,
   RELOAD_DB,
-  BACKUP_DB,
   RESTORE_DB,
+  SET_TRENDS,
+  SIGN_IN,
+  SIGN_OUT,
   SUBMIT_CONTACT,
   SUBMIT_FILE,
-  FETCH_GALLERY,
-  CLEAR_GALLERY,
 } from './types';
+
+export const setTrends = (trends) => async (dispatch) => {
+  let payload = {};
+  payload.trends = trends;
+  dispatch({ type: SET_TRENDS, payload });
+};
 
 export const setApp = (app) => async (dispatch) => {
   let payload = {};

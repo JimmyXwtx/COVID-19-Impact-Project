@@ -118,7 +118,7 @@ const AboutTab = () => {
 
 const StyledDiv = styled.div`
   margin: 1rem 0 0;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
 
   section {
     margin-bottom: 3rem;

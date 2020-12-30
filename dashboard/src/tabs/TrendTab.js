@@ -19,6 +19,7 @@ function RegionSelect(props) {
         props.setValue(data.value);
       }}
       options={props.options}
+      style={props.style}
     />
   );
 }
@@ -125,30 +126,40 @@ function TrendTab(props) {
 
   return (
     <StyledDiv>
-      <GraphTrend
-        titles={titles}
-        data={[dateItems1, dateItems2]}
-        c_dates={c_dates}
-        propFocus={propFocus}
-      />
       <Grid style={{ margin: 0 }}>
-        <Button.Group>
-          <Button size="mini" onClick={casesAction} active={cases_active}>
-            Cases
-          </Button>
-          <Button size="mini" onClick={deathsAction} active={deaths_active}>
-            Deaths
-          </Button>
-        </Button.Group>
-        <Button.Group>
-          <Button size="mini" onClick={cumulativeAction} active={total_active}>
-            Cumulative
-          </Button>
-          <Button size="mini" onClick={dailyAction} active={daily_active}>
-            Daily
-          </Button>
-        </Button.Group>
-
+        <Grid.Row>
+          Comparison of the data between two regions from the begining of the
+          pandemic.
+        </Grid.Row>
+        <GraphTrend
+          titles={titles}
+          data={[dateItems1, dateItems2]}
+          c_dates={c_dates}
+          propFocus={propFocus}
+        />
+        {/* <Grid style={{ margin: 0 }}> */}
+        <Grid.Row>
+          <Button.Group>
+            <Button size="mini" onClick={casesAction} active={cases_active}>
+              Cases
+            </Button>
+            <Button size="mini" onClick={deathsAction} active={deaths_active}>
+              Deaths
+            </Button>
+          </Button.Group>
+          <Button.Group style={{ marginLeft: '5px' }}>
+            <Button
+              size="mini"
+              onClick={cumulativeAction}
+              active={total_active}
+            >
+              Cumulative
+            </Button>
+            <Button size="mini" onClick={dailyAction} active={daily_active}>
+              Daily
+            </Button>
+          </Button.Group>
+        </Grid.Row>
         <Grid.Row>
           <RegionSelect
             value={value1}
@@ -159,6 +170,7 @@ function TrendTab(props) {
             value={value2}
             options={options}
             setValue={setCompareIndex2}
+            style={{ marginLeft: '5px' }}
           />
         </Grid.Row>
 
