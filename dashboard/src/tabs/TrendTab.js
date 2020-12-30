@@ -128,8 +128,7 @@ function TrendTab(props) {
     <StyledDiv>
       <Grid style={{ margin: 0 }}>
         <Grid.Row>
-          Comparison of the data between two regions from the begining of the
-          pandemic.
+          Comparison of the data between two regions over time.
         </Grid.Row>
         <GraphTrend
           titles={titles}
