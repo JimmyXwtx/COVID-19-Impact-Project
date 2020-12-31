@@ -728,6 +728,7 @@ const Dashboard = (props) => {
           pie_data={pieData}
           opacity={graphOpacity}
           stacked={stacked}
+          // hide_pie={bottomTab === 'focus'}
         />
       );
     return null;

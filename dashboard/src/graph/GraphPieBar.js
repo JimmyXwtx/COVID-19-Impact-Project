@@ -8,7 +8,7 @@ import material from './material';
 // const label = x + '\n' + item.Deaths;
 // pie_data.push({ x, y, label });
 
-const GraphPieBar = ({ pie_data, opacity, stacked }) => {
+const GraphPieBar = ({ pie_data, opacity, stacked, hide_pie }) => {
   const pieslices = pie_data[0].slices;
   const barslices = pie_data[1].slices.concat().reverse();
   orderColors_pie(pieslices);
@@ -31,17 +31,19 @@ const GraphPieBar = ({ pie_data, opacity, stacked }) => {
           opacity,
         }}
       >
-        <VictoryPie
-          style={{
-            ...style_parent,
-            pointerEvents: 'auto',
-            touchAction: 'auto',
-            userSelect: 'auto',
-          }}
-          colorScale={colors}
-          theme={material}
-          data={pieslices}
-        />
+        {!hide_pie && (
+          <VictoryPie
+            style={{
+              ...style_parent,
+              pointerEvents: 'auto',
+              touchAction: 'auto',
+              userSelect: 'auto',
+            }}
+            colorScale={colors}
+            theme={material}
+            data={pieslices}
+          />
+        )}
         <VictoryBar
           horizontal
           style={{
@@ -56,8 +58,8 @@ const GraphPieBar = ({ pie_data, opacity, stacked }) => {
           theme={material}
           data={barslices}
         />
-        <p style={{ marginBottom: 8 }}>{other}</p>
       </div>
+      <p style={{ marginBottom: 8 }}>{other}</p>
     </div>
   );
 };
