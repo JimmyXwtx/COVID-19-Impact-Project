@@ -28,4 +28,4 @@ git push origin master
 cd ../parsed-data
 git add *
 git commit -a -m  "cron nyc $xdate"
-git push origin master
+git push origin main
