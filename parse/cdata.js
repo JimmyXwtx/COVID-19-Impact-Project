@@ -234,11 +234,12 @@ function write_cseries_sub(sub_dir, sub_dict, c_dates, c_series) {
     for (const adate of c_dates) {
       let ent = dent[adate];
       if (!ent) ent = {};
+      else ent = { on: adate, ...ent };
       dates.push(ent);
     }
-    // fs.writeJsonSync(spath, dates, { spaces: 2 });
     // stats by dates no spaces
-    fs.writeJsonSync(spath, dates);
+    // fs.writeJsonSync(spath, dates);
+    fs.writeJsonSync(spath, dates, { spaces: 2 });
   }
 }
 

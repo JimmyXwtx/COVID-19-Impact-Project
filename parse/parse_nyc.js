@@ -15,9 +15,12 @@
 //      2020-12-04.csv
 //
 
-// testing:
+// dev:
 // rm -rf ../dashboard/public/c_data/nyc/
+// rm -rf ../parsed-data/c_data/nyc/
+// build single day
 // node parse_nyc --date 2020-12-03
+// -- rebuild all days
 // node parse_nyc --days
 
 const parse = require('csv-parse/lib/sync');
@@ -40,7 +43,8 @@ report.logFile('./report-nyc.txt');
 
 const daily_file = '../nyc-data/repo/totals/data-by-modzcta.csv';
 
-const store_dir = '../dashboard/public/c_data/nyc/';
+// const store_dir = '../dashboard/public/c_data/nyc/';
+const store_dir = '../parsed-data/c_data/nyc/';
 
 const csv_days_dir = '../nyc-data/days/';
 

@@ -30,12 +30,17 @@ New York City data from
 
 - ./dashboard : Browser app to view graphs of daily data
 
-- ./dashboard/public/c_data/ : csv data from COVID-19-JHU converted to json
+- ./parsed-data/c_data/ : csv data from COVID-19-JHU converted to json
+- manage in repo https://github.com/EP-Visual-Design/COVID-19-parsed-data
 
-  - ... /c_data/c_meta.json -- per country info and populations
-  - ... /c_data/c_days/2020-01-22.json -- daily summary stats by country
+  - ... /c_data/world/c_meta.json -- per country info and populations
+
+  - ... /c_data/world/c_days/2020-01-22.json -- daily summary stats by country
   - ...
-  - ... /c_data/c_days/2020-11-11.json
+  - ... /c_data/world/c_days/2020-11-11.json
+
+  - ... /c_series -- series data per region
+  - ... /c_subs -- sub regions
 
 - ./docus : Docusaurus based documentation
 
