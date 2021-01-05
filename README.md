@@ -30,6 +30,17 @@ New York City data from
 
 - ./dashboard : Browser app to view graphs of daily data
 
+- ./docus : Docusaurus based documentation
+
+- ./parse : nodejs code to convert CSV to JSON
+- manages parsed data store in ./parsed-data/c_data folder
+
+## Other repos
+
+- ./COVID-19-JHU : world data source git repo https://github.com/CSSEGISandData/COVID-19
+
+- ./nyc-data/repo : NYC data source git repo https://github.com/nychealth/coronavirus-data
+
 - ./parsed-data/c_data/ : csv data from COVID-19-JHU converted to json
 - manage in repo https://github.com/EP-Visual-Design/COVID-19-parsed-data
 
@@ -39,14 +50,8 @@ New York City data from
   - ...
   - ... /c_data/world/c_days/2020-11-11.json
 
-  - ... /c_series -- series data per region
-  - ... /c_subs -- sub regions
-
-- ./docus : Docusaurus based documentation
-
-- ./parse : nodejs code to convert CSV to JSON
-
-- ./COVID-19-JHU : data source git repo https://github.com/CSSEGISandData/COVID-19
+  - ... /c_data/word/c_series -- series data per region
+  - ... /c_data/word/c_subs -- sub regions
 
 ## Other visualization sites:
 
