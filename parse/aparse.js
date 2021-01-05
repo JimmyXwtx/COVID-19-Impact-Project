@@ -23,7 +23,8 @@ report.verbose(argv_verbose);
 const daily_dir =
   '../COVID-19-JHU/csse_covid_19_data/csse_covid_19_daily_reports/';
 
-const store_dir = '../dashboard/public/c_data/world';
+// const store_dir = '../dashboard/public/c_data/world';
+const store_dir = '../parsed-data/c_data/world';
 
 let from_date;
 let to_date;
