@@ -1,6 +1,8 @@
 # COVID-19 Impact Project
 
-Visualization of COVID-19 data from
+Visualization of COVID-19
+
+World wide data from
 
 - "JHU CSSE COVID-19 Data"
 - "COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University"
