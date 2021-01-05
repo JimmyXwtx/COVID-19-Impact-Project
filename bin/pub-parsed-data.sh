@@ -13,7 +13,7 @@ start_time=`date +%s`
 
 host=epdev@epvisual.com
 siteroot=/var/www/sites/epvisual.com
-homepage=COVID-19-Impact/parsed-data/a0/c_data
+homepage=COVID-19-Impact/Dashboard/a1/c_data
 rpath="${siteroot}/${homepage}"
 
 rdest=$host:${rpath}

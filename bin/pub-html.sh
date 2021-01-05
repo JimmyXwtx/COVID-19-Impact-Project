@@ -27,7 +27,7 @@ source=../dashboard/build
 echo $verbose $delete $test
 echo "rsync from $source"
 echo "        to $rdest"
-rsync -razO$verbose --exclude .DS_Store --exclude .git --exclude uploads  $delete $test "$source/" "$rdest/"
+rsync -razO$verbose --exclude .DS_Store --exclude .git --exclude uploads --exclude c_data $delete $test "$source/" "$rdest/"
 
 # Symbolic link to express managed uploads
 ssh $host ln -s /home/epdev/covid19/uploads $rpath/
