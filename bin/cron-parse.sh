@@ -8,6 +8,8 @@ git pull
 
 bin/parse.sh
 
+bin/pub-parsed-data.sh
+
 bin/build.sh
 
 bin/pub-html.sh

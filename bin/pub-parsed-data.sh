@@ -28,4 +28,4 @@ rsync -razO$verbose --exclude .DS_Store --exclude .git  $delete $test "$source/"
 
 echo
 echo Lapse $(expr `date +%s` - $start_time) 
-echo "open https://epvisual.com/${homepage}"
+echo "open https://epvisual.com/${homepage}/world/c_meta.json"
