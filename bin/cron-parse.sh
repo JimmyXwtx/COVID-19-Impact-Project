@@ -20,3 +20,10 @@ git add *
 xdate=`date "+%Y-%m-%d-%H:%M:%S"`
 git commit -a -m  "cron pub $xdate"
 git push origin master
+
+# Update parsed-data 
+#
+cd ../parsed-data
+git add *
+git commit -a -m  "cron pub $xdate"
+git push origin main
