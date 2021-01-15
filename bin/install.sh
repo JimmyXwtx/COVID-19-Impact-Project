@@ -14,7 +14,7 @@ cd ..
 
 # Setup data source for NYC heath
 dest=nyc-data
-if [ ! -e "$dest" ]; then
+if [ ! -e "$dest/repo" ]; then
   mkdir -p $dest
   cd $dest
   git clone https://github.com/nychealth/coronavirus-data repo
