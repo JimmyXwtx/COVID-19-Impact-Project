@@ -77,7 +77,7 @@ const Dashboard = (props) => {
 
   const [sortColumn, setSortColumn] = useState('Percent');
   const windowSize = useWindowSize();
-  const [graphVisible, setGraphVisible] = useState(true);
+  const [graphVisible, setGraphVisible] = useLocalStorage('co-graph-vis', true);
 
   // metac = {
   //   "c_ref": "US"
