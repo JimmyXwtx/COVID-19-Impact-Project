@@ -27,7 +27,7 @@ cd ../..
 # Our parsed data repo
 dest=parsed-data
 if [ ! -e "$dest" ]; then
-  git clone git@github.com:EP-Visual-Design/COVID-19-parsed-data.git $dest
+  git clone https://github.com/EP-Visual-Design/COVID-19-parsed-data $dest
 fi
 cd $dest
 git pull
