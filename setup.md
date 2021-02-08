@@ -126,7 +126,7 @@ npm version patch
 
 npm install --global yarn
 
-## Setup yarn Details -- macOS 
+## Setup yarn Details -- macOS (pre 2020)
 
 ```bash
 
