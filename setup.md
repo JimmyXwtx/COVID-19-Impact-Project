@@ -122,7 +122,11 @@ npm version patch
 
 ```
 
-## Setup yarn Details
+## Setup yarn classic -- macOS and Windows
+
+npm install --global yarn
+
+## Setup yarn Details -- macOS 
 
 ```bash
 
