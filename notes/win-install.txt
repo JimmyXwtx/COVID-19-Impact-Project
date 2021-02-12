@@ -1,0 +1,244 @@
+
+https://github.com/EP-Visual-Design/COVID-19-parsed-data
+
+#  can't copy and paste from mingw64
+# right click for copy options: ctl-ins
+$ BROWSER='Firefox Nightly' react-scripts start
+'BROWSER' is not recognized as an internal or external command,
+operable program or batch file.
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project/dashboard (master)
+$
+
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ which basch
+which: no basch in (/c/Users/pete/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/pete/bin:/c/windows/system32:/c/windows:/c/windows/System32/Wbem:/c/windows/System32/WindowsPowerShell/v1.0:/c/windows/System32/OpenSSH:/c/Program Files (x86)/Common Files/Intuit/QBPOSSDKRuntime:/c/Program Files (x86)/Brackets/command:/c/Program Files/nodejs:/cmd:/c/Users/pete/AppData/Local/Microsoft/WindowsApps:/c/Users/pete/AppData/Roaming/npm:/c/Users/pete/AppData/Local/GitHubDesktop/bin:/c/Users/pete/AppData/Local/Programs/Microsoft VS Code/bin:/usr/bin/vendor_perl:/usr/bin/core_perl)
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ which bash
+/usr/bin/bash
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ ls -l /
+total 3200
+-rw-r--r-- 1 hpnbepv 197121   18765 Jan 14 07:37 LICENSE.txt
+-rw-r--r-- 1 hpnbepv 197121  195478 Jan 14 07:38 ReleaseNotes.html
+drwxr-xr-x 1 hpnbepv 197121       0 Feb  7 13:41 bin/
+drwxr-xr-x 1 hpnbepv 197121       0 Feb  7 13:41 cmd/
+drwxr-xr-x 1 hpnbepv 197121       0 Feb  7 13:41 dev/
+drwxr-xr-x 1 hpnbepv 197121       0 Feb  7 13:41 etc/
+-rwxr-xr-x 1 hpnbepv 197121  152136 Jan 14 07:21 git-bash.exe*
+-rwxr-xr-x 1 hpnbepv 197121  151616 Jan 14 07:21 git-cmd.exe*
+drwxr-xr-x 1 hpnbepv 197121       0 Feb  7 13:41 mingw64/
+dr-xr-xr-x 9 hpnbepv 197121       0 Feb  7 16:35 proc/
+drwxr-xr-x 1 hpnbepv 197121       0 Feb  7 16:34 tmp/
+-rw-r--r-- 1 hpnbepv 197121 1238940 Feb  7 13:41 unins000.dat
+-rwxr-xr-x 1 hpnbepv 197121 1300904 Feb  7 13:38 unins000.exe*
+-rw-r--r-- 1 hpnbepv 197121   22803 Feb  7 13:41 unins000.msg
+drwxr-xr-x 1 hpnbepv 197121       0 Feb  7 13:41 usr/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ ls /usr/
+bin/  etc/  lib/  libexec/  share/  ssl/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ ls /mingw64/
+bin/  doc/  etc/  lib/  libexec/  share/  ssl/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ ls /c
+'$Recycle.Bin'/             OneDriveTemp/           Recovery/                     hiberfil.sys
+'$WINDOWS.~BT'/             PerfLogs/               SYSTEM.SAV/                   hp/
+'Documents and Settings'@  'Program Files'/        'System Volume Information'/   pagefile.sys
+ Intel/                    'Program Files (x86)'/   Users/                        swapfile.sys
+ IntelOptaneData/           ProgramData/            Windows/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ ls /c/Users/
+'All Users'@   Default/  'Default User'@   Public/   desktop.ini   jervo/   pete/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ ls -l /c/Users/pete/Do
+ls: cannot access '/c/Users/pete/Do': No such file or directory
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ ls -l /c/Users/pete/Documents/GitHub/
+total 4
+drwxr-xr-x 1 hpnbepv 197121 0 Feb  7 13:26 COVID-19-Impact-Project/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 /
+$ cd /c/Users/pete/Documents/GitHub/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub
+$ ls -la
+total 12
+drwxr-xr-x 1 hpnbepv 197121 0 Feb  7 13:25 ./
+drwxr-xr-x 1 hpnbepv 197121 0 Feb  7 13:25 ../
+drwxr-xr-x 1 hpnbepv 197121 0 Feb  7 13:26 COVID-19-Impact-Project/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub
+$ cd COVID-19-Impact-Project/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project (master)
+$ which sh
+/usr/bin/sh
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project (master)
+$ sh bin/install.sh
+Cloning into 'COVID-19-JHU'...
+remote: Enumerating objects: 72, done.
+remote: Counting objects: 100% (72/72), done.
+remote: Compressing objects: 100% (38/38), done.
+remote: Total 91921 (delta 44), reused 59 (delta 34), pack-reused 91849
+Receiving objects: 100% (91921/91921), 769.80 MiB | 2.21 MiB/s, done.
+Resolving deltas: 100% (63333/63333), done.
+Updating files: 100% (912/912), done.
+Already up to date.
+Cloning into 'repo'...
+remote: Enumerating objects: 9465, done.
+remote: Total 9465 (delta 0), reused 0 (delta 0), pack-reused 9465
+Receiving objects: 100% (9465/9465), 9.50 MiB | 1.52 MiB/s, done.
+Resolving deltas: 100% (3360/3360), done.
+Already up to date.
+Cloning into 'parsed-data'...
+The authenticity of host 'github.com (140.82.112.3)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,140.82.112.3' (RSA) to the list of known hosts.
+Connection closed by 140.82.112.3 port 22
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+bin/install.sh: line 32: cd: parsed-data: No such file or directory
+Already up to date.
+bin/install.sh: line 37: cd: ../dashboard: No such file or directory
+yarn install v1.22.10
+info No lockfile found.
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 0.11s.
+bin/install.sh: line 40: cd: ../parse: No such file or directory
+yarn install v1.22.10
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.08s.
+bin/install.sh: line 43: cd: ../docus: No such file or directory
+yarn install v1.22.10
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.05s.
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project (master)
+$
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project (master)
+$ sh bin/install.sh
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 10 (delta 6), reused 10 (delta 6), pack-reused 0
+Unpacking objects: 100% (10/10), 22.39 KiB | 309.00 KiB/s, done.
+From https://github.com/CSSEGISandData/COVID-19
+   323d7faea..a7648f37b  web-data   -> origin/web-data
+Already up to date.
+Already up to date.
+Cloning into 'parsed-data'...
+remote: Enumerating objects: 4614, done.
+remote: Counting objects: 100% (4614/4614), done.
+remote: Compressing objects: 100% (3865/3865), done.
+remote: Total 190415 (delta 4317), reused 929 (delta 749), pack-reused 185801
+Receiving objects: 100% (190415/190415), 153.56 MiB | 1.26 MiB/s, done.
+Resolving deltas: 100% (183866/183866), done.
+error: invalid path 'c_data/world/c_series/Taiwan*.json'
+fatal: unable to checkout working tree
+warning: Clone succeeded, but checkout failed.
+You can inspect what was checked out with 'git status'
+and retry with 'git restore --source=HEAD :/'
+
+Already up to date.
+yarn install v1.22.10
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info fsevents@2.1.2: The platform "win32" is incompatible with this module.
+info "fsevents@2.1.2" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@1.2.13: The platform "win32" is incompatible with this module.
+info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@2.1.3: The platform "win32" is incompatible with this module.
+info "fsevents@2.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+warning " > eslint-plugin-react-hooks@2.5.1" has unmet peer dependency "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0".
+warning "react-scripts > @typescript-eslint/eslint-plugin > tsutils@3.17.1" has unmet peer dependency "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta".
+warning " > react-sortable-tree@2.8.0" has unmet peer dependency "react-dnd@^7.3.0".
+warning "react-sortable-tree > frontend-collective-react-dnd-scrollzone@1.0.2" has incorrect peer dependency "react-dnd@^7.3.0".
+[4/4] Building fresh packages...
+Done in 141.07s.
+yarn install v1.22.10
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info fsevents@1.2.13: The platform "win32" is incompatible with this module.
+info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+Done in 31.21s.
+yarn install v1.22.10
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info fsevents@2.1.3: The platform "win32" is incompatible with this module.
+info "fsevents@2.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@1.2.13: The platform "win32" is incompatible with this module.
+info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+warning " > @docusaurus/preset-classic@2.0.0-alpha.61" has incorrect peer dependency "@docusaurus/core@^2.0.0".
+warning "@docusaurus/preset-classic > @docusaurus/plugin-content-pages@2.0.0-alpha.61" has incorrect peer dependency "@docusaurus/core@^2.0.0".
+warning "@docusaurus/preset-classic > @docusaurus/plugin-debug@2.0.0-alpha.61" has incorrect peer dependency "@docusaurus/core@^2.0.0".
+warning "@docusaurus/preset-classic > @docusaurus/plugin-google-analytics@2.0.0-alpha.61" has incorrect peer dependency "@docusaurus/core@^2.0.0".
+warning "@docusaurus/preset-classic > @docusaurus/plugin-google-gtag@2.0.0-alpha.61" has incorrect peer dependency "@docusaurus/core@^2.0.0".
+warning "@docusaurus/preset-classic > @docusaurus/plugin-sitemap@2.0.0-alpha.61" has incorrect peer dependency "@docusaurus/core@^2.0.0".
+warning "@docusaurus/preset-classic > @docusaurus/theme-classic@2.0.0-alpha.61" has incorrect peer dependency "@docusaurus/core@^2.0.0".
+warning "@docusaurus/preset-classic > @docusaurus/theme-search-algolia@2.0.0-alpha.61" has incorrect peer dependency "@docusaurus/core@^2.0.0".
+warning "@docusaurus/preset-classic > @docusaurus/theme-search-algolia@2.0.0-alpha.61" has incorrect peer dependency "@docusaurus/utils@2.0.0-alpha.60".
+[4/4] Building fresh packages...
+Done in 64.90s.
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project (master)
+$ ^C
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project (master)
+$ ^C
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project (master)
+$ cd dashboard/
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project/dashboard (master)
+$ yarn
+yarn install v1.22.10
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.62s.
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project/dashboard (master)
+$ yarn start
+yarn run v1.22.10
+$ BROWSER='Firefox Nightly' react-scripts start
+'BROWSER' is not recognized as an internal or external command,
+operable program or batch file.
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project/dashboard (master)
+$ which reac-scripts
+which: no reac-scripts in (/c/Users/pete/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/pete/bin:/c/windows/system32:/c/windows:/c/windows/System32/Wbem:/c/windows/System32/WindowsPowerShell/v1.0:/c/windows/System32/OpenSSH:/c/Program Files (x86)/Common Files/Intuit/QBPOSSDKRuntime:/c/Program Files (x86)/Brackets/command:/c/Program Files/nodejs:/cmd:/c/Users/pete/AppData/Local/Microsoft/WindowsApps:/c/Users/pete/AppData/Roaming/npm:/c/Users/pete/AppData/Local/GitHubDesktop/bin:/c/Users/pete/AppData/Local/Programs/Microsoft VS Code/bin:/usr/bin/vendor_perl:/usr/bin/core_perl)
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project/dashboard (master)
+$ which yarn
+/c/Users/pete/AppData/Roaming/npm/yarn
+
+hpnbepv@LAPTOP-H1UJHRC6 MINGW64 ~/Documents/GitHub/COVID-19-Impact-Project/dashboard (master)
+$
