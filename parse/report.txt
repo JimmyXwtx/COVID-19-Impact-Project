@@ -38,8 +38,8 @@ pop_missing 36
   "Vatican City",
   "occupied Palestinian territory"
 ]
-Parsed from_date=2020-01-22 to_date=2021-11-03
-parse sec 70.388
+Parsed from_date=2020-01-22 to_date=2021-11-04
+parse sec 126.224
 -------------------------------------------
 Australia| n_subs 8
 Belgium| n_subs 12
@@ -50,7 +50,7 @@ China| n_subs 33
 Colombia| n_subs 33
 Denmark| n_subs 2
 France| n_subs 11
-Germany| n_subs 17
+Germany| n_subs 16
 India| n_subs 36
 Italy| n_subs 21
 Japan| n_subs 49
@@ -75,6 +75,7 @@ China|Unknown| last_date 2021-10-25
 Germany|Bavaria| last_date 2020-01-31
 India|Dadar Nagar Haveli| last_date 2020-06-10
 India|Unknown| last_date 2021-01-01
+Peru|Unknown| last_date 2021-11-03
 United_States|US| last_date 2020-03-21
 United_States|Wuhan Evacuee| last_date 2020-03-22
 United_States Alabama|Unassigned| last_date 2020-09-15
@@ -97,6 +98,7 @@ United_States Nevada|Elko County| last_date 2020-03-25
 United_States Nevada|Unassigned| last_date 2020-06-03
 United_States New_Hampshire|Nashua| last_date 2020-03-22
 United_States New_York|New York City| last_date 2020-08-30
+United_States North_Carolina|Unassigned| last_date 2021-11-03
 United_States Oklahoma|Out of OK| last_date 2020-04-09
 United_States Oregon|Unassigned| last_date 2020-04-12
 United_States South_Carolina|Unassigned| last_date 2020-06-17
@@ -130,4 +132,4 @@ United_Kingdom|Falkland Islands (Islas Malvinas)| last_date 2020-04-06
 United_Kingdom|UK| last_date 2020-03-12
 United_Kingdom|Unknown| last_date 2020-09-22
 -------------------------------------------
-lapse sec 119.206
+lapse sec 220.136
