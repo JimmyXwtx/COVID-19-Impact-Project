@@ -32,7 +32,7 @@ This command generates static content into the `build` directory and can be serv
 # Build and publish docus to epvisual.com
 bin/doc-build-pub.sh
 
-open https://epvisual.com/COVID-19-Impact/Project
+open https://covid19-impact.net/COVID-19-Impact/Project
 
 ```
 

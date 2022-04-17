@@ -30,7 +30,7 @@ The purpose of this project is to provide a “living” platform of crowdsource
 
 [Contact us to provide your feedback and to stay informed of updates](https://jhtid.typeform.com/to/RxahXQJX)
 
-[COVID-19 Impact Dashboard](https://epvisual.com/COVID-19-Impact/Dashboard/)
+[COVID-19 Impact Dashboard](https://covid19-impact.net/COVID-19-Impact/Dashboard/)
 
 [COVID-19 Impact Project on github](https://github.com/EP-Visual-Design/COVID-19-Impact-Project.git)
 
