@@ -8,7 +8,7 @@ const ReferencesTab = () => {
       anchor: 'COVID-19 Impact Project',
       heading: 'Documentation: ',
       quote: '',
-      url: 'https://covid19-impact.net/COVID-19-Impact/Project/',
+      url: 'https://jht1493.net/COVID-19-Impact/Project/',
     },
     {
       anchor:

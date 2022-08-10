@@ -16,10 +16,10 @@ New York City data from
 ## Links
 
 - site:
-  https://covid19-impact.net/COVID-19-Impact/Dashboard/
+  https://jht1493.net/COVID-19-Impact/Dashboard/
 
 - project documentation:
-  https://covid19-impact.net/COVID-19-Impact/Project/
+  https://jht1493.net/COVID-19-Impact/Project/
 
 - demo video:
   https://www.youtube.com/watch?v=pRV5CIoGmLE

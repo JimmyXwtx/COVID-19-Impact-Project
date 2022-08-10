@@ -7,7 +7,7 @@ if (!hostname || hostname === 'localhost') {
   // apiBaseUrl = 'http://localhost:3000';
   baseURL = 'http://localhost:3002';
 } else {
-  baseURL = 'https://covid19-impact.net/covid19-express';
+  baseURL = 'https://jht1493.net/covid19-express';
 }
 
 export default axios.create({ baseURL });

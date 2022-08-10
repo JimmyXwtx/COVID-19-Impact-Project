@@ -13,8 +13,8 @@ start_time=`date +%s`
 
 #host=epdev@epvisual.com
 #siteroot=/var/www/sites/epvisual.com
-host=bitnami@covid19-impact.net
-siteroot=/opt/bitnami/projects/sample
+host=bitnami@jht1493.net
+siteroot=/home/bitnami/htdocs
 homepage=COVID-19-Impact/Dashboard/a0
 rpath="${siteroot}/${homepage}"
 
@@ -40,6 +40,6 @@ grep \"version\" ../dashboard/package.json
 
 echo
 echo Lapse $(expr `date +%s` - $start_time) 
-echo "open https://covid19-impact.net/${homepage}"
+echo "open https://jht1493.net/${homepage}"
 
 

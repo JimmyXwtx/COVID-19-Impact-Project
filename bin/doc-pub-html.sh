@@ -11,8 +11,8 @@ verbose=v
 
 #host=epdev@epvisual.com
 #siteroot=/var/www/sites/epvisual.com
-host=bitnami@covid19-impact.net
-siteroot=/opt/bitnami/projects/sample
+host=bitnami@jht1493.net
+siteroot=/home/bitnami/htdocs
 
 homepage=COVID-19-Impact/Project
 rpath="${siteroot}/${homepage}"
@@ -33,4 +33,4 @@ ssh $host ls -la $rpath/index.html
 grep \"version\" ../docus/package.json
 
 echo
-echo "open https://covid19-impact.net/${homepage}"
+echo "open https://jht1493.net/${homepage}"

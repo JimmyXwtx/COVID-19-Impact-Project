@@ -82,7 +82,7 @@ function PurposeDiv() {
         <ul>
           <li>
             <a
-              href="https://covid19-impact.net/COVID-19-Impact/Project/"
+              href="https://jht1493.net/COVID-19-Impact/Project/"
               target="_blank"
               rel="noopener noreferrer"
             >
