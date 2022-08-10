@@ -15,7 +15,6 @@ start_time=`date +%s`
 #siteroot=/var/www/sites/epvisual.com
 host=bitnami@covid19-impact.net
 siteroot=/opt/bitnami/projects/sample
-
 homepage=COVID-19-Impact/Dashboard/a0
 rpath="${siteroot}/${homepage}"
 
