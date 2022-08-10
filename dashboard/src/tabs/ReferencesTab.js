@@ -8,7 +8,7 @@ const ReferencesTab = () => {
       anchor: 'COVID-19 Impact Project',
       heading: 'Documentation: ',
       quote: '',
-      url: 'https://epvisual.com/COVID-19-Impact/Project/',
+      url: 'https://covid19-impact.net/COVID-19-Impact/Project/',
     },
     {
       anchor:
@@ -22,8 +22,7 @@ const ReferencesTab = () => {
       anchor: 'NYC Coronavirus Disease 2019 (COVID-19) Data',
       heading: 'New York City Data Source: ',
       quote: '',
-      url:
-        'https://github.com/nychealth/coronavirus-data/blob/master/totals/data-by-modzcta.csv',
+      url: 'https://github.com/nychealth/coronavirus-data/blob/master/totals/data-by-modzcta.csv',
     },
 
     {
@@ -31,8 +30,7 @@ const ReferencesTab = () => {
       heading: '',
       quote:
         '"...workers whom we trust with our health, our nourishment, our loved ones, and our lives are too often ignored, underpaid, and overworked..."',
-      url:
-        'https://comptroller.nyc.gov/reports/new-york-citys-frontline-workers/',
+      url: 'https://comptroller.nyc.gov/reports/new-york-citys-frontline-workers/',
     },
     {
       anchor: 'Remembering the New Yorkers We’ve Lost to‌ COVID‑19',

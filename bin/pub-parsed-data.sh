@@ -11,8 +11,11 @@ verbose=
 
 start_time=`date +%s`
 
-host=epdev@epvisual.com
-siteroot=/var/www/sites/epvisual.com
+#host=epdev@epvisual.com
+#siteroot=/var/www/sites/epvisual.com
+host=bitnami@covid19-impact.net
+siteroot=/opt/bitnami/projects/sample
+
 homepage=COVID-19-Impact/Dashboard/a0/c_data
 rpath="${siteroot}/${homepage}"
 
@@ -28,4 +31,4 @@ rsync -razO$verbose --exclude .DS_Store --exclude .git  $delete $test "$source/"
 
 echo
 echo Lapse $(expr `date +%s` - $start_time) 
-echo "open https://epvisual.com/${homepage}/world/c_meta.json"
+echo "open https://covid19-impact.net/${homepage}/world/c_meta.json"
