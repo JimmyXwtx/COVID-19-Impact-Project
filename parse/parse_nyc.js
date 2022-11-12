@@ -157,6 +157,7 @@ function process_file_csv(csv_inpath, file_date, { doSave }) {
       cent = {
         c_ref: key1,
         totals,
+        c_people: 0,
         subs: {},
         c_sub_captions: {},
       };
@@ -173,10 +174,12 @@ function process_file_csv(csv_inpath, file_date, { doSave }) {
         sent = {
           c_ref: key2,
           totals,
+          c_people: parseFloat(item.POP_DENOMINATOR),
           subs: {},
         };
         cent.subs[key2] = sent;
         cent.c_sub_captions[key2] = item.NEIGHBORHOOD_NAME;
+        cent.c_people += sent.c_people;
       }
       cdata.calc(sent.totals, item);
     }
