@@ -1,5 +1,20 @@
 # Setup
 
+## dev setup
+
+```bash
+
+# start in directory for dashboard
+cd dashboard
+
+# install setup only needed once
+yarn install
+
+# run dasboard locally in Google Chrome
+yarn start
+
+```
+
 This setup has all the dev tools needed for React, Redux and CSS grid. It is not required to use FireFox Nightly, but the default `start` script is setup to automatically use it as the default browser.
 
 - [Yarn](https://yarnpkg.com/lang/en/) see "Setup yarn Details" below.
