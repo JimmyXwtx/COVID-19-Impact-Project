@@ -24,6 +24,7 @@ start_time=`date +%s`
 host=jht9629@covid19impactproject.itp.io
 siteroot=/var/www/html
 homepage=dashboard
+# homepage=covid19impactproject/dashboard
 # -- ] nyu
 
 rpath="${siteroot}/${homepage}"
@@ -54,5 +55,6 @@ echo
 echo Lapse $(expr `date +%s` - $start_time) 
 # echo "open https://jht1493.net/${homepage}"
 echo "open http://covid19impactproject.itp.io/${homepage}"
+echo "open http://itp.nyu.edu/covid19impactproject/dashboard"
 
 
