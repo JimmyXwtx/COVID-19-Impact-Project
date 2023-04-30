@@ -20,7 +20,7 @@ function write_daily(sub_dict, file_date, path_root) {
   // );
   // console.log('sub_dict:' + JSON.stringify(sub_dict, null, 2));
   const keys = Object.keys(sub_dict).sort();
-  const sums = keys.map(key => {
+  const sums = keys.map((key) => {
     const { c_ref, totals } = sub_dict[key];
     return { c_ref, totals };
   });
@@ -67,18 +67,7 @@ function fileNameForSub(nsub) {
 
 // Write jons to c_meta.json and any sub divisions
 //
-function write_meta(
-  sub_dir,
-  {
-    sub_label,
-    sub_dict,
-    report_n_subs,
-    to_date,
-    c_title,
-    c_sub_titles,
-    c_sub_captions,
-  }
-) {
+function write_meta(sub_dir, { sub_label, sub_dict, report_n_subs, to_date, c_title, c_sub_titles, c_sub_captions }) {
   // report.log('write_meta sub_dir ' + sub_dir);
   // console.log('write_meta to_date ', to_date, 'sub_dict', sub_dict);
   const c_dates = [];
@@ -108,7 +97,7 @@ function write_meta(
     if (fitem) {
       prior_cdict = cdict;
       cdict = {};
-      fitem.forEach(citem => {
+      fitem.forEach((citem) => {
         const c_ref = citem.c_ref;
         let sitem = c_series[c_ref];
         if (!sitem) {
@@ -148,7 +137,7 @@ function write_meta(
   }
   // Write out summary, remove last_date if current
   const ckeys = Object.keys(summaryDict).sort();
-  const c_regions = ckeys.map(uname => {
+  const c_regions = ckeys.map((uname) => {
     const ent = summaryDict[uname];
     if (ent.last_date === to_date) {
       delete ent.last_date;
@@ -215,6 +204,7 @@ function write_cseries_sub(sub_dir, sub_dict, c_dates, c_series) {
   // const keys = Object.keys(c_series).sort();
   // console.log('c_series keys', keys);
   const cpath = path.resolve(sub_dir, 'c_series');
+  let totals = {}; // By date
   fs.ensureDirSync(cpath);
   for (let sub_name in sub_dict) {
     const cent = sub_dict[sub_name];
@@ -235,18 +225,32 @@ function write_cseries_sub(sub_dir, sub_dict, c_dates, c_series) {
       let ent = dent[adate];
       if (!ent) ent = {};
       else ent = { on: adate, ...ent };
+      // { on, Cases, Deaths };
       dates.push(ent);
+      // totals by date
+      let tent = totals[adate];
+      if (!tent) {
+        tent = { on: adate, ...empty() };
+        totals[adate] = tent;
+      }
+      calc(tent, ent);
     }
     // stats by dates no spaces
     // fs.writeJsonSync(spath, dates);
     fs.writeJsonSync(spath, dates, { spaces: 2 });
   }
+  {
+    const dates = [];
+    for (const adate of c_dates) {
+      let ent = totals[adate];
+      dates.push(ent);
+    }
+    let tpath = path.resolve(cpath, '_totals.json');
+    fs.writeJsonSync(tpath, dates, { spaces: 2 });
+  }
 }
 
-function write_meta_subs(
-  path_root,
-  { sub_label, sub_dict, report_n_subs, to_date, c_sub_titles }
-) {
+function write_meta_subs(path_root, { sub_label, sub_dict, report_n_subs, to_date, c_sub_titles }) {
   // Write meta for states with in each country that has them
   const subs_path = path.resolve(path_root, 'c_subs');
   for (let country in sub_dict) {
@@ -268,6 +272,7 @@ function write_meta_subs(
   }
 }
 
+// { Cases, Deaths };
 function hasValue(item) {
   let sum = 0;
   for (let prop in stats_init) {
@@ -278,6 +283,7 @@ function hasValue(item) {
   return sum;
 }
 
+// { Cases, Deaths };
 function calc(sums, item) {
   for (let prop in stats_init) {
     let val = item[prop];
@@ -286,6 +292,7 @@ function calc(sums, item) {
   }
 }
 
+// { Cases: 0, Deaths: 0 };
 function empty() {
   return Object.assign({}, stats_init);
 }
