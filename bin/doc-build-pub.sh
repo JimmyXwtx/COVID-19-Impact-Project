@@ -5,7 +5,8 @@ cd ${0%/*}
 
 cd ../docus
 
-yarn build
+# yarn build
+npm run build
 
 ../bin/doc-pub-html.sh
 
