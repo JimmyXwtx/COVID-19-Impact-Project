@@ -1,0 +1,13 @@
+export const SIGN_IN = 'SIGN_IN';
+export const SIGN_OUT = 'SIGN_OUT';
+export const LOCKOUT_MESSAGE = 'LOCKOUT_MESSAGE';
+export const FETCH_STATS = 'FETCH_STATS';
+export const CLEAR_STATS = 'CLEAR_STATS';
+export const BACKUP_DB = 'BACKUP_DB';
+export const RELOAD_DB = 'RELOAD_DB';
+export const RESTORE_DB = 'RESTORE_DB';
+export const SUBMIT_CONTACT = 'SUBMIT_CONTACT';
+export const SUBMIT_FILE = 'SUBMIT_FILE';
+export const FETCH_GALLERY = 'FETCH_GALLERY';
+export const CLEAR_GALLERY = 'CLEAR_GALLERY';
+export const SET_TRENDS = 'SET_TRENDS';
