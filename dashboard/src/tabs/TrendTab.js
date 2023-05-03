@@ -61,7 +61,14 @@ function TrendTab(props) {
       if (item.c_ref === title2 && compareIndex2 !== index)
         setCompareIndex2(index);
     });
-  }, []);
+  }, [
+    props.propFocus,
+    props.sumFocus,
+    props.selected_items,
+    props.all_items,
+    compareIndex1,
+    compareIndex2,
+  ]);
 
   // console.log('TrendTab propFocus', propFocus);
   // console.log('TrendTab sumFocus', sumFocus);
