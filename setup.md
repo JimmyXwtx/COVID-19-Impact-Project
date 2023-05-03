@@ -9,6 +9,28 @@ This setup has all the dev tools needed for React, Redux and CSS grid. It is not
 - [Visual Studio Code](https://code.visualstudio.com)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
+## node version
+
+dashboard requires node version 16.
+
+```
+# install with nvm
+
+https://github.com/nvm-sh/nvm#intro
+
+# verify nvm installed
+command -v nvm
+
+nvm install 16.20.0
+
+node --version
+v16.20.0
+
+npm --version
+8.19.4
+
+```
+
 ## Formatting
 
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
