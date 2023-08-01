@@ -18,7 +18,7 @@ const Wrapper = () => (
     <GlobalStyle />
     <Router history={history} basename="/covid19-dashboard">
       <ScrollToTop>
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
           <Route path="/signin" exact component={SignIn} />
           <Route path="/gallery" exact component={Gallery} />
