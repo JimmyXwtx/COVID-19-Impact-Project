@@ -6,6 +6,7 @@ import { version } from '../../package.json';
 // import Authentication from '../components/Authentication';
 import { setApp, setTrends, signOut } from '../actions';
 import { history } from '../history';
+import query from '../js/params_query';
 
 const Navbar = (props) => {
   const {
@@ -119,6 +120,8 @@ const Navbar = (props) => {
     }
     return null;
   };
+
+  if (!query('nav')) return null;
 
   return (
     <>

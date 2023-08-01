@@ -27,6 +27,7 @@ import FocusTab from '../tabs/FocusTab';
 // import ReferencesTab from '../tabs/ReferencesTab';
 import SoftBodyTab from '../tabs/SoftBodyTab';
 import TrendTab from '../tabs/TrendTab';
+import query from '../js/params_query';
 
 const nslice = 8;
 const top_label = 'World';
@@ -51,14 +52,10 @@ const Dashboard = (props) => {
   const [loaderActive, setLoaderActive] = useState(true);
   const [propFocus, setPropFocus] = useLocalStorage('co-propFocus', 'Deaths');
   const [sumFocus, setSumFocus] = useLocalStorage('co-sumFocus', 'totals');
-  const [
-    focusCountries,
-    setFocusCountries,
-  ] = useLocalStorage('co-focusCountries', [
-    'China',
-    'United States',
-    'Jamaica',
-  ]);
+  const [focusCountries, setFocusCountries] = useLocalStorage(
+    'co-focusCountries',
+    ['China', 'United States', 'Jamaica']
+  );
   const [focusIndex, setFocusIndex] = useState(-1);
   const [countryFocus, setCountryFocus] = useState(top_label);
   const [playingState, setPlayingState] = useState(false);
@@ -944,9 +941,8 @@ const Dashboard = (props) => {
 
   return (
     <>
-      {/* <UpperView /> */}
-      {
-        /*bottomTab !== 'compare'*/ !props.trends ? (
+      {!query('hideTop') ? (
+        !props.trends ? (
           <Container style={{ marginTop: '1rem' }}>
             <Loader active={loaderActive} inline></Loader>
             <HeadStats />
@@ -1031,15 +1027,17 @@ const Dashboard = (props) => {
             <TrendTabParams />
           </Container>
         )
-      }
-      <StyledDetailsContainer>
-        <LowerMenuTabs />
-        {bottomTab === 'places' && <RegionTab />}
-        {bottomTab === 'trends' && <TrendTabParams />}
-        {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
-        {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
-        {bottomTab === 'purpose' && <AboutTab />}
-      </StyledDetailsContainer>
+      ) : null}
+      {!query('hideBot') ? (
+        <StyledDetailsContainer>
+          <LowerMenuTabs />
+          {bottomTab === 'places' && <RegionTab />}
+          {bottomTab === 'trends' && <TrendTabParams />}
+          {bottomTab === 'focus' && <FocusTab actions={focus_actions} />}
+          {bottomTab === 'softbody' && <SoftBodyTab pie_data={pieData[0]} />}
+          {bottomTab === 'purpose' && <AboutTab />}
+        </StyledDetailsContainer>
+      ) : null}
     </>
   );
 };
