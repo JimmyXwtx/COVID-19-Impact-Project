@@ -5,4 +5,5 @@ cd ${0%/*}
 
 cd ../dashboard
 npm version patch
-yarn build
+# yarn build
+npm run build

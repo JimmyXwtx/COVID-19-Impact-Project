@@ -29,6 +29,10 @@ v16.20.0
 npm --version
 8.19.4
 
+
+# retire yarn
+# retire docus
+
 ```
 
 ## Formatting
